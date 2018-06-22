@@ -19,10 +19,14 @@ module PropertyNames
       alias_name = internal_s_name(info[0])
       
       file.puts("  /// Represents \"#{info[1]}\", that is one of properties in Unicode.")
-      file.puts("  public struct #{struct_name}: RawRepresentable {")
+      file.puts("  public struct #{struct_name}: RawRepresentable, Hashable {")
       file.puts("    public let rawValue: #{type_of_rawValue}")
       file.puts("    public init(rawValue: #{type_of_rawValue}) { self.rawValue = rawValue }")
-      file.puts('  }')
+      file.puts("    public static func ==(lhs:#{struct_name}, rhs:#{struct_name}) -> Bool {")
+      file.puts("      return lhs.rawValue == rhs.rawValue")
+      file.puts("    }")
+      file.puts("    public var hashValue: Int { return self.rawValue.hashValue }")
+      file.puts("  }")
       
       file.puts("  /// Alias of `#{struct_name}`, that represents \"#{info[1]}\".")
       file.puts("  public typealias #{alias_name} = #{struct_name}")
