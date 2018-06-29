@@ -27,6 +27,7 @@ FILES = [
   :Properties,
   :PropertyNames,
   :PropertyValues,
+  :Scripts,
 ]
 
 PROJECT_ROOT_DIR = Pathname(File.realpath('..', File.dirname(__FILE__)))
