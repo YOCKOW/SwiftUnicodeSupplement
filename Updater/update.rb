@@ -75,6 +75,8 @@ SWIFT_KEYWORDS = (lambda{|uri|
 
 ### FUNCTIONS ###
 
+require MODULES_DIR + '_simple.rb'
+
 def failed(message)
   $stderr.puts("!!ERROR!! #{message}")
   exit(false)
