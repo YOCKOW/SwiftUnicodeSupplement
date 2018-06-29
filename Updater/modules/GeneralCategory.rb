@@ -11,6 +11,8 @@ module GeneralCategory
   URL = 'https://www.unicode.org/Public/UNIDATA/extracted/DerivedGeneralCategory.txt'
   
   module_function def write(table, file)
-    _simple_write(table, file, 'generalCategory', 'GeneralCategory', nil)
+    _simple_write(table, file,
+                  'generalCategory', 'GeneralCategory',
+                  true, nil)
   end
 end

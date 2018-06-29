@@ -11,6 +11,8 @@ module JoiningType
   URL = 'https://www.unicode.org/Public/UNIDATA/extracted/DerivedJoiningType.txt'
   
   module_function def write(table, file)
-    _simple_write(table, file, 'joiningType', 'JoiningType', 'nonJoining')
+    _simple_write(table, file,
+                  'joiningType', 'JoiningType',
+                  true, 'nonJoining')
   end
 end

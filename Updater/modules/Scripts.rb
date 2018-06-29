@@ -11,6 +11,8 @@ module Scripts
   URL = 'https://www.unicode.org/Public/UNIDATA/Scripts.txt'
   
   module_function def write(table, file)
-    _simple_write(table, file, 'script', 'Script', 'unknown')
+    _simple_write(table, file,
+                  'script', 'Script',
+                  false, 'unknown')
   end
 end

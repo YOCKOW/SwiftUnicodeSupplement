@@ -11,6 +11,8 @@ module JoiningGroup
   URL = 'https://www.unicode.org/Public/UNIDATA/extracted/DerivedJoiningGroup.txt'
   
   module_function def write(table, file)
-    _simple_write(table, file, 'joiningGroup', 'JoiningGroup', 'noJoiningGroup')
+    _simple_write(table, file,
+                  'joiningGroup', 'JoiningGroup',
+                  true, 'noJoiningGroup')
   end
 end

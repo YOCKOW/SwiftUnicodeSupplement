@@ -7,14 +7,14 @@
  
 =end
 
-def _simple_write(table, file, vName, cName, defaultValue)
+def _simple_write(table, file, vName, cName, internal = true, defaultValue = nil)
   file.puts('extension Unicode.Scalar {')
   file.puts("  public var #{vName}: Unicode.Scalar.#{cName} {")
   file.puts('    let value: UInt32 = self.value')
   
   table.each {|info|
     cond = range_cond(info[0])
-    vv = internal_v_name(info[1])
+    vv = internal ? internal_v_name(info[1]) : public_v_name(info[1])
     file.puts("    if #{cond} { return .#{vv} }")
   }
   
