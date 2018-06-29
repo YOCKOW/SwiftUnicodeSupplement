@@ -27,6 +27,7 @@ FILES = [
   :Properties,
   :PropertyNames,
   :PropertyValues,
+  :Scripts,
 ]
 
 PROJECT_ROOT_DIR = Pathname(File.realpath('..', File.dirname(__FILE__)))
@@ -74,6 +75,8 @@ SWIFT_KEYWORDS = (lambda{|uri|
 ### /CONSTANTS ###
 
 ### FUNCTIONS ###
+
+require MODULES_DIR + '_simple.rb'
 
 def failed(message)
   $stderr.puts("!!ERROR!! #{message}")
