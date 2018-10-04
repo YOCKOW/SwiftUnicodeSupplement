@@ -19,7 +19,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 ====================================================================================================
 *** Acknowledgements ***
 
-  Files in "Sources/UnicodeSupplement/DATA" were automatically generated from the data distributed
-  under the Terms of Use in  http://www.unicode.org/copyright.html. Please read the source file for
-  more information.
+  Files shown below were automatically generated from the data distributed under the Terms of Use
+  in  http://www.unicode.org/copyright.html. Please read the source files for more information.
+
+  * Sources/IDNA/IDNAMappingTable.swift
 

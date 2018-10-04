@@ -37,7 +37,7 @@ FORCE_UPDATE = (lambda{|argv|
                       end
                 
                       key = file.to_sym
-                      if FILES.include?(key)
+                      if FILES.include?(key) || key == :ALL
                         result[key] = true
                       else
                         $stderr.puts("\"#{file}\" is unknown module name.")
@@ -219,6 +219,10 @@ FILES.each { |key|
         local_file.puts("//     Last-Modified: #{remote_last_modified}")
       end
       
+      local_file.puts()
+      local_file.puts("/*\n")
+      U_TERMS_OF_USE.each_line{|line| local_file.puts('  ' + line)}
+      local_file.puts("\n */\n\n")
       local_file.puts()
       
       # open the remote files
