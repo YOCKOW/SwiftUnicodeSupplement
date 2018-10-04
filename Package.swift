@@ -7,7 +7,7 @@ let package = Package(
   name: "UnicodeSupplement",
   products: [
     // Products define the executables and libraries produced by a package, and make them visible to other packages.
-    .library(name: "SwiftUnicodeSupplement", type:.dynamic, targets: ["UnicodeSupplement"]),
+    .library(name: "SwiftUnicodeSupplement", type:.dynamic, targets: ["UnicodeSupplement", "IDNA", "UCD"]),
   ],
   dependencies: [
     // Dependencies declare other packages that this package depends on.
@@ -18,7 +18,7 @@ let package = Package(
     // Targets can depend on other targets in this package, and on products in packages which this package depends on.
     .target(name: "IDNA", dependencies:[]),
     .target(name: "UCD", dependencies:[]),
-    .target(name: "UnicodeSupplement", dependencies: ["IDNA", "UCD"]),
+    .target(name: "UnicodeSupplement", dependencies: []),
     .testTarget(name: "UnicodeSupplementTests", dependencies: ["UnicodeSupplement"]),
   ]
 )
