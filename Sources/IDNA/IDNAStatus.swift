@@ -5,10 +5,10 @@
      See "LICENSE.txt" for more information.
  **************************************************************************************************/
  
-extension Unicode.Scalar {
+extension Unicode {
   /**
    
-   # Unicode.Scalar.IDNAStatus
+   # Unicode.IDNAStatus
    
    Represents the IDNA status value.
    See [UTS #46: §5](https://www.unicode.org/reports/tr46/#IDNA_Mapping_Table).
@@ -36,27 +36,29 @@ extension Unicode.Scalar {
   /// Returns IDNA Status Value.
   /// - parameter usingSTD3ASCIIRules: Specify whether STD3 ASCII Rules should be used or not.
   /// - parameter idna2008Compatible: Specify whether the status should conform to IDNA 2008 or not.
-  public func idnaStatus(usingSTD3ASCIIRules std3:Bool = true, idna2008Compatible idna2008:Bool = false) -> Unicode.Scalar.IDNAStatus? {
-    if self.isValidButDisallowedInIDNA2008 {
+  public func idnaStatus(usingSTD3ASCIIRules std3:Bool = true,
+                         idna2008Compatible idna2008:Bool = false) -> Unicode.IDNAStatus?
+  {
+    if self._idna_isValidButDisallowedInIDNA2008 {
       if idna2008 { return .disallowed }
       return .valid
     }
-    if self.isValid { return .valid }
-    if self.isIgnored { return .ignored }
-    if self.isDisallowed { return .disallowed }
-    if self.isDisallowedButValidUsingSTD3ASCIIRules {
+    if self._idna_isValid { return .valid }
+    if self._idna_isIgnored { return .ignored }
+    if self._idna_isDisallowed { return .disallowed }
+    if self._idna_isDisallowedButValidUsingSTD3ASCIIRules {
       if std3 { return .valid }
       return .disallowed
     }
-    switch self.isMapped {
+    switch self._idna_isMapped {
     case (true, let scalars): return .mapped(scalars)
     default: break
     }
-    switch self.isDeviation {
+    switch self._idna_isDeviation {
     case (true, let scalars): return .deviation(scalars)
     default: break
     }
-    switch self.isDisallowedButMappedUsingSTD3ASCIIRules {
+    switch self._idna_isDisallowedButMappedUsingSTD3ASCIIRules {
     case (true, let scalars):
       if std3 { return .mapped(scalars) }
       return .disallowed
