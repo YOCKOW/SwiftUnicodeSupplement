@@ -36,7 +36,7 @@ extension Unicode.Scalar {
   /// Returns IDNA Status Value.
   /// - parameter usingSTD3ASCIIRules: Specify whether STD3 ASCII Rules should be used or not.
   /// - parameter idna2008Compatible: Specify whether the status should conform to IDNA 2008 or not.
-  public func idnaStatus(usingSTD3ASCIIRules std3:Bool = true,
+  internal func _idnaStatus(usingSTD3ASCIIRules std3:Bool = true,
                          idna2008Compatible idna2008:Bool = false) -> Unicode.IDNAStatus?
   {
     if self._idna_isValidButDisallowedInIDNA2008 {

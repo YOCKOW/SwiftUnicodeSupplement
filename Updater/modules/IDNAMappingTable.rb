@@ -9,7 +9,7 @@
 
 
 module IDNAMappingTable
-  PATH = 'Sources/IDNA/IDNAMappingTable.swift'
+  PATH = 'Sources/UnicodeSupplement/__data__/IDNA/IDNAMappingTable.swift'
   URLs = [
     URI.parse('https://www.unicode.org/Public/idna/latest/IdnaMappingTable.txt')
   ]

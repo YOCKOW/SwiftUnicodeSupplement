@@ -5,8 +5,6 @@
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
 
-import IDNA
-
 extension Unicode.Scalar {
   public struct LatestProperties {
     private let _scalar: Unicode.Scalar
@@ -35,6 +33,6 @@ extension Unicode.Scalar.LatestProperties {
   public func idnaStatus(usingSTD3ASCIIRules std3:Bool = true,
                          idna2008Compatible idna2008:Bool = false) -> Unicode.IDNAStatus?
   {
-    return self._scalar.idnaStatus(usingSTD3ASCIIRules:std3, idna2008Compatible:idna2008)
+    return self._scalar._idnaStatus(usingSTD3ASCIIRules:std3, idna2008Compatible:idna2008)
   }
 }
