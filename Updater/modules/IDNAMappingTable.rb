@@ -52,92 +52,69 @@ module IDNAMappingTable
       end
     }
     
+    convertPredicateArray = lambda {|range_string_array|
+      return "[\n  " +
+      range_string_array.map {|info|
+        ranges_for_unicode_predicate(info[0])
+      }.flatten().sort.map {|uint32|
+        sprintf('0x%04X', uint32)
+      }.join(",\n  ") +
+      "\n]"
+    }
+    
     mappingResult = lambda{|scalars|
-      return 'nil' if scalars.nil? || scalars.empty?
-      return '[' + scalars.split(/\s+/).map{|item| "Unicode.Scalar(0x#{item})!" }.join(', ') + ']'
+      return '[]' if scalars.nil? || scalars.empty?
+      return '[' + scalars.split(/\s+/).map{|item| "_us(0x#{item})" }.join(', ') + ']'
     }
     
-    file.puts('extension Unicode.Scalar {')
-    
-    # :valid_idna2008_disallowed
-    file.puts('  internal var _idna_isValidButDisallowedInIDNA2008: Bool {')
-    file.puts('    let value: UInt32 = self.value')
-    arranged_table[:valid_idna2008_disallowed].each{|info|
-      file.puts("    if #{range_cond(info[0])} { return true }")
+    convertAssociativeArray = lambda {|info_array|
+      info_array.sort!{|info1, info2| info1[0] <=> info2[0]}
+      
+      result = "[\n"
+      info_array.each {|info|
+        ranges = ranges_for_unicode_predicate(info[0])
+        ranges.each {|uint32|
+          result += '  ('
+          result += sprintf('0x%04X', uint32) + ','
+          result += mappingResult.call(info[2])
+          result += '),'
+          result += "\n"
+        }
+      }
+      result += "]"
+      return result
     }
-    file.puts('    return false')
-    file.puts('  }')
     
-    # :valid
-    file.puts('  internal var  _idna_isValid: Bool {')
-    file.puts('    let value: UInt32 = self.value')
-    arranged_table[:valid].each{|info|
-      file.puts("    if #{range_cond(info[0])} { return true }")
+    ##### WRITE THEM #####
+    
+    file.puts('private func _us(_ value:Int) -> Unicode.Scalar { return Unicode.Scalar(value)! }')
+    file.puts()
+    
+    [:valid_idna2008_disallowed, :valid, :ignored, :disallowed, :disallowed_std3_valid].each {|key|
+      private_var_name = '__idna_' + key.to_s
+      computed_property_name = '_idna_' + key.to_s
+      file.write("private let #{private_var_name} = _UnicodePredicate(")
+      file.write(convertPredicateArray.call(arranged_table[key]))
+      file.puts(", alreadySorted:true)")
+      file.puts("extension Unicode.Scalar {")
+      file.puts("  internal var #{computed_property_name}: Bool {")
+      file.puts("    return #{private_var_name}.contains(self)")
+      file.puts("  }")
+      file.puts("}\n")
     }
-    file.puts('    return false')
-    file.puts('  }')
     
-    # :ignored
-    file.puts('  internal var  _idna_isIgnored: Bool {')
-    file.puts('    let value: UInt32 = self.value')
-    arranged_table[:ignored].each{|info|
-      file.puts("    if #{range_cond(info[0])} { return true }")
+    [:mapped, :deviation, :disallowed_std3_mapped].each{|key|
+      private_var_name = '__idna_' + key.to_s
+      computed_property_name = '_idna_' + key.to_s
+      file.write("private let #{private_var_name} = _UnicodeAssociativeArray<Array<Unicode.Scalar>>(")
+      file.write(convertAssociativeArray.call(arranged_table[key]))
+      file.puts(", alreadySorted:true)")
+      file.puts("extension Unicode.Scalar {")
+      file.puts("  internal var #{computed_property_name}: Array<Unicode.Scalar>? {")
+      file.puts("    return #{private_var_name}.value(for:self)")
+      file.puts("  }")
+      file.puts("}\n")
     }
-    file.puts('    return false')
-    file.puts('  }')
-    
-    # :disallowed
-    file.puts('  internal var  _idna_isDisallowed: Bool {')
-    file.puts('    let value: UInt32 = self.value')
-    arranged_table[:disallowed].each{|info|
-      file.puts("    if #{range_cond(info[0])} { return true }")
-    }
-    file.puts('    return false')
-    file.puts('  }')
-    
-    # :disallowed_std3_valid
-    file.puts('  internal var  _idna_isDisallowedButValidUsingSTD3ASCIIRules: Bool {')
-    file.puts('    let value: UInt32 = self.value')
-    arranged_table[:disallowed_std3_valid].each{|info|
-      file.puts("    if #{range_cond(info[0])} { return true }")
-    }
-    file.puts('    return false')
-    file.puts('  }')
-    
-    # :mapped
-    file.puts('  internal var  _idna_isMapped: (Bool, to:[UnicodeScalar]?) {')
-    file.puts('    let value: UInt32 = self.value')
-    arranged_table[:mapped].each{|info|
-      cond = range_cond(info[0])
-      scalars = mappingResult.call(info[2])
-      file.puts("    if #{cond} { return (true, to:#{scalars}) }")
-    }
-    file.puts('    return (false, to:nil)')
-    file.puts('  }')
-    
-    # :deviation
-    file.puts('  internal var  _idna_isDeviation: (Bool, to:[UnicodeScalar]?) {')
-    file.puts('    let value: UInt32 = self.value')
-    arranged_table[:deviation].each{|info|
-      cond = range_cond(info[0])
-      scalars = mappingResult.call(info[2])
-      file.puts("    if #{cond} { return (true, to:#{scalars}) }")
-    }
-    file.puts('    return (false, to:nil)')
-    file.puts('  }')
-    
-    # :disallowed_std3_mapped
-    file.puts('  internal var  _idna_isDisallowedButMappedUsingSTD3ASCIIRules: (Bool, to:[UnicodeScalar]?) {')
-    file.puts('    let value: UInt32 = self.value')
-    arranged_table[:disallowed_std3_mapped].each{|info|
-      cond = range_cond(info[0])
-      scalars = mappingResult.call(info[2])
-      file.puts("    if #{cond} { return (true, to:#{scalars}) }")
-    }
-    file.puts('    return (false, to:nil)')
-    file.puts('  }')
-    
-    file.puts('}')
   end
 end
 

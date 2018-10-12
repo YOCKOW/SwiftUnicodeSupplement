@@ -157,6 +157,24 @@ def converted_range(range_string)
   end
 end
 
+def ranges_for_unicode_predicate(range_string)
+  ranges = [] # an array of uint32
+  range = converted_range(range_string)
+  startScalar = range.begin
+  endScalar = range.end
+  while true
+    length = endScalar - startScalar
+    if length <= 2047
+      ranges.push((startScalar << 11) | length)
+      break
+    else
+      ranges.push((startScalar << 11) | 2047)
+      startScalar += 2048
+    end
+  end
+  return ranges
+end
+
 def range_cond(range_string)
   range = converted_range(range_string)
   if range.begin != range.end

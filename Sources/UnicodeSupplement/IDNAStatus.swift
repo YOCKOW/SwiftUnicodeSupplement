@@ -22,10 +22,10 @@ extension Unicode {
     case ignored
     
     /// Scalar is replaced with the other scalars for the mapping.
-    case mapped([UnicodeScalar]?)
+    case mapped([UnicodeScalar])
     
     /// Scalar is valid or mapped depending on whether the processing is transitional or not.
-    case deviation([UnicodeScalar]?)
+    case deviation([UnicodeScalar])
     
     /// Scalar is not allowed.
     case disallowed
@@ -39,30 +39,26 @@ extension Unicode.Scalar {
   internal func _idnaStatus(usingSTD3ASCIIRules std3:Bool = true,
                          idna2008Compatible idna2008:Bool = false) -> Unicode.IDNAStatus?
   {
-    if self._idna_isValidButDisallowedInIDNA2008 {
+    if self._idna_valid_idna2008_disallowed {
       if idna2008 { return .disallowed }
       return .valid
     }
-    if self._idna_isValid { return .valid }
-    if self._idna_isIgnored { return .ignored }
-    if self._idna_isDisallowed { return .disallowed }
-    if self._idna_isDisallowedButValidUsingSTD3ASCIIRules {
+    if self._idna_valid { return .valid }
+    if self._idna_ignored { return .ignored }
+    if self._idna_disallowed { return .disallowed }
+    if self._idna_disallowed_std3_valid {
       if std3 { return .valid }
       return .disallowed
     }
-    switch self._idna_isMapped {
-    case (true, let scalars): return .mapped(scalars)
-    default: break
+    if let mapped = self._idna_mapped {
+      return .mapped(mapped)
     }
-    switch self._idna_isDeviation {
-    case (true, let scalars): return .deviation(scalars)
-    default: break
+    if let deviation = self._idna_deviation {
+      return .deviation(deviation)
     }
-    switch self._idna_isDisallowedButMappedUsingSTD3ASCIIRules {
-    case (true, let scalars):
-      if std3 { return .mapped(scalars) }
+    if let std3_mapped = self._idna_disallowed_std3_mapped {
+      if std3 { return .mapped(std3_mapped) }
       return .disallowed
-    default: break
     }
     return nil
   }
