@@ -251,3 +251,13 @@ extension Unicode.Scalar.LatestProperties {
     _unimplemented()
   }
 }
+
+extension Unicode.Scalar.LatestProperties {
+  public var name: String? {
+    _unimplemented()
+  }
+  
+  public var nameAlias: String? {
+    _unimplemented()
+  }
+}
