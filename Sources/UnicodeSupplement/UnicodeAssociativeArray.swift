@@ -27,7 +27,7 @@ internal struct _UnicodeAssociativeArray<T> {
       if value < start { return nil } // because _array must be sorted.
       
       let length = pair.0 & 0b11111111111
-      if value <= start + length && value >= start { return pair.1 }
+      if value <= start + length { return pair.1 }
     }
     return nil
   }
