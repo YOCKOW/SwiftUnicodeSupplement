@@ -23,7 +23,7 @@ final class UnicodeSupplementTests: XCTestCase {
     check("A", true, false, .mapped(["a"]))
     
     check("\u{DF}", true, false, .deviation(["s", "s"]))
-    check("\u{200C}", true, false, .deviation([]))
+    check("\u{200C}", true, false, .deviation(nil))
     
     check("\u{04C0}", true, false, .disallowed)
     
