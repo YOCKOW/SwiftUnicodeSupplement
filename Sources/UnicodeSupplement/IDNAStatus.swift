@@ -32,6 +32,19 @@ extension Unicode {
   }
 }
 
+extension Unicode.IDNAStatus: Equatable {
+  public static func ==(lhs:Unicode.IDNAStatus, rhs:Unicode.IDNAStatus) -> Bool {
+    switch (lhs, rhs) {
+    case (.valid, .valid): return true
+    case (.ignored, .ignored): return true
+    case (.mapped(let lmapped), .mapped(let rmapped)): return lmapped == rmapped
+    case (.deviation(let ldeviation), .deviation(let rdeviation)): return ldeviation == rdeviation
+    case (.disallowed, .disallowed): return true
+    default: return false
+    }
+  }
+}
+
 extension Unicode.Scalar {
   /// Returns IDNA Status Value.
   /// - parameter usingSTD3ASCIIRules: Specify whether STD3 ASCII Rules should be used or not.
