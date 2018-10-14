@@ -236,3 +236,18 @@ extension Unicode.Scalar.LatestProperties {
     _unimplemented()
   }
 }
+
+
+extension Unicode.Scalar.LatestProperties {
+  public var lowercaseMapping: String {
+    _unimplemented()
+  }
+  
+  public var titlecaseMapping: String {
+    _unimplemented()
+  }
+  
+  public var uppercaseMapping: String {
+    _unimplemented()
+  }
+}
