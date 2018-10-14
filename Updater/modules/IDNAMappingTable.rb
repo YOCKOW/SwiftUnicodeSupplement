@@ -52,37 +52,86 @@ module IDNAMappingTable
       end
     }
     
-    convertPredicateArray = lambda {|range_string_array|
-      return "[\n  " +
-      range_string_array.map {|info|
-        ranges_for_unicode_predicate(info[0])
-      }.flatten().sort.map {|uint32|
-        sprintf('0x%04X', uint32)
-      }.join(",\n  ") +
-      "\n]"
+    array_elem_name_for = lambda {|key, index|
+      return sprintf('__elem_%s_%x', key.to_s, index)
     }
     
-    mappingResult = lambda{|scalars|
+    array_name_for = lambda {|key|
+      return '__array_' + key.to_s
+    }
+    
+    assoc_array_name_for = lambda {|key|
+      return '__assoc_' + key.to_s
+    }
+    
+    property_name_for = lambda {|key|
+      return '_idna_' + key.to_s
+    }
+    
+    mapping_result = lambda {|scalars|
       return '[]' if scalars.nil? || scalars.empty?
-      return '[' + scalars.split(/\s+/).map{|item| "_us(0x#{item})" }.join(', ') + ']'
+      return '[' + scalars.split(/\s+/).map{|item| "_us(0x#{item})" }.join(',') + ']'
     }
     
-    convertAssociativeArray = lambda {|info_array|
-      info_array.sort!{|info1, info2| info1[0] <=> info2[0]}
+    convert_to_swift_array = lambda {|key, hasAssocValue|
+      result = ''
       
-      result = "[\n"
-      info_array.each {|info|
-        ranges = ranges_for_unicode_predicate(info[0])
-        ranges.each {|uint32|
-          result += '  ('
-          result += sprintf('0x%04X', uint32) + ','
-          result += mappingResult.call(info[2])
-          result += '),'
-          result += "\n"
+      categorized_table = []
+      arranged_table[key].each {|row|
+        ranges_for_unicode_predicate(row[0]).each {|range|
+          converted_row = [range]
+          (1..(row.count - 1)).each {|ii| converted_row[ii] = row[ii] }
+          categorized_table.push(converted_row)
         }
       }
-      result += "]"
+      
+      # categorized_table:
+      # [ [range represented by uint32, status, mapped, additional info], ... ]
+      
+      categorized_table.sort! {|row1, row2| row1[0] <=> row2[0] }
+      
+      if hasAssocValue
+        categorized_table.each_with_index {|row, ii|
+          result += 'private let ' + array_elem_name_for.call(key, ii)
+          result += ':(UInt32,[Unicode.Scalar])='
+          result += sprintf('(0x%X,%s)', row[0], mapping_result.call(row[2]))
+          result += "\n"
+        }
+      end
+      
+      result += 'private let ' + array_name_for.call(key) + ':'
+      result += (hasAssocValue ? '[(UInt32,[Unicode.Scalar])]' : '[UInt32]')
+      result += '=['
+      
+      (0..(categorized_table.count - 1)).each {|ii|
+        result += (hasAssocValue ? array_elem_name_for.call(key, ii) : sprintf('0x%X',categorized_table[ii][0]))
+        result += ','
+      }
+      result += ']'
+      
       return result
+    }
+    
+    convert_to_unicode_assoc_array = lambda {|key, hasAssocValue|
+      result = convert_to_swift_array.call(key, hasAssocValue) + "\n"
+      result += 'private let ' + assoc_array_name_for.call(key) + '='
+      result += (hasAssocValue ? '_UnicodeAssociativeArray<[Unicode.Scalar]>' : '_UnicodePredicate')
+      result += '(' + array_name_for.call(key) + ',alreadySorted:true)'
+      return result
+    }
+    
+    extension_with = lambda {|key, hasAssocValue|
+      result = 'extension Unicode.Scalar{internal var ' + property_name_for.call(key) + ': '
+      result += (hasAssocValue ? '[Unicode.Scalar]?' : 'Bool')
+      result += '{return ' + assoc_array_name_for.call(key) + '.'
+      result += (hasAssocValue ? 'value(for:self)' : 'contains(self)')
+      result += '}}'
+      return result
+    }
+    
+    write_whole_converted_data = lambda {|key, hasAssocValue|
+      file.puts(convert_to_unicode_assoc_array.call(key, hasAssocValue))
+      file.puts(extension_with.call(key, hasAssocValue))
     }
     
     ##### WRITE THEM #####
@@ -91,29 +140,11 @@ module IDNAMappingTable
     file.puts()
     
     [:valid_idna2008_disallowed, :valid, :ignored, :disallowed, :disallowed_std3_valid].each {|key|
-      private_var_name = '__idna_' + key.to_s
-      computed_property_name = '_idna_' + key.to_s
-      file.write("private let #{private_var_name} = _UnicodePredicate(")
-      file.write(convertPredicateArray.call(arranged_table[key]))
-      file.puts(", alreadySorted:true)")
-      file.puts("extension Unicode.Scalar {")
-      file.puts("  internal var #{computed_property_name}: Bool {")
-      file.puts("    return #{private_var_name}.contains(self)")
-      file.puts("  }")
-      file.puts("}\n")
+      write_whole_converted_data.call(key, false)
     }
     
     [:mapped, :deviation, :disallowed_std3_mapped].each{|key|
-      private_var_name = '__idna_' + key.to_s
-      computed_property_name = '_idna_' + key.to_s
-      file.write("private let #{private_var_name} = _UnicodeAssociativeArray<Array<Unicode.Scalar>>(")
-      file.write(convertAssociativeArray.call(arranged_table[key]))
-      file.puts(", alreadySorted:true)")
-      file.puts("extension Unicode.Scalar {")
-      file.puts("  internal var #{computed_property_name}: Array<Unicode.Scalar>? {")
-      file.puts("    return #{private_var_name}.value(for:self)")
-      file.puts("  }")
-      file.puts("}\n")
+      write_whole_converted_data.call(key, true)
     }
   end
 end
