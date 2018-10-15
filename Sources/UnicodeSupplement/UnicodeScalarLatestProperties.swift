@@ -267,3 +267,13 @@ extension Unicode.Scalar.LatestProperties {
     _unimplemented()
   }
 }
+
+extension Unicode.Scalar.LatestProperties {
+  public var numericType: Unicode.NumericType? {
+    _unimplemented()
+  }
+  
+  public var numericValue: Double? {
+    _unimplemented()
+  }
+}
