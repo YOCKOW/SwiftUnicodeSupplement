@@ -20,7 +20,15 @@ extension Unicode {
   }
 }
 
-extension Unicode.CanonicalCombiningClass: Hashable {}
+extension Unicode.CanonicalCombiningClass: Hashable {
+  #if swift(>=4.1.50)
+  #else
+  public var hashValue: Int {
+    return self.rawValue.hashValue
+  }
+  #endif
+}
+
 
 extension Unicode.CanonicalCombiningClass: Comparable {
   public static func < (lhs:Unicode.CanonicalCombiningClass,
