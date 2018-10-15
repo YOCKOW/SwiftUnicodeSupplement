@@ -261,3 +261,9 @@ extension Unicode.Scalar.LatestProperties {
     _unimplemented()
   }
 }
+
+extension Unicode.Scalar.LatestProperties {
+  public var canonicalCombiningClass: Unicode.CanonicalCombiningClass {
+    _unimplemented()
+  }
+}
