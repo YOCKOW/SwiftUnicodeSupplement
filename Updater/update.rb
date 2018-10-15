@@ -19,6 +19,7 @@ require 'pathname'
 
 FILES = [
   :IDNAMappingTable,
+  :PropertyValueAliases
 ]
 
 PROJECT_ROOT_DIR = Pathname(File.realpath('..', File.dirname(__FILE__)))
@@ -182,6 +183,29 @@ def range_cond(range_string)
   else
     return sprintf('value == 0x%06X', range.begin)
   end
+end
+
+# generate the name of `static let`
+def public_identifier_from(string)
+  # specific cases...
+  return string.downcase if string =~ /\ACCC\d+\Z/ || string =~ /\AV\d+\_\d+\Z/i
+  
+  words = string.gsub(/(?:\-|_|(?<=[a-z])(?=[A-Z]))/, ' ').split(/\s+/)
+  if words[0] =~ /^([A-Z]+)([A-Z][0-9a-z]+)$/
+    # e.g.) "HTTPCode" -> ["HTTP", "Code"]
+    words.shift
+    words.unshift($1, $2)
+  end
+  
+  return words.map.with_index{|ww,ii|
+    if ii == 0
+      ww.downcase
+    elsif ww !~ /\A[A-Z]+\Z/
+      ww.capitalize
+    else
+      ww
+    end
+  }.join('')
 end
 
 #### /FUNCTIONS ###
