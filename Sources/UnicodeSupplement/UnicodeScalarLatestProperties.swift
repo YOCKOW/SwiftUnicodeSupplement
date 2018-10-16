@@ -45,7 +45,7 @@ private func _unimplemented(_ functionName:String = #function,
 
 extension Unicode.Scalar.LatestProperties {
   public var isAlphabetic: Bool {
-    _unimplemented()
+    return _coreProp_Alphabetic.contains(self._scalar)
   }
   
   public var isASCIIHexDigit: Bool {
@@ -65,7 +65,7 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isDefaultIgnorableCodePoint: Bool {
-    _unimplemented()
+    return _coreProp_Default_Ignorable_Code_Point.contains(self._scalar)
   }
   
   public var isDeprecated: Bool {
@@ -85,11 +85,11 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isGraphemeBase: Bool {
-    _unimplemented()
+    return _coreProp_Grapheme_Base.contains(self._scalar)
   }
   
   public var isGraphemeExtend: Bool {
-    _unimplemented()
+    return _coreProp_Grapheme_Extend.contains(self._scalar)
   }
   
   public var isHexDigit: Bool {
@@ -97,11 +97,11 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isIDContinue: Bool {
-    _unimplemented()
+    return _coreProp_ID_Continue.contains(self._scalar)
   }
   
   public var isIDStart: Bool {
-    _unimplemented()
+    return _coreProp_ID_Start.contains(self._scalar)
   }
   
   public var isIdeographic: Bool {
@@ -125,11 +125,11 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isLowercase: Bool {
-    _unimplemented()
+    return _coreProp_Lowercase.contains(self._scalar)
   }
   
   public var isMath: Bool {
-    _unimplemented()
+    return _coreProp_Math.contains(self._scalar)
   }
   
   public var isNoncharacterCodePoint: Bool {
@@ -157,7 +157,7 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isUppercase: Bool {
-    _unimplemented()
+    return _coreProp_Uppercase.contains(self._scalar)
   }
   
   public var isWhitespace: Bool {
@@ -165,11 +165,11 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isXIDContinue: Bool {
-    _unimplemented()
+    return _coreProp_XID_Continue.contains(self._scalar)
   }
   
   public var isXIDStart: Bool {
-    _unimplemented()
+    return _coreProp_XID_Start.contains(self._scalar)
   }
   
   public var isSentenceTerminal: Bool {
@@ -189,31 +189,31 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isCased: Bool {
-    _unimplemented()
+    return _coreProp_Cased.contains(self._scalar)
   }
   
   public var isCaseIgnorable: Bool {
-    _unimplemented()
+    return _coreProp_Case_Ignorable.contains(self._scalar)
   }
   
   public var changesWhenLowercased: Bool {
-    _unimplemented()
+    return _coreProp_Changes_When_Lowercased.contains(self._scalar)
   }
   
   public var changesWhenUppercased: Bool {
-    _unimplemented()
+    return _coreProp_Changes_When_Uppercased.contains(self._scalar)
   }
   
   public var changesWhenTitlecased: Bool {
-    _unimplemented()
+    return _coreProp_Changes_When_Titlecased.contains(self._scalar)
   }
   
   public var changesWhenCaseFolded: Bool {
-    _unimplemented()
+    return _coreProp_Changes_When_Casefolded.contains(self._scalar)
   }
   
   public var changesWhenCaseMapped: Bool {
-    _unimplemented()
+    return _coreProp_Changes_When_Casemapped.contains(self._scalar)
   }
   
   public var changesWhenNFKCCaseFolded: Bool {

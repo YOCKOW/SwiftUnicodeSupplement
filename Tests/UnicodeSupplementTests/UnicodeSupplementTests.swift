@@ -75,10 +75,107 @@ final class UnicodeSupplementTests: XCTestCase {
     check("\u{2474}", false, false, .disallowed)
   }
   
+  func test_coreProperties() {
+    let check = {
+      (scalar:Unicode.Scalar,
+      keyPath:KeyPath<Unicode.Scalar.LatestProperties, Bool>,
+      expected:Bool) -> Void in
+      
+      XCTAssertEqual(expected, scalar.latestProperties[keyPath:keyPath],
+                     "Scalar:\(scalar)(U+\(String(scalar.value, radix:16).uppercased())), " +
+                     "KeyPath:\(keyPath)")
+    }
+    
+    // not exhaustive
+    let test_set: [KeyPath<Unicode.Scalar.LatestProperties, Bool>:[(Unicode.Scalar,Bool)]] = [
+      \.isMath:[
+        ("+", true),
+        ("十", false),
+      ],
+      \.isAlphabetic:[
+        ("A", true),
+        ("0", false),
+      ],
+      \.isLowercase:[
+        ("x", true),
+        ("X", false)
+      ],
+      \.isUppercase:[
+        ("Z", true),
+        ("z", false)
+      ],
+      \.isCased:[
+        ("u", true),
+        ("U", true),
+        ("ウ", false)
+      ],
+      \.isCaseIgnorable:[
+        ("'", true),
+        ("「", false),
+      ],
+      \.changesWhenLowercased:[
+        ("Ａ", true),
+        ("ａ", false),
+      ],
+      \.changesWhenUppercased:[
+        ("ｘ", true),
+        ("❌", false),
+      ],
+      \.changesWhenTitlecased:[
+        ("t", true),
+        ("T", false),
+      ],
+      \.changesWhenCaseFolded:[
+        ("F", true),
+        ("f", false),
+      ],
+      \.changesWhenCaseMapped:[
+        ("m", true),
+        ("ま", false),
+      ],
+      \.isIDStart:[
+        ("始", true),
+        ("!", false),
+      ],
+      \.isIDContinue:[
+        ("続", true),
+        ("*", false),
+      ],
+      \.isXIDStart:[
+        ("初", true),
+        ("?", false),
+      ],
+      \.isXIDContinue:[
+        ("継", true),
+        ("/", false),
+      ],
+      \.isDefaultIgnorableCodePoint:[
+        ("\u{E0777}", true),
+        ("７", false)
+      ],
+      \.isGraphemeExtend:[
+        ("\u{1d16e}", true),
+        ("♪", false)
+      ],
+      \.isGraphemeBase:[
+        ("\u{1d100}", true),
+        ("\t", false)
+      ]
+    ]
+    
+    for (keyPath, tests) in test_set {
+      for (scalar, expected) in tests {
+        check(scalar, keyPath, expected)
+      }
+    }
+    
+  }
+  
   static var allTests: [(String, (UnicodeSupplementTests) -> () -> ())] = [
     ("test_UnicodeAssociativeArray", test_UnicodeAssociativeArray),
     ("test_UnicodePredicate", test_UnicodePredicate),
     ("test_IDNAStatus", test_IDNAStatus),
+    ("test_coreProperties", test_coreProperties),
   ]
 }
 
