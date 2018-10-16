@@ -159,31 +159,64 @@ def converted_range(range_string)
   end
 end
 
-def ranges_for_unicode_predicate(range_string)
-  ranges = [] # an array of uint32
-  range = converted_range(range_string)
+def uint32_from_range(range)
+  start_value = range.begin
+  length = range.end - start_value
+  if length > 2047
+    failed(sprintf("Length must be less than 2048. Given range: 0x%X .. 0x%X",
+                   range.begin, range.end))
+  end
+  return ((start_value << 11) | length)
+end
+
+def range_from_uint32(uint32)
+  start_value = uint32 >> 11
+  length = uint32 & 0b11111111111
+  return Range.new(uint32 >> 11, start_value + length, false)
+end
+
+def divided_ranges(range, max_length = 2048)
+  result = []
   startScalar = range.begin
   endScalar = range.end
   while true
-    length = endScalar - startScalar
-    if length <= 2047
-      ranges.push((startScalar << 11) | length)
+    if endScalar - startScalar < max_length
+      result.push(Range.new(startScalar, endScalar, false))
       break
     else
-      ranges.push((startScalar << 11) | 2047)
-      startScalar += 2048
+      result.push(Range.new(startScalar, startScalar + max_length - 1, false))
+      startScalar += max_length
     end
   end
-  return ranges
+  return result
 end
 
-def range_cond(range_string)
-  range = converted_range(range_string)
-  if range.begin != range.end
-    return sprintf('(0x%06X <= value && value <= 0x%06X)', range.begin, range.end)
-  else
-    return sprintf('value == 0x%06X', range.begin)
-  end
+def array_of_uint32_representing_ranges_with(range_string)
+  return divided_ranges(converted_range(range_string)).map{|range| uint32_from_range(range)}
+end
+
+# shorten the array if possible
+def normalize_array_representing_ranges(uint32_array)
+  ranges = []
+  uint32_array.sort.each{|uint32|
+    if ranges.count < 1
+      ranges.push(range_from_uint32(uint32))
+      next
+    end
+    
+    last_range = ranges.last
+    range_to_be_added = range_from_uint32(uint32)
+    
+    if range_to_be_added.begin > last_range.end + 1
+      # cannot concatenate
+      ranges.push(range_to_be_added)
+      next
+    end
+    
+    ranges.pop
+    ranges.concat(divided_ranges(Range.new(last_range.begin, range_to_be_added.end, false)))
+  }
+  return ranges.map{|range| uint32_from_range(range) }
 end
 
 # generate the name of `static let`

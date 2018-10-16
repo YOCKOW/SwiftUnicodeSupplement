@@ -78,7 +78,7 @@ module IDNAMappingTable
       
       categorized_table = []
       arranged_table[key].each {|row|
-        ranges_for_unicode_predicate(row[0]).each {|range|
+        array_of_uint32_representing_ranges_with(row[0]).each {|range|
           converted_row = [range]
           (1..(row.count - 1)).each {|ii| converted_row[ii] = row[ii] }
           categorized_table.push(converted_row)
@@ -103,10 +103,16 @@ module IDNAMappingTable
       result += (hasAssocValue ? '[(UInt32,[Unicode.Scalar])]' : '[UInt32]')
       result += '=['
       
-      (0..(categorized_table.count - 1)).each {|ii|
-        result += (hasAssocValue ? array_elem_name_for.call(key, ii) : sprintf('0x%X',categorized_table[ii][0]))
-        result += ','
-      }
+      if hasAssocValue
+        (0..(categorized_table.count - 1)).each {|ii|
+          result += array_elem_name_for.call(key, ii) + ','
+        }
+      else
+        result += normalize_array_representing_ranges(categorized_table.map{|row| row[0]}).map{|uint32|
+          sprintf('0x%X', uint32)
+        }.join(',')
+      end
+      
       result += ']'
       
       return result
