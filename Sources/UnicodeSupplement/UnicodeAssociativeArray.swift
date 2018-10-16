@@ -5,10 +5,20 @@
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
 
+
+private typealias _UnicodeScalarClosedRange = UInt32
+private typealias _UnicodeScalarValue = UInt32
+
+extension _UnicodeScalarClosedRange {
+  fileprivate var _lowerBound:_UnicodeScalarValue {
+    return self >> 11
+  }
+  fileprivate var _length:_UnicodeScalarValue {
+    return self & 0b11111111111
+  }
+}
+
 internal final class _UnicodeAssociativeArray<T> {
-  private typealias _UnicodeScalarClosedRange = UInt32
-  private typealias _UnicodeScalarValue = UInt32
-  
   /// An array of (`UInt32`, `T`).
   ///
   /// Each integer indicates a range of Unicode scalar.
@@ -31,31 +41,54 @@ internal final class _UnicodeAssociativeArray<T> {
     self._array = alreadySorted ? table : table.sorted { $0.0 < $1.0 }
   }
   
+  // like binary search
+  private enum _SearchDirection { case up, down }
+  private func _value(for scalarValue:_UnicodeScalarValue, startSearchingFrom index:Int) -> T? {
+    let direction:_SearchDirection = self._array[index].0._lowerBound > scalarValue ? .down : .up
+    
+    switch direction {
+    case .up:
+      for pair in self._array[index..<self._array.endIndex] {
+        let lower = pair.0._lowerBound
+        if scalarValue < lower {
+          // because _array must be sorted
+          return nil
+        }
+        let length = pair.0._length
+        if scalarValue <= lower + length { return pair.1 }
+      }
+      return nil
+    case .down:
+      guard index > 0 else { return nil }
+      for pair in self._array[0..<index].reversed() {
+        let lower = pair.0._lowerBound
+        let upper = lower + pair.0._length
+        if scalarValue > upper {
+          // because _array must be sorted
+          return nil
+        }
+        if scalarValue >= lower { return pair.1 }
+      }
+      return nil
+    }
+  }
+  
   internal func value(for scalar:Unicode.Scalar) -> T? {
     let value = scalar.value
-    
     if let cached = self._cacheTable[value] {
       switch cached {
       case .value(let actualValue): return actualValue
       case .none: return nil
       }
-    }  else {
-      for pair in self._array {
-        let start = pair.0 >> 11
-        if value < start {
-          // because _array must be sorted.
-          self._cacheTable[value] = .none
-          return nil
-        }
-        
-        let length = pair.0 & 0b11111111111
-        if value <= start + length {
-          self._cacheTable[value] = .value(pair.1)
-          return pair.1
-        }
+    } else {
+      let startPosition:Int = Int(Double(self._array.count) * Double(value) / Double(0x10FFFF))
+      if let assocValue = self._value(for:value, startSearchingFrom:startPosition) {
+        self._cacheTable[value] = .value(assocValue)
+        return assocValue
+      } else {
+        self._cacheTable[value] = .none
+        return nil
       }
-      self._cacheTable[value] = .none
-      return nil
     }
   }
   
