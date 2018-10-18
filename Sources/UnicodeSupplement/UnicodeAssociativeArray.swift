@@ -44,11 +44,12 @@ internal final class _UnicodeAssociativeArray<T> {
   // like binary search
   private enum _SearchDirection { case up, down }
   private func _value(for scalarValue:_UnicodeScalarValue, startSearchingFrom index:Int) -> T? {
-    let direction:_SearchDirection = self._array[index].0._lowerBound > scalarValue ? .down : .up
+    let idx = index < 0 ? 0 : (index < self._array.endIndex ? index : self._array.endIndex - 1)
+    let direction:_SearchDirection = self._array[idx].0._lowerBound > scalarValue ? .down : .up
     
     switch direction {
     case .up:
-      for pair in self._array[index..<self._array.endIndex] {
+      for pair in self._array[idx..<self._array.endIndex] {
         let lower = pair.0._lowerBound
         if scalarValue < lower {
           // because _array must be sorted
@@ -60,7 +61,7 @@ internal final class _UnicodeAssociativeArray<T> {
       return nil
     case .down:
       guard index > 0 else { return nil }
-      for pair in self._array[0..<index].reversed() {
+      for pair in self._array[0..<idx].reversed() {
         let lower = pair.0._lowerBound
         let upper = lower + pair.0._length
         if scalarValue > upper {
@@ -73,27 +74,51 @@ internal final class _UnicodeAssociativeArray<T> {
     }
   }
   
+  private lazy var __minValue:_UnicodeScalarValue = self._array.first!.0._lowerBound
+  private lazy var __midIndex:Int = self._array.count / 2
+  private lazy var __inaccurateMidValue:_UnicodeScalarValue = ({
+    let mid = self._array[self.__midIndex]
+    return mid.0._lowerBound + (mid.0._length / 2)
+  })()
+  private lazy var __maxValue:_UnicodeScalarValue = ({
+    let lastRange = self._array.last!.0
+    return lastRange._lowerBound + lastRange._length
+  })()
+  private lazy var __searchIndexCoefficientL:Double =
+    Double(self.__midIndex) / Double(self.__maxValue - self.__inaccurateMidValue)
+  private lazy var __searchIndexCoefficientS:Double =
+    Double(self.__midIndex) / Double(self.__inaccurateMidValue - self.__minValue)
+  private func __searchStartIndex(for value:_UnicodeScalarValue) -> Int {
+    let dev = Int32(bitPattern:value &- self.__inaccurateMidValue)
+    let coefficient = value > self.__inaccurateMidValue ?
+      self.__searchIndexCoefficientL : self.__searchIndexCoefficientS
+    return self.__midIndex + Int(Double(dev) * coefficient)
+  }
   internal func value(for scalar:Unicode.Scalar) -> T? {
     let value = scalar.value
     if let cached = self._cacheTable[value] {
       switch cached {
-      case .value(let actualValue): return actualValue
+      case .value(let assocValue): return assocValue
       case .none: return nil
       }
     } else {
-      let startPosition:Int = Int(Double(self._array.count) * Double(value) / Double(0x10FFFF))
+      let returnWithRegistering:(T?) -> T? = { (toBeCached:T?) -> T? in
+        self._cacheTable[value] = toBeCached == nil ? .none : .value(toBeCached!)
+        return toBeCached
+      }
+      
+      guard value >= self.__minValue && value <= self.__maxValue else {
+        return returnWithRegistering(nil)
+      }
+      
+      let startPosition = self.__searchStartIndex(for:value)
+      
       if let assocValue = self._value(for:value, startSearchingFrom:startPosition) {
-        self._cacheTable[value] = .value(assocValue)
-        return assocValue
+        return returnWithRegistering(assocValue)
       } else {
-        self._cacheTable[value] = .none
-        return nil
+        return returnWithRegistering(nil)
       }
     }
-  }
-  
-  internal subscript(_ scalar:Unicode.Scalar) -> T? {
-    return self.value(for:scalar)
   }
 }
 
