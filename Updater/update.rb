@@ -22,7 +22,8 @@ FILES = [
   :DerivedCoreProperties,
   :DerivedGeneralCategory,
   :IDNAMappingTable,
-  :PropertyValueAliases
+  :PropertyValueAliases,
+  :PropList,
 ]
 
 PROJECT_ROOT_DIR = Pathname(File.realpath('..', File.dirname(__FILE__)))
