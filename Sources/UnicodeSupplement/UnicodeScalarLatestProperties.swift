@@ -264,7 +264,8 @@ extension Unicode.Scalar.LatestProperties {
 
 extension Unicode.Scalar.LatestProperties {
   public var canonicalCombiningClass: Unicode.CanonicalCombiningClass {
-    _unimplemented()
+    let rawValue = _canonicalCombiningClass_uint8.value(for:self._scalar) ?? 0
+    return Unicode.CanonicalCombiningClass(rawValue:rawValue)
   }
 }
 

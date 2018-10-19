@@ -171,11 +171,41 @@ final class UnicodeSupplementTests: XCTestCase {
     
   }
   
+  func test_CanonicalCombiningClass() {
+    func ccc(scalar:Unicode.Scalar) -> Unicode.CanonicalCombiningClass {
+      return scalar.latestProperties.canonicalCombiningClass
+    }
+    func ccc(integer:Int) -> Unicode.CanonicalCombiningClass {
+      return Unicode.Scalar(integer)!.latestProperties.canonicalCombiningClass
+    }
+    
+    XCTAssertEqual(ccc(scalar:"5"), .notReordered)
+    XCTAssertEqual(ccc(integer:0x1D168), .overlay)
+    XCTAssertEqual(ccc(integer:0x1133C), .nukta)
+    XCTAssertEqual(ccc(integer:0x3099), .kanaVoicing)
+    XCTAssertEqual(ccc(integer:0x11133), .virama)
+    XCTAssertEqual(ccc(integer:0x0327), .attachedBelow)
+    XCTAssertEqual(ccc(integer:0x1DCE), .attachedAbove)
+    XCTAssertEqual(ccc(integer:0x1D165), .attachedAboveRight)
+    XCTAssertEqual(ccc(integer:0x302A), .belowLeft)
+    XCTAssertEqual(ccc(integer:0x08ED), .below)
+    XCTAssertEqual(ccc(integer:0x1939), .belowRight)
+    XCTAssertEqual(ccc(integer:0x302F), .left)
+    XCTAssertEqual(ccc(integer:0x1D16D), .right)
+    XCTAssertEqual(ccc(integer:0x1DF8), .aboveLeft)
+    XCTAssertEqual(ccc(integer:0x1D189), .above)
+    XCTAssertEqual(ccc(integer:0x1DF6), .aboveRight)
+    XCTAssertEqual(ccc(integer:0x1DFC), .doubleBelow)
+    XCTAssertEqual(ccc(integer:0x035E), .doubleAbove)
+    XCTAssertEqual(ccc(integer:0x0345), .iotaSubscript)
+  }
+  
   static var allTests: [(String, (UnicodeSupplementTests) -> () -> ())] = [
     ("test_UnicodeAssociativeArray", test_UnicodeAssociativeArray),
     ("test_UnicodePredicate", test_UnicodePredicate),
     ("test_IDNAStatus", test_IDNAStatus),
     ("test_coreProperties", test_coreProperties),
+    ("test_CanonicalCombiningClass", test_CanonicalCombiningClass),
   ]
 }
 
