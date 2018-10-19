@@ -47,10 +47,7 @@ module PropertyValueAliases
       }
       
       file.puts("// ccc")
-      file.puts("#if swift(>=4.1.50) || !os(Linux)")
-      file.puts("private typealias UnicodeCanonicalCombiningClass = Unicode.CanonicalCombiningClass")
-      file.puts("#endif")
-      file.puts("extension UnicodeCanonicalCombiningClass {")
+      file.puts("extension Unicode.CanonicalCombiningClass {")
       file.puts("#if swift(>=5.0)")
       file.puts("#else")
       write_static_constants.call(rows_defined_in_swift_v5)

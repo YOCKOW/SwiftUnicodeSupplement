@@ -65,10 +65,7 @@
 
 
 // ccc
-#if swift(>=4.1.50) || !os(Linux)
-private typealias UnicodeCanonicalCombiningClass = Unicode.CanonicalCombiningClass
-#endif
-extension UnicodeCanonicalCombiningClass {
+extension Unicode.CanonicalCombiningClass {
 #if swift(>=5.0)
 #else
   public static let notReordered = Unicode.CanonicalCombiningClass(rawValue:0)
