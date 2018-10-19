@@ -5,8 +5,8 @@ It may be useful for some people who can't wait for [SE-0211](https://github.com
 
 # Requirements
 
-- Swift 4.1
-- macOS or Linux
+- Swift 4.1, 4.2
+- macOS or Linux (Swift 4.2 is required on Linux)
 
 # Usage
 
