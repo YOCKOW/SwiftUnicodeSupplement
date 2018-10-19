@@ -130,3 +130,41 @@ extension UnicodeCanonicalCombiningClass {
   public static let ccc132 = Unicode.CanonicalCombiningClass(rawValue:132)
   public static let ccc133 = Unicode.CanonicalCombiningClass(rawValue:133)
 }
+// gc
+extension Unicode.GeneralCategory {
+  public init?(abbreviated value:String) {
+    switch value {
+    case "Cc": self = .control
+    case "Cf": self = .format
+    case "Cn": self = .unassigned
+    case "Co": self = .privateUse
+    case "Cs": self = .surrogate
+    case "Ll": self = .lowercaseLetter
+    case "Lm": self = .modifierLetter
+    case "Lo": self = .otherLetter
+    case "Lt": self = .titlecaseLetter
+    case "Lu": self = .uppercaseLetter
+    case "Mc": self = .spacingMark
+    case "Me": self = .enclosingMark
+    case "Mn": self = .nonspacingMark
+    case "Nd": self = .decimalNumber
+    case "Nl": self = .letterNumber
+    case "No": self = .otherNumber
+    case "Pc": self = .connectorPunctuation
+    case "Pd": self = .dashPunctuation
+    case "Pe": self = .closePunctuation
+    case "Pf": self = .finalPunctuation
+    case "Pi": self = .initialPunctuation
+    case "Po": self = .otherPunctuation
+    case "Ps": self = .openPunctuation
+    case "Sc": self = .currencySymbol
+    case "Sk": self = .modifierSymbol
+    case "Sm": self = .mathSymbol
+    case "So": self = .otherSymbol
+    case "Zl": self = .lineSeparator
+    case "Zp": self = .paragraphSeparator
+    case "Zs": self = .spaceSeparator
+    default: return nil
+    }
+  }
+}

@@ -58,6 +58,26 @@ module PropertyValueAliases
       write_static_constants.call(rows_undefined_in_any_version)
       file.puts("}")
     end
+    
+    def write_gc(gc_table, file)
+      # gc_table must be
+      # [["gc", abbr, name], ...]
+      
+      file.puts("// gc")
+      file.puts("extension Unicode.GeneralCategory {")
+      file.puts("  public init?(abbreviated value:String) {")
+      file.puts("    switch value {")
+      
+      gc_table.each{|row|
+        next if row[1] !~ /^[A-Z][a-z]$/
+        file.puts("    case \"#{row[1]}\": self = .#{public_identifier_from(row[2])}")
+      }
+      
+      file.puts("    default: return nil")
+      file.puts("    }")
+      file.puts("  }")
+      file.puts("}")
+    end
   end
   
   module_function def write(remote_io, file)
@@ -66,7 +86,8 @@ module PropertyValueAliases
     
     # Which converters are implemented...
     names = [
-      :ccc
+      :ccc,
+      :gc,
     ]
     
     divided_table = {}
@@ -80,6 +101,7 @@ module PropertyValueAliases
     
     ### START WRITING ###
     self.write_ccc(divided_table[:ccc], file)
+    self.write_gc(divided_table[:gc], file)
     ### FINISH WRITING ###
   end
 end
