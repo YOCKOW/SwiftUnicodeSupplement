@@ -53,7 +53,7 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isBidiControl: Bool {
-    _unimplemented()
+    return _prop_Bidi_Control.contains(self._scalar)
   }
   
   public var isBidiMirrored: Bool {

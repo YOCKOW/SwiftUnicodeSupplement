@@ -98,6 +98,10 @@ final class UnicodeSupplementTests: XCTestCase {
         ("e", true),
         ("X", false),
       ],
+      \.isBidiControl:[
+        ("\u{200E}", true),
+        ("ビ", false),
+      ],
       \.isMath:[
         ("+", true),
         ("十", false),
