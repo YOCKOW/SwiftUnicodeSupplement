@@ -89,6 +89,10 @@ final class UnicodeSupplementTests: XCTestCase {
     typealias PropTests = [KeyPath<Unicode.Scalar.LatestProperties,Bool>:[(Unicode.Scalar,Bool)]]
     
     let propTests: PropTests = [
+      \.isWhitespace:[
+        ("　", true),
+        ("間", false),
+      ],
       \.isBidiControl:[
         ("\u{200E}", true),
         ("ビ", false),

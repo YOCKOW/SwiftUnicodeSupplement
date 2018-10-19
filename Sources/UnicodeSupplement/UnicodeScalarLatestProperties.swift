@@ -161,7 +161,7 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isWhitespace: Bool {
-    _unimplemented()
+    return _prop_White_Space.contains(self._scalar)
   }
   
   public var isXIDContinue: Bool {
