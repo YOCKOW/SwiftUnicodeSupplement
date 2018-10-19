@@ -86,11 +86,12 @@ final class UnicodeSupplementTests: XCTestCase {
                      "KeyPath:\(keyPath)")
     }
     
-    // not exhaustive
-    let test_set: [KeyPath<Unicode.Scalar.LatestProperties, Bool>:[(Unicode.Scalar,Bool)]] = [
-      \.isAlphabetic:[
-        ("A", true),
-        ("0", false),
+    typealias PropTests = [KeyPath<Unicode.Scalar.LatestProperties,Bool>:[(Unicode.Scalar,Bool)]]
+    
+    let propTests: PropTests = [
+      \.isBidiControl:[
+        ("\u{200E}", true),
+        ("ビ", false),
       ],
       \.isASCIIHexDigit:[
         ("6", true),
@@ -98,13 +99,17 @@ final class UnicodeSupplementTests: XCTestCase {
         ("e", true),
         ("X", false),
       ],
-      \.isBidiControl:[
-        ("\u{200E}", true),
-        ("ビ", false),
-      ],
+    ]
+    
+    // not exhaustive
+    let corePropTests: PropTests = [
       \.isMath:[
         ("+", true),
         ("十", false),
+      ],
+      \.isAlphabetic:[
+        ("A", true),
+        ("0", false),
       ],
       \.isLowercase:[
         ("x", true),
@@ -173,12 +178,13 @@ final class UnicodeSupplementTests: XCTestCase {
       ]
     ]
     
-    for (keyPath, tests) in test_set {
-      for (scalar, expected) in tests {
-        check(scalar, keyPath, expected)
+    for testsDic in [propTests, corePropTests] {
+      for (keyPath, tests) in testsDic {
+        for (scalar, expected) in tests {
+          check(scalar, keyPath, expected)
+        }
       }
     }
-    
   }
   
   func test_GeneralCategory() {
