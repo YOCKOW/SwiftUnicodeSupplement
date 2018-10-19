@@ -171,6 +171,46 @@ final class UnicodeSupplementTests: XCTestCase {
     
   }
   
+  func test_GeneralCategory() {
+    func gc(scalar:Unicode.Scalar) -> Unicode.GeneralCategory {
+      return scalar.latestProperties.generalCategory
+    }
+    func gc(integer:Int) -> Unicode.GeneralCategory {
+      return gc(scalar:Unicode.Scalar(integer)!)
+    }
+    
+    XCTAssertEqual(gc(integer:0x10FFFF), .unassigned)
+    XCTAssertEqual(gc(scalar:"Y"), .uppercaseLetter)
+    XCTAssertEqual(gc(scalar:"y"), .lowercaseLetter)
+    XCTAssertEqual(gc(integer:0x1F88), .titlecaseLetter)
+    XCTAssertEqual(gc(scalar:"ゝ"), .modifierLetter)
+    XCTAssertEqual(gc(integer:0x00BA), .otherLetter)
+    XCTAssertEqual(gc(integer:0x1D168), .nonspacingMark)
+    XCTAssertEqual(gc(integer:0x20DF), .enclosingMark)
+    XCTAssertEqual(gc(integer:0x11182), .spacingMark)
+    XCTAssertEqual(gc(scalar:"０"), .decimalNumber)
+    XCTAssertEqual(gc(integer:0x10150), .letterNumber)
+    XCTAssertEqual(gc(scalar:"①"), .otherNumber)
+    XCTAssertEqual(gc(scalar:" "), .spaceSeparator)
+    XCTAssertEqual(gc(integer:0x2028), .lineSeparator)
+    XCTAssertEqual(gc(integer:0x2029), .paragraphSeparator)
+    XCTAssertEqual(gc(integer:0), .control)
+    XCTAssertEqual(gc(integer:0xAD), .format)
+    XCTAssertEqual(gc(integer:0x10ABCD), .privateUse)
+    // XCTAssertEqual(gc(integer:0xDABC), .surrogate)
+    XCTAssertEqual(gc(scalar:"-"), .dashPunctuation)
+    XCTAssertEqual(gc(scalar:"「"), .openPunctuation)
+    XCTAssertEqual(gc(scalar:"』"), .closePunctuation)
+    XCTAssertEqual(gc(scalar:"＿"), .connectorPunctuation)
+    XCTAssertEqual(gc(scalar:"、"), .otherPunctuation)
+    XCTAssertEqual(gc(scalar:"＋"), .mathSymbol)
+    XCTAssertEqual(gc(scalar:"￥"), .currencySymbol)
+    XCTAssertEqual(gc(integer:0x1F3FD), .modifierSymbol)
+    XCTAssertEqual(gc(integer:0x1F973), .otherSymbol)
+    XCTAssertEqual(gc(integer:0xAB), .initialPunctuation)
+    XCTAssertEqual(gc(integer:0xBB), .finalPunctuation)
+  }
+  
   func test_CanonicalCombiningClass() {
     func ccc(scalar:Unicode.Scalar) -> Unicode.CanonicalCombiningClass {
       return scalar.latestProperties.canonicalCombiningClass
@@ -205,6 +245,7 @@ final class UnicodeSupplementTests: XCTestCase {
     ("test_UnicodePredicate", test_UnicodePredicate),
     ("test_IDNAStatus", test_IDNAStatus),
     ("test_coreProperties", test_coreProperties),
+    ("test_GeneralCategory", test_GeneralCategory),
     ("test_CanonicalCombiningClass", test_CanonicalCombiningClass),
   ]
 }

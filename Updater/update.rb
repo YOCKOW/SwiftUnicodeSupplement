@@ -20,6 +20,7 @@ require 'pathname'
 FILES = [
   :DerivedCombiningClass,
   :DerivedCoreProperties,
+  :DerivedGeneralCategory,
   :IDNAMappingTable,
   :PropertyValueAliases
 ]
