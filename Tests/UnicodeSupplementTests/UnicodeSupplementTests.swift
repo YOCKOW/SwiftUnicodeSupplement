@@ -97,6 +97,10 @@ final class UnicodeSupplementTests: XCTestCase {
         ("\u{200E}", true),
         ("ビ", false),
       ],
+      \.isJoinControl:[
+        ("\u{200C}", true),
+        (" ", false),
+      ],
       \.isASCIIHexDigit:[
         ("6", true),
         ("A", true),

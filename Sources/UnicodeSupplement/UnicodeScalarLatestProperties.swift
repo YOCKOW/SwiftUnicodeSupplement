@@ -117,7 +117,7 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isJoinControl: Bool {
-    _unimplemented()
+    return _prop_Join_Control.contains(self._scalar)
   }
   
   public var isLogicalOrderException: Bool {
