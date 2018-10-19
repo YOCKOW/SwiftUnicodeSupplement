@@ -84,10 +84,14 @@ internal final class _UnicodeAssociativeArray<T> {
     let lastRange = self._array.last!.0
     return lastRange._lowerBound + lastRange._length
   })()
-  private lazy var __searchIndexCoefficientL:Double =
-    Double(self.__midIndex) / Double(self.__maxValue - self.__inaccurateMidValue)
-  private lazy var __searchIndexCoefficientS:Double =
-    Double(self.__midIndex) / Double(self.__inaccurateMidValue - self.__minValue)
+  private lazy var __searchIndexCoefficientL:Double = ({
+    if self.__maxValue == self.__inaccurateMidValue { return 0.0 }
+    return Double(self.__midIndex) / Double(self.__maxValue - self.__inaccurateMidValue)
+  })()
+  private lazy var __searchIndexCoefficientS:Double = ({
+    if self.__minValue == self.__inaccurateMidValue { return 0.0 }
+    return Double(self.__midIndex) / Double(self.__inaccurateMidValue - self.__minValue)
+  })()
   private func __searchStartIndex(for value:_UnicodeScalarValue) -> Int {
     let dev = Int32(bitPattern:value &- self.__inaccurateMidValue)
     let coefficient = value > self.__inaccurateMidValue ?

@@ -24,7 +24,7 @@ final class UnicodeSupplementTests: XCTestCase {
   
   func test_UnicodePredicate() {
     let array: [UInt32] = [0x20819, 0x30819] // "A"..."Z", "a"..."z"
-    let predicate = _UnicodePredicate(array)
+    var predicate = _UnicodePredicate(array)
     let check = { (key:Unicode.Scalar, expected:Bool) -> Void in
       if expected { XCTAssertTrue(predicate.contains(key)) }
       else { XCTAssertFalse(predicate.contains(key)) }
@@ -41,6 +41,9 @@ final class UnicodeSupplementTests: XCTestCase {
     check("z", true)
     check("{", false)
     check("あ", false)
+    
+    predicate = _UnicodePredicate([0x00])
+    check("\u{00}", true)
   }
   
   func test_IDNAStatus() {
