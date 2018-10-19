@@ -49,7 +49,7 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isASCIIHexDigit: Bool {
-    _unimplemented()
+    return _prop_ASCII_Hex_Digit.contains(self._scalar)
   }
   
   public var isBidiControl: Bool {

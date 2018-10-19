@@ -75,7 +75,7 @@ final class UnicodeSupplementTests: XCTestCase {
     check("\u{2474}", false, false, .disallowed)
   }
   
-  func test_coreProperties() {
+  func test_properties() {
     let check = {
       (scalar:Unicode.Scalar,
       keyPath:KeyPath<Unicode.Scalar.LatestProperties, Bool>,
@@ -88,13 +88,19 @@ final class UnicodeSupplementTests: XCTestCase {
     
     // not exhaustive
     let test_set: [KeyPath<Unicode.Scalar.LatestProperties, Bool>:[(Unicode.Scalar,Bool)]] = [
-      \.isMath:[
-        ("+", true),
-        ("十", false),
-      ],
       \.isAlphabetic:[
         ("A", true),
         ("0", false),
+      ],
+      \.isASCIIHexDigit:[
+        ("6", true),
+        ("A", true),
+        ("e", true),
+        ("X", false),
+      ],
+      \.isMath:[
+        ("+", true),
+        ("十", false),
       ],
       \.isLowercase:[
         ("x", true),
@@ -244,7 +250,7 @@ final class UnicodeSupplementTests: XCTestCase {
     ("test_UnicodeAssociativeArray", test_UnicodeAssociativeArray),
     ("test_UnicodePredicate", test_UnicodePredicate),
     ("test_IDNAStatus", test_IDNAStatus),
-    ("test_coreProperties", test_coreProperties),
+    ("test_properties", test_properties),
     ("test_GeneralCategory", test_GeneralCategory),
     ("test_CanonicalCombiningClass", test_CanonicalCombiningClass),
   ]
