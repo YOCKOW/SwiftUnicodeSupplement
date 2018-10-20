@@ -61,7 +61,7 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isDash: Bool {
-    _unimplemented()
+    return _prop_Dash.contains(self._scalar)
   }
   
   public var isDefaultIgnorableCodePoint: Bool {

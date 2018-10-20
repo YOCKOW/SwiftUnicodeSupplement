@@ -104,6 +104,10 @@ final class UnicodeSupplementTests: XCTestCase {
         ("\u{200C}", true),
         (" ", false),
       ],
+      \.isDash:[
+        ("゠", true),
+        ("~", false)
+      ],
       \.isASCIIHexDigit:[
         ("6", true),
         ("A", true),
