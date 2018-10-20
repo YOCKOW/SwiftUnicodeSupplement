@@ -43,149 +43,22 @@ private func _unimplemented(_ functionName:String = #function,
   fatalError("\(functionName) is not implemented yet.", file:file, line:line)
 }
 
+// Core Properties
 extension Unicode.Scalar.LatestProperties {
+  public var isMath: Bool {
+    return _coreProp_Math.contains(self._scalar)
+  }
+  
   public var isAlphabetic: Bool {
     return _coreProp_Alphabetic.contains(self._scalar)
-  }
-  
-  public var isASCIIHexDigit: Bool {
-    return _prop_ASCII_Hex_Digit.contains(self._scalar)
-  }
-  
-  public var isBidiControl: Bool {
-    return _prop_Bidi_Control.contains(self._scalar)
-  }
-  
-  public var isBidiMirrored: Bool {
-    _unimplemented()
-  }
-  
-  public var isDash: Bool {
-    return _prop_Dash.contains(self._scalar)
-  }
-  
-  public var isDefaultIgnorableCodePoint: Bool {
-    return _coreProp_Default_Ignorable_Code_Point.contains(self._scalar)
-  }
-  
-  public var isDeprecated: Bool {
-    _unimplemented()
-  }
-  
-  public var isDiacritic: Bool {
-    _unimplemented()
-  }
-  
-  public var isExtender: Bool {
-    _unimplemented()
-  }
-  
-  public var isFullCompositionExclusion: Bool {
-    _unimplemented()
-  }
-  
-  public var isGraphemeBase: Bool {
-    return _coreProp_Grapheme_Base.contains(self._scalar)
-  }
-  
-  public var isGraphemeExtend: Bool {
-    return _coreProp_Grapheme_Extend.contains(self._scalar)
-  }
-  
-  public var isHexDigit: Bool {
-    _unimplemented()
-  }
-  
-  public var isIDContinue: Bool {
-    return _coreProp_ID_Continue.contains(self._scalar)
-  }
-  
-  public var isIDStart: Bool {
-    return _coreProp_ID_Start.contains(self._scalar)
-  }
-  
-  public var isIdeographic: Bool {
-    _unimplemented()
-  }
-  
-  public var isIDSBinaryOperator: Bool {
-    _unimplemented()
-  }
-  
-  public var isIDSTrinaryOperator: Bool {
-    _unimplemented()
-  }
-  
-  public var isJoinControl: Bool {
-    return _prop_Join_Control.contains(self._scalar)
-  }
-  
-  public var isLogicalOrderException: Bool {
-    _unimplemented()
   }
   
   public var isLowercase: Bool {
     return _coreProp_Lowercase.contains(self._scalar)
   }
   
-  public var isMath: Bool {
-    return _coreProp_Math.contains(self._scalar)
-  }
-  
-  public var isNoncharacterCodePoint: Bool {
-    _unimplemented()
-  }
-  
-  public var isQuotationMark: Bool {
-    _unimplemented()
-  }
-  
-  public var isRadical: Bool {
-    _unimplemented()
-  }
-  
-  public var isSoftDotted: Bool {
-    _unimplemented()
-  }
-  
-  public var isTerminalPunctuation: Bool {
-    _unimplemented()
-  }
-  
-  public var isUnifiedIdeograph: Bool {
-    _unimplemented()
-  }
-  
   public var isUppercase: Bool {
     return _coreProp_Uppercase.contains(self._scalar)
-  }
-  
-  public var isWhitespace: Bool {
-    return _prop_White_Space.contains(self._scalar)
-  }
-  
-  public var isXIDContinue: Bool {
-    return _coreProp_XID_Continue.contains(self._scalar)
-  }
-  
-  public var isXIDStart: Bool {
-    return _coreProp_XID_Start.contains(self._scalar)
-  }
-  
-  public var isSentenceTerminal: Bool {
-    _unimplemented()
-  }
-  
-  public var isVariationSelector: Bool {
-    _unimplemented()
-  }
-  
-  public var isPatternSyntax: Bool {
-    _unimplemented()
-  }
-  
-  public var isPatternWhitespace: Bool {
-    _unimplemented()
   }
   
   public var isCased: Bool {
@@ -214,6 +87,140 @@ extension Unicode.Scalar.LatestProperties {
   
   public var changesWhenCaseMapped: Bool {
     return _coreProp_Changes_When_Casemapped.contains(self._scalar)
+  }
+  
+  public var isIDStart: Bool {
+    return _coreProp_ID_Start.contains(self._scalar)
+  }
+  
+  public var isIDContinue: Bool {
+    return _coreProp_ID_Continue.contains(self._scalar)
+  }
+  
+  public var isXIDContinue: Bool {
+    return _coreProp_XID_Continue.contains(self._scalar)
+  }
+  
+  public var isXIDStart: Bool {
+    return _coreProp_XID_Start.contains(self._scalar)
+  }
+  
+  public var isDefaultIgnorableCodePoint: Bool {
+    return _coreProp_Default_Ignorable_Code_Point.contains(self._scalar)
+  }
+  
+  public var isGraphemeExtend: Bool {
+    return _coreProp_Grapheme_Extend.contains(self._scalar)
+  }
+  
+  public var isGraphemeBase: Bool {
+    return _coreProp_Grapheme_Base.contains(self._scalar)
+  }
+}
+
+// Properties (Listed in PropList.txt)
+extension Unicode.Scalar.LatestProperties {
+  public var isWhitespace: Bool {
+    return _prop_White_Space.contains(self._scalar)
+  }
+  
+  public var isBidiControl: Bool {
+    return _prop_Bidi_Control.contains(self._scalar)
+  }
+  
+  public var isJoinControl: Bool {
+    return _prop_Join_Control.contains(self._scalar)
+  }
+  
+  public var isDash: Bool {
+    return _prop_Dash.contains(self._scalar)
+  }
+  
+  public var isASCIIHexDigit: Bool {
+    return _prop_ASCII_Hex_Digit.contains(self._scalar)
+  }
+}
+
+// UNIMPLEMENTED
+extension Unicode.Scalar.LatestProperties {
+  public var isBidiMirrored: Bool {
+    _unimplemented()
+  }
+  
+  public var isDeprecated: Bool {
+    _unimplemented()
+  }
+  
+  public var isDiacritic: Bool {
+    _unimplemented()
+  }
+  
+  public var isExtender: Bool {
+    _unimplemented()
+  }
+  
+  public var isFullCompositionExclusion: Bool {
+    _unimplemented()
+  }
+  
+  public var isHexDigit: Bool {
+    _unimplemented()
+  }
+  
+  public var isIdeographic: Bool {
+    _unimplemented()
+  }
+  
+  public var isIDSBinaryOperator: Bool {
+    _unimplemented()
+  }
+  
+  public var isIDSTrinaryOperator: Bool {
+    _unimplemented()
+  }
+  
+  public var isLogicalOrderException: Bool {
+    _unimplemented()
+  }
+  
+  public var isNoncharacterCodePoint: Bool {
+    _unimplemented()
+  }
+  
+  public var isQuotationMark: Bool {
+    _unimplemented()
+  }
+  
+  public var isRadical: Bool {
+    _unimplemented()
+  }
+  
+  public var isSoftDotted: Bool {
+    _unimplemented()
+  }
+  
+  public var isTerminalPunctuation: Bool {
+    _unimplemented()
+  }
+  
+  public var isUnifiedIdeograph: Bool {
+    _unimplemented()
+  }
+  
+  public var isSentenceTerminal: Bool {
+    _unimplemented()
+  }
+  
+  public var isVariationSelector: Bool {
+    _unimplemented()
+  }
+  
+  public var isPatternSyntax: Bool {
+    _unimplemented()
+  }
+  
+  public var isPatternWhitespace: Bool {
+    _unimplemented()
   }
   
   public var changesWhenNFKCCaseFolded: Bool {
