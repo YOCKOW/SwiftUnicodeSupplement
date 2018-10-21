@@ -176,6 +176,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isIDSTrinaryOperator:[
         ("\u{2FF1}", false),
         ("\u{2FF2}", true),
+      ],
+      \.isRadical:[
+        ("⺖", true),
+        ("心", false)
       ]
     ]
     

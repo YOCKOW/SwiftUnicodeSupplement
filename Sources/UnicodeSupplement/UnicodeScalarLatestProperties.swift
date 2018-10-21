@@ -225,6 +225,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isIDSTrinaryOperator: Bool {
     return _prop_IDS_Trinary_Operator.contains(self._scalar)
   }
+  
+  public var isRadical: Bool {
+    return _prop_Radical.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -242,10 +246,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isLogicalOrderException: Bool {
-    _unimplemented()
-  }
-  
-  public var isRadical: Bool {
     _unimplemented()
   }
   
