@@ -177,6 +177,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isOtherAlphabetic: Bool {
     return _prop_Other_Alphabetic.contains(self._scalar)
   }
+  
+  public var isIdeographic: Bool {
+    return _prop_Ideographic.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -198,10 +202,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isFullCompositionExclusion: Bool {
-    _unimplemented()
-  }
-  
-  public var isIdeographic: Bool {
     _unimplemented()
   }
   

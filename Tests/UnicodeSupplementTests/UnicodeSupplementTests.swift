@@ -134,6 +134,10 @@ final class UnicodeSupplementTests: XCTestCase {
         ("\u{345}", true),
         ("A", false)
       ],
+      \.isIdeographic:[
+        ("\u{3006}", true),
+        ("\u{2FA1E}", false),
+      ],
       \.isASCIIHexDigit:[
         ("6", true),
         ("A", true),
