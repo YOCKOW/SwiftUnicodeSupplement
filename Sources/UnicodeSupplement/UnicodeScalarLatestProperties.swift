@@ -285,6 +285,14 @@ extension Unicode.Scalar.LatestProperties {
   public var isPatternSyntax: Bool {
     return _prop_Pattern_Syntax.contains(self._scalar)
   }
+  
+  /// A Boolean property indicating whether the scalar is a subtending mark or not.
+  ///
+  /// This property corresponds to the `Prepended_Concatenation_Mark` property in the
+  /// [Unicode Standard](http://www.unicode.org/versions/latest/).
+  public var isPrependedConcatenationMark: Bool {
+    return _prop_Prepended_Concatenation_Mark.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED

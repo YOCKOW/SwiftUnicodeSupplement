@@ -224,6 +224,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isPatternSyntax:[
         ("%", true),
         ("p", false)
+      ],
+      \.isPrependedConcatenationMark:[
+        ("\u{0600}", true),
+        ("#", false)
       ]
     ]
     
