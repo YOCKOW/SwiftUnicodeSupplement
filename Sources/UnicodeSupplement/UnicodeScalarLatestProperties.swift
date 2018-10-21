@@ -217,6 +217,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isOtherGraphemeExtend: Bool {
     return _prop_Other_Grapheme_Extend.contains(self._scalar)
   }
+  
+  public var isIDSBinaryOperator: Bool {
+    return _prop_IDS_Binary_Operator.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -230,10 +234,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isFullCompositionExclusion: Bool {
-    _unimplemented()
-  }
-  
-  public var isIDSBinaryOperator: Bool {
     _unimplemented()
   }
   

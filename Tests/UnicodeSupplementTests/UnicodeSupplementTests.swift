@@ -168,6 +168,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isOtherGraphemeExtend:[
         ("\u{1D165}", true),
         ("G", false)
+      ],
+      \.isIDSBinaryOperator:[
+        ("\u{2FF1}", true),
+        ("\u{2FF2}", false)
       ]
     ]
     
