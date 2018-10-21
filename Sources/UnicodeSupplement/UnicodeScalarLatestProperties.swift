@@ -281,6 +281,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isPatternWhitespace: Bool {
     return _prop_Pattern_White_Space.contains(self._scalar)
   }
+  
+  public var isPatternSyntax: Bool {
+    return _prop_Pattern_Syntax.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -290,10 +294,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isFullCompositionExclusion: Bool {
-    _unimplemented()
-  }
-  
-  public var isPatternSyntax: Bool {
     _unimplemented()
   }
   

@@ -220,6 +220,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isPatternWhitespace:[
         ("\u{200E}", true),
         ("　", false)
+      ],
+      \.isPatternSyntax:[
+        ("%", true),
+        ("p", false)
       ]
     ]
     
