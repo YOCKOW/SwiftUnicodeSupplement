@@ -253,6 +253,14 @@ extension Unicode.Scalar.LatestProperties {
   public var isLogicalOrderException: Bool {
     return _prop_Logical_Order_Exception.contains(self._scalar)
   }
+  
+  /// A Boolean property indicating whether the scalar has `Other_ID_Start`
+  /// property.
+  ///
+  /// The property is used to maintain backward compatibility of `ID_Start`.
+  public var isOtherIDStart: Bool {
+    return _prop_Other_ID_Start.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED

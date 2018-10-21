@@ -200,6 +200,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isLogicalOrderException:[
         ("\u{AABB}", true),
         ("論", false)
+      ],
+      \.isOtherIDStart:[
+        ("\u{2118}", true),
+        ("P", false)
       ]
     ]
     
