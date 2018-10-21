@@ -261,6 +261,14 @@ extension Unicode.Scalar.LatestProperties {
   public var isOtherIDStart: Bool {
     return _prop_Other_ID_Start.contains(self._scalar)
   }
+  
+  /// A Boolean property indicating whether the scalar has `Other_ID_Continue`
+  /// property.
+  ///
+  /// The property is used to maintain backward compatibility of `ID_Continue`.
+  public var isOtherIDContinue: Bool {
+    return _prop_Other_ID_Continue.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED

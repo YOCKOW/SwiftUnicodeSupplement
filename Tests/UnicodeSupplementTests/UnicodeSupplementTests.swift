@@ -204,6 +204,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isOtherIDStart:[
         ("\u{2118}", true),
         ("P", false)
+      ],
+      \.isOtherIDContinue:[
+        ("·", true),
+        ("●", false)
       ]
     ]
     
