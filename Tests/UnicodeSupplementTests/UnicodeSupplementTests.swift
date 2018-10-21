@@ -196,6 +196,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isSoftDotted:[
         ("i", true),
         ("ｉ", false)
+      ],
+      \.isLogicalOrderException:[
+        ("\u{AABB}", true),
+        ("論", false)
       ]
     ]
     

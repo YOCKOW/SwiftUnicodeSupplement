@@ -249,6 +249,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isSoftDotted: Bool {
     return _prop_Soft_Dotted.contains(self._scalar)
   }
+  
+  public var isLogicalOrderException: Bool {
+    return _prop_Logical_Order_Exception.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -258,10 +262,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isFullCompositionExclusion: Bool {
-    _unimplemented()
-  }
-  
-  public var isLogicalOrderException: Bool {
     _unimplemented()
   }
   
