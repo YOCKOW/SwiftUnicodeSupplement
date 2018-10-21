@@ -160,10 +160,13 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isOtherUppercase:[
         ("Ⓤ", true),
         ("U", false),
+      ],
+      \.isNoncharacterCodePoint:[
+        ("\u{10FFFF}", true),
+        ("の", false)
       ]
     ]
     
-    // not exhaustive
     let corePropTests: PropTests = [
       \.isMath:[
         ("+", true),

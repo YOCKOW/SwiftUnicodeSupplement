@@ -205,6 +205,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isOtherUppercase: Bool {
     return _prop_Other_Uppercase.contains(self._scalar)
   }
+  
+  public var isNoncharacterCodePoint: Bool {
+    return _prop_Noncharacter_Code_Point.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -230,10 +234,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isLogicalOrderException: Bool {
-    _unimplemented()
-  }
-  
-  public var isNoncharacterCodePoint: Bool {
     _unimplemented()
   }
   
