@@ -233,6 +233,14 @@ extension Unicode.Scalar.LatestProperties {
   public var isUnifiedIdeograph: Bool {
     return _prop_Unified_Ideograph.contains(self._scalar)
   }
+  
+  /// A Boolean property indicating whether the scalar has `Other_Default_Ignorable_Code_Point`
+  /// property.
+  ///
+  /// The property is used in deriving the `Default_Ignorable_Code_Point` property.
+  public var isOtherDefaultIgnorableCodePoint: Bool {
+    return _prop_Other_Default_Ignorable_Code_Point.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED

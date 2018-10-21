@@ -184,6 +184,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isUnifiedIdeograph:[
         ("次", true),
         ("→", false)
+      ],
+      \.isOtherDefaultIgnorableCodePoint:[
+        ("\u{2065}", true),
+        ("無", false)
       ]
     ]
     
