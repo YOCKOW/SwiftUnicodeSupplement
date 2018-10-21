@@ -154,6 +154,14 @@ extension Unicode.Scalar.LatestProperties {
     return _prop_Terminal_Punctuation.contains(self._scalar)
   }
   
+  /// A Boolean property indicating whether the scalar is one that naturally
+  /// appears in mathematical contexts but is not one that has `Math_Symbol`
+  /// property.
+  /// This property is used in deriving the Math property.
+  public var isOtherMath: Bool {
+    return _prop_Other_Math.contains(self._scalar)
+  }
+  
   public var isASCIIHexDigit: Bool {
     return _prop_ASCII_Hex_Digit.contains(self._scalar)
   }
