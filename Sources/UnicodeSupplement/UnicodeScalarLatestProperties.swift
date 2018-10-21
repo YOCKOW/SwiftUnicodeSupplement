@@ -241,15 +241,15 @@ extension Unicode.Scalar.LatestProperties {
   public var isOtherDefaultIgnorableCodePoint: Bool {
     return _prop_Other_Default_Ignorable_Code_Point.contains(self._scalar)
   }
+  
+  public var isDeprecated: Bool {
+    return _prop_Deprecated.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
 extension Unicode.Scalar.LatestProperties {
   public var isBidiMirrored: Bool {
-    _unimplemented()
-  }
-  
-  public var isDeprecated: Bool {
     _unimplemented()
   }
   

@@ -188,6 +188,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isOtherDefaultIgnorableCodePoint:[
         ("\u{2065}", true),
         ("無", false)
+      ],
+      \.isDeprecated:[
+        ("\u{0149}", true),
+        ("d", false)
       ]
     ]
     
