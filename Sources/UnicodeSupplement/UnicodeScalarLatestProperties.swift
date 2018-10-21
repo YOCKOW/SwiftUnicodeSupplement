@@ -197,6 +197,14 @@ extension Unicode.Scalar.LatestProperties {
   public var isOtherLowercase: Bool {
     return _prop_Other_Lowercase.contains(self._scalar)
   }
+  
+  /// A Boolean property indicating whether the scalar has `Other_Uppercase`
+  /// property.
+  ///
+  /// The property is used in deriving the `Uppercase` property.
+  public var isOtherUppercase: Bool {
+    return _prop_Other_Uppercase.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED

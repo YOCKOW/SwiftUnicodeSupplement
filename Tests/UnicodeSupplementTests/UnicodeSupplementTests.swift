@@ -156,6 +156,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isOtherLowercase:[
         ("\u{00AA}", true),
         ("l", false)
+      ],
+      \.isOtherUppercase:[
+        ("Ⓤ", true),
+        ("U", false),
       ]
     ]
     
