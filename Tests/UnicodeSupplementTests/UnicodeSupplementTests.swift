@@ -164,6 +164,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isNoncharacterCodePoint:[
         ("\u{10FFFF}", true),
         ("の", false)
+      ],
+      \.isOtherGraphemeExtend:[
+        ("\u{1D165}", true),
+        ("G", false)
       ]
     ]
     

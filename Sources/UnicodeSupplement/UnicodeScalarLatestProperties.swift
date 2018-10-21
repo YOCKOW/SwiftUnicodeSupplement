@@ -209,6 +209,14 @@ extension Unicode.Scalar.LatestProperties {
   public var isNoncharacterCodePoint: Bool {
     return _prop_Noncharacter_Code_Point.contains(self._scalar)
   }
+  
+  /// A Boolean property indicating whether the scalar has `Other_Graphme_Extend`
+  /// property.
+  ///
+  /// The property is used in deriving the `Grapheme_Extend` property.
+  public var isOtherGraphemeExtend: Bool {
+    return _prop_Other_Grapheme_Extend.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
