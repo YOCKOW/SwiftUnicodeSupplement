@@ -216,6 +216,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isVariationSelector:[
         ("\u{180C}", true),
         ("選", false)
+      ],
+      \.isPatternWhitespace:[
+        ("\u{200E}", true),
+        ("　", false)
       ]
     ]
     
