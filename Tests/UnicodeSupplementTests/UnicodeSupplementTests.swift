@@ -180,6 +180,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isRadical:[
         ("⺖", true),
         ("心", false)
+      ],
+      \.isUnifiedIdeograph:[
+        ("次", true),
+        ("→", false)
       ]
     ]
     

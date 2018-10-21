@@ -229,6 +229,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isRadical: Bool {
     return _prop_Radical.contains(self._scalar)
   }
+  
+  public var isUnifiedIdeograph: Bool {
+    return _prop_Unified_Ideograph.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -250,10 +254,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isSoftDotted: Bool {
-    _unimplemented()
-  }
-  
-  public var isUnifiedIdeograph: Bool {
     _unimplemented()
   }
   
