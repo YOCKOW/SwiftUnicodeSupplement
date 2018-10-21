@@ -221,6 +221,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isIDSBinaryOperator: Bool {
     return _prop_IDS_Binary_Operator.contains(self._scalar)
   }
+  
+  public var isIDSTrinaryOperator: Bool {
+    return _prop_IDS_Trinary_Operator.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -234,10 +238,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isFullCompositionExclusion: Bool {
-    _unimplemented()
-  }
-  
-  public var isIDSTrinaryOperator: Bool {
     _unimplemented()
   }
   

@@ -172,6 +172,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isIDSBinaryOperator:[
         ("\u{2FF1}", true),
         ("\u{2FF2}", false)
+      ],
+      \.isIDSTrinaryOperator:[
+        ("\u{2FF1}", false),
+        ("\u{2FF2}", true),
       ]
     ]
     
