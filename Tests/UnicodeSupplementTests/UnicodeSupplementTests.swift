@@ -130,6 +130,10 @@ final class UnicodeSupplementTests: XCTestCase {
         ("４", true),
         ("四", false),
       ],
+      \.isOtherAlphabetic:[
+        ("\u{345}", true),
+        ("A", false)
+      ],
       \.isASCIIHexDigit:[
         ("6", true),
         ("A", true),

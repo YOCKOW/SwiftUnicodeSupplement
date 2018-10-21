@@ -169,6 +169,14 @@ extension Unicode.Scalar.LatestProperties {
   public var isASCIIHexDigit: Bool {
     return _prop_ASCII_Hex_Digit.contains(self._scalar)
   }
+  
+  /// A Boolean property indicating whether the scalar has `Other_Alphabetic`
+  /// property.
+  ///
+  /// The property is used in deriving the Alphabetic property.
+  public var isOtherAlphabetic: Bool {
+    return _prop_Other_Alphabetic.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
