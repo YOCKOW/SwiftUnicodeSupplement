@@ -108,6 +108,11 @@ final class UnicodeSupplementTests: XCTestCase {
         ("゠", true),
         ("~", false)
       ],
+//      `Hyphen` property was deprecated as of Unicode 6.0.0.
+//      \.isHyphen:[
+//        ("-", true),
+//        ("~", false)
+//      ],
       \.isASCIIHexDigit:[
         ("6", true),
         ("A", true),

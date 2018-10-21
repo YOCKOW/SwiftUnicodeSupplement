@@ -136,6 +136,16 @@ extension Unicode.Scalar.LatestProperties {
     return _prop_Dash.contains(self._scalar)
   }
   
+  /// A Boolean property indicating whether the scalar is a hyphen or not.
+  ///
+  /// NOTE: This property was already deprecated as of Unicode 6.0.0
+  ///       because it has been supplanted by `Line_Break` property values.
+  ///       See [Deprecated Properties in UAX#44](https://www.unicode.org/reports/tr44/#Deprecated_Properties)
+  @available(*, deprecated:1.0)
+  public var isHyphen: Bool {
+    return _prop_Hyphen.contains(self._scalar)
+  }
+  
   public var isASCIIHexDigit: Bool {
     return _prop_ASCII_Hex_Digit.contains(self._scalar)
   }
