@@ -228,6 +228,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isPrependedConcatenationMark:[
         ("\u{0600}", true),
         ("#", false)
+      ],
+      \.isRegionalIndicator:[
+        ("\u{1F1F1}", true),
+        ("F", false)
       ]
     ]
     

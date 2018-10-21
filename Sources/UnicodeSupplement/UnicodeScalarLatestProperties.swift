@@ -293,6 +293,14 @@ extension Unicode.Scalar.LatestProperties {
   public var isPrependedConcatenationMark: Bool {
     return _prop_Prepended_Concatenation_Mark.contains(self._scalar)
   }
+  
+  /// A Boolean property indicating whether the scalar is a regional indicator or not.
+  ///
+  /// This property corresponds to the `Regional_Indicator` property in the
+  /// [Unicode Standard](http://www.unicode.org/versions/latest/).
+  public var isRegionalIndicator: Bool {
+    return _prop_Regional_Indicator.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
