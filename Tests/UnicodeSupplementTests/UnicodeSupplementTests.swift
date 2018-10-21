@@ -152,6 +152,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isExtender:[
         ("·", true),
         ("・", false)
+      ],
+      \.isOtherLowercase:[
+        ("\u{00AA}", true),
+        ("l", false)
       ]
     ]
     
