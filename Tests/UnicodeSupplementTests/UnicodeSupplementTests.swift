@@ -118,6 +118,10 @@ final class UnicodeSupplementTests: XCTestCase {
         ("」", true),
         ("$", false),
       ],
+      \.isTerminalPunctuation:[
+        ("！", true),
+        ("=", false),
+      ],
       \.isASCIIHexDigit:[
         ("6", true),
         ("A", true),

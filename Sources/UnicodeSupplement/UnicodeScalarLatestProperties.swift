@@ -150,6 +150,10 @@ extension Unicode.Scalar.LatestProperties {
     return _prop_Quotation_Mark.contains(self._scalar)
   }
   
+  public var isTerminalPunctuation: Bool {
+    return _prop_Terminal_Punctuation.contains(self._scalar)
+  }
+  
   public var isASCIIHexDigit: Bool {
     return _prop_ASCII_Hex_Digit.contains(self._scalar)
   }
@@ -206,10 +210,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isSoftDotted: Bool {
-    _unimplemented()
-  }
-  
-  public var isTerminalPunctuation: Bool {
     _unimplemented()
   }
   
