@@ -208,6 +208,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isOtherIDContinue:[
         ("·", true),
         ("●", false)
+      ],
+      \.isSentenceTerminal:[
+        ("!", true),
+        ("、", false)
       ]
     ]
     

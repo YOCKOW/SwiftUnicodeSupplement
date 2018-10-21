@@ -269,6 +269,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isOtherIDContinue: Bool {
     return _prop_Other_ID_Continue.contains(self._scalar)
   }
+  
+  public var isSentenceTerminal: Bool {
+    return _prop_Sentence_Terminal.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -278,10 +282,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isFullCompositionExclusion: Bool {
-    _unimplemented()
-  }
-  
-  public var isSentenceTerminal: Bool {
     _unimplemented()
   }
   
