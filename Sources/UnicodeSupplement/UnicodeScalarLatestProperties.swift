@@ -273,6 +273,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isSentenceTerminal: Bool {
     return _prop_Sentence_Terminal.contains(self._scalar)
   }
+  
+  public var isVariationSelector: Bool {
+    return _prop_Variation_Selector.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -282,10 +286,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isFullCompositionExclusion: Bool {
-    _unimplemented()
-  }
-  
-  public var isVariationSelector: Bool {
     _unimplemented()
   }
   

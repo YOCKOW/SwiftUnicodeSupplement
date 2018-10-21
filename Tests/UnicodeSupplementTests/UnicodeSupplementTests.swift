@@ -212,6 +212,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isSentenceTerminal:[
         ("!", true),
         ("、", false)
+      ],
+      \.isVariationSelector:[
+        ("\u{180C}", true),
+        ("選", false)
       ]
     ]
     
