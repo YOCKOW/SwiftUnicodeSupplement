@@ -192,6 +192,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isDeprecated:[
         ("\u{0149}", true),
         ("d", false)
+      ],
+      \.isSoftDotted:[
+        ("i", true),
+        ("ｉ", false)
       ]
     ]
     

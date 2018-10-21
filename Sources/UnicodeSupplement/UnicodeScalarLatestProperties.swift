@@ -245,6 +245,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isDeprecated: Bool {
     return _prop_Deprecated.contains(self._scalar)
   }
+  
+  public var isSoftDotted: Bool {
+    return _prop_Soft_Dotted.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -258,10 +262,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isLogicalOrderException: Bool {
-    _unimplemented()
-  }
-  
-  public var isSoftDotted: Bool {
     _unimplemented()
   }
   
