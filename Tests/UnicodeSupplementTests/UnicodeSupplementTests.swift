@@ -149,6 +149,10 @@ final class UnicodeSupplementTests: XCTestCase {
         ("゛", true),
         ("D", false)
       ],
+      \.isExtender:[
+        ("·", true),
+        ("・", false)
+      ]
     ]
     
     // not exhaustive

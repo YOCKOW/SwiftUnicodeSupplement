@@ -185,6 +185,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isDiacritic: Bool {
     return _prop_Diacritic.contains(self._scalar)
   }
+  
+  public var isExtender: Bool {
+    return _prop_Extender.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -194,10 +198,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isDeprecated: Bool {
-    _unimplemented()
-  }
-  
-  public var isExtender: Bool {
     _unimplemented()
   }
   
