@@ -162,6 +162,10 @@ extension Unicode.Scalar.LatestProperties {
     return _prop_Other_Math.contains(self._scalar)
   }
   
+  public var isHexDigit: Bool {
+    return _prop_Hex_Digit.contains(self._scalar)
+  }
+  
   public var isASCIIHexDigit: Bool {
     return _prop_ASCII_Hex_Digit.contains(self._scalar)
   }
@@ -186,10 +190,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isFullCompositionExclusion: Bool {
-    _unimplemented()
-  }
-  
-  public var isHexDigit: Bool {
     _unimplemented()
   }
   

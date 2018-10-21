@@ -126,6 +126,10 @@ final class UnicodeSupplementTests: XCTestCase {
         ("★", true),
         ("星", false)
       ],
+      \.isHexDigit:[
+        ("４", true),
+        ("四", false),
+      ],
       \.isASCIIHexDigit:[
         ("6", true),
         ("A", true),
