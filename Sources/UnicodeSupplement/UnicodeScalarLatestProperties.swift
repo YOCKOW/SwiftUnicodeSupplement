@@ -146,6 +146,10 @@ extension Unicode.Scalar.LatestProperties {
     return _prop_Hyphen.contains(self._scalar)
   }
   
+  public var isQuotationMark: Bool {
+    return _prop_Quotation_Mark.contains(self._scalar)
+  }
+  
   public var isASCIIHexDigit: Bool {
     return _prop_ASCII_Hex_Digit.contains(self._scalar)
   }
@@ -194,10 +198,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isNoncharacterCodePoint: Bool {
-    _unimplemented()
-  }
-  
-  public var isQuotationMark: Bool {
     _unimplemented()
   }
   

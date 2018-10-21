@@ -113,6 +113,11 @@ final class UnicodeSupplementTests: XCTestCase {
 //        ("-", true),
 //        ("~", false)
 //      ],
+      \.isQuotationMark:[
+        ("“", true),
+        ("」", true),
+        ("$", false),
+      ],
       \.isASCIIHexDigit:[
         ("6", true),
         ("A", true),
