@@ -181,6 +181,10 @@ extension Unicode.Scalar.LatestProperties {
   public var isIdeographic: Bool {
     return _prop_Ideographic.contains(self._scalar)
   }
+  
+  public var isDiacritic: Bool {
+    return _prop_Diacritic.contains(self._scalar)
+  }
 }
 
 // UNIMPLEMENTED
@@ -190,10 +194,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isDeprecated: Bool {
-    _unimplemented()
-  }
-  
-  public var isDiacritic: Bool {
     _unimplemented()
   }
   
