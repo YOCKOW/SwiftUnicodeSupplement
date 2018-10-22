@@ -18,6 +18,7 @@ require 'pathname'
 ### CONSTANTS ###
 
 FILES = [
+  :DerivedBidiClass,
   :DerivedBinaryProperties,
   :DerivedCombiningClass,
   :DerivedCoreProperties,
