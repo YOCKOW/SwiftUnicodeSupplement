@@ -84,7 +84,7 @@ module PropertyValueAliases
       # [["gc", abbr, name], ...]
       
       file.puts("extension Unicode.GeneralCategory {")
-      file.puts("  public init?(abbreviated value:String) {")
+      file.puts("  public init(abbreviated value:String) {")
       file.puts("    switch value {")
       
       gc_table.each{|row|
@@ -92,7 +92,7 @@ module PropertyValueAliases
         file.puts("    case \"#{row[1]}\": self = .#{public_identifier_from(row[2])}")
       }
       
-      file.puts("    default: return nil")
+      file.puts("    default: fatalError(\"Unknown General_Category\")")
       file.puts("    }")
       file.puts("  }")
       file.puts("}")

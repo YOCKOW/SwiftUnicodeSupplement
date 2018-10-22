@@ -189,7 +189,7 @@ extension Unicode.CanonicalCombiningClass {
 // ---------------------------------------------------------------------------------------------- //
 // gc
 extension Unicode.GeneralCategory {
-  public init?(abbreviated value:String) {
+  public init(abbreviated value:String) {
     switch value {
     case "Cc": self = .control
     case "Cf": self = .format
@@ -221,7 +221,7 @@ extension Unicode.GeneralCategory {
     case "Zl": self = .lineSeparator
     case "Zp": self = .paragraphSeparator
     case "Zs": self = .spaceSeparator
-    default: return nil
+    default: fatalError("Unknown General_Category")
     }
   }
 }
