@@ -345,6 +345,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isEmojiModifierBase:[
         ("\u{270C}", true),
         ("B", false)
+      ],
+      \.isExtendedPictographic:[
+        ("🉑", true),
+        ("可", false)
       ]
     ]
     

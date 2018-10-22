@@ -338,6 +338,12 @@ extension Unicode.Scalar.LatestProperties {
   public var isEmojiModifierBase: Bool {
     return _emoji_Emoji_Modifier_Base.contains(self._scalar)
   }
+  
+  /// A Boolean property indicating whether the scalar is pictographic,
+  /// or otherwise similar in kind to scalars with the Emoji property.
+  public var isExtendedPictographic: Bool {
+    return _emoji_Extended_Pictographic.contains(self._scalar)
+  }
 }
 
 
