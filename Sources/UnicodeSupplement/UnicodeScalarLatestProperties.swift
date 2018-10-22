@@ -336,7 +336,7 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isEmojiModifierBase: Bool {
-    _unimplemented()
+    return _emoji_Emoji_Modifier_Base.contains(self._scalar)
   }
 }
 

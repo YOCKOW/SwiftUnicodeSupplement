@@ -341,6 +341,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isEmojiModifier:[
         ("🏻", true),
         ("M", false)
+      ],
+      \.isEmojiModifierBase:[
+        ("\u{270C}", true),
+        ("B", false)
       ]
     ]
     
