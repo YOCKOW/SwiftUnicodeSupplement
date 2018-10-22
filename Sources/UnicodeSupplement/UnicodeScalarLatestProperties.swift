@@ -310,16 +310,19 @@ extension Unicode.Scalar.LatestProperties {
   }
 }
 
-// UNIMPLEMENTED
+// From "DerivedNormalizationProps.txt"
 extension Unicode.Scalar.LatestProperties {
   public var isFullCompositionExclusion: Bool {
-    _unimplemented()
+    return _normProp_Full_Composition_Exclusion.contains(self._scalar)
   }
   
   public var changesWhenNFKCCaseFolded: Bool {
-    _unimplemented()
+    return _normProp_Changes_When_NFKC_Casefolded.contains(self._scalar)
   }
-  
+}
+
+// UNIMPLEMENTED
+extension Unicode.Scalar.LatestProperties {
   public var isEmoji: Bool {
     _unimplemented()
   }

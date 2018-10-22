@@ -22,6 +22,7 @@ FILES = [
   :DerivedCombiningClass,
   :DerivedCoreProperties,
   :DerivedGeneralCategory,
+  :DerivedNormalizationProps,
   :IDNAMappingTable,
   :PropertyValueAliases,
   :PropList,

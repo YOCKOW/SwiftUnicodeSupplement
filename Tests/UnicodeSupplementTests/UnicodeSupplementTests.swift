@@ -318,7 +318,18 @@ final class UnicodeSupplementTests: XCTestCase {
       ]
     ]
     
-    for testsDic in [corePropTests, propTests, binPropTests] {
+    let normPropTests: PropTests = [
+      \.isFullCompositionExclusion:[
+        ("卵" /* U+F91C */, true),
+        ("卵" /* U+5375 */, false)
+      ],
+      \.changesWhenNFKCCaseFolded:[
+        ("C", true),
+        ("c", false)
+      ]
+    ]
+    
+    for testsDic in [corePropTests, propTests, binPropTests, normPropTests] {
       for (keyPath, tests) in testsDic {
         for (scalar, expected) in tests {
           check(scalar, keyPath, expected)
