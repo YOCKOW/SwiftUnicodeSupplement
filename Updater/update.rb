@@ -122,10 +122,26 @@ def module_for(id)
 end
 
 def last_modified_at(url)
-  https = Net::HTTP.new(url.host, url.port)
-  https.use_ssl = true
-  header = https.head(url.path)
-  last_modified_string = header['last-modified']
+  trial = 0
+  redirected = url
+  last_modified_string = nil
+  
+  while true
+    failed("Many redirection: #{url.to_s}") if trial > 10
+    
+    https = Net::HTTP.new(redirected.host, redirected.port)
+    https.use_ssl = true
+    header = https.head(redirected.path)
+    
+    if header['location']
+      redirected = URI.parse(header['location'])
+      trial += 1
+    else
+      last_modified_string = header['last-modified']
+      break
+    end
+  end
+  
   return nil if !last_modified_string
   return Time.parse(last_modified_string)
 end

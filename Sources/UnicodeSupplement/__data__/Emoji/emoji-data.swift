@@ -1,5 +1,6 @@
 // This file was created automatically
 //   from https://unicode.org/Public/emoji/latest/emoji-data.txt
+//     Last-Modified: 2018-02-07 17:26:38 +0000
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
