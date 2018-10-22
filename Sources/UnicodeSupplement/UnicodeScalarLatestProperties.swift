@@ -321,14 +321,14 @@ extension Unicode.Scalar.LatestProperties {
   }
 }
 
-// UNIMPLEMENTED
+// emoji-data
 extension Unicode.Scalar.LatestProperties {
   public var isEmoji: Bool {
     return _emoji_Emoji.contains(self._scalar)
   }
   
   public var isEmojiPresentation: Bool {
-    _unimplemented()
+    return _emoji_Emoji_Presentation.contains(self._scalar)
   }
   
   public var isEmojiModifier: Bool {

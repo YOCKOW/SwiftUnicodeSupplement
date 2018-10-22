@@ -333,6 +333,10 @@ final class UnicodeSupplementTests: XCTestCase {
       \.isEmoji:[
         ("#", true),
         ("E", false)
+      ],
+      \.isEmojiPresentation:[
+        ("☕", true),
+        ("C", false)
       ]
     ]
     
