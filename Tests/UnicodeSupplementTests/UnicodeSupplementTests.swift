@@ -329,7 +329,14 @@ final class UnicodeSupplementTests: XCTestCase {
       ]
     ]
     
-    for testsDic in [corePropTests, propTests, binPropTests, normPropTests] {
+    let emojiPropTests: PropTests = [
+      \.isEmoji:[
+        ("#", true),
+        ("E", false)
+      ]
+    ]
+    
+    for testsDic in [corePropTests, propTests, binPropTests, normPropTests, emojiPropTests] {
       for (keyPath, tests) in testsDic {
         for (scalar, expected) in tests {
           check(scalar, keyPath, expected)

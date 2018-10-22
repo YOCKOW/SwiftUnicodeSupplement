@@ -324,7 +324,7 @@ extension Unicode.Scalar.LatestProperties {
 // UNIMPLEMENTED
 extension Unicode.Scalar.LatestProperties {
   public var isEmoji: Bool {
-    _unimplemented()
+    return _emoji_Emoji.contains(self._scalar)
   }
   
   public var isEmojiPresentation: Bool {
