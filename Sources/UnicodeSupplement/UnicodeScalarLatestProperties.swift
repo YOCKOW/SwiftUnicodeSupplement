@@ -303,12 +303,15 @@ extension Unicode.Scalar.LatestProperties {
   }
 }
 
-// UNIMPLEMENTED
+// From "DerivedBinaryProperties.txt"
 extension Unicode.Scalar.LatestProperties {
   public var isBidiMirrored: Bool {
-    _unimplemented()
+    return _binProp_Bidi_Mirrored.contains(self._scalar)
   }
-  
+}
+
+// UNIMPLEMENTED
+extension Unicode.Scalar.LatestProperties {
   public var isFullCompositionExclusion: Bool {
     _unimplemented()
   }

@@ -91,6 +91,82 @@ final class UnicodeSupplementTests: XCTestCase {
     
     typealias PropTests = [KeyPath<Unicode.Scalar.LatestProperties,Bool>:[(Unicode.Scalar,Bool)]]
     
+    let corePropTests: PropTests = [
+      \.isMath:[
+        ("+", true),
+        ("十", false),
+      ],
+      \.isAlphabetic:[
+        ("A", true),
+        ("0", false),
+      ],
+      \.isLowercase:[
+        ("x", true),
+        ("X", false)
+      ],
+      \.isUppercase:[
+        ("Z", true),
+        ("z", false)
+      ],
+      \.isCased:[
+        ("u", true),
+        ("U", true),
+        ("ウ", false)
+      ],
+      \.isCaseIgnorable:[
+        ("'", true),
+        ("「", false),
+      ],
+      \.changesWhenLowercased:[
+        ("Ａ", true),
+        ("ａ", false),
+      ],
+      \.changesWhenUppercased:[
+        ("ｘ", true),
+        ("❌", false),
+      ],
+      \.changesWhenTitlecased:[
+        ("t", true),
+        ("T", false),
+      ],
+      \.changesWhenCaseFolded:[
+        ("F", true),
+        ("f", false),
+      ],
+      \.changesWhenCaseMapped:[
+        ("m", true),
+        ("ま", false),
+      ],
+      \.isIDStart:[
+        ("始", true),
+        ("!", false),
+      ],
+      \.isIDContinue:[
+        ("続", true),
+        ("*", false),
+      ],
+      \.isXIDStart:[
+        ("初", true),
+        ("?", false),
+      ],
+      \.isXIDContinue:[
+        ("継", true),
+        ("/", false),
+      ],
+      \.isDefaultIgnorableCodePoint:[
+        ("\u{E0777}", true),
+        ("７", false)
+      ],
+      \.isGraphemeExtend:[
+        ("\u{1d16e}", true),
+        ("♪", false)
+      ],
+      \.isGraphemeBase:[
+        ("\u{1d100}", true),
+        ("\t", false)
+      ]
+    ]
+    
     let propTests: PropTests = [
       \.isWhitespace:[
         ("　", true),
@@ -235,83 +311,14 @@ final class UnicodeSupplementTests: XCTestCase {
       ]
     ]
     
-    let corePropTests: PropTests = [
-      \.isMath:[
-        ("+", true),
-        ("十", false),
-      ],
-      \.isAlphabetic:[
-        ("A", true),
-        ("0", false),
-      ],
-      \.isLowercase:[
-        ("x", true),
-        ("X", false)
-      ],
-      \.isUppercase:[
-        ("Z", true),
-        ("z", false)
-      ],
-      \.isCased:[
-        ("u", true),
-        ("U", true),
-        ("ウ", false)
-      ],
-      \.isCaseIgnorable:[
-        ("'", true),
-        ("「", false),
-      ],
-      \.changesWhenLowercased:[
-        ("Ａ", true),
-        ("ａ", false),
-      ],
-      \.changesWhenUppercased:[
-        ("ｘ", true),
-        ("❌", false),
-      ],
-      \.changesWhenTitlecased:[
-        ("t", true),
-        ("T", false),
-      ],
-      \.changesWhenCaseFolded:[
-        ("F", true),
-        ("f", false),
-      ],
-      \.changesWhenCaseMapped:[
-        ("m", true),
-        ("ま", false),
-      ],
-      \.isIDStart:[
-        ("始", true),
-        ("!", false),
-      ],
-      \.isIDContinue:[
-        ("続", true),
-        ("*", false),
-      ],
-      \.isXIDStart:[
-        ("初", true),
-        ("?", false),
-      ],
-      \.isXIDContinue:[
-        ("継", true),
-        ("/", false),
-      ],
-      \.isDefaultIgnorableCodePoint:[
-        ("\u{E0777}", true),
-        ("７", false)
-      ],
-      \.isGraphemeExtend:[
-        ("\u{1d16e}", true),
-        ("♪", false)
-      ],
-      \.isGraphemeBase:[
-        ("\u{1d100}", true),
-        ("\t", false)
+    let binPropTests: PropTests = [
+      \.isBidiMirrored:[
+        ("(", true),
+        ("-", false)
       ]
     ]
     
-    for testsDic in [propTests, corePropTests] {
+    for testsDic in [corePropTests, propTests, binPropTests] {
       for (keyPath, tests) in testsDic {
         for (scalar, expected) in tests {
           check(scalar, keyPath, expected)
