@@ -332,7 +332,7 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var isEmojiModifier: Bool {
-    _unimplemented()
+    return _emoji_Emoji_Modifier.contains(self._scalar)
   }
   
   public var isEmojiModifierBase: Bool {
