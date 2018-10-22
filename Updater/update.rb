@@ -23,6 +23,7 @@ FILES = [
   :DerivedCoreProperties,
   :DerivedGeneralCategory,
   :DerivedNormalizationProps,
+  :EmojiData,
   :IDNAMappingTable,
   :PropertyValueAliases,
   :PropList,
