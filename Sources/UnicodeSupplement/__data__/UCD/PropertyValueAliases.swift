@@ -64,6 +64,65 @@
  */
 
 
+// bc
+extension Unicode {
+  public enum BidiClass {
+    case arabicLetter
+    case arabicNumber
+    case paragraphSeparator
+    case boundaryNeutral
+    case commonSeparator
+    case europeanNumber
+    case europeanSeparator
+    case europeanTerminator
+    case firstStrongIsolate
+    case leftToRight
+    case leftToRightEmbedding
+    case leftToRightIsolate
+    case leftToRightOverride
+    case nonspacingMark
+    case otherNeutral
+    case popDirectionalFormat
+    case popDirectionalIsolate
+    case rightToLeft
+    case rightToLeftEmbedding
+    case rightToLeftIsolate
+    case rightToLeftOverride
+    case segmentSeparator
+    case whiteSpace
+  }
+}
+extension Unicode.BidiClass {
+  public init(abbreviated value:String) {
+    switch value {
+    case "AL": self = .arabicLetter
+    case "AN": self = .arabicNumber
+    case "B": self = .paragraphSeparator
+    case "BN": self = .boundaryNeutral
+    case "CS": self = .commonSeparator
+    case "EN": self = .europeanNumber
+    case "ES": self = .europeanSeparator
+    case "ET": self = .europeanTerminator
+    case "FSI": self = .firstStrongIsolate
+    case "L": self = .leftToRight
+    case "LRE": self = .leftToRightEmbedding
+    case "LRI": self = .leftToRightIsolate
+    case "LRO": self = .leftToRightOverride
+    case "NSM": self = .nonspacingMark
+    case "ON": self = .otherNeutral
+    case "PDF": self = .popDirectionalFormat
+    case "PDI": self = .popDirectionalIsolate
+    case "R": self = .rightToLeft
+    case "RLE": self = .rightToLeftEmbedding
+    case "RLI": self = .rightToLeftIsolate
+    case "RLO": self = .rightToLeftOverride
+    case "S": self = .segmentSeparator
+    case "WS": self = .whiteSpace
+    default: fatalError("Unknown BidiClass")
+    }
+  }
+}
+// ---------------------------------------------------------------------------------------------- //
 // ccc
 extension Unicode.CanonicalCombiningClass {
 #if swift(>=5.0)
@@ -127,6 +186,7 @@ extension Unicode.CanonicalCombiningClass {
   public static let ccc132 = Unicode.CanonicalCombiningClass(rawValue:132)
   public static let ccc133 = Unicode.CanonicalCombiningClass(rawValue:133)
 }
+// ---------------------------------------------------------------------------------------------- //
 // gc
 extension Unicode.GeneralCategory {
   public init?(abbreviated value:String) {
@@ -165,3 +225,4 @@ extension Unicode.GeneralCategory {
     }
   }
 }
+// ---------------------------------------------------------------------------------------------- //

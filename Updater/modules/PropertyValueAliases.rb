@@ -15,6 +15,30 @@ module PropertyValueAliases
   ]
   
   class << self
+    def write_bc(bc_table, file)
+      # ccc_table must be
+      # [["bc", abbr, name], ...]
+      
+      file.puts("extension Unicode {")
+      file.puts("  public enum BidiClass {")
+      bc_table.each{|row|
+        file.puts("    case " + public_identifier_from(row[2]))
+      }
+      file.puts("  }")
+      file.puts("}")
+      
+      file.puts("extension Unicode.BidiClass {")
+      file.puts("  public init(abbreviated value:String) {")
+      file.puts("    switch value {")
+      bc_table.each{|row|
+        file.puts("    case \"#{row[1]}\": self = .#{public_identifier_from(row[2])}")
+      }
+      file.puts("    default: fatalError(\"Unknown BidiClass\")")
+      file.puts("    }")
+      file.puts("  }")
+      file.puts("}")
+    end
+  
     def write_ccc(ccc_table, file)
       # ccc_table must be
       # [["ccc", numeric, abbr., name], ...]
@@ -46,7 +70,6 @@ module PropertyValueAliases
         }
       }
       
-      file.puts("// ccc")
       file.puts("extension Unicode.CanonicalCombiningClass {")
       file.puts("#if swift(>=5.0)")
       file.puts("#else")
@@ -60,7 +83,6 @@ module PropertyValueAliases
       # gc_table must be
       # [["gc", abbr, name], ...]
       
-      file.puts("// gc")
       file.puts("extension Unicode.GeneralCategory {")
       file.puts("  public init?(abbreviated value:String) {")
       file.puts("    switch value {")
@@ -83,6 +105,7 @@ module PropertyValueAliases
     
     # Which converters are implemented...
     names = [
+      :bc,
       :ccc,
       :gc,
     ]
@@ -97,8 +120,12 @@ module PropertyValueAliases
     }
     
     ### START WRITING ###
-    self.write_ccc(divided_table[:ccc], file)
-    self.write_gc(divided_table[:gc], file)
+    names.each {|name|
+      method = self.method(("write_" + name.to_s).to_sym)
+      file.puts("// " + name.to_s)
+      method.call(divided_table[name], file)
+      file.puts('// ' + ('-' * 94) + ' //')
+    }
     ### FINISH WRITING ###
   end
 end
