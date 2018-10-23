@@ -27,6 +27,27 @@ extension Unicode.Scalar {
 }
 
 extension Unicode.Scalar.LatestProperties {
+  public var bidiClass: Unicode.BidiClass {
+    if let bidiClassString = _bidiClass_string.value(for:self._scalar) {
+      return Unicode.BidiClass(abbreviated:bidiClassString)
+    }
+    if _bidiClass_default_AL.contains(self._scalar) {
+      return .arabicLetter
+    }
+    if _bidiClass_default_R.contains(self._scalar) {
+      return .rightToLeft
+    }
+    if _bidiClass_default_ET.contains(self._scalar) {
+      return .europeanTerminator
+    }
+    for keyPath in _bidiClass_default_BN_properties {
+      if self[keyPath:keyPath] { return .boundaryNeutral }
+    }
+    return .leftToRight
+  }
+}
+
+extension Unicode.Scalar.LatestProperties {
   /// Returns IDNA Status Value.
   /// - parameter usingSTD3ASCIIRules: Specify whether STD3 ASCII Rules should be used or not.
   /// - parameter idna2008Compatible: Specify whether the status should conform to IDNA 2008 or not.

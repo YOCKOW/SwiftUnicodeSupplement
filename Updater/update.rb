@@ -265,6 +265,17 @@ def public_identifier_from(string)
   }.join('')
 end
 
+def computed_property_name_from(string)
+  words = string.gsub(/(?:\-|_|(?<=[a-z])(?=[A-Z]))/, ' ').split(/\s+/)
+  return 'is' + words.map {|word|
+    if word !~ /\A[A-Z]+\Z/
+      word.capitalize
+    else
+      word
+    end
+  }.join('')
+end
+
 #### /FUNCTIONS ###
 
 failed("Cannot fetch the Unicode license.") if U_TERMS_OF_USE.length < 1
