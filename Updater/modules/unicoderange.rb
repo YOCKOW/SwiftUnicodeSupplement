@@ -47,7 +47,7 @@ class UnicodeRange < Range
         result.push(UnicodeRange.new([startScalar, endScalar]))
         break
       else
-        result.push(UnicodeRange([startScalar, startScalar + max_length - 1]))
+        result.push(UnicodeRange.new([startScalar, startScalar + max_length - 1]))
         startScalar += max_length
       end
     end
@@ -56,6 +56,8 @@ class UnicodeRange < Range
 end
 
 class UnicodeRangeArray
+  include Enumerable
+  
   def initialize(array_of_ranges)
     @array = []
     for u_range in array_of_ranges
@@ -72,13 +74,13 @@ class UnicodeRangeArray
     normalized = []
     for u_range in @array
       if normalized.count < 1
-        normalized.push(u_range)
+        normalized.concat(u_range.divided_ranges)
         next
       end
       
       last_u_range = normalized.last
       if u_range.begin > last_u_range.end + 1
-        normalized.push(u_range)
+        normalized.concat(u_range.divided_ranges)
         next
       end
       
@@ -96,6 +98,10 @@ class UnicodeRangeArray
     failed("Must be an instance of UnicodeRange.") if !u_range.kind_of?(UnicodeRange)
     @array.push(u_range)
     self._normalize!
+  end
+  
+  def each
+    @array.each {|u_range| yield u_range }
   end
   
   def to_swift_uint32_array
@@ -129,6 +135,52 @@ class UnicodeTable
       result += "private let #{array_id}:[UInt32]=" + @hash[name].to_swift_uint32_array + "\n"
       result += "internal let #{predicate_id}=_UnicodePredicate(#{array_id},alreadySorted:true)\n"
     }
+    return result
+  end
+  
+  def to_swift_assoc_array(prefix, type, &converter)
+    if !block_given?
+      if type.kind_of?(String)
+        if type =~ /^U?Int(?:8|16|32|64)?$/
+          converter = Proc.new {|string| sprintf('0x%X', string.to_i) }
+        elsif type == 'String'
+          converter = Proc.new {|string| sprintf('"%s"', string)}
+        end
+      end
+    end
+    
+    failed("No block was given.") if !converter
+    
+    arranged_table = []
+    @hash.keys.each {|value|
+      @hash[value].each {|u_range|
+        arranged_table.push([u_range, value])
+      }
+    }
+    
+    arranged_table.sort! {|pair1, pair2| pair1[0].begin <=> pair2[0].begin }
+    
+    elem_id_for = lambda {|index| sprintf('___elem_%s_%x', prefix, index) }
+    
+    array_id = sprintf("__array_%s", prefix)
+    
+    
+    ## Form here, generate code
+    
+    result = ''
+    
+    arranged_table.each_with_index {|pair, index|
+      result += sprintf("private let %s:(UInt32,%s)=(0x%X,%s)\n",
+                        elem_id_for.call(index), type, pair[0].to_uint32, converter.call(pair[1]))
+    }
+    
+    result += sprintf("private let %s:[(UInt32,%s)]=[", array_id, type)
+    result += (0..(arranged_table.count - 1)).map{|ii| elem_id_for.call(ii) }.join(',')
+    result += "]\n"
+    
+    result += sprintf("internal let _%s_%s=_UnicodeAssociativeArray<%s>(%s,alreadySorted:true)\n",
+                      prefix, type.downcase, type, array_id)
+    
     return result
   end
 end
