@@ -26,7 +26,7 @@ require_relative './modules/unicoderange.rb'
 
 FILES = [
 #  :DerivedBidiClass,
-#  :DerivedBinaryProperties,
+  :DerivedBinaryProperties,
 #  :DerivedCombiningClass,
 #  :DerivedCoreProperties,
 #  :DerivedGeneralCategory,
