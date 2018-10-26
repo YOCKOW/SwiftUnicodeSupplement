@@ -29,7 +29,7 @@ FILES = [
   :DerivedBinaryProperties,
   :DerivedCombiningClass,
   :DerivedCoreProperties,
-#  :DerivedGeneralCategory,
+  :DerivedGeneralCategory,
 #  :DerivedNormalizationProps,
   :EmojiData,
 #  :IDNAMappingTable,
