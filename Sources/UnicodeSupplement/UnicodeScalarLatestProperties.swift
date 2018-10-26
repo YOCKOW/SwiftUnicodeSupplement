@@ -334,11 +334,11 @@ extension Unicode.Scalar.LatestProperties {
 // From "DerivedNormalizationProps.txt"
 extension Unicode.Scalar.LatestProperties {
   public var isFullCompositionExclusion: Bool {
-    return _normProp_Full_Composition_Exclusion.contains(self._scalar)
+    return _normProp_positive_Full_Composition_Exclusion.contains(self._scalar)
   }
   
   public var changesWhenNFKCCaseFolded: Bool {
-    return _normProp_Changes_When_NFKC_Casefolded.contains(self._scalar)
+    return _normProp_positive_Changes_When_NFKC_Casefolded.contains(self._scalar)
   }
 }
 

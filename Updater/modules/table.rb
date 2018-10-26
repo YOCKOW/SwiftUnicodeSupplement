@@ -27,11 +27,26 @@ class Table
     }
   end
   
+  protected
+  
+  def rows=(newRows)
+    @rows = newRows
+  end
+  
+  public
+  
   def count
     return @rows.count
   end
   
   def [](index)
     return @rows[index]
+  end
+  
+  def select
+    newTable = Table.new([])
+    newRows = @rows.select {|row| yield row }
+    newTable.rows = newRows
+    return newTable
   end
 end
