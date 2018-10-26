@@ -28,7 +28,7 @@ FILES = [
 #  :DerivedBidiClass,
   :DerivedBinaryProperties,
   :DerivedCombiningClass,
-#  :DerivedCoreProperties,
+  :DerivedCoreProperties,
 #  :DerivedGeneralCategory,
 #  :DerivedNormalizationProps,
   :EmojiData,
