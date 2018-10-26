@@ -31,7 +31,7 @@ FILES = [
 #  :DerivedCoreProperties,
 #  :DerivedGeneralCategory,
 #  :DerivedNormalizationProps,
-#  :EmojiData,
+  :EmojiData,
 #  :IDNAMappingTable,
 #  :PropertyValueAliases,
 #  :PropList,
@@ -195,7 +195,6 @@ FILES.each {|key|
     
     # open the remote files
     urls.each { |url|
-      $stdout.puts("*** Fetching #{url.to_s}")
       remote_file = url.to_file
       $stdout.puts("*** Converting and Writing Data...")
       mod.write(remote_file, local_file)

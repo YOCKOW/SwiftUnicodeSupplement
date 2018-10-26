@@ -73,7 +73,7 @@ module URI
   
   def last_modified
     trial = 0
-    redirected = url
+    redirected = self
     last_modified_string = nil
     
     while true
