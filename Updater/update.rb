@@ -32,7 +32,7 @@ FILES = [
   :DerivedGeneralCategory,
   :DerivedNormalizationProps,
   :EmojiData,
-#  :IDNAMappingTable,
+  :IDNAMappingTable,
 #  :PropertyValueAliases,
 #  :PropList,
 ]

@@ -164,22 +164,28 @@ class UnicodeTable
     
     array_id = sprintf("__array_%s", prefix)
     
+    type_suffix = type.gsub(/[^0-9A-Z_a-z]/, '_').to_lower_camel_case
+    
+    type_alias = 'A'
     
     ## Form here, generate code
     
     result = ''
     
+    result += "private typealias #{type_alias} = #{type}\n"
+    
     arranged_table.each_with_index {|pair, index|
       result += sprintf("private let %s:(UInt32,%s)=(0x%X,%s)\n",
-                        elem_id_for.call(index), type, pair[0].to_uint32, converter.call(pair[1]))
+                        elem_id_for.call(index), type_alias,
+                        pair[0].to_uint32, converter.call(pair[1]))
     }
     
-    result += sprintf("private let %s:[(UInt32,%s)]=[", array_id, type)
+    result += sprintf("private let %s:[(UInt32,%s)]=[", array_id, type_alias)
     result += (0..(arranged_table.count - 1)).map{|ii| elem_id_for.call(ii) }.join(',')
     result += "]\n"
     
     result += sprintf("internal let _%s_%s=_UnicodeAssociativeArray<%s>(%s,alreadySorted:true)\n",
-                      prefix, type.downcase, type, array_id)
+                      prefix, type_suffix, type, array_id)
     
     return result
   end

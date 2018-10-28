@@ -45,6 +45,19 @@ extension Unicode.IDNAStatus: Equatable {
   }
 }
 
+extension Unicode.IDNAStatus {
+  internal enum _ImmatureStatus {
+    case _valid_idna2008_disallowed
+    case _valid
+    case _ignored
+    case _disallowed
+    case _disallowed_std3_valid
+    case _mapped([UnicodeScalar])
+    case _deviation([UnicodeScalar])
+    case _disallowed_std3_mapped([UnicodeScalar])
+  }
+}
+
 extension Unicode.Scalar {
   /// Returns IDNA Status Value.
   /// - parameter usingSTD3ASCIIRules: Specify whether STD3 ASCII Rules should be used or not.
@@ -52,28 +65,25 @@ extension Unicode.Scalar {
   internal func _idnaStatus(usingSTD3ASCIIRules std3:Bool = true,
                          idna2008Compatible idna2008:Bool = false) -> Unicode.IDNAStatus?
   {
-    if self._idna_valid_idna2008_disallowed {
-      if idna2008 { return .disallowed }
+    guard let immatureStatus = _idna_unicodeIdnastatusImmatureStatus.value(for:self) else { return nil }
+    switch immatureStatus {
+    case ._valid_idna2008_disallowed:
+      return idna2008 ? .disallowed : .valid
+    case ._valid:
       return .valid
-    }
-    if self._idna_valid { return .valid }
-    if self._idna_ignored { return .ignored }
-    if self._idna_disallowed { return .disallowed }
-    if self._idna_disallowed_std3_valid {
-      if std3 { return .valid }
+    case ._ignored:
+      return .ignored
+    case ._disallowed:
       return .disallowed
+    case ._disallowed_std3_valid:
+      return std3 ? .valid : .disallowed
+    case ._mapped(let scalars):
+      return .mapped(scalars)
+    case ._deviation(let scalars):
+      return .deviation(scalars)
+    case ._disallowed_std3_mapped(let scalars):
+      return std3 ? .mapped(scalars) : .disallowed
     }
-    if let mapped = self._idna_mapped {
-      return .mapped(mapped)
-    }
-    if let deviation = self._idna_deviation {
-      return .deviation(deviation)
-    }
-    if let std3_mapped = self._idna_disallowed_std3_mapped {
-      if std3 { return .mapped(std3_mapped) }
-      return .disallowed
-    }
-    return nil
   }
 }
 

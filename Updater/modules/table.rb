@@ -43,6 +43,17 @@ class Table
     return @rows[index]
   end
   
+  def map
+    newTable = Table.new([])
+    newRows = @rows.map{|row|
+      newRow = yield row
+      failed("Block must return an instance of `Table.Row`.") if !newRow.kind_of?(Row)
+      newRow
+    }
+    newTable.rows = newRows
+    return newTable
+  end
+  
   def select
     newTable = Table.new([])
     newRows = @rows.select {|row| yield row }
