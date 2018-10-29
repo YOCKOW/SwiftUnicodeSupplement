@@ -25,6 +25,7 @@ module PropertyValueAliases; class << self
       :bc,
       :ccc,
       :gc,
+      :jg,
     ]
     
     divided_rows = {}
@@ -128,6 +129,21 @@ module PropertyValueAliases; class << self
     file.puts("    }")
     file.puts("  }")
     file.puts("}")
+  end
+  
+  def write_jg(rows, file)
+      # rows must be
+      # [["jg", abbr, name], ...]
+      
+      # abbr == name for jg
+      
+      file.puts("extension Unicode {")
+      file.puts("  public enum JoiningGroup {")
+      rows.each{|row|
+        file.puts("    case " + row[2].to_lower_camel_case)
+      }
+      file.puts("  }")
+      file.puts("}")
   end
 end; end
 
