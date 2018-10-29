@@ -34,7 +34,7 @@ FILES = [
   :EmojiData,
   :IDNAMappingTable,
 #  :PropertyValueAliases,
-#  :PropList,
+  :PropList,
 ]
 
 PROJECT_ROOT_DIR = Pathname(File.realpath('..', File.dirname(__FILE__)))
