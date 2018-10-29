@@ -5,39 +5,44 @@ It may be useful for some people who can't wait for [SE-0211](https://github.com
 
 # Requirements
 
-- Swift 4.1
-- macOS or Linux
+- Swift 4.1, 4.2
+- macOS or Linux (Swift 4.2 is required on Linux)
 
 # Usage
 
-```
+```Swift
 import UnicodeSupplement
 
-print(("A" as Unicode.Scalar).bidirectionality == .leftToRight)
+let a: Unicode.Scalar = "a"
+
+print(a.latestProperties.bidiClass == .leftToRight)
 // -> true
 
-print(("A" as Unicode.Scalar).canonicalCombiningClass == .notReordered)
+print(a.latestProperties.canonicalCombiningClass == .notReordered)
 // -> true
 
-print(("A" as Unicode.Scalar).isMath)
+print(a.latestProperties.isMath)
 // -> false
 
-print(("A" as Unicode.Scalar).isAlphabetic)
+print(a.latestProperties.isAlphabetic)
 // -> true
 
-print(("A" as Unicode.Scalar).generalCategory == .uppercaseLetter)
+print(a.latestProperties.generalCategory == .lowercaseLetter)
 // -> true
 
-print(("A" as Unicode.Scalar).joiningGroup == .noJoiningGroup)
+print(a.latestProperties.joiningGroup == .noJoiningGroup)
 // -> true
 
-print(("A" as Unicode.Scalar).joiningType == .nonJoining)
+print(a.latestProperties.joiningType == .nonJoining)
 // -> true
 
-print(("A" as Unicode.Scalar).isWhiteSpace) 
+print(a.latestProperties.script == .latin)
+// -> true
+
+print(a.latestProperties.isWhitespace) 
 // -> false
 
-print(("A" as Unicode.Scalar).isASCIIHexDigit)
+print(a.latestProperties.isASCIIHexDigit)
 // -> true
 ```
 
