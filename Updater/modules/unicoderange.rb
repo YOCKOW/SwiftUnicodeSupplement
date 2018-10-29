@@ -112,6 +112,8 @@ class UnicodeRangeArray
 end
 
 class UnicodeTable
+  @@prefix_history = []
+
   def initialize(table, keyColumn = 1)
     @hash = {} # key is name, value is UnicodeRangeArray
     
@@ -166,7 +168,13 @@ class UnicodeTable
     
     type_suffix = type.gsub(/[^0-9A-Z_a-z]/, '_').to_lower_camel_case
     
-    type_alias = 'A'
+    prefix_count = 0
+    @@prefix_history.each {|past_prefix|
+      prefix_count += 1 if past_prefix.start_with?(prefix) || prefix.start_with?(past_prefix)
+    }
+    @@prefix_history.push(prefix)
+    
+    type_alias = prefix_count.to_s(26).tr('0-9a-p', 'A-Z')
     
     ## Form here, generate code
     

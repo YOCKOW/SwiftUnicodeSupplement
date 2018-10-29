@@ -30,18 +30,14 @@ extension Unicode.Scalar.LatestProperties {
   public var bidiClass: Unicode.BidiClass {
     if let bidiClassString = _bidiClass_string.value(for:self._scalar) {
       return Unicode.BidiClass(abbreviated:bidiClassString)
-    }
-    if _bidiClass_default_AL.contains(self._scalar) {
-      return .arabicLetter
-    }
-    if _bidiClass_default_R.contains(self._scalar) {
-      return .rightToLeft
-    }
-    if _bidiClass_default_ET.contains(self._scalar) {
-      return .europeanTerminator
-    }
-    for keyPath in _bidiClass_default_BN_properties {
-      if self[keyPath:keyPath] { return .boundaryNeutral }
+    } else if let bidiClassString = _bidiClass_defaultValue_ranges_string.value(for:self._scalar) {
+      return Unicode.BidiClass(abbreviated:bidiClassString)
+    } else {
+      for propertyStatus in _bidiClass_defaultValue_properties {
+        if self._scalar.latestProperties[keyPath:propertyStatus.0] == propertyStatus.1 {
+          return Unicode.BidiClass(abbreviated:propertyStatus.2)
+        }
+      }
     }
     return .leftToRight
   }

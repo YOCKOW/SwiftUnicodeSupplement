@@ -25,7 +25,7 @@ require_relative './modules/unicoderange.rb'
 ### CONSTANTS ######################################################################################
 
 FILES = [
-#  :DerivedBidiClass,
+  :DerivedBidiClass,
   :DerivedBinaryProperties,
   :DerivedCombiningClass,
   :DerivedCoreProperties,
