@@ -132,6 +132,18 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(jt("\u{1DA75}"), .transparent)
   }
   
+  func test_script() {
+    func sc(_ scalar:Unicode.Scalar) -> Unicode.Script {
+      return scalar.latestProperties.script
+    }
+    
+    // not exhaustive
+    XCTAssertEqual(sc("0"), .common)
+    XCTAssertEqual(sc("A"), .latin)
+    XCTAssertEqual(sc("あ"), .hiragana)
+    XCTAssertEqual(sc("ワ"), .katakana)
+  }
+  
   func test_properties() {
     let check = {
       (scalar:Unicode.Scalar,

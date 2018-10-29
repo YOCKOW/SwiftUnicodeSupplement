@@ -37,6 +37,7 @@ FILES = [
   :IDNAMappingTable,
   :PropertyValueAliases,
   :PropList,
+  :Scripts,
 ]
 
 PROJECT_ROOT_DIR = Pathname(File.realpath('..', File.dirname(__FILE__)))

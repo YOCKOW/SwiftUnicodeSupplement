@@ -74,6 +74,14 @@ extension Unicode.Scalar.LatestProperties {
   }
 }
 
+extension Unicode.Scalar.LatestProperties {
+  /// Script for the scalar.
+  public var script: Unicode.Script {
+    guard let sc = _sc_unicodeScript.value(for:self._scalar) else { return .unknown }
+    return sc
+  }
+}
+
 // Core Properties
 extension Unicode.Scalar.LatestProperties {
   public var isMath: Bool {

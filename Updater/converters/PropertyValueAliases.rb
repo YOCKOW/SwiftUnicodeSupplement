@@ -27,6 +27,7 @@ module PropertyValueAliases; class << self
       :gc,
       :jg,
       :jt,
+      :sc,
     ]
     
     divided_rows = {}
@@ -178,6 +179,32 @@ module PropertyValueAliases; class << self
       file.puts("    case \"#{row[1]}\": self = .#{row[2].to_lower_camel_case}")
     }
     file.puts("    default: fatalError(\"Unknown JoiningType\")")
+    file.puts("    }")
+    file.puts("  }")
+    file.puts("}")
+  end
+  
+  def write_sc(rows, file)
+    # rows must be
+    # [["sc", abbr, name, another alias], ...]
+    
+    file.puts("extension Unicode {")
+    file.puts("  public enum Script {")
+    rows.each{|row|
+      file.puts("    case " + row[2].to_lower_camel_case)
+    }
+    file.puts("  }")
+    file.puts("}")
+    
+    file.puts("extension Unicode.Script {")
+    file.puts("  public init(abbreviated value:String) {")
+    file.puts("    switch value {")
+    rows.each{|row|
+      file.puts("    case \"#{row[1]}\": self = .#{row[2].to_lower_camel_case}")
+      next if !row[3]
+      file.puts("    case \"#{row[3]}\": self = .#{row[2].to_lower_camel_case}")
+    }
+    file.puts("    default: fatalError(\"Unknown abbreviation for Script property.\")")
     file.puts("    }")
     file.puts("  }")
     file.puts("}")

@@ -361,3 +361,318 @@ extension Unicode.JoiningType {
   }
 }
 /* ********************************************************************************************** */
+/* sc*/
+extension Unicode {
+  public enum Script {
+    case adlam
+    case caucasianAlbanian
+    case ahom
+    case arabic
+    case imperialAramaic
+    case armenian
+    case avestan
+    case balinese
+    case bamum
+    case bassaVah
+    case batak
+    case bengali
+    case bhaiksuki
+    case bopomofo
+    case brahmi
+    case braille
+    case buginese
+    case buhid
+    case chakma
+    case canadianAboriginal
+    case carian
+    case cham
+    case cherokee
+    case coptic
+    case cypriot
+    case cyrillic
+    case devanagari
+    case dogra
+    case deseret
+    case duployan
+    case egyptianHieroglyphs
+    case elbasan
+    case ethiopic
+    case georgian
+    case glagolitic
+    case gunjalaGondi
+    case masaramGondi
+    case gothic
+    case grantha
+    case greek
+    case gujarati
+    case gurmukhi
+    case hangul
+    case han
+    case hanunoo
+    case hatran
+    case hebrew
+    case hiragana
+    case anatolianHieroglyphs
+    case pahawhHmong
+    case katakanaOrHiragana
+    case oldHungarian
+    case oldItalic
+    case javanese
+    case kayahLi
+    case katakana
+    case kharoshthi
+    case khmer
+    case khojki
+    case kannada
+    case kaithi
+    case taiTham
+    case lao
+    case latin
+    case lepcha
+    case limbu
+    case linearA
+    case linearB
+    case lisu
+    case lycian
+    case lydian
+    case mahajani
+    case makasar
+    case mandaic
+    case manichaean
+    case marchen
+    case medefaidrin
+    case mendeKikakui
+    case meroiticCursive
+    case meroiticHieroglyphs
+    case malayalam
+    case modi
+    case mongolian
+    case mro
+    case meeteiMayek
+    case multani
+    case myanmar
+    case oldNorthArabian
+    case nabataean
+    case newa
+    case nko
+    case nushu
+    case ogham
+    case olChiki
+    case oldTurkic
+    case oriya
+    case osage
+    case osmanya
+    case palmyrene
+    case pauCinHau
+    case oldPermic
+    case phagsPa
+    case inscriptionalPahlavi
+    case psalterPahlavi
+    case phoenician
+    case miao
+    case inscriptionalParthian
+    case rejang
+    case hanifiRohingya
+    case runic
+    case samaritan
+    case oldSouthArabian
+    case saurashtra
+    case signWriting
+    case shavian
+    case sharada
+    case siddham
+    case khudawadi
+    case sinhala
+    case sogdian
+    case oldSogdian
+    case soraSompeng
+    case soyombo
+    case sundanese
+    case sylotiNagri
+    case syriac
+    case tagbanwa
+    case takri
+    case taiLe
+    case newTaiLue
+    case tamil
+    case tangut
+    case taiViet
+    case telugu
+    case tifinagh
+    case tagalog
+    case thaana
+    case thai
+    case tibetan
+    case tirhuta
+    case ugaritic
+    case vai
+    case warangCiti
+    case oldPersian
+    case cuneiform
+    case yi
+    case zanabazarSquare
+    case inherited
+    case common
+    case unknown
+  }
+}
+extension Unicode.Script {
+  public init(abbreviated value:String) {
+    switch value {
+    case "Adlm": self = .adlam
+    case "Aghb": self = .caucasianAlbanian
+    case "Ahom": self = .ahom
+    case "Arab": self = .arabic
+    case "Armi": self = .imperialAramaic
+    case "Armn": self = .armenian
+    case "Avst": self = .avestan
+    case "Bali": self = .balinese
+    case "Bamu": self = .bamum
+    case "Bass": self = .bassaVah
+    case "Batk": self = .batak
+    case "Beng": self = .bengali
+    case "Bhks": self = .bhaiksuki
+    case "Bopo": self = .bopomofo
+    case "Brah": self = .brahmi
+    case "Brai": self = .braille
+    case "Bugi": self = .buginese
+    case "Buhd": self = .buhid
+    case "Cakm": self = .chakma
+    case "Cans": self = .canadianAboriginal
+    case "Cari": self = .carian
+    case "Cham": self = .cham
+    case "Cher": self = .cherokee
+    case "Copt": self = .coptic
+    case "Qaac": self = .coptic
+    case "Cprt": self = .cypriot
+    case "Cyrl": self = .cyrillic
+    case "Deva": self = .devanagari
+    case "Dogr": self = .dogra
+    case "Dsrt": self = .deseret
+    case "Dupl": self = .duployan
+    case "Egyp": self = .egyptianHieroglyphs
+    case "Elba": self = .elbasan
+    case "Ethi": self = .ethiopic
+    case "Geor": self = .georgian
+    case "Glag": self = .glagolitic
+    case "Gong": self = .gunjalaGondi
+    case "Gonm": self = .masaramGondi
+    case "Goth": self = .gothic
+    case "Gran": self = .grantha
+    case "Grek": self = .greek
+    case "Gujr": self = .gujarati
+    case "Guru": self = .gurmukhi
+    case "Hang": self = .hangul
+    case "Hani": self = .han
+    case "Hano": self = .hanunoo
+    case "Hatr": self = .hatran
+    case "Hebr": self = .hebrew
+    case "Hira": self = .hiragana
+    case "Hluw": self = .anatolianHieroglyphs
+    case "Hmng": self = .pahawhHmong
+    case "Hrkt": self = .katakanaOrHiragana
+    case "Hung": self = .oldHungarian
+    case "Ital": self = .oldItalic
+    case "Java": self = .javanese
+    case "Kali": self = .kayahLi
+    case "Kana": self = .katakana
+    case "Khar": self = .kharoshthi
+    case "Khmr": self = .khmer
+    case "Khoj": self = .khojki
+    case "Knda": self = .kannada
+    case "Kthi": self = .kaithi
+    case "Lana": self = .taiTham
+    case "Laoo": self = .lao
+    case "Latn": self = .latin
+    case "Lepc": self = .lepcha
+    case "Limb": self = .limbu
+    case "Lina": self = .linearA
+    case "Linb": self = .linearB
+    case "Lisu": self = .lisu
+    case "Lyci": self = .lycian
+    case "Lydi": self = .lydian
+    case "Mahj": self = .mahajani
+    case "Maka": self = .makasar
+    case "Mand": self = .mandaic
+    case "Mani": self = .manichaean
+    case "Marc": self = .marchen
+    case "Medf": self = .medefaidrin
+    case "Mend": self = .mendeKikakui
+    case "Merc": self = .meroiticCursive
+    case "Mero": self = .meroiticHieroglyphs
+    case "Mlym": self = .malayalam
+    case "Modi": self = .modi
+    case "Mong": self = .mongolian
+    case "Mroo": self = .mro
+    case "Mtei": self = .meeteiMayek
+    case "Mult": self = .multani
+    case "Mymr": self = .myanmar
+    case "Narb": self = .oldNorthArabian
+    case "Nbat": self = .nabataean
+    case "Newa": self = .newa
+    case "Nkoo": self = .nko
+    case "Nshu": self = .nushu
+    case "Ogam": self = .ogham
+    case "Olck": self = .olChiki
+    case "Orkh": self = .oldTurkic
+    case "Orya": self = .oriya
+    case "Osge": self = .osage
+    case "Osma": self = .osmanya
+    case "Palm": self = .palmyrene
+    case "Pauc": self = .pauCinHau
+    case "Perm": self = .oldPermic
+    case "Phag": self = .phagsPa
+    case "Phli": self = .inscriptionalPahlavi
+    case "Phlp": self = .psalterPahlavi
+    case "Phnx": self = .phoenician
+    case "Plrd": self = .miao
+    case "Prti": self = .inscriptionalParthian
+    case "Rjng": self = .rejang
+    case "Rohg": self = .hanifiRohingya
+    case "Runr": self = .runic
+    case "Samr": self = .samaritan
+    case "Sarb": self = .oldSouthArabian
+    case "Saur": self = .saurashtra
+    case "Sgnw": self = .signWriting
+    case "Shaw": self = .shavian
+    case "Shrd": self = .sharada
+    case "Sidd": self = .siddham
+    case "Sind": self = .khudawadi
+    case "Sinh": self = .sinhala
+    case "Sogd": self = .sogdian
+    case "Sogo": self = .oldSogdian
+    case "Sora": self = .soraSompeng
+    case "Soyo": self = .soyombo
+    case "Sund": self = .sundanese
+    case "Sylo": self = .sylotiNagri
+    case "Syrc": self = .syriac
+    case "Tagb": self = .tagbanwa
+    case "Takr": self = .takri
+    case "Tale": self = .taiLe
+    case "Talu": self = .newTaiLue
+    case "Taml": self = .tamil
+    case "Tang": self = .tangut
+    case "Tavt": self = .taiViet
+    case "Telu": self = .telugu
+    case "Tfng": self = .tifinagh
+    case "Tglg": self = .tagalog
+    case "Thaa": self = .thaana
+    case "Thai": self = .thai
+    case "Tibt": self = .tibetan
+    case "Tirh": self = .tirhuta
+    case "Ugar": self = .ugaritic
+    case "Vaii": self = .vai
+    case "Wara": self = .warangCiti
+    case "Xpeo": self = .oldPersian
+    case "Xsux": self = .cuneiform
+    case "Yiii": self = .yi
+    case "Zanb": self = .zanabazarSquare
+    case "Zinh": self = .inherited
+    case "Qaai": self = .inherited
+    case "Zyyy": self = .common
+    case "Zzzz": self = .unknown
+    default: fatalError("Unknown abbreviation for Script property.")
+    }
+  }
+}
+/* ********************************************************************************************** */
