@@ -78,6 +78,36 @@ final class UnicodeSupplementTests: XCTestCase {
     check("\u{2474}", false, false, .disallowed)
   }
   
+  func test_BidiClass() {
+    func bc(_ scalar:Unicode.Scalar) -> Unicode.BidiClass {
+      return scalar.latestProperties.bidiClass
+    }
+    
+    XCTAssertEqual(bc("A"), .leftToRight)
+    XCTAssertEqual(bc("\u{07DD}"), .rightToLeft)
+    XCTAssertEqual(bc("7"), .europeanNumber)
+    XCTAssertEqual(bc("-"), .europeanSeparator)
+    XCTAssertEqual(bc("％"), .europeanTerminator)
+    XCTAssertEqual(bc("\u{0667}"), .arabicNumber)
+    XCTAssertEqual(bc(":"), .commonSeparator)
+    XCTAssertEqual(bc("\u{2029}"), .paragraphSeparator)
+    XCTAssertEqual(bc("\u{0009}"), .segmentSeparator)
+    XCTAssertEqual(bc(" "), .whiteSpace)
+    XCTAssertEqual(bc("!"), .otherNeutral)
+    XCTAssertEqual(bc("\u{00AD}"), .boundaryNeutral)
+    XCTAssertEqual(bc("\u{A9E5}"), .nonspacingMark)
+    XCTAssertEqual(bc("\u{FDFC}"), .arabicLetter)
+    XCTAssertEqual(bc("\u{202D}"), .leftToRightOverride)
+    XCTAssertEqual(bc("\u{202E}"), .rightToLeftOverride)
+    XCTAssertEqual(bc("\u{202A}"), .leftToRightEmbedding)
+    XCTAssertEqual(bc("\u{202B}"), .rightToLeftEmbedding)
+    XCTAssertEqual(bc("\u{202C}"), .popDirectionalFormat)
+    XCTAssertEqual(bc("\u{2066}"), .leftToRightIsolate)
+    XCTAssertEqual(bc("\u{2067}"), .rightToLeftIsolate)
+    XCTAssertEqual(bc("\u{2068}"), .firstStrongIsolate)
+    XCTAssertEqual(bc("\u{2069}"), .popDirectionalIsolate)
+  }
+  
   func test_properties() {
     let check = {
       (scalar:Unicode.Scalar,
@@ -434,6 +464,7 @@ final class UnicodeSupplementTests: XCTestCase {
     ("test_UnicodeAssociativeArray", test_UnicodeAssociativeArray),
     ("test_UnicodePredicate", test_UnicodePredicate),
     ("test_IDNAStatus", test_IDNAStatus),
+    ("test_BidiClass", test_BidiClass),
     ("test_properties", test_properties),
     ("test_GeneralCategory", test_GeneralCategory),
     ("test_CanonicalCombiningClass", test_CanonicalCombiningClass),
