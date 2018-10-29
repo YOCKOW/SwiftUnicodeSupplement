@@ -43,6 +43,10 @@ class Table
     return @rows[index]
   end
   
+  def each
+    @rows.each {|row| yield row }
+  end
+  
   def map
     newTable = Table.new([])
     newRows = @rows.map{|row|

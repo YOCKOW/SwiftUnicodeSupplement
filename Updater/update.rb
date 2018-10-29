@@ -33,7 +33,7 @@ FILES = [
   :DerivedNormalizationProps,
   :EmojiData,
   :IDNAMappingTable,
-#  :PropertyValueAliases,
+  :PropertyValueAliases,
   :PropList,
 ]
 
