@@ -22,6 +22,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   Files shown below were automatically generated from the data distributed under the Terms of Use
   in  http://www.unicode.org/copyright.html. Please read the source files for more information.
 
+  * Sources/UnicodeSupplement/__data__/Emoji/*
   * Sources/UnicodeSupplement/__data__/IDNA/*
   * Sources/UnicodeSupplement/__data__/UCD/*
 

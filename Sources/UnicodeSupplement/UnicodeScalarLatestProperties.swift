@@ -30,18 +30,14 @@ extension Unicode.Scalar.LatestProperties {
   public var bidiClass: Unicode.BidiClass {
     if let bidiClassString = _bidiClass_string.value(for:self._scalar) {
       return Unicode.BidiClass(abbreviated:bidiClassString)
-    }
-    if _bidiClass_default_AL.contains(self._scalar) {
-      return .arabicLetter
-    }
-    if _bidiClass_default_R.contains(self._scalar) {
-      return .rightToLeft
-    }
-    if _bidiClass_default_ET.contains(self._scalar) {
-      return .europeanTerminator
-    }
-    for keyPath in _bidiClass_default_BN_properties {
-      if self[keyPath:keyPath] { return .boundaryNeutral }
+    } else if let bidiClassString = _bidiClass_defaultValue_ranges_string.value(for:self._scalar) {
+      return Unicode.BidiClass(abbreviated:bidiClassString)
+    } else {
+      for propertyStatus in _bidiClass_defaultValue_properties {
+        if self._scalar.latestProperties[keyPath:propertyStatus.0] == propertyStatus.1 {
+          return Unicode.BidiClass(abbreviated:propertyStatus.2)
+        }
+      }
     }
     return .leftToRight
   }
@@ -334,11 +330,11 @@ extension Unicode.Scalar.LatestProperties {
 // From "DerivedNormalizationProps.txt"
 extension Unicode.Scalar.LatestProperties {
   public var isFullCompositionExclusion: Bool {
-    return _normProp_Full_Composition_Exclusion.contains(self._scalar)
+    return _normProp_positive_Full_Composition_Exclusion.contains(self._scalar)
   }
   
   public var changesWhenNFKCCaseFolded: Bool {
-    return _normProp_Changes_When_NFKC_Casefolded.contains(self._scalar)
+    return _normProp_positive_Changes_When_NFKC_Casefolded.contains(self._scalar)
   }
 }
 
@@ -390,7 +386,7 @@ extension Unicode.Scalar.LatestProperties {
 
 extension Unicode.Scalar.LatestProperties {
   public var generalCategory: Unicode.GeneralCategory {
-    let value = _generalCategory_string.value(for:self._scalar) ?? "Cn"
+    let value = _gc_string.value(for:self._scalar) ?? "Cn"
     return Unicode.GeneralCategory(abbreviated:value)
   }
 }
@@ -407,7 +403,7 @@ extension Unicode.Scalar.LatestProperties {
 
 extension Unicode.Scalar.LatestProperties {
   public var canonicalCombiningClass: Unicode.CanonicalCombiningClass {
-    let rawValue = _canonicalCombiningClass_uint8.value(for:self._scalar) ?? 0
+    let rawValue = _ccc_uInt8.value(for:self._scalar) ?? 0
     return Unicode.CanonicalCombiningClass(rawValue:rawValue)
   }
 }
