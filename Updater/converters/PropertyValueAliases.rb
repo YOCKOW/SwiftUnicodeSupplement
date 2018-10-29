@@ -26,6 +26,7 @@ module PropertyValueAliases; class << self
       :ccc,
       :gc,
       :jg,
+      :jt,
     ]
     
     divided_rows = {}
@@ -156,6 +157,30 @@ module PropertyValueAliases; class << self
       }
       file.puts("  }")
       file.puts("}")
+  end
+  
+  def write_jt(rows, file)
+    # rows must be
+    # [["jt", abbr, name], ...]
+    
+    file.puts("extension Unicode {")
+    file.puts("  public enum JoiningType {")
+    rows.each{|row|
+      file.puts("    case " + row[2].to_lower_camel_case)
+    }
+    file.puts("  }")
+    file.puts("}")
+    
+    file.puts("extension Unicode.JoiningType {")
+    file.puts("  public init(abbreviated value:Character) {")
+    file.puts("    switch value {")
+    rows.each{|row|
+      file.puts("    case \"#{row[1]}\": self = .#{row[2].to_lower_camel_case}")
+    }
+    file.puts("    default: fatalError(\"Unknown JoiningType\")")
+    file.puts("    }")
+    file.puts("  }")
+    file.puts("}")
   end
 end; end
 

@@ -118,6 +118,20 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(jg("\u{066E}"), .beh)
   }
   
+  
+  func test_JoiningType() {
+    func jt(_ scalar:Unicode.Scalar) -> Unicode.JoiningType {
+      return scalar.latestProperties.joiningType
+    }
+    
+    XCTAssertEqual(jt("A"), .nonJoining)
+    XCTAssertEqual(jt("\u{180A}"), .joinCausing)
+    XCTAssertEqual(jt("\u{0772}"), .dualJoining)
+    XCTAssertEqual(jt("\u{0771}"), .rightJoining)
+    XCTAssertEqual(jt("\u{10AD7}"), .leftJoining)
+    XCTAssertEqual(jt("\u{1DA75}"), .transparent)
+  }
+  
   func test_properties() {
     let check = {
       (scalar:Unicode.Scalar,
@@ -476,6 +490,7 @@ final class UnicodeSupplementTests: XCTestCase {
     ("test_BidiClass", test_BidiClass),
     ("test_IDNAStatus", test_IDNAStatus),
     ("test_JoiningGroup", test_JoiningGroup),
+    ("test_JoiningType", test_JoiningType),
     ("test_properties", test_properties),
     ("test_GeneralCategory", test_GeneralCategory),
     ("test_CanonicalCombiningClass", test_CanonicalCombiningClass),

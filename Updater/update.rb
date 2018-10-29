@@ -31,6 +31,7 @@ FILES = [
   :DerivedCoreProperties,
   :DerivedGeneralCategory,
   :DerivedJoiningGroup,
+  :DerivedJoiningType,
   :DerivedNormalizationProps,
   :EmojiData,
   :IDNAMappingTable,

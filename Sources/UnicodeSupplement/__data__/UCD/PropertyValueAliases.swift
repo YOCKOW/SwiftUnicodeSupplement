@@ -336,3 +336,28 @@ extension Unicode {
   }
 }
 /* ********************************************************************************************** */
+/* jt*/
+extension Unicode {
+  public enum JoiningType {
+    case joinCausing
+    case dualJoining
+    case leftJoining
+    case rightJoining
+    case transparent
+    case nonJoining
+  }
+}
+extension Unicode.JoiningType {
+  public init(abbreviated value:Character) {
+    switch value {
+    case "C": self = .joinCausing
+    case "D": self = .dualJoining
+    case "L": self = .leftJoining
+    case "R": self = .rightJoining
+    case "T": self = .transparent
+    case "U": self = .nonJoining
+    default: fatalError("Unknown JoiningType")
+    }
+  }
+}
+/* ********************************************************************************************** */

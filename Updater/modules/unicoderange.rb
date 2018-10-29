@@ -145,7 +145,7 @@ class UnicodeTable
       if type.kind_of?(String)
         if type =~ /^U?Int(?:8|16|32|64)?$/
           converter = Proc.new {|string| sprintf('0x%X', string.to_i) }
-        elsif type == 'String'
+        elsif type == 'String' || type == 'Character'
           converter = Proc.new {|string| sprintf('"%s"', string)}
         end
       end

@@ -66,6 +66,12 @@ extension Unicode.Scalar.LatestProperties {
     guard let jg = _jg_unicodeJoiningGroup.value(for:self._scalar) else { return .noJoiningGroup }
     return jg
   }
+  
+  /// Joining_Type for the scalar.
+  public var joiningType: Unicode.JoiningType {
+    let jt_char:Character = _jt_character.value(for:self._scalar) ?? "U"
+    return Unicode.JoiningType(abbreviated:jt_char)
+  }
 }
 
 // Core Properties
