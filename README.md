@@ -10,7 +10,7 @@ It may be useful for some people who can't wait for [SE-0211](https://github.com
 
 # Usage
 
-```
+```Swift
 import UnicodeSupplement
 
 let a: Unicode.Scalar = "a"
@@ -34,6 +34,9 @@ print(a.latestProperties.joiningGroup == .noJoiningGroup)
 // -> true
 
 print(a.latestProperties.joiningType == .nonJoining)
+// -> true
+
+print(a.latestProperties.script == .latin)
 // -> true
 
 print(a.latestProperties.isWhitespace) 
