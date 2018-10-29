@@ -60,6 +60,14 @@ private func _unimplemented(_ functionName:String = #function,
   fatalError("\(functionName) is not implemented yet.", file:file, line:line)
 }
 
+extension Unicode.Scalar.LatestProperties {
+  /// Joining_Group for the scalar.
+  public var joiningGroup: Unicode.JoiningGroup {
+    guard let jg = _jg_unicodeJoiningGroup.value(for:self._scalar) else { return .noJoiningGroup }
+    return jg
+  }
+}
+
 // Core Properties
 extension Unicode.Scalar.LatestProperties {
   public var isMath: Bool {

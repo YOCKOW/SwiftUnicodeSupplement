@@ -322,7 +322,8 @@ extension Unicode {
     case tah
     case taw
     case tehMarbuta
-    case hamzaOnHehGoal
+    case tehMarbutaGoal
+    public static let hamzaOnHehGoal: JoiningGroup = .tehMarbutaGoal
     case teth
     case waw
     case yeh

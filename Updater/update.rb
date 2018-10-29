@@ -30,6 +30,7 @@ FILES = [
   :DerivedCombiningClass,
   :DerivedCoreProperties,
   :DerivedGeneralCategory,
+  :DerivedJoiningGroup,
   :DerivedNormalizationProps,
   :EmojiData,
   :IDNAMappingTable,

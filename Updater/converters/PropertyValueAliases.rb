@@ -133,14 +133,26 @@ module PropertyValueAliases; class << self
   
   def write_jg(rows, file)
       # rows must be
-      # [["jg", abbr, name], ...]
+      # [["jg", name, alias], ...]
       
-      # abbr == name for jg
+      # name == alias for jg except Hamza_On_Heh_Goal
+      
+      names = []
+      rows.each {|row|
+        if row[1] == row[2]
+          names.push([row[1].to_lower_camel_case])
+        else
+          names.push([row[1].to_lower_camel_case, row[2].to_lower_camel_case])
+        end
+      }
+      
       
       file.puts("extension Unicode {")
       file.puts("  public enum JoiningGroup {")
-      rows.each{|row|
-        file.puts("    case " + row[2].to_lower_camel_case)
+      names.each{|name_array|
+        file.puts("    case " + name_array[0])
+        next if name_array.count < 2
+        file.puts("    public static let #{name_array[1]}: JoiningGroup = .#{name_array[0]}")
       }
       file.puts("  }")
       file.puts("}")
