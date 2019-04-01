@@ -1,12 +1,11 @@
 /* *************************************************************************************************
  UnicodeCanonicalCombiningClass.swift
-   © 2018 YOCKOW.
+   © 2018-2019 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
 
-#if swift(>=5.0)
-#else
+#if compiler(<5.0)
 extension Unicode {
   /// Designed to be compatible with [SE-0211](https://github.com/apple/swift-evolution/blob/master/proposals/0211-unicode-scalar-properties.md)
   public struct CanonicalCombiningClass: RawRepresentable {
@@ -19,19 +18,12 @@ extension Unicode {
     }
   }
 }
-#endif
 
-#if swift(>=5.0)
-#else
 extension Unicode.CanonicalCombiningClass: Hashable {
-  #if swift(>=4.1.50)
-  #else
   public var hashValue: Int {
     return self.rawValue.hashValue
   }
-  #endif
 }
-
 
 extension Unicode.CanonicalCombiningClass: Comparable {
   public static func < (lhs:Unicode.CanonicalCombiningClass,

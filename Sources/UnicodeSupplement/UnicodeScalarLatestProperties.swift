@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  UnicodeScalarLatestProperties.swift
-   © 2018 YOCKOW.
+   © 2018-2019 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
@@ -19,8 +19,7 @@ extension Unicode.Scalar {
     return LatestProperties(self)
   }
   
-  #if swift(>=5.0)
-  #else
+  #if compiler(<5.0)
   public typealias Properties = LatestProperties
   public var properties: Properties { return self.latestProperties }
   #endif
@@ -180,7 +179,7 @@ extension Unicode.Scalar.LatestProperties {
   /// NOTE: This property was already deprecated as of Unicode 6.0.0
   ///       because it has been supplanted by `Line_Break` property values.
   ///       See [Deprecated Properties in UAX#44](https://www.unicode.org/reports/tr44/#Deprecated_Properties)
-  @available(*, deprecated:1.0)
+  @available(*, deprecated, message: "This property was already deprecated as of Unicode 6.0.0")
   public var isHyphen: Bool {
     return _prop_Hyphen.contains(self._scalar)
   }
