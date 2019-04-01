@@ -49,9 +49,9 @@ OPTIONS = {
   :FORCE_UPDATE => []
 }
 
-U_TERMS_OF_USE_URL = URI.parse('http://unicode.org/copyright.html')
+U_TERMS_OF_USE_URL = URI.parse('https://www.unicode.org/license.html')
 U_TERMS_OF_USE = U_TERMS_OF_USE_URL.content.
-                 match(%r{<a\s+name="License">(.+)</a>[\S\s]*<pre>\s*(\S[\S\s]*\S)\s*</pre>})[1,2].
+                 match(%r{<a\s+name="License"[^>]*>(.+)</a>[\S\s]*<pre>\s*(\S[\S\s]*\S)\s*</pre>})[1,2].
                  join("\n\n")
 
 SWIFT_KEYWORDS_URL = URI.parse('https://raw.githubusercontent.com/apple/swift/master/utils/gyb_syntax_support/Token.py')
