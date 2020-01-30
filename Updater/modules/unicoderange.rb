@@ -140,6 +140,15 @@ class UnicodeTable
     return result
   end
   
+  def to_swift_multipleranges_code(prefix)
+    result = ''
+    @hash.keys.each{|name|
+      array_id = "__array_#{prefix}_#{name}"
+      multipleranges_id = "_#{prefix}_#{name}"
+    }
+    return result
+  end
+  
   def to_swift_assoc_array(prefix, type, &converter)
     if !block_given?
       if type.kind_of?(String)
