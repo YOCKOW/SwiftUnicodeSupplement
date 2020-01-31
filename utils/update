@@ -1,0 +1,4 @@
+#!/bin/sh
+
+directory=$(cd "$(dirname "$0")" && pwd)
+swift run --package-path "${directory}/SwiftUnicodeSupplementUpdater" Updater "$@"

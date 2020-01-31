@@ -47,6 +47,12 @@ print(a.latestProperties.isASCIIHexDigit)
 ```
 
 
+# Update
+
+You can run `utils/update` to update properties. 
+
+
+
 # License
 
 MIT License.  
