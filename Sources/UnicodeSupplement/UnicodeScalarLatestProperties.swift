@@ -428,8 +428,7 @@ extension Unicode.Scalar.LatestProperties {
 
 extension Unicode.Scalar.LatestProperties {
   public var canonicalCombiningClass: Unicode.CanonicalCombiningClass {
-    let rawValue = _ccc_uInt8.value(for:self._scalar) ?? 0
-    return Unicode.CanonicalCombiningClass(rawValue:rawValue)
+    return _ccc[self._value] ?? .init(rawValue: 0)
   }
 }
 

@@ -11,6 +11,7 @@ import UnicodeSupplementUpdater
 let delegates: [UnicodeCodeUpdaterDelegate] = [
   DerivedBidiClass(),
   DerivedBinaryProperties(),
+  DerivedCombiningClass(),
 ]
 
 let manager = CodeUpdaterManager()

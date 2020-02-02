@@ -32,4 +32,10 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
     let converted = try _converted(with: DerivedBinaryProperties())
     XCTAssertNotNil(converted.range(of: expectedLine))
   }
+  
+  func test_ccc() throws {
+    let expectedLine = "internal let _ccc = RangeDictionary<UInt32, Unicode.CanonicalCombiningClass>(carefullySortedRangesAndValues: __array_ccc)"
+    let converted = try _converted(with: DerivedCombiningClass())
+    XCTAssertNotNil(converted.range(of: expectedLine))
+  }
 }

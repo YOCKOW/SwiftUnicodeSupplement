@@ -6,7 +6,9 @@ extension UnicodeSupplementUpdaterTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__UnicodeSupplementUpdaterTests = [
+        ("test_bidiClass", test_bidiClass),
         ("test_binProp", test_binProp),
+        ("test_ccc", test_ccc),
     ]
 }
 
