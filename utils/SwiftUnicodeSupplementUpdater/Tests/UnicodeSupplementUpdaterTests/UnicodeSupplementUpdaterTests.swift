@@ -11,13 +11,25 @@ import XCTest
 import yCodeUpdater
 
 final class UnicodeSupplementUpdaterTests: XCTestCase {
-    func test_binProp() {
-      let delegate = DerivedBinaryProperties()
-      let updater = CodeUpdater(delegate: delegate)
-      guard let converted = String(data: updater.convertedData(), encoding: .utf8) else {
-        XCTFail(); return
-      }
-      // How to test...
-      XCTAssertNotNil(converted.range(of: "internal let _binProp_Bidi_Mirrored = MultipleRanges<Unicode.Scalar>(carefullySortedRanges: __array_binProp_Bidi_Mirrored)"))
+  
+  private enum _Error: Swift.Error { case stringConversionFailure }
+  private func _converted<D>(with delegate: D) throws -> String where D: CodeUpdaterDelegate {
+    let updater = CodeUpdater(delegate: delegate)
+    guard let converted = String(data: updater.convertedData(), encoding: .utf8) else {
+      throw _Error.stringConversionFailure
     }
+    return converted
+  }
+  
+  func test_bidiClass() throws {
+    let expectedLine = "internal let _bidiClass = RangeDictionary<UInt32, Unicode.BidiClass>(carefullySortedRangesAndValues: __array_bidiClass)"
+    let converted = try _converted(with: DerivedBidiClass())
+    XCTAssertNotNil(converted.range(of: expectedLine))
+  }
+  
+  func test_binProp() throws {
+    let expectedLine = "internal let _binProp_Bidi_Mirrored = MultipleRanges<UInt32>(carefullySortedRanges: __array_binProp_Bidi_Mirrored)"
+    let converted = try _converted(with: DerivedBinaryProperties())
+    XCTAssertNotNil(converted.range(of: expectedLine))
+  }
 }

@@ -495,17 +495,5 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(ccc(integer:0x035E), .doubleAbove)
     XCTAssertEqual(ccc(integer:0x0345), .iotaSubscript)
   }
-  
-  static var allTests: [(String, (UnicodeSupplementTests) -> () -> ())] = [
-    ("test_UnicodeAssociativeArray", test_UnicodeAssociativeArray),
-    ("test_UnicodePredicate", test_UnicodePredicate),
-    ("test_BidiClass", test_BidiClass),
-    ("test_IDNAStatus", test_IDNAStatus),
-    ("test_JoiningGroup", test_JoiningGroup),
-    ("test_JoiningType", test_JoiningType),
-    ("test_properties", test_properties),
-    ("test_GeneralCategory", test_GeneralCategory),
-    ("test_CanonicalCombiningClass", test_CanonicalCombiningClass),
-  ]
 }
 

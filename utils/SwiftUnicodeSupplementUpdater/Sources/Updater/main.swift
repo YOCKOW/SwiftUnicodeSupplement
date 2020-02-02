@@ -9,6 +9,7 @@ import yCodeUpdater
 import UnicodeSupplementUpdater
 
 let delegates: [UnicodeCodeUpdaterDelegate] = [
+  DerivedBidiClass(),
   DerivedBinaryProperties(),
 ]
 

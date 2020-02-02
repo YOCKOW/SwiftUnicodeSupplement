@@ -7,9 +7,13 @@
 
 extension Unicode.Scalar {
   public struct LatestProperties {
-    private let _scalar: Unicode.Scalar
+    private let _value: UInt32
+    
+    @available(*, deprecated, message: "Use `_value` instead.")
+    private var _scalar: Unicode.Scalar { return Unicode.Scalar(self._value)! }
+    
     fileprivate init(_ scalar:Unicode.Scalar) {
-      self._scalar = scalar
+      self._value = scalar.value
     }
   }
   
@@ -27,14 +31,14 @@ extension Unicode.Scalar {
 
 extension Unicode.Scalar.LatestProperties {
   public var bidiClass: Unicode.BidiClass {
-    if let bidiClassString = _bidiClass_string.value(for:self._scalar) {
-      return Unicode.BidiClass(abbreviated:bidiClassString)
-    } else if let bidiClassString = _bidiClass_defaultValue_ranges_string.value(for:self._scalar) {
-      return Unicode.BidiClass(abbreviated:bidiClassString)
+    if let bidiClass = _bidiClass[self._value] {
+      return bidiClass
+    } else if let bidiClass = _bidiClass_default_ranges[self._value] {
+      return bidiClass
     } else {
-      for propertyStatus in _bidiClass_defaultValue_properties {
-        if self._scalar.latestProperties[keyPath:propertyStatus.0] == propertyStatus.1 {
-          return Unicode.BidiClass(abbreviated:propertyStatus.2)
+      for propertyStatus in _bidiClass_default_properties {
+        if self[keyPath: propertyStatus.0] == propertyStatus.1 {
+          return propertyStatus.2
         }
       }
     }
@@ -344,7 +348,7 @@ extension Unicode.Scalar.LatestProperties {
 // From "DerivedBinaryProperties.txt"
 extension Unicode.Scalar.LatestProperties {
   public var isBidiMirrored: Bool {
-    return _binProp_Bidi_Mirrored.contains(self._scalar)
+    return _binProp_Bidi_Mirrored.contains(self._value)
   }
 }
 
