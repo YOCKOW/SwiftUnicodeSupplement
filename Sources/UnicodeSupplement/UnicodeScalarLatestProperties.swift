@@ -411,8 +411,7 @@ extension Unicode.Scalar.LatestProperties {
 
 extension Unicode.Scalar.LatestProperties {
   public var generalCategory: Unicode.GeneralCategory {
-    let value = _gc_string.value(for:self._scalar) ?? "Cn"
-    return Unicode.GeneralCategory(abbreviated:value)
+    return _gc[self._value] ?? .unassigned
   }
 }
 

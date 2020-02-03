@@ -51,4 +51,10 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
       "internal let _coreProp_Changes_When_Casemapped = MultipleRanges<UInt32>(carefullySortedRanges: __array_coreProp_Changes_When_Casemapped)",
     ])
   }
+  
+  func test_gc() throws {
+    try _assert(delegate: DerivedGeneralCategory(), expectedLines: [
+      "internal let _gc = RangeDictionary<UInt32, Unicode.GeneralCategory>(carefullySortedRangesAndValues: __array_gc)",
+    ])
+  }
 }

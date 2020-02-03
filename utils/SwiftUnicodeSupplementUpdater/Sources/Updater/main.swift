@@ -13,6 +13,7 @@ let delegates: [UnicodeCodeUpdaterDelegate] = [
   DerivedBinaryProperties(),
   DerivedCombiningClass(),
   DerivedCoreProperties(),
+  DerivedGeneralCategory(),
 ]
 
 let manager = CodeUpdaterManager()
