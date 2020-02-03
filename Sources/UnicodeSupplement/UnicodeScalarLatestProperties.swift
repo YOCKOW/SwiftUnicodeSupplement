@@ -88,75 +88,75 @@ extension Unicode.Scalar.LatestProperties {
 // Core Properties
 extension Unicode.Scalar.LatestProperties {
   public var isMath: Bool {
-    return _coreProp_Math.contains(self._scalar)
+    return _coreProp_Math.contains(self._value)
   }
   
   public var isAlphabetic: Bool {
-    return _coreProp_Alphabetic.contains(self._scalar)
+    return _coreProp_Alphabetic.contains(self._value)
   }
   
   public var isLowercase: Bool {
-    return _coreProp_Lowercase.contains(self._scalar)
+    return _coreProp_Lowercase.contains(self._value)
   }
   
   public var isUppercase: Bool {
-    return _coreProp_Uppercase.contains(self._scalar)
+    return _coreProp_Uppercase.contains(self._value)
   }
   
   public var isCased: Bool {
-    return _coreProp_Cased.contains(self._scalar)
+    return _coreProp_Cased.contains(self._value)
   }
   
   public var isCaseIgnorable: Bool {
-    return _coreProp_Case_Ignorable.contains(self._scalar)
+    return _coreProp_Case_Ignorable.contains(self._value)
   }
   
   public var changesWhenLowercased: Bool {
-    return _coreProp_Changes_When_Lowercased.contains(self._scalar)
+    return _coreProp_Changes_When_Lowercased.contains(self._value)
   }
   
   public var changesWhenUppercased: Bool {
-    return _coreProp_Changes_When_Uppercased.contains(self._scalar)
+    return _coreProp_Changes_When_Uppercased.contains(self._value)
   }
   
   public var changesWhenTitlecased: Bool {
-    return _coreProp_Changes_When_Titlecased.contains(self._scalar)
+    return _coreProp_Changes_When_Titlecased.contains(self._value)
   }
   
   public var changesWhenCaseFolded: Bool {
-    return _coreProp_Changes_When_Casefolded.contains(self._scalar)
+    return _coreProp_Changes_When_Casefolded.contains(self._value)
   }
   
   public var changesWhenCaseMapped: Bool {
-    return _coreProp_Changes_When_Casemapped.contains(self._scalar)
+    return _coreProp_Changes_When_Casemapped.contains(self._value)
   }
   
   public var isIDStart: Bool {
-    return _coreProp_ID_Start.contains(self._scalar)
+    return _coreProp_ID_Start.contains(self._value)
   }
   
   public var isIDContinue: Bool {
-    return _coreProp_ID_Continue.contains(self._scalar)
+    return _coreProp_ID_Continue.contains(self._value)
   }
   
   public var isXIDContinue: Bool {
-    return _coreProp_XID_Continue.contains(self._scalar)
+    return _coreProp_XID_Continue.contains(self._value)
   }
   
   public var isXIDStart: Bool {
-    return _coreProp_XID_Start.contains(self._scalar)
+    return _coreProp_XID_Start.contains(self._value)
   }
   
   public var isDefaultIgnorableCodePoint: Bool {
-    return _coreProp_Default_Ignorable_Code_Point.contains(self._scalar)
+    return _coreProp_Default_Ignorable_Code_Point.contains(self._value)
   }
   
   public var isGraphemeExtend: Bool {
-    return _coreProp_Grapheme_Extend.contains(self._scalar)
+    return _coreProp_Grapheme_Extend.contains(self._value)
   }
   
   public var isGraphemeBase: Bool {
-    return _coreProp_Grapheme_Base.contains(self._scalar)
+    return _coreProp_Grapheme_Base.contains(self._value)
   }
 }
 

@@ -9,6 +9,7 @@ extension UnicodeSupplementUpdaterTests {
         ("test_bidiClass", test_bidiClass),
         ("test_binProp", test_binProp),
         ("test_ccc", test_ccc),
+        ("test_coreProp", test_coreProp),
     ]
 }
 
