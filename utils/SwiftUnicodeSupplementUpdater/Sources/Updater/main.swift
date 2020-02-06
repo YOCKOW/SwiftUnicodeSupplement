@@ -8,15 +8,14 @@ main.swift
 import yCodeUpdater
 import UnicodeSupplementUpdater
 
-let delegates: [UnicodeCodeUpdaterDelegate] = [
-  DerivedBidiClass(),
-  DerivedBinaryProperties(),
-  DerivedCombiningClass(),
-  DerivedCoreProperties(),
-  DerivedGeneralCategory(),
-]
-
 let manager = CodeUpdaterManager()
-manager.updaters = delegates.map { CodeUpdater(delegate: $0) }
+manager.updaters = [
+  .init(delegate: DerivedBidiClass()),
+  .init(delegate: DerivedBinaryProperties()),
+  .init(delegate: DerivedCombiningClass()),
+  .init(delegate: DerivedCoreProperties()),
+  .init(delegate: DerivedGeneralCategory()),
+  .init(delegate: PropertyValueAliases()),
+]
 
 manager.run()

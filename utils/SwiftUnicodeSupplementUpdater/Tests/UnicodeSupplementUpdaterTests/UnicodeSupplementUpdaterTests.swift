@@ -57,4 +57,13 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
       "internal let _gc = RangeDictionary<UInt32, Unicode.GeneralCategory>(carefullySortedRangesAndValues: __array_gc)",
     ])
   }
+  
+  func test_propertyValueAliases() throws {
+    try _assert(delegate: PropertyValueAliases(), expectedLines: [
+      "case \"L\": self = .leftToRight",
+      "public static let hamzaOnHehGoal: JoiningGroup = .tehMarbutaGoal",
+      "case \"Qaai\": self = .inherited",
+      "case \"Zinh\": self = .inherited",
+    ])
+  }
 }

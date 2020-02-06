@@ -35,6 +35,10 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     return _dataDirectory.appendingPathComponent(self.subdirectory, isDirectory: true).appendingPathComponent(self.identifier).appendingPathExtension("swift")
   }
   
+  open func prepare(sourceURL: URL) throws -> IntermediateDataContainer<UnicodeData> {
+    return .init(content: try IntermediateDataType(url: sourceURL))
+  }
+  
   open func convert<S>(_ intermidiates: S) throws -> String where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     _mustBeOverridden()
   }
