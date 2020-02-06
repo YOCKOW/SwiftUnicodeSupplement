@@ -64,6 +64,12 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
     ])
   }
   
+  func test_jt() throws {
+    try _assert(delegate: DerivedJoiningType(), expectedLines: [
+      "internal let _jt = RangeDictionary<UInt32, Unicode.JoiningType>(carefullySortedRangesAndValues: __array_jt)",
+    ])
+  }
+  
   func test_propertyValueAliases() throws {
     try _assert(delegate: PropertyValueAliases(), expectedLines: [
       "case \"L\": self = .leftToRight",
