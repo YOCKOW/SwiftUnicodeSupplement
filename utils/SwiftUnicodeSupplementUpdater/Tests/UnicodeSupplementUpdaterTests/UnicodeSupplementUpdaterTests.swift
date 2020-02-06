@@ -70,6 +70,12 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
     ])
   }
   
+  func test_normProp() throws {
+    try _assert(delegate: DerivedNormalizationProps(), expectedLines: [
+      "return MultipleRanges<UInt32>(carefullySortedRanges: array)"
+    ])
+  }
+  
   func test_propertyValueAliases() throws {
     try _assert(delegate: PropertyValueAliases(), expectedLines: [
       "case \"L\": self = .leftToRight",
