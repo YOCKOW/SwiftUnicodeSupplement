@@ -152,10 +152,33 @@ open class PropertyValueAliases: UCDCodeUpdaterDelegate {
       return cases.joined(separator: "\n    ")
     }
     
+    func _names() -> String {
+      var names: [String] = []
+      for column in columns {
+        let preferred = column[_relativeIndex: 0]
+        let alias = column[_relativeIndex: 1]
+        if preferred == alias {
+          names.append("case \"\(preferred)\": self = .\(preferred.lowerCamelCase)")
+        } else {
+          names.append("case \"\(preferred)\", \"\(alias)\": self = .\(preferred.lowerCamelCase)")
+        }
+      }
+      return names.joined(separator: "\n    ")
+    }
+    
     return """
     extension Unicode {
       public enum JoiningGroup {
         \(_cases())
+      }
+    }
+    extension Unicode.JoiningGroup {
+      /// Initialize with a name.
+      public init?<S>(_ name: S) where S: StringProtocol {
+        switch name {
+        \(_names())
+        default: return nil
+        }
       }
     }
     

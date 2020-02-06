@@ -521,6 +521,116 @@ extension Unicode {
     case zhain
   }
 }
+extension Unicode.JoiningGroup {
+  /// Initialize with a name.
+  public init?<S>(_ name: S) where S: StringProtocol {
+    switch name {
+    case "African_Feh": self = .africanFeh
+    case "African_Noon": self = .africanNoon
+    case "African_Qaf": self = .africanQaf
+    case "Ain": self = .ain
+    case "Alaph": self = .alaph
+    case "Alef": self = .alef
+    case "Beh": self = .beh
+    case "Beth": self = .beth
+    case "Burushaski_Yeh_Barree": self = .burushaskiYehBarree
+    case "Dal": self = .dal
+    case "Dalath_Rish": self = .dalathRish
+    case "E": self = .e
+    case "Farsi_Yeh": self = .farsiYeh
+    case "Fe": self = .fe
+    case "Feh": self = .feh
+    case "Final_Semkath": self = .finalSemkath
+    case "Gaf": self = .gaf
+    case "Gamal": self = .gamal
+    case "Hah": self = .hah
+    case "Hanifi_Rohingya_Kinna_Ya": self = .hanifiRohingyaKinnaYa
+    case "Hanifi_Rohingya_Pa": self = .hanifiRohingyaPa
+    case "He": self = .he
+    case "Heh": self = .heh
+    case "Heh_Goal": self = .hehGoal
+    case "Heth": self = .heth
+    case "Kaf": self = .kaf
+    case "Kaph": self = .kaph
+    case "Khaph": self = .khaph
+    case "Knotted_Heh": self = .knottedHeh
+    case "Lam": self = .lam
+    case "Lamadh": self = .lamadh
+    case "Malayalam_Bha": self = .malayalamBha
+    case "Malayalam_Ja": self = .malayalamJa
+    case "Malayalam_Lla": self = .malayalamLla
+    case "Malayalam_Llla": self = .malayalamLlla
+    case "Malayalam_Nga": self = .malayalamNga
+    case "Malayalam_Nna": self = .malayalamNna
+    case "Malayalam_Nnna": self = .malayalamNnna
+    case "Malayalam_Nya": self = .malayalamNya
+    case "Malayalam_Ra": self = .malayalamRa
+    case "Malayalam_Ssa": self = .malayalamSsa
+    case "Malayalam_Tta": self = .malayalamTta
+    case "Manichaean_Aleph": self = .manichaeanAleph
+    case "Manichaean_Ayin": self = .manichaeanAyin
+    case "Manichaean_Beth": self = .manichaeanBeth
+    case "Manichaean_Daleth": self = .manichaeanDaleth
+    case "Manichaean_Dhamedh": self = .manichaeanDhamedh
+    case "Manichaean_Five": self = .manichaeanFive
+    case "Manichaean_Gimel": self = .manichaeanGimel
+    case "Manichaean_Heth": self = .manichaeanHeth
+    case "Manichaean_Hundred": self = .manichaeanHundred
+    case "Manichaean_Kaph": self = .manichaeanKaph
+    case "Manichaean_Lamedh": self = .manichaeanLamedh
+    case "Manichaean_Mem": self = .manichaeanMem
+    case "Manichaean_Nun": self = .manichaeanNun
+    case "Manichaean_One": self = .manichaeanOne
+    case "Manichaean_Pe": self = .manichaeanPe
+    case "Manichaean_Qoph": self = .manichaeanQoph
+    case "Manichaean_Resh": self = .manichaeanResh
+    case "Manichaean_Sadhe": self = .manichaeanSadhe
+    case "Manichaean_Samekh": self = .manichaeanSamekh
+    case "Manichaean_Taw": self = .manichaeanTaw
+    case "Manichaean_Ten": self = .manichaeanTen
+    case "Manichaean_Teth": self = .manichaeanTeth
+    case "Manichaean_Thamedh": self = .manichaeanThamedh
+    case "Manichaean_Twenty": self = .manichaeanTwenty
+    case "Manichaean_Waw": self = .manichaeanWaw
+    case "Manichaean_Yodh": self = .manichaeanYodh
+    case "Manichaean_Zayin": self = .manichaeanZayin
+    case "Meem": self = .meem
+    case "Mim": self = .mim
+    case "No_Joining_Group": self = .noJoiningGroup
+    case "Noon": self = .noon
+    case "Nun": self = .nun
+    case "Nya": self = .nya
+    case "Pe": self = .pe
+    case "Qaf": self = .qaf
+    case "Qaph": self = .qaph
+    case "Reh": self = .reh
+    case "Reversed_Pe": self = .reversedPe
+    case "Rohingya_Yeh": self = .rohingyaYeh
+    case "Sad": self = .sad
+    case "Sadhe": self = .sadhe
+    case "Seen": self = .seen
+    case "Semkath": self = .semkath
+    case "Shin": self = .shin
+    case "Straight_Waw": self = .straightWaw
+    case "Swash_Kaf": self = .swashKaf
+    case "Syriac_Waw": self = .syriacWaw
+    case "Tah": self = .tah
+    case "Taw": self = .taw
+    case "Teh_Marbuta": self = .tehMarbuta
+    case "Teh_Marbuta_Goal", "Hamza_On_Heh_Goal": self = .tehMarbutaGoal
+    case "Teth": self = .teth
+    case "Waw": self = .waw
+    case "Yeh": self = .yeh
+    case "Yeh_Barree": self = .yehBarree
+    case "Yeh_With_Tail": self = .yehWithTail
+    case "Yudh": self = .yudh
+    case "Yudh_He": self = .yudhHe
+    case "Zain": self = .zain
+    case "Zhain": self = .zhain
+    default: return nil
+    }
+  }
+}
 
 /* ********************************************************************************************** */
 // Property: Join_C
