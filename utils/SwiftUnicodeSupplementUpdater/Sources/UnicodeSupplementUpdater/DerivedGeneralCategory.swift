@@ -18,7 +18,7 @@ open class DerivedGeneralCategory: UCDPropertiesCodeUpdaterDelegate<Unicode.Gene
   }
   
   open override func reduce(columns: [String]) throws -> Unicode.GeneralCategory {
-     return .init(abbreviated: columns.first!)
+     return Unicode.GeneralCategory(abbreviated: columns.first!)!
    }
    
    open override func describe(value: Unicode.GeneralCategory) -> String {

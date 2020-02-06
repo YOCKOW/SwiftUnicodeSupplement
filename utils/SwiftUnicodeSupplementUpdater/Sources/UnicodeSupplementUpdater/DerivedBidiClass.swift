@@ -48,7 +48,7 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
   }
   
   open override func reduce(columns: [String]) throws -> Unicode.BidiClass {
-    return .init(abbreviated: columns.first!)
+    return Unicode.BidiClass(abbreviated: columns.first!)!
   }
   
   open override func describe(value: Unicode.BidiClass) -> String {
@@ -114,7 +114,7 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
       switch defaultValue {
       case .ranges(let ranges):
         for range in ranges {
-          defaultValueRanges.insert(Unicode.BidiClass(abbreviated: key), forRange: AnyRange(range))
+          defaultValueRanges.insert(Unicode.BidiClass(abbreviated: key)!, forRange: AnyRange(range))
         }
       case .properties(let properties):
         defaultValueProperties[key] = properties
@@ -142,7 +142,7 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
       func _pairID(for nx: Int) -> String { return "__pair_\(self.prefix)_default_properties_\(nx._base36)" }
       var nn = 0
       for (bidiClassString, properties) in defaultValueProperties {
-        let bidiClass = Unicode.BidiClass(abbreviated: bidiClassString)
+        let bidiClass = Unicode.BidiClass(abbreviated: bidiClassString)!
         for property in properties {
           defer { nn += 1 }
           

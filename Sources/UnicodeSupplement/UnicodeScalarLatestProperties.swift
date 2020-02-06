@@ -66,7 +66,7 @@ private func _unimplemented(_ functionName:String = #function,
 extension Unicode.Scalar.LatestProperties {
   /// Joining_Group for the scalar.
   public var joiningGroup: Unicode.JoiningGroup {
-    guard let jg = _jg_unicodeJoiningGroup.value(for:self._scalar) else { return .noJoiningGroup }
+    guard let jg = _jg[self._value] else { return .noJoiningGroup }
     return jg
   }
   

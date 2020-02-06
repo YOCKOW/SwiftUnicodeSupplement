@@ -23,7 +23,7 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
   private func _assert<D>(delegate: D, expectedLines: [String], file: StaticString = #file, line: UInt = #line) throws where D: CodeUpdaterDelegate {
     let converted = try _converted(with: delegate)
     for expected in expectedLines {
-      XCTAssertNotNil(converted.range(of: expected), "Expected line not found: \(expected)")
+      XCTAssertNotNil(converted.range(of: expected), "Expected line not found: \(expected)", file: file, line: line)
     }
   }
   
@@ -55,6 +55,12 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
   func test_gc() throws {
     try _assert(delegate: DerivedGeneralCategory(), expectedLines: [
       "internal let _gc = RangeDictionary<UInt32, Unicode.GeneralCategory>(carefullySortedRangesAndValues: __array_gc)",
+    ])
+  }
+  
+  func test_jg() throws {
+    try _assert(delegate: DerivedJoiningGroup(), expectedLines: [
+      "internal let _jg = RangeDictionary<UInt32, Unicode.JoiningGroup>(carefullySortedRangesAndValues: __array_jg)",
     ])
   }
   

@@ -15,6 +15,7 @@ manager.updaters = [
   .init(delegate: DerivedCombiningClass()),
   .init(delegate: DerivedCoreProperties()),
   .init(delegate: DerivedGeneralCategory()),
+  .init(delegate: DerivedJoiningGroup()),
   .init(delegate: PropertyValueAliases()),
 ]
 
