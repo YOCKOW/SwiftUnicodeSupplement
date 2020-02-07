@@ -1,7 +1,8 @@
 # What is `SwiftUnicodeSupplement`?
 
 `SwiftUnicodeSupplement` adds some additional functions to `Unicode(.Scalar)`.
-It may be useful for some people who can't wait for [SE-0211](https://github.com/apple/swift-evolution/blob/master/proposals/0211-unicode-scalar-properties.md) to be implemented, although this library has many limitations.
+Although [SE-0211](https://github.com/apple/swift-evolution/blob/master/proposals/0211-unicode-scalar-properties.md) is already implemented in Swift 5.0,
+some features (such as `IDNAStatus`) implemented in this library may be useful. 
 
 # Requirements
 
@@ -49,7 +50,7 @@ print(a.latestProperties.isASCIIHexDigit)
 
 # Update
 
-You can run `utils/update` to update properties. 
+You can run `./utils/update` to update properties. 
 
 
 
