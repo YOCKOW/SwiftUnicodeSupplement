@@ -18,11 +18,6 @@ extension Unicode.Scalar {
   public var latestProperties: LatestProperties {
     return LatestProperties(self)
   }
-  
-  #if compiler(<5.0)
-  public typealias Properties = LatestProperties
-  public var properties: Properties { return self.latestProperties }
-  #endif
 }
 
 extension Unicode.Scalar.LatestProperties {

@@ -14,8 +14,6 @@ extension UnicodeSupplementTests {
         ("test_JoiningType", test_JoiningType),
         ("test_properties", test_properties),
         ("test_script", test_script),
-        ("test_UnicodeAssociativeArray", test_UnicodeAssociativeArray),
-        ("test_UnicodePredicate", test_UnicodePredicate),
     ]
 }
 
