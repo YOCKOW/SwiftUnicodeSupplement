@@ -8,10 +8,6 @@
 extension Unicode.Scalar {
   public struct LatestProperties {
     private let _value: UInt32
-    
-    @available(*, deprecated, message: "Use `_value` instead.")
-    private var _scalar: Unicode.Scalar { return Unicode.Scalar(self._value)! }
-    
     fileprivate init(_ scalar:Unicode.Scalar) {
       self._value = scalar.value
     }
@@ -97,7 +93,7 @@ extension Unicode.Scalar.LatestProperties {
 extension Unicode.Scalar.LatestProperties {
   /// Script for the scalar.
   public var script: Unicode.Script {
-    guard let sc = _sc_unicodeScript.value(for:self._scalar) else { return .unknown }
+    guard let sc = _sc[self._value] else { return .unknown }
     return sc
   }
 }

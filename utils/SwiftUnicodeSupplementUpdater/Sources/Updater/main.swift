@@ -22,6 +22,7 @@ manager.updaters = [
   .init(delegate: IDNAMappingTable()),
   .init(delegate: PropertyValueAliases()),
   .init(delegate: PropList()),
+  .init(delegate: Scripts()),
 ]
 
 manager.run()

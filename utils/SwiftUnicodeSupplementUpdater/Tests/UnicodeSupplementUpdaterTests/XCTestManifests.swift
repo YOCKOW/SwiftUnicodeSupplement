@@ -18,6 +18,7 @@ extension UnicodeSupplementUpdaterTests {
         ("test_normProp", test_normProp),
         ("test_prop", test_prop),
         ("test_propertyValueAliases", test_propertyValueAliases),
+        ("test_scripts", test_scripts),
     ]
 }
 

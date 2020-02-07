@@ -102,4 +102,10 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
       "internal let _prop_White_Space = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_White_Space)",
     ])
   }
+  
+  func test_scripts() throws {
+    try _assert(delegate: Scripts(), expectedLines: [
+      "internal let _sc = RangeDictionary<UInt32, Unicode.Script>(carefullySortedRangesAndValues: __array_sc)",
+    ])
+  }
 }
