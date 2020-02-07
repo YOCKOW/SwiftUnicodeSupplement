@@ -229,6 +229,10 @@ open class PropertyValueAliases: UCDCodeUpdaterDelegate {
       return columns.map({ "case " + $0[_relativeIndex: 1].lowerCamelCase }).joined(separator: "\n    ")
     }
     
+    func _longNames() -> String {
+      columns.map({ "case \"\($0[_relativeIndex: 1])\": self = .\($0[_relativeIndex: 1].lowerCamelCase)" }).joined(separator: "\n    ")
+    }
+    
     func _shortNames() throws -> String {
       var lines: [String] = []
       for column in columns {
@@ -252,6 +256,14 @@ open class PropertyValueAliases: UCDCodeUpdaterDelegate {
       }
     }
     extension Unicode.Script {
+      /// Initialize with a long name.
+      public init?<S>(_ name: S) where S: StringProtocol {
+        switch name {
+        \(_longNames())
+        default: return nil
+        }
+      }
+    
       /// Initialize with a short name.
       public init?<S>(abbreviated name: S) where S: StringProtocol {
         switch name {

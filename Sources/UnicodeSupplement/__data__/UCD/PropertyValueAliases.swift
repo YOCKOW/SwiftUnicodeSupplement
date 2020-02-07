@@ -8,48 +8,52 @@
 // ETag: "774049-11d94-583d43e1dd080"
 
 /*
-UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
-
-See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
-Data Files and Software.
-NOTICE TO USER: Carefully read the following legal agreement.
-BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
-DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
-YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
-TERMS AND CONDITIONS OF THIS AGREEMENT.
-IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
-THE DATA FILES OR SOFTWARE.
-COPYRIGHT AND PERMISSION NOTICE
-Copyright © 1991-2019 Unicode, Inc. All rights reserved.
-Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of the Unicode data files and any associated documentation
-(the "Data Files") or Unicode software and any associated documentation
-(the "Software") to deal in the Data Files or Software
-without restriction, including without limitation the rights to use,
-copy, modify, merge, publish, distribute, and/or sell copies of
-the Data Files or Software, and to permit persons to whom the Data Files
-or Software are furnished to do so, provided that either
-(a) this copyright and permission notice appear with all copies
-of the Data Files or Software, or
-(b) this copyright and permission notice appear in associated
-Documentation.
-THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
-ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT OF THIRD PARTY RIGHTS.
-IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
-NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
-DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
-DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
-TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THE DATA FILES OR SOFTWARE.
-Except as contained in this notice, the name of a copyright holder
-shall not be used in advertising or otherwise to promote the sale,
-use or other dealings in these Data Files or Software without prior
-written authorization of the copyright holder.
-
+  UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
+  See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
+  Data Files and Software.
+  NOTICE TO USER: Carefully read the following legal agreement.
+  BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
+  DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
+  YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+  TERMS AND CONDITIONS OF THIS AGREEMENT.
+  IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
+  THE DATA FILES OR SOFTWARE.
+  COPYRIGHT AND PERMISSION NOTICE
+  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
+  Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+  Permission is hereby granted, free of charge, to any person obtaining
+  a copy of the Unicode data files and any associated documentation
+  (the "Data Files") or Unicode software and any associated documentation
+  (the "Software") to deal in the Data Files or Software
+  without restriction, including without limitation the rights to use,
+  copy, modify, merge, publish, distribute, and/or sell copies of
+  the Data Files or Software, and to permit persons to whom the Data Files
+  or Software are furnished to do so, provided that either
+  (a) this copyright and permission notice appear with all copies
+  of the Data Files or Software, or
+  (b) this copyright and permission notice appear in associated
+  Documentation.
+  THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
+  ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
+  NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
+  DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+  DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+  Except as contained in this notice, the name of a copyright holder
+  shall not be used in advertising or otherwise to promote the sale,
+  use or other dealings in these Data Files or Software without prior
+  written authorization of the copyright holder.
 */
+
+// Required Modules
+
+
+// Type Aliases
+
 
 /* ********************************************************************************************** */
 // Property: age
@@ -934,6 +938,167 @@ extension Unicode {
   }
 }
 extension Unicode.Script {
+  /// Initialize with a long name.
+  public init?<S>(_ name: S) where S: StringProtocol {
+    switch name {
+    case "Adlam": self = .adlam
+    case "Caucasian_Albanian": self = .caucasianAlbanian
+    case "Ahom": self = .ahom
+    case "Arabic": self = .arabic
+    case "Imperial_Aramaic": self = .imperialAramaic
+    case "Armenian": self = .armenian
+    case "Avestan": self = .avestan
+    case "Balinese": self = .balinese
+    case "Bamum": self = .bamum
+    case "Bassa_Vah": self = .bassaVah
+    case "Batak": self = .batak
+    case "Bengali": self = .bengali
+    case "Bhaiksuki": self = .bhaiksuki
+    case "Bopomofo": self = .bopomofo
+    case "Brahmi": self = .brahmi
+    case "Braille": self = .braille
+    case "Buginese": self = .buginese
+    case "Buhid": self = .buhid
+    case "Chakma": self = .chakma
+    case "Canadian_Aboriginal": self = .canadianAboriginal
+    case "Carian": self = .carian
+    case "Cham": self = .cham
+    case "Cherokee": self = .cherokee
+    case "Coptic": self = .coptic
+    case "Cypriot": self = .cypriot
+    case "Cyrillic": self = .cyrillic
+    case "Devanagari": self = .devanagari
+    case "Dogra": self = .dogra
+    case "Deseret": self = .deseret
+    case "Duployan": self = .duployan
+    case "Egyptian_Hieroglyphs": self = .egyptianHieroglyphs
+    case "Elbasan": self = .elbasan
+    case "Elymaic": self = .elymaic
+    case "Ethiopic": self = .ethiopic
+    case "Georgian": self = .georgian
+    case "Glagolitic": self = .glagolitic
+    case "Gunjala_Gondi": self = .gunjalaGondi
+    case "Masaram_Gondi": self = .masaramGondi
+    case "Gothic": self = .gothic
+    case "Grantha": self = .grantha
+    case "Greek": self = .greek
+    case "Gujarati": self = .gujarati
+    case "Gurmukhi": self = .gurmukhi
+    case "Hangul": self = .hangul
+    case "Han": self = .han
+    case "Hanunoo": self = .hanunoo
+    case "Hatran": self = .hatran
+    case "Hebrew": self = .hebrew
+    case "Hiragana": self = .hiragana
+    case "Anatolian_Hieroglyphs": self = .anatolianHieroglyphs
+    case "Pahawh_Hmong": self = .pahawhHmong
+    case "Nyiakeng_Puachue_Hmong": self = .nyiakengPuachueHmong
+    case "Katakana_Or_Hiragana": self = .katakanaOrHiragana
+    case "Old_Hungarian": self = .oldHungarian
+    case "Old_Italic": self = .oldItalic
+    case "Javanese": self = .javanese
+    case "Kayah_Li": self = .kayahLi
+    case "Katakana": self = .katakana
+    case "Kharoshthi": self = .kharoshthi
+    case "Khmer": self = .khmer
+    case "Khojki": self = .khojki
+    case "Kannada": self = .kannada
+    case "Kaithi": self = .kaithi
+    case "Tai_Tham": self = .taiTham
+    case "Lao": self = .lao
+    case "Latin": self = .latin
+    case "Lepcha": self = .lepcha
+    case "Limbu": self = .limbu
+    case "Linear_A": self = .linearA
+    case "Linear_B": self = .linearB
+    case "Lisu": self = .lisu
+    case "Lycian": self = .lycian
+    case "Lydian": self = .lydian
+    case "Mahajani": self = .mahajani
+    case "Makasar": self = .makasar
+    case "Mandaic": self = .mandaic
+    case "Manichaean": self = .manichaean
+    case "Marchen": self = .marchen
+    case "Medefaidrin": self = .medefaidrin
+    case "Mende_Kikakui": self = .mendeKikakui
+    case "Meroitic_Cursive": self = .meroiticCursive
+    case "Meroitic_Hieroglyphs": self = .meroiticHieroglyphs
+    case "Malayalam": self = .malayalam
+    case "Modi": self = .modi
+    case "Mongolian": self = .mongolian
+    case "Mro": self = .mro
+    case "Meetei_Mayek": self = .meeteiMayek
+    case "Multani": self = .multani
+    case "Myanmar": self = .myanmar
+    case "Nandinagari": self = .nandinagari
+    case "Old_North_Arabian": self = .oldNorthArabian
+    case "Nabataean": self = .nabataean
+    case "Newa": self = .newa
+    case "Nko": self = .nko
+    case "Nushu": self = .nushu
+    case "Ogham": self = .ogham
+    case "Ol_Chiki": self = .olChiki
+    case "Old_Turkic": self = .oldTurkic
+    case "Oriya": self = .oriya
+    case "Osage": self = .osage
+    case "Osmanya": self = .osmanya
+    case "Palmyrene": self = .palmyrene
+    case "Pau_Cin_Hau": self = .pauCinHau
+    case "Old_Permic": self = .oldPermic
+    case "Phags_Pa": self = .phagsPa
+    case "Inscriptional_Pahlavi": self = .inscriptionalPahlavi
+    case "Psalter_Pahlavi": self = .psalterPahlavi
+    case "Phoenician": self = .phoenician
+    case "Miao": self = .miao
+    case "Inscriptional_Parthian": self = .inscriptionalParthian
+    case "Rejang": self = .rejang
+    case "Hanifi_Rohingya": self = .hanifiRohingya
+    case "Runic": self = .runic
+    case "Samaritan": self = .samaritan
+    case "Old_South_Arabian": self = .oldSouthArabian
+    case "Saurashtra": self = .saurashtra
+    case "SignWriting": self = .signWriting
+    case "Shavian": self = .shavian
+    case "Sharada": self = .sharada
+    case "Siddham": self = .siddham
+    case "Khudawadi": self = .khudawadi
+    case "Sinhala": self = .sinhala
+    case "Sogdian": self = .sogdian
+    case "Old_Sogdian": self = .oldSogdian
+    case "Sora_Sompeng": self = .soraSompeng
+    case "Soyombo": self = .soyombo
+    case "Sundanese": self = .sundanese
+    case "Syloti_Nagri": self = .sylotiNagri
+    case "Syriac": self = .syriac
+    case "Tagbanwa": self = .tagbanwa
+    case "Takri": self = .takri
+    case "Tai_Le": self = .taiLe
+    case "New_Tai_Lue": self = .newTaiLue
+    case "Tamil": self = .tamil
+    case "Tangut": self = .tangut
+    case "Tai_Viet": self = .taiViet
+    case "Telugu": self = .telugu
+    case "Tifinagh": self = .tifinagh
+    case "Tagalog": self = .tagalog
+    case "Thaana": self = .thaana
+    case "Thai": self = .thai
+    case "Tibetan": self = .tibetan
+    case "Tirhuta": self = .tirhuta
+    case "Ugaritic": self = .ugaritic
+    case "Vai": self = .vai
+    case "Warang_Citi": self = .warangCiti
+    case "Wancho": self = .wancho
+    case "Old_Persian": self = .oldPersian
+    case "Cuneiform": self = .cuneiform
+    case "Yi": self = .yi
+    case "Zanabazar_Square": self = .zanabazarSquare
+    case "Inherited": self = .inherited
+    case "Common": self = .common
+    case "Unknown": self = .unknown
+    default: return nil
+    }
+  }
+
   /// Initialize with a short name.
   public init?<S>(abbreviated name: S) where S: StringProtocol {
     switch name {
