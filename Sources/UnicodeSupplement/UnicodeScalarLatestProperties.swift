@@ -180,19 +180,19 @@ extension Unicode.Scalar.LatestProperties {
 // Properties (Listed in PropList.txt)
 extension Unicode.Scalar.LatestProperties {
   public var isWhitespace: Bool {
-    return _prop_White_Space.contains(self._scalar)
+    return _prop_White_Space.contains(self._value)
   }
   
   public var isBidiControl: Bool {
-    return _prop_Bidi_Control.contains(self._scalar)
+    return _prop_Bidi_Control.contains(self._value)
   }
   
   public var isJoinControl: Bool {
-    return _prop_Join_Control.contains(self._scalar)
+    return _prop_Join_Control.contains(self._value)
   }
   
   public var isDash: Bool {
-    return _prop_Dash.contains(self._scalar)
+    return _prop_Dash.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar is a hyphen or not.
@@ -202,15 +202,15 @@ extension Unicode.Scalar.LatestProperties {
   ///       See [Deprecated Properties in UAX#44](https://www.unicode.org/reports/tr44/#Deprecated_Properties)
   @available(*, deprecated, message: "This property was already deprecated as of Unicode 6.0.0")
   public var isHyphen: Bool {
-    return _prop_Hyphen.contains(self._scalar)
+    return _prop_Hyphen.contains(self._value)
   }
   
   public var isQuotationMark: Bool {
-    return _prop_Quotation_Mark.contains(self._scalar)
+    return _prop_Quotation_Mark.contains(self._value)
   }
   
   public var isTerminalPunctuation: Bool {
-    return _prop_Terminal_Punctuation.contains(self._scalar)
+    return _prop_Terminal_Punctuation.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar is one that naturally
@@ -218,15 +218,15 @@ extension Unicode.Scalar.LatestProperties {
   /// property.
   /// This property is used in deriving the Math property.
   public var isOtherMath: Bool {
-    return _prop_Other_Math.contains(self._scalar)
+    return _prop_Other_Math.contains(self._value)
   }
   
   public var isHexDigit: Bool {
-    return _prop_Hex_Digit.contains(self._scalar)
+    return _prop_Hex_Digit.contains(self._value)
   }
   
   public var isASCIIHexDigit: Bool {
-    return _prop_ASCII_Hex_Digit.contains(self._scalar)
+    return _prop_ASCII_Hex_Digit.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar has `Other_Alphabetic`
@@ -234,19 +234,19 @@ extension Unicode.Scalar.LatestProperties {
   ///
   /// The property is used in deriving the Alphabetic property.
   public var isOtherAlphabetic: Bool {
-    return _prop_Other_Alphabetic.contains(self._scalar)
+    return _prop_Other_Alphabetic.contains(self._value)
   }
   
   public var isIdeographic: Bool {
-    return _prop_Ideographic.contains(self._scalar)
+    return _prop_Ideographic.contains(self._value)
   }
   
   public var isDiacritic: Bool {
-    return _prop_Diacritic.contains(self._scalar)
+    return _prop_Diacritic.contains(self._value)
   }
   
   public var isExtender: Bool {
-    return _prop_Extender.contains(self._scalar)
+    return _prop_Extender.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar has `Other_Lowercase`
@@ -254,7 +254,7 @@ extension Unicode.Scalar.LatestProperties {
   ///
   /// The property is used in deriving the `Lowercase` property.
   public var isOtherLowercase: Bool {
-    return _prop_Other_Lowercase.contains(self._scalar)
+    return _prop_Other_Lowercase.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar has `Other_Uppercase`
@@ -262,11 +262,11 @@ extension Unicode.Scalar.LatestProperties {
   ///
   /// The property is used in deriving the `Uppercase` property.
   public var isOtherUppercase: Bool {
-    return _prop_Other_Uppercase.contains(self._scalar)
+    return _prop_Other_Uppercase.contains(self._value)
   }
   
   public var isNoncharacterCodePoint: Bool {
-    return _prop_Noncharacter_Code_Point.contains(self._scalar)
+    return _prop_Noncharacter_Code_Point.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar has `Other_Graphme_Extend`
@@ -274,23 +274,23 @@ extension Unicode.Scalar.LatestProperties {
   ///
   /// The property is used in deriving the `Grapheme_Extend` property.
   public var isOtherGraphemeExtend: Bool {
-    return _prop_Other_Grapheme_Extend.contains(self._scalar)
+    return _prop_Other_Grapheme_Extend.contains(self._value)
   }
   
   public var isIDSBinaryOperator: Bool {
-    return _prop_IDS_Binary_Operator.contains(self._scalar)
+    return _prop_IDS_Binary_Operator.contains(self._value)
   }
   
   public var isIDSTrinaryOperator: Bool {
-    return _prop_IDS_Trinary_Operator.contains(self._scalar)
+    return _prop_IDS_Trinary_Operator.contains(self._value)
   }
   
   public var isRadical: Bool {
-    return _prop_Radical.contains(self._scalar)
+    return _prop_Radical.contains(self._value)
   }
   
   public var isUnifiedIdeograph: Bool {
-    return _prop_Unified_Ideograph.contains(self._scalar)
+    return _prop_Unified_Ideograph.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar has `Other_Default_Ignorable_Code_Point`
@@ -298,19 +298,19 @@ extension Unicode.Scalar.LatestProperties {
   ///
   /// The property is used in deriving the `Default_Ignorable_Code_Point` property.
   public var isOtherDefaultIgnorableCodePoint: Bool {
-    return _prop_Other_Default_Ignorable_Code_Point.contains(self._scalar)
+    return _prop_Other_Default_Ignorable_Code_Point.contains(self._value)
   }
   
   public var isDeprecated: Bool {
-    return _prop_Deprecated.contains(self._scalar)
+    return _prop_Deprecated.contains(self._value)
   }
   
   public var isSoftDotted: Bool {
-    return _prop_Soft_Dotted.contains(self._scalar)
+    return _prop_Soft_Dotted.contains(self._value)
   }
   
   public var isLogicalOrderException: Bool {
-    return _prop_Logical_Order_Exception.contains(self._scalar)
+    return _prop_Logical_Order_Exception.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar has `Other_ID_Start`
@@ -318,7 +318,7 @@ extension Unicode.Scalar.LatestProperties {
   ///
   /// The property is used to maintain backward compatibility of `ID_Start`.
   public var isOtherIDStart: Bool {
-    return _prop_Other_ID_Start.contains(self._scalar)
+    return _prop_Other_ID_Start.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar has `Other_ID_Continue`
@@ -326,23 +326,23 @@ extension Unicode.Scalar.LatestProperties {
   ///
   /// The property is used to maintain backward compatibility of `ID_Continue`.
   public var isOtherIDContinue: Bool {
-    return _prop_Other_ID_Continue.contains(self._scalar)
+    return _prop_Other_ID_Continue.contains(self._value)
   }
   
   public var isSentenceTerminal: Bool {
-    return _prop_Sentence_Terminal.contains(self._scalar)
+    return _prop_Sentence_Terminal.contains(self._value)
   }
   
   public var isVariationSelector: Bool {
-    return _prop_Variation_Selector.contains(self._scalar)
+    return _prop_Variation_Selector.contains(self._value)
   }
   
   public var isPatternWhitespace: Bool {
-    return _prop_Pattern_White_Space.contains(self._scalar)
+    return _prop_Pattern_White_Space.contains(self._value)
   }
   
   public var isPatternSyntax: Bool {
-    return _prop_Pattern_Syntax.contains(self._scalar)
+    return _prop_Pattern_Syntax.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar is a subtending mark or not.
@@ -350,7 +350,7 @@ extension Unicode.Scalar.LatestProperties {
   /// This property corresponds to the `Prepended_Concatenation_Mark` property in the
   /// [Unicode Standard](http://www.unicode.org/versions/latest/).
   public var isPrependedConcatenationMark: Bool {
-    return _prop_Prepended_Concatenation_Mark.contains(self._scalar)
+    return _prop_Prepended_Concatenation_Mark.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar is a regional indicator or not.
@@ -358,7 +358,7 @@ extension Unicode.Scalar.LatestProperties {
   /// This property corresponds to the `Regional_Indicator` property in the
   /// [Unicode Standard](http://www.unicode.org/versions/latest/).
   public var isRegionalIndicator: Bool {
-    return _prop_Regional_Indicator.contains(self._scalar)
+    return _prop_Regional_Indicator.contains(self._value)
   }
 }
 

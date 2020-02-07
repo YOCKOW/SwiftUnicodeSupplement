@@ -21,6 +21,7 @@ manager.updaters = [
   .init(delegate: EmojiData()),
   .init(delegate: IDNAMappingTable()),
   .init(delegate: PropertyValueAliases()),
+  .init(delegate: PropList()),
 ]
 
 manager.run()

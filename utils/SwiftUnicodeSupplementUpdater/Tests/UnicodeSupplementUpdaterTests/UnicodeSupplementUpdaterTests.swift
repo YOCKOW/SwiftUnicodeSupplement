@@ -96,4 +96,10 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
       "case \"Zinh\": self = .inherited",
     ])
   }
+  
+  func test_prop() throws {
+    try _assert(delegate: PropList(), expectedLines: [
+      "internal let _prop_White_Space = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_White_Space)",
+    ])
+  }
 }

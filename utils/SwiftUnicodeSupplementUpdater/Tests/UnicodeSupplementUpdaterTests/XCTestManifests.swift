@@ -16,6 +16,7 @@ extension UnicodeSupplementUpdaterTests {
         ("test_jg", test_jg),
         ("test_jt", test_jt),
         ("test_normProp", test_normProp),
+        ("test_prop", test_prop),
         ("test_propertyValueAliases", test_propertyValueAliases),
     ]
 }
