@@ -84,7 +84,7 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
   
   func test_idnaMappingTable() throws {
     try _assert(delegate: IDNAMappingTable(), expectedLines: [
-      "internal let _idna = RangeDictionary<UInt32, Unicode.IDNAStatus._ImmatureStatus>(carefullySortedRangesAndValues:"
+      "internal let _idna_rangeDic = RangeDictionary<UInt32, Unicode.IDNAStatus._ImmatureStatus>(carefullySortedRangesAndValues:"
     ])
   }
   

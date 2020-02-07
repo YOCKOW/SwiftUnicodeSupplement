@@ -44,7 +44,13 @@ extension Unicode.Scalar.LatestProperties {
   public func idnaStatus(usingSTD3ASCIIRules std3:Bool = true,
                          idna2008Compatible idna2008:Bool = false) -> Unicode.IDNAStatus?
   {
-    guard let immatureStatus = _idna[self._value] else { return nil }
+    func _immatureStatus() -> Unicode.IDNAStatus._ImmatureStatus? {
+      if let status = _idna_dic[self._value] { return status }
+      if let status = _idna_rangeDic[self._value] { return status }
+      return nil
+    }
+    
+    guard let immatureStatus = _immatureStatus() else { return nil }
     switch immatureStatus {
     case ._valid_idna2008_disallowed:
       return idna2008 ? .disallowed : .valid

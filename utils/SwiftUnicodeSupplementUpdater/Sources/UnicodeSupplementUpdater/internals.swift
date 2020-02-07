@@ -7,6 +7,7 @@ UnicodeSupplementUpdater.swift
 
 import Foundation
 import Ranges
+import yCodeUpdater
 
 extension URL {
   fileprivate func _deletingLastPathComponent(_ numberOfComponents: Int) -> URL {
@@ -30,11 +31,17 @@ internal func _typeName<T>(of type: T.Type) -> String {
   return String(reflecting: type).components(separatedBy: ".").dropFirst().joined(separator: ".")
 }
 
+extension Unicode.Scalar.Value {
+  internal var _description: String {
+    return "0x" + String(self, radix:0x10)
+  }
+}
+
 extension AnyRange where Bound == Unicode.Scalar.Value {
   internal var _rangeDescription: String {
     let lower = self.bounds!.lower.value!
     let upper = self.bounds!.upper.value!
-    return "0x\(String(lower, radix:0x10))....0x\(String(upper, radix: 0x10))"
+    return "\(lower._description)....\(upper._description)"
   }
 }
 
