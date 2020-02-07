@@ -76,6 +76,12 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
     ])
   }
   
+  func test_emojiData() throws {
+    try _assert(delegate: EmojiData(), expectedLines: [
+      "internal let _emoji_Emoji = MultipleRanges<UInt32>(carefullySortedRanges: __array_Emoji)",
+    ])
+  }
+  
   func test_propertyValueAliases() throws {
     try _assert(delegate: PropertyValueAliases(), expectedLines: [
       "case \"L\": self = .leftToRight",

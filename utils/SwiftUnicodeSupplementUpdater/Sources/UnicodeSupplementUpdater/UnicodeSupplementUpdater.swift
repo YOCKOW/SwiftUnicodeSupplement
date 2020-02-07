@@ -24,6 +24,7 @@ internal let _sourcesDirectory = _packageRoot.appendingPathComponent("Sources", 
 internal let _mainModuleDirectory = _sourcesDirectory.appendingPathComponent(_mainModuleName, isDirectory: true)
 internal let _dataDirectory = _mainModuleDirectory.appendingPathComponent("__data__", isDirectory: true)
 
+internal let _ruledLine = "/* " + String(repeating: "*", count: 94) + " */\n"
 
 internal func _typeName<T>(of type: T.Type) -> String {
   return String(reflecting: type).components(separatedBy: ".").dropFirst().joined(separator: ".")

@@ -365,25 +365,25 @@ extension Unicode.Scalar.LatestProperties {
 // emoji-data
 extension Unicode.Scalar.LatestProperties {
   public var isEmoji: Bool {
-    return _emoji_Emoji.contains(self._scalar)
+    return _emoji_Emoji.contains(self._value)
   }
   
   public var isEmojiPresentation: Bool {
-    return _emoji_Emoji_Presentation.contains(self._scalar)
+    return _emoji_Emoji_Presentation.contains(self._value)
   }
   
   public var isEmojiModifier: Bool {
-    return _emoji_Emoji_Modifier.contains(self._scalar)
+    return _emoji_Emoji_Modifier.contains(self._value)
   }
   
   public var isEmojiModifierBase: Bool {
-    return _emoji_Emoji_Modifier_Base.contains(self._scalar)
+    return _emoji_Emoji_Modifier_Base.contains(self._value)
   }
   
   /// A Boolean property indicating whether the scalar is pictographic,
   /// or otherwise similar in kind to scalars with the Emoji property.
   public var isExtendedPictographic: Bool {
-    return _emoji_Extended_Pictographic.contains(self._scalar)
+    return _emoji_Extended_Pictographic.contains(self._value)
   }
 }
 

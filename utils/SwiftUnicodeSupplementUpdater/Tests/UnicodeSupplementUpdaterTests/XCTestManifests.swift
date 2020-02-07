@@ -10,6 +10,7 @@ extension UnicodeSupplementUpdaterTests {
         ("test_binProp", test_binProp),
         ("test_ccc", test_ccc),
         ("test_coreProp", test_coreProp),
+        ("test_emojiData", test_emojiData),
         ("test_gc", test_gc),
         ("test_jg", test_jg),
         ("test_jt", test_jt),

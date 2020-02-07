@@ -43,10 +43,43 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     _mustBeOverridden()
   }
   
+  private var _modules: Set<String> = []
+  open func requires(module name: String) {
+    self._modules.insert(name)
+  }
+  
+  private var _typeAliases: [String] = []
+  open func typeAliasName(for typeName: String) -> String {
+    func _name(for index: Int) -> String { return "_T\(index._base36)" }
+    if let index = self._typeAliases.firstIndex(of: typeName) {
+      return _name(for: index)
+    }
+    self._typeAliases.append(typeName)
+    return _name(for: self._typeAliases.count - 1)
+  }
+  
   open func convert<S>(_ intermidiates: S) throws -> Data where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    var code: String = try self.convert(intermidiates)
-    code = "/*\n" + unicodeLicense() + "\n*/\n\n" + code
-    return code.data(using: .utf8)!
+    let code: String = try self.convert(intermidiates)
+    
+    let license = unicodeLicense()
+    let imports = self._modules.sorted().map({ "import \($0)\n" }).joined()
+    let typealiases = self._typeAliases.map({ "private typealias \(self.typeAliasName(for: $0)) = \($0)\n" }).joined()
+    
+    let header = """
+    /*
+      \(license.split(whereSeparator: { $0.isNewline }).joined(separator: "\n  "))
+    */
+    
+    // Required Modules
+    \(imports)
+    
+    // Type Aliases
+    \(typealiases)
+    
+    
+    """
+    
+    return (header + code).data(using: .utf8)!
   }
 }
 
@@ -69,14 +102,11 @@ open class UCDCodeUpdaterDelegate: UnicodeCodeUpdaterDelegate {
 
 open class UCDBinaryPropertiesCodeUpdaterDelegate: UCDCodeUpdaterDelegate {
   open override func convert<S>(_ intermidiates: S) throws -> String where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    var result = """
-    import Ranges
-    private typealias _U = UInt32
-    private typealias _R = AnyRange<_U>
-    private typealias _A = Array<_R>
-
-    """
+    self.requires(module: "Ranges")
+    let rangeTypeName = self.typeAliasName(for: "AnyRange<UInt32>")
+    let arrayTypeName = self.typeAliasName(for: "Array<\(rangeTypeName)>")
     
+    var result = ""
     var nn = 0
     for interm in intermidiates {
       defer { nn += 1 }
@@ -90,11 +120,11 @@ open class UCDBinaryPropertiesCodeUpdaterDelegate: UCDCodeUpdaterDelegate {
         let ranges = dic[key]!.ranges
         for ii in 0..<ranges.count {
           let range = ranges[ii]
-          result += "private let \(_rangeID(ii)): _R = \(range._rangeDescription)\n"
+          result += "private let \(_rangeID(ii)): \(rangeTypeName) = \(range._rangeDescription)\n"
         }
         
         let arrayID = "__array_\(self._identifierPrefix(for: nn))_\(key)"
-        result += "private let \(arrayID): _A = [\n"
+        result += "private let \(arrayID): \(arrayTypeName) = [\n"
         for ii in 0..<ranges.count {
           result += "  \(_rangeID(ii)),\n"
         }
@@ -117,14 +147,11 @@ open class UCDPropertiesCodeUpdaterDelegate<T>: UCDCodeUpdaterDelegate where T: 
   }
   
   open override func convert<S>(_ intermidiates: S) throws -> String where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    var result = """
-    import Ranges
-    private typealias _U = UInt32
-    private typealias _P = (AnyRange<_U>, \(_typeName(of: T.self)))
-    private typealias _A = Array<_P>
+    self.requires(module: "Ranges")
+    let pairTypeName = self.typeAliasName(for: "(AnyRange<UInt32>, \(_typeName(of: T.self)))")
+    let arrayTypeName = self.typeAliasName(for: "Array<\(pairTypeName)>")
     
-    """
-    
+    var result = ""
     var nn = 0
     for interm in intermidiates {
       defer { nn += 1}
@@ -137,11 +164,11 @@ open class UCDPropertiesCodeUpdaterDelegate<T>: UCDCodeUpdaterDelegate where T: 
       var ii = 0
       for pair: (range: AnyRange<Unicode.Scalar.Value>, value: T) in rangeDictionary {
         defer { ii += 1 }
-        result += "private let \(_pairID(ii)): _P = (\(pair.range._rangeDescription), \(self.describe(value: pair.value)))\n"
+        result += "private let \(_pairID(ii)): \(pairTypeName) = (\(pair.range._rangeDescription), \(self.describe(value: pair.value)))\n"
       }
       
       let arrayID = "__array_\(self._identifierPrefix(for: nn))"
-      result += "private let \(arrayID): _A = [\n"
+      result += "private let \(arrayID): \(arrayTypeName) = [\n"
       for ii in 0..<ii {
         result += "  \(_pairID(ii)),\n"
       }
