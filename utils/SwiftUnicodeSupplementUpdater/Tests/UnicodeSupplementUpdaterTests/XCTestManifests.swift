@@ -12,6 +12,7 @@ extension UnicodeSupplementUpdaterTests {
         ("test_coreProp", test_coreProp),
         ("test_emojiData", test_emojiData),
         ("test_gc", test_gc),
+        ("test_idnaMappingTable", test_idnaMappingTable),
         ("test_jg", test_jg),
         ("test_jt", test_jt),
         ("test_normProp", test_normProp),

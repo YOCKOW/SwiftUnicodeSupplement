@@ -53,7 +53,25 @@ extension Unicode.Scalar.LatestProperties {
   public func idnaStatus(usingSTD3ASCIIRules std3:Bool = true,
                          idna2008Compatible idna2008:Bool = false) -> Unicode.IDNAStatus?
   {
-    return self._scalar._idnaStatus(usingSTD3ASCIIRules:std3, idna2008Compatible:idna2008)
+    guard let immatureStatus = _idna[self._value] else { return nil }
+    switch immatureStatus {
+    case ._valid_idna2008_disallowed:
+      return idna2008 ? .disallowed : .valid
+    case ._valid:
+      return .valid
+    case ._ignored:
+      return .ignored
+    case ._disallowed:
+      return .disallowed
+    case ._disallowed_std3_valid:
+      return std3 ? .valid : .disallowed
+    case ._mapped(let scalars):
+      return .mapped(scalars)
+    case ._deviation(let scalars):
+      return .deviation(scalars)
+    case ._disallowed_std3_mapped(let scalars):
+      return std3 ? .mapped(scalars) : .disallowed
+    }
   }
 }
 

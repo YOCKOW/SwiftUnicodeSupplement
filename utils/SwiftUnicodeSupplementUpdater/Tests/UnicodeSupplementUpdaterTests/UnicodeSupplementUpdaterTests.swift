@@ -82,6 +82,12 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
     ])
   }
   
+  func test_idnaMappingTable() throws {
+    try _assert(delegate: IDNAMappingTable(), expectedLines: [
+      "internal let _idna = RangeDictionary<UInt32, Unicode.IDNAStatus._ImmatureStatus>(carefullySortedRangesAndValues:"
+    ])
+  }
+  
   func test_propertyValueAliases() throws {
     try _assert(delegate: PropertyValueAliases(), expectedLines: [
       "case \"L\": self = .leftToRight",
