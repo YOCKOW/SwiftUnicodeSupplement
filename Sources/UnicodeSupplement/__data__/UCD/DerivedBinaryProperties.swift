@@ -8,167 +8,170 @@
 // ETag: "77405d-41e9-583d4cd7733c0"
 
 /*
-UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
-
-See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
-Data Files and Software.
-NOTICE TO USER: Carefully read the following legal agreement.
-BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
-DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
-YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
-TERMS AND CONDITIONS OF THIS AGREEMENT.
-IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
-THE DATA FILES OR SOFTWARE.
-COPYRIGHT AND PERMISSION NOTICE
-Copyright © 1991-2019 Unicode, Inc. All rights reserved.
-Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
-Permission is hereby granted, free of charge, to any person obtaining
-a copy of the Unicode data files and any associated documentation
-(the "Data Files") or Unicode software and any associated documentation
-(the "Software") to deal in the Data Files or Software
-without restriction, including without limitation the rights to use,
-copy, modify, merge, publish, distribute, and/or sell copies of
-the Data Files or Software, and to permit persons to whom the Data Files
-or Software are furnished to do so, provided that either
-(a) this copyright and permission notice appear with all copies
-of the Data Files or Software, or
-(b) this copyright and permission notice appear in associated
-Documentation.
-THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
-ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT OF THIRD PARTY RIGHTS.
-IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
-NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
-DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
-DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
-TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-PERFORMANCE OF THE DATA FILES OR SOFTWARE.
-Except as contained in this notice, the name of a copyright holder
-shall not be used in advertising or otherwise to promote the sale,
-use or other dealings in these Data Files or Software without prior
-written authorization of the copyright holder.
-
+  UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
+  See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
+  Data Files and Software.
+  NOTICE TO USER: Carefully read the following legal agreement.
+  BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
+  DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
+  YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+  TERMS AND CONDITIONS OF THIS AGREEMENT.
+  IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
+  THE DATA FILES OR SOFTWARE.
+  COPYRIGHT AND PERMISSION NOTICE
+  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
+  Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+  Permission is hereby granted, free of charge, to any person obtaining
+  a copy of the Unicode data files and any associated documentation
+  (the "Data Files") or Unicode software and any associated documentation
+  (the "Software") to deal in the Data Files or Software
+  without restriction, including without limitation the rights to use,
+  copy, modify, merge, publish, distribute, and/or sell copies of
+  the Data Files or Software, and to permit persons to whom the Data Files
+  or Software are furnished to do so, provided that either
+  (a) this copyright and permission notice appear with all copies
+  of the Data Files or Software, or
+  (b) this copyright and permission notice appear in associated
+  Documentation.
+  THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
+  ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
+  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+  NONINFRINGEMENT OF THIRD PARTY RIGHTS.
+  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
+  NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
+  DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
+  DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
+  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+  PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+  Except as contained in this notice, the name of a copyright holder
+  shall not be used in advertising or otherwise to promote the sale,
+  use or other dealings in these Data Files or Software without prior
+  written authorization of the copyright holder.
 */
 
+// Required Modules
 import Ranges
-private typealias _U = UInt32
-private typealias _R = AnyRange<_U>
-private typealias _A = Array<_R>
-private let __range_binProp_Bidi_Mirrored_0: _R = 0x28....0x29
-private let __range_binProp_Bidi_Mirrored_1: _R = 0x3c....0x3c
-private let __range_binProp_Bidi_Mirrored_2: _R = 0x3e....0x3e
-private let __range_binProp_Bidi_Mirrored_3: _R = 0x5b....0x5b
-private let __range_binProp_Bidi_Mirrored_4: _R = 0x5d....0x5d
-private let __range_binProp_Bidi_Mirrored_5: _R = 0x7b....0x7b
-private let __range_binProp_Bidi_Mirrored_6: _R = 0x7d....0x7d
-private let __range_binProp_Bidi_Mirrored_7: _R = 0xab....0xab
-private let __range_binProp_Bidi_Mirrored_8: _R = 0xbb....0xbb
-private let __range_binProp_Bidi_Mirrored_9: _R = 0xf3a....0xf3d
-private let __range_binProp_Bidi_Mirrored_a: _R = 0x169b....0x169c
-private let __range_binProp_Bidi_Mirrored_b: _R = 0x2039....0x203a
-private let __range_binProp_Bidi_Mirrored_c: _R = 0x2045....0x2046
-private let __range_binProp_Bidi_Mirrored_d: _R = 0x207d....0x207e
-private let __range_binProp_Bidi_Mirrored_e: _R = 0x208d....0x208e
-private let __range_binProp_Bidi_Mirrored_f: _R = 0x2140....0x2140
-private let __range_binProp_Bidi_Mirrored_g: _R = 0x2201....0x2204
-private let __range_binProp_Bidi_Mirrored_h: _R = 0x2208....0x220d
-private let __range_binProp_Bidi_Mirrored_i: _R = 0x2211....0x2211
-private let __range_binProp_Bidi_Mirrored_j: _R = 0x2215....0x2216
-private let __range_binProp_Bidi_Mirrored_k: _R = 0x221a....0x221d
-private let __range_binProp_Bidi_Mirrored_l: _R = 0x221f....0x2222
-private let __range_binProp_Bidi_Mirrored_m: _R = 0x2224....0x2224
-private let __range_binProp_Bidi_Mirrored_n: _R = 0x2226....0x2226
-private let __range_binProp_Bidi_Mirrored_o: _R = 0x222b....0x2233
-private let __range_binProp_Bidi_Mirrored_p: _R = 0x2239....0x2239
-private let __range_binProp_Bidi_Mirrored_q: _R = 0x223b....0x224c
-private let __range_binProp_Bidi_Mirrored_r: _R = 0x2252....0x2255
-private let __range_binProp_Bidi_Mirrored_s: _R = 0x225f....0x2260
-private let __range_binProp_Bidi_Mirrored_t: _R = 0x2262....0x2262
-private let __range_binProp_Bidi_Mirrored_u: _R = 0x2264....0x226b
-private let __range_binProp_Bidi_Mirrored_v: _R = 0x226e....0x228c
-private let __range_binProp_Bidi_Mirrored_w: _R = 0x228f....0x2292
-private let __range_binProp_Bidi_Mirrored_x: _R = 0x2298....0x2298
-private let __range_binProp_Bidi_Mirrored_y: _R = 0x22a2....0x22a3
-private let __range_binProp_Bidi_Mirrored_z: _R = 0x22a6....0x22b8
-private let __range_binProp_Bidi_Mirrored_10: _R = 0x22be....0x22bf
-private let __range_binProp_Bidi_Mirrored_11: _R = 0x22c9....0x22cd
-private let __range_binProp_Bidi_Mirrored_12: _R = 0x22d0....0x22d1
-private let __range_binProp_Bidi_Mirrored_13: _R = 0x22d6....0x22ed
-private let __range_binProp_Bidi_Mirrored_14: _R = 0x22f0....0x22ff
-private let __range_binProp_Bidi_Mirrored_15: _R = 0x2308....0x230b
-private let __range_binProp_Bidi_Mirrored_16: _R = 0x2320....0x2321
-private let __range_binProp_Bidi_Mirrored_17: _R = 0x2329....0x232a
-private let __range_binProp_Bidi_Mirrored_18: _R = 0x2768....0x2775
-private let __range_binProp_Bidi_Mirrored_19: _R = 0x27c0....0x27c0
-private let __range_binProp_Bidi_Mirrored_1a: _R = 0x27c3....0x27c6
-private let __range_binProp_Bidi_Mirrored_1b: _R = 0x27c8....0x27c9
-private let __range_binProp_Bidi_Mirrored_1c: _R = 0x27cb....0x27cd
-private let __range_binProp_Bidi_Mirrored_1d: _R = 0x27d3....0x27d6
-private let __range_binProp_Bidi_Mirrored_1e: _R = 0x27dc....0x27de
-private let __range_binProp_Bidi_Mirrored_1f: _R = 0x27e2....0x27ef
-private let __range_binProp_Bidi_Mirrored_1g: _R = 0x2983....0x2998
-private let __range_binProp_Bidi_Mirrored_1h: _R = 0x299b....0x29a0
-private let __range_binProp_Bidi_Mirrored_1i: _R = 0x29a2....0x29af
-private let __range_binProp_Bidi_Mirrored_1j: _R = 0x29b8....0x29b8
-private let __range_binProp_Bidi_Mirrored_1k: _R = 0x29c0....0x29c5
-private let __range_binProp_Bidi_Mirrored_1l: _R = 0x29c9....0x29c9
-private let __range_binProp_Bidi_Mirrored_1m: _R = 0x29ce....0x29d2
-private let __range_binProp_Bidi_Mirrored_1n: _R = 0x29d4....0x29d5
-private let __range_binProp_Bidi_Mirrored_1o: _R = 0x29d8....0x29dc
-private let __range_binProp_Bidi_Mirrored_1p: _R = 0x29e1....0x29e1
-private let __range_binProp_Bidi_Mirrored_1q: _R = 0x29e3....0x29e5
-private let __range_binProp_Bidi_Mirrored_1r: _R = 0x29e8....0x29e9
-private let __range_binProp_Bidi_Mirrored_1s: _R = 0x29f4....0x29f9
-private let __range_binProp_Bidi_Mirrored_1t: _R = 0x29fc....0x29fd
-private let __range_binProp_Bidi_Mirrored_1u: _R = 0x2a0a....0x2a1c
-private let __range_binProp_Bidi_Mirrored_1v: _R = 0x2a1e....0x2a21
-private let __range_binProp_Bidi_Mirrored_1w: _R = 0x2a24....0x2a24
-private let __range_binProp_Bidi_Mirrored_1x: _R = 0x2a26....0x2a26
-private let __range_binProp_Bidi_Mirrored_1y: _R = 0x2a29....0x2a29
-private let __range_binProp_Bidi_Mirrored_1z: _R = 0x2a2b....0x2a2e
-private let __range_binProp_Bidi_Mirrored_20: _R = 0x2a34....0x2a35
-private let __range_binProp_Bidi_Mirrored_21: _R = 0x2a3c....0x2a3e
-private let __range_binProp_Bidi_Mirrored_22: _R = 0x2a57....0x2a58
-private let __range_binProp_Bidi_Mirrored_23: _R = 0x2a64....0x2a65
-private let __range_binProp_Bidi_Mirrored_24: _R = 0x2a6a....0x2a6d
-private let __range_binProp_Bidi_Mirrored_25: _R = 0x2a6f....0x2a70
-private let __range_binProp_Bidi_Mirrored_26: _R = 0x2a73....0x2a74
-private let __range_binProp_Bidi_Mirrored_27: _R = 0x2a79....0x2aa3
-private let __range_binProp_Bidi_Mirrored_28: _R = 0x2aa6....0x2aad
-private let __range_binProp_Bidi_Mirrored_29: _R = 0x2aaf....0x2ad6
-private let __range_binProp_Bidi_Mirrored_2a: _R = 0x2adc....0x2adc
-private let __range_binProp_Bidi_Mirrored_2b: _R = 0x2ade....0x2ade
-private let __range_binProp_Bidi_Mirrored_2c: _R = 0x2ae2....0x2ae6
-private let __range_binProp_Bidi_Mirrored_2d: _R = 0x2aec....0x2aee
-private let __range_binProp_Bidi_Mirrored_2e: _R = 0x2af3....0x2af3
-private let __range_binProp_Bidi_Mirrored_2f: _R = 0x2af7....0x2afb
-private let __range_binProp_Bidi_Mirrored_2g: _R = 0x2afd....0x2afd
-private let __range_binProp_Bidi_Mirrored_2h: _R = 0x2bfe....0x2bfe
-private let __range_binProp_Bidi_Mirrored_2i: _R = 0x2e02....0x2e05
-private let __range_binProp_Bidi_Mirrored_2j: _R = 0x2e09....0x2e0a
-private let __range_binProp_Bidi_Mirrored_2k: _R = 0x2e0c....0x2e0d
-private let __range_binProp_Bidi_Mirrored_2l: _R = 0x2e1c....0x2e1d
-private let __range_binProp_Bidi_Mirrored_2m: _R = 0x2e20....0x2e29
-private let __range_binProp_Bidi_Mirrored_2n: _R = 0x3008....0x3011
-private let __range_binProp_Bidi_Mirrored_2o: _R = 0x3014....0x301b
-private let __range_binProp_Bidi_Mirrored_2p: _R = 0xfe59....0xfe5e
-private let __range_binProp_Bidi_Mirrored_2q: _R = 0xfe64....0xfe65
-private let __range_binProp_Bidi_Mirrored_2r: _R = 0xff08....0xff09
-private let __range_binProp_Bidi_Mirrored_2s: _R = 0xff1c....0xff1c
-private let __range_binProp_Bidi_Mirrored_2t: _R = 0xff1e....0xff1e
-private let __range_binProp_Bidi_Mirrored_2u: _R = 0xff3b....0xff3b
-private let __range_binProp_Bidi_Mirrored_2v: _R = 0xff3d....0xff3d
-private let __range_binProp_Bidi_Mirrored_2w: _R = 0xff5b....0xff5b
-private let __range_binProp_Bidi_Mirrored_2x: _R = 0xff5d....0xff5d
-private let __range_binProp_Bidi_Mirrored_2y: _R = 0xff5f....0xff60
-private let __range_binProp_Bidi_Mirrored_2z: _R = 0xff62....0xff63
-private let __range_binProp_Bidi_Mirrored_30: _R = 0x1d6db....0x1d6db
-private let __range_binProp_Bidi_Mirrored_31: _R = 0x1d715....0x1d715
-private let __range_binProp_Bidi_Mirrored_32: _R = 0x1d74f....0x1d74f
-private let __range_binProp_Bidi_Mirrored_33: _R = 0x1d789....0x1d789
-private let __range_binProp_Bidi_Mirrored_34: _R = 0x1d7c3....0x1d7c3
-private let __array_binProp_Bidi_Mirrored: _A = [
+
+
+// Type Aliases
+private typealias _T0 = AnyRange<UInt32>
+private typealias _T1 = Array<_T0>
+
+
+private let __range_binProp_Bidi_Mirrored_0: _T0 = 0x28....0x29
+private let __range_binProp_Bidi_Mirrored_1: _T0 = 0x3c....0x3c
+private let __range_binProp_Bidi_Mirrored_2: _T0 = 0x3e....0x3e
+private let __range_binProp_Bidi_Mirrored_3: _T0 = 0x5b....0x5b
+private let __range_binProp_Bidi_Mirrored_4: _T0 = 0x5d....0x5d
+private let __range_binProp_Bidi_Mirrored_5: _T0 = 0x7b....0x7b
+private let __range_binProp_Bidi_Mirrored_6: _T0 = 0x7d....0x7d
+private let __range_binProp_Bidi_Mirrored_7: _T0 = 0xab....0xab
+private let __range_binProp_Bidi_Mirrored_8: _T0 = 0xbb....0xbb
+private let __range_binProp_Bidi_Mirrored_9: _T0 = 0xf3a....0xf3d
+private let __range_binProp_Bidi_Mirrored_a: _T0 = 0x169b....0x169c
+private let __range_binProp_Bidi_Mirrored_b: _T0 = 0x2039....0x203a
+private let __range_binProp_Bidi_Mirrored_c: _T0 = 0x2045....0x2046
+private let __range_binProp_Bidi_Mirrored_d: _T0 = 0x207d....0x207e
+private let __range_binProp_Bidi_Mirrored_e: _T0 = 0x208d....0x208e
+private let __range_binProp_Bidi_Mirrored_f: _T0 = 0x2140....0x2140
+private let __range_binProp_Bidi_Mirrored_g: _T0 = 0x2201....0x2204
+private let __range_binProp_Bidi_Mirrored_h: _T0 = 0x2208....0x220d
+private let __range_binProp_Bidi_Mirrored_i: _T0 = 0x2211....0x2211
+private let __range_binProp_Bidi_Mirrored_j: _T0 = 0x2215....0x2216
+private let __range_binProp_Bidi_Mirrored_k: _T0 = 0x221a....0x221d
+private let __range_binProp_Bidi_Mirrored_l: _T0 = 0x221f....0x2222
+private let __range_binProp_Bidi_Mirrored_m: _T0 = 0x2224....0x2224
+private let __range_binProp_Bidi_Mirrored_n: _T0 = 0x2226....0x2226
+private let __range_binProp_Bidi_Mirrored_o: _T0 = 0x222b....0x2233
+private let __range_binProp_Bidi_Mirrored_p: _T0 = 0x2239....0x2239
+private let __range_binProp_Bidi_Mirrored_q: _T0 = 0x223b....0x224c
+private let __range_binProp_Bidi_Mirrored_r: _T0 = 0x2252....0x2255
+private let __range_binProp_Bidi_Mirrored_s: _T0 = 0x225f....0x2260
+private let __range_binProp_Bidi_Mirrored_t: _T0 = 0x2262....0x2262
+private let __range_binProp_Bidi_Mirrored_u: _T0 = 0x2264....0x226b
+private let __range_binProp_Bidi_Mirrored_v: _T0 = 0x226e....0x228c
+private let __range_binProp_Bidi_Mirrored_w: _T0 = 0x228f....0x2292
+private let __range_binProp_Bidi_Mirrored_x: _T0 = 0x2298....0x2298
+private let __range_binProp_Bidi_Mirrored_y: _T0 = 0x22a2....0x22a3
+private let __range_binProp_Bidi_Mirrored_z: _T0 = 0x22a6....0x22b8
+private let __range_binProp_Bidi_Mirrored_10: _T0 = 0x22be....0x22bf
+private let __range_binProp_Bidi_Mirrored_11: _T0 = 0x22c9....0x22cd
+private let __range_binProp_Bidi_Mirrored_12: _T0 = 0x22d0....0x22d1
+private let __range_binProp_Bidi_Mirrored_13: _T0 = 0x22d6....0x22ed
+private let __range_binProp_Bidi_Mirrored_14: _T0 = 0x22f0....0x22ff
+private let __range_binProp_Bidi_Mirrored_15: _T0 = 0x2308....0x230b
+private let __range_binProp_Bidi_Mirrored_16: _T0 = 0x2320....0x2321
+private let __range_binProp_Bidi_Mirrored_17: _T0 = 0x2329....0x232a
+private let __range_binProp_Bidi_Mirrored_18: _T0 = 0x2768....0x2775
+private let __range_binProp_Bidi_Mirrored_19: _T0 = 0x27c0....0x27c0
+private let __range_binProp_Bidi_Mirrored_1a: _T0 = 0x27c3....0x27c6
+private let __range_binProp_Bidi_Mirrored_1b: _T0 = 0x27c8....0x27c9
+private let __range_binProp_Bidi_Mirrored_1c: _T0 = 0x27cb....0x27cd
+private let __range_binProp_Bidi_Mirrored_1d: _T0 = 0x27d3....0x27d6
+private let __range_binProp_Bidi_Mirrored_1e: _T0 = 0x27dc....0x27de
+private let __range_binProp_Bidi_Mirrored_1f: _T0 = 0x27e2....0x27ef
+private let __range_binProp_Bidi_Mirrored_1g: _T0 = 0x2983....0x2998
+private let __range_binProp_Bidi_Mirrored_1h: _T0 = 0x299b....0x29a0
+private let __range_binProp_Bidi_Mirrored_1i: _T0 = 0x29a2....0x29af
+private let __range_binProp_Bidi_Mirrored_1j: _T0 = 0x29b8....0x29b8
+private let __range_binProp_Bidi_Mirrored_1k: _T0 = 0x29c0....0x29c5
+private let __range_binProp_Bidi_Mirrored_1l: _T0 = 0x29c9....0x29c9
+private let __range_binProp_Bidi_Mirrored_1m: _T0 = 0x29ce....0x29d2
+private let __range_binProp_Bidi_Mirrored_1n: _T0 = 0x29d4....0x29d5
+private let __range_binProp_Bidi_Mirrored_1o: _T0 = 0x29d8....0x29dc
+private let __range_binProp_Bidi_Mirrored_1p: _T0 = 0x29e1....0x29e1
+private let __range_binProp_Bidi_Mirrored_1q: _T0 = 0x29e3....0x29e5
+private let __range_binProp_Bidi_Mirrored_1r: _T0 = 0x29e8....0x29e9
+private let __range_binProp_Bidi_Mirrored_1s: _T0 = 0x29f4....0x29f9
+private let __range_binProp_Bidi_Mirrored_1t: _T0 = 0x29fc....0x29fd
+private let __range_binProp_Bidi_Mirrored_1u: _T0 = 0x2a0a....0x2a1c
+private let __range_binProp_Bidi_Mirrored_1v: _T0 = 0x2a1e....0x2a21
+private let __range_binProp_Bidi_Mirrored_1w: _T0 = 0x2a24....0x2a24
+private let __range_binProp_Bidi_Mirrored_1x: _T0 = 0x2a26....0x2a26
+private let __range_binProp_Bidi_Mirrored_1y: _T0 = 0x2a29....0x2a29
+private let __range_binProp_Bidi_Mirrored_1z: _T0 = 0x2a2b....0x2a2e
+private let __range_binProp_Bidi_Mirrored_20: _T0 = 0x2a34....0x2a35
+private let __range_binProp_Bidi_Mirrored_21: _T0 = 0x2a3c....0x2a3e
+private let __range_binProp_Bidi_Mirrored_22: _T0 = 0x2a57....0x2a58
+private let __range_binProp_Bidi_Mirrored_23: _T0 = 0x2a64....0x2a65
+private let __range_binProp_Bidi_Mirrored_24: _T0 = 0x2a6a....0x2a6d
+private let __range_binProp_Bidi_Mirrored_25: _T0 = 0x2a6f....0x2a70
+private let __range_binProp_Bidi_Mirrored_26: _T0 = 0x2a73....0x2a74
+private let __range_binProp_Bidi_Mirrored_27: _T0 = 0x2a79....0x2aa3
+private let __range_binProp_Bidi_Mirrored_28: _T0 = 0x2aa6....0x2aad
+private let __range_binProp_Bidi_Mirrored_29: _T0 = 0x2aaf....0x2ad6
+private let __range_binProp_Bidi_Mirrored_2a: _T0 = 0x2adc....0x2adc
+private let __range_binProp_Bidi_Mirrored_2b: _T0 = 0x2ade....0x2ade
+private let __range_binProp_Bidi_Mirrored_2c: _T0 = 0x2ae2....0x2ae6
+private let __range_binProp_Bidi_Mirrored_2d: _T0 = 0x2aec....0x2aee
+private let __range_binProp_Bidi_Mirrored_2e: _T0 = 0x2af3....0x2af3
+private let __range_binProp_Bidi_Mirrored_2f: _T0 = 0x2af7....0x2afb
+private let __range_binProp_Bidi_Mirrored_2g: _T0 = 0x2afd....0x2afd
+private let __range_binProp_Bidi_Mirrored_2h: _T0 = 0x2bfe....0x2bfe
+private let __range_binProp_Bidi_Mirrored_2i: _T0 = 0x2e02....0x2e05
+private let __range_binProp_Bidi_Mirrored_2j: _T0 = 0x2e09....0x2e0a
+private let __range_binProp_Bidi_Mirrored_2k: _T0 = 0x2e0c....0x2e0d
+private let __range_binProp_Bidi_Mirrored_2l: _T0 = 0x2e1c....0x2e1d
+private let __range_binProp_Bidi_Mirrored_2m: _T0 = 0x2e20....0x2e29
+private let __range_binProp_Bidi_Mirrored_2n: _T0 = 0x3008....0x3011
+private let __range_binProp_Bidi_Mirrored_2o: _T0 = 0x3014....0x301b
+private let __range_binProp_Bidi_Mirrored_2p: _T0 = 0xfe59....0xfe5e
+private let __range_binProp_Bidi_Mirrored_2q: _T0 = 0xfe64....0xfe65
+private let __range_binProp_Bidi_Mirrored_2r: _T0 = 0xff08....0xff09
+private let __range_binProp_Bidi_Mirrored_2s: _T0 = 0xff1c....0xff1c
+private let __range_binProp_Bidi_Mirrored_2t: _T0 = 0xff1e....0xff1e
+private let __range_binProp_Bidi_Mirrored_2u: _T0 = 0xff3b....0xff3b
+private let __range_binProp_Bidi_Mirrored_2v: _T0 = 0xff3d....0xff3d
+private let __range_binProp_Bidi_Mirrored_2w: _T0 = 0xff5b....0xff5b
+private let __range_binProp_Bidi_Mirrored_2x: _T0 = 0xff5d....0xff5d
+private let __range_binProp_Bidi_Mirrored_2y: _T0 = 0xff5f....0xff60
+private let __range_binProp_Bidi_Mirrored_2z: _T0 = 0xff62....0xff63
+private let __range_binProp_Bidi_Mirrored_30: _T0 = 0x1d6db....0x1d6db
+private let __range_binProp_Bidi_Mirrored_31: _T0 = 0x1d715....0x1d715
+private let __range_binProp_Bidi_Mirrored_32: _T0 = 0x1d74f....0x1d74f
+private let __range_binProp_Bidi_Mirrored_33: _T0 = 0x1d789....0x1d789
+private let __range_binProp_Bidi_Mirrored_34: _T0 = 0x1d7c3....0x1d7c3
+private let __array_binProp_Bidi_Mirrored: _T1 = [
   __range_binProp_Bidi_Mirrored_0,
   __range_binProp_Bidi_Mirrored_1,
   __range_binProp_Bidi_Mirrored_2,

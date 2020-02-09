@@ -122,14 +122,16 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
     }
     
     do { // Ranges
+      let pairTypeName = self.typeAliasName(for: "(AnyRange<UInt32>, Unicode.BidiClass)")
       var nn = 0
       func _pairID(for nx: Int) -> String { return "__pair_\(self.prefix)_default_ranges_\(nx._base36)" }
       for (range, bidiClass) in defaultValueRanges {
         defer { nn += 1 }
-        result += "private let \(_pairID(for: nn)): _P = (\(range._rangeDescription), \(self.describe(value: bidiClass)))\n"
+        result += "private let \(_pairID(for: nn)): \(pairTypeName) = (\(range._rangeDescription), \(self.describe(value: bidiClass)))\n"
       }
+      let arrayTypeName = self.typeAliasName(for: "Array<\(pairTypeName)>")
       let arrayID = "__array_\(self.prefix)_default_ranges"
-      result += "private let \(arrayID): _A = [\n"
+      result += "private let \(arrayID): \(arrayTypeName) = [\n"
       for ii in 0..<nn {
         result += "  \(_pairID(for: ii)),\n"
       }
@@ -138,7 +140,8 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
     }
     
     do { // Properties
-      result += "private typealias _K = (KeyPath<Unicode.Scalar.LatestProperties, Bool>, Bool, Unicode.BidiClass)\n"
+      let keyPathOriginalTypeName = "(KeyPath<Unicode.Scalar.LatestProperties, Bool>, Bool, Unicode.BidiClass)"
+      let keyPathTypeName = self.typeAliasName(for: keyPathOriginalTypeName)
       func _pairID(for nx: Int) -> String { return "__pair_\(self.prefix)_default_properties_\(nx._base36)" }
       var nn = 0
       for (bidiClassString, properties) in defaultValueProperties {
@@ -147,10 +150,10 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
           defer { nn += 1 }
           
           let propKey = "is\(property.upperCamelCase)"
-          result += "private let \(_pairID(for: nn)): _K = (\\.\(propKey), true, \(self.describe(value: bidiClass)))\n"
+          result += "private let \(_pairID(for: nn)): \(keyPathTypeName) = (\\.\(propKey), true, \(self.describe(value: bidiClass)))\n"
         }
       }
-      result += "internal let _\(self.prefix)_default_properties: Array<(KeyPath<Unicode.Scalar.LatestProperties, Bool>, Bool, Unicode.BidiClass)> = [\n"
+      result += "internal let _\(self.prefix)_default_properties: Array<\(keyPathOriginalTypeName)> = [\n"
       for ii in 0..<nn {
         result += "  \(_pairID(for: ii)),\n"
       }
