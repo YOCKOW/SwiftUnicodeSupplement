@@ -3,5 +3,6 @@ import XCTest
 import UnicodeSupplementTests
 
 var tests = [XCTestCaseEntry]()
-tests += UnicodeSupplementTests.allTests()
+tests += UnicodeSupplementTests.__allTests()
+
 XCTMain(tests)

@@ -6,14 +6,8 @@
  **************************************************************************************************/
  
 extension Unicode {
-  /**
-   
-   # Unicode.IDNAStatus
-   
-   Represents the IDNA status value.
-   See [UTS #46: §5](https://www.unicode.org/reports/tr46/#IDNA_Mapping_Table).
-   
- */
+  /// Represents the IDNA status value.
+  /// See [UTS #46: §5](https://www.unicode.org/reports/tr46/#IDNA_Mapping_Table).
   public enum IDNAStatus {
     /// Scalar is valid (and not modified).
     case valid
@@ -22,10 +16,10 @@ extension Unicode {
     case ignored
     
     /// Scalar is replaced with the other scalars for the mapping.
-    case mapped([UnicodeScalar])
+    case mapped([Unicode.Scalar])
     
     /// Scalar is valid or mapped depending on whether the processing is transitional or not.
-    case deviation([UnicodeScalar])
+    case deviation([Unicode.Scalar])
     
     /// Scalar is not allowed.
     case disallowed
@@ -46,44 +40,16 @@ extension Unicode.IDNAStatus: Equatable {
 }
 
 extension Unicode.IDNAStatus {
-  internal enum _ImmatureStatus {
+  /// Represents the raw status.
+  /// This is for internal use, but declared as `public` so that it is available in "Updater".
+  public enum _ImmatureStatus: Equatable {
     case _valid_idna2008_disallowed
     case _valid
     case _ignored
     case _disallowed
     case _disallowed_std3_valid
-    case _mapped([UnicodeScalar])
-    case _deviation([UnicodeScalar])
-    case _disallowed_std3_mapped([UnicodeScalar])
+    case _mapped([Unicode.Scalar])
+    case _deviation([Unicode.Scalar])
+    case _disallowed_std3_mapped([Unicode.Scalar])
   }
 }
-
-extension Unicode.Scalar {
-  /// Returns IDNA Status Value.
-  /// - parameter usingSTD3ASCIIRules: Specify whether STD3 ASCII Rules should be used or not.
-  /// - parameter idna2008Compatible: Specify whether the status should conform to IDNA 2008 or not.
-  internal func _idnaStatus(usingSTD3ASCIIRules std3:Bool = true,
-                         idna2008Compatible idna2008:Bool = false) -> Unicode.IDNAStatus?
-  {
-    guard let immatureStatus = _idna_unicodeIdnastatusImmatureStatus.value(for:self) else { return nil }
-    switch immatureStatus {
-    case ._valid_idna2008_disallowed:
-      return idna2008 ? .disallowed : .valid
-    case ._valid:
-      return .valid
-    case ._ignored:
-      return .ignored
-    case ._disallowed:
-      return .disallowed
-    case ._disallowed_std3_valid:
-      return std3 ? .valid : .disallowed
-    case ._mapped(let scalars):
-      return .mapped(scalars)
-    case ._deviation(let scalars):
-      return .deviation(scalars)
-    case ._disallowed_std3_mapped(let scalars):
-      return std3 ? .mapped(scalars) : .disallowed
-    }
-  }
-}
-

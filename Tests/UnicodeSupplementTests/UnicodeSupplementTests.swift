@@ -2,50 +2,6 @@ import XCTest
 @testable import UnicodeSupplement
 
 final class UnicodeSupplementTests: XCTestCase {
-  func test_UnicodeAssociativeArray() {
-    let array: [(UInt32, String)] = [(0x20819, "Upper"), (0x30819, "Lower")] // "A"..."Z", "a"..."z"
-    let data = _UnicodeAssociativeArray<String>(array)
-    let check = { (key:Unicode.Scalar, expected:String?) -> Void in
-      XCTAssertEqual(data.value(for:key), expected)
-    }
-    check("0", nil)
-    check("@", nil)
-    check("A", "Upper")
-    check("M", "Upper")
-    check("Z", "Upper")
-    check("[", nil)
-    check("`", nil)
-    check("a", "Lower")
-    check("m", "Lower")
-    check("z", "Lower")
-    check("{", nil)
-    check("あ", nil)
-  }
-  
-  func test_UnicodePredicate() {
-    let array: [UInt32] = [0x20819, 0x30819] // "A"..."Z", "a"..."z"
-    var predicate = _UnicodePredicate(array)
-    let check = { (key:Unicode.Scalar, expected:Bool) -> Void in
-      if expected { XCTAssertTrue(predicate.contains(key)) }
-      else { XCTAssertFalse(predicate.contains(key)) }
-    }
-    check("0", false)
-    check("@", false)
-    check("A", true)
-    check("M", true)
-    check("Z", true)
-    check("[", false)
-    check("`", false)
-    check("a", true)
-    check("m", true)
-    check("z", true)
-    check("{", false)
-    check("あ", false)
-    
-    predicate = _UnicodePredicate([0x00])
-    check("\u{00}", true)
-  }
-  
   func test_BidiClass() {
     func bc(_ scalar:Unicode.Scalar) -> Unicode.BidiClass {
       return scalar.latestProperties.bidiClass
@@ -77,35 +33,36 @@ final class UnicodeSupplementTests: XCTestCase {
   }
   
   func test_IDNAStatus() {
-    let check = { (scalar:Unicode.Scalar, std3:Bool, idna2008:Bool,
-                   expected:Unicode.IDNAStatus?) -> Void in
-      XCTAssertEqual(scalar.latestProperties.idnaStatus(usingSTD3ASCIIRules:std3,
-                                                        idna2008Compatible:idna2008),
-                     expected)
+    func _assert(_ scalar: Unicode.Scalar,
+                 std3: Bool, idna2008: Bool,
+                 expected: Unicode.IDNAStatus?,
+                 file: StaticString = #file, line: UInt = #line) {
+      let status = scalar.latestProperties.idnaStatus(usingSTD3ASCIIRules: std3, idna2008Compatible: idna2008)
+      XCTAssertEqual(expected, status, file: file, line: line)
     }
     
     // not exhaustive
-    check("\u{A1}", true, false, .valid)
-    check("\u{A1}", true, true, .disallowed)
-    check("\u{19DA}", true, false, .valid)
-    check("\u{19DA}", true, true, .disallowed)
+    _assert("\u{A1}", std3: true, idna2008: false, expected: .valid)
+    _assert("\u{A1}", std3: true, idna2008: true, expected: .disallowed)
+    _assert("\u{19DA}", std3: true, idna2008: false, expected: .valid)
+    _assert("\u{19DA}", std3: true, idna2008: true, expected: .disallowed)
     
-    check("あ", true, false, .valid)
+    _assert("あ", std3: true, idna2008: false, expected: .valid)
     
-    check("\u{AD}", true, false, .ignored)
+    _assert("\u{AD}", std3: true, idna2008: false, expected: .ignored)
     
-    check("A", true, false, .mapped(["a"]))
+    _assert("A", std3: true, idna2008: false, expected: .mapped(["a"]))
     
-    check("\u{DF}", true, false, .deviation(["s", "s"]))
-    check("\u{200C}", true, false, .deviation([]))
+    _assert("\u{DF}", std3: true, idna2008: false, expected: .deviation(["s", "s"]))
+    _assert("\u{200C}", std3: true, idna2008: false, expected: .deviation([]))
     
-    check("\u{04C0}", true, false, .disallowed)
+    _assert("\u{04C0}", std3: true, idna2008: false, expected: .disallowed)
     
-    check("?", true, false, .valid)
-    check("?", false, false, .disallowed)
+    _assert("?", std3: true, idna2008: false, expected: .valid)
+    _assert("?", std3: false, idna2008: false, expected: .disallowed)
     
-    check("\u{2474}", true, false, .mapped(["(", "1", ")"]))
-    check("\u{2474}", false, false, .disallowed)
+    _assert("\u{2474}", std3: true, idna2008: false, expected: .mapped(["(", "1", ")"]))
+    _assert("\u{2474}", std3: false, idna2008: false, expected: .disallowed)
   }
   
   func test_JoiningGroup() {
@@ -145,284 +102,291 @@ final class UnicodeSupplementTests: XCTestCase {
   }
   
   func test_properties() {
-    let check = {
-      (scalar:Unicode.Scalar,
-      keyPath:KeyPath<Unicode.Scalar.LatestProperties, Bool>,
-      expected:Bool) -> Void in
-      
-      XCTAssertEqual(expected, scalar.latestProperties[keyPath:keyPath],
-                     "Scalar:\(scalar)(U+\(String(scalar.value, radix:16).uppercased())), " +
-                     "KeyPath:\(keyPath)")
+    func __assert(_ scalar: Unicode.Scalar, _ keyPath: KeyPath<Unicode.Scalar.LatestProperties, Bool>,
+                 expected: Bool, file: StaticString, line: UInt) {
+      XCTAssertEqual(
+        scalar.latestProperties[keyPath: keyPath], expected,
+        "Scalar: \(scalar)(U+\(String(scalar.value, radix:16).uppercased())), " + "KeyPath: \(keyPath)",
+        file: file, line: line
+      )
     }
     
-    typealias PropTests = [KeyPath<Unicode.Scalar.LatestProperties,Bool>:[(Unicode.Scalar,Bool)]]
+    var presentKeyPath: KeyPath<Unicode.Scalar.LatestProperties, Bool>! = nil
+    func _assert(_ scalar: Unicode.Scalar, expected: Bool, file: StaticString = #file, line: UInt = #line) {
+      __assert(scalar, presentKeyPath, expected: expected, file: file, line: line)
+    }
     
-    let corePropTests: PropTests = [
-      \.isMath:[
-        ("+", true),
-        ("十", false),
-      ],
-      \.isAlphabetic:[
-        ("A", true),
-        ("0", false),
-      ],
-      \.isLowercase:[
-        ("x", true),
-        ("X", false)
-      ],
-      \.isUppercase:[
-        ("Z", true),
-        ("z", false)
-      ],
-      \.isCased:[
-        ("u", true),
-        ("U", true),
-        ("ウ", false)
-      ],
-      \.isCaseIgnorable:[
-        ("'", true),
-        ("「", false),
-      ],
-      \.changesWhenLowercased:[
-        ("Ａ", true),
-        ("ａ", false),
-      ],
-      \.changesWhenUppercased:[
-        ("ｘ", true),
-        ("❌", false),
-      ],
-      \.changesWhenTitlecased:[
-        ("t", true),
-        ("T", false),
-      ],
-      \.changesWhenCaseFolded:[
-        ("F", true),
-        ("f", false),
-      ],
-      \.changesWhenCaseMapped:[
-        ("m", true),
-        ("ま", false),
-      ],
-      \.isIDStart:[
-        ("始", true),
-        ("!", false),
-      ],
-      \.isIDContinue:[
-        ("続", true),
-        ("*", false),
-      ],
-      \.isXIDStart:[
-        ("初", true),
-        ("?", false),
-      ],
-      \.isXIDContinue:[
-        ("継", true),
-        ("/", false),
-      ],
-      \.isDefaultIgnorableCodePoint:[
-        ("\u{E0777}", true),
-        ("７", false)
-      ],
-      \.isGraphemeExtend:[
-        ("\u{1d16e}", true),
-        ("♪", false)
-      ],
-      \.isGraphemeBase:[
-        ("\u{1d100}", true),
-        ("\t", false)
-      ]
-    ]
+    func _with(_ keyPath: KeyPath<Unicode.Scalar.LatestProperties, Bool>,
+               body: () throws -> Void) rethrows {
+      presentKeyPath = keyPath
+      defer { presentKeyPath = nil }
+      try body()
+    }
     
-    let propTests: PropTests = [
-      \.isWhitespace:[
-        ("　", true),
-        ("間", false),
-      ],
-      \.isBidiControl:[
-        ("\u{200E}", true),
-        ("ビ", false),
-      ],
-      \.isJoinControl:[
-        ("\u{200C}", true),
-        (" ", false),
-      ],
-      \.isDash:[
-        ("゠", true),
-        ("~", false)
-      ],
-//      `Hyphen` property was deprecated as of Unicode 6.0.0.
-//      \.isHyphen:[
-//        ("-", true),
-//        ("~", false)
-//      ],
-      \.isQuotationMark:[
-        ("“", true),
-        ("」", true),
-        ("$", false),
-      ],
-      \.isTerminalPunctuation:[
-        ("！", true),
-        ("=", false),
-      ],
-      \.isOtherMath:[
-        ("★", true),
-        ("星", false)
-      ],
-      \.isHexDigit:[
-        ("４", true),
-        ("四", false),
-      ],
-      \.isASCIIHexDigit:[
-        ("6", true),
-        ("A", true),
-        ("e", true),
-        ("X", false),
-      ],
-      \.isOtherAlphabetic:[
-        ("\u{345}", true),
-        ("A", false)
-      ],
-      \.isIdeographic:[
-        ("\u{3006}", true),
-        ("\u{2FA1E}", false),
-      ],
-      \.isDiacritic:[
-        ("^", true),
-        ("゛", true),
-        ("D", false)
-      ],
-      \.isExtender:[
-        ("·", true),
-        ("・", false)
-      ],
-      \.isOtherLowercase:[
-        ("\u{00AA}", true),
-        ("l", false)
-      ],
-      \.isOtherUppercase:[
-        ("Ⓤ", true),
-        ("U", false),
-      ],
-      \.isNoncharacterCodePoint:[
-        ("\u{10FFFF}", true),
-        ("の", false)
-      ],
-      \.isOtherGraphemeExtend:[
-        ("\u{1D165}", true),
-        ("G", false)
-      ],
-      \.isIDSBinaryOperator:[
-        ("\u{2FF1}", true),
-        ("\u{2FF2}", false)
-      ],
-      \.isIDSTrinaryOperator:[
-        ("\u{2FF1}", false),
-        ("\u{2FF2}", true),
-      ],
-      \.isRadical:[
-        ("⺖", true),
-        ("心", false)
-      ],
-      \.isUnifiedIdeograph:[
-        ("次", true),
-        ("→", false)
-      ],
-      \.isOtherDefaultIgnorableCodePoint:[
-        ("\u{2065}", true),
-        ("無", false)
-      ],
-      \.isDeprecated:[
-        ("\u{0149}", true),
-        ("d", false)
-      ],
-      \.isSoftDotted:[
-        ("i", true),
-        ("ｉ", false)
-      ],
-      \.isLogicalOrderException:[
-        ("\u{AABB}", true),
-        ("論", false)
-      ],
-      \.isOtherIDStart:[
-        ("\u{2118}", true),
-        ("P", false)
-      ],
-      \.isOtherIDContinue:[
-        ("·", true),
-        ("●", false)
-      ],
-      \.isSentenceTerminal:[
-        ("!", true),
-        ("、", false)
-      ],
-      \.isVariationSelector:[
-        ("\u{180C}", true),
-        ("選", false)
-      ],
-      \.isPatternWhitespace:[
-        ("\u{200E}", true),
-        ("　", false)
-      ],
-      \.isPatternSyntax:[
-        ("%", true),
-        ("p", false)
-      ],
-      \.isPrependedConcatenationMark:[
-        ("\u{0600}", true),
-        ("#", false)
-      ],
-      \.isRegionalIndicator:[
-        ("\u{1F1F1}", true),
-        ("F", false)
-      ]
-    ]
+    do { // Core Properties
+      _with(\.isMath) {
+        _assert("+", expected: true)
+        _assert("十", expected:  false)
+      }
+      _with(\.isAlphabetic) {
+        _assert("A", expected: true)
+        _assert("0", expected: false)
+      }
+      _with(\.isLowercase) {
+        _assert("x", expected: true)
+        _assert("X", expected: false)
+      }
+      _with(\.isLowercase) {
+        _assert("x", expected: true)
+        _assert("X", expected: false)
+      }
+      _with(\.isUppercase) {
+        _assert("Z", expected: true)
+        _assert("z", expected: false)
+      }
+      _with(\.isCased) {
+        _assert("u", expected: true)
+        _assert("U", expected: true)
+        _assert("ウ", expected: false)
+      }
+      _with(\.isCaseIgnorable) {
+        _assert("'", expected: true)
+        _assert("「", expected: false)
+      }
+      _with(\.changesWhenLowercased) {
+        _assert("Ａ", expected: true)
+        _assert("ａ", expected: false)
+      }
+      _with(\.changesWhenUppercased) {
+        _assert("ｘ", expected: true)
+        _assert("❌", expected: false)
+      }
+      _with(\.changesWhenTitlecased) {
+        _assert("t", expected: true)
+        _assert("T", expected: false)
+      }
+      _with(\.changesWhenCaseFolded) {
+        _assert("F", expected: true)
+        _assert("f", expected: false)
+      }
+      _with(\.changesWhenCaseMapped) {
+        _assert("m", expected: true)
+        _assert("ま", expected: false)
+      }
+      _with(\.isIDStart) {
+        _assert("始", expected: true)
+        _assert("!", expected: false)
+      }
+      _with(\.isIDContinue) {
+        _assert("続", expected: true)
+        _assert("*", expected: false)
+      }
+      _with(\.isXIDStart) {
+        _assert("初", expected: true)
+        _assert("?", expected: false)
+      }
+      _with(\.isXIDContinue) {
+        _assert("継", expected: true)
+        _assert("/", expected: false)
+      }
+      _with(\.isDefaultIgnorableCodePoint) {
+        _assert("\u{E0777}", expected: true)
+        _assert("７", expected: false)
+      }
+      _with(\.isGraphemeExtend) {
+        _assert("\u{1d16e}", expected: true)
+        _assert("♪", expected: false)
+      }
+      _with(\.isGraphemeBase) {
+        _assert("\u{1d100}", expected: true)
+        _assert("\t", expected: false)
+      }
+    }
+
+    do { // Properties
+      _with(\.isWhitespace) {
+        _assert("　", expected: true)
+        _assert("間", expected: false)
+      }
+      _with(\.isBidiControl) {
+        _assert("\u{200E}", expected: true)
+        _assert("ビ", expected: false)
+      }
+      _with(\.isJoinControl) {
+        _assert("\u{200C}", expected: true)
+        _assert(" ", expected: false)
+      }
+      _with(\.isDash) {
+        _assert("゠", expected: true)
+        _assert("~", expected: false)
+      }
+      // `Hyphen` property was deprecated as of Unicode 6.0.0.
+      _with(\.isHyphen) {
+        _assert("-", expected: true)
+        _assert("~", expected: false)
+      }
+      _with(\.isQuotationMark) {
+        _assert("“", expected: true)
+        _assert("」", expected: true)
+        _assert("$", expected: false)
+      }
+      _with(\.isTerminalPunctuation) {
+        _assert("！", expected: true)
+        _assert("=", expected: false)
+      }
+      _with(\.isOtherMath) {
+        _assert("★", expected: true)
+        _assert("星", expected: false)
+      }
+      _with(\.isHexDigit) {
+        _assert("４", expected: true)
+        _assert("四", expected: false)
+      }
+      _with(\.isASCIIHexDigit) {
+        _assert("6", expected: true)
+        _assert("A", expected: true)
+        _assert("e", expected: true)
+        _assert("X", expected: false)
+      }
+      _with(\.isOtherAlphabetic) {
+        _assert("\u{345}", expected: true)
+        _assert("A", expected: false)
+      }
+      _with(\.isIdeographic) {
+        _assert("\u{3006}", expected: true)
+        _assert("\u{2FA1E}", expected: false)
+      }
+      _with(\.isDiacritic) {
+        _assert("^", expected: true)
+        _assert("゛", expected: true)
+        _assert("D", expected: false)
+      }
+      _with(\.isExtender) {
+        _assert("·", expected: true)
+        _assert("・", expected: false)
+      }
+      _with(\.isOtherLowercase) {
+        _assert("\u{00AA}", expected: true)
+        _assert("l", expected: false)
+      }
+      _with(\.isOtherUppercase) {
+        _assert("Ⓤ", expected: true)
+        _assert("U", expected: false)
+      }
+      _with(\.isNoncharacterCodePoint) {
+        _assert("\u{10FFFF}", expected: true)
+        _assert("の", expected: false)
+      }
+      _with(\.isOtherGraphemeExtend) {
+        _assert("\u{1D165}", expected: true)
+        _assert("G", expected: false)
+      }
+      _with(\.isIDSBinaryOperator) {
+        _assert("\u{2FF1}", expected: true)
+        _assert("\u{2FF2}", expected: false)
+      }
+      _with(\.isIDSTrinaryOperator) {
+        _assert("\u{2FF1}", expected: false)
+        _assert("\u{2FF2}", expected: true)
+      }
+      _with(\.isRadical) {
+        _assert("⺖", expected: true)
+        _assert("心", expected: false)
+      }
+      _with(\.isUnifiedIdeograph) {
+        _assert("次", expected: true)
+        _assert("→", expected: false)
+      }
+      _with(\.isOtherDefaultIgnorableCodePoint) {
+        _assert("\u{2065}", expected: true)
+        _assert("無", expected: false)
+      }
+      _with(\.isDeprecated) {
+        _assert("\u{0149}", expected: true)
+        _assert("d", expected: false)
+      }
+      _with(\.isSoftDotted) {
+        _assert("i", expected: true)
+        _assert("ｉ", expected: false)
+      }
+      _with(\.isLogicalOrderException) {
+        _assert("\u{AABB}", expected: true)
+        _assert("論", expected: false)
+      }
+      _with(\.isOtherIDStart) {
+        _assert("\u{2118}", expected: true)
+        _assert("P", expected: false)
+      }
+      _with(\.isOtherIDContinue) {
+        _assert("·", expected: true)
+        _assert("●", expected: false)
+      }
+      _with(\.isSentenceTerminal) {
+        _assert("!", expected: true)
+        _assert("、", expected: false)
+      }
+      _with(\.isVariationSelector) {
+        _assert("\u{180C}", expected: true)
+        _assert("選", expected: false)
+      }
+      _with(\.isPatternWhitespace) {
+        _assert("\u{200E}", expected: true)
+        _assert("　", expected: false)
+      }
+      _with(\.isPatternSyntax) {
+        _assert("%", expected: true)
+        _assert("p", expected: false)
+      }
+      _with(\.isPrependedConcatenationMark) {
+        _assert("\u{0600}", expected: true)
+        _assert("#", expected: false)
+      }
+      _with(\.isRegionalIndicator) {
+        _assert("\u{1F1F1}", expected: true)
+        _assert("F", expected: false)
+      }
+    }
     
-    let binPropTests: PropTests = [
-      \.isBidiMirrored:[
-        ("(", true),
-        ("-", false)
-      ]
-    ]
     
-    let normPropTests: PropTests = [
-      \.isFullCompositionExclusion:[
-        ("卵" /* U+F91C */, true),
-        ("卵" /* U+5375 */, false)
-      ],
-      \.changesWhenNFKCCaseFolded:[
-        ("C", true),
-        ("c", false)
-      ]
-    ]
-    
-    let emojiPropTests: PropTests = [
-      \.isEmoji:[
-        ("#", true),
-        ("E", false)
-      ],
-      \.isEmojiPresentation:[
-        ("☕", true),
-        ("C", false)
-      ],
-      \.isEmojiModifier:[
-        ("🏻", true),
-        ("M", false)
-      ],
-      \.isEmojiModifierBase:[
-        ("\u{270C}", true),
-        ("B", false)
-      ],
-      \.isExtendedPictographic:[
-        ("🉑", true),
-        ("可", false)
-      ]
-    ]
-    
-    for testsDic in [corePropTests, propTests, binPropTests, normPropTests, emojiPropTests] {
-      for (keyPath, tests) in testsDic {
-        for (scalar, expected) in tests {
-          check(scalar, keyPath, expected)
-        }
+
+    do { // Bin Props
+      _with(\.isBidiMirrored) {
+        _assert("(", expected: true)
+        _assert("-", expected: false)
+      }
+    }
+
+    do { // Normalization Props
+      _with(\.isFullCompositionExclusion) {
+        _assert("卵" /* U+F91C */, expected: true)
+        _assert("卵" /* U+5375 */, expected: false)
+      }
+      _with(\.changesWhenNFKCCaseFolded) {
+        _assert("C", expected: true)
+        _assert("c", expected: false)
+      }
+    }
+
+    do { // Emoji
+      _with(\.isEmoji) {
+        _assert("#", expected: true)
+        _assert("E", expected: false)
+      }
+      _with(\.isEmojiPresentation) {
+        _assert("☕", expected: true)
+        _assert("C", expected: false)
+      }
+      _with(\.isEmojiModifier) {
+        _assert("🏻", expected: true)
+        _assert("M", expected: false)
+      }
+      _with(\.isEmojiModifierBase) {
+        _assert("\u{270C}", expected: true)
+        _assert("B", expected: false)
+      }
+      _with(\.isExtendedPictographic) {
+        _assert("🉑", expected: true)
+        _assert("可", expected: false)
       }
     }
   }
@@ -495,17 +459,5 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(ccc(integer:0x035E), .doubleAbove)
     XCTAssertEqual(ccc(integer:0x0345), .iotaSubscript)
   }
-  
-  static var allTests: [(String, (UnicodeSupplementTests) -> () -> ())] = [
-    ("test_UnicodeAssociativeArray", test_UnicodeAssociativeArray),
-    ("test_UnicodePredicate", test_UnicodePredicate),
-    ("test_BidiClass", test_BidiClass),
-    ("test_IDNAStatus", test_IDNAStatus),
-    ("test_JoiningGroup", test_JoiningGroup),
-    ("test_JoiningType", test_JoiningType),
-    ("test_properties", test_properties),
-    ("test_GeneralCategory", test_GeneralCategory),
-    ("test_CanonicalCombiningClass", test_CanonicalCombiningClass),
-  ]
 }
 
