@@ -58,7 +58,7 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     return _name(for: self._typeAliases.count - 1)
   }
   
-  open func convert<S>(_ intermidiates: S) throws -> Data where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public final func convert<S>(_ intermidiates: S) throws -> Data where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     let code: String = try self.convert(intermidiates)
     
     let license = unicodeLicense()
