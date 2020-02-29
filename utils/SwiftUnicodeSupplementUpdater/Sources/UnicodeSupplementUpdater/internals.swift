@@ -25,7 +25,7 @@ internal let _sourcesDirectory = _packageRoot.appendingPathComponent("Sources", 
 internal let _mainModuleDirectory = _sourcesDirectory.appendingPathComponent(_mainModuleName, isDirectory: true)
 internal let _dataDirectory = _mainModuleDirectory.appendingPathComponent("__data__", isDirectory: true)
 
-internal let _ruledLine = "/* " + String(repeating: "*", count: 94) + " */\n"
+internal let _ruledLine = String.Line("/* " + String(repeating: "*", count: 94) + " */")!
 
 internal func _typeName<T>(of type: T.Type) -> String {
   return String(reflecting: type).components(separatedBy: ".").dropFirst().joined(separator: ".")
@@ -38,7 +38,7 @@ extension Unicode.Scalar.Value {
 }
 
 extension AnyRange where Bound == Unicode.Scalar.Value {
-  internal var _rangeDescription: String {
+  internal var _description: String {
     let lower = self.bounds!.lower.value!
     let upper = self.bounds!.upper.value!
     return "\(lower._description)....\(upper._description)"

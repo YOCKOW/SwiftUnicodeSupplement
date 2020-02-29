@@ -7,6 +7,7 @@
  
 import Foundation
 import Ranges
+import StringComposition
 import UnicodeSupplement
 import yCodeUpdater
 import yExtensions
@@ -70,9 +71,9 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
       }
     }
   }
-  open override func convert<S>(_ intermidiates: S) throws -> String where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  open override func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     let intermidiates = Array(intermidiates)
-    var result: String = try super.convert(intermidiates)
+    var result: StringLines = try super.convert(intermidiates)
     
     assert(intermidiates.count == 1)
     // Extract special default values in comments
@@ -84,6 +85,7 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
     let rangeSuffix = " are in the range:"
     let propertiesSuffix = " have one of the following properties:"
     for row in intermidiates.first!.content.rows {
+      // Break out the loop when comment lines end.
       if row.payload != nil { break }
       guard let comment = row.comment else { continue }
       if comment.hasPrefix(prefix) {
@@ -121,43 +123,36 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
       }
     }
     
-    do { // Ranges
-      let pairTypeName = self.typeAliasName(for: "(AnyRange<UInt32>, Unicode.BidiClass)")
-      var nn = 0
-      func _pairID(for nx: Int) -> String { return "__pair_\(self.prefix)_default_ranges_\(nx._base36)" }
-      for (range, bidiClass) in defaultValueRanges {
-        defer { nn += 1 }
-        result += "private let \(_pairID(for: nn)): \(pairTypeName) = (\(range._rangeDescription), \(self.describe(value: bidiClass)))\n"
-      }
-      let arrayTypeName = self.typeAliasName(for: "Array<\(pairTypeName)>")
-      let arrayID = "__array_\(self.prefix)_default_ranges"
-      result += "private let \(arrayID): \(arrayTypeName) = [\n"
-      for ii in 0..<nn {
-        result += "  \(_pairID(for: ii)),\n"
-      }
-      result += "]\n"
-      result += "internal let _\(self.prefix)_default_ranges = RangeDictionary<UInt32, Unicode.BidiClass>(carefullySortedRangesAndValues: \(arrayID))\n"
+    do { // Default Ranges
+      result.append("// Default Values defined by ranges")
+      result.append(contentsOf: self._convert(defaultValueRanges, key: "default_ranges", describer: self.describe(value:)))
     }
     
-    do { // Properties
+    do { // Default Properties
+      result.append("// Default Values defined by core properties")
+      
       let keyPathOriginalTypeName = "(KeyPath<Unicode.Scalar.LatestProperties, Bool>, Bool, Unicode.BidiClass)"
       let keyPathTypeName = self.typeAliasName(for: keyPathOriginalTypeName)
-      func _pairID(for nx: Int) -> String { return "__pair_\(self.prefix)_default_properties_\(nx._base36)" }
+      func _tripleID(_ nx: Int) -> String {
+        return "__\(self.prefix)_default_properties_triple_\(nx._base36)"
+      }
+      func _triple(_ prop: String, _ status: Bool, _ bidiClass: Unicode.BidiClass) -> String {
+        return "(\\.is\(prop.upperCamelCase), \(status ? "true" : "false"), \(self.describe(value: bidiClass)))"
+      }
+      
       var nn = 0
-      for (bidiClassString, properties) in defaultValueProperties {
-        let bidiClass = Unicode.BidiClass(abbreviated: bidiClassString)!
+      for (bidiString, properties) in defaultValueProperties.sorted(by: { $0.key < $1.key }) {
+        let bidiClass = Unicode.BidiClass(abbreviated: bidiString)!
         for property in properties {
-          defer { nn += 1 }
-          
-          let propKey = "is\(property.upperCamelCase)"
-          result += "private let \(_pairID(for: nn)): \(keyPathTypeName) = (\\.\(propKey), true, \(self.describe(value: bidiClass)))\n"
+          result.append("private let \(_tripleID(nn)): \(keyPathTypeName) = \(_triple(property, true, bidiClass))")
+          nn += 1
         }
       }
-      result += "internal let _\(self.prefix)_default_properties: Array<\(keyPathOriginalTypeName)> = [\n"
+      result.append("internal let _\(self.prefix)_default_properties: Array<\(keyPathOriginalTypeName)> = [")
       for ii in 0..<nn {
-        result += "  \(_pairID(for: ii)),\n"
+        result.append(String.Line("\(_tripleID(ii)),", indentLevel: 1)!)
       }
-      result += "]\n"
+      result.append("]")
     }
     
     return result

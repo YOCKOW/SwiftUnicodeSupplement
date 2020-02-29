@@ -9,6 +9,7 @@
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
+  
   See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
   Data Files and Software.
   NOTICE TO USER: Carefully read the following legal agreement.
@@ -19,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -50,1667 +51,1058 @@
 */
 
 // Required Modules
-
+import Ranges
 
 // Type Aliases
+private typealias _T0 = Unicode.Scalar.Value
+private typealias _T1 = Set<_T0>
+private typealias _T2 = AnyRange<_T0>
+private typealias _T3 = Array<_T2>
 
-
-import Ranges
-private typealias _T0 = AnyRange<UInt32>
-private typealias _T1 = [AnyRange<UInt32>]
 /* ********************************************************************************************** */
 // Normalization Property: Changes_When_NFKC_Casefolded
-internal let _normProp_Changes_When_NFKC_Casefolded = ({ () -> MultipleRanges<UInt32> in
-let range_0: _T0 = 0x41....0x5a
-let range_1: _T0 = 0xa0....0xa0
-let range_2: _T0 = 0xa8....0xa8
-let range_3: _T0 = 0xaa....0xaa
-let range_4: _T0 = 0xad....0xad
-let range_5: _T0 = 0xaf....0xaf
-let range_6: _T0 = 0xb2....0xb5
-let range_7: _T0 = 0xb8....0xba
-let range_8: _T0 = 0xbc....0xbe
-let range_9: _T0 = 0xc0....0xd6
-let range_a: _T0 = 0xd8....0xdf
-let range_b: _T0 = 0x100....0x100
-let range_c: _T0 = 0x102....0x102
-let range_d: _T0 = 0x104....0x104
-let range_e: _T0 = 0x106....0x106
-let range_f: _T0 = 0x108....0x108
-let range_g: _T0 = 0x10a....0x10a
-let range_h: _T0 = 0x10c....0x10c
-let range_i: _T0 = 0x10e....0x10e
-let range_j: _T0 = 0x110....0x110
-let range_k: _T0 = 0x112....0x112
-let range_l: _T0 = 0x114....0x114
-let range_m: _T0 = 0x116....0x116
-let range_n: _T0 = 0x118....0x118
-let range_o: _T0 = 0x11a....0x11a
-let range_p: _T0 = 0x11c....0x11c
-let range_q: _T0 = 0x11e....0x11e
-let range_r: _T0 = 0x120....0x120
-let range_s: _T0 = 0x122....0x122
-let range_t: _T0 = 0x124....0x124
-let range_u: _T0 = 0x126....0x126
-let range_v: _T0 = 0x128....0x128
-let range_w: _T0 = 0x12a....0x12a
-let range_x: _T0 = 0x12c....0x12c
-let range_y: _T0 = 0x12e....0x12e
-let range_z: _T0 = 0x130....0x130
-let range_10: _T0 = 0x132....0x134
-let range_11: _T0 = 0x136....0x136
-let range_12: _T0 = 0x139....0x139
-let range_13: _T0 = 0x13b....0x13b
-let range_14: _T0 = 0x13d....0x13d
-let range_15: _T0 = 0x13f....0x141
-let range_16: _T0 = 0x143....0x143
-let range_17: _T0 = 0x145....0x145
-let range_18: _T0 = 0x147....0x147
-let range_19: _T0 = 0x149....0x14a
-let range_1a: _T0 = 0x14c....0x14c
-let range_1b: _T0 = 0x14e....0x14e
-let range_1c: _T0 = 0x150....0x150
-let range_1d: _T0 = 0x152....0x152
-let range_1e: _T0 = 0x154....0x154
-let range_1f: _T0 = 0x156....0x156
-let range_1g: _T0 = 0x158....0x158
-let range_1h: _T0 = 0x15a....0x15a
-let range_1i: _T0 = 0x15c....0x15c
-let range_1j: _T0 = 0x15e....0x15e
-let range_1k: _T0 = 0x160....0x160
-let range_1l: _T0 = 0x162....0x162
-let range_1m: _T0 = 0x164....0x164
-let range_1n: _T0 = 0x166....0x166
-let range_1o: _T0 = 0x168....0x168
-let range_1p: _T0 = 0x16a....0x16a
-let range_1q: _T0 = 0x16c....0x16c
-let range_1r: _T0 = 0x16e....0x16e
-let range_1s: _T0 = 0x170....0x170
-let range_1t: _T0 = 0x172....0x172
-let range_1u: _T0 = 0x174....0x174
-let range_1v: _T0 = 0x176....0x176
-let range_1w: _T0 = 0x178....0x179
-let range_1x: _T0 = 0x17b....0x17b
-let range_1y: _T0 = 0x17d....0x17d
-let range_1z: _T0 = 0x17f....0x17f
-let range_20: _T0 = 0x181....0x182
-let range_21: _T0 = 0x184....0x184
-let range_22: _T0 = 0x186....0x187
-let range_23: _T0 = 0x189....0x18b
-let range_24: _T0 = 0x18e....0x191
-let range_25: _T0 = 0x193....0x194
-let range_26: _T0 = 0x196....0x198
-let range_27: _T0 = 0x19c....0x19d
-let range_28: _T0 = 0x19f....0x1a0
-let range_29: _T0 = 0x1a2....0x1a2
-let range_2a: _T0 = 0x1a4....0x1a4
-let range_2b: _T0 = 0x1a6....0x1a7
-let range_2c: _T0 = 0x1a9....0x1a9
-let range_2d: _T0 = 0x1ac....0x1ac
-let range_2e: _T0 = 0x1ae....0x1af
-let range_2f: _T0 = 0x1b1....0x1b3
-let range_2g: _T0 = 0x1b5....0x1b5
-let range_2h: _T0 = 0x1b7....0x1b8
-let range_2i: _T0 = 0x1bc....0x1bc
-let range_2j: _T0 = 0x1c4....0x1cd
-let range_2k: _T0 = 0x1cf....0x1cf
-let range_2l: _T0 = 0x1d1....0x1d1
-let range_2m: _T0 = 0x1d3....0x1d3
-let range_2n: _T0 = 0x1d5....0x1d5
-let range_2o: _T0 = 0x1d7....0x1d7
-let range_2p: _T0 = 0x1d9....0x1d9
-let range_2q: _T0 = 0x1db....0x1db
-let range_2r: _T0 = 0x1de....0x1de
-let range_2s: _T0 = 0x1e0....0x1e0
-let range_2t: _T0 = 0x1e2....0x1e2
-let range_2u: _T0 = 0x1e4....0x1e4
-let range_2v: _T0 = 0x1e6....0x1e6
-let range_2w: _T0 = 0x1e8....0x1e8
-let range_2x: _T0 = 0x1ea....0x1ea
-let range_2y: _T0 = 0x1ec....0x1ec
-let range_2z: _T0 = 0x1ee....0x1ee
-let range_30: _T0 = 0x1f1....0x1f4
-let range_31: _T0 = 0x1f6....0x1f8
-let range_32: _T0 = 0x1fa....0x1fa
-let range_33: _T0 = 0x1fc....0x1fc
-let range_34: _T0 = 0x1fe....0x1fe
-let range_35: _T0 = 0x200....0x200
-let range_36: _T0 = 0x202....0x202
-let range_37: _T0 = 0x204....0x204
-let range_38: _T0 = 0x206....0x206
-let range_39: _T0 = 0x208....0x208
-let range_3a: _T0 = 0x20a....0x20a
-let range_3b: _T0 = 0x20c....0x20c
-let range_3c: _T0 = 0x20e....0x20e
-let range_3d: _T0 = 0x210....0x210
-let range_3e: _T0 = 0x212....0x212
-let range_3f: _T0 = 0x214....0x214
-let range_3g: _T0 = 0x216....0x216
-let range_3h: _T0 = 0x218....0x218
-let range_3i: _T0 = 0x21a....0x21a
-let range_3j: _T0 = 0x21c....0x21c
-let range_3k: _T0 = 0x21e....0x21e
-let range_3l: _T0 = 0x220....0x220
-let range_3m: _T0 = 0x222....0x222
-let range_3n: _T0 = 0x224....0x224
-let range_3o: _T0 = 0x226....0x226
-let range_3p: _T0 = 0x228....0x228
-let range_3q: _T0 = 0x22a....0x22a
-let range_3r: _T0 = 0x22c....0x22c
-let range_3s: _T0 = 0x22e....0x22e
-let range_3t: _T0 = 0x230....0x230
-let range_3u: _T0 = 0x232....0x232
-let range_3v: _T0 = 0x23a....0x23b
-let range_3w: _T0 = 0x23d....0x23e
-let range_3x: _T0 = 0x241....0x241
-let range_3y: _T0 = 0x243....0x246
-let range_3z: _T0 = 0x248....0x248
-let range_40: _T0 = 0x24a....0x24a
-let range_41: _T0 = 0x24c....0x24c
-let range_42: _T0 = 0x24e....0x24e
-let range_43: _T0 = 0x2b0....0x2b8
-let range_44: _T0 = 0x2d8....0x2dd
-let range_45: _T0 = 0x2e0....0x2e4
-let range_46: _T0 = 0x340....0x341
-let range_47: _T0 = 0x343....0x345
-let range_48: _T0 = 0x34f....0x34f
-let range_49: _T0 = 0x370....0x370
-let range_4a: _T0 = 0x372....0x372
-let range_4b: _T0 = 0x374....0x374
-let range_4c: _T0 = 0x376....0x376
-let range_4d: _T0 = 0x37a....0x37a
-let range_4e: _T0 = 0x37e....0x37f
-let range_4f: _T0 = 0x384....0x38a
-let range_4g: _T0 = 0x38c....0x38c
-let range_4h: _T0 = 0x38e....0x38f
-let range_4i: _T0 = 0x391....0x3a1
-let range_4j: _T0 = 0x3a3....0x3ab
-let range_4k: _T0 = 0x3c2....0x3c2
-let range_4l: _T0 = 0x3cf....0x3d6
-let range_4m: _T0 = 0x3d8....0x3d8
-let range_4n: _T0 = 0x3da....0x3da
-let range_4o: _T0 = 0x3dc....0x3dc
-let range_4p: _T0 = 0x3de....0x3de
-let range_4q: _T0 = 0x3e0....0x3e0
-let range_4r: _T0 = 0x3e2....0x3e2
-let range_4s: _T0 = 0x3e4....0x3e4
-let range_4t: _T0 = 0x3e6....0x3e6
-let range_4u: _T0 = 0x3e8....0x3e8
-let range_4v: _T0 = 0x3ea....0x3ea
-let range_4w: _T0 = 0x3ec....0x3ec
-let range_4x: _T0 = 0x3ee....0x3ee
-let range_4y: _T0 = 0x3f0....0x3f2
-let range_4z: _T0 = 0x3f4....0x3f5
-let range_50: _T0 = 0x3f7....0x3f7
-let range_51: _T0 = 0x3f9....0x3fa
-let range_52: _T0 = 0x3fd....0x42f
-let range_53: _T0 = 0x460....0x460
-let range_54: _T0 = 0x462....0x462
-let range_55: _T0 = 0x464....0x464
-let range_56: _T0 = 0x466....0x466
-let range_57: _T0 = 0x468....0x468
-let range_58: _T0 = 0x46a....0x46a
-let range_59: _T0 = 0x46c....0x46c
-let range_5a: _T0 = 0x46e....0x46e
-let range_5b: _T0 = 0x470....0x470
-let range_5c: _T0 = 0x472....0x472
-let range_5d: _T0 = 0x474....0x474
-let range_5e: _T0 = 0x476....0x476
-let range_5f: _T0 = 0x478....0x478
-let range_5g: _T0 = 0x47a....0x47a
-let range_5h: _T0 = 0x47c....0x47c
-let range_5i: _T0 = 0x47e....0x47e
-let range_5j: _T0 = 0x480....0x480
-let range_5k: _T0 = 0x48a....0x48a
-let range_5l: _T0 = 0x48c....0x48c
-let range_5m: _T0 = 0x48e....0x48e
-let range_5n: _T0 = 0x490....0x490
-let range_5o: _T0 = 0x492....0x492
-let range_5p: _T0 = 0x494....0x494
-let range_5q: _T0 = 0x496....0x496
-let range_5r: _T0 = 0x498....0x498
-let range_5s: _T0 = 0x49a....0x49a
-let range_5t: _T0 = 0x49c....0x49c
-let range_5u: _T0 = 0x49e....0x49e
-let range_5v: _T0 = 0x4a0....0x4a0
-let range_5w: _T0 = 0x4a2....0x4a2
-let range_5x: _T0 = 0x4a4....0x4a4
-let range_5y: _T0 = 0x4a6....0x4a6
-let range_5z: _T0 = 0x4a8....0x4a8
-let range_60: _T0 = 0x4aa....0x4aa
-let range_61: _T0 = 0x4ac....0x4ac
-let range_62: _T0 = 0x4ae....0x4ae
-let range_63: _T0 = 0x4b0....0x4b0
-let range_64: _T0 = 0x4b2....0x4b2
-let range_65: _T0 = 0x4b4....0x4b4
-let range_66: _T0 = 0x4b6....0x4b6
-let range_67: _T0 = 0x4b8....0x4b8
-let range_68: _T0 = 0x4ba....0x4ba
-let range_69: _T0 = 0x4bc....0x4bc
-let range_6a: _T0 = 0x4be....0x4be
-let range_6b: _T0 = 0x4c0....0x4c1
-let range_6c: _T0 = 0x4c3....0x4c3
-let range_6d: _T0 = 0x4c5....0x4c5
-let range_6e: _T0 = 0x4c7....0x4c7
-let range_6f: _T0 = 0x4c9....0x4c9
-let range_6g: _T0 = 0x4cb....0x4cb
-let range_6h: _T0 = 0x4cd....0x4cd
-let range_6i: _T0 = 0x4d0....0x4d0
-let range_6j: _T0 = 0x4d2....0x4d2
-let range_6k: _T0 = 0x4d4....0x4d4
-let range_6l: _T0 = 0x4d6....0x4d6
-let range_6m: _T0 = 0x4d8....0x4d8
-let range_6n: _T0 = 0x4da....0x4da
-let range_6o: _T0 = 0x4dc....0x4dc
-let range_6p: _T0 = 0x4de....0x4de
-let range_6q: _T0 = 0x4e0....0x4e0
-let range_6r: _T0 = 0x4e2....0x4e2
-let range_6s: _T0 = 0x4e4....0x4e4
-let range_6t: _T0 = 0x4e6....0x4e6
-let range_6u: _T0 = 0x4e8....0x4e8
-let range_6v: _T0 = 0x4ea....0x4ea
-let range_6w: _T0 = 0x4ec....0x4ec
-let range_6x: _T0 = 0x4ee....0x4ee
-let range_6y: _T0 = 0x4f0....0x4f0
-let range_6z: _T0 = 0x4f2....0x4f2
-let range_70: _T0 = 0x4f4....0x4f4
-let range_71: _T0 = 0x4f6....0x4f6
-let range_72: _T0 = 0x4f8....0x4f8
-let range_73: _T0 = 0x4fa....0x4fa
-let range_74: _T0 = 0x4fc....0x4fc
-let range_75: _T0 = 0x4fe....0x4fe
-let range_76: _T0 = 0x500....0x500
-let range_77: _T0 = 0x502....0x502
-let range_78: _T0 = 0x504....0x504
-let range_79: _T0 = 0x506....0x506
-let range_7a: _T0 = 0x508....0x508
-let range_7b: _T0 = 0x50a....0x50a
-let range_7c: _T0 = 0x50c....0x50c
-let range_7d: _T0 = 0x50e....0x50e
-let range_7e: _T0 = 0x510....0x510
-let range_7f: _T0 = 0x512....0x512
-let range_7g: _T0 = 0x514....0x514
-let range_7h: _T0 = 0x516....0x516
-let range_7i: _T0 = 0x518....0x518
-let range_7j: _T0 = 0x51a....0x51a
-let range_7k: _T0 = 0x51c....0x51c
-let range_7l: _T0 = 0x51e....0x51e
-let range_7m: _T0 = 0x520....0x520
-let range_7n: _T0 = 0x522....0x522
-let range_7o: _T0 = 0x524....0x524
-let range_7p: _T0 = 0x526....0x526
-let range_7q: _T0 = 0x528....0x528
-let range_7r: _T0 = 0x52a....0x52a
-let range_7s: _T0 = 0x52c....0x52c
-let range_7t: _T0 = 0x52e....0x52e
-let range_7u: _T0 = 0x531....0x556
-let range_7v: _T0 = 0x587....0x587
-let range_7w: _T0 = 0x61c....0x61c
-let range_7x: _T0 = 0x675....0x678
-let range_7y: _T0 = 0x958....0x95f
-let range_7z: _T0 = 0x9dc....0x9dd
-let range_80: _T0 = 0x9df....0x9df
-let range_81: _T0 = 0xa33....0xa33
-let range_82: _T0 = 0xa36....0xa36
-let range_83: _T0 = 0xa59....0xa5b
-let range_84: _T0 = 0xa5e....0xa5e
-let range_85: _T0 = 0xb5c....0xb5d
-let range_86: _T0 = 0xe33....0xe33
-let range_87: _T0 = 0xeb3....0xeb3
-let range_88: _T0 = 0xedc....0xedd
-let range_89: _T0 = 0xf0c....0xf0c
-let range_8a: _T0 = 0xf43....0xf43
-let range_8b: _T0 = 0xf4d....0xf4d
-let range_8c: _T0 = 0xf52....0xf52
-let range_8d: _T0 = 0xf57....0xf57
-let range_8e: _T0 = 0xf5c....0xf5c
-let range_8f: _T0 = 0xf69....0xf69
-let range_8g: _T0 = 0xf73....0xf73
-let range_8h: _T0 = 0xf75....0xf79
-let range_8i: _T0 = 0xf81....0xf81
-let range_8j: _T0 = 0xf93....0xf93
-let range_8k: _T0 = 0xf9d....0xf9d
-let range_8l: _T0 = 0xfa2....0xfa2
-let range_8m: _T0 = 0xfa7....0xfa7
-let range_8n: _T0 = 0xfac....0xfac
-let range_8o: _T0 = 0xfb9....0xfb9
-let range_8p: _T0 = 0x10a0....0x10c5
-let range_8q: _T0 = 0x10c7....0x10c7
-let range_8r: _T0 = 0x10cd....0x10cd
-let range_8s: _T0 = 0x10fc....0x10fc
-let range_8t: _T0 = 0x115f....0x1160
-let range_8u: _T0 = 0x13f8....0x13fd
-let range_8v: _T0 = 0x17b4....0x17b5
-let range_8w: _T0 = 0x180b....0x180e
-let range_8x: _T0 = 0x1c80....0x1c88
-let range_8y: _T0 = 0x1c90....0x1cba
-let range_8z: _T0 = 0x1cbd....0x1cbf
-let range_90: _T0 = 0x1d2c....0x1d2e
-let range_91: _T0 = 0x1d30....0x1d3a
-let range_92: _T0 = 0x1d3c....0x1d4d
-let range_93: _T0 = 0x1d4f....0x1d6a
-let range_94: _T0 = 0x1d78....0x1d78
-let range_95: _T0 = 0x1d9b....0x1dbf
-let range_96: _T0 = 0x1e00....0x1e00
-let range_97: _T0 = 0x1e02....0x1e02
-let range_98: _T0 = 0x1e04....0x1e04
-let range_99: _T0 = 0x1e06....0x1e06
-let range_9a: _T0 = 0x1e08....0x1e08
-let range_9b: _T0 = 0x1e0a....0x1e0a
-let range_9c: _T0 = 0x1e0c....0x1e0c
-let range_9d: _T0 = 0x1e0e....0x1e0e
-let range_9e: _T0 = 0x1e10....0x1e10
-let range_9f: _T0 = 0x1e12....0x1e12
-let range_9g: _T0 = 0x1e14....0x1e14
-let range_9h: _T0 = 0x1e16....0x1e16
-let range_9i: _T0 = 0x1e18....0x1e18
-let range_9j: _T0 = 0x1e1a....0x1e1a
-let range_9k: _T0 = 0x1e1c....0x1e1c
-let range_9l: _T0 = 0x1e1e....0x1e1e
-let range_9m: _T0 = 0x1e20....0x1e20
-let range_9n: _T0 = 0x1e22....0x1e22
-let range_9o: _T0 = 0x1e24....0x1e24
-let range_9p: _T0 = 0x1e26....0x1e26
-let range_9q: _T0 = 0x1e28....0x1e28
-let range_9r: _T0 = 0x1e2a....0x1e2a
-let range_9s: _T0 = 0x1e2c....0x1e2c
-let range_9t: _T0 = 0x1e2e....0x1e2e
-let range_9u: _T0 = 0x1e30....0x1e30
-let range_9v: _T0 = 0x1e32....0x1e32
-let range_9w: _T0 = 0x1e34....0x1e34
-let range_9x: _T0 = 0x1e36....0x1e36
-let range_9y: _T0 = 0x1e38....0x1e38
-let range_9z: _T0 = 0x1e3a....0x1e3a
-let range_a0: _T0 = 0x1e3c....0x1e3c
-let range_a1: _T0 = 0x1e3e....0x1e3e
-let range_a2: _T0 = 0x1e40....0x1e40
-let range_a3: _T0 = 0x1e42....0x1e42
-let range_a4: _T0 = 0x1e44....0x1e44
-let range_a5: _T0 = 0x1e46....0x1e46
-let range_a6: _T0 = 0x1e48....0x1e48
-let range_a7: _T0 = 0x1e4a....0x1e4a
-let range_a8: _T0 = 0x1e4c....0x1e4c
-let range_a9: _T0 = 0x1e4e....0x1e4e
-let range_aa: _T0 = 0x1e50....0x1e50
-let range_ab: _T0 = 0x1e52....0x1e52
-let range_ac: _T0 = 0x1e54....0x1e54
-let range_ad: _T0 = 0x1e56....0x1e56
-let range_ae: _T0 = 0x1e58....0x1e58
-let range_af: _T0 = 0x1e5a....0x1e5a
-let range_ag: _T0 = 0x1e5c....0x1e5c
-let range_ah: _T0 = 0x1e5e....0x1e5e
-let range_ai: _T0 = 0x1e60....0x1e60
-let range_aj: _T0 = 0x1e62....0x1e62
-let range_ak: _T0 = 0x1e64....0x1e64
-let range_al: _T0 = 0x1e66....0x1e66
-let range_am: _T0 = 0x1e68....0x1e68
-let range_an: _T0 = 0x1e6a....0x1e6a
-let range_ao: _T0 = 0x1e6c....0x1e6c
-let range_ap: _T0 = 0x1e6e....0x1e6e
-let range_aq: _T0 = 0x1e70....0x1e70
-let range_ar: _T0 = 0x1e72....0x1e72
-let range_as: _T0 = 0x1e74....0x1e74
-let range_at: _T0 = 0x1e76....0x1e76
-let range_au: _T0 = 0x1e78....0x1e78
-let range_av: _T0 = 0x1e7a....0x1e7a
-let range_aw: _T0 = 0x1e7c....0x1e7c
-let range_ax: _T0 = 0x1e7e....0x1e7e
-let range_ay: _T0 = 0x1e80....0x1e80
-let range_az: _T0 = 0x1e82....0x1e82
-let range_b0: _T0 = 0x1e84....0x1e84
-let range_b1: _T0 = 0x1e86....0x1e86
-let range_b2: _T0 = 0x1e88....0x1e88
-let range_b3: _T0 = 0x1e8a....0x1e8a
-let range_b4: _T0 = 0x1e8c....0x1e8c
-let range_b5: _T0 = 0x1e8e....0x1e8e
-let range_b6: _T0 = 0x1e90....0x1e90
-let range_b7: _T0 = 0x1e92....0x1e92
-let range_b8: _T0 = 0x1e94....0x1e94
-let range_b9: _T0 = 0x1e9a....0x1e9b
-let range_ba: _T0 = 0x1e9e....0x1e9e
-let range_bb: _T0 = 0x1ea0....0x1ea0
-let range_bc: _T0 = 0x1ea2....0x1ea2
-let range_bd: _T0 = 0x1ea4....0x1ea4
-let range_be: _T0 = 0x1ea6....0x1ea6
-let range_bf: _T0 = 0x1ea8....0x1ea8
-let range_bg: _T0 = 0x1eaa....0x1eaa
-let range_bh: _T0 = 0x1eac....0x1eac
-let range_bi: _T0 = 0x1eae....0x1eae
-let range_bj: _T0 = 0x1eb0....0x1eb0
-let range_bk: _T0 = 0x1eb2....0x1eb2
-let range_bl: _T0 = 0x1eb4....0x1eb4
-let range_bm: _T0 = 0x1eb6....0x1eb6
-let range_bn: _T0 = 0x1eb8....0x1eb8
-let range_bo: _T0 = 0x1eba....0x1eba
-let range_bp: _T0 = 0x1ebc....0x1ebc
-let range_bq: _T0 = 0x1ebe....0x1ebe
-let range_br: _T0 = 0x1ec0....0x1ec0
-let range_bs: _T0 = 0x1ec2....0x1ec2
-let range_bt: _T0 = 0x1ec4....0x1ec4
-let range_bu: _T0 = 0x1ec6....0x1ec6
-let range_bv: _T0 = 0x1ec8....0x1ec8
-let range_bw: _T0 = 0x1eca....0x1eca
-let range_bx: _T0 = 0x1ecc....0x1ecc
-let range_by: _T0 = 0x1ece....0x1ece
-let range_bz: _T0 = 0x1ed0....0x1ed0
-let range_c0: _T0 = 0x1ed2....0x1ed2
-let range_c1: _T0 = 0x1ed4....0x1ed4
-let range_c2: _T0 = 0x1ed6....0x1ed6
-let range_c3: _T0 = 0x1ed8....0x1ed8
-let range_c4: _T0 = 0x1eda....0x1eda
-let range_c5: _T0 = 0x1edc....0x1edc
-let range_c6: _T0 = 0x1ede....0x1ede
-let range_c7: _T0 = 0x1ee0....0x1ee0
-let range_c8: _T0 = 0x1ee2....0x1ee2
-let range_c9: _T0 = 0x1ee4....0x1ee4
-let range_ca: _T0 = 0x1ee6....0x1ee6
-let range_cb: _T0 = 0x1ee8....0x1ee8
-let range_cc: _T0 = 0x1eea....0x1eea
-let range_cd: _T0 = 0x1eec....0x1eec
-let range_ce: _T0 = 0x1eee....0x1eee
-let range_cf: _T0 = 0x1ef0....0x1ef0
-let range_cg: _T0 = 0x1ef2....0x1ef2
-let range_ch: _T0 = 0x1ef4....0x1ef4
-let range_ci: _T0 = 0x1ef6....0x1ef6
-let range_cj: _T0 = 0x1ef8....0x1ef8
-let range_ck: _T0 = 0x1efa....0x1efa
-let range_cl: _T0 = 0x1efc....0x1efc
-let range_cm: _T0 = 0x1efe....0x1efe
-let range_cn: _T0 = 0x1f08....0x1f0f
-let range_co: _T0 = 0x1f18....0x1f1d
-let range_cp: _T0 = 0x1f28....0x1f2f
-let range_cq: _T0 = 0x1f38....0x1f3f
-let range_cr: _T0 = 0x1f48....0x1f4d
-let range_cs: _T0 = 0x1f59....0x1f59
-let range_ct: _T0 = 0x1f5b....0x1f5b
-let range_cu: _T0 = 0x1f5d....0x1f5d
-let range_cv: _T0 = 0x1f5f....0x1f5f
-let range_cw: _T0 = 0x1f68....0x1f6f
-let range_cx: _T0 = 0x1f71....0x1f71
-let range_cy: _T0 = 0x1f73....0x1f73
-let range_cz: _T0 = 0x1f75....0x1f75
-let range_d0: _T0 = 0x1f77....0x1f77
-let range_d1: _T0 = 0x1f79....0x1f79
-let range_d2: _T0 = 0x1f7b....0x1f7b
-let range_d3: _T0 = 0x1f7d....0x1f7d
-let range_d4: _T0 = 0x1f80....0x1faf
-let range_d5: _T0 = 0x1fb2....0x1fb4
-let range_d6: _T0 = 0x1fb7....0x1fc4
-let range_d7: _T0 = 0x1fc7....0x1fcf
-let range_d8: _T0 = 0x1fd3....0x1fd3
-let range_d9: _T0 = 0x1fd8....0x1fdb
-let range_da: _T0 = 0x1fdd....0x1fdf
-let range_db: _T0 = 0x1fe3....0x1fe3
-let range_dc: _T0 = 0x1fe8....0x1fef
-let range_dd: _T0 = 0x1ff2....0x1ff4
-let range_de: _T0 = 0x1ff7....0x1ffe
-let range_df: _T0 = 0x2000....0x200f
-let range_dg: _T0 = 0x2011....0x2011
-let range_dh: _T0 = 0x2017....0x2017
-let range_di: _T0 = 0x2024....0x2026
-let range_dj: _T0 = 0x202a....0x202f
-let range_dk: _T0 = 0x2033....0x2034
-let range_dl: _T0 = 0x2036....0x2037
-let range_dm: _T0 = 0x203c....0x203c
-let range_dn: _T0 = 0x203e....0x203e
-let range_do: _T0 = 0x2047....0x2049
-let range_dp: _T0 = 0x2057....0x2057
-let range_dq: _T0 = 0x205f....0x2071
-let range_dr: _T0 = 0x2074....0x208e
-let range_ds: _T0 = 0x2090....0x209c
-let range_dt: _T0 = 0x20a8....0x20a8
-let range_du: _T0 = 0x2100....0x2103
-let range_dv: _T0 = 0x2105....0x2107
-let range_dw: _T0 = 0x2109....0x2113
-let range_dx: _T0 = 0x2115....0x2116
-let range_dy: _T0 = 0x2119....0x211d
-let range_dz: _T0 = 0x2120....0x2122
-let range_e0: _T0 = 0x2124....0x2124
-let range_e1: _T0 = 0x2126....0x2126
-let range_e2: _T0 = 0x2128....0x2128
-let range_e3: _T0 = 0x212a....0x212d
-let range_e4: _T0 = 0x212f....0x2139
-let range_e5: _T0 = 0x213b....0x2140
-let range_e6: _T0 = 0x2145....0x2149
-let range_e7: _T0 = 0x2150....0x217f
-let range_e8: _T0 = 0x2183....0x2183
-let range_e9: _T0 = 0x2189....0x2189
-let range_ea: _T0 = 0x222c....0x222d
-let range_eb: _T0 = 0x222f....0x2230
-let range_ec: _T0 = 0x2329....0x232a
-let range_ed: _T0 = 0x2460....0x24ea
-let range_ee: _T0 = 0x2a0c....0x2a0c
-let range_ef: _T0 = 0x2a74....0x2a76
-let range_eg: _T0 = 0x2adc....0x2adc
-let range_eh: _T0 = 0x2c00....0x2c2e
-let range_ei: _T0 = 0x2c60....0x2c60
-let range_ej: _T0 = 0x2c62....0x2c64
-let range_ek: _T0 = 0x2c67....0x2c67
-let range_el: _T0 = 0x2c69....0x2c69
-let range_em: _T0 = 0x2c6b....0x2c6b
-let range_en: _T0 = 0x2c6d....0x2c70
-let range_eo: _T0 = 0x2c72....0x2c72
-let range_ep: _T0 = 0x2c75....0x2c75
-let range_eq: _T0 = 0x2c7c....0x2c80
-let range_er: _T0 = 0x2c82....0x2c82
-let range_es: _T0 = 0x2c84....0x2c84
-let range_et: _T0 = 0x2c86....0x2c86
-let range_eu: _T0 = 0x2c88....0x2c88
-let range_ev: _T0 = 0x2c8a....0x2c8a
-let range_ew: _T0 = 0x2c8c....0x2c8c
-let range_ex: _T0 = 0x2c8e....0x2c8e
-let range_ey: _T0 = 0x2c90....0x2c90
-let range_ez: _T0 = 0x2c92....0x2c92
-let range_f0: _T0 = 0x2c94....0x2c94
-let range_f1: _T0 = 0x2c96....0x2c96
-let range_f2: _T0 = 0x2c98....0x2c98
-let range_f3: _T0 = 0x2c9a....0x2c9a
-let range_f4: _T0 = 0x2c9c....0x2c9c
-let range_f5: _T0 = 0x2c9e....0x2c9e
-let range_f6: _T0 = 0x2ca0....0x2ca0
-let range_f7: _T0 = 0x2ca2....0x2ca2
-let range_f8: _T0 = 0x2ca4....0x2ca4
-let range_f9: _T0 = 0x2ca6....0x2ca6
-let range_fa: _T0 = 0x2ca8....0x2ca8
-let range_fb: _T0 = 0x2caa....0x2caa
-let range_fc: _T0 = 0x2cac....0x2cac
-let range_fd: _T0 = 0x2cae....0x2cae
-let range_fe: _T0 = 0x2cb0....0x2cb0
-let range_ff: _T0 = 0x2cb2....0x2cb2
-let range_fg: _T0 = 0x2cb4....0x2cb4
-let range_fh: _T0 = 0x2cb6....0x2cb6
-let range_fi: _T0 = 0x2cb8....0x2cb8
-let range_fj: _T0 = 0x2cba....0x2cba
-let range_fk: _T0 = 0x2cbc....0x2cbc
-let range_fl: _T0 = 0x2cbe....0x2cbe
-let range_fm: _T0 = 0x2cc0....0x2cc0
-let range_fn: _T0 = 0x2cc2....0x2cc2
-let range_fo: _T0 = 0x2cc4....0x2cc4
-let range_fp: _T0 = 0x2cc6....0x2cc6
-let range_fq: _T0 = 0x2cc8....0x2cc8
-let range_fr: _T0 = 0x2cca....0x2cca
-let range_fs: _T0 = 0x2ccc....0x2ccc
-let range_ft: _T0 = 0x2cce....0x2cce
-let range_fu: _T0 = 0x2cd0....0x2cd0
-let range_fv: _T0 = 0x2cd2....0x2cd2
-let range_fw: _T0 = 0x2cd4....0x2cd4
-let range_fx: _T0 = 0x2cd6....0x2cd6
-let range_fy: _T0 = 0x2cd8....0x2cd8
-let range_fz: _T0 = 0x2cda....0x2cda
-let range_g0: _T0 = 0x2cdc....0x2cdc
-let range_g1: _T0 = 0x2cde....0x2cde
-let range_g2: _T0 = 0x2ce0....0x2ce0
-let range_g3: _T0 = 0x2ce2....0x2ce2
-let range_g4: _T0 = 0x2ceb....0x2ceb
-let range_g5: _T0 = 0x2ced....0x2ced
-let range_g6: _T0 = 0x2cf2....0x2cf2
-let range_g7: _T0 = 0x2d6f....0x2d6f
-let range_g8: _T0 = 0x2e9f....0x2e9f
-let range_g9: _T0 = 0x2ef3....0x2ef3
-let range_ga: _T0 = 0x2f00....0x2fd5
-let range_gb: _T0 = 0x3000....0x3000
-let range_gc: _T0 = 0x3036....0x3036
-let range_gd: _T0 = 0x3038....0x303a
-let range_ge: _T0 = 0x309b....0x309c
-let range_gf: _T0 = 0x309f....0x309f
-let range_gg: _T0 = 0x30ff....0x30ff
-let range_gh: _T0 = 0x3131....0x318e
-let range_gi: _T0 = 0x3192....0x319f
-let range_gj: _T0 = 0x3200....0x321e
-let range_gk: _T0 = 0x3220....0x3247
-let range_gl: _T0 = 0x3250....0x327e
-let range_gm: _T0 = 0x3280....0x33ff
-let range_gn: _T0 = 0xa640....0xa640
-let range_go: _T0 = 0xa642....0xa642
-let range_gp: _T0 = 0xa644....0xa644
-let range_gq: _T0 = 0xa646....0xa646
-let range_gr: _T0 = 0xa648....0xa648
-let range_gs: _T0 = 0xa64a....0xa64a
-let range_gt: _T0 = 0xa64c....0xa64c
-let range_gu: _T0 = 0xa64e....0xa64e
-let range_gv: _T0 = 0xa650....0xa650
-let range_gw: _T0 = 0xa652....0xa652
-let range_gx: _T0 = 0xa654....0xa654
-let range_gy: _T0 = 0xa656....0xa656
-let range_gz: _T0 = 0xa658....0xa658
-let range_h0: _T0 = 0xa65a....0xa65a
-let range_h1: _T0 = 0xa65c....0xa65c
-let range_h2: _T0 = 0xa65e....0xa65e
-let range_h3: _T0 = 0xa660....0xa660
-let range_h4: _T0 = 0xa662....0xa662
-let range_h5: _T0 = 0xa664....0xa664
-let range_h6: _T0 = 0xa666....0xa666
-let range_h7: _T0 = 0xa668....0xa668
-let range_h8: _T0 = 0xa66a....0xa66a
-let range_h9: _T0 = 0xa66c....0xa66c
-let range_ha: _T0 = 0xa680....0xa680
-let range_hb: _T0 = 0xa682....0xa682
-let range_hc: _T0 = 0xa684....0xa684
-let range_hd: _T0 = 0xa686....0xa686
-let range_he: _T0 = 0xa688....0xa688
-let range_hf: _T0 = 0xa68a....0xa68a
-let range_hg: _T0 = 0xa68c....0xa68c
-let range_hh: _T0 = 0xa68e....0xa68e
-let range_hi: _T0 = 0xa690....0xa690
-let range_hj: _T0 = 0xa692....0xa692
-let range_hk: _T0 = 0xa694....0xa694
-let range_hl: _T0 = 0xa696....0xa696
-let range_hm: _T0 = 0xa698....0xa698
-let range_hn: _T0 = 0xa69a....0xa69a
-let range_ho: _T0 = 0xa69c....0xa69d
-let range_hp: _T0 = 0xa722....0xa722
-let range_hq: _T0 = 0xa724....0xa724
-let range_hr: _T0 = 0xa726....0xa726
-let range_hs: _T0 = 0xa728....0xa728
-let range_ht: _T0 = 0xa72a....0xa72a
-let range_hu: _T0 = 0xa72c....0xa72c
-let range_hv: _T0 = 0xa72e....0xa72e
-let range_hw: _T0 = 0xa732....0xa732
-let range_hx: _T0 = 0xa734....0xa734
-let range_hy: _T0 = 0xa736....0xa736
-let range_hz: _T0 = 0xa738....0xa738
-let range_i0: _T0 = 0xa73a....0xa73a
-let range_i1: _T0 = 0xa73c....0xa73c
-let range_i2: _T0 = 0xa73e....0xa73e
-let range_i3: _T0 = 0xa740....0xa740
-let range_i4: _T0 = 0xa742....0xa742
-let range_i5: _T0 = 0xa744....0xa744
-let range_i6: _T0 = 0xa746....0xa746
-let range_i7: _T0 = 0xa748....0xa748
-let range_i8: _T0 = 0xa74a....0xa74a
-let range_i9: _T0 = 0xa74c....0xa74c
-let range_ia: _T0 = 0xa74e....0xa74e
-let range_ib: _T0 = 0xa750....0xa750
-let range_ic: _T0 = 0xa752....0xa752
-let range_id: _T0 = 0xa754....0xa754
-let range_ie: _T0 = 0xa756....0xa756
-let range_if: _T0 = 0xa758....0xa758
-let range_ig: _T0 = 0xa75a....0xa75a
-let range_ih: _T0 = 0xa75c....0xa75c
-let range_ii: _T0 = 0xa75e....0xa75e
-let range_ij: _T0 = 0xa760....0xa760
-let range_ik: _T0 = 0xa762....0xa762
-let range_il: _T0 = 0xa764....0xa764
-let range_im: _T0 = 0xa766....0xa766
-let range_in: _T0 = 0xa768....0xa768
-let range_io: _T0 = 0xa76a....0xa76a
-let range_ip: _T0 = 0xa76c....0xa76c
-let range_iq: _T0 = 0xa76e....0xa76e
-let range_ir: _T0 = 0xa770....0xa770
-let range_is: _T0 = 0xa779....0xa779
-let range_it: _T0 = 0xa77b....0xa77b
-let range_iu: _T0 = 0xa77d....0xa77e
-let range_iv: _T0 = 0xa780....0xa780
-let range_iw: _T0 = 0xa782....0xa782
-let range_ix: _T0 = 0xa784....0xa784
-let range_iy: _T0 = 0xa786....0xa786
-let range_iz: _T0 = 0xa78b....0xa78b
-let range_j0: _T0 = 0xa78d....0xa78d
-let range_j1: _T0 = 0xa790....0xa790
-let range_j2: _T0 = 0xa792....0xa792
-let range_j3: _T0 = 0xa796....0xa796
-let range_j4: _T0 = 0xa798....0xa798
-let range_j5: _T0 = 0xa79a....0xa79a
-let range_j6: _T0 = 0xa79c....0xa79c
-let range_j7: _T0 = 0xa79e....0xa79e
-let range_j8: _T0 = 0xa7a0....0xa7a0
-let range_j9: _T0 = 0xa7a2....0xa7a2
-let range_ja: _T0 = 0xa7a4....0xa7a4
-let range_jb: _T0 = 0xa7a6....0xa7a6
-let range_jc: _T0 = 0xa7a8....0xa7a8
-let range_jd: _T0 = 0xa7aa....0xa7ae
-let range_je: _T0 = 0xa7b0....0xa7b4
-let range_jf: _T0 = 0xa7b6....0xa7b6
-let range_jg: _T0 = 0xa7b8....0xa7b8
-let range_jh: _T0 = 0xa7ba....0xa7ba
-let range_ji: _T0 = 0xa7bc....0xa7bc
-let range_jj: _T0 = 0xa7be....0xa7be
-let range_jk: _T0 = 0xa7c2....0xa7c2
-let range_jl: _T0 = 0xa7c4....0xa7c6
-let range_jm: _T0 = 0xa7f8....0xa7f9
-let range_jn: _T0 = 0xab5c....0xab5f
-let range_jo: _T0 = 0xab70....0xabbf
-let range_jp: _T0 = 0xf900....0xfa0d
-let range_jq: _T0 = 0xfa10....0xfa10
-let range_jr: _T0 = 0xfa12....0xfa12
-let range_js: _T0 = 0xfa15....0xfa1e
-let range_jt: _T0 = 0xfa20....0xfa20
-let range_ju: _T0 = 0xfa22....0xfa22
-let range_jv: _T0 = 0xfa25....0xfa26
-let range_jw: _T0 = 0xfa2a....0xfa6d
-let range_jx: _T0 = 0xfa70....0xfad9
-let range_jy: _T0 = 0xfb00....0xfb06
-let range_jz: _T0 = 0xfb13....0xfb17
-let range_k0: _T0 = 0xfb1d....0xfb1d
-let range_k1: _T0 = 0xfb1f....0xfb36
-let range_k2: _T0 = 0xfb38....0xfb3c
-let range_k3: _T0 = 0xfb3e....0xfb3e
-let range_k4: _T0 = 0xfb40....0xfb41
-let range_k5: _T0 = 0xfb43....0xfb44
-let range_k6: _T0 = 0xfb46....0xfbb1
-let range_k7: _T0 = 0xfbd3....0xfd3d
-let range_k8: _T0 = 0xfd50....0xfd8f
-let range_k9: _T0 = 0xfd92....0xfdc7
-let range_ka: _T0 = 0xfdf0....0xfdfc
-let range_kb: _T0 = 0xfe00....0xfe19
-let range_kc: _T0 = 0xfe30....0xfe44
-let range_kd: _T0 = 0xfe47....0xfe52
-let range_ke: _T0 = 0xfe54....0xfe66
-let range_kf: _T0 = 0xfe68....0xfe6b
-let range_kg: _T0 = 0xfe70....0xfe72
-let range_kh: _T0 = 0xfe74....0xfe74
-let range_ki: _T0 = 0xfe76....0xfefc
-let range_kj: _T0 = 0xfeff....0xfeff
-let range_kk: _T0 = 0xff01....0xffbe
-let range_kl: _T0 = 0xffc2....0xffc7
-let range_km: _T0 = 0xffca....0xffcf
-let range_kn: _T0 = 0xffd2....0xffd7
-let range_ko: _T0 = 0xffda....0xffdc
-let range_kp: _T0 = 0xffe0....0xffe6
-let range_kq: _T0 = 0xffe8....0xffee
-let range_kr: _T0 = 0xfff0....0xfff8
-let range_ks: _T0 = 0x10400....0x10427
-let range_kt: _T0 = 0x104b0....0x104d3
-let range_ku: _T0 = 0x10c80....0x10cb2
-let range_kv: _T0 = 0x118a0....0x118bf
-let range_kw: _T0 = 0x16e40....0x16e5f
-let range_kx: _T0 = 0x1bca0....0x1bca3
-let range_ky: _T0 = 0x1d15e....0x1d164
-let range_kz: _T0 = 0x1d173....0x1d17a
-let range_l0: _T0 = 0x1d1bb....0x1d1c0
-let range_l1: _T0 = 0x1d400....0x1d454
-let range_l2: _T0 = 0x1d456....0x1d49c
-let range_l3: _T0 = 0x1d49e....0x1d49f
-let range_l4: _T0 = 0x1d4a2....0x1d4a2
-let range_l5: _T0 = 0x1d4a5....0x1d4a6
-let range_l6: _T0 = 0x1d4a9....0x1d4ac
-let range_l7: _T0 = 0x1d4ae....0x1d4b9
-let range_l8: _T0 = 0x1d4bb....0x1d4bb
-let range_l9: _T0 = 0x1d4bd....0x1d4c3
-let range_la: _T0 = 0x1d4c5....0x1d505
-let range_lb: _T0 = 0x1d507....0x1d50a
-let range_lc: _T0 = 0x1d50d....0x1d514
-let range_ld: _T0 = 0x1d516....0x1d51c
-let range_le: _T0 = 0x1d51e....0x1d539
-let range_lf: _T0 = 0x1d53b....0x1d53e
-let range_lg: _T0 = 0x1d540....0x1d544
-let range_lh: _T0 = 0x1d546....0x1d546
-let range_li: _T0 = 0x1d54a....0x1d550
-let range_lj: _T0 = 0x1d552....0x1d6a5
-let range_lk: _T0 = 0x1d6a8....0x1d7cb
-let range_ll: _T0 = 0x1d7ce....0x1d7ff
-let range_lm: _T0 = 0x1e900....0x1e921
-let range_ln: _T0 = 0x1ee00....0x1ee03
-let range_lo: _T0 = 0x1ee05....0x1ee1f
-let range_lp: _T0 = 0x1ee21....0x1ee22
-let range_lq: _T0 = 0x1ee24....0x1ee24
-let range_lr: _T0 = 0x1ee27....0x1ee27
-let range_ls: _T0 = 0x1ee29....0x1ee32
-let range_lt: _T0 = 0x1ee34....0x1ee37
-let range_lu: _T0 = 0x1ee39....0x1ee39
-let range_lv: _T0 = 0x1ee3b....0x1ee3b
-let range_lw: _T0 = 0x1ee42....0x1ee42
-let range_lx: _T0 = 0x1ee47....0x1ee47
-let range_ly: _T0 = 0x1ee49....0x1ee49
-let range_lz: _T0 = 0x1ee4b....0x1ee4b
-let range_m0: _T0 = 0x1ee4d....0x1ee4f
-let range_m1: _T0 = 0x1ee51....0x1ee52
-let range_m2: _T0 = 0x1ee54....0x1ee54
-let range_m3: _T0 = 0x1ee57....0x1ee57
-let range_m4: _T0 = 0x1ee59....0x1ee59
-let range_m5: _T0 = 0x1ee5b....0x1ee5b
-let range_m6: _T0 = 0x1ee5d....0x1ee5d
-let range_m7: _T0 = 0x1ee5f....0x1ee5f
-let range_m8: _T0 = 0x1ee61....0x1ee62
-let range_m9: _T0 = 0x1ee64....0x1ee64
-let range_ma: _T0 = 0x1ee67....0x1ee6a
-let range_mb: _T0 = 0x1ee6c....0x1ee72
-let range_mc: _T0 = 0x1ee74....0x1ee77
-let range_md: _T0 = 0x1ee79....0x1ee7c
-let range_me: _T0 = 0x1ee7e....0x1ee7e
-let range_mf: _T0 = 0x1ee80....0x1ee89
-let range_mg: _T0 = 0x1ee8b....0x1ee9b
-let range_mh: _T0 = 0x1eea1....0x1eea3
-let range_mi: _T0 = 0x1eea5....0x1eea9
-let range_mj: _T0 = 0x1eeab....0x1eebb
-let range_mk: _T0 = 0x1f100....0x1f10a
-let range_ml: _T0 = 0x1f110....0x1f12e
-let range_mm: _T0 = 0x1f130....0x1f14f
-let range_mn: _T0 = 0x1f16a....0x1f16c
-let range_mo: _T0 = 0x1f190....0x1f190
-let range_mp: _T0 = 0x1f200....0x1f202
-let range_mq: _T0 = 0x1f210....0x1f23b
-let range_mr: _T0 = 0x1f240....0x1f248
-let range_ms: _T0 = 0x1f250....0x1f251
-let range_mt: _T0 = 0x2f800....0x2fa1d
-let range_mu: _T0 = 0xe0000....0xe0fff
-let array: _T1 = [
-range_0,
-range_1,
-range_2,
-range_3,
-range_4,
-range_5,
-range_6,
-range_7,
-range_8,
-range_9,
-range_a,
-range_b,
-range_c,
-range_d,
-range_e,
-range_f,
-range_g,
-range_h,
-range_i,
-range_j,
-range_k,
-range_l,
-range_m,
-range_n,
-range_o,
-range_p,
-range_q,
-range_r,
-range_s,
-range_t,
-range_u,
-range_v,
-range_w,
-range_x,
-range_y,
-range_z,
-range_10,
-range_11,
-range_12,
-range_13,
-range_14,
-range_15,
-range_16,
-range_17,
-range_18,
-range_19,
-range_1a,
-range_1b,
-range_1c,
-range_1d,
-range_1e,
-range_1f,
-range_1g,
-range_1h,
-range_1i,
-range_1j,
-range_1k,
-range_1l,
-range_1m,
-range_1n,
-range_1o,
-range_1p,
-range_1q,
-range_1r,
-range_1s,
-range_1t,
-range_1u,
-range_1v,
-range_1w,
-range_1x,
-range_1y,
-range_1z,
-range_20,
-range_21,
-range_22,
-range_23,
-range_24,
-range_25,
-range_26,
-range_27,
-range_28,
-range_29,
-range_2a,
-range_2b,
-range_2c,
-range_2d,
-range_2e,
-range_2f,
-range_2g,
-range_2h,
-range_2i,
-range_2j,
-range_2k,
-range_2l,
-range_2m,
-range_2n,
-range_2o,
-range_2p,
-range_2q,
-range_2r,
-range_2s,
-range_2t,
-range_2u,
-range_2v,
-range_2w,
-range_2x,
-range_2y,
-range_2z,
-range_30,
-range_31,
-range_32,
-range_33,
-range_34,
-range_35,
-range_36,
-range_37,
-range_38,
-range_39,
-range_3a,
-range_3b,
-range_3c,
-range_3d,
-range_3e,
-range_3f,
-range_3g,
-range_3h,
-range_3i,
-range_3j,
-range_3k,
-range_3l,
-range_3m,
-range_3n,
-range_3o,
-range_3p,
-range_3q,
-range_3r,
-range_3s,
-range_3t,
-range_3u,
-range_3v,
-range_3w,
-range_3x,
-range_3y,
-range_3z,
-range_40,
-range_41,
-range_42,
-range_43,
-range_44,
-range_45,
-range_46,
-range_47,
-range_48,
-range_49,
-range_4a,
-range_4b,
-range_4c,
-range_4d,
-range_4e,
-range_4f,
-range_4g,
-range_4h,
-range_4i,
-range_4j,
-range_4k,
-range_4l,
-range_4m,
-range_4n,
-range_4o,
-range_4p,
-range_4q,
-range_4r,
-range_4s,
-range_4t,
-range_4u,
-range_4v,
-range_4w,
-range_4x,
-range_4y,
-range_4z,
-range_50,
-range_51,
-range_52,
-range_53,
-range_54,
-range_55,
-range_56,
-range_57,
-range_58,
-range_59,
-range_5a,
-range_5b,
-range_5c,
-range_5d,
-range_5e,
-range_5f,
-range_5g,
-range_5h,
-range_5i,
-range_5j,
-range_5k,
-range_5l,
-range_5m,
-range_5n,
-range_5o,
-range_5p,
-range_5q,
-range_5r,
-range_5s,
-range_5t,
-range_5u,
-range_5v,
-range_5w,
-range_5x,
-range_5y,
-range_5z,
-range_60,
-range_61,
-range_62,
-range_63,
-range_64,
-range_65,
-range_66,
-range_67,
-range_68,
-range_69,
-range_6a,
-range_6b,
-range_6c,
-range_6d,
-range_6e,
-range_6f,
-range_6g,
-range_6h,
-range_6i,
-range_6j,
-range_6k,
-range_6l,
-range_6m,
-range_6n,
-range_6o,
-range_6p,
-range_6q,
-range_6r,
-range_6s,
-range_6t,
-range_6u,
-range_6v,
-range_6w,
-range_6x,
-range_6y,
-range_6z,
-range_70,
-range_71,
-range_72,
-range_73,
-range_74,
-range_75,
-range_76,
-range_77,
-range_78,
-range_79,
-range_7a,
-range_7b,
-range_7c,
-range_7d,
-range_7e,
-range_7f,
-range_7g,
-range_7h,
-range_7i,
-range_7j,
-range_7k,
-range_7l,
-range_7m,
-range_7n,
-range_7o,
-range_7p,
-range_7q,
-range_7r,
-range_7s,
-range_7t,
-range_7u,
-range_7v,
-range_7w,
-range_7x,
-range_7y,
-range_7z,
-range_80,
-range_81,
-range_82,
-range_83,
-range_84,
-range_85,
-range_86,
-range_87,
-range_88,
-range_89,
-range_8a,
-range_8b,
-range_8c,
-range_8d,
-range_8e,
-range_8f,
-range_8g,
-range_8h,
-range_8i,
-range_8j,
-range_8k,
-range_8l,
-range_8m,
-range_8n,
-range_8o,
-range_8p,
-range_8q,
-range_8r,
-range_8s,
-range_8t,
-range_8u,
-range_8v,
-range_8w,
-range_8x,
-range_8y,
-range_8z,
-range_90,
-range_91,
-range_92,
-range_93,
-range_94,
-range_95,
-range_96,
-range_97,
-range_98,
-range_99,
-range_9a,
-range_9b,
-range_9c,
-range_9d,
-range_9e,
-range_9f,
-range_9g,
-range_9h,
-range_9i,
-range_9j,
-range_9k,
-range_9l,
-range_9m,
-range_9n,
-range_9o,
-range_9p,
-range_9q,
-range_9r,
-range_9s,
-range_9t,
-range_9u,
-range_9v,
-range_9w,
-range_9x,
-range_9y,
-range_9z,
-range_a0,
-range_a1,
-range_a2,
-range_a3,
-range_a4,
-range_a5,
-range_a6,
-range_a7,
-range_a8,
-range_a9,
-range_aa,
-range_ab,
-range_ac,
-range_ad,
-range_ae,
-range_af,
-range_ag,
-range_ah,
-range_ai,
-range_aj,
-range_ak,
-range_al,
-range_am,
-range_an,
-range_ao,
-range_ap,
-range_aq,
-range_ar,
-range_as,
-range_at,
-range_au,
-range_av,
-range_aw,
-range_ax,
-range_ay,
-range_az,
-range_b0,
-range_b1,
-range_b2,
-range_b3,
-range_b4,
-range_b5,
-range_b6,
-range_b7,
-range_b8,
-range_b9,
-range_ba,
-range_bb,
-range_bc,
-range_bd,
-range_be,
-range_bf,
-range_bg,
-range_bh,
-range_bi,
-range_bj,
-range_bk,
-range_bl,
-range_bm,
-range_bn,
-range_bo,
-range_bp,
-range_bq,
-range_br,
-range_bs,
-range_bt,
-range_bu,
-range_bv,
-range_bw,
-range_bx,
-range_by,
-range_bz,
-range_c0,
-range_c1,
-range_c2,
-range_c3,
-range_c4,
-range_c5,
-range_c6,
-range_c7,
-range_c8,
-range_c9,
-range_ca,
-range_cb,
-range_cc,
-range_cd,
-range_ce,
-range_cf,
-range_cg,
-range_ch,
-range_ci,
-range_cj,
-range_ck,
-range_cl,
-range_cm,
-range_cn,
-range_co,
-range_cp,
-range_cq,
-range_cr,
-range_cs,
-range_ct,
-range_cu,
-range_cv,
-range_cw,
-range_cx,
-range_cy,
-range_cz,
-range_d0,
-range_d1,
-range_d2,
-range_d3,
-range_d4,
-range_d5,
-range_d6,
-range_d7,
-range_d8,
-range_d9,
-range_da,
-range_db,
-range_dc,
-range_dd,
-range_de,
-range_df,
-range_dg,
-range_dh,
-range_di,
-range_dj,
-range_dk,
-range_dl,
-range_dm,
-range_dn,
-range_do,
-range_dp,
-range_dq,
-range_dr,
-range_ds,
-range_dt,
-range_du,
-range_dv,
-range_dw,
-range_dx,
-range_dy,
-range_dz,
-range_e0,
-range_e1,
-range_e2,
-range_e3,
-range_e4,
-range_e5,
-range_e6,
-range_e7,
-range_e8,
-range_e9,
-range_ea,
-range_eb,
-range_ec,
-range_ed,
-range_ee,
-range_ef,
-range_eg,
-range_eh,
-range_ei,
-range_ej,
-range_ek,
-range_el,
-range_em,
-range_en,
-range_eo,
-range_ep,
-range_eq,
-range_er,
-range_es,
-range_et,
-range_eu,
-range_ev,
-range_ew,
-range_ex,
-range_ey,
-range_ez,
-range_f0,
-range_f1,
-range_f2,
-range_f3,
-range_f4,
-range_f5,
-range_f6,
-range_f7,
-range_f8,
-range_f9,
-range_fa,
-range_fb,
-range_fc,
-range_fd,
-range_fe,
-range_ff,
-range_fg,
-range_fh,
-range_fi,
-range_fj,
-range_fk,
-range_fl,
-range_fm,
-range_fn,
-range_fo,
-range_fp,
-range_fq,
-range_fr,
-range_fs,
-range_ft,
-range_fu,
-range_fv,
-range_fw,
-range_fx,
-range_fy,
-range_fz,
-range_g0,
-range_g1,
-range_g2,
-range_g3,
-range_g4,
-range_g5,
-range_g6,
-range_g7,
-range_g8,
-range_g9,
-range_ga,
-range_gb,
-range_gc,
-range_gd,
-range_ge,
-range_gf,
-range_gg,
-range_gh,
-range_gi,
-range_gj,
-range_gk,
-range_gl,
-range_gm,
-range_gn,
-range_go,
-range_gp,
-range_gq,
-range_gr,
-range_gs,
-range_gt,
-range_gu,
-range_gv,
-range_gw,
-range_gx,
-range_gy,
-range_gz,
-range_h0,
-range_h1,
-range_h2,
-range_h3,
-range_h4,
-range_h5,
-range_h6,
-range_h7,
-range_h8,
-range_h9,
-range_ha,
-range_hb,
-range_hc,
-range_hd,
-range_he,
-range_hf,
-range_hg,
-range_hh,
-range_hi,
-range_hj,
-range_hk,
-range_hl,
-range_hm,
-range_hn,
-range_ho,
-range_hp,
-range_hq,
-range_hr,
-range_hs,
-range_ht,
-range_hu,
-range_hv,
-range_hw,
-range_hx,
-range_hy,
-range_hz,
-range_i0,
-range_i1,
-range_i2,
-range_i3,
-range_i4,
-range_i5,
-range_i6,
-range_i7,
-range_i8,
-range_i9,
-range_ia,
-range_ib,
-range_ic,
-range_id,
-range_ie,
-range_if,
-range_ig,
-range_ih,
-range_ii,
-range_ij,
-range_ik,
-range_il,
-range_im,
-range_in,
-range_io,
-range_ip,
-range_iq,
-range_ir,
-range_is,
-range_it,
-range_iu,
-range_iv,
-range_iw,
-range_ix,
-range_iy,
-range_iz,
-range_j0,
-range_j1,
-range_j2,
-range_j3,
-range_j4,
-range_j5,
-range_j6,
-range_j7,
-range_j8,
-range_j9,
-range_ja,
-range_jb,
-range_jc,
-range_jd,
-range_je,
-range_jf,
-range_jg,
-range_jh,
-range_ji,
-range_jj,
-range_jk,
-range_jl,
-range_jm,
-range_jn,
-range_jo,
-range_jp,
-range_jq,
-range_jr,
-range_js,
-range_jt,
-range_ju,
-range_jv,
-range_jw,
-range_jx,
-range_jy,
-range_jz,
-range_k0,
-range_k1,
-range_k2,
-range_k3,
-range_k4,
-range_k5,
-range_k6,
-range_k7,
-range_k8,
-range_k9,
-range_ka,
-range_kb,
-range_kc,
-range_kd,
-range_ke,
-range_kf,
-range_kg,
-range_kh,
-range_ki,
-range_kj,
-range_kk,
-range_kl,
-range_km,
-range_kn,
-range_ko,
-range_kp,
-range_kq,
-range_kr,
-range_ks,
-range_kt,
-range_ku,
-range_kv,
-range_kw,
-range_kx,
-range_ky,
-range_kz,
-range_l0,
-range_l1,
-range_l2,
-range_l3,
-range_l4,
-range_l5,
-range_l6,
-range_l7,
-range_l8,
-range_l9,
-range_la,
-range_lb,
-range_lc,
-range_ld,
-range_le,
-range_lf,
-range_lg,
-range_lh,
-range_li,
-range_lj,
-range_lk,
-range_ll,
-range_lm,
-range_ln,
-range_lo,
-range_lp,
-range_lq,
-range_lr,
-range_ls,
-range_lt,
-range_lu,
-range_lv,
-range_lw,
-range_lx,
-range_ly,
-range_lz,
-range_m0,
-range_m1,
-range_m2,
-range_m3,
-range_m4,
-range_m5,
-range_m6,
-range_m7,
-range_m8,
-range_m9,
-range_ma,
-range_mb,
-range_mc,
-range_md,
-range_me,
-range_mf,
-range_mg,
-range_mh,
-range_mi,
-range_mj,
-range_mk,
-range_ml,
-range_mm,
-range_mn,
-range_mo,
-range_mp,
-range_mq,
-range_mr,
-range_ms,
-range_mt,
-range_mu
+private let __normProp_Changes_When_NFKC_Casefolded_set: _T1 = [
+  0xa0,
+  0xa8,
+  0xaa,
+  0xad,
+  0xaf,
+  0x100,
+  0x102,
+  0x104,
+  0x106,
+  0x108,
+  0x10a,
+  0x10c,
+  0x10e,
+  0x110,
+  0x112,
+  0x114,
+  0x116,
+  0x118,
+  0x11a,
+  0x11c,
+  0x11e,
+  0x120,
+  0x122,
+  0x124,
+  0x126,
+  0x128,
+  0x12a,
+  0x12c,
+  0x12e,
+  0x130,
+  0x136,
+  0x139,
+  0x13b,
+  0x13d,
+  0x143,
+  0x145,
+  0x147,
+  0x14c,
+  0x14e,
+  0x150,
+  0x152,
+  0x154,
+  0x156,
+  0x158,
+  0x15a,
+  0x15c,
+  0x15e,
+  0x160,
+  0x162,
+  0x164,
+  0x166,
+  0x168,
+  0x16a,
+  0x16c,
+  0x16e,
+  0x170,
+  0x172,
+  0x174,
+  0x176,
+  0x17b,
+  0x17d,
+  0x17f,
+  0x184,
+  0x1a2,
+  0x1a4,
+  0x1a9,
+  0x1ac,
+  0x1b5,
+  0x1bc,
+  0x1cf,
+  0x1d1,
+  0x1d3,
+  0x1d5,
+  0x1d7,
+  0x1d9,
+  0x1db,
+  0x1de,
+  0x1e0,
+  0x1e2,
+  0x1e4,
+  0x1e6,
+  0x1e8,
+  0x1ea,
+  0x1ec,
+  0x1ee,
+  0x1fa,
+  0x1fc,
+  0x1fe,
+  0x200,
+  0x202,
+  0x204,
+  0x206,
+  0x208,
+  0x20a,
+  0x20c,
+  0x20e,
+  0x210,
+  0x212,
+  0x214,
+  0x216,
+  0x218,
+  0x21a,
+  0x21c,
+  0x21e,
+  0x220,
+  0x222,
+  0x224,
+  0x226,
+  0x228,
+  0x22a,
+  0x22c,
+  0x22e,
+  0x230,
+  0x232,
+  0x241,
+  0x248,
+  0x24a,
+  0x24c,
+  0x24e,
+  0x34f,
+  0x370,
+  0x372,
+  0x374,
+  0x376,
+  0x37a,
+  0x38c,
+  0x3c2,
+  0x3d8,
+  0x3da,
+  0x3dc,
+  0x3de,
+  0x3e0,
+  0x3e2,
+  0x3e4,
+  0x3e6,
+  0x3e8,
+  0x3ea,
+  0x3ec,
+  0x3ee,
+  0x3f7,
+  0x460,
+  0x462,
+  0x464,
+  0x466,
+  0x468,
+  0x46a,
+  0x46c,
+  0x46e,
+  0x470,
+  0x472,
+  0x474,
+  0x476,
+  0x478,
+  0x47a,
+  0x47c,
+  0x47e,
+  0x480,
+  0x48a,
+  0x48c,
+  0x48e,
+  0x490,
+  0x492,
+  0x494,
+  0x496,
+  0x498,
+  0x49a,
+  0x49c,
+  0x49e,
+  0x4a0,
+  0x4a2,
+  0x4a4,
+  0x4a6,
+  0x4a8,
+  0x4aa,
+  0x4ac,
+  0x4ae,
+  0x4b0,
+  0x4b2,
+  0x4b4,
+  0x4b6,
+  0x4b8,
+  0x4ba,
+  0x4bc,
+  0x4be,
+  0x4c3,
+  0x4c5,
+  0x4c7,
+  0x4c9,
+  0x4cb,
+  0x4cd,
+  0x4d0,
+  0x4d2,
+  0x4d4,
+  0x4d6,
+  0x4d8,
+  0x4da,
+  0x4dc,
+  0x4de,
+  0x4e0,
+  0x4e2,
+  0x4e4,
+  0x4e6,
+  0x4e8,
+  0x4ea,
+  0x4ec,
+  0x4ee,
+  0x4f0,
+  0x4f2,
+  0x4f4,
+  0x4f6,
+  0x4f8,
+  0x4fa,
+  0x4fc,
+  0x4fe,
+  0x500,
+  0x502,
+  0x504,
+  0x506,
+  0x508,
+  0x50a,
+  0x50c,
+  0x50e,
+  0x510,
+  0x512,
+  0x514,
+  0x516,
+  0x518,
+  0x51a,
+  0x51c,
+  0x51e,
+  0x520,
+  0x522,
+  0x524,
+  0x526,
+  0x528,
+  0x52a,
+  0x52c,
+  0x52e,
+  0x587,
+  0x61c,
+  0x9df,
+  0xa33,
+  0xa36,
+  0xa5e,
+  0xe33,
+  0xeb3,
+  0xf0c,
+  0xf43,
+  0xf4d,
+  0xf52,
+  0xf57,
+  0xf5c,
+  0xf69,
+  0xf73,
+  0xf81,
+  0xf93,
+  0xf9d,
+  0xfa2,
+  0xfa7,
+  0xfac,
+  0xfb9,
+  0x10c7,
+  0x10cd,
+  0x10fc,
+  0x1d78,
+  0x1e00,
+  0x1e02,
+  0x1e04,
+  0x1e06,
+  0x1e08,
+  0x1e0a,
+  0x1e0c,
+  0x1e0e,
+  0x1e10,
+  0x1e12,
+  0x1e14,
+  0x1e16,
+  0x1e18,
+  0x1e1a,
+  0x1e1c,
+  0x1e1e,
+  0x1e20,
+  0x1e22,
+  0x1e24,
+  0x1e26,
+  0x1e28,
+  0x1e2a,
+  0x1e2c,
+  0x1e2e,
+  0x1e30,
+  0x1e32,
+  0x1e34,
+  0x1e36,
+  0x1e38,
+  0x1e3a,
+  0x1e3c,
+  0x1e3e,
+  0x1e40,
+  0x1e42,
+  0x1e44,
+  0x1e46,
+  0x1e48,
+  0x1e4a,
+  0x1e4c,
+  0x1e4e,
+  0x1e50,
+  0x1e52,
+  0x1e54,
+  0x1e56,
+  0x1e58,
+  0x1e5a,
+  0x1e5c,
+  0x1e5e,
+  0x1e60,
+  0x1e62,
+  0x1e64,
+  0x1e66,
+  0x1e68,
+  0x1e6a,
+  0x1e6c,
+  0x1e6e,
+  0x1e70,
+  0x1e72,
+  0x1e74,
+  0x1e76,
+  0x1e78,
+  0x1e7a,
+  0x1e7c,
+  0x1e7e,
+  0x1e80,
+  0x1e82,
+  0x1e84,
+  0x1e86,
+  0x1e88,
+  0x1e8a,
+  0x1e8c,
+  0x1e8e,
+  0x1e90,
+  0x1e92,
+  0x1e94,
+  0x1e9e,
+  0x1ea0,
+  0x1ea2,
+  0x1ea4,
+  0x1ea6,
+  0x1ea8,
+  0x1eaa,
+  0x1eac,
+  0x1eae,
+  0x1eb0,
+  0x1eb2,
+  0x1eb4,
+  0x1eb6,
+  0x1eb8,
+  0x1eba,
+  0x1ebc,
+  0x1ebe,
+  0x1ec0,
+  0x1ec2,
+  0x1ec4,
+  0x1ec6,
+  0x1ec8,
+  0x1eca,
+  0x1ecc,
+  0x1ece,
+  0x1ed0,
+  0x1ed2,
+  0x1ed4,
+  0x1ed6,
+  0x1ed8,
+  0x1eda,
+  0x1edc,
+  0x1ede,
+  0x1ee0,
+  0x1ee2,
+  0x1ee4,
+  0x1ee6,
+  0x1ee8,
+  0x1eea,
+  0x1eec,
+  0x1eee,
+  0x1ef0,
+  0x1ef2,
+  0x1ef4,
+  0x1ef6,
+  0x1ef8,
+  0x1efa,
+  0x1efc,
+  0x1efe,
+  0x1f59,
+  0x1f5b,
+  0x1f5d,
+  0x1f5f,
+  0x1f71,
+  0x1f73,
+  0x1f75,
+  0x1f77,
+  0x1f79,
+  0x1f7b,
+  0x1f7d,
+  0x1fd3,
+  0x1fe3,
+  0x2011,
+  0x2017,
+  0x203c,
+  0x203e,
+  0x2057,
+  0x20a8,
+  0x2124,
+  0x2126,
+  0x2128,
+  0x2183,
+  0x2189,
+  0x2a0c,
+  0x2adc,
+  0x2c60,
+  0x2c67,
+  0x2c69,
+  0x2c6b,
+  0x2c72,
+  0x2c75,
+  0x2c82,
+  0x2c84,
+  0x2c86,
+  0x2c88,
+  0x2c8a,
+  0x2c8c,
+  0x2c8e,
+  0x2c90,
+  0x2c92,
+  0x2c94,
+  0x2c96,
+  0x2c98,
+  0x2c9a,
+  0x2c9c,
+  0x2c9e,
+  0x2ca0,
+  0x2ca2,
+  0x2ca4,
+  0x2ca6,
+  0x2ca8,
+  0x2caa,
+  0x2cac,
+  0x2cae,
+  0x2cb0,
+  0x2cb2,
+  0x2cb4,
+  0x2cb6,
+  0x2cb8,
+  0x2cba,
+  0x2cbc,
+  0x2cbe,
+  0x2cc0,
+  0x2cc2,
+  0x2cc4,
+  0x2cc6,
+  0x2cc8,
+  0x2cca,
+  0x2ccc,
+  0x2cce,
+  0x2cd0,
+  0x2cd2,
+  0x2cd4,
+  0x2cd6,
+  0x2cd8,
+  0x2cda,
+  0x2cdc,
+  0x2cde,
+  0x2ce0,
+  0x2ce2,
+  0x2ceb,
+  0x2ced,
+  0x2cf2,
+  0x2d6f,
+  0x2e9f,
+  0x2ef3,
+  0x3000,
+  0x3036,
+  0x309f,
+  0x30ff,
+  0xa640,
+  0xa642,
+  0xa644,
+  0xa646,
+  0xa648,
+  0xa64a,
+  0xa64c,
+  0xa64e,
+  0xa650,
+  0xa652,
+  0xa654,
+  0xa656,
+  0xa658,
+  0xa65a,
+  0xa65c,
+  0xa65e,
+  0xa660,
+  0xa662,
+  0xa664,
+  0xa666,
+  0xa668,
+  0xa66a,
+  0xa66c,
+  0xa680,
+  0xa682,
+  0xa684,
+  0xa686,
+  0xa688,
+  0xa68a,
+  0xa68c,
+  0xa68e,
+  0xa690,
+  0xa692,
+  0xa694,
+  0xa696,
+  0xa698,
+  0xa69a,
+  0xa722,
+  0xa724,
+  0xa726,
+  0xa728,
+  0xa72a,
+  0xa72c,
+  0xa72e,
+  0xa732,
+  0xa734,
+  0xa736,
+  0xa738,
+  0xa73a,
+  0xa73c,
+  0xa73e,
+  0xa740,
+  0xa742,
+  0xa744,
+  0xa746,
+  0xa748,
+  0xa74a,
+  0xa74c,
+  0xa74e,
+  0xa750,
+  0xa752,
+  0xa754,
+  0xa756,
+  0xa758,
+  0xa75a,
+  0xa75c,
+  0xa75e,
+  0xa760,
+  0xa762,
+  0xa764,
+  0xa766,
+  0xa768,
+  0xa76a,
+  0xa76c,
+  0xa76e,
+  0xa770,
+  0xa779,
+  0xa77b,
+  0xa780,
+  0xa782,
+  0xa784,
+  0xa786,
+  0xa78b,
+  0xa78d,
+  0xa790,
+  0xa792,
+  0xa796,
+  0xa798,
+  0xa79a,
+  0xa79c,
+  0xa79e,
+  0xa7a0,
+  0xa7a2,
+  0xa7a4,
+  0xa7a6,
+  0xa7a8,
+  0xa7b6,
+  0xa7b8,
+  0xa7ba,
+  0xa7bc,
+  0xa7be,
+  0xa7c2,
+  0xfa10,
+  0xfa12,
+  0xfa20,
+  0xfa22,
+  0xfb1d,
+  0xfb3e,
+  0xfe74,
+  0xfeff,
+  0x1d4a2,
+  0x1d4bb,
+  0x1d546,
+  0x1ee24,
+  0x1ee27,
+  0x1ee39,
+  0x1ee3b,
+  0x1ee42,
+  0x1ee47,
+  0x1ee49,
+  0x1ee4b,
+  0x1ee54,
+  0x1ee57,
+  0x1ee59,
+  0x1ee5b,
+  0x1ee5d,
+  0x1ee5f,
+  0x1ee64,
+  0x1ee7e,
+  0x1f190,
 ]
-return MultipleRanges<UInt32>(carefullySortedRanges: array)
-})()
+private let __normProp_Changes_When_NFKC_Casefolded_range_0: _T2 = 0x41....0x5a
+private let __normProp_Changes_When_NFKC_Casefolded_range_1: _T2 = 0xb2....0xb5
+private let __normProp_Changes_When_NFKC_Casefolded_range_2: _T2 = 0xb8....0xba
+private let __normProp_Changes_When_NFKC_Casefolded_range_3: _T2 = 0xbc....0xbe
+private let __normProp_Changes_When_NFKC_Casefolded_range_4: _T2 = 0xc0....0xd6
+private let __normProp_Changes_When_NFKC_Casefolded_range_5: _T2 = 0xd8....0xdf
+private let __normProp_Changes_When_NFKC_Casefolded_range_6: _T2 = 0x132....0x134
+private let __normProp_Changes_When_NFKC_Casefolded_range_7: _T2 = 0x13f....0x141
+private let __normProp_Changes_When_NFKC_Casefolded_range_8: _T2 = 0x149....0x14a
+private let __normProp_Changes_When_NFKC_Casefolded_range_9: _T2 = 0x178....0x179
+private let __normProp_Changes_When_NFKC_Casefolded_range_a: _T2 = 0x181....0x182
+private let __normProp_Changes_When_NFKC_Casefolded_range_b: _T2 = 0x186....0x187
+private let __normProp_Changes_When_NFKC_Casefolded_range_c: _T2 = 0x189....0x18b
+private let __normProp_Changes_When_NFKC_Casefolded_range_d: _T2 = 0x18e....0x191
+private let __normProp_Changes_When_NFKC_Casefolded_range_e: _T2 = 0x193....0x194
+private let __normProp_Changes_When_NFKC_Casefolded_range_f: _T2 = 0x196....0x198
+private let __normProp_Changes_When_NFKC_Casefolded_range_g: _T2 = 0x19c....0x19d
+private let __normProp_Changes_When_NFKC_Casefolded_range_h: _T2 = 0x19f....0x1a0
+private let __normProp_Changes_When_NFKC_Casefolded_range_i: _T2 = 0x1a6....0x1a7
+private let __normProp_Changes_When_NFKC_Casefolded_range_j: _T2 = 0x1ae....0x1af
+private let __normProp_Changes_When_NFKC_Casefolded_range_k: _T2 = 0x1b1....0x1b3
+private let __normProp_Changes_When_NFKC_Casefolded_range_l: _T2 = 0x1b7....0x1b8
+private let __normProp_Changes_When_NFKC_Casefolded_range_m: _T2 = 0x1c4....0x1cd
+private let __normProp_Changes_When_NFKC_Casefolded_range_n: _T2 = 0x1f1....0x1f4
+private let __normProp_Changes_When_NFKC_Casefolded_range_o: _T2 = 0x1f6....0x1f8
+private let __normProp_Changes_When_NFKC_Casefolded_range_p: _T2 = 0x23a....0x23b
+private let __normProp_Changes_When_NFKC_Casefolded_range_q: _T2 = 0x23d....0x23e
+private let __normProp_Changes_When_NFKC_Casefolded_range_r: _T2 = 0x243....0x246
+private let __normProp_Changes_When_NFKC_Casefolded_range_s: _T2 = 0x2b0....0x2b8
+private let __normProp_Changes_When_NFKC_Casefolded_range_t: _T2 = 0x2d8....0x2dd
+private let __normProp_Changes_When_NFKC_Casefolded_range_u: _T2 = 0x2e0....0x2e4
+private let __normProp_Changes_When_NFKC_Casefolded_range_v: _T2 = 0x340....0x341
+private let __normProp_Changes_When_NFKC_Casefolded_range_w: _T2 = 0x343....0x345
+private let __normProp_Changes_When_NFKC_Casefolded_range_x: _T2 = 0x37e....0x37f
+private let __normProp_Changes_When_NFKC_Casefolded_range_y: _T2 = 0x384....0x38a
+private let __normProp_Changes_When_NFKC_Casefolded_range_z: _T2 = 0x38e....0x38f
+private let __normProp_Changes_When_NFKC_Casefolded_range_10: _T2 = 0x391....0x3a1
+private let __normProp_Changes_When_NFKC_Casefolded_range_11: _T2 = 0x3a3....0x3ab
+private let __normProp_Changes_When_NFKC_Casefolded_range_12: _T2 = 0x3cf....0x3d6
+private let __normProp_Changes_When_NFKC_Casefolded_range_13: _T2 = 0x3f0....0x3f2
+private let __normProp_Changes_When_NFKC_Casefolded_range_14: _T2 = 0x3f4....0x3f5
+private let __normProp_Changes_When_NFKC_Casefolded_range_15: _T2 = 0x3f9....0x3fa
+private let __normProp_Changes_When_NFKC_Casefolded_range_16: _T2 = 0x3fd....0x42f
+private let __normProp_Changes_When_NFKC_Casefolded_range_17: _T2 = 0x4c0....0x4c1
+private let __normProp_Changes_When_NFKC_Casefolded_range_18: _T2 = 0x531....0x556
+private let __normProp_Changes_When_NFKC_Casefolded_range_19: _T2 = 0x675....0x678
+private let __normProp_Changes_When_NFKC_Casefolded_range_1a: _T2 = 0x958....0x95f
+private let __normProp_Changes_When_NFKC_Casefolded_range_1b: _T2 = 0x9dc....0x9dd
+private let __normProp_Changes_When_NFKC_Casefolded_range_1c: _T2 = 0xa59....0xa5b
+private let __normProp_Changes_When_NFKC_Casefolded_range_1d: _T2 = 0xb5c....0xb5d
+private let __normProp_Changes_When_NFKC_Casefolded_range_1e: _T2 = 0xedc....0xedd
+private let __normProp_Changes_When_NFKC_Casefolded_range_1f: _T2 = 0xf75....0xf79
+private let __normProp_Changes_When_NFKC_Casefolded_range_1g: _T2 = 0x10a0....0x10c5
+private let __normProp_Changes_When_NFKC_Casefolded_range_1h: _T2 = 0x115f....0x1160
+private let __normProp_Changes_When_NFKC_Casefolded_range_1i: _T2 = 0x13f8....0x13fd
+private let __normProp_Changes_When_NFKC_Casefolded_range_1j: _T2 = 0x17b4....0x17b5
+private let __normProp_Changes_When_NFKC_Casefolded_range_1k: _T2 = 0x180b....0x180e
+private let __normProp_Changes_When_NFKC_Casefolded_range_1l: _T2 = 0x1c80....0x1c88
+private let __normProp_Changes_When_NFKC_Casefolded_range_1m: _T2 = 0x1c90....0x1cba
+private let __normProp_Changes_When_NFKC_Casefolded_range_1n: _T2 = 0x1cbd....0x1cbf
+private let __normProp_Changes_When_NFKC_Casefolded_range_1o: _T2 = 0x1d2c....0x1d2e
+private let __normProp_Changes_When_NFKC_Casefolded_range_1p: _T2 = 0x1d30....0x1d3a
+private let __normProp_Changes_When_NFKC_Casefolded_range_1q: _T2 = 0x1d3c....0x1d4d
+private let __normProp_Changes_When_NFKC_Casefolded_range_1r: _T2 = 0x1d4f....0x1d6a
+private let __normProp_Changes_When_NFKC_Casefolded_range_1s: _T2 = 0x1d9b....0x1dbf
+private let __normProp_Changes_When_NFKC_Casefolded_range_1t: _T2 = 0x1e9a....0x1e9b
+private let __normProp_Changes_When_NFKC_Casefolded_range_1u: _T2 = 0x1f08....0x1f0f
+private let __normProp_Changes_When_NFKC_Casefolded_range_1v: _T2 = 0x1f18....0x1f1d
+private let __normProp_Changes_When_NFKC_Casefolded_range_1w: _T2 = 0x1f28....0x1f2f
+private let __normProp_Changes_When_NFKC_Casefolded_range_1x: _T2 = 0x1f38....0x1f3f
+private let __normProp_Changes_When_NFKC_Casefolded_range_1y: _T2 = 0x1f48....0x1f4d
+private let __normProp_Changes_When_NFKC_Casefolded_range_1z: _T2 = 0x1f68....0x1f6f
+private let __normProp_Changes_When_NFKC_Casefolded_range_20: _T2 = 0x1f80....0x1faf
+private let __normProp_Changes_When_NFKC_Casefolded_range_21: _T2 = 0x1fb2....0x1fb4
+private let __normProp_Changes_When_NFKC_Casefolded_range_22: _T2 = 0x1fb7....0x1fc4
+private let __normProp_Changes_When_NFKC_Casefolded_range_23: _T2 = 0x1fc7....0x1fcf
+private let __normProp_Changes_When_NFKC_Casefolded_range_24: _T2 = 0x1fd8....0x1fdb
+private let __normProp_Changes_When_NFKC_Casefolded_range_25: _T2 = 0x1fdd....0x1fdf
+private let __normProp_Changes_When_NFKC_Casefolded_range_26: _T2 = 0x1fe8....0x1fef
+private let __normProp_Changes_When_NFKC_Casefolded_range_27: _T2 = 0x1ff2....0x1ff4
+private let __normProp_Changes_When_NFKC_Casefolded_range_28: _T2 = 0x1ff7....0x1ffe
+private let __normProp_Changes_When_NFKC_Casefolded_range_29: _T2 = 0x2000....0x200f
+private let __normProp_Changes_When_NFKC_Casefolded_range_2a: _T2 = 0x2024....0x2026
+private let __normProp_Changes_When_NFKC_Casefolded_range_2b: _T2 = 0x202a....0x202f
+private let __normProp_Changes_When_NFKC_Casefolded_range_2c: _T2 = 0x2033....0x2034
+private let __normProp_Changes_When_NFKC_Casefolded_range_2d: _T2 = 0x2036....0x2037
+private let __normProp_Changes_When_NFKC_Casefolded_range_2e: _T2 = 0x2047....0x2049
+private let __normProp_Changes_When_NFKC_Casefolded_range_2f: _T2 = 0x205f....0x2071
+private let __normProp_Changes_When_NFKC_Casefolded_range_2g: _T2 = 0x2074....0x208e
+private let __normProp_Changes_When_NFKC_Casefolded_range_2h: _T2 = 0x2090....0x209c
+private let __normProp_Changes_When_NFKC_Casefolded_range_2i: _T2 = 0x2100....0x2103
+private let __normProp_Changes_When_NFKC_Casefolded_range_2j: _T2 = 0x2105....0x2107
+private let __normProp_Changes_When_NFKC_Casefolded_range_2k: _T2 = 0x2109....0x2113
+private let __normProp_Changes_When_NFKC_Casefolded_range_2l: _T2 = 0x2115....0x2116
+private let __normProp_Changes_When_NFKC_Casefolded_range_2m: _T2 = 0x2119....0x211d
+private let __normProp_Changes_When_NFKC_Casefolded_range_2n: _T2 = 0x2120....0x2122
+private let __normProp_Changes_When_NFKC_Casefolded_range_2o: _T2 = 0x212a....0x212d
+private let __normProp_Changes_When_NFKC_Casefolded_range_2p: _T2 = 0x212f....0x2139
+private let __normProp_Changes_When_NFKC_Casefolded_range_2q: _T2 = 0x213b....0x2140
+private let __normProp_Changes_When_NFKC_Casefolded_range_2r: _T2 = 0x2145....0x2149
+private let __normProp_Changes_When_NFKC_Casefolded_range_2s: _T2 = 0x2150....0x217f
+private let __normProp_Changes_When_NFKC_Casefolded_range_2t: _T2 = 0x222c....0x222d
+private let __normProp_Changes_When_NFKC_Casefolded_range_2u: _T2 = 0x222f....0x2230
+private let __normProp_Changes_When_NFKC_Casefolded_range_2v: _T2 = 0x2329....0x232a
+private let __normProp_Changes_When_NFKC_Casefolded_range_2w: _T2 = 0x2460....0x24ea
+private let __normProp_Changes_When_NFKC_Casefolded_range_2x: _T2 = 0x2a74....0x2a76
+private let __normProp_Changes_When_NFKC_Casefolded_range_2y: _T2 = 0x2c00....0x2c2e
+private let __normProp_Changes_When_NFKC_Casefolded_range_2z: _T2 = 0x2c62....0x2c64
+private let __normProp_Changes_When_NFKC_Casefolded_range_30: _T2 = 0x2c6d....0x2c70
+private let __normProp_Changes_When_NFKC_Casefolded_range_31: _T2 = 0x2c7c....0x2c80
+private let __normProp_Changes_When_NFKC_Casefolded_range_32: _T2 = 0x2f00....0x2fd5
+private let __normProp_Changes_When_NFKC_Casefolded_range_33: _T2 = 0x3038....0x303a
+private let __normProp_Changes_When_NFKC_Casefolded_range_34: _T2 = 0x309b....0x309c
+private let __normProp_Changes_When_NFKC_Casefolded_range_35: _T2 = 0x3131....0x318e
+private let __normProp_Changes_When_NFKC_Casefolded_range_36: _T2 = 0x3192....0x319f
+private let __normProp_Changes_When_NFKC_Casefolded_range_37: _T2 = 0x3200....0x321e
+private let __normProp_Changes_When_NFKC_Casefolded_range_38: _T2 = 0x3220....0x3247
+private let __normProp_Changes_When_NFKC_Casefolded_range_39: _T2 = 0x3250....0x327e
+private let __normProp_Changes_When_NFKC_Casefolded_range_3a: _T2 = 0x3280....0x33ff
+private let __normProp_Changes_When_NFKC_Casefolded_range_3b: _T2 = 0xa69c....0xa69d
+private let __normProp_Changes_When_NFKC_Casefolded_range_3c: _T2 = 0xa77d....0xa77e
+private let __normProp_Changes_When_NFKC_Casefolded_range_3d: _T2 = 0xa7aa....0xa7ae
+private let __normProp_Changes_When_NFKC_Casefolded_range_3e: _T2 = 0xa7b0....0xa7b4
+private let __normProp_Changes_When_NFKC_Casefolded_range_3f: _T2 = 0xa7c4....0xa7c6
+private let __normProp_Changes_When_NFKC_Casefolded_range_3g: _T2 = 0xa7f8....0xa7f9
+private let __normProp_Changes_When_NFKC_Casefolded_range_3h: _T2 = 0xab5c....0xab5f
+private let __normProp_Changes_When_NFKC_Casefolded_range_3i: _T2 = 0xab70....0xabbf
+private let __normProp_Changes_When_NFKC_Casefolded_range_3j: _T2 = 0xf900....0xfa0d
+private let __normProp_Changes_When_NFKC_Casefolded_range_3k: _T2 = 0xfa15....0xfa1e
+private let __normProp_Changes_When_NFKC_Casefolded_range_3l: _T2 = 0xfa25....0xfa26
+private let __normProp_Changes_When_NFKC_Casefolded_range_3m: _T2 = 0xfa2a....0xfa6d
+private let __normProp_Changes_When_NFKC_Casefolded_range_3n: _T2 = 0xfa70....0xfad9
+private let __normProp_Changes_When_NFKC_Casefolded_range_3o: _T2 = 0xfb00....0xfb06
+private let __normProp_Changes_When_NFKC_Casefolded_range_3p: _T2 = 0xfb13....0xfb17
+private let __normProp_Changes_When_NFKC_Casefolded_range_3q: _T2 = 0xfb1f....0xfb36
+private let __normProp_Changes_When_NFKC_Casefolded_range_3r: _T2 = 0xfb38....0xfb3c
+private let __normProp_Changes_When_NFKC_Casefolded_range_3s: _T2 = 0xfb40....0xfb41
+private let __normProp_Changes_When_NFKC_Casefolded_range_3t: _T2 = 0xfb43....0xfb44
+private let __normProp_Changes_When_NFKC_Casefolded_range_3u: _T2 = 0xfb46....0xfbb1
+private let __normProp_Changes_When_NFKC_Casefolded_range_3v: _T2 = 0xfbd3....0xfd3d
+private let __normProp_Changes_When_NFKC_Casefolded_range_3w: _T2 = 0xfd50....0xfd8f
+private let __normProp_Changes_When_NFKC_Casefolded_range_3x: _T2 = 0xfd92....0xfdc7
+private let __normProp_Changes_When_NFKC_Casefolded_range_3y: _T2 = 0xfdf0....0xfdfc
+private let __normProp_Changes_When_NFKC_Casefolded_range_3z: _T2 = 0xfe00....0xfe19
+private let __normProp_Changes_When_NFKC_Casefolded_range_40: _T2 = 0xfe30....0xfe44
+private let __normProp_Changes_When_NFKC_Casefolded_range_41: _T2 = 0xfe47....0xfe52
+private let __normProp_Changes_When_NFKC_Casefolded_range_42: _T2 = 0xfe54....0xfe66
+private let __normProp_Changes_When_NFKC_Casefolded_range_43: _T2 = 0xfe68....0xfe6b
+private let __normProp_Changes_When_NFKC_Casefolded_range_44: _T2 = 0xfe70....0xfe72
+private let __normProp_Changes_When_NFKC_Casefolded_range_45: _T2 = 0xfe76....0xfefc
+private let __normProp_Changes_When_NFKC_Casefolded_range_46: _T2 = 0xff01....0xffbe
+private let __normProp_Changes_When_NFKC_Casefolded_range_47: _T2 = 0xffc2....0xffc7
+private let __normProp_Changes_When_NFKC_Casefolded_range_48: _T2 = 0xffca....0xffcf
+private let __normProp_Changes_When_NFKC_Casefolded_range_49: _T2 = 0xffd2....0xffd7
+private let __normProp_Changes_When_NFKC_Casefolded_range_4a: _T2 = 0xffda....0xffdc
+private let __normProp_Changes_When_NFKC_Casefolded_range_4b: _T2 = 0xffe0....0xffe6
+private let __normProp_Changes_When_NFKC_Casefolded_range_4c: _T2 = 0xffe8....0xffee
+private let __normProp_Changes_When_NFKC_Casefolded_range_4d: _T2 = 0xfff0....0xfff8
+private let __normProp_Changes_When_NFKC_Casefolded_range_4e: _T2 = 0x10400....0x10427
+private let __normProp_Changes_When_NFKC_Casefolded_range_4f: _T2 = 0x104b0....0x104d3
+private let __normProp_Changes_When_NFKC_Casefolded_range_4g: _T2 = 0x10c80....0x10cb2
+private let __normProp_Changes_When_NFKC_Casefolded_range_4h: _T2 = 0x118a0....0x118bf
+private let __normProp_Changes_When_NFKC_Casefolded_range_4i: _T2 = 0x16e40....0x16e5f
+private let __normProp_Changes_When_NFKC_Casefolded_range_4j: _T2 = 0x1bca0....0x1bca3
+private let __normProp_Changes_When_NFKC_Casefolded_range_4k: _T2 = 0x1d15e....0x1d164
+private let __normProp_Changes_When_NFKC_Casefolded_range_4l: _T2 = 0x1d173....0x1d17a
+private let __normProp_Changes_When_NFKC_Casefolded_range_4m: _T2 = 0x1d1bb....0x1d1c0
+private let __normProp_Changes_When_NFKC_Casefolded_range_4n: _T2 = 0x1d400....0x1d454
+private let __normProp_Changes_When_NFKC_Casefolded_range_4o: _T2 = 0x1d456....0x1d49c
+private let __normProp_Changes_When_NFKC_Casefolded_range_4p: _T2 = 0x1d49e....0x1d49f
+private let __normProp_Changes_When_NFKC_Casefolded_range_4q: _T2 = 0x1d4a5....0x1d4a6
+private let __normProp_Changes_When_NFKC_Casefolded_range_4r: _T2 = 0x1d4a9....0x1d4ac
+private let __normProp_Changes_When_NFKC_Casefolded_range_4s: _T2 = 0x1d4ae....0x1d4b9
+private let __normProp_Changes_When_NFKC_Casefolded_range_4t: _T2 = 0x1d4bd....0x1d4c3
+private let __normProp_Changes_When_NFKC_Casefolded_range_4u: _T2 = 0x1d4c5....0x1d505
+private let __normProp_Changes_When_NFKC_Casefolded_range_4v: _T2 = 0x1d507....0x1d50a
+private let __normProp_Changes_When_NFKC_Casefolded_range_4w: _T2 = 0x1d50d....0x1d514
+private let __normProp_Changes_When_NFKC_Casefolded_range_4x: _T2 = 0x1d516....0x1d51c
+private let __normProp_Changes_When_NFKC_Casefolded_range_4y: _T2 = 0x1d51e....0x1d539
+private let __normProp_Changes_When_NFKC_Casefolded_range_4z: _T2 = 0x1d53b....0x1d53e
+private let __normProp_Changes_When_NFKC_Casefolded_range_50: _T2 = 0x1d540....0x1d544
+private let __normProp_Changes_When_NFKC_Casefolded_range_51: _T2 = 0x1d54a....0x1d550
+private let __normProp_Changes_When_NFKC_Casefolded_range_52: _T2 = 0x1d552....0x1d6a5
+private let __normProp_Changes_When_NFKC_Casefolded_range_53: _T2 = 0x1d6a8....0x1d7cb
+private let __normProp_Changes_When_NFKC_Casefolded_range_54: _T2 = 0x1d7ce....0x1d7ff
+private let __normProp_Changes_When_NFKC_Casefolded_range_55: _T2 = 0x1e900....0x1e921
+private let __normProp_Changes_When_NFKC_Casefolded_range_56: _T2 = 0x1ee00....0x1ee03
+private let __normProp_Changes_When_NFKC_Casefolded_range_57: _T2 = 0x1ee05....0x1ee1f
+private let __normProp_Changes_When_NFKC_Casefolded_range_58: _T2 = 0x1ee21....0x1ee22
+private let __normProp_Changes_When_NFKC_Casefolded_range_59: _T2 = 0x1ee29....0x1ee32
+private let __normProp_Changes_When_NFKC_Casefolded_range_5a: _T2 = 0x1ee34....0x1ee37
+private let __normProp_Changes_When_NFKC_Casefolded_range_5b: _T2 = 0x1ee4d....0x1ee4f
+private let __normProp_Changes_When_NFKC_Casefolded_range_5c: _T2 = 0x1ee51....0x1ee52
+private let __normProp_Changes_When_NFKC_Casefolded_range_5d: _T2 = 0x1ee61....0x1ee62
+private let __normProp_Changes_When_NFKC_Casefolded_range_5e: _T2 = 0x1ee67....0x1ee6a
+private let __normProp_Changes_When_NFKC_Casefolded_range_5f: _T2 = 0x1ee6c....0x1ee72
+private let __normProp_Changes_When_NFKC_Casefolded_range_5g: _T2 = 0x1ee74....0x1ee77
+private let __normProp_Changes_When_NFKC_Casefolded_range_5h: _T2 = 0x1ee79....0x1ee7c
+private let __normProp_Changes_When_NFKC_Casefolded_range_5i: _T2 = 0x1ee80....0x1ee89
+private let __normProp_Changes_When_NFKC_Casefolded_range_5j: _T2 = 0x1ee8b....0x1ee9b
+private let __normProp_Changes_When_NFKC_Casefolded_range_5k: _T2 = 0x1eea1....0x1eea3
+private let __normProp_Changes_When_NFKC_Casefolded_range_5l: _T2 = 0x1eea5....0x1eea9
+private let __normProp_Changes_When_NFKC_Casefolded_range_5m: _T2 = 0x1eeab....0x1eebb
+private let __normProp_Changes_When_NFKC_Casefolded_range_5n: _T2 = 0x1f100....0x1f10a
+private let __normProp_Changes_When_NFKC_Casefolded_range_5o: _T2 = 0x1f110....0x1f12e
+private let __normProp_Changes_When_NFKC_Casefolded_range_5p: _T2 = 0x1f130....0x1f14f
+private let __normProp_Changes_When_NFKC_Casefolded_range_5q: _T2 = 0x1f16a....0x1f16c
+private let __normProp_Changes_When_NFKC_Casefolded_range_5r: _T2 = 0x1f200....0x1f202
+private let __normProp_Changes_When_NFKC_Casefolded_range_5s: _T2 = 0x1f210....0x1f23b
+private let __normProp_Changes_When_NFKC_Casefolded_range_5t: _T2 = 0x1f240....0x1f248
+private let __normProp_Changes_When_NFKC_Casefolded_range_5u: _T2 = 0x1f250....0x1f251
+private let __normProp_Changes_When_NFKC_Casefolded_range_5v: _T2 = 0x2f800....0x2fa1d
+private let __normProp_Changes_When_NFKC_Casefolded_range_5w: _T2 = 0xe0000....0xe0fff
+private let __normProp_Changes_When_NFKC_Casefolded_array: _T3 = [
+  __normProp_Changes_When_NFKC_Casefolded_range_0,
+  __normProp_Changes_When_NFKC_Casefolded_range_1,
+  __normProp_Changes_When_NFKC_Casefolded_range_2,
+  __normProp_Changes_When_NFKC_Casefolded_range_3,
+  __normProp_Changes_When_NFKC_Casefolded_range_4,
+  __normProp_Changes_When_NFKC_Casefolded_range_5,
+  __normProp_Changes_When_NFKC_Casefolded_range_6,
+  __normProp_Changes_When_NFKC_Casefolded_range_7,
+  __normProp_Changes_When_NFKC_Casefolded_range_8,
+  __normProp_Changes_When_NFKC_Casefolded_range_9,
+  __normProp_Changes_When_NFKC_Casefolded_range_a,
+  __normProp_Changes_When_NFKC_Casefolded_range_b,
+  __normProp_Changes_When_NFKC_Casefolded_range_c,
+  __normProp_Changes_When_NFKC_Casefolded_range_d,
+  __normProp_Changes_When_NFKC_Casefolded_range_e,
+  __normProp_Changes_When_NFKC_Casefolded_range_f,
+  __normProp_Changes_When_NFKC_Casefolded_range_g,
+  __normProp_Changes_When_NFKC_Casefolded_range_h,
+  __normProp_Changes_When_NFKC_Casefolded_range_i,
+  __normProp_Changes_When_NFKC_Casefolded_range_j,
+  __normProp_Changes_When_NFKC_Casefolded_range_k,
+  __normProp_Changes_When_NFKC_Casefolded_range_l,
+  __normProp_Changes_When_NFKC_Casefolded_range_m,
+  __normProp_Changes_When_NFKC_Casefolded_range_n,
+  __normProp_Changes_When_NFKC_Casefolded_range_o,
+  __normProp_Changes_When_NFKC_Casefolded_range_p,
+  __normProp_Changes_When_NFKC_Casefolded_range_q,
+  __normProp_Changes_When_NFKC_Casefolded_range_r,
+  __normProp_Changes_When_NFKC_Casefolded_range_s,
+  __normProp_Changes_When_NFKC_Casefolded_range_t,
+  __normProp_Changes_When_NFKC_Casefolded_range_u,
+  __normProp_Changes_When_NFKC_Casefolded_range_v,
+  __normProp_Changes_When_NFKC_Casefolded_range_w,
+  __normProp_Changes_When_NFKC_Casefolded_range_x,
+  __normProp_Changes_When_NFKC_Casefolded_range_y,
+  __normProp_Changes_When_NFKC_Casefolded_range_z,
+  __normProp_Changes_When_NFKC_Casefolded_range_10,
+  __normProp_Changes_When_NFKC_Casefolded_range_11,
+  __normProp_Changes_When_NFKC_Casefolded_range_12,
+  __normProp_Changes_When_NFKC_Casefolded_range_13,
+  __normProp_Changes_When_NFKC_Casefolded_range_14,
+  __normProp_Changes_When_NFKC_Casefolded_range_15,
+  __normProp_Changes_When_NFKC_Casefolded_range_16,
+  __normProp_Changes_When_NFKC_Casefolded_range_17,
+  __normProp_Changes_When_NFKC_Casefolded_range_18,
+  __normProp_Changes_When_NFKC_Casefolded_range_19,
+  __normProp_Changes_When_NFKC_Casefolded_range_1a,
+  __normProp_Changes_When_NFKC_Casefolded_range_1b,
+  __normProp_Changes_When_NFKC_Casefolded_range_1c,
+  __normProp_Changes_When_NFKC_Casefolded_range_1d,
+  __normProp_Changes_When_NFKC_Casefolded_range_1e,
+  __normProp_Changes_When_NFKC_Casefolded_range_1f,
+  __normProp_Changes_When_NFKC_Casefolded_range_1g,
+  __normProp_Changes_When_NFKC_Casefolded_range_1h,
+  __normProp_Changes_When_NFKC_Casefolded_range_1i,
+  __normProp_Changes_When_NFKC_Casefolded_range_1j,
+  __normProp_Changes_When_NFKC_Casefolded_range_1k,
+  __normProp_Changes_When_NFKC_Casefolded_range_1l,
+  __normProp_Changes_When_NFKC_Casefolded_range_1m,
+  __normProp_Changes_When_NFKC_Casefolded_range_1n,
+  __normProp_Changes_When_NFKC_Casefolded_range_1o,
+  __normProp_Changes_When_NFKC_Casefolded_range_1p,
+  __normProp_Changes_When_NFKC_Casefolded_range_1q,
+  __normProp_Changes_When_NFKC_Casefolded_range_1r,
+  __normProp_Changes_When_NFKC_Casefolded_range_1s,
+  __normProp_Changes_When_NFKC_Casefolded_range_1t,
+  __normProp_Changes_When_NFKC_Casefolded_range_1u,
+  __normProp_Changes_When_NFKC_Casefolded_range_1v,
+  __normProp_Changes_When_NFKC_Casefolded_range_1w,
+  __normProp_Changes_When_NFKC_Casefolded_range_1x,
+  __normProp_Changes_When_NFKC_Casefolded_range_1y,
+  __normProp_Changes_When_NFKC_Casefolded_range_1z,
+  __normProp_Changes_When_NFKC_Casefolded_range_20,
+  __normProp_Changes_When_NFKC_Casefolded_range_21,
+  __normProp_Changes_When_NFKC_Casefolded_range_22,
+  __normProp_Changes_When_NFKC_Casefolded_range_23,
+  __normProp_Changes_When_NFKC_Casefolded_range_24,
+  __normProp_Changes_When_NFKC_Casefolded_range_25,
+  __normProp_Changes_When_NFKC_Casefolded_range_26,
+  __normProp_Changes_When_NFKC_Casefolded_range_27,
+  __normProp_Changes_When_NFKC_Casefolded_range_28,
+  __normProp_Changes_When_NFKC_Casefolded_range_29,
+  __normProp_Changes_When_NFKC_Casefolded_range_2a,
+  __normProp_Changes_When_NFKC_Casefolded_range_2b,
+  __normProp_Changes_When_NFKC_Casefolded_range_2c,
+  __normProp_Changes_When_NFKC_Casefolded_range_2d,
+  __normProp_Changes_When_NFKC_Casefolded_range_2e,
+  __normProp_Changes_When_NFKC_Casefolded_range_2f,
+  __normProp_Changes_When_NFKC_Casefolded_range_2g,
+  __normProp_Changes_When_NFKC_Casefolded_range_2h,
+  __normProp_Changes_When_NFKC_Casefolded_range_2i,
+  __normProp_Changes_When_NFKC_Casefolded_range_2j,
+  __normProp_Changes_When_NFKC_Casefolded_range_2k,
+  __normProp_Changes_When_NFKC_Casefolded_range_2l,
+  __normProp_Changes_When_NFKC_Casefolded_range_2m,
+  __normProp_Changes_When_NFKC_Casefolded_range_2n,
+  __normProp_Changes_When_NFKC_Casefolded_range_2o,
+  __normProp_Changes_When_NFKC_Casefolded_range_2p,
+  __normProp_Changes_When_NFKC_Casefolded_range_2q,
+  __normProp_Changes_When_NFKC_Casefolded_range_2r,
+  __normProp_Changes_When_NFKC_Casefolded_range_2s,
+  __normProp_Changes_When_NFKC_Casefolded_range_2t,
+  __normProp_Changes_When_NFKC_Casefolded_range_2u,
+  __normProp_Changes_When_NFKC_Casefolded_range_2v,
+  __normProp_Changes_When_NFKC_Casefolded_range_2w,
+  __normProp_Changes_When_NFKC_Casefolded_range_2x,
+  __normProp_Changes_When_NFKC_Casefolded_range_2y,
+  __normProp_Changes_When_NFKC_Casefolded_range_2z,
+  __normProp_Changes_When_NFKC_Casefolded_range_30,
+  __normProp_Changes_When_NFKC_Casefolded_range_31,
+  __normProp_Changes_When_NFKC_Casefolded_range_32,
+  __normProp_Changes_When_NFKC_Casefolded_range_33,
+  __normProp_Changes_When_NFKC_Casefolded_range_34,
+  __normProp_Changes_When_NFKC_Casefolded_range_35,
+  __normProp_Changes_When_NFKC_Casefolded_range_36,
+  __normProp_Changes_When_NFKC_Casefolded_range_37,
+  __normProp_Changes_When_NFKC_Casefolded_range_38,
+  __normProp_Changes_When_NFKC_Casefolded_range_39,
+  __normProp_Changes_When_NFKC_Casefolded_range_3a,
+  __normProp_Changes_When_NFKC_Casefolded_range_3b,
+  __normProp_Changes_When_NFKC_Casefolded_range_3c,
+  __normProp_Changes_When_NFKC_Casefolded_range_3d,
+  __normProp_Changes_When_NFKC_Casefolded_range_3e,
+  __normProp_Changes_When_NFKC_Casefolded_range_3f,
+  __normProp_Changes_When_NFKC_Casefolded_range_3g,
+  __normProp_Changes_When_NFKC_Casefolded_range_3h,
+  __normProp_Changes_When_NFKC_Casefolded_range_3i,
+  __normProp_Changes_When_NFKC_Casefolded_range_3j,
+  __normProp_Changes_When_NFKC_Casefolded_range_3k,
+  __normProp_Changes_When_NFKC_Casefolded_range_3l,
+  __normProp_Changes_When_NFKC_Casefolded_range_3m,
+  __normProp_Changes_When_NFKC_Casefolded_range_3n,
+  __normProp_Changes_When_NFKC_Casefolded_range_3o,
+  __normProp_Changes_When_NFKC_Casefolded_range_3p,
+  __normProp_Changes_When_NFKC_Casefolded_range_3q,
+  __normProp_Changes_When_NFKC_Casefolded_range_3r,
+  __normProp_Changes_When_NFKC_Casefolded_range_3s,
+  __normProp_Changes_When_NFKC_Casefolded_range_3t,
+  __normProp_Changes_When_NFKC_Casefolded_range_3u,
+  __normProp_Changes_When_NFKC_Casefolded_range_3v,
+  __normProp_Changes_When_NFKC_Casefolded_range_3w,
+  __normProp_Changes_When_NFKC_Casefolded_range_3x,
+  __normProp_Changes_When_NFKC_Casefolded_range_3y,
+  __normProp_Changes_When_NFKC_Casefolded_range_3z,
+  __normProp_Changes_When_NFKC_Casefolded_range_40,
+  __normProp_Changes_When_NFKC_Casefolded_range_41,
+  __normProp_Changes_When_NFKC_Casefolded_range_42,
+  __normProp_Changes_When_NFKC_Casefolded_range_43,
+  __normProp_Changes_When_NFKC_Casefolded_range_44,
+  __normProp_Changes_When_NFKC_Casefolded_range_45,
+  __normProp_Changes_When_NFKC_Casefolded_range_46,
+  __normProp_Changes_When_NFKC_Casefolded_range_47,
+  __normProp_Changes_When_NFKC_Casefolded_range_48,
+  __normProp_Changes_When_NFKC_Casefolded_range_49,
+  __normProp_Changes_When_NFKC_Casefolded_range_4a,
+  __normProp_Changes_When_NFKC_Casefolded_range_4b,
+  __normProp_Changes_When_NFKC_Casefolded_range_4c,
+  __normProp_Changes_When_NFKC_Casefolded_range_4d,
+  __normProp_Changes_When_NFKC_Casefolded_range_4e,
+  __normProp_Changes_When_NFKC_Casefolded_range_4f,
+  __normProp_Changes_When_NFKC_Casefolded_range_4g,
+  __normProp_Changes_When_NFKC_Casefolded_range_4h,
+  __normProp_Changes_When_NFKC_Casefolded_range_4i,
+  __normProp_Changes_When_NFKC_Casefolded_range_4j,
+  __normProp_Changes_When_NFKC_Casefolded_range_4k,
+  __normProp_Changes_When_NFKC_Casefolded_range_4l,
+  __normProp_Changes_When_NFKC_Casefolded_range_4m,
+  __normProp_Changes_When_NFKC_Casefolded_range_4n,
+  __normProp_Changes_When_NFKC_Casefolded_range_4o,
+  __normProp_Changes_When_NFKC_Casefolded_range_4p,
+  __normProp_Changes_When_NFKC_Casefolded_range_4q,
+  __normProp_Changes_When_NFKC_Casefolded_range_4r,
+  __normProp_Changes_When_NFKC_Casefolded_range_4s,
+  __normProp_Changes_When_NFKC_Casefolded_range_4t,
+  __normProp_Changes_When_NFKC_Casefolded_range_4u,
+  __normProp_Changes_When_NFKC_Casefolded_range_4v,
+  __normProp_Changes_When_NFKC_Casefolded_range_4w,
+  __normProp_Changes_When_NFKC_Casefolded_range_4x,
+  __normProp_Changes_When_NFKC_Casefolded_range_4y,
+  __normProp_Changes_When_NFKC_Casefolded_range_4z,
+  __normProp_Changes_When_NFKC_Casefolded_range_50,
+  __normProp_Changes_When_NFKC_Casefolded_range_51,
+  __normProp_Changes_When_NFKC_Casefolded_range_52,
+  __normProp_Changes_When_NFKC_Casefolded_range_53,
+  __normProp_Changes_When_NFKC_Casefolded_range_54,
+  __normProp_Changes_When_NFKC_Casefolded_range_55,
+  __normProp_Changes_When_NFKC_Casefolded_range_56,
+  __normProp_Changes_When_NFKC_Casefolded_range_57,
+  __normProp_Changes_When_NFKC_Casefolded_range_58,
+  __normProp_Changes_When_NFKC_Casefolded_range_59,
+  __normProp_Changes_When_NFKC_Casefolded_range_5a,
+  __normProp_Changes_When_NFKC_Casefolded_range_5b,
+  __normProp_Changes_When_NFKC_Casefolded_range_5c,
+  __normProp_Changes_When_NFKC_Casefolded_range_5d,
+  __normProp_Changes_When_NFKC_Casefolded_range_5e,
+  __normProp_Changes_When_NFKC_Casefolded_range_5f,
+  __normProp_Changes_When_NFKC_Casefolded_range_5g,
+  __normProp_Changes_When_NFKC_Casefolded_range_5h,
+  __normProp_Changes_When_NFKC_Casefolded_range_5i,
+  __normProp_Changes_When_NFKC_Casefolded_range_5j,
+  __normProp_Changes_When_NFKC_Casefolded_range_5k,
+  __normProp_Changes_When_NFKC_Casefolded_range_5l,
+  __normProp_Changes_When_NFKC_Casefolded_range_5m,
+  __normProp_Changes_When_NFKC_Casefolded_range_5n,
+  __normProp_Changes_When_NFKC_Casefolded_range_5o,
+  __normProp_Changes_When_NFKC_Casefolded_range_5p,
+  __normProp_Changes_When_NFKC_Casefolded_range_5q,
+  __normProp_Changes_When_NFKC_Casefolded_range_5r,
+  __normProp_Changes_When_NFKC_Casefolded_range_5s,
+  __normProp_Changes_When_NFKC_Casefolded_range_5t,
+  __normProp_Changes_When_NFKC_Casefolded_range_5u,
+  __normProp_Changes_When_NFKC_Casefolded_range_5v,
+  __normProp_Changes_When_NFKC_Casefolded_range_5w,
+]
+private let __normProp_Changes_When_NFKC_Casefolded_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __normProp_Changes_When_NFKC_Casefolded_array)
+internal let _normProp_Changes_When_NFKC_Casefolded = UnicodeScalarValueSet(singleValues: __normProp_Changes_When_NFKC_Casefolded_set, ranges: __normProp_Changes_When_NFKC_Casefolded_ranges)
 
 /* ********************************************************************************************** */
 // Normalization Property: Expands_On_NFC
@@ -1734,157 +1126,109 @@ return MultipleRanges<UInt32>(carefullySortedRanges: array)
 
 /* ********************************************************************************************** */
 // Normalization Property: Full_Composition_Exclusion
-internal let _normProp_Full_Composition_Exclusion = ({ () -> MultipleRanges<UInt32> in
-let range_0: _T0 = 0x340....0x341
-let range_1: _T0 = 0x343....0x344
-let range_2: _T0 = 0x374....0x374
-let range_3: _T0 = 0x37e....0x37e
-let range_4: _T0 = 0x387....0x387
-let range_5: _T0 = 0x958....0x95f
-let range_6: _T0 = 0x9dc....0x9dd
-let range_7: _T0 = 0x9df....0x9df
-let range_8: _T0 = 0xa33....0xa33
-let range_9: _T0 = 0xa36....0xa36
-let range_a: _T0 = 0xa59....0xa5b
-let range_b: _T0 = 0xa5e....0xa5e
-let range_c: _T0 = 0xb5c....0xb5d
-let range_d: _T0 = 0xf43....0xf43
-let range_e: _T0 = 0xf4d....0xf4d
-let range_f: _T0 = 0xf52....0xf52
-let range_g: _T0 = 0xf57....0xf57
-let range_h: _T0 = 0xf5c....0xf5c
-let range_i: _T0 = 0xf69....0xf69
-let range_j: _T0 = 0xf73....0xf73
-let range_k: _T0 = 0xf75....0xf76
-let range_l: _T0 = 0xf78....0xf78
-let range_m: _T0 = 0xf81....0xf81
-let range_n: _T0 = 0xf93....0xf93
-let range_o: _T0 = 0xf9d....0xf9d
-let range_p: _T0 = 0xfa2....0xfa2
-let range_q: _T0 = 0xfa7....0xfa7
-let range_r: _T0 = 0xfac....0xfac
-let range_s: _T0 = 0xfb9....0xfb9
-let range_t: _T0 = 0x1f71....0x1f71
-let range_u: _T0 = 0x1f73....0x1f73
-let range_v: _T0 = 0x1f75....0x1f75
-let range_w: _T0 = 0x1f77....0x1f77
-let range_x: _T0 = 0x1f79....0x1f79
-let range_y: _T0 = 0x1f7b....0x1f7b
-let range_z: _T0 = 0x1f7d....0x1f7d
-let range_10: _T0 = 0x1fbb....0x1fbb
-let range_11: _T0 = 0x1fbe....0x1fbe
-let range_12: _T0 = 0x1fc9....0x1fc9
-let range_13: _T0 = 0x1fcb....0x1fcb
-let range_14: _T0 = 0x1fd3....0x1fd3
-let range_15: _T0 = 0x1fdb....0x1fdb
-let range_16: _T0 = 0x1fe3....0x1fe3
-let range_17: _T0 = 0x1feb....0x1feb
-let range_18: _T0 = 0x1fee....0x1fef
-let range_19: _T0 = 0x1ff9....0x1ff9
-let range_1a: _T0 = 0x1ffb....0x1ffb
-let range_1b: _T0 = 0x1ffd....0x1ffd
-let range_1c: _T0 = 0x2000....0x2001
-let range_1d: _T0 = 0x2126....0x2126
-let range_1e: _T0 = 0x212a....0x212b
-let range_1f: _T0 = 0x2329....0x232a
-let range_1g: _T0 = 0x2adc....0x2adc
-let range_1h: _T0 = 0xf900....0xfa0d
-let range_1i: _T0 = 0xfa10....0xfa10
-let range_1j: _T0 = 0xfa12....0xfa12
-let range_1k: _T0 = 0xfa15....0xfa1e
-let range_1l: _T0 = 0xfa20....0xfa20
-let range_1m: _T0 = 0xfa22....0xfa22
-let range_1n: _T0 = 0xfa25....0xfa26
-let range_1o: _T0 = 0xfa2a....0xfa6d
-let range_1p: _T0 = 0xfa70....0xfad9
-let range_1q: _T0 = 0xfb1d....0xfb1d
-let range_1r: _T0 = 0xfb1f....0xfb1f
-let range_1s: _T0 = 0xfb2a....0xfb36
-let range_1t: _T0 = 0xfb38....0xfb3c
-let range_1u: _T0 = 0xfb3e....0xfb3e
-let range_1v: _T0 = 0xfb40....0xfb41
-let range_1w: _T0 = 0xfb43....0xfb44
-let range_1x: _T0 = 0xfb46....0xfb4e
-let range_1y: _T0 = 0x1d15e....0x1d164
-let range_1z: _T0 = 0x1d1bb....0x1d1c0
-let range_20: _T0 = 0x2f800....0x2fa1d
-let array: _T1 = [
-range_0,
-range_1,
-range_2,
-range_3,
-range_4,
-range_5,
-range_6,
-range_7,
-range_8,
-range_9,
-range_a,
-range_b,
-range_c,
-range_d,
-range_e,
-range_f,
-range_g,
-range_h,
-range_i,
-range_j,
-range_k,
-range_l,
-range_m,
-range_n,
-range_o,
-range_p,
-range_q,
-range_r,
-range_s,
-range_t,
-range_u,
-range_v,
-range_w,
-range_x,
-range_y,
-range_z,
-range_10,
-range_11,
-range_12,
-range_13,
-range_14,
-range_15,
-range_16,
-range_17,
-range_18,
-range_19,
-range_1a,
-range_1b,
-range_1c,
-range_1d,
-range_1e,
-range_1f,
-range_1g,
-range_1h,
-range_1i,
-range_1j,
-range_1k,
-range_1l,
-range_1m,
-range_1n,
-range_1o,
-range_1p,
-range_1q,
-range_1r,
-range_1s,
-range_1t,
-range_1u,
-range_1v,
-range_1w,
-range_1x,
-range_1y,
-range_1z,
-range_20
+private let __normProp_Full_Composition_Exclusion_set: _T1 = [
+  0x374,
+  0x37e,
+  0x387,
+  0x9df,
+  0xa33,
+  0xa36,
+  0xa5e,
+  0xf43,
+  0xf4d,
+  0xf52,
+  0xf57,
+  0xf5c,
+  0xf69,
+  0xf73,
+  0xf78,
+  0xf81,
+  0xf93,
+  0xf9d,
+  0xfa2,
+  0xfa7,
+  0xfac,
+  0xfb9,
+  0x1f71,
+  0x1f73,
+  0x1f75,
+  0x1f77,
+  0x1f79,
+  0x1f7b,
+  0x1f7d,
+  0x1fbb,
+  0x1fbe,
+  0x1fc9,
+  0x1fcb,
+  0x1fd3,
+  0x1fdb,
+  0x1fe3,
+  0x1feb,
+  0x1ff9,
+  0x1ffb,
+  0x1ffd,
+  0x2126,
+  0x2adc,
+  0xfa10,
+  0xfa12,
+  0xfa20,
+  0xfa22,
+  0xfb1d,
+  0xfb1f,
+  0xfb3e,
 ]
-return MultipleRanges<UInt32>(carefullySortedRanges: array)
-})()
+private let __normProp_Full_Composition_Exclusion_range_0: _T2 = 0x340....0x341
+private let __normProp_Full_Composition_Exclusion_range_1: _T2 = 0x343....0x344
+private let __normProp_Full_Composition_Exclusion_range_2: _T2 = 0x958....0x95f
+private let __normProp_Full_Composition_Exclusion_range_3: _T2 = 0x9dc....0x9dd
+private let __normProp_Full_Composition_Exclusion_range_4: _T2 = 0xa59....0xa5b
+private let __normProp_Full_Composition_Exclusion_range_5: _T2 = 0xb5c....0xb5d
+private let __normProp_Full_Composition_Exclusion_range_6: _T2 = 0xf75....0xf76
+private let __normProp_Full_Composition_Exclusion_range_7: _T2 = 0x1fee....0x1fef
+private let __normProp_Full_Composition_Exclusion_range_8: _T2 = 0x2000....0x2001
+private let __normProp_Full_Composition_Exclusion_range_9: _T2 = 0x212a....0x212b
+private let __normProp_Full_Composition_Exclusion_range_a: _T2 = 0x2329....0x232a
+private let __normProp_Full_Composition_Exclusion_range_b: _T2 = 0xf900....0xfa0d
+private let __normProp_Full_Composition_Exclusion_range_c: _T2 = 0xfa15....0xfa1e
+private let __normProp_Full_Composition_Exclusion_range_d: _T2 = 0xfa25....0xfa26
+private let __normProp_Full_Composition_Exclusion_range_e: _T2 = 0xfa2a....0xfa6d
+private let __normProp_Full_Composition_Exclusion_range_f: _T2 = 0xfa70....0xfad9
+private let __normProp_Full_Composition_Exclusion_range_g: _T2 = 0xfb2a....0xfb36
+private let __normProp_Full_Composition_Exclusion_range_h: _T2 = 0xfb38....0xfb3c
+private let __normProp_Full_Composition_Exclusion_range_i: _T2 = 0xfb40....0xfb41
+private let __normProp_Full_Composition_Exclusion_range_j: _T2 = 0xfb43....0xfb44
+private let __normProp_Full_Composition_Exclusion_range_k: _T2 = 0xfb46....0xfb4e
+private let __normProp_Full_Composition_Exclusion_range_l: _T2 = 0x1d15e....0x1d164
+private let __normProp_Full_Composition_Exclusion_range_m: _T2 = 0x1d1bb....0x1d1c0
+private let __normProp_Full_Composition_Exclusion_range_n: _T2 = 0x2f800....0x2fa1d
+private let __normProp_Full_Composition_Exclusion_array: _T3 = [
+  __normProp_Full_Composition_Exclusion_range_0,
+  __normProp_Full_Composition_Exclusion_range_1,
+  __normProp_Full_Composition_Exclusion_range_2,
+  __normProp_Full_Composition_Exclusion_range_3,
+  __normProp_Full_Composition_Exclusion_range_4,
+  __normProp_Full_Composition_Exclusion_range_5,
+  __normProp_Full_Composition_Exclusion_range_6,
+  __normProp_Full_Composition_Exclusion_range_7,
+  __normProp_Full_Composition_Exclusion_range_8,
+  __normProp_Full_Composition_Exclusion_range_9,
+  __normProp_Full_Composition_Exclusion_range_a,
+  __normProp_Full_Composition_Exclusion_range_b,
+  __normProp_Full_Composition_Exclusion_range_c,
+  __normProp_Full_Composition_Exclusion_range_d,
+  __normProp_Full_Composition_Exclusion_range_e,
+  __normProp_Full_Composition_Exclusion_range_f,
+  __normProp_Full_Composition_Exclusion_range_g,
+  __normProp_Full_Composition_Exclusion_range_h,
+  __normProp_Full_Composition_Exclusion_range_i,
+  __normProp_Full_Composition_Exclusion_range_j,
+  __normProp_Full_Composition_Exclusion_range_k,
+  __normProp_Full_Composition_Exclusion_range_l,
+  __normProp_Full_Composition_Exclusion_range_m,
+  __normProp_Full_Composition_Exclusion_range_n,
+]
+private let __normProp_Full_Composition_Exclusion_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __normProp_Full_Composition_Exclusion_array)
+internal let _normProp_Full_Composition_Exclusion = UnicodeScalarValueSet(singleValues: __normProp_Full_Composition_Exclusion_set, ranges: __normProp_Full_Composition_Exclusion_ranges)
 
 /* ********************************************************************************************** */
 // Normalization Property: NFC_QC

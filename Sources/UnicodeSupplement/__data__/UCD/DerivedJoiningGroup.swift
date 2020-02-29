@@ -9,6 +9,7 @@
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
+  
   See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
   Data Files and Software.
   NOTICE TO USER: Carefully read the following legal agreement.
@@ -19,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -52,402 +53,405 @@
 // Required Modules
 import Ranges
 
-
 // Type Aliases
-private typealias _T0 = (AnyRange<UInt32>, Unicode.JoiningGroup)
-private typealias _T1 = Array<_T0>
+private typealias _T0 = Unicode.JoiningGroup
+private typealias _T1 = (Unicode.Scalar.Value, _T0)
+private typealias _T2 = (AnyRange<UInt32>, _T0)
+private typealias _T3 = Array<_T2>
 
-
-private let __pair_jg_0: _T0 = (0x620....0x620, .yeh)
-private let __pair_jg_1: _T0 = (0x622....0x623, .alef)
-private let __pair_jg_2: _T0 = (0x624....0x624, .waw)
-private let __pair_jg_3: _T0 = (0x625....0x625, .alef)
-private let __pair_jg_4: _T0 = (0x626....0x626, .yeh)
-private let __pair_jg_5: _T0 = (0x627....0x627, .alef)
-private let __pair_jg_6: _T0 = (0x628....0x628, .beh)
-private let __pair_jg_7: _T0 = (0x629....0x629, .tehMarbuta)
-private let __pair_jg_8: _T0 = (0x62a....0x62b, .beh)
-private let __pair_jg_9: _T0 = (0x62c....0x62e, .hah)
-private let __pair_jg_a: _T0 = (0x62f....0x630, .dal)
-private let __pair_jg_b: _T0 = (0x631....0x632, .reh)
-private let __pair_jg_c: _T0 = (0x633....0x634, .seen)
-private let __pair_jg_d: _T0 = (0x635....0x636, .sad)
-private let __pair_jg_e: _T0 = (0x637....0x638, .tah)
-private let __pair_jg_f: _T0 = (0x639....0x63a, .ain)
-private let __pair_jg_g: _T0 = (0x63b....0x63c, .gaf)
-private let __pair_jg_h: _T0 = (0x63d....0x63f, .farsiYeh)
-private let __pair_jg_i: _T0 = (0x641....0x641, .feh)
-private let __pair_jg_j: _T0 = (0x642....0x642, .qaf)
-private let __pair_jg_k: _T0 = (0x643....0x643, .kaf)
-private let __pair_jg_l: _T0 = (0x644....0x644, .lam)
-private let __pair_jg_m: _T0 = (0x645....0x645, .meem)
-private let __pair_jg_n: _T0 = (0x646....0x646, .noon)
-private let __pair_jg_o: _T0 = (0x647....0x647, .heh)
-private let __pair_jg_p: _T0 = (0x648....0x648, .waw)
-private let __pair_jg_q: _T0 = (0x649....0x64a, .yeh)
-private let __pair_jg_r: _T0 = (0x66e....0x66e, .beh)
-private let __pair_jg_s: _T0 = (0x66f....0x66f, .qaf)
-private let __pair_jg_t: _T0 = (0x671....0x673, .alef)
-private let __pair_jg_u: _T0 = (0x675....0x675, .alef)
-private let __pair_jg_v: _T0 = (0x676....0x677, .waw)
-private let __pair_jg_w: _T0 = (0x678....0x678, .yeh)
-private let __pair_jg_x: _T0 = (0x679....0x680, .beh)
-private let __pair_jg_y: _T0 = (0x681....0x687, .hah)
-private let __pair_jg_z: _T0 = (0x688....0x690, .dal)
-private let __pair_jg_10: _T0 = (0x691....0x699, .reh)
-private let __pair_jg_11: _T0 = (0x69a....0x69c, .seen)
-private let __pair_jg_12: _T0 = (0x69d....0x69e, .sad)
-private let __pair_jg_13: _T0 = (0x69f....0x69f, .tah)
-private let __pair_jg_14: _T0 = (0x6a0....0x6a0, .ain)
-private let __pair_jg_15: _T0 = (0x6a1....0x6a6, .feh)
-private let __pair_jg_16: _T0 = (0x6a7....0x6a8, .qaf)
-private let __pair_jg_17: _T0 = (0x6a9....0x6a9, .gaf)
-private let __pair_jg_18: _T0 = (0x6aa....0x6aa, .swashKaf)
-private let __pair_jg_19: _T0 = (0x6ab....0x6ab, .gaf)
-private let __pair_jg_1a: _T0 = (0x6ac....0x6ae, .kaf)
-private let __pair_jg_1b: _T0 = (0x6af....0x6b4, .gaf)
-private let __pair_jg_1c: _T0 = (0x6b5....0x6b8, .lam)
-private let __pair_jg_1d: _T0 = (0x6b9....0x6bc, .noon)
-private let __pair_jg_1e: _T0 = (0x6bd....0x6bd, .nya)
-private let __pair_jg_1f: _T0 = (0x6be....0x6be, .knottedHeh)
-private let __pair_jg_1g: _T0 = (0x6bf....0x6bf, .hah)
-private let __pair_jg_1h: _T0 = (0x6c0....0x6c0, .tehMarbuta)
-private let __pair_jg_1i: _T0 = (0x6c1....0x6c2, .hehGoal)
-private let __pair_jg_1j: _T0 = (0x6c3....0x6c3, .tehMarbutaGoal)
-private let __pair_jg_1k: _T0 = (0x6c4....0x6cb, .waw)
-private let __pair_jg_1l: _T0 = (0x6cc....0x6cc, .farsiYeh)
-private let __pair_jg_1m: _T0 = (0x6cd....0x6cd, .yehWithTail)
-private let __pair_jg_1n: _T0 = (0x6ce....0x6ce, .farsiYeh)
-private let __pair_jg_1o: _T0 = (0x6cf....0x6cf, .waw)
-private let __pair_jg_1p: _T0 = (0x6d0....0x6d1, .yeh)
-private let __pair_jg_1q: _T0 = (0x6d2....0x6d3, .yehBarree)
-private let __pair_jg_1r: _T0 = (0x6d5....0x6d5, .tehMarbuta)
-private let __pair_jg_1s: _T0 = (0x6ee....0x6ee, .dal)
-private let __pair_jg_1t: _T0 = (0x6ef....0x6ef, .reh)
-private let __pair_jg_1u: _T0 = (0x6fa....0x6fa, .seen)
-private let __pair_jg_1v: _T0 = (0x6fb....0x6fb, .sad)
-private let __pair_jg_1w: _T0 = (0x6fc....0x6fc, .ain)
-private let __pair_jg_1x: _T0 = (0x6ff....0x6ff, .knottedHeh)
-private let __pair_jg_1y: _T0 = (0x710....0x710, .alaph)
-private let __pair_jg_1z: _T0 = (0x712....0x712, .beth)
-private let __pair_jg_20: _T0 = (0x713....0x714, .gamal)
-private let __pair_jg_21: _T0 = (0x715....0x716, .dalathRish)
-private let __pair_jg_22: _T0 = (0x717....0x717, .he)
-private let __pair_jg_23: _T0 = (0x718....0x718, .syriacWaw)
-private let __pair_jg_24: _T0 = (0x719....0x719, .zain)
-private let __pair_jg_25: _T0 = (0x71a....0x71a, .heth)
-private let __pair_jg_26: _T0 = (0x71b....0x71c, .teth)
-private let __pair_jg_27: _T0 = (0x71d....0x71d, .yudh)
-private let __pair_jg_28: _T0 = (0x71e....0x71e, .yudhHe)
-private let __pair_jg_29: _T0 = (0x71f....0x71f, .kaph)
-private let __pair_jg_2a: _T0 = (0x720....0x720, .lamadh)
-private let __pair_jg_2b: _T0 = (0x721....0x721, .mim)
-private let __pair_jg_2c: _T0 = (0x722....0x722, .nun)
-private let __pair_jg_2d: _T0 = (0x723....0x723, .semkath)
-private let __pair_jg_2e: _T0 = (0x724....0x724, .finalSemkath)
-private let __pair_jg_2f: _T0 = (0x725....0x725, .e)
-private let __pair_jg_2g: _T0 = (0x726....0x726, .pe)
-private let __pair_jg_2h: _T0 = (0x727....0x727, .reversedPe)
-private let __pair_jg_2i: _T0 = (0x728....0x728, .sadhe)
-private let __pair_jg_2j: _T0 = (0x729....0x729, .qaph)
-private let __pair_jg_2k: _T0 = (0x72a....0x72a, .dalathRish)
-private let __pair_jg_2l: _T0 = (0x72b....0x72b, .shin)
-private let __pair_jg_2m: _T0 = (0x72c....0x72c, .taw)
-private let __pair_jg_2n: _T0 = (0x72d....0x72d, .beth)
-private let __pair_jg_2o: _T0 = (0x72e....0x72e, .gamal)
-private let __pair_jg_2p: _T0 = (0x72f....0x72f, .dalathRish)
-private let __pair_jg_2q: _T0 = (0x74d....0x74d, .zhain)
-private let __pair_jg_2r: _T0 = (0x74e....0x74e, .khaph)
-private let __pair_jg_2s: _T0 = (0x74f....0x74f, .fe)
-private let __pair_jg_2t: _T0 = (0x750....0x756, .beh)
-private let __pair_jg_2u: _T0 = (0x757....0x758, .hah)
-private let __pair_jg_2v: _T0 = (0x759....0x75a, .dal)
-private let __pair_jg_2w: _T0 = (0x75b....0x75b, .reh)
-private let __pair_jg_2x: _T0 = (0x75c....0x75c, .seen)
-private let __pair_jg_2y: _T0 = (0x75d....0x75f, .ain)
-private let __pair_jg_2z: _T0 = (0x760....0x761, .feh)
-private let __pair_jg_30: _T0 = (0x762....0x764, .gaf)
-private let __pair_jg_31: _T0 = (0x765....0x766, .meem)
-private let __pair_jg_32: _T0 = (0x767....0x769, .noon)
-private let __pair_jg_33: _T0 = (0x76a....0x76a, .lam)
-private let __pair_jg_34: _T0 = (0x76b....0x76c, .reh)
-private let __pair_jg_35: _T0 = (0x76d....0x76d, .seen)
-private let __pair_jg_36: _T0 = (0x76e....0x76f, .hah)
-private let __pair_jg_37: _T0 = (0x770....0x770, .seen)
-private let __pair_jg_38: _T0 = (0x771....0x771, .reh)
-private let __pair_jg_39: _T0 = (0x772....0x772, .hah)
-private let __pair_jg_3a: _T0 = (0x773....0x774, .alef)
-private let __pair_jg_3b: _T0 = (0x775....0x776, .farsiYeh)
-private let __pair_jg_3c: _T0 = (0x777....0x777, .yeh)
-private let __pair_jg_3d: _T0 = (0x778....0x779, .waw)
-private let __pair_jg_3e: _T0 = (0x77a....0x77b, .burushaskiYehBarree)
-private let __pair_jg_3f: _T0 = (0x77c....0x77c, .hah)
-private let __pair_jg_3g: _T0 = (0x77d....0x77e, .seen)
-private let __pair_jg_3h: _T0 = (0x77f....0x77f, .kaf)
-private let __pair_jg_3i: _T0 = (0x860....0x860, .malayalamNga)
-private let __pair_jg_3j: _T0 = (0x861....0x861, .malayalamJa)
-private let __pair_jg_3k: _T0 = (0x862....0x862, .malayalamNya)
-private let __pair_jg_3l: _T0 = (0x863....0x863, .malayalamTta)
-private let __pair_jg_3m: _T0 = (0x864....0x864, .malayalamNna)
-private let __pair_jg_3n: _T0 = (0x865....0x865, .malayalamNnna)
-private let __pair_jg_3o: _T0 = (0x866....0x866, .malayalamBha)
-private let __pair_jg_3p: _T0 = (0x867....0x867, .malayalamRa)
-private let __pair_jg_3q: _T0 = (0x868....0x868, .malayalamLla)
-private let __pair_jg_3r: _T0 = (0x869....0x869, .malayalamLlla)
-private let __pair_jg_3s: _T0 = (0x86a....0x86a, .malayalamSsa)
-private let __pair_jg_3t: _T0 = (0x8a0....0x8a1, .beh)
-private let __pair_jg_3u: _T0 = (0x8a2....0x8a2, .hah)
-private let __pair_jg_3v: _T0 = (0x8a3....0x8a3, .tah)
-private let __pair_jg_3w: _T0 = (0x8a4....0x8a4, .feh)
-private let __pair_jg_3x: _T0 = (0x8a5....0x8a5, .qaf)
-private let __pair_jg_3y: _T0 = (0x8a6....0x8a6, .lam)
-private let __pair_jg_3z: _T0 = (0x8a7....0x8a7, .meem)
-private let __pair_jg_40: _T0 = (0x8a8....0x8a9, .yeh)
-private let __pair_jg_41: _T0 = (0x8aa....0x8aa, .reh)
-private let __pair_jg_42: _T0 = (0x8ab....0x8ab, .waw)
-private let __pair_jg_43: _T0 = (0x8ac....0x8ac, .rohingyaYeh)
-private let __pair_jg_44: _T0 = (0x8ae....0x8ae, .dal)
-private let __pair_jg_45: _T0 = (0x8af....0x8af, .sad)
-private let __pair_jg_46: _T0 = (0x8b0....0x8b0, .gaf)
-private let __pair_jg_47: _T0 = (0x8b1....0x8b1, .straightWaw)
-private let __pair_jg_48: _T0 = (0x8b2....0x8b2, .reh)
-private let __pair_jg_49: _T0 = (0x8b3....0x8b3, .ain)
-private let __pair_jg_4a: _T0 = (0x8b4....0x8b4, .kaf)
-private let __pair_jg_4b: _T0 = (0x8b6....0x8b8, .beh)
-private let __pair_jg_4c: _T0 = (0x8b9....0x8b9, .reh)
-private let __pair_jg_4d: _T0 = (0x8ba....0x8ba, .yeh)
-private let __pair_jg_4e: _T0 = (0x8bb....0x8bb, .africanFeh)
-private let __pair_jg_4f: _T0 = (0x8bc....0x8bc, .africanQaf)
-private let __pair_jg_4g: _T0 = (0x8bd....0x8bd, .africanNoon)
-private let __pair_jg_4h: _T0 = (0x10ac0....0x10ac0, .manichaeanAleph)
-private let __pair_jg_4i: _T0 = (0x10ac1....0x10ac2, .manichaeanBeth)
-private let __pair_jg_4j: _T0 = (0x10ac3....0x10ac4, .manichaeanGimel)
-private let __pair_jg_4k: _T0 = (0x10ac5....0x10ac5, .manichaeanDaleth)
-private let __pair_jg_4l: _T0 = (0x10ac7....0x10ac7, .manichaeanWaw)
-private let __pair_jg_4m: _T0 = (0x10ac9....0x10aca, .manichaeanZayin)
-private let __pair_jg_4n: _T0 = (0x10acd....0x10acd, .manichaeanHeth)
-private let __pair_jg_4o: _T0 = (0x10ace....0x10ace, .manichaeanTeth)
-private let __pair_jg_4p: _T0 = (0x10acf....0x10acf, .manichaeanYodh)
-private let __pair_jg_4q: _T0 = (0x10ad0....0x10ad2, .manichaeanKaph)
-private let __pair_jg_4r: _T0 = (0x10ad3....0x10ad3, .manichaeanLamedh)
-private let __pair_jg_4s: _T0 = (0x10ad4....0x10ad4, .manichaeanDhamedh)
-private let __pair_jg_4t: _T0 = (0x10ad5....0x10ad5, .manichaeanThamedh)
-private let __pair_jg_4u: _T0 = (0x10ad6....0x10ad6, .manichaeanMem)
-private let __pair_jg_4v: _T0 = (0x10ad7....0x10ad7, .manichaeanNun)
-private let __pair_jg_4w: _T0 = (0x10ad8....0x10ad8, .manichaeanSamekh)
-private let __pair_jg_4x: _T0 = (0x10ad9....0x10ada, .manichaeanAyin)
-private let __pair_jg_4y: _T0 = (0x10adb....0x10adc, .manichaeanPe)
-private let __pair_jg_4z: _T0 = (0x10add....0x10add, .manichaeanSadhe)
-private let __pair_jg_50: _T0 = (0x10ade....0x10ae0, .manichaeanQoph)
-private let __pair_jg_51: _T0 = (0x10ae1....0x10ae1, .manichaeanResh)
-private let __pair_jg_52: _T0 = (0x10ae4....0x10ae4, .manichaeanTaw)
-private let __pair_jg_53: _T0 = (0x10aeb....0x10aeb, .manichaeanOne)
-private let __pair_jg_54: _T0 = (0x10aec....0x10aec, .manichaeanFive)
-private let __pair_jg_55: _T0 = (0x10aed....0x10aed, .manichaeanTen)
-private let __pair_jg_56: _T0 = (0x10aee....0x10aee, .manichaeanTwenty)
-private let __pair_jg_57: _T0 = (0x10aef....0x10aef, .manichaeanHundred)
-private let __pair_jg_58: _T0 = (0x10d02....0x10d02, .hanifiRohingyaPa)
-private let __pair_jg_59: _T0 = (0x10d09....0x10d09, .hanifiRohingyaPa)
-private let __pair_jg_5a: _T0 = (0x10d19....0x10d19, .hanifiRohingyaKinnaYa)
-private let __pair_jg_5b: _T0 = (0x10d1c....0x10d1c, .hanifiRohingyaPa)
-private let __pair_jg_5c: _T0 = (0x10d1e....0x10d1e, .hanifiRohingyaKinnaYa)
-private let __pair_jg_5d: _T0 = (0x10d20....0x10d20, .hanifiRohingyaKinnaYa)
-private let __pair_jg_5e: _T0 = (0x10d23....0x10d23, .hanifiRohingyaKinnaYa)
-private let __array_jg: _T1 = [
-  __pair_jg_0,
-  __pair_jg_1,
-  __pair_jg_2,
-  __pair_jg_3,
-  __pair_jg_4,
-  __pair_jg_5,
-  __pair_jg_6,
-  __pair_jg_7,
-  __pair_jg_8,
-  __pair_jg_9,
-  __pair_jg_a,
-  __pair_jg_b,
-  __pair_jg_c,
-  __pair_jg_d,
-  __pair_jg_e,
-  __pair_jg_f,
-  __pair_jg_g,
-  __pair_jg_h,
-  __pair_jg_i,
-  __pair_jg_j,
-  __pair_jg_k,
-  __pair_jg_l,
-  __pair_jg_m,
-  __pair_jg_n,
-  __pair_jg_o,
-  __pair_jg_p,
-  __pair_jg_q,
-  __pair_jg_r,
-  __pair_jg_s,
-  __pair_jg_t,
-  __pair_jg_u,
-  __pair_jg_v,
-  __pair_jg_w,
-  __pair_jg_x,
-  __pair_jg_y,
-  __pair_jg_z,
-  __pair_jg_10,
-  __pair_jg_11,
-  __pair_jg_12,
-  __pair_jg_13,
-  __pair_jg_14,
-  __pair_jg_15,
-  __pair_jg_16,
-  __pair_jg_17,
-  __pair_jg_18,
-  __pair_jg_19,
-  __pair_jg_1a,
-  __pair_jg_1b,
-  __pair_jg_1c,
-  __pair_jg_1d,
-  __pair_jg_1e,
-  __pair_jg_1f,
-  __pair_jg_1g,
-  __pair_jg_1h,
-  __pair_jg_1i,
-  __pair_jg_1j,
-  __pair_jg_1k,
-  __pair_jg_1l,
-  __pair_jg_1m,
-  __pair_jg_1n,
-  __pair_jg_1o,
-  __pair_jg_1p,
-  __pair_jg_1q,
-  __pair_jg_1r,
-  __pair_jg_1s,
-  __pair_jg_1t,
-  __pair_jg_1u,
-  __pair_jg_1v,
-  __pair_jg_1w,
-  __pair_jg_1x,
-  __pair_jg_1y,
-  __pair_jg_1z,
-  __pair_jg_20,
-  __pair_jg_21,
-  __pair_jg_22,
-  __pair_jg_23,
-  __pair_jg_24,
-  __pair_jg_25,
-  __pair_jg_26,
-  __pair_jg_27,
-  __pair_jg_28,
-  __pair_jg_29,
-  __pair_jg_2a,
-  __pair_jg_2b,
-  __pair_jg_2c,
-  __pair_jg_2d,
-  __pair_jg_2e,
-  __pair_jg_2f,
-  __pair_jg_2g,
-  __pair_jg_2h,
-  __pair_jg_2i,
-  __pair_jg_2j,
-  __pair_jg_2k,
-  __pair_jg_2l,
-  __pair_jg_2m,
-  __pair_jg_2n,
-  __pair_jg_2o,
-  __pair_jg_2p,
-  __pair_jg_2q,
-  __pair_jg_2r,
-  __pair_jg_2s,
-  __pair_jg_2t,
-  __pair_jg_2u,
-  __pair_jg_2v,
-  __pair_jg_2w,
-  __pair_jg_2x,
-  __pair_jg_2y,
-  __pair_jg_2z,
-  __pair_jg_30,
-  __pair_jg_31,
-  __pair_jg_32,
-  __pair_jg_33,
-  __pair_jg_34,
-  __pair_jg_35,
-  __pair_jg_36,
-  __pair_jg_37,
-  __pair_jg_38,
-  __pair_jg_39,
-  __pair_jg_3a,
-  __pair_jg_3b,
-  __pair_jg_3c,
-  __pair_jg_3d,
-  __pair_jg_3e,
-  __pair_jg_3f,
-  __pair_jg_3g,
-  __pair_jg_3h,
-  __pair_jg_3i,
-  __pair_jg_3j,
-  __pair_jg_3k,
-  __pair_jg_3l,
-  __pair_jg_3m,
-  __pair_jg_3n,
-  __pair_jg_3o,
-  __pair_jg_3p,
-  __pair_jg_3q,
-  __pair_jg_3r,
-  __pair_jg_3s,
-  __pair_jg_3t,
-  __pair_jg_3u,
-  __pair_jg_3v,
-  __pair_jg_3w,
-  __pair_jg_3x,
-  __pair_jg_3y,
-  __pair_jg_3z,
-  __pair_jg_40,
-  __pair_jg_41,
-  __pair_jg_42,
-  __pair_jg_43,
-  __pair_jg_44,
-  __pair_jg_45,
-  __pair_jg_46,
-  __pair_jg_47,
-  __pair_jg_48,
-  __pair_jg_49,
-  __pair_jg_4a,
-  __pair_jg_4b,
-  __pair_jg_4c,
-  __pair_jg_4d,
-  __pair_jg_4e,
-  __pair_jg_4f,
-  __pair_jg_4g,
-  __pair_jg_4h,
-  __pair_jg_4i,
-  __pair_jg_4j,
-  __pair_jg_4k,
-  __pair_jg_4l,
-  __pair_jg_4m,
-  __pair_jg_4n,
-  __pair_jg_4o,
-  __pair_jg_4p,
-  __pair_jg_4q,
-  __pair_jg_4r,
-  __pair_jg_4s,
-  __pair_jg_4t,
-  __pair_jg_4u,
-  __pair_jg_4v,
-  __pair_jg_4w,
-  __pair_jg_4x,
-  __pair_jg_4y,
-  __pair_jg_4z,
-  __pair_jg_50,
-  __pair_jg_51,
-  __pair_jg_52,
-  __pair_jg_53,
-  __pair_jg_54,
-  __pair_jg_55,
-  __pair_jg_56,
-  __pair_jg_57,
-  __pair_jg_58,
-  __pair_jg_59,
-  __pair_jg_5a,
-  __pair_jg_5b,
-  __pair_jg_5c,
-  __pair_jg_5d,
-  __pair_jg_5e,
+private let __jg_pair_0: _T1 = (0x620, .yeh)
+private let __jg_pair_1: _T1 = (0x624, .waw)
+private let __jg_pair_2: _T1 = (0x625, .alef)
+private let __jg_pair_3: _T1 = (0x626, .yeh)
+private let __jg_pair_4: _T1 = (0x627, .alef)
+private let __jg_pair_5: _T1 = (0x628, .beh)
+private let __jg_pair_6: _T1 = (0x629, .tehMarbuta)
+private let __jg_pair_7: _T1 = (0x641, .feh)
+private let __jg_pair_8: _T1 = (0x642, .qaf)
+private let __jg_pair_9: _T1 = (0x643, .kaf)
+private let __jg_pair_a: _T1 = (0x644, .lam)
+private let __jg_pair_b: _T1 = (0x645, .meem)
+private let __jg_pair_c: _T1 = (0x646, .noon)
+private let __jg_pair_d: _T1 = (0x647, .heh)
+private let __jg_pair_e: _T1 = (0x648, .waw)
+private let __jg_pair_f: _T1 = (0x66e, .beh)
+private let __jg_pair_g: _T1 = (0x66f, .qaf)
+private let __jg_pair_h: _T1 = (0x675, .alef)
+private let __jg_pair_i: _T1 = (0x678, .yeh)
+private let __jg_pair_j: _T1 = (0x69f, .tah)
+private let __jg_pair_k: _T1 = (0x6a0, .ain)
+private let __jg_pair_l: _T1 = (0x6a9, .gaf)
+private let __jg_pair_m: _T1 = (0x6aa, .swashKaf)
+private let __jg_pair_n: _T1 = (0x6ab, .gaf)
+private let __jg_pair_o: _T1 = (0x6bd, .nya)
+private let __jg_pair_p: _T1 = (0x6be, .knottedHeh)
+private let __jg_pair_q: _T1 = (0x6bf, .hah)
+private let __jg_pair_r: _T1 = (0x6c0, .tehMarbuta)
+private let __jg_pair_s: _T1 = (0x6c3, .tehMarbutaGoal)
+private let __jg_pair_t: _T1 = (0x6cc, .farsiYeh)
+private let __jg_pair_u: _T1 = (0x6cd, .yehWithTail)
+private let __jg_pair_v: _T1 = (0x6ce, .farsiYeh)
+private let __jg_pair_w: _T1 = (0x6cf, .waw)
+private let __jg_pair_x: _T1 = (0x6d5, .tehMarbuta)
+private let __jg_pair_y: _T1 = (0x6ee, .dal)
+private let __jg_pair_z: _T1 = (0x6ef, .reh)
+private let __jg_pair_10: _T1 = (0x6fa, .seen)
+private let __jg_pair_11: _T1 = (0x6fb, .sad)
+private let __jg_pair_12: _T1 = (0x6fc, .ain)
+private let __jg_pair_13: _T1 = (0x6ff, .knottedHeh)
+private let __jg_pair_14: _T1 = (0x710, .alaph)
+private let __jg_pair_15: _T1 = (0x712, .beth)
+private let __jg_pair_16: _T1 = (0x717, .he)
+private let __jg_pair_17: _T1 = (0x718, .syriacWaw)
+private let __jg_pair_18: _T1 = (0x719, .zain)
+private let __jg_pair_19: _T1 = (0x71a, .heth)
+private let __jg_pair_1a: _T1 = (0x71d, .yudh)
+private let __jg_pair_1b: _T1 = (0x71e, .yudhHe)
+private let __jg_pair_1c: _T1 = (0x71f, .kaph)
+private let __jg_pair_1d: _T1 = (0x720, .lamadh)
+private let __jg_pair_1e: _T1 = (0x721, .mim)
+private let __jg_pair_1f: _T1 = (0x722, .nun)
+private let __jg_pair_1g: _T1 = (0x723, .semkath)
+private let __jg_pair_1h: _T1 = (0x724, .finalSemkath)
+private let __jg_pair_1i: _T1 = (0x725, .e)
+private let __jg_pair_1j: _T1 = (0x726, .pe)
+private let __jg_pair_1k: _T1 = (0x727, .reversedPe)
+private let __jg_pair_1l: _T1 = (0x728, .sadhe)
+private let __jg_pair_1m: _T1 = (0x729, .qaph)
+private let __jg_pair_1n: _T1 = (0x72a, .dalathRish)
+private let __jg_pair_1o: _T1 = (0x72b, .shin)
+private let __jg_pair_1p: _T1 = (0x72c, .taw)
+private let __jg_pair_1q: _T1 = (0x72d, .beth)
+private let __jg_pair_1r: _T1 = (0x72e, .gamal)
+private let __jg_pair_1s: _T1 = (0x72f, .dalathRish)
+private let __jg_pair_1t: _T1 = (0x74d, .zhain)
+private let __jg_pair_1u: _T1 = (0x74e, .khaph)
+private let __jg_pair_1v: _T1 = (0x74f, .fe)
+private let __jg_pair_1w: _T1 = (0x75b, .reh)
+private let __jg_pair_1x: _T1 = (0x75c, .seen)
+private let __jg_pair_1y: _T1 = (0x76a, .lam)
+private let __jg_pair_1z: _T1 = (0x76d, .seen)
+private let __jg_pair_20: _T1 = (0x770, .seen)
+private let __jg_pair_21: _T1 = (0x771, .reh)
+private let __jg_pair_22: _T1 = (0x772, .hah)
+private let __jg_pair_23: _T1 = (0x777, .yeh)
+private let __jg_pair_24: _T1 = (0x77c, .hah)
+private let __jg_pair_25: _T1 = (0x77f, .kaf)
+private let __jg_pair_26: _T1 = (0x860, .malayalamNga)
+private let __jg_pair_27: _T1 = (0x861, .malayalamJa)
+private let __jg_pair_28: _T1 = (0x862, .malayalamNya)
+private let __jg_pair_29: _T1 = (0x863, .malayalamTta)
+private let __jg_pair_2a: _T1 = (0x864, .malayalamNna)
+private let __jg_pair_2b: _T1 = (0x865, .malayalamNnna)
+private let __jg_pair_2c: _T1 = (0x866, .malayalamBha)
+private let __jg_pair_2d: _T1 = (0x867, .malayalamRa)
+private let __jg_pair_2e: _T1 = (0x868, .malayalamLla)
+private let __jg_pair_2f: _T1 = (0x869, .malayalamLlla)
+private let __jg_pair_2g: _T1 = (0x86a, .malayalamSsa)
+private let __jg_pair_2h: _T1 = (0x8a2, .hah)
+private let __jg_pair_2i: _T1 = (0x8a3, .tah)
+private let __jg_pair_2j: _T1 = (0x8a4, .feh)
+private let __jg_pair_2k: _T1 = (0x8a5, .qaf)
+private let __jg_pair_2l: _T1 = (0x8a6, .lam)
+private let __jg_pair_2m: _T1 = (0x8a7, .meem)
+private let __jg_pair_2n: _T1 = (0x8aa, .reh)
+private let __jg_pair_2o: _T1 = (0x8ab, .waw)
+private let __jg_pair_2p: _T1 = (0x8ac, .rohingyaYeh)
+private let __jg_pair_2q: _T1 = (0x8ae, .dal)
+private let __jg_pair_2r: _T1 = (0x8af, .sad)
+private let __jg_pair_2s: _T1 = (0x8b0, .gaf)
+private let __jg_pair_2t: _T1 = (0x8b1, .straightWaw)
+private let __jg_pair_2u: _T1 = (0x8b2, .reh)
+private let __jg_pair_2v: _T1 = (0x8b3, .ain)
+private let __jg_pair_2w: _T1 = (0x8b4, .kaf)
+private let __jg_pair_2x: _T1 = (0x8b9, .reh)
+private let __jg_pair_2y: _T1 = (0x8ba, .yeh)
+private let __jg_pair_2z: _T1 = (0x8bb, .africanFeh)
+private let __jg_pair_30: _T1 = (0x8bc, .africanQaf)
+private let __jg_pair_31: _T1 = (0x8bd, .africanNoon)
+private let __jg_pair_32: _T1 = (0x10ac0, .manichaeanAleph)
+private let __jg_pair_33: _T1 = (0x10ac5, .manichaeanDaleth)
+private let __jg_pair_34: _T1 = (0x10ac7, .manichaeanWaw)
+private let __jg_pair_35: _T1 = (0x10acd, .manichaeanHeth)
+private let __jg_pair_36: _T1 = (0x10ace, .manichaeanTeth)
+private let __jg_pair_37: _T1 = (0x10acf, .manichaeanYodh)
+private let __jg_pair_38: _T1 = (0x10ad3, .manichaeanLamedh)
+private let __jg_pair_39: _T1 = (0x10ad4, .manichaeanDhamedh)
+private let __jg_pair_3a: _T1 = (0x10ad5, .manichaeanThamedh)
+private let __jg_pair_3b: _T1 = (0x10ad6, .manichaeanMem)
+private let __jg_pair_3c: _T1 = (0x10ad7, .manichaeanNun)
+private let __jg_pair_3d: _T1 = (0x10ad8, .manichaeanSamekh)
+private let __jg_pair_3e: _T1 = (0x10add, .manichaeanSadhe)
+private let __jg_pair_3f: _T1 = (0x10ae1, .manichaeanResh)
+private let __jg_pair_3g: _T1 = (0x10ae4, .manichaeanTaw)
+private let __jg_pair_3h: _T1 = (0x10aeb, .manichaeanOne)
+private let __jg_pair_3i: _T1 = (0x10aec, .manichaeanFive)
+private let __jg_pair_3j: _T1 = (0x10aed, .manichaeanTen)
+private let __jg_pair_3k: _T1 = (0x10aee, .manichaeanTwenty)
+private let __jg_pair_3l: _T1 = (0x10aef, .manichaeanHundred)
+private let __jg_pair_3m: _T1 = (0x10d02, .hanifiRohingyaPa)
+private let __jg_pair_3n: _T1 = (0x10d09, .hanifiRohingyaPa)
+private let __jg_pair_3o: _T1 = (0x10d19, .hanifiRohingyaKinnaYa)
+private let __jg_pair_3p: _T1 = (0x10d1c, .hanifiRohingyaPa)
+private let __jg_pair_3q: _T1 = (0x10d1e, .hanifiRohingyaKinnaYa)
+private let __jg_pair_3r: _T1 = (0x10d20, .hanifiRohingyaKinnaYa)
+private let __jg_pair_3s: _T1 = (0x10d23, .hanifiRohingyaKinnaYa)
+private let __jg_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWithValues: [
+  __jg_pair_0,
+  __jg_pair_1,
+  __jg_pair_2,
+  __jg_pair_3,
+  __jg_pair_4,
+  __jg_pair_5,
+  __jg_pair_6,
+  __jg_pair_7,
+  __jg_pair_8,
+  __jg_pair_9,
+  __jg_pair_a,
+  __jg_pair_b,
+  __jg_pair_c,
+  __jg_pair_d,
+  __jg_pair_e,
+  __jg_pair_f,
+  __jg_pair_g,
+  __jg_pair_h,
+  __jg_pair_i,
+  __jg_pair_j,
+  __jg_pair_k,
+  __jg_pair_l,
+  __jg_pair_m,
+  __jg_pair_n,
+  __jg_pair_o,
+  __jg_pair_p,
+  __jg_pair_q,
+  __jg_pair_r,
+  __jg_pair_s,
+  __jg_pair_t,
+  __jg_pair_u,
+  __jg_pair_v,
+  __jg_pair_w,
+  __jg_pair_x,
+  __jg_pair_y,
+  __jg_pair_z,
+  __jg_pair_10,
+  __jg_pair_11,
+  __jg_pair_12,
+  __jg_pair_13,
+  __jg_pair_14,
+  __jg_pair_15,
+  __jg_pair_16,
+  __jg_pair_17,
+  __jg_pair_18,
+  __jg_pair_19,
+  __jg_pair_1a,
+  __jg_pair_1b,
+  __jg_pair_1c,
+  __jg_pair_1d,
+  __jg_pair_1e,
+  __jg_pair_1f,
+  __jg_pair_1g,
+  __jg_pair_1h,
+  __jg_pair_1i,
+  __jg_pair_1j,
+  __jg_pair_1k,
+  __jg_pair_1l,
+  __jg_pair_1m,
+  __jg_pair_1n,
+  __jg_pair_1o,
+  __jg_pair_1p,
+  __jg_pair_1q,
+  __jg_pair_1r,
+  __jg_pair_1s,
+  __jg_pair_1t,
+  __jg_pair_1u,
+  __jg_pair_1v,
+  __jg_pair_1w,
+  __jg_pair_1x,
+  __jg_pair_1y,
+  __jg_pair_1z,
+  __jg_pair_20,
+  __jg_pair_21,
+  __jg_pair_22,
+  __jg_pair_23,
+  __jg_pair_24,
+  __jg_pair_25,
+  __jg_pair_26,
+  __jg_pair_27,
+  __jg_pair_28,
+  __jg_pair_29,
+  __jg_pair_2a,
+  __jg_pair_2b,
+  __jg_pair_2c,
+  __jg_pair_2d,
+  __jg_pair_2e,
+  __jg_pair_2f,
+  __jg_pair_2g,
+  __jg_pair_2h,
+  __jg_pair_2i,
+  __jg_pair_2j,
+  __jg_pair_2k,
+  __jg_pair_2l,
+  __jg_pair_2m,
+  __jg_pair_2n,
+  __jg_pair_2o,
+  __jg_pair_2p,
+  __jg_pair_2q,
+  __jg_pair_2r,
+  __jg_pair_2s,
+  __jg_pair_2t,
+  __jg_pair_2u,
+  __jg_pair_2v,
+  __jg_pair_2w,
+  __jg_pair_2x,
+  __jg_pair_2y,
+  __jg_pair_2z,
+  __jg_pair_30,
+  __jg_pair_31,
+  __jg_pair_32,
+  __jg_pair_33,
+  __jg_pair_34,
+  __jg_pair_35,
+  __jg_pair_36,
+  __jg_pair_37,
+  __jg_pair_38,
+  __jg_pair_39,
+  __jg_pair_3a,
+  __jg_pair_3b,
+  __jg_pair_3c,
+  __jg_pair_3d,
+  __jg_pair_3e,
+  __jg_pair_3f,
+  __jg_pair_3g,
+  __jg_pair_3h,
+  __jg_pair_3i,
+  __jg_pair_3j,
+  __jg_pair_3k,
+  __jg_pair_3l,
+  __jg_pair_3m,
+  __jg_pair_3n,
+  __jg_pair_3o,
+  __jg_pair_3p,
+  __jg_pair_3q,
+  __jg_pair_3r,
+  __jg_pair_3s,
+])
+private let __jg_rangePair_0: _T2 = (0x622....0x623, .alef)
+private let __jg_rangePair_1: _T2 = (0x62a....0x62b, .beh)
+private let __jg_rangePair_2: _T2 = (0x62c....0x62e, .hah)
+private let __jg_rangePair_3: _T2 = (0x62f....0x630, .dal)
+private let __jg_rangePair_4: _T2 = (0x631....0x632, .reh)
+private let __jg_rangePair_5: _T2 = (0x633....0x634, .seen)
+private let __jg_rangePair_6: _T2 = (0x635....0x636, .sad)
+private let __jg_rangePair_7: _T2 = (0x637....0x638, .tah)
+private let __jg_rangePair_8: _T2 = (0x639....0x63a, .ain)
+private let __jg_rangePair_9: _T2 = (0x63b....0x63c, .gaf)
+private let __jg_rangePair_a: _T2 = (0x63d....0x63f, .farsiYeh)
+private let __jg_rangePair_b: _T2 = (0x649....0x64a, .yeh)
+private let __jg_rangePair_c: _T2 = (0x671....0x673, .alef)
+private let __jg_rangePair_d: _T2 = (0x676....0x677, .waw)
+private let __jg_rangePair_e: _T2 = (0x679....0x680, .beh)
+private let __jg_rangePair_f: _T2 = (0x681....0x687, .hah)
+private let __jg_rangePair_g: _T2 = (0x688....0x690, .dal)
+private let __jg_rangePair_h: _T2 = (0x691....0x699, .reh)
+private let __jg_rangePair_i: _T2 = (0x69a....0x69c, .seen)
+private let __jg_rangePair_j: _T2 = (0x69d....0x69e, .sad)
+private let __jg_rangePair_k: _T2 = (0x6a1....0x6a6, .feh)
+private let __jg_rangePair_l: _T2 = (0x6a7....0x6a8, .qaf)
+private let __jg_rangePair_m: _T2 = (0x6ac....0x6ae, .kaf)
+private let __jg_rangePair_n: _T2 = (0x6af....0x6b4, .gaf)
+private let __jg_rangePair_o: _T2 = (0x6b5....0x6b8, .lam)
+private let __jg_rangePair_p: _T2 = (0x6b9....0x6bc, .noon)
+private let __jg_rangePair_q: _T2 = (0x6c1....0x6c2, .hehGoal)
+private let __jg_rangePair_r: _T2 = (0x6c4....0x6cb, .waw)
+private let __jg_rangePair_s: _T2 = (0x6d0....0x6d1, .yeh)
+private let __jg_rangePair_t: _T2 = (0x6d2....0x6d3, .yehBarree)
+private let __jg_rangePair_u: _T2 = (0x713....0x714, .gamal)
+private let __jg_rangePair_v: _T2 = (0x715....0x716, .dalathRish)
+private let __jg_rangePair_w: _T2 = (0x71b....0x71c, .teth)
+private let __jg_rangePair_x: _T2 = (0x750....0x756, .beh)
+private let __jg_rangePair_y: _T2 = (0x757....0x758, .hah)
+private let __jg_rangePair_z: _T2 = (0x759....0x75a, .dal)
+private let __jg_rangePair_10: _T2 = (0x75d....0x75f, .ain)
+private let __jg_rangePair_11: _T2 = (0x760....0x761, .feh)
+private let __jg_rangePair_12: _T2 = (0x762....0x764, .gaf)
+private let __jg_rangePair_13: _T2 = (0x765....0x766, .meem)
+private let __jg_rangePair_14: _T2 = (0x767....0x769, .noon)
+private let __jg_rangePair_15: _T2 = (0x76b....0x76c, .reh)
+private let __jg_rangePair_16: _T2 = (0x76e....0x76f, .hah)
+private let __jg_rangePair_17: _T2 = (0x773....0x774, .alef)
+private let __jg_rangePair_18: _T2 = (0x775....0x776, .farsiYeh)
+private let __jg_rangePair_19: _T2 = (0x778....0x779, .waw)
+private let __jg_rangePair_1a: _T2 = (0x77a....0x77b, .burushaskiYehBarree)
+private let __jg_rangePair_1b: _T2 = (0x77d....0x77e, .seen)
+private let __jg_rangePair_1c: _T2 = (0x8a0....0x8a1, .beh)
+private let __jg_rangePair_1d: _T2 = (0x8a8....0x8a9, .yeh)
+private let __jg_rangePair_1e: _T2 = (0x8b6....0x8b8, .beh)
+private let __jg_rangePair_1f: _T2 = (0x10ac1....0x10ac2, .manichaeanBeth)
+private let __jg_rangePair_1g: _T2 = (0x10ac3....0x10ac4, .manichaeanGimel)
+private let __jg_rangePair_1h: _T2 = (0x10ac9....0x10aca, .manichaeanZayin)
+private let __jg_rangePair_1i: _T2 = (0x10ad0....0x10ad2, .manichaeanKaph)
+private let __jg_rangePair_1j: _T2 = (0x10ad9....0x10ada, .manichaeanAyin)
+private let __jg_rangePair_1k: _T2 = (0x10adb....0x10adc, .manichaeanPe)
+private let __jg_rangePair_1l: _T2 = (0x10ade....0x10ae0, .manichaeanQoph)
+private let __jg_rangePairArray: _T3 = [
+  __jg_rangePair_0,
+  __jg_rangePair_1,
+  __jg_rangePair_2,
+  __jg_rangePair_3,
+  __jg_rangePair_4,
+  __jg_rangePair_5,
+  __jg_rangePair_6,
+  __jg_rangePair_7,
+  __jg_rangePair_8,
+  __jg_rangePair_9,
+  __jg_rangePair_a,
+  __jg_rangePair_b,
+  __jg_rangePair_c,
+  __jg_rangePair_d,
+  __jg_rangePair_e,
+  __jg_rangePair_f,
+  __jg_rangePair_g,
+  __jg_rangePair_h,
+  __jg_rangePair_i,
+  __jg_rangePair_j,
+  __jg_rangePair_k,
+  __jg_rangePair_l,
+  __jg_rangePair_m,
+  __jg_rangePair_n,
+  __jg_rangePair_o,
+  __jg_rangePair_p,
+  __jg_rangePair_q,
+  __jg_rangePair_r,
+  __jg_rangePair_s,
+  __jg_rangePair_t,
+  __jg_rangePair_u,
+  __jg_rangePair_v,
+  __jg_rangePair_w,
+  __jg_rangePair_x,
+  __jg_rangePair_y,
+  __jg_rangePair_z,
+  __jg_rangePair_10,
+  __jg_rangePair_11,
+  __jg_rangePair_12,
+  __jg_rangePair_13,
+  __jg_rangePair_14,
+  __jg_rangePair_15,
+  __jg_rangePair_16,
+  __jg_rangePair_17,
+  __jg_rangePair_18,
+  __jg_rangePair_19,
+  __jg_rangePair_1a,
+  __jg_rangePair_1b,
+  __jg_rangePair_1c,
+  __jg_rangePair_1d,
+  __jg_rangePair_1e,
+  __jg_rangePair_1f,
+  __jg_rangePair_1g,
+  __jg_rangePair_1h,
+  __jg_rangePair_1i,
+  __jg_rangePair_1j,
+  __jg_rangePair_1k,
+  __jg_rangePair_1l,
 ]
-internal let _jg = RangeDictionary<UInt32, Unicode.JoiningGroup>(carefullySortedRangesAndValues: __array_jg)
+private let __jg_rangeDictionary = RangeDictionary<Unicode.Scalar.Value, _T0>(carefullySortedRangesAndValues: __jg_rangePairArray)
+internal let _jg = UnicodeScalarValueDictionary<Unicode.JoiningGroup>(dictionary: __jg_dictionary, rangeDictionary: __jg_rangeDictionary)

@@ -7,27 +7,11 @@
  
 import Foundation
 import Ranges
+import StringComposition
 import yCodeUpdater
 
 open class DerivedNormalizationProps: UCDCodeUpdaterDelegate {
-  private var _imported: Set<String> = []
-  private func _import(_ string: String) {
-    self._imported.insert(string)
-  }
-  
-  private var _aliased: [String] = []
-  private func _aliasName(for integer: Int) -> String {
-    return "_T\(integer._base36)"
-  }
-  private func _alias(_ string: String) -> String {
-    if let index = self._aliased.firstIndex(of: string) {
-      return self._aliasName(for: index)
-    }
-    self._aliased.append(string)
-    return self._aliasName(for: self._aliased.count - 1)
-  }
-  
-  open override var prefix: String { "_normProp" }
+  open override var prefix: String { "normProp" }
   
   open override var sourceURLs: Array<URL> {
     return [
@@ -35,35 +19,12 @@ open class DerivedNormalizationProps: UCDCodeUpdaterDelegate {
     ]
   }
   
-  private func _convertSimpleMultipleRanges(_ rangeDic: RangeDictionary<Unicode.Scalar.Value, ArraySlice<String>>) throws -> String {
-    self._import("Ranges")
-    let rangeTypeName = self._alias("AnyRange<UInt32>")
-    let arrayTypeName = self._alias("[AnyRange<UInt32>]")
-    
-    var result = "({ () -> MultipleRanges<UInt32> in\n"
-    
-    func _identifier(for nn: Int) -> String { return "range_\(nn._base36)" }
-    var ii = 0
-    for (range, _) in rangeDic {
-      defer { ii += 1 }
-      result += "let \(_identifier(for: ii)): \(rangeTypeName) = \(range._rangeDescription)\n"
-    }
-    
-    let arrayID = "array"
-    result += """
-    let \(arrayID): \(arrayTypeName) = [
-    \((0..<ii).map({ _identifier(for: $0) }).joined(separator: ",\n"))
-    ]
-    
-    """
-    
-    result += "return MultipleRanges<UInt32>(carefullySortedRanges: \(arrayID))\n"
-    
-    result += "})()\n"
-    return result
+  private func _convertSimpleMultipleRanges(_ rangeDic: RangeDictionary<Unicode.Scalar.Value, ArraySlice<String>>, key: String) throws -> StringLines {
+    let ranges: [AnyRange<Unicode.Scalar.Value>] = rangeDic.map { $0.0 }
+    return self._convert(MultipleRanges<Unicode.Scalar.Value>(ranges), key: key)
   }
   
-  open override func convert<S>(_ intermidiates: S) throws -> String where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  open override func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     var dictionaries: [String: RangeDictionary<Unicode.Scalar.Value, ArraySlice<String>>] = [:]
     for interm in intermidiates {
       for row in interm.content.rows {
@@ -78,29 +39,21 @@ open class DerivedNormalizationProps: UCDCodeUpdaterDelegate {
       }
     }
     
-    let converters: [String: (RangeDictionary<Unicode.Scalar.Value, ArraySlice<String>>) throws -> String] = [
+    let converters: [String: (RangeDictionary<Unicode.Scalar.Value, ArraySlice<String>>, String) throws -> StringLines] = [
       "Full_Composition_Exclusion": _convertSimpleMultipleRanges,
       "Changes_When_NFKC_Casefolded": _convertSimpleMultipleRanges,
     ]
     
-    var result = ""
-    let ruledLine = "/* " + String(repeating: "*", count: 94) + " */\n"
+    var result = StringLines()
     for key in dictionaries.keys.sorted(by: { $0.lowercased() < $1.lowercased() }) {
-      result += ruledLine
-      result += "// Normalization Property: \(key)\n"
+      result.append(_ruledLine)
+      result.append("// Normalization Property: \(key)")
       if let converter = converters[key] {
-        result += "internal let \(self._identifierPrefix(for: 0))_\(key) = \(try converter(dictionaries[key]!))"
+        result.append(contentsOf: try converter(dictionaries[key]!, key))
       } else {
-        result += "// * No converted code.\n"
+        result.append("// * No converted code.")
       }
-      result += "\n"
-    }
-    
-    if !self._aliased.isEmpty {
-      result = self._aliased.enumerated().map({ "private typealias \(self._aliasName(for: $0)) = \($1)" }).joined(separator: "\n") + "\n" + result
-    }
-    if !self._imported.isEmpty {
-      result = self._imported.sorted().map({ "import \($0)" }).joined(separator: "\n") + "\n" + result
+      result.append("")
     }
     
     return result

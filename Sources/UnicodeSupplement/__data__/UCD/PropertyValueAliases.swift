@@ -9,6 +9,7 @@
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
+  
   See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
   Data Files and Software.
   NOTICE TO USER: Carefully read the following legal agreement.
@@ -19,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -49,51 +50,47 @@
   written authorization of the copyright holder.
 */
 
-// Required Modules
-
-
-// Type Aliases
 
 
 /* ********************************************************************************************** */
 // Property: age
-// * No converted code.
+// * No converted code for age.
 
 /* ********************************************************************************************** */
 // Property: AHex
-// * No converted code.
+// * No converted code for AHex.
 
 /* ********************************************************************************************** */
 // Property: Alpha
-// * No converted code.
+// * No converted code for Alpha.
 
 /* ********************************************************************************************** */
 // Property: bc
 extension Unicode {
   public enum BidiClass {
-    case arabicLetter
-    case arabicNumber
-    case paragraphSeparator
-    case boundaryNeutral
-    case commonSeparator
-    case europeanNumber
-    case europeanSeparator
-    case europeanTerminator
-    case firstStrongIsolate
-    case leftToRight
-    case leftToRightEmbedding
-    case leftToRightIsolate
-    case leftToRightOverride
-    case nonspacingMark
-    case otherNeutral
-    case popDirectionalFormat
-    case popDirectionalIsolate
-    case rightToLeft
-    case rightToLeftEmbedding
-    case rightToLeftIsolate
-    case rightToLeftOverride
-    case segmentSeparator
-    case whiteSpace
+  case arabicLetter
+  case arabicNumber
+  case paragraphSeparator
+  case boundaryNeutral
+  case commonSeparator
+  case europeanNumber
+  case europeanSeparator
+  case europeanTerminator
+  case firstStrongIsolate
+  case leftToRight
+  case leftToRightEmbedding
+  case leftToRightIsolate
+  case leftToRightOverride
+  case nonspacingMark
+  case otherNeutral
+  case popDirectionalFormat
+  case popDirectionalIsolate
+  case rightToLeft
+  case rightToLeftEmbedding
+  case rightToLeftIsolate
+  case rightToLeftOverride
+  case segmentSeparator
+  case whiteSpace
   }
 }
 extension Unicode.BidiClass {
@@ -129,23 +126,23 @@ extension Unicode.BidiClass {
 
 /* ********************************************************************************************** */
 // Property: Bidi_C
-// * No converted code.
+// * No converted code for Bidi_C.
 
 /* ********************************************************************************************** */
 // Property: Bidi_M
-// * No converted code.
+// * No converted code for Bidi_M.
 
 /* ********************************************************************************************** */
 // Property: blk
-// * No converted code.
+// * No converted code for blk.
 
 /* ********************************************************************************************** */
 // Property: bpt
-// * No converted code.
+// * No converted code for bpt.
 
 /* ********************************************************************************************** */
 // Property: Cased
-// * No converted code.
+// * No converted code for Cased.
 
 /* ********************************************************************************************** */
 // Property: ccc
@@ -257,67 +254,67 @@ extension Unicode.CanonicalCombiningClass {
 
 /* ********************************************************************************************** */
 // Property: CE
-// * No converted code.
+// * No converted code for CE.
 
 /* ********************************************************************************************** */
 // Property: CI
-// * No converted code.
+// * No converted code for CI.
 
 /* ********************************************************************************************** */
 // Property: Comp_Ex
-// * No converted code.
+// * No converted code for Comp_Ex.
 
 /* ********************************************************************************************** */
 // Property: CWCF
-// * No converted code.
+// * No converted code for CWCF.
 
 /* ********************************************************************************************** */
 // Property: CWCM
-// * No converted code.
+// * No converted code for CWCM.
 
 /* ********************************************************************************************** */
 // Property: CWKCF
-// * No converted code.
+// * No converted code for CWKCF.
 
 /* ********************************************************************************************** */
 // Property: CWL
-// * No converted code.
+// * No converted code for CWL.
 
 /* ********************************************************************************************** */
 // Property: CWT
-// * No converted code.
+// * No converted code for CWT.
 
 /* ********************************************************************************************** */
 // Property: CWU
-// * No converted code.
+// * No converted code for CWU.
 
 /* ********************************************************************************************** */
 // Property: Dash
-// * No converted code.
+// * No converted code for Dash.
 
 /* ********************************************************************************************** */
 // Property: Dep
-// * No converted code.
+// * No converted code for Dep.
 
 /* ********************************************************************************************** */
 // Property: DI
-// * No converted code.
+// * No converted code for DI.
 
 /* ********************************************************************************************** */
 // Property: Dia
-// * No converted code.
+// * No converted code for Dia.
 
 /* ********************************************************************************************** */
 // Property: dt
-// * No converted code.
+// * No converted code for dt.
 
 /* ********************************************************************************************** */
 // Property: ea
-// * No converted code.
+// * No converted code for ea.
 
 /* ********************************************************************************************** */
 // Property: Ext
-// * No converted code.
+// * No converted code for Ext.
 
 /* ********************************************************************************************** */
 // Property: gc
@@ -362,59 +359,59 @@ extension Unicode.GeneralCategory {
 
 /* ********************************************************************************************** */
 // Property: GCB
-// * No converted code.
+// * No converted code for GCB.
 
 /* ********************************************************************************************** */
 // Property: Gr_Base
-// * No converted code.
+// * No converted code for Gr_Base.
 
 /* ********************************************************************************************** */
 // Property: Gr_Ext
-// * No converted code.
+// * No converted code for Gr_Ext.
 
 /* ********************************************************************************************** */
 // Property: Gr_Link
-// * No converted code.
+// * No converted code for Gr_Link.
 
 /* ********************************************************************************************** */
 // Property: Hex
-// * No converted code.
+// * No converted code for Hex.
 
 /* ********************************************************************************************** */
 // Property: hst
-// * No converted code.
+// * No converted code for hst.
 
 /* ********************************************************************************************** */
 // Property: Hyphen
-// * No converted code.
+// * No converted code for Hyphen.
 
 /* ********************************************************************************************** */
 // Property: IDC
-// * No converted code.
+// * No converted code for IDC.
 
 /* ********************************************************************************************** */
 // Property: Ideo
-// * No converted code.
+// * No converted code for Ideo.
 
 /* ********************************************************************************************** */
 // Property: IDS
-// * No converted code.
+// * No converted code for IDS.
 
 /* ********************************************************************************************** */
 // Property: IDSB
-// * No converted code.
+// * No converted code for IDSB.
 
 /* ********************************************************************************************** */
 // Property: IDST
-// * No converted code.
+// * No converted code for IDST.
 
 /* ********************************************************************************************** */
 // Property: InPC
-// * No converted code.
+// * No converted code for InPC.
 
 /* ********************************************************************************************** */
 // Property: InSC
-// * No converted code.
+// * No converted code for InSC.
 
 /* ********************************************************************************************** */
 // Property: jg
@@ -638,11 +635,11 @@ extension Unicode.JoiningGroup {
 
 /* ********************************************************************************************** */
 // Property: Join_C
-// * No converted code.
+// * No converted code for Join_C.
 
 /* ********************************************************************************************** */
 // Property: JSN
-// * No converted code.
+// * No converted code for JSN.
 
 /* ********************************************************************************************** */
 // Property: jt
@@ -679,103 +676,103 @@ extension Unicode.JoiningType {
 
 /* ********************************************************************************************** */
 // Property: lb
-// * No converted code.
+// * No converted code for lb.
 
 /* ********************************************************************************************** */
 // Property: LOE
-// * No converted code.
+// * No converted code for LOE.
 
 /* ********************************************************************************************** */
 // Property: Lower
-// * No converted code.
+// * No converted code for Lower.
 
 /* ********************************************************************************************** */
 // Property: Math
-// * No converted code.
+// * No converted code for Math.
 
 /* ********************************************************************************************** */
 // Property: NChar
-// * No converted code.
+// * No converted code for NChar.
 
 /* ********************************************************************************************** */
 // Property: NFC_QC
-// * No converted code.
+// * No converted code for NFC_QC.
 
 /* ********************************************************************************************** */
 // Property: NFD_QC
-// * No converted code.
+// * No converted code for NFD_QC.
 
 /* ********************************************************************************************** */
 // Property: NFKC_QC
-// * No converted code.
+// * No converted code for NFKC_QC.
 
 /* ********************************************************************************************** */
 // Property: NFKD_QC
-// * No converted code.
+// * No converted code for NFKD_QC.
 
 /* ********************************************************************************************** */
 // Property: nt
-// * No converted code.
+// * No converted code for nt.
 
 /* ********************************************************************************************** */
 // Property: OAlpha
-// * No converted code.
+// * No converted code for OAlpha.
 
 /* ********************************************************************************************** */
 // Property: ODI
-// * No converted code.
+// * No converted code for ODI.
 
 /* ********************************************************************************************** */
 // Property: OGr_Ext
-// * No converted code.
+// * No converted code for OGr_Ext.
 
 /* ********************************************************************************************** */
 // Property: OIDC
-// * No converted code.
+// * No converted code for OIDC.
 
 /* ********************************************************************************************** */
 // Property: OIDS
-// * No converted code.
+// * No converted code for OIDS.
 
 /* ********************************************************************************************** */
 // Property: OLower
-// * No converted code.
+// * No converted code for OLower.
 
 /* ********************************************************************************************** */
 // Property: OMath
-// * No converted code.
+// * No converted code for OMath.
 
 /* ********************************************************************************************** */
 // Property: OUpper
-// * No converted code.
+// * No converted code for OUpper.
 
 /* ********************************************************************************************** */
 // Property: Pat_Syn
-// * No converted code.
+// * No converted code for Pat_Syn.
 
 /* ********************************************************************************************** */
 // Property: Pat_WS
-// * No converted code.
+// * No converted code for Pat_WS.
 
 /* ********************************************************************************************** */
 // Property: PCM
-// * No converted code.
+// * No converted code for PCM.
 
 /* ********************************************************************************************** */
 // Property: QMark
-// * No converted code.
+// * No converted code for QMark.
 
 /* ********************************************************************************************** */
 // Property: Radical
-// * No converted code.
+// * No converted code for Radical.
 
 /* ********************************************************************************************** */
 // Property: RI
-// * No converted code.
+// * No converted code for RI.
 
 /* ********************************************************************************************** */
 // Property: SB
-// * No converted code.
+// * No converted code for SB.
 
 /* ********************************************************************************************** */
 // Property: sc
@@ -1265,61 +1262,61 @@ extension Unicode.Script {
 
 /* ********************************************************************************************** */
 // Property: SD
-// * No converted code.
+// * No converted code for SD.
 
 /* ********************************************************************************************** */
 // Property: STerm
-// * No converted code.
+// * No converted code for STerm.
 
 /* ********************************************************************************************** */
 // Property: Term
-// * No converted code.
+// * No converted code for Term.
 
 /* ********************************************************************************************** */
 // Property: UIdeo
-// * No converted code.
+// * No converted code for UIdeo.
 
 /* ********************************************************************************************** */
 // Property: Upper
-// * No converted code.
+// * No converted code for Upper.
 
 /* ********************************************************************************************** */
 // Property: vo
-// * No converted code.
+// * No converted code for vo.
 
 /* ********************************************************************************************** */
 // Property: VS
-// * No converted code.
+// * No converted code for VS.
 
 /* ********************************************************************************************** */
 // Property: WB
-// * No converted code.
+// * No converted code for WB.
 
 /* ********************************************************************************************** */
 // Property: WSpace
-// * No converted code.
+// * No converted code for WSpace.
 
 /* ********************************************************************************************** */
 // Property: XIDC
-// * No converted code.
+// * No converted code for XIDC.
 
 /* ********************************************************************************************** */
 // Property: XIDS
-// * No converted code.
+// * No converted code for XIDS.
 
 /* ********************************************************************************************** */
 // Property: XO_NFC
-// * No converted code.
+// * No converted code for XO_NFC.
 
 /* ********************************************************************************************** */
 // Property: XO_NFD
-// * No converted code.
+// * No converted code for XO_NFD.
 
 /* ********************************************************************************************** */
 // Property: XO_NFKC
-// * No converted code.
+// * No converted code for XO_NFKC.
 
 /* ********************************************************************************************** */
 // Property: XO_NFKD
-// * No converted code.
+// * No converted code for XO_NFKD.
 

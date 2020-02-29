@@ -9,6 +9,7 @@
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
+  
   See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
   Data Files and Software.
   NOTICE TO USER: Carefully read the following legal agreement.
@@ -19,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -52,751 +53,612 @@
 // Required Modules
 import Ranges
 
-
 // Type Aliases
-private typealias _T0 = AnyRange<UInt32>
-private typealias _T1 = Array<_T0>
-
+private typealias _T0 = Unicode.Scalar.Value
+private typealias _T1 = Set<_T0>
+private typealias _T2 = AnyRange<_T0>
+private typealias _T3 = Array<_T2>
 
 /* ********************************************************************************************** */
 // Emoji Property: Emoji
-private let __range_Emoji_0: _T0 = 0x23....0x23
-private let __range_Emoji_1: _T0 = 0x2a....0x2a
-private let __range_Emoji_2: _T0 = 0x30....0x39
-private let __range_Emoji_3: _T0 = 0xa9....0xa9
-private let __range_Emoji_4: _T0 = 0xae....0xae
-private let __range_Emoji_5: _T0 = 0x203c....0x203c
-private let __range_Emoji_6: _T0 = 0x2049....0x2049
-private let __range_Emoji_7: _T0 = 0x2122....0x2122
-private let __range_Emoji_8: _T0 = 0x2139....0x2139
-private let __range_Emoji_9: _T0 = 0x2194....0x2199
-private let __range_Emoji_a: _T0 = 0x21a9....0x21aa
-private let __range_Emoji_b: _T0 = 0x231a....0x231b
-private let __range_Emoji_c: _T0 = 0x2328....0x2328
-private let __range_Emoji_d: _T0 = 0x23cf....0x23cf
-private let __range_Emoji_e: _T0 = 0x23e9....0x23f3
-private let __range_Emoji_f: _T0 = 0x23f8....0x23fa
-private let __range_Emoji_g: _T0 = 0x24c2....0x24c2
-private let __range_Emoji_h: _T0 = 0x25aa....0x25ab
-private let __range_Emoji_i: _T0 = 0x25b6....0x25b6
-private let __range_Emoji_j: _T0 = 0x25c0....0x25c0
-private let __range_Emoji_k: _T0 = 0x25fb....0x25fe
-private let __range_Emoji_l: _T0 = 0x2600....0x2604
-private let __range_Emoji_m: _T0 = 0x260e....0x260e
-private let __range_Emoji_n: _T0 = 0x2611....0x2611
-private let __range_Emoji_o: _T0 = 0x2614....0x2615
-private let __range_Emoji_p: _T0 = 0x2618....0x2618
-private let __range_Emoji_q: _T0 = 0x261d....0x261d
-private let __range_Emoji_r: _T0 = 0x2620....0x2620
-private let __range_Emoji_s: _T0 = 0x2622....0x2623
-private let __range_Emoji_t: _T0 = 0x2626....0x2626
-private let __range_Emoji_u: _T0 = 0x262a....0x262a
-private let __range_Emoji_v: _T0 = 0x262e....0x262f
-private let __range_Emoji_w: _T0 = 0x2638....0x263a
-private let __range_Emoji_x: _T0 = 0x2640....0x2640
-private let __range_Emoji_y: _T0 = 0x2642....0x2642
-private let __range_Emoji_z: _T0 = 0x2648....0x2653
-private let __range_Emoji_10: _T0 = 0x265f....0x2660
-private let __range_Emoji_11: _T0 = 0x2663....0x2663
-private let __range_Emoji_12: _T0 = 0x2665....0x2666
-private let __range_Emoji_13: _T0 = 0x2668....0x2668
-private let __range_Emoji_14: _T0 = 0x267b....0x267b
-private let __range_Emoji_15: _T0 = 0x267e....0x267f
-private let __range_Emoji_16: _T0 = 0x2692....0x2697
-private let __range_Emoji_17: _T0 = 0x2699....0x2699
-private let __range_Emoji_18: _T0 = 0x269b....0x269c
-private let __range_Emoji_19: _T0 = 0x26a0....0x26a1
-private let __range_Emoji_1a: _T0 = 0x26aa....0x26ab
-private let __range_Emoji_1b: _T0 = 0x26b0....0x26b1
-private let __range_Emoji_1c: _T0 = 0x26bd....0x26be
-private let __range_Emoji_1d: _T0 = 0x26c4....0x26c5
-private let __range_Emoji_1e: _T0 = 0x26c8....0x26c8
-private let __range_Emoji_1f: _T0 = 0x26ce....0x26cf
-private let __range_Emoji_1g: _T0 = 0x26d1....0x26d1
-private let __range_Emoji_1h: _T0 = 0x26d3....0x26d4
-private let __range_Emoji_1i: _T0 = 0x26e9....0x26ea
-private let __range_Emoji_1j: _T0 = 0x26f0....0x26f5
-private let __range_Emoji_1k: _T0 = 0x26f7....0x26fa
-private let __range_Emoji_1l: _T0 = 0x26fd....0x26fd
-private let __range_Emoji_1m: _T0 = 0x2702....0x2702
-private let __range_Emoji_1n: _T0 = 0x2705....0x2705
-private let __range_Emoji_1o: _T0 = 0x2708....0x270d
-private let __range_Emoji_1p: _T0 = 0x270f....0x270f
-private let __range_Emoji_1q: _T0 = 0x2712....0x2712
-private let __range_Emoji_1r: _T0 = 0x2714....0x2714
-private let __range_Emoji_1s: _T0 = 0x2716....0x2716
-private let __range_Emoji_1t: _T0 = 0x271d....0x271d
-private let __range_Emoji_1u: _T0 = 0x2721....0x2721
-private let __range_Emoji_1v: _T0 = 0x2728....0x2728
-private let __range_Emoji_1w: _T0 = 0x2733....0x2734
-private let __range_Emoji_1x: _T0 = 0x2744....0x2744
-private let __range_Emoji_1y: _T0 = 0x2747....0x2747
-private let __range_Emoji_1z: _T0 = 0x274c....0x274c
-private let __range_Emoji_20: _T0 = 0x274e....0x274e
-private let __range_Emoji_21: _T0 = 0x2753....0x2755
-private let __range_Emoji_22: _T0 = 0x2757....0x2757
-private let __range_Emoji_23: _T0 = 0x2763....0x2764
-private let __range_Emoji_24: _T0 = 0x2795....0x2797
-private let __range_Emoji_25: _T0 = 0x27a1....0x27a1
-private let __range_Emoji_26: _T0 = 0x27b0....0x27b0
-private let __range_Emoji_27: _T0 = 0x27bf....0x27bf
-private let __range_Emoji_28: _T0 = 0x2934....0x2935
-private let __range_Emoji_29: _T0 = 0x2b05....0x2b07
-private let __range_Emoji_2a: _T0 = 0x2b1b....0x2b1c
-private let __range_Emoji_2b: _T0 = 0x2b50....0x2b50
-private let __range_Emoji_2c: _T0 = 0x2b55....0x2b55
-private let __range_Emoji_2d: _T0 = 0x3030....0x3030
-private let __range_Emoji_2e: _T0 = 0x303d....0x303d
-private let __range_Emoji_2f: _T0 = 0x3297....0x3297
-private let __range_Emoji_2g: _T0 = 0x3299....0x3299
-private let __range_Emoji_2h: _T0 = 0x1f004....0x1f004
-private let __range_Emoji_2i: _T0 = 0x1f0cf....0x1f0cf
-private let __range_Emoji_2j: _T0 = 0x1f170....0x1f171
-private let __range_Emoji_2k: _T0 = 0x1f17e....0x1f17f
-private let __range_Emoji_2l: _T0 = 0x1f18e....0x1f18e
-private let __range_Emoji_2m: _T0 = 0x1f191....0x1f19a
-private let __range_Emoji_2n: _T0 = 0x1f1e6....0x1f1ff
-private let __range_Emoji_2o: _T0 = 0x1f201....0x1f202
-private let __range_Emoji_2p: _T0 = 0x1f21a....0x1f21a
-private let __range_Emoji_2q: _T0 = 0x1f22f....0x1f22f
-private let __range_Emoji_2r: _T0 = 0x1f232....0x1f23a
-private let __range_Emoji_2s: _T0 = 0x1f250....0x1f251
-private let __range_Emoji_2t: _T0 = 0x1f300....0x1f321
-private let __range_Emoji_2u: _T0 = 0x1f324....0x1f393
-private let __range_Emoji_2v: _T0 = 0x1f396....0x1f397
-private let __range_Emoji_2w: _T0 = 0x1f399....0x1f39b
-private let __range_Emoji_2x: _T0 = 0x1f39e....0x1f3f0
-private let __range_Emoji_2y: _T0 = 0x1f3f3....0x1f3f5
-private let __range_Emoji_2z: _T0 = 0x1f3f7....0x1f4fd
-private let __range_Emoji_30: _T0 = 0x1f4ff....0x1f53d
-private let __range_Emoji_31: _T0 = 0x1f549....0x1f54e
-private let __range_Emoji_32: _T0 = 0x1f550....0x1f567
-private let __range_Emoji_33: _T0 = 0x1f56f....0x1f570
-private let __range_Emoji_34: _T0 = 0x1f573....0x1f57a
-private let __range_Emoji_35: _T0 = 0x1f587....0x1f587
-private let __range_Emoji_36: _T0 = 0x1f58a....0x1f58d
-private let __range_Emoji_37: _T0 = 0x1f590....0x1f590
-private let __range_Emoji_38: _T0 = 0x1f595....0x1f596
-private let __range_Emoji_39: _T0 = 0x1f5a4....0x1f5a5
-private let __range_Emoji_3a: _T0 = 0x1f5a8....0x1f5a8
-private let __range_Emoji_3b: _T0 = 0x1f5b1....0x1f5b2
-private let __range_Emoji_3c: _T0 = 0x1f5bc....0x1f5bc
-private let __range_Emoji_3d: _T0 = 0x1f5c2....0x1f5c4
-private let __range_Emoji_3e: _T0 = 0x1f5d1....0x1f5d3
-private let __range_Emoji_3f: _T0 = 0x1f5dc....0x1f5de
-private let __range_Emoji_3g: _T0 = 0x1f5e1....0x1f5e1
-private let __range_Emoji_3h: _T0 = 0x1f5e3....0x1f5e3
-private let __range_Emoji_3i: _T0 = 0x1f5e8....0x1f5e8
-private let __range_Emoji_3j: _T0 = 0x1f5ef....0x1f5ef
-private let __range_Emoji_3k: _T0 = 0x1f5f3....0x1f5f3
-private let __range_Emoji_3l: _T0 = 0x1f5fa....0x1f64f
-private let __range_Emoji_3m: _T0 = 0x1f680....0x1f6c5
-private let __range_Emoji_3n: _T0 = 0x1f6cb....0x1f6d2
-private let __range_Emoji_3o: _T0 = 0x1f6d5....0x1f6d5
-private let __range_Emoji_3p: _T0 = 0x1f6e0....0x1f6e5
-private let __range_Emoji_3q: _T0 = 0x1f6e9....0x1f6e9
-private let __range_Emoji_3r: _T0 = 0x1f6eb....0x1f6ec
-private let __range_Emoji_3s: _T0 = 0x1f6f0....0x1f6f0
-private let __range_Emoji_3t: _T0 = 0x1f6f3....0x1f6fa
-private let __range_Emoji_3u: _T0 = 0x1f7e0....0x1f7eb
-private let __range_Emoji_3v: _T0 = 0x1f90d....0x1f93a
-private let __range_Emoji_3w: _T0 = 0x1f93c....0x1f945
-private let __range_Emoji_3x: _T0 = 0x1f947....0x1f971
-private let __range_Emoji_3y: _T0 = 0x1f973....0x1f976
-private let __range_Emoji_3z: _T0 = 0x1f97a....0x1f9a2
-private let __range_Emoji_40: _T0 = 0x1f9a5....0x1f9aa
-private let __range_Emoji_41: _T0 = 0x1f9ae....0x1f9ca
-private let __range_Emoji_42: _T0 = 0x1f9cd....0x1f9ff
-private let __range_Emoji_43: _T0 = 0x1fa70....0x1fa73
-private let __range_Emoji_44: _T0 = 0x1fa78....0x1fa7a
-private let __range_Emoji_45: _T0 = 0x1fa80....0x1fa82
-private let __range_Emoji_46: _T0 = 0x1fa90....0x1fa95
-private let __array_Emoji: _T1 = [
-  __range_Emoji_0,
-  __range_Emoji_1,
-  __range_Emoji_2,
-  __range_Emoji_3,
-  __range_Emoji_4,
-  __range_Emoji_5,
-  __range_Emoji_6,
-  __range_Emoji_7,
-  __range_Emoji_8,
-  __range_Emoji_9,
-  __range_Emoji_a,
-  __range_Emoji_b,
-  __range_Emoji_c,
-  __range_Emoji_d,
-  __range_Emoji_e,
-  __range_Emoji_f,
-  __range_Emoji_g,
-  __range_Emoji_h,
-  __range_Emoji_i,
-  __range_Emoji_j,
-  __range_Emoji_k,
-  __range_Emoji_l,
-  __range_Emoji_m,
-  __range_Emoji_n,
-  __range_Emoji_o,
-  __range_Emoji_p,
-  __range_Emoji_q,
-  __range_Emoji_r,
-  __range_Emoji_s,
-  __range_Emoji_t,
-  __range_Emoji_u,
-  __range_Emoji_v,
-  __range_Emoji_w,
-  __range_Emoji_x,
-  __range_Emoji_y,
-  __range_Emoji_z,
-  __range_Emoji_10,
-  __range_Emoji_11,
-  __range_Emoji_12,
-  __range_Emoji_13,
-  __range_Emoji_14,
-  __range_Emoji_15,
-  __range_Emoji_16,
-  __range_Emoji_17,
-  __range_Emoji_18,
-  __range_Emoji_19,
-  __range_Emoji_1a,
-  __range_Emoji_1b,
-  __range_Emoji_1c,
-  __range_Emoji_1d,
-  __range_Emoji_1e,
-  __range_Emoji_1f,
-  __range_Emoji_1g,
-  __range_Emoji_1h,
-  __range_Emoji_1i,
-  __range_Emoji_1j,
-  __range_Emoji_1k,
-  __range_Emoji_1l,
-  __range_Emoji_1m,
-  __range_Emoji_1n,
-  __range_Emoji_1o,
-  __range_Emoji_1p,
-  __range_Emoji_1q,
-  __range_Emoji_1r,
-  __range_Emoji_1s,
-  __range_Emoji_1t,
-  __range_Emoji_1u,
-  __range_Emoji_1v,
-  __range_Emoji_1w,
-  __range_Emoji_1x,
-  __range_Emoji_1y,
-  __range_Emoji_1z,
-  __range_Emoji_20,
-  __range_Emoji_21,
-  __range_Emoji_22,
-  __range_Emoji_23,
-  __range_Emoji_24,
-  __range_Emoji_25,
-  __range_Emoji_26,
-  __range_Emoji_27,
-  __range_Emoji_28,
-  __range_Emoji_29,
-  __range_Emoji_2a,
-  __range_Emoji_2b,
-  __range_Emoji_2c,
-  __range_Emoji_2d,
-  __range_Emoji_2e,
-  __range_Emoji_2f,
-  __range_Emoji_2g,
-  __range_Emoji_2h,
-  __range_Emoji_2i,
-  __range_Emoji_2j,
-  __range_Emoji_2k,
-  __range_Emoji_2l,
-  __range_Emoji_2m,
-  __range_Emoji_2n,
-  __range_Emoji_2o,
-  __range_Emoji_2p,
-  __range_Emoji_2q,
-  __range_Emoji_2r,
-  __range_Emoji_2s,
-  __range_Emoji_2t,
-  __range_Emoji_2u,
-  __range_Emoji_2v,
-  __range_Emoji_2w,
-  __range_Emoji_2x,
-  __range_Emoji_2y,
-  __range_Emoji_2z,
-  __range_Emoji_30,
-  __range_Emoji_31,
-  __range_Emoji_32,
-  __range_Emoji_33,
-  __range_Emoji_34,
-  __range_Emoji_35,
-  __range_Emoji_36,
-  __range_Emoji_37,
-  __range_Emoji_38,
-  __range_Emoji_39,
-  __range_Emoji_3a,
-  __range_Emoji_3b,
-  __range_Emoji_3c,
-  __range_Emoji_3d,
-  __range_Emoji_3e,
-  __range_Emoji_3f,
-  __range_Emoji_3g,
-  __range_Emoji_3h,
-  __range_Emoji_3i,
-  __range_Emoji_3j,
-  __range_Emoji_3k,
-  __range_Emoji_3l,
-  __range_Emoji_3m,
-  __range_Emoji_3n,
-  __range_Emoji_3o,
-  __range_Emoji_3p,
-  __range_Emoji_3q,
-  __range_Emoji_3r,
-  __range_Emoji_3s,
-  __range_Emoji_3t,
-  __range_Emoji_3u,
-  __range_Emoji_3v,
-  __range_Emoji_3w,
-  __range_Emoji_3x,
-  __range_Emoji_3y,
-  __range_Emoji_3z,
-  __range_Emoji_40,
-  __range_Emoji_41,
-  __range_Emoji_42,
-  __range_Emoji_43,
-  __range_Emoji_44,
-  __range_Emoji_45,
-  __range_Emoji_46,
+private let __emoji_Emoji_set: _T1 = [
+  0x23,
+  0x2a,
+  0xa9,
+  0xae,
+  0x203c,
+  0x2049,
+  0x2122,
+  0x2139,
+  0x2328,
+  0x23cf,
+  0x24c2,
+  0x25b6,
+  0x25c0,
+  0x260e,
+  0x2611,
+  0x2618,
+  0x261d,
+  0x2620,
+  0x2626,
+  0x262a,
+  0x2640,
+  0x2642,
+  0x2663,
+  0x2668,
+  0x267b,
+  0x2699,
+  0x26c8,
+  0x26d1,
+  0x26fd,
+  0x2702,
+  0x2705,
+  0x270f,
+  0x2712,
+  0x2714,
+  0x2716,
+  0x271d,
+  0x2721,
+  0x2728,
+  0x2744,
+  0x2747,
+  0x274c,
+  0x274e,
+  0x2757,
+  0x27a1,
+  0x27b0,
+  0x27bf,
+  0x2b50,
+  0x2b55,
+  0x3030,
+  0x303d,
+  0x3297,
+  0x3299,
+  0x1f004,
+  0x1f0cf,
+  0x1f18e,
+  0x1f21a,
+  0x1f22f,
+  0x1f587,
+  0x1f590,
+  0x1f5a8,
+  0x1f5bc,
+  0x1f5e1,
+  0x1f5e3,
+  0x1f5e8,
+  0x1f5ef,
+  0x1f5f3,
+  0x1f6d5,
+  0x1f6e9,
+  0x1f6f0,
 ]
-internal let _emoji_Emoji = MultipleRanges<UInt32>(carefullySortedRanges: __array_Emoji)
+private let __emoji_Emoji_range_0: _T2 = 0x30....0x39
+private let __emoji_Emoji_range_1: _T2 = 0x2194....0x2199
+private let __emoji_Emoji_range_2: _T2 = 0x21a9....0x21aa
+private let __emoji_Emoji_range_3: _T2 = 0x231a....0x231b
+private let __emoji_Emoji_range_4: _T2 = 0x23e9....0x23f3
+private let __emoji_Emoji_range_5: _T2 = 0x23f8....0x23fa
+private let __emoji_Emoji_range_6: _T2 = 0x25aa....0x25ab
+private let __emoji_Emoji_range_7: _T2 = 0x25fb....0x25fe
+private let __emoji_Emoji_range_8: _T2 = 0x2600....0x2604
+private let __emoji_Emoji_range_9: _T2 = 0x2614....0x2615
+private let __emoji_Emoji_range_a: _T2 = 0x2622....0x2623
+private let __emoji_Emoji_range_b: _T2 = 0x262e....0x262f
+private let __emoji_Emoji_range_c: _T2 = 0x2638....0x263a
+private let __emoji_Emoji_range_d: _T2 = 0x2648....0x2653
+private let __emoji_Emoji_range_e: _T2 = 0x265f....0x2660
+private let __emoji_Emoji_range_f: _T2 = 0x2665....0x2666
+private let __emoji_Emoji_range_g: _T2 = 0x267e....0x267f
+private let __emoji_Emoji_range_h: _T2 = 0x2692....0x2697
+private let __emoji_Emoji_range_i: _T2 = 0x269b....0x269c
+private let __emoji_Emoji_range_j: _T2 = 0x26a0....0x26a1
+private let __emoji_Emoji_range_k: _T2 = 0x26aa....0x26ab
+private let __emoji_Emoji_range_l: _T2 = 0x26b0....0x26b1
+private let __emoji_Emoji_range_m: _T2 = 0x26bd....0x26be
+private let __emoji_Emoji_range_n: _T2 = 0x26c4....0x26c5
+private let __emoji_Emoji_range_o: _T2 = 0x26ce....0x26cf
+private let __emoji_Emoji_range_p: _T2 = 0x26d3....0x26d4
+private let __emoji_Emoji_range_q: _T2 = 0x26e9....0x26ea
+private let __emoji_Emoji_range_r: _T2 = 0x26f0....0x26f5
+private let __emoji_Emoji_range_s: _T2 = 0x26f7....0x26fa
+private let __emoji_Emoji_range_t: _T2 = 0x2708....0x270d
+private let __emoji_Emoji_range_u: _T2 = 0x2733....0x2734
+private let __emoji_Emoji_range_v: _T2 = 0x2753....0x2755
+private let __emoji_Emoji_range_w: _T2 = 0x2763....0x2764
+private let __emoji_Emoji_range_x: _T2 = 0x2795....0x2797
+private let __emoji_Emoji_range_y: _T2 = 0x2934....0x2935
+private let __emoji_Emoji_range_z: _T2 = 0x2b05....0x2b07
+private let __emoji_Emoji_range_10: _T2 = 0x2b1b....0x2b1c
+private let __emoji_Emoji_range_11: _T2 = 0x1f170....0x1f171
+private let __emoji_Emoji_range_12: _T2 = 0x1f17e....0x1f17f
+private let __emoji_Emoji_range_13: _T2 = 0x1f191....0x1f19a
+private let __emoji_Emoji_range_14: _T2 = 0x1f1e6....0x1f1ff
+private let __emoji_Emoji_range_15: _T2 = 0x1f201....0x1f202
+private let __emoji_Emoji_range_16: _T2 = 0x1f232....0x1f23a
+private let __emoji_Emoji_range_17: _T2 = 0x1f250....0x1f251
+private let __emoji_Emoji_range_18: _T2 = 0x1f300....0x1f321
+private let __emoji_Emoji_range_19: _T2 = 0x1f324....0x1f393
+private let __emoji_Emoji_range_1a: _T2 = 0x1f396....0x1f397
+private let __emoji_Emoji_range_1b: _T2 = 0x1f399....0x1f39b
+private let __emoji_Emoji_range_1c: _T2 = 0x1f39e....0x1f3f0
+private let __emoji_Emoji_range_1d: _T2 = 0x1f3f3....0x1f3f5
+private let __emoji_Emoji_range_1e: _T2 = 0x1f3f7....0x1f4fd
+private let __emoji_Emoji_range_1f: _T2 = 0x1f4ff....0x1f53d
+private let __emoji_Emoji_range_1g: _T2 = 0x1f549....0x1f54e
+private let __emoji_Emoji_range_1h: _T2 = 0x1f550....0x1f567
+private let __emoji_Emoji_range_1i: _T2 = 0x1f56f....0x1f570
+private let __emoji_Emoji_range_1j: _T2 = 0x1f573....0x1f57a
+private let __emoji_Emoji_range_1k: _T2 = 0x1f58a....0x1f58d
+private let __emoji_Emoji_range_1l: _T2 = 0x1f595....0x1f596
+private let __emoji_Emoji_range_1m: _T2 = 0x1f5a4....0x1f5a5
+private let __emoji_Emoji_range_1n: _T2 = 0x1f5b1....0x1f5b2
+private let __emoji_Emoji_range_1o: _T2 = 0x1f5c2....0x1f5c4
+private let __emoji_Emoji_range_1p: _T2 = 0x1f5d1....0x1f5d3
+private let __emoji_Emoji_range_1q: _T2 = 0x1f5dc....0x1f5de
+private let __emoji_Emoji_range_1r: _T2 = 0x1f5fa....0x1f64f
+private let __emoji_Emoji_range_1s: _T2 = 0x1f680....0x1f6c5
+private let __emoji_Emoji_range_1t: _T2 = 0x1f6cb....0x1f6d2
+private let __emoji_Emoji_range_1u: _T2 = 0x1f6e0....0x1f6e5
+private let __emoji_Emoji_range_1v: _T2 = 0x1f6eb....0x1f6ec
+private let __emoji_Emoji_range_1w: _T2 = 0x1f6f3....0x1f6fa
+private let __emoji_Emoji_range_1x: _T2 = 0x1f7e0....0x1f7eb
+private let __emoji_Emoji_range_1y: _T2 = 0x1f90d....0x1f93a
+private let __emoji_Emoji_range_1z: _T2 = 0x1f93c....0x1f945
+private let __emoji_Emoji_range_20: _T2 = 0x1f947....0x1f971
+private let __emoji_Emoji_range_21: _T2 = 0x1f973....0x1f976
+private let __emoji_Emoji_range_22: _T2 = 0x1f97a....0x1f9a2
+private let __emoji_Emoji_range_23: _T2 = 0x1f9a5....0x1f9aa
+private let __emoji_Emoji_range_24: _T2 = 0x1f9ae....0x1f9ca
+private let __emoji_Emoji_range_25: _T2 = 0x1f9cd....0x1f9ff
+private let __emoji_Emoji_range_26: _T2 = 0x1fa70....0x1fa73
+private let __emoji_Emoji_range_27: _T2 = 0x1fa78....0x1fa7a
+private let __emoji_Emoji_range_28: _T2 = 0x1fa80....0x1fa82
+private let __emoji_Emoji_range_29: _T2 = 0x1fa90....0x1fa95
+private let __emoji_Emoji_array: _T3 = [
+  __emoji_Emoji_range_0,
+  __emoji_Emoji_range_1,
+  __emoji_Emoji_range_2,
+  __emoji_Emoji_range_3,
+  __emoji_Emoji_range_4,
+  __emoji_Emoji_range_5,
+  __emoji_Emoji_range_6,
+  __emoji_Emoji_range_7,
+  __emoji_Emoji_range_8,
+  __emoji_Emoji_range_9,
+  __emoji_Emoji_range_a,
+  __emoji_Emoji_range_b,
+  __emoji_Emoji_range_c,
+  __emoji_Emoji_range_d,
+  __emoji_Emoji_range_e,
+  __emoji_Emoji_range_f,
+  __emoji_Emoji_range_g,
+  __emoji_Emoji_range_h,
+  __emoji_Emoji_range_i,
+  __emoji_Emoji_range_j,
+  __emoji_Emoji_range_k,
+  __emoji_Emoji_range_l,
+  __emoji_Emoji_range_m,
+  __emoji_Emoji_range_n,
+  __emoji_Emoji_range_o,
+  __emoji_Emoji_range_p,
+  __emoji_Emoji_range_q,
+  __emoji_Emoji_range_r,
+  __emoji_Emoji_range_s,
+  __emoji_Emoji_range_t,
+  __emoji_Emoji_range_u,
+  __emoji_Emoji_range_v,
+  __emoji_Emoji_range_w,
+  __emoji_Emoji_range_x,
+  __emoji_Emoji_range_y,
+  __emoji_Emoji_range_z,
+  __emoji_Emoji_range_10,
+  __emoji_Emoji_range_11,
+  __emoji_Emoji_range_12,
+  __emoji_Emoji_range_13,
+  __emoji_Emoji_range_14,
+  __emoji_Emoji_range_15,
+  __emoji_Emoji_range_16,
+  __emoji_Emoji_range_17,
+  __emoji_Emoji_range_18,
+  __emoji_Emoji_range_19,
+  __emoji_Emoji_range_1a,
+  __emoji_Emoji_range_1b,
+  __emoji_Emoji_range_1c,
+  __emoji_Emoji_range_1d,
+  __emoji_Emoji_range_1e,
+  __emoji_Emoji_range_1f,
+  __emoji_Emoji_range_1g,
+  __emoji_Emoji_range_1h,
+  __emoji_Emoji_range_1i,
+  __emoji_Emoji_range_1j,
+  __emoji_Emoji_range_1k,
+  __emoji_Emoji_range_1l,
+  __emoji_Emoji_range_1m,
+  __emoji_Emoji_range_1n,
+  __emoji_Emoji_range_1o,
+  __emoji_Emoji_range_1p,
+  __emoji_Emoji_range_1q,
+  __emoji_Emoji_range_1r,
+  __emoji_Emoji_range_1s,
+  __emoji_Emoji_range_1t,
+  __emoji_Emoji_range_1u,
+  __emoji_Emoji_range_1v,
+  __emoji_Emoji_range_1w,
+  __emoji_Emoji_range_1x,
+  __emoji_Emoji_range_1y,
+  __emoji_Emoji_range_1z,
+  __emoji_Emoji_range_20,
+  __emoji_Emoji_range_21,
+  __emoji_Emoji_range_22,
+  __emoji_Emoji_range_23,
+  __emoji_Emoji_range_24,
+  __emoji_Emoji_range_25,
+  __emoji_Emoji_range_26,
+  __emoji_Emoji_range_27,
+  __emoji_Emoji_range_28,
+  __emoji_Emoji_range_29,
+]
+private let __emoji_Emoji_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __emoji_Emoji_array)
+internal let _emoji_Emoji = UnicodeScalarValueSet(singleValues: __emoji_Emoji_set, ranges: __emoji_Emoji_ranges)
 /* ********************************************************************************************** */
 // Emoji Property: Emoji_Component
-private let __range_Emoji_Component_0: _T0 = 0x23....0x23
-private let __range_Emoji_Component_1: _T0 = 0x2a....0x2a
-private let __range_Emoji_Component_2: _T0 = 0x30....0x39
-private let __range_Emoji_Component_3: _T0 = 0x200d....0x200d
-private let __range_Emoji_Component_4: _T0 = 0x20e3....0x20e3
-private let __range_Emoji_Component_5: _T0 = 0xfe0f....0xfe0f
-private let __range_Emoji_Component_6: _T0 = 0x1f1e6....0x1f1ff
-private let __range_Emoji_Component_7: _T0 = 0x1f3fb....0x1f3ff
-private let __range_Emoji_Component_8: _T0 = 0x1f9b0....0x1f9b3
-private let __range_Emoji_Component_9: _T0 = 0xe0020....0xe007f
-private let __array_Emoji_Component: _T1 = [
-  __range_Emoji_Component_0,
-  __range_Emoji_Component_1,
-  __range_Emoji_Component_2,
-  __range_Emoji_Component_3,
-  __range_Emoji_Component_4,
-  __range_Emoji_Component_5,
-  __range_Emoji_Component_6,
-  __range_Emoji_Component_7,
-  __range_Emoji_Component_8,
-  __range_Emoji_Component_9,
+private let __emoji_Emoji_Component_set: _T1 = [
+  0x23,
+  0x2a,
+  0x200d,
+  0x20e3,
+  0xfe0f,
 ]
-internal let _emoji_Emoji_Component = MultipleRanges<UInt32>(carefullySortedRanges: __array_Emoji_Component)
+private let __emoji_Emoji_Component_range_0: _T2 = 0x30....0x39
+private let __emoji_Emoji_Component_range_1: _T2 = 0x1f1e6....0x1f1ff
+private let __emoji_Emoji_Component_range_2: _T2 = 0x1f3fb....0x1f3ff
+private let __emoji_Emoji_Component_range_3: _T2 = 0x1f9b0....0x1f9b3
+private let __emoji_Emoji_Component_range_4: _T2 = 0xe0020....0xe007f
+private let __emoji_Emoji_Component_array: _T3 = [
+  __emoji_Emoji_Component_range_0,
+  __emoji_Emoji_Component_range_1,
+  __emoji_Emoji_Component_range_2,
+  __emoji_Emoji_Component_range_3,
+  __emoji_Emoji_Component_range_4,
+]
+private let __emoji_Emoji_Component_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __emoji_Emoji_Component_array)
+internal let _emoji_Emoji_Component = UnicodeScalarValueSet(singleValues: __emoji_Emoji_Component_set, ranges: __emoji_Emoji_Component_ranges)
 /* ********************************************************************************************** */
 // Emoji Property: Emoji_Modifier
-private let __range_Emoji_Modifier_0: _T0 = 0x1f3fb....0x1f3ff
-private let __array_Emoji_Modifier: _T1 = [
-  __range_Emoji_Modifier_0,
+private let __emoji_Emoji_Modifier_set: _T1 = [
 ]
-internal let _emoji_Emoji_Modifier = MultipleRanges<UInt32>(carefullySortedRanges: __array_Emoji_Modifier)
+private let __emoji_Emoji_Modifier_range_0: _T2 = 0x1f3fb....0x1f3ff
+private let __emoji_Emoji_Modifier_array: _T3 = [
+  __emoji_Emoji_Modifier_range_0,
+]
+private let __emoji_Emoji_Modifier_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __emoji_Emoji_Modifier_array)
+internal let _emoji_Emoji_Modifier = UnicodeScalarValueSet(singleValues: __emoji_Emoji_Modifier_set, ranges: __emoji_Emoji_Modifier_ranges)
 /* ********************************************************************************************** */
 // Emoji Property: Emoji_Modifier_Base
-private let __range_Emoji_Modifier_Base_0: _T0 = 0x261d....0x261d
-private let __range_Emoji_Modifier_Base_1: _T0 = 0x26f9....0x26f9
-private let __range_Emoji_Modifier_Base_2: _T0 = 0x270a....0x270d
-private let __range_Emoji_Modifier_Base_3: _T0 = 0x1f385....0x1f385
-private let __range_Emoji_Modifier_Base_4: _T0 = 0x1f3c2....0x1f3c4
-private let __range_Emoji_Modifier_Base_5: _T0 = 0x1f3c7....0x1f3c7
-private let __range_Emoji_Modifier_Base_6: _T0 = 0x1f3ca....0x1f3cc
-private let __range_Emoji_Modifier_Base_7: _T0 = 0x1f442....0x1f443
-private let __range_Emoji_Modifier_Base_8: _T0 = 0x1f446....0x1f450
-private let __range_Emoji_Modifier_Base_9: _T0 = 0x1f466....0x1f478
-private let __range_Emoji_Modifier_Base_a: _T0 = 0x1f47c....0x1f47c
-private let __range_Emoji_Modifier_Base_b: _T0 = 0x1f481....0x1f483
-private let __range_Emoji_Modifier_Base_c: _T0 = 0x1f485....0x1f487
-private let __range_Emoji_Modifier_Base_d: _T0 = 0x1f48f....0x1f48f
-private let __range_Emoji_Modifier_Base_e: _T0 = 0x1f491....0x1f491
-private let __range_Emoji_Modifier_Base_f: _T0 = 0x1f4aa....0x1f4aa
-private let __range_Emoji_Modifier_Base_g: _T0 = 0x1f574....0x1f575
-private let __range_Emoji_Modifier_Base_h: _T0 = 0x1f57a....0x1f57a
-private let __range_Emoji_Modifier_Base_i: _T0 = 0x1f590....0x1f590
-private let __range_Emoji_Modifier_Base_j: _T0 = 0x1f595....0x1f596
-private let __range_Emoji_Modifier_Base_k: _T0 = 0x1f645....0x1f647
-private let __range_Emoji_Modifier_Base_l: _T0 = 0x1f64b....0x1f64f
-private let __range_Emoji_Modifier_Base_m: _T0 = 0x1f6a3....0x1f6a3
-private let __range_Emoji_Modifier_Base_n: _T0 = 0x1f6b4....0x1f6b6
-private let __range_Emoji_Modifier_Base_o: _T0 = 0x1f6c0....0x1f6c0
-private let __range_Emoji_Modifier_Base_p: _T0 = 0x1f6cc....0x1f6cc
-private let __range_Emoji_Modifier_Base_q: _T0 = 0x1f90f....0x1f90f
-private let __range_Emoji_Modifier_Base_r: _T0 = 0x1f918....0x1f91f
-private let __range_Emoji_Modifier_Base_s: _T0 = 0x1f926....0x1f926
-private let __range_Emoji_Modifier_Base_t: _T0 = 0x1f930....0x1f939
-private let __range_Emoji_Modifier_Base_u: _T0 = 0x1f93c....0x1f93e
-private let __range_Emoji_Modifier_Base_v: _T0 = 0x1f9b5....0x1f9b6
-private let __range_Emoji_Modifier_Base_w: _T0 = 0x1f9b8....0x1f9b9
-private let __range_Emoji_Modifier_Base_x: _T0 = 0x1f9bb....0x1f9bb
-private let __range_Emoji_Modifier_Base_y: _T0 = 0x1f9cd....0x1f9cf
-private let __range_Emoji_Modifier_Base_z: _T0 = 0x1f9d1....0x1f9dd
-private let __array_Emoji_Modifier_Base: _T1 = [
-  __range_Emoji_Modifier_Base_0,
-  __range_Emoji_Modifier_Base_1,
-  __range_Emoji_Modifier_Base_2,
-  __range_Emoji_Modifier_Base_3,
-  __range_Emoji_Modifier_Base_4,
-  __range_Emoji_Modifier_Base_5,
-  __range_Emoji_Modifier_Base_6,
-  __range_Emoji_Modifier_Base_7,
-  __range_Emoji_Modifier_Base_8,
-  __range_Emoji_Modifier_Base_9,
-  __range_Emoji_Modifier_Base_a,
-  __range_Emoji_Modifier_Base_b,
-  __range_Emoji_Modifier_Base_c,
-  __range_Emoji_Modifier_Base_d,
-  __range_Emoji_Modifier_Base_e,
-  __range_Emoji_Modifier_Base_f,
-  __range_Emoji_Modifier_Base_g,
-  __range_Emoji_Modifier_Base_h,
-  __range_Emoji_Modifier_Base_i,
-  __range_Emoji_Modifier_Base_j,
-  __range_Emoji_Modifier_Base_k,
-  __range_Emoji_Modifier_Base_l,
-  __range_Emoji_Modifier_Base_m,
-  __range_Emoji_Modifier_Base_n,
-  __range_Emoji_Modifier_Base_o,
-  __range_Emoji_Modifier_Base_p,
-  __range_Emoji_Modifier_Base_q,
-  __range_Emoji_Modifier_Base_r,
-  __range_Emoji_Modifier_Base_s,
-  __range_Emoji_Modifier_Base_t,
-  __range_Emoji_Modifier_Base_u,
-  __range_Emoji_Modifier_Base_v,
-  __range_Emoji_Modifier_Base_w,
-  __range_Emoji_Modifier_Base_x,
-  __range_Emoji_Modifier_Base_y,
-  __range_Emoji_Modifier_Base_z,
+private let __emoji_Emoji_Modifier_Base_set: _T1 = [
+  0x261d,
+  0x26f9,
+  0x1f385,
+  0x1f3c7,
+  0x1f47c,
+  0x1f48f,
+  0x1f491,
+  0x1f4aa,
+  0x1f57a,
+  0x1f590,
+  0x1f6a3,
+  0x1f6c0,
+  0x1f6cc,
+  0x1f90f,
+  0x1f926,
+  0x1f9bb,
 ]
-internal let _emoji_Emoji_Modifier_Base = MultipleRanges<UInt32>(carefullySortedRanges: __array_Emoji_Modifier_Base)
+private let __emoji_Emoji_Modifier_Base_range_0: _T2 = 0x270a....0x270d
+private let __emoji_Emoji_Modifier_Base_range_1: _T2 = 0x1f3c2....0x1f3c4
+private let __emoji_Emoji_Modifier_Base_range_2: _T2 = 0x1f3ca....0x1f3cc
+private let __emoji_Emoji_Modifier_Base_range_3: _T2 = 0x1f442....0x1f443
+private let __emoji_Emoji_Modifier_Base_range_4: _T2 = 0x1f446....0x1f450
+private let __emoji_Emoji_Modifier_Base_range_5: _T2 = 0x1f466....0x1f478
+private let __emoji_Emoji_Modifier_Base_range_6: _T2 = 0x1f481....0x1f483
+private let __emoji_Emoji_Modifier_Base_range_7: _T2 = 0x1f485....0x1f487
+private let __emoji_Emoji_Modifier_Base_range_8: _T2 = 0x1f574....0x1f575
+private let __emoji_Emoji_Modifier_Base_range_9: _T2 = 0x1f595....0x1f596
+private let __emoji_Emoji_Modifier_Base_range_a: _T2 = 0x1f645....0x1f647
+private let __emoji_Emoji_Modifier_Base_range_b: _T2 = 0x1f64b....0x1f64f
+private let __emoji_Emoji_Modifier_Base_range_c: _T2 = 0x1f6b4....0x1f6b6
+private let __emoji_Emoji_Modifier_Base_range_d: _T2 = 0x1f918....0x1f91f
+private let __emoji_Emoji_Modifier_Base_range_e: _T2 = 0x1f930....0x1f939
+private let __emoji_Emoji_Modifier_Base_range_f: _T2 = 0x1f93c....0x1f93e
+private let __emoji_Emoji_Modifier_Base_range_g: _T2 = 0x1f9b5....0x1f9b6
+private let __emoji_Emoji_Modifier_Base_range_h: _T2 = 0x1f9b8....0x1f9b9
+private let __emoji_Emoji_Modifier_Base_range_i: _T2 = 0x1f9cd....0x1f9cf
+private let __emoji_Emoji_Modifier_Base_range_j: _T2 = 0x1f9d1....0x1f9dd
+private let __emoji_Emoji_Modifier_Base_array: _T3 = [
+  __emoji_Emoji_Modifier_Base_range_0,
+  __emoji_Emoji_Modifier_Base_range_1,
+  __emoji_Emoji_Modifier_Base_range_2,
+  __emoji_Emoji_Modifier_Base_range_3,
+  __emoji_Emoji_Modifier_Base_range_4,
+  __emoji_Emoji_Modifier_Base_range_5,
+  __emoji_Emoji_Modifier_Base_range_6,
+  __emoji_Emoji_Modifier_Base_range_7,
+  __emoji_Emoji_Modifier_Base_range_8,
+  __emoji_Emoji_Modifier_Base_range_9,
+  __emoji_Emoji_Modifier_Base_range_a,
+  __emoji_Emoji_Modifier_Base_range_b,
+  __emoji_Emoji_Modifier_Base_range_c,
+  __emoji_Emoji_Modifier_Base_range_d,
+  __emoji_Emoji_Modifier_Base_range_e,
+  __emoji_Emoji_Modifier_Base_range_f,
+  __emoji_Emoji_Modifier_Base_range_g,
+  __emoji_Emoji_Modifier_Base_range_h,
+  __emoji_Emoji_Modifier_Base_range_i,
+  __emoji_Emoji_Modifier_Base_range_j,
+]
+private let __emoji_Emoji_Modifier_Base_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __emoji_Emoji_Modifier_Base_array)
+internal let _emoji_Emoji_Modifier_Base = UnicodeScalarValueSet(singleValues: __emoji_Emoji_Modifier_Base_set, ranges: __emoji_Emoji_Modifier_Base_ranges)
 /* ********************************************************************************************** */
 // Emoji Property: Emoji_Presentation
-private let __range_Emoji_Presentation_0: _T0 = 0x231a....0x231b
-private let __range_Emoji_Presentation_1: _T0 = 0x23e9....0x23ec
-private let __range_Emoji_Presentation_2: _T0 = 0x23f0....0x23f0
-private let __range_Emoji_Presentation_3: _T0 = 0x23f3....0x23f3
-private let __range_Emoji_Presentation_4: _T0 = 0x25fd....0x25fe
-private let __range_Emoji_Presentation_5: _T0 = 0x2614....0x2615
-private let __range_Emoji_Presentation_6: _T0 = 0x2648....0x2653
-private let __range_Emoji_Presentation_7: _T0 = 0x267f....0x267f
-private let __range_Emoji_Presentation_8: _T0 = 0x2693....0x2693
-private let __range_Emoji_Presentation_9: _T0 = 0x26a1....0x26a1
-private let __range_Emoji_Presentation_a: _T0 = 0x26aa....0x26ab
-private let __range_Emoji_Presentation_b: _T0 = 0x26bd....0x26be
-private let __range_Emoji_Presentation_c: _T0 = 0x26c4....0x26c5
-private let __range_Emoji_Presentation_d: _T0 = 0x26ce....0x26ce
-private let __range_Emoji_Presentation_e: _T0 = 0x26d4....0x26d4
-private let __range_Emoji_Presentation_f: _T0 = 0x26ea....0x26ea
-private let __range_Emoji_Presentation_g: _T0 = 0x26f2....0x26f3
-private let __range_Emoji_Presentation_h: _T0 = 0x26f5....0x26f5
-private let __range_Emoji_Presentation_i: _T0 = 0x26fa....0x26fa
-private let __range_Emoji_Presentation_j: _T0 = 0x26fd....0x26fd
-private let __range_Emoji_Presentation_k: _T0 = 0x2705....0x2705
-private let __range_Emoji_Presentation_l: _T0 = 0x270a....0x270b
-private let __range_Emoji_Presentation_m: _T0 = 0x2728....0x2728
-private let __range_Emoji_Presentation_n: _T0 = 0x274c....0x274c
-private let __range_Emoji_Presentation_o: _T0 = 0x274e....0x274e
-private let __range_Emoji_Presentation_p: _T0 = 0x2753....0x2755
-private let __range_Emoji_Presentation_q: _T0 = 0x2757....0x2757
-private let __range_Emoji_Presentation_r: _T0 = 0x2795....0x2797
-private let __range_Emoji_Presentation_s: _T0 = 0x27b0....0x27b0
-private let __range_Emoji_Presentation_t: _T0 = 0x27bf....0x27bf
-private let __range_Emoji_Presentation_u: _T0 = 0x2b1b....0x2b1c
-private let __range_Emoji_Presentation_v: _T0 = 0x2b50....0x2b50
-private let __range_Emoji_Presentation_w: _T0 = 0x2b55....0x2b55
-private let __range_Emoji_Presentation_x: _T0 = 0x1f004....0x1f004
-private let __range_Emoji_Presentation_y: _T0 = 0x1f0cf....0x1f0cf
-private let __range_Emoji_Presentation_z: _T0 = 0x1f18e....0x1f18e
-private let __range_Emoji_Presentation_10: _T0 = 0x1f191....0x1f19a
-private let __range_Emoji_Presentation_11: _T0 = 0x1f1e6....0x1f1ff
-private let __range_Emoji_Presentation_12: _T0 = 0x1f201....0x1f201
-private let __range_Emoji_Presentation_13: _T0 = 0x1f21a....0x1f21a
-private let __range_Emoji_Presentation_14: _T0 = 0x1f22f....0x1f22f
-private let __range_Emoji_Presentation_15: _T0 = 0x1f232....0x1f236
-private let __range_Emoji_Presentation_16: _T0 = 0x1f238....0x1f23a
-private let __range_Emoji_Presentation_17: _T0 = 0x1f250....0x1f251
-private let __range_Emoji_Presentation_18: _T0 = 0x1f300....0x1f320
-private let __range_Emoji_Presentation_19: _T0 = 0x1f32d....0x1f335
-private let __range_Emoji_Presentation_1a: _T0 = 0x1f337....0x1f37c
-private let __range_Emoji_Presentation_1b: _T0 = 0x1f37e....0x1f393
-private let __range_Emoji_Presentation_1c: _T0 = 0x1f3a0....0x1f3ca
-private let __range_Emoji_Presentation_1d: _T0 = 0x1f3cf....0x1f3d3
-private let __range_Emoji_Presentation_1e: _T0 = 0x1f3e0....0x1f3f0
-private let __range_Emoji_Presentation_1f: _T0 = 0x1f3f4....0x1f3f4
-private let __range_Emoji_Presentation_1g: _T0 = 0x1f3f8....0x1f43e
-private let __range_Emoji_Presentation_1h: _T0 = 0x1f440....0x1f440
-private let __range_Emoji_Presentation_1i: _T0 = 0x1f442....0x1f4fc
-private let __range_Emoji_Presentation_1j: _T0 = 0x1f4ff....0x1f53d
-private let __range_Emoji_Presentation_1k: _T0 = 0x1f54b....0x1f54e
-private let __range_Emoji_Presentation_1l: _T0 = 0x1f550....0x1f567
-private let __range_Emoji_Presentation_1m: _T0 = 0x1f57a....0x1f57a
-private let __range_Emoji_Presentation_1n: _T0 = 0x1f595....0x1f596
-private let __range_Emoji_Presentation_1o: _T0 = 0x1f5a4....0x1f5a4
-private let __range_Emoji_Presentation_1p: _T0 = 0x1f5fb....0x1f64f
-private let __range_Emoji_Presentation_1q: _T0 = 0x1f680....0x1f6c5
-private let __range_Emoji_Presentation_1r: _T0 = 0x1f6cc....0x1f6cc
-private let __range_Emoji_Presentation_1s: _T0 = 0x1f6d0....0x1f6d2
-private let __range_Emoji_Presentation_1t: _T0 = 0x1f6d5....0x1f6d5
-private let __range_Emoji_Presentation_1u: _T0 = 0x1f6eb....0x1f6ec
-private let __range_Emoji_Presentation_1v: _T0 = 0x1f6f4....0x1f6fa
-private let __range_Emoji_Presentation_1w: _T0 = 0x1f7e0....0x1f7eb
-private let __range_Emoji_Presentation_1x: _T0 = 0x1f90d....0x1f93a
-private let __range_Emoji_Presentation_1y: _T0 = 0x1f93c....0x1f945
-private let __range_Emoji_Presentation_1z: _T0 = 0x1f947....0x1f971
-private let __range_Emoji_Presentation_20: _T0 = 0x1f973....0x1f976
-private let __range_Emoji_Presentation_21: _T0 = 0x1f97a....0x1f9a2
-private let __range_Emoji_Presentation_22: _T0 = 0x1f9a5....0x1f9aa
-private let __range_Emoji_Presentation_23: _T0 = 0x1f9ae....0x1f9ca
-private let __range_Emoji_Presentation_24: _T0 = 0x1f9cd....0x1f9ff
-private let __range_Emoji_Presentation_25: _T0 = 0x1fa70....0x1fa73
-private let __range_Emoji_Presentation_26: _T0 = 0x1fa78....0x1fa7a
-private let __range_Emoji_Presentation_27: _T0 = 0x1fa80....0x1fa82
-private let __range_Emoji_Presentation_28: _T0 = 0x1fa90....0x1fa95
-private let __array_Emoji_Presentation: _T1 = [
-  __range_Emoji_Presentation_0,
-  __range_Emoji_Presentation_1,
-  __range_Emoji_Presentation_2,
-  __range_Emoji_Presentation_3,
-  __range_Emoji_Presentation_4,
-  __range_Emoji_Presentation_5,
-  __range_Emoji_Presentation_6,
-  __range_Emoji_Presentation_7,
-  __range_Emoji_Presentation_8,
-  __range_Emoji_Presentation_9,
-  __range_Emoji_Presentation_a,
-  __range_Emoji_Presentation_b,
-  __range_Emoji_Presentation_c,
-  __range_Emoji_Presentation_d,
-  __range_Emoji_Presentation_e,
-  __range_Emoji_Presentation_f,
-  __range_Emoji_Presentation_g,
-  __range_Emoji_Presentation_h,
-  __range_Emoji_Presentation_i,
-  __range_Emoji_Presentation_j,
-  __range_Emoji_Presentation_k,
-  __range_Emoji_Presentation_l,
-  __range_Emoji_Presentation_m,
-  __range_Emoji_Presentation_n,
-  __range_Emoji_Presentation_o,
-  __range_Emoji_Presentation_p,
-  __range_Emoji_Presentation_q,
-  __range_Emoji_Presentation_r,
-  __range_Emoji_Presentation_s,
-  __range_Emoji_Presentation_t,
-  __range_Emoji_Presentation_u,
-  __range_Emoji_Presentation_v,
-  __range_Emoji_Presentation_w,
-  __range_Emoji_Presentation_x,
-  __range_Emoji_Presentation_y,
-  __range_Emoji_Presentation_z,
-  __range_Emoji_Presentation_10,
-  __range_Emoji_Presentation_11,
-  __range_Emoji_Presentation_12,
-  __range_Emoji_Presentation_13,
-  __range_Emoji_Presentation_14,
-  __range_Emoji_Presentation_15,
-  __range_Emoji_Presentation_16,
-  __range_Emoji_Presentation_17,
-  __range_Emoji_Presentation_18,
-  __range_Emoji_Presentation_19,
-  __range_Emoji_Presentation_1a,
-  __range_Emoji_Presentation_1b,
-  __range_Emoji_Presentation_1c,
-  __range_Emoji_Presentation_1d,
-  __range_Emoji_Presentation_1e,
-  __range_Emoji_Presentation_1f,
-  __range_Emoji_Presentation_1g,
-  __range_Emoji_Presentation_1h,
-  __range_Emoji_Presentation_1i,
-  __range_Emoji_Presentation_1j,
-  __range_Emoji_Presentation_1k,
-  __range_Emoji_Presentation_1l,
-  __range_Emoji_Presentation_1m,
-  __range_Emoji_Presentation_1n,
-  __range_Emoji_Presentation_1o,
-  __range_Emoji_Presentation_1p,
-  __range_Emoji_Presentation_1q,
-  __range_Emoji_Presentation_1r,
-  __range_Emoji_Presentation_1s,
-  __range_Emoji_Presentation_1t,
-  __range_Emoji_Presentation_1u,
-  __range_Emoji_Presentation_1v,
-  __range_Emoji_Presentation_1w,
-  __range_Emoji_Presentation_1x,
-  __range_Emoji_Presentation_1y,
-  __range_Emoji_Presentation_1z,
-  __range_Emoji_Presentation_20,
-  __range_Emoji_Presentation_21,
-  __range_Emoji_Presentation_22,
-  __range_Emoji_Presentation_23,
-  __range_Emoji_Presentation_24,
-  __range_Emoji_Presentation_25,
-  __range_Emoji_Presentation_26,
-  __range_Emoji_Presentation_27,
-  __range_Emoji_Presentation_28,
+private let __emoji_Emoji_Presentation_set: _T1 = [
+  0x23f0,
+  0x23f3,
+  0x267f,
+  0x2693,
+  0x26a1,
+  0x26ce,
+  0x26d4,
+  0x26ea,
+  0x26f5,
+  0x26fa,
+  0x26fd,
+  0x2705,
+  0x2728,
+  0x274c,
+  0x274e,
+  0x2757,
+  0x27b0,
+  0x27bf,
+  0x2b50,
+  0x2b55,
+  0x1f004,
+  0x1f0cf,
+  0x1f18e,
+  0x1f201,
+  0x1f21a,
+  0x1f22f,
+  0x1f3f4,
+  0x1f440,
+  0x1f57a,
+  0x1f5a4,
+  0x1f6cc,
+  0x1f6d5,
 ]
-internal let _emoji_Emoji_Presentation = MultipleRanges<UInt32>(carefullySortedRanges: __array_Emoji_Presentation)
+private let __emoji_Emoji_Presentation_range_0: _T2 = 0x231a....0x231b
+private let __emoji_Emoji_Presentation_range_1: _T2 = 0x23e9....0x23ec
+private let __emoji_Emoji_Presentation_range_2: _T2 = 0x25fd....0x25fe
+private let __emoji_Emoji_Presentation_range_3: _T2 = 0x2614....0x2615
+private let __emoji_Emoji_Presentation_range_4: _T2 = 0x2648....0x2653
+private let __emoji_Emoji_Presentation_range_5: _T2 = 0x26aa....0x26ab
+private let __emoji_Emoji_Presentation_range_6: _T2 = 0x26bd....0x26be
+private let __emoji_Emoji_Presentation_range_7: _T2 = 0x26c4....0x26c5
+private let __emoji_Emoji_Presentation_range_8: _T2 = 0x26f2....0x26f3
+private let __emoji_Emoji_Presentation_range_9: _T2 = 0x270a....0x270b
+private let __emoji_Emoji_Presentation_range_a: _T2 = 0x2753....0x2755
+private let __emoji_Emoji_Presentation_range_b: _T2 = 0x2795....0x2797
+private let __emoji_Emoji_Presentation_range_c: _T2 = 0x2b1b....0x2b1c
+private let __emoji_Emoji_Presentation_range_d: _T2 = 0x1f191....0x1f19a
+private let __emoji_Emoji_Presentation_range_e: _T2 = 0x1f1e6....0x1f1ff
+private let __emoji_Emoji_Presentation_range_f: _T2 = 0x1f232....0x1f236
+private let __emoji_Emoji_Presentation_range_g: _T2 = 0x1f238....0x1f23a
+private let __emoji_Emoji_Presentation_range_h: _T2 = 0x1f250....0x1f251
+private let __emoji_Emoji_Presentation_range_i: _T2 = 0x1f300....0x1f320
+private let __emoji_Emoji_Presentation_range_j: _T2 = 0x1f32d....0x1f335
+private let __emoji_Emoji_Presentation_range_k: _T2 = 0x1f337....0x1f37c
+private let __emoji_Emoji_Presentation_range_l: _T2 = 0x1f37e....0x1f393
+private let __emoji_Emoji_Presentation_range_m: _T2 = 0x1f3a0....0x1f3ca
+private let __emoji_Emoji_Presentation_range_n: _T2 = 0x1f3cf....0x1f3d3
+private let __emoji_Emoji_Presentation_range_o: _T2 = 0x1f3e0....0x1f3f0
+private let __emoji_Emoji_Presentation_range_p: _T2 = 0x1f3f8....0x1f43e
+private let __emoji_Emoji_Presentation_range_q: _T2 = 0x1f442....0x1f4fc
+private let __emoji_Emoji_Presentation_range_r: _T2 = 0x1f4ff....0x1f53d
+private let __emoji_Emoji_Presentation_range_s: _T2 = 0x1f54b....0x1f54e
+private let __emoji_Emoji_Presentation_range_t: _T2 = 0x1f550....0x1f567
+private let __emoji_Emoji_Presentation_range_u: _T2 = 0x1f595....0x1f596
+private let __emoji_Emoji_Presentation_range_v: _T2 = 0x1f5fb....0x1f64f
+private let __emoji_Emoji_Presentation_range_w: _T2 = 0x1f680....0x1f6c5
+private let __emoji_Emoji_Presentation_range_x: _T2 = 0x1f6d0....0x1f6d2
+private let __emoji_Emoji_Presentation_range_y: _T2 = 0x1f6eb....0x1f6ec
+private let __emoji_Emoji_Presentation_range_z: _T2 = 0x1f6f4....0x1f6fa
+private let __emoji_Emoji_Presentation_range_10: _T2 = 0x1f7e0....0x1f7eb
+private let __emoji_Emoji_Presentation_range_11: _T2 = 0x1f90d....0x1f93a
+private let __emoji_Emoji_Presentation_range_12: _T2 = 0x1f93c....0x1f945
+private let __emoji_Emoji_Presentation_range_13: _T2 = 0x1f947....0x1f971
+private let __emoji_Emoji_Presentation_range_14: _T2 = 0x1f973....0x1f976
+private let __emoji_Emoji_Presentation_range_15: _T2 = 0x1f97a....0x1f9a2
+private let __emoji_Emoji_Presentation_range_16: _T2 = 0x1f9a5....0x1f9aa
+private let __emoji_Emoji_Presentation_range_17: _T2 = 0x1f9ae....0x1f9ca
+private let __emoji_Emoji_Presentation_range_18: _T2 = 0x1f9cd....0x1f9ff
+private let __emoji_Emoji_Presentation_range_19: _T2 = 0x1fa70....0x1fa73
+private let __emoji_Emoji_Presentation_range_1a: _T2 = 0x1fa78....0x1fa7a
+private let __emoji_Emoji_Presentation_range_1b: _T2 = 0x1fa80....0x1fa82
+private let __emoji_Emoji_Presentation_range_1c: _T2 = 0x1fa90....0x1fa95
+private let __emoji_Emoji_Presentation_array: _T3 = [
+  __emoji_Emoji_Presentation_range_0,
+  __emoji_Emoji_Presentation_range_1,
+  __emoji_Emoji_Presentation_range_2,
+  __emoji_Emoji_Presentation_range_3,
+  __emoji_Emoji_Presentation_range_4,
+  __emoji_Emoji_Presentation_range_5,
+  __emoji_Emoji_Presentation_range_6,
+  __emoji_Emoji_Presentation_range_7,
+  __emoji_Emoji_Presentation_range_8,
+  __emoji_Emoji_Presentation_range_9,
+  __emoji_Emoji_Presentation_range_a,
+  __emoji_Emoji_Presentation_range_b,
+  __emoji_Emoji_Presentation_range_c,
+  __emoji_Emoji_Presentation_range_d,
+  __emoji_Emoji_Presentation_range_e,
+  __emoji_Emoji_Presentation_range_f,
+  __emoji_Emoji_Presentation_range_g,
+  __emoji_Emoji_Presentation_range_h,
+  __emoji_Emoji_Presentation_range_i,
+  __emoji_Emoji_Presentation_range_j,
+  __emoji_Emoji_Presentation_range_k,
+  __emoji_Emoji_Presentation_range_l,
+  __emoji_Emoji_Presentation_range_m,
+  __emoji_Emoji_Presentation_range_n,
+  __emoji_Emoji_Presentation_range_o,
+  __emoji_Emoji_Presentation_range_p,
+  __emoji_Emoji_Presentation_range_q,
+  __emoji_Emoji_Presentation_range_r,
+  __emoji_Emoji_Presentation_range_s,
+  __emoji_Emoji_Presentation_range_t,
+  __emoji_Emoji_Presentation_range_u,
+  __emoji_Emoji_Presentation_range_v,
+  __emoji_Emoji_Presentation_range_w,
+  __emoji_Emoji_Presentation_range_x,
+  __emoji_Emoji_Presentation_range_y,
+  __emoji_Emoji_Presentation_range_z,
+  __emoji_Emoji_Presentation_range_10,
+  __emoji_Emoji_Presentation_range_11,
+  __emoji_Emoji_Presentation_range_12,
+  __emoji_Emoji_Presentation_range_13,
+  __emoji_Emoji_Presentation_range_14,
+  __emoji_Emoji_Presentation_range_15,
+  __emoji_Emoji_Presentation_range_16,
+  __emoji_Emoji_Presentation_range_17,
+  __emoji_Emoji_Presentation_range_18,
+  __emoji_Emoji_Presentation_range_19,
+  __emoji_Emoji_Presentation_range_1a,
+  __emoji_Emoji_Presentation_range_1b,
+  __emoji_Emoji_Presentation_range_1c,
+]
+private let __emoji_Emoji_Presentation_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __emoji_Emoji_Presentation_array)
+internal let _emoji_Emoji_Presentation = UnicodeScalarValueSet(singleValues: __emoji_Emoji_Presentation_set, ranges: __emoji_Emoji_Presentation_ranges)
 /* ********************************************************************************************** */
 // Emoji Property: Extended_Pictographic
-private let __range_Extended_Pictographic_0: _T0 = 0xa9....0xa9
-private let __range_Extended_Pictographic_1: _T0 = 0xae....0xae
-private let __range_Extended_Pictographic_2: _T0 = 0x203c....0x203c
-private let __range_Extended_Pictographic_3: _T0 = 0x2049....0x2049
-private let __range_Extended_Pictographic_4: _T0 = 0x2122....0x2122
-private let __range_Extended_Pictographic_5: _T0 = 0x2139....0x2139
-private let __range_Extended_Pictographic_6: _T0 = 0x2194....0x2199
-private let __range_Extended_Pictographic_7: _T0 = 0x21a9....0x21aa
-private let __range_Extended_Pictographic_8: _T0 = 0x231a....0x231b
-private let __range_Extended_Pictographic_9: _T0 = 0x2328....0x2328
-private let __range_Extended_Pictographic_a: _T0 = 0x2388....0x2388
-private let __range_Extended_Pictographic_b: _T0 = 0x23cf....0x23cf
-private let __range_Extended_Pictographic_c: _T0 = 0x23e9....0x23f3
-private let __range_Extended_Pictographic_d: _T0 = 0x23f8....0x23fa
-private let __range_Extended_Pictographic_e: _T0 = 0x24c2....0x24c2
-private let __range_Extended_Pictographic_f: _T0 = 0x25aa....0x25ab
-private let __range_Extended_Pictographic_g: _T0 = 0x25b6....0x25b6
-private let __range_Extended_Pictographic_h: _T0 = 0x25c0....0x25c0
-private let __range_Extended_Pictographic_i: _T0 = 0x25fb....0x25fe
-private let __range_Extended_Pictographic_j: _T0 = 0x2600....0x2605
-private let __range_Extended_Pictographic_k: _T0 = 0x2607....0x2612
-private let __range_Extended_Pictographic_l: _T0 = 0x2614....0x2685
-private let __range_Extended_Pictographic_m: _T0 = 0x2690....0x2705
-private let __range_Extended_Pictographic_n: _T0 = 0x2708....0x2712
-private let __range_Extended_Pictographic_o: _T0 = 0x2714....0x2714
-private let __range_Extended_Pictographic_p: _T0 = 0x2716....0x2716
-private let __range_Extended_Pictographic_q: _T0 = 0x271d....0x271d
-private let __range_Extended_Pictographic_r: _T0 = 0x2721....0x2721
-private let __range_Extended_Pictographic_s: _T0 = 0x2728....0x2728
-private let __range_Extended_Pictographic_t: _T0 = 0x2733....0x2734
-private let __range_Extended_Pictographic_u: _T0 = 0x2744....0x2744
-private let __range_Extended_Pictographic_v: _T0 = 0x2747....0x2747
-private let __range_Extended_Pictographic_w: _T0 = 0x274c....0x274c
-private let __range_Extended_Pictographic_x: _T0 = 0x274e....0x274e
-private let __range_Extended_Pictographic_y: _T0 = 0x2753....0x2755
-private let __range_Extended_Pictographic_z: _T0 = 0x2757....0x2757
-private let __range_Extended_Pictographic_10: _T0 = 0x2763....0x2767
-private let __range_Extended_Pictographic_11: _T0 = 0x2795....0x2797
-private let __range_Extended_Pictographic_12: _T0 = 0x27a1....0x27a1
-private let __range_Extended_Pictographic_13: _T0 = 0x27b0....0x27b0
-private let __range_Extended_Pictographic_14: _T0 = 0x27bf....0x27bf
-private let __range_Extended_Pictographic_15: _T0 = 0x2934....0x2935
-private let __range_Extended_Pictographic_16: _T0 = 0x2b05....0x2b07
-private let __range_Extended_Pictographic_17: _T0 = 0x2b1b....0x2b1c
-private let __range_Extended_Pictographic_18: _T0 = 0x2b50....0x2b50
-private let __range_Extended_Pictographic_19: _T0 = 0x2b55....0x2b55
-private let __range_Extended_Pictographic_1a: _T0 = 0x3030....0x3030
-private let __range_Extended_Pictographic_1b: _T0 = 0x303d....0x303d
-private let __range_Extended_Pictographic_1c: _T0 = 0x3297....0x3297
-private let __range_Extended_Pictographic_1d: _T0 = 0x3299....0x3299
-private let __range_Extended_Pictographic_1e: _T0 = 0x1f000....0x1f0ff
-private let __range_Extended_Pictographic_1f: _T0 = 0x1f10d....0x1f10f
-private let __range_Extended_Pictographic_1g: _T0 = 0x1f12f....0x1f12f
-private let __range_Extended_Pictographic_1h: _T0 = 0x1f16c....0x1f171
-private let __range_Extended_Pictographic_1i: _T0 = 0x1f17e....0x1f17f
-private let __range_Extended_Pictographic_1j: _T0 = 0x1f18e....0x1f18e
-private let __range_Extended_Pictographic_1k: _T0 = 0x1f191....0x1f19a
-private let __range_Extended_Pictographic_1l: _T0 = 0x1f1ad....0x1f1e5
-private let __range_Extended_Pictographic_1m: _T0 = 0x1f201....0x1f20f
-private let __range_Extended_Pictographic_1n: _T0 = 0x1f21a....0x1f21a
-private let __range_Extended_Pictographic_1o: _T0 = 0x1f22f....0x1f22f
-private let __range_Extended_Pictographic_1p: _T0 = 0x1f232....0x1f23a
-private let __range_Extended_Pictographic_1q: _T0 = 0x1f23c....0x1f23f
-private let __range_Extended_Pictographic_1r: _T0 = 0x1f249....0x1f3fa
-private let __range_Extended_Pictographic_1s: _T0 = 0x1f400....0x1f53d
-private let __range_Extended_Pictographic_1t: _T0 = 0x1f546....0x1f64f
-private let __range_Extended_Pictographic_1u: _T0 = 0x1f680....0x1f6ff
-private let __range_Extended_Pictographic_1v: _T0 = 0x1f774....0x1f77f
-private let __range_Extended_Pictographic_1w: _T0 = 0x1f7d5....0x1f7ff
-private let __range_Extended_Pictographic_1x: _T0 = 0x1f80c....0x1f80f
-private let __range_Extended_Pictographic_1y: _T0 = 0x1f848....0x1f84f
-private let __range_Extended_Pictographic_1z: _T0 = 0x1f85a....0x1f85f
-private let __range_Extended_Pictographic_20: _T0 = 0x1f888....0x1f88f
-private let __range_Extended_Pictographic_21: _T0 = 0x1f8ae....0x1f8ff
-private let __range_Extended_Pictographic_22: _T0 = 0x1f90c....0x1f93a
-private let __range_Extended_Pictographic_23: _T0 = 0x1f93c....0x1f945
-private let __range_Extended_Pictographic_24: _T0 = 0x1f947....0x1fffd
-private let __array_Extended_Pictographic: _T1 = [
-  __range_Extended_Pictographic_0,
-  __range_Extended_Pictographic_1,
-  __range_Extended_Pictographic_2,
-  __range_Extended_Pictographic_3,
-  __range_Extended_Pictographic_4,
-  __range_Extended_Pictographic_5,
-  __range_Extended_Pictographic_6,
-  __range_Extended_Pictographic_7,
-  __range_Extended_Pictographic_8,
-  __range_Extended_Pictographic_9,
-  __range_Extended_Pictographic_a,
-  __range_Extended_Pictographic_b,
-  __range_Extended_Pictographic_c,
-  __range_Extended_Pictographic_d,
-  __range_Extended_Pictographic_e,
-  __range_Extended_Pictographic_f,
-  __range_Extended_Pictographic_g,
-  __range_Extended_Pictographic_h,
-  __range_Extended_Pictographic_i,
-  __range_Extended_Pictographic_j,
-  __range_Extended_Pictographic_k,
-  __range_Extended_Pictographic_l,
-  __range_Extended_Pictographic_m,
-  __range_Extended_Pictographic_n,
-  __range_Extended_Pictographic_o,
-  __range_Extended_Pictographic_p,
-  __range_Extended_Pictographic_q,
-  __range_Extended_Pictographic_r,
-  __range_Extended_Pictographic_s,
-  __range_Extended_Pictographic_t,
-  __range_Extended_Pictographic_u,
-  __range_Extended_Pictographic_v,
-  __range_Extended_Pictographic_w,
-  __range_Extended_Pictographic_x,
-  __range_Extended_Pictographic_y,
-  __range_Extended_Pictographic_z,
-  __range_Extended_Pictographic_10,
-  __range_Extended_Pictographic_11,
-  __range_Extended_Pictographic_12,
-  __range_Extended_Pictographic_13,
-  __range_Extended_Pictographic_14,
-  __range_Extended_Pictographic_15,
-  __range_Extended_Pictographic_16,
-  __range_Extended_Pictographic_17,
-  __range_Extended_Pictographic_18,
-  __range_Extended_Pictographic_19,
-  __range_Extended_Pictographic_1a,
-  __range_Extended_Pictographic_1b,
-  __range_Extended_Pictographic_1c,
-  __range_Extended_Pictographic_1d,
-  __range_Extended_Pictographic_1e,
-  __range_Extended_Pictographic_1f,
-  __range_Extended_Pictographic_1g,
-  __range_Extended_Pictographic_1h,
-  __range_Extended_Pictographic_1i,
-  __range_Extended_Pictographic_1j,
-  __range_Extended_Pictographic_1k,
-  __range_Extended_Pictographic_1l,
-  __range_Extended_Pictographic_1m,
-  __range_Extended_Pictographic_1n,
-  __range_Extended_Pictographic_1o,
-  __range_Extended_Pictographic_1p,
-  __range_Extended_Pictographic_1q,
-  __range_Extended_Pictographic_1r,
-  __range_Extended_Pictographic_1s,
-  __range_Extended_Pictographic_1t,
-  __range_Extended_Pictographic_1u,
-  __range_Extended_Pictographic_1v,
-  __range_Extended_Pictographic_1w,
-  __range_Extended_Pictographic_1x,
-  __range_Extended_Pictographic_1y,
-  __range_Extended_Pictographic_1z,
-  __range_Extended_Pictographic_20,
-  __range_Extended_Pictographic_21,
-  __range_Extended_Pictographic_22,
-  __range_Extended_Pictographic_23,
-  __range_Extended_Pictographic_24,
+private let __emoji_Extended_Pictographic_set: _T1 = [
+  0xa9,
+  0xae,
+  0x203c,
+  0x2049,
+  0x2122,
+  0x2139,
+  0x2328,
+  0x2388,
+  0x23cf,
+  0x24c2,
+  0x25b6,
+  0x25c0,
+  0x2714,
+  0x2716,
+  0x271d,
+  0x2721,
+  0x2728,
+  0x2744,
+  0x2747,
+  0x274c,
+  0x274e,
+  0x2757,
+  0x27a1,
+  0x27b0,
+  0x27bf,
+  0x2b50,
+  0x2b55,
+  0x3030,
+  0x303d,
+  0x3297,
+  0x3299,
+  0x1f12f,
+  0x1f18e,
+  0x1f21a,
+  0x1f22f,
 ]
-internal let _emoji_Extended_Pictographic = MultipleRanges<UInt32>(carefullySortedRanges: __array_Extended_Pictographic)
+private let __emoji_Extended_Pictographic_range_0: _T2 = 0x2194....0x2199
+private let __emoji_Extended_Pictographic_range_1: _T2 = 0x21a9....0x21aa
+private let __emoji_Extended_Pictographic_range_2: _T2 = 0x231a....0x231b
+private let __emoji_Extended_Pictographic_range_3: _T2 = 0x23e9....0x23f3
+private let __emoji_Extended_Pictographic_range_4: _T2 = 0x23f8....0x23fa
+private let __emoji_Extended_Pictographic_range_5: _T2 = 0x25aa....0x25ab
+private let __emoji_Extended_Pictographic_range_6: _T2 = 0x25fb....0x25fe
+private let __emoji_Extended_Pictographic_range_7: _T2 = 0x2600....0x2605
+private let __emoji_Extended_Pictographic_range_8: _T2 = 0x2607....0x2612
+private let __emoji_Extended_Pictographic_range_9: _T2 = 0x2614....0x2685
+private let __emoji_Extended_Pictographic_range_a: _T2 = 0x2690....0x2705
+private let __emoji_Extended_Pictographic_range_b: _T2 = 0x2708....0x2712
+private let __emoji_Extended_Pictographic_range_c: _T2 = 0x2733....0x2734
+private let __emoji_Extended_Pictographic_range_d: _T2 = 0x2753....0x2755
+private let __emoji_Extended_Pictographic_range_e: _T2 = 0x2763....0x2767
+private let __emoji_Extended_Pictographic_range_f: _T2 = 0x2795....0x2797
+private let __emoji_Extended_Pictographic_range_g: _T2 = 0x2934....0x2935
+private let __emoji_Extended_Pictographic_range_h: _T2 = 0x2b05....0x2b07
+private let __emoji_Extended_Pictographic_range_i: _T2 = 0x2b1b....0x2b1c
+private let __emoji_Extended_Pictographic_range_j: _T2 = 0x1f000....0x1f0ff
+private let __emoji_Extended_Pictographic_range_k: _T2 = 0x1f10d....0x1f10f
+private let __emoji_Extended_Pictographic_range_l: _T2 = 0x1f16c....0x1f171
+private let __emoji_Extended_Pictographic_range_m: _T2 = 0x1f17e....0x1f17f
+private let __emoji_Extended_Pictographic_range_n: _T2 = 0x1f191....0x1f19a
+private let __emoji_Extended_Pictographic_range_o: _T2 = 0x1f1ad....0x1f1e5
+private let __emoji_Extended_Pictographic_range_p: _T2 = 0x1f201....0x1f20f
+private let __emoji_Extended_Pictographic_range_q: _T2 = 0x1f232....0x1f23a
+private let __emoji_Extended_Pictographic_range_r: _T2 = 0x1f23c....0x1f23f
+private let __emoji_Extended_Pictographic_range_s: _T2 = 0x1f249....0x1f3fa
+private let __emoji_Extended_Pictographic_range_t: _T2 = 0x1f400....0x1f53d
+private let __emoji_Extended_Pictographic_range_u: _T2 = 0x1f546....0x1f64f
+private let __emoji_Extended_Pictographic_range_v: _T2 = 0x1f680....0x1f6ff
+private let __emoji_Extended_Pictographic_range_w: _T2 = 0x1f774....0x1f77f
+private let __emoji_Extended_Pictographic_range_x: _T2 = 0x1f7d5....0x1f7ff
+private let __emoji_Extended_Pictographic_range_y: _T2 = 0x1f80c....0x1f80f
+private let __emoji_Extended_Pictographic_range_z: _T2 = 0x1f848....0x1f84f
+private let __emoji_Extended_Pictographic_range_10: _T2 = 0x1f85a....0x1f85f
+private let __emoji_Extended_Pictographic_range_11: _T2 = 0x1f888....0x1f88f
+private let __emoji_Extended_Pictographic_range_12: _T2 = 0x1f8ae....0x1f8ff
+private let __emoji_Extended_Pictographic_range_13: _T2 = 0x1f90c....0x1f93a
+private let __emoji_Extended_Pictographic_range_14: _T2 = 0x1f93c....0x1f945
+private let __emoji_Extended_Pictographic_range_15: _T2 = 0x1f947....0x1fffd
+private let __emoji_Extended_Pictographic_array: _T3 = [
+  __emoji_Extended_Pictographic_range_0,
+  __emoji_Extended_Pictographic_range_1,
+  __emoji_Extended_Pictographic_range_2,
+  __emoji_Extended_Pictographic_range_3,
+  __emoji_Extended_Pictographic_range_4,
+  __emoji_Extended_Pictographic_range_5,
+  __emoji_Extended_Pictographic_range_6,
+  __emoji_Extended_Pictographic_range_7,
+  __emoji_Extended_Pictographic_range_8,
+  __emoji_Extended_Pictographic_range_9,
+  __emoji_Extended_Pictographic_range_a,
+  __emoji_Extended_Pictographic_range_b,
+  __emoji_Extended_Pictographic_range_c,
+  __emoji_Extended_Pictographic_range_d,
+  __emoji_Extended_Pictographic_range_e,
+  __emoji_Extended_Pictographic_range_f,
+  __emoji_Extended_Pictographic_range_g,
+  __emoji_Extended_Pictographic_range_h,
+  __emoji_Extended_Pictographic_range_i,
+  __emoji_Extended_Pictographic_range_j,
+  __emoji_Extended_Pictographic_range_k,
+  __emoji_Extended_Pictographic_range_l,
+  __emoji_Extended_Pictographic_range_m,
+  __emoji_Extended_Pictographic_range_n,
+  __emoji_Extended_Pictographic_range_o,
+  __emoji_Extended_Pictographic_range_p,
+  __emoji_Extended_Pictographic_range_q,
+  __emoji_Extended_Pictographic_range_r,
+  __emoji_Extended_Pictographic_range_s,
+  __emoji_Extended_Pictographic_range_t,
+  __emoji_Extended_Pictographic_range_u,
+  __emoji_Extended_Pictographic_range_v,
+  __emoji_Extended_Pictographic_range_w,
+  __emoji_Extended_Pictographic_range_x,
+  __emoji_Extended_Pictographic_range_y,
+  __emoji_Extended_Pictographic_range_z,
+  __emoji_Extended_Pictographic_range_10,
+  __emoji_Extended_Pictographic_range_11,
+  __emoji_Extended_Pictographic_range_12,
+  __emoji_Extended_Pictographic_range_13,
+  __emoji_Extended_Pictographic_range_14,
+  __emoji_Extended_Pictographic_range_15,
+]
+private let __emoji_Extended_Pictographic_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __emoji_Extended_Pictographic_array)
+internal let _emoji_Extended_Pictographic = UnicodeScalarValueSet(singleValues: __emoji_Extended_Pictographic_set, ranges: __emoji_Extended_Pictographic_ranges)
