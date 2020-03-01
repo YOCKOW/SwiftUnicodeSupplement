@@ -20,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -310,7 +310,43 @@ extension Unicode.CanonicalCombiningClass {
 
 /* ********************************************************************************************** */
 // Property: ea
-// * No converted code for ea.
+extension Unicode {
+  public enum EastAsianWidth {
+    case ambiguous
+    case fullwidth
+    case halfwidth
+    case neutral
+    case narrow
+    case wide
+  }
+}
+extension Unicode.EastAsianWidth {
+  /// Initialize with a name.
+  public init?<S>(_ name: S) where S: StringProtocol {
+    switch name {
+    case "Ambiguous": self = .ambiguous
+    case "Fullwidth": self = .fullwidth
+    case "Halfwidth": self = .halfwidth
+    case "Neutral": self = .neutral
+    case "Narrow": self = .narrow
+    case "Wide": self = .wide
+    default: return nil
+    }
+  }
+  
+  /// Initialize with a short name.
+  public init?<S>(abbreviated name: S) where S: StringProtocol {
+    switch name {
+    case "A": self = .ambiguous
+    case "F": self = .fullwidth
+    case "H": self = .halfwidth
+    case "N": self = .neutral
+    case "Na": self = .narrow
+    case "W": self = .wide
+    default: return nil
+    }
+  }
+}
 
 /* ********************************************************************************************** */
 // Property: Ext

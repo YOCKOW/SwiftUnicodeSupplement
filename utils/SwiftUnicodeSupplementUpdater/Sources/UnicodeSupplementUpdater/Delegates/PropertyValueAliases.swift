@@ -141,6 +141,49 @@ open class PropertyValueAliases: UCDCodeUpdaterDelegate {
     ])
   }
   
+  private func _convertEastAsianWidth(_ columns: [ArraySlice<String>]) throws -> StringLines {
+    let format = StringLines("""
+    extension Unicode {
+      public enum EastAsianWidth {
+        %%cases%%
+      }
+    }
+    extension Unicode.EastAsianWidth {
+      /// Initialize with a name.
+      public init?<S>(_ name: S) where S: StringProtocol {
+        switch name {
+        %%names%%
+        default: return nil
+        }
+      }
+      
+      /// Initialize with a short name.
+      public init?<S>(abbreviated name: S) where S: StringProtocol {
+        switch name {
+        %%short_names%%
+        default: return nil
+        }
+      }
+    }
+    """)
+    
+    return try format._formatted([
+      "cases": {
+        return StringLines(columns.map({ "case \($0[_relativeIndex: 1].lowerCamelCase)" }))
+      },
+      "names": {
+        return StringLines(columns.map({
+          "case \"\($0[_relativeIndex: 1])\": self = .\($0[_relativeIndex: 1].lowerCamelCase)"
+        }))
+      },
+      "short_names": {
+        return StringLines(columns.map({
+          "case \"\($0[_relativeIndex: 0])\": self = .\($0[_relativeIndex: 1].lowerCamelCase)"
+        }))
+      },
+    ])
+  }
+  
   private func _convertGeneralCategory(_ columns: [ArraySlice<String>]) throws -> StringLines {
     let format = StringLines("""
     extension Unicode.GeneralCategory {
@@ -330,6 +373,7 @@ open class PropertyValueAliases: UCDCodeUpdaterDelegate {
     let converters: [String: ([ArraySlice<String>]) throws -> StringLines] = [
       "bc": _convertBidiClass,
       "ccc": _convertCanonicalCombiningClass,
+      "ea": _convertEastAsianWidth,
       "gc": _convertGeneralCategory,
       "jg": _convertJoiningGroup,
       "jt": _convertJoiningType,

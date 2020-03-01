@@ -101,8 +101,16 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
   
   func test_propertyValueAliases() throws {
     try _assert(delegate: PropertyValueAliases(), expectedLines: [
+      // Bidi Class
       "case \"L\": self = .leftToRight",
+      
+      // East Asian Width
+      "case \"Na\": self = .narrow",
+      
+      // Joining Group
       "public static let hamzaOnHehGoal: JoiningGroup = .tehMarbutaGoal",
+      
+      // Script
       "case \"Qaai\": self = .inherited // alias",
       "case \"Zinh\": self = .inherited",
     ])
