@@ -15,7 +15,7 @@ let package = Package(
     .package(url: "https://github.com/YOCKOW/SwiftBonaFideCharacterSet.git", from: "1.6.1"),
     .package(url: "https://github.com/YOCKOW/SwiftRanges.git", from: "3.0.2"),
     .package(url: "https://github.com/YOCKOW/SwiftStringComposition.git", from: "1.1.0-beta.002"),
-    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", from: "0.7.0-alpha.002"),
+    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", from: "0.7.0"),
     .package(url: "https://github.com/YOCKOW/ySwiftCodeUpdater.git", from: "1.1.0"),
     .package(url: "https://github.com/YOCKOW/ySwiftExtensions.git", from: "0.8.1"),
   ],
