@@ -1,4 +1,18 @@
 #!/bin/sh
 
 directory=$(cd "$(dirname "$0")" && pwd)
-swift run --package-path "${directory}/SwiftUnicodeSupplementUpdater" Updater "$@"
+package_path="${directory}/SwiftUnicodeSupplementUpdater"
+build_path="${directory}/../.build"
+build_config="--package-path \"${package_path}\" --build-path \"${build_path}\""
+
+cmd="exit 1"
+
+if [ "$1" = "--build" ] || [ "$1" = "-b" ]; then
+  cmd="swift build ${build_config}"
+elif [ "$1" = "--test" ] || [ "$1" = "-t" ]; then
+  cmd="swift test ${build_config}"
+else
+  cmd="swift run ${build_config} Updater $@"
+fi
+
+eval $cmd

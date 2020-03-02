@@ -58,20 +58,14 @@ jobs:
 
   test-updater:
     runs-on: macOS-latest
-    env:
-      UPDATER_PACKAGE_ROOT: utils/SwiftUnicodeSupplementUpdater
     steps:
     - uses: actions/checkout@v2
     - name: Use a cache for ".build" directory.
-      env:
-        UPDATER_PACKAGE_MANIFEST: ${{ env.UPDATER_PACKAGE_ROOT }}/Package.*
-        UPDATER_PACKAGE_SOURCES: ${{ env.UPDATER_PACKAGE_ROOT }}/Sources/**/*.swift
       uses: actions/cache@v1
       with:
         path: .build
-        key: build-${{ github.workspace }}-${{ runner.os }}-${{ hashFiles(env.UPDATER_PACKAGE_MANIFEST) }}-${{ hashFiles(env.UPDATER_PACKAGE_SOURCES) }}
+        key: build-${{ github.workspace }}-${{ runner.os }}-${{ hashFiles('utils/**/*.swift') }}
         restore-keys: |
-          build-${{ github.workspace }}-${{ runner.os }}-${{ hashFiles(env.UPDATER_PACKAGE_MANIFEST) }}-
           build-${{ github.workspace }}-${{ runner.os }}-
           build-${{ github.workspace }}-
     - uses: YOCKOW/Action-setup-swift@master
@@ -79,11 +73,11 @@ jobs:
         swift-version: '5.1.3'
     - name: Try to build products with debug mode.
       run: |
-        swift build --configuration debug --build-path .build --package-path $UPDATER_PACKAGE_ROOT
+        ./utils/update --build
         if [ $? != 0 ]; then
           echo "Failed to build products with debug mode."
           rm -rf $(cd .build/debug && pwd -P)
         fi
       continue-on-error: true
     - name: Test with debug mode.
-      run: swift test --configuration debug --build-path .build --package-path $UPDATER_PACKAGE_ROOT
+      run: ./utils/update --test
