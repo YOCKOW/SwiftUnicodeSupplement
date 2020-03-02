@@ -9,6 +9,7 @@
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
+  
   See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
   Data Files and Software.
   NOTICE TO USER: Carefully read the following legal agreement.
@@ -19,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -52,1806 +53,1809 @@
 // Required Modules
 import Ranges
 
-
 // Type Aliases
-private typealias _T0 = (AnyRange<UInt32>, Unicode.Script)
-private typealias _T1 = Array<_T0>
+private typealias _T0 = Unicode.Script
+private typealias _T1 = (Unicode.Scalar.Value, _T0)
+private typealias _T2 = (AnyRange<UInt32>, _T0)
+private typealias _T3 = Array<_T2>
 
-
-private let __pair_sc_0: _T0 = (0x0....0x40, .common)
-private let __pair_sc_1: _T0 = (0x41....0x5a, .latin)
-private let __pair_sc_2: _T0 = (0x5b....0x60, .common)
-private let __pair_sc_3: _T0 = (0x61....0x7a, .latin)
-private let __pair_sc_4: _T0 = (0x7b....0xa9, .common)
-private let __pair_sc_5: _T0 = (0xaa....0xaa, .latin)
-private let __pair_sc_6: _T0 = (0xab....0xb9, .common)
-private let __pair_sc_7: _T0 = (0xba....0xba, .latin)
-private let __pair_sc_8: _T0 = (0xbb....0xbf, .common)
-private let __pair_sc_9: _T0 = (0xc0....0xd6, .latin)
-private let __pair_sc_a: _T0 = (0xd7....0xd7, .common)
-private let __pair_sc_b: _T0 = (0xd8....0xf6, .latin)
-private let __pair_sc_c: _T0 = (0xf7....0xf7, .common)
-private let __pair_sc_d: _T0 = (0xf8....0x2b8, .latin)
-private let __pair_sc_e: _T0 = (0x2b9....0x2df, .common)
-private let __pair_sc_f: _T0 = (0x2e0....0x2e4, .latin)
-private let __pair_sc_g: _T0 = (0x2e5....0x2e9, .common)
-private let __pair_sc_h: _T0 = (0x2ea....0x2eb, .bopomofo)
-private let __pair_sc_i: _T0 = (0x2ec....0x2ff, .common)
-private let __pair_sc_j: _T0 = (0x300....0x36f, .inherited)
-private let __pair_sc_k: _T0 = (0x370....0x373, .greek)
-private let __pair_sc_l: _T0 = (0x374....0x374, .common)
-private let __pair_sc_m: _T0 = (0x375....0x377, .greek)
-private let __pair_sc_n: _T0 = (0x37a....0x37d, .greek)
-private let __pair_sc_o: _T0 = (0x37e....0x37e, .common)
-private let __pair_sc_p: _T0 = (0x37f....0x37f, .greek)
-private let __pair_sc_q: _T0 = (0x384....0x384, .greek)
-private let __pair_sc_r: _T0 = (0x385....0x385, .common)
-private let __pair_sc_s: _T0 = (0x386....0x386, .greek)
-private let __pair_sc_t: _T0 = (0x387....0x387, .common)
-private let __pair_sc_u: _T0 = (0x388....0x38a, .greek)
-private let __pair_sc_v: _T0 = (0x38c....0x38c, .greek)
-private let __pair_sc_w: _T0 = (0x38e....0x3a1, .greek)
-private let __pair_sc_x: _T0 = (0x3a3....0x3e1, .greek)
-private let __pair_sc_y: _T0 = (0x3e2....0x3ef, .coptic)
-private let __pair_sc_z: _T0 = (0x3f0....0x3ff, .greek)
-private let __pair_sc_10: _T0 = (0x400....0x484, .cyrillic)
-private let __pair_sc_11: _T0 = (0x485....0x486, .inherited)
-private let __pair_sc_12: _T0 = (0x487....0x52f, .cyrillic)
-private let __pair_sc_13: _T0 = (0x531....0x556, .armenian)
-private let __pair_sc_14: _T0 = (0x559....0x588, .armenian)
-private let __pair_sc_15: _T0 = (0x589....0x589, .common)
-private let __pair_sc_16: _T0 = (0x58a....0x58a, .armenian)
-private let __pair_sc_17: _T0 = (0x58d....0x58f, .armenian)
-private let __pair_sc_18: _T0 = (0x591....0x5c7, .hebrew)
-private let __pair_sc_19: _T0 = (0x5d0....0x5ea, .hebrew)
-private let __pair_sc_1a: _T0 = (0x5ef....0x5f4, .hebrew)
-private let __pair_sc_1b: _T0 = (0x600....0x604, .arabic)
-private let __pair_sc_1c: _T0 = (0x605....0x605, .common)
-private let __pair_sc_1d: _T0 = (0x606....0x60b, .arabic)
-private let __pair_sc_1e: _T0 = (0x60c....0x60c, .common)
-private let __pair_sc_1f: _T0 = (0x60d....0x61a, .arabic)
-private let __pair_sc_1g: _T0 = (0x61b....0x61b, .common)
-private let __pair_sc_1h: _T0 = (0x61c....0x61c, .arabic)
-private let __pair_sc_1i: _T0 = (0x61e....0x61e, .arabic)
-private let __pair_sc_1j: _T0 = (0x61f....0x61f, .common)
-private let __pair_sc_1k: _T0 = (0x620....0x63f, .arabic)
-private let __pair_sc_1l: _T0 = (0x640....0x640, .common)
-private let __pair_sc_1m: _T0 = (0x641....0x64a, .arabic)
-private let __pair_sc_1n: _T0 = (0x64b....0x655, .inherited)
-private let __pair_sc_1o: _T0 = (0x656....0x66f, .arabic)
-private let __pair_sc_1p: _T0 = (0x670....0x670, .inherited)
-private let __pair_sc_1q: _T0 = (0x671....0x6dc, .arabic)
-private let __pair_sc_1r: _T0 = (0x6dd....0x6dd, .common)
-private let __pair_sc_1s: _T0 = (0x6de....0x6ff, .arabic)
-private let __pair_sc_1t: _T0 = (0x700....0x70d, .syriac)
-private let __pair_sc_1u: _T0 = (0x70f....0x74a, .syriac)
-private let __pair_sc_1v: _T0 = (0x74d....0x74f, .syriac)
-private let __pair_sc_1w: _T0 = (0x750....0x77f, .arabic)
-private let __pair_sc_1x: _T0 = (0x780....0x7b1, .thaana)
-private let __pair_sc_1y: _T0 = (0x7c0....0x7fa, .nko)
-private let __pair_sc_1z: _T0 = (0x7fd....0x7ff, .nko)
-private let __pair_sc_20: _T0 = (0x800....0x82d, .samaritan)
-private let __pair_sc_21: _T0 = (0x830....0x83e, .samaritan)
-private let __pair_sc_22: _T0 = (0x840....0x85b, .mandaic)
-private let __pair_sc_23: _T0 = (0x85e....0x85e, .mandaic)
-private let __pair_sc_24: _T0 = (0x860....0x86a, .syriac)
-private let __pair_sc_25: _T0 = (0x8a0....0x8b4, .arabic)
-private let __pair_sc_26: _T0 = (0x8b6....0x8bd, .arabic)
-private let __pair_sc_27: _T0 = (0x8d3....0x8e1, .arabic)
-private let __pair_sc_28: _T0 = (0x8e2....0x8e2, .common)
-private let __pair_sc_29: _T0 = (0x8e3....0x8ff, .arabic)
-private let __pair_sc_2a: _T0 = (0x900....0x950, .devanagari)
-private let __pair_sc_2b: _T0 = (0x951....0x954, .inherited)
-private let __pair_sc_2c: _T0 = (0x955....0x963, .devanagari)
-private let __pair_sc_2d: _T0 = (0x964....0x965, .common)
-private let __pair_sc_2e: _T0 = (0x966....0x97f, .devanagari)
-private let __pair_sc_2f: _T0 = (0x980....0x983, .bengali)
-private let __pair_sc_2g: _T0 = (0x985....0x98c, .bengali)
-private let __pair_sc_2h: _T0 = (0x98f....0x990, .bengali)
-private let __pair_sc_2i: _T0 = (0x993....0x9a8, .bengali)
-private let __pair_sc_2j: _T0 = (0x9aa....0x9b0, .bengali)
-private let __pair_sc_2k: _T0 = (0x9b2....0x9b2, .bengali)
-private let __pair_sc_2l: _T0 = (0x9b6....0x9b9, .bengali)
-private let __pair_sc_2m: _T0 = (0x9bc....0x9c4, .bengali)
-private let __pair_sc_2n: _T0 = (0x9c7....0x9c8, .bengali)
-private let __pair_sc_2o: _T0 = (0x9cb....0x9ce, .bengali)
-private let __pair_sc_2p: _T0 = (0x9d7....0x9d7, .bengali)
-private let __pair_sc_2q: _T0 = (0x9dc....0x9dd, .bengali)
-private let __pair_sc_2r: _T0 = (0x9df....0x9e3, .bengali)
-private let __pair_sc_2s: _T0 = (0x9e6....0x9fe, .bengali)
-private let __pair_sc_2t: _T0 = (0xa01....0xa03, .gurmukhi)
-private let __pair_sc_2u: _T0 = (0xa05....0xa0a, .gurmukhi)
-private let __pair_sc_2v: _T0 = (0xa0f....0xa10, .gurmukhi)
-private let __pair_sc_2w: _T0 = (0xa13....0xa28, .gurmukhi)
-private let __pair_sc_2x: _T0 = (0xa2a....0xa30, .gurmukhi)
-private let __pair_sc_2y: _T0 = (0xa32....0xa33, .gurmukhi)
-private let __pair_sc_2z: _T0 = (0xa35....0xa36, .gurmukhi)
-private let __pair_sc_30: _T0 = (0xa38....0xa39, .gurmukhi)
-private let __pair_sc_31: _T0 = (0xa3c....0xa3c, .gurmukhi)
-private let __pair_sc_32: _T0 = (0xa3e....0xa42, .gurmukhi)
-private let __pair_sc_33: _T0 = (0xa47....0xa48, .gurmukhi)
-private let __pair_sc_34: _T0 = (0xa4b....0xa4d, .gurmukhi)
-private let __pair_sc_35: _T0 = (0xa51....0xa51, .gurmukhi)
-private let __pair_sc_36: _T0 = (0xa59....0xa5c, .gurmukhi)
-private let __pair_sc_37: _T0 = (0xa5e....0xa5e, .gurmukhi)
-private let __pair_sc_38: _T0 = (0xa66....0xa76, .gurmukhi)
-private let __pair_sc_39: _T0 = (0xa81....0xa83, .gujarati)
-private let __pair_sc_3a: _T0 = (0xa85....0xa8d, .gujarati)
-private let __pair_sc_3b: _T0 = (0xa8f....0xa91, .gujarati)
-private let __pair_sc_3c: _T0 = (0xa93....0xaa8, .gujarati)
-private let __pair_sc_3d: _T0 = (0xaaa....0xab0, .gujarati)
-private let __pair_sc_3e: _T0 = (0xab2....0xab3, .gujarati)
-private let __pair_sc_3f: _T0 = (0xab5....0xab9, .gujarati)
-private let __pair_sc_3g: _T0 = (0xabc....0xac5, .gujarati)
-private let __pair_sc_3h: _T0 = (0xac7....0xac9, .gujarati)
-private let __pair_sc_3i: _T0 = (0xacb....0xacd, .gujarati)
-private let __pair_sc_3j: _T0 = (0xad0....0xad0, .gujarati)
-private let __pair_sc_3k: _T0 = (0xae0....0xae3, .gujarati)
-private let __pair_sc_3l: _T0 = (0xae6....0xaf1, .gujarati)
-private let __pair_sc_3m: _T0 = (0xaf9....0xaff, .gujarati)
-private let __pair_sc_3n: _T0 = (0xb01....0xb03, .oriya)
-private let __pair_sc_3o: _T0 = (0xb05....0xb0c, .oriya)
-private let __pair_sc_3p: _T0 = (0xb0f....0xb10, .oriya)
-private let __pair_sc_3q: _T0 = (0xb13....0xb28, .oriya)
-private let __pair_sc_3r: _T0 = (0xb2a....0xb30, .oriya)
-private let __pair_sc_3s: _T0 = (0xb32....0xb33, .oriya)
-private let __pair_sc_3t: _T0 = (0xb35....0xb39, .oriya)
-private let __pair_sc_3u: _T0 = (0xb3c....0xb44, .oriya)
-private let __pair_sc_3v: _T0 = (0xb47....0xb48, .oriya)
-private let __pair_sc_3w: _T0 = (0xb4b....0xb4d, .oriya)
-private let __pair_sc_3x: _T0 = (0xb56....0xb57, .oriya)
-private let __pair_sc_3y: _T0 = (0xb5c....0xb5d, .oriya)
-private let __pair_sc_3z: _T0 = (0xb5f....0xb63, .oriya)
-private let __pair_sc_40: _T0 = (0xb66....0xb77, .oriya)
-private let __pair_sc_41: _T0 = (0xb82....0xb83, .tamil)
-private let __pair_sc_42: _T0 = (0xb85....0xb8a, .tamil)
-private let __pair_sc_43: _T0 = (0xb8e....0xb90, .tamil)
-private let __pair_sc_44: _T0 = (0xb92....0xb95, .tamil)
-private let __pair_sc_45: _T0 = (0xb99....0xb9a, .tamil)
-private let __pair_sc_46: _T0 = (0xb9c....0xb9c, .tamil)
-private let __pair_sc_47: _T0 = (0xb9e....0xb9f, .tamil)
-private let __pair_sc_48: _T0 = (0xba3....0xba4, .tamil)
-private let __pair_sc_49: _T0 = (0xba8....0xbaa, .tamil)
-private let __pair_sc_4a: _T0 = (0xbae....0xbb9, .tamil)
-private let __pair_sc_4b: _T0 = (0xbbe....0xbc2, .tamil)
-private let __pair_sc_4c: _T0 = (0xbc6....0xbc8, .tamil)
-private let __pair_sc_4d: _T0 = (0xbca....0xbcd, .tamil)
-private let __pair_sc_4e: _T0 = (0xbd0....0xbd0, .tamil)
-private let __pair_sc_4f: _T0 = (0xbd7....0xbd7, .tamil)
-private let __pair_sc_4g: _T0 = (0xbe6....0xbfa, .tamil)
-private let __pair_sc_4h: _T0 = (0xc00....0xc0c, .telugu)
-private let __pair_sc_4i: _T0 = (0xc0e....0xc10, .telugu)
-private let __pair_sc_4j: _T0 = (0xc12....0xc28, .telugu)
-private let __pair_sc_4k: _T0 = (0xc2a....0xc39, .telugu)
-private let __pair_sc_4l: _T0 = (0xc3d....0xc44, .telugu)
-private let __pair_sc_4m: _T0 = (0xc46....0xc48, .telugu)
-private let __pair_sc_4n: _T0 = (0xc4a....0xc4d, .telugu)
-private let __pair_sc_4o: _T0 = (0xc55....0xc56, .telugu)
-private let __pair_sc_4p: _T0 = (0xc58....0xc5a, .telugu)
-private let __pair_sc_4q: _T0 = (0xc60....0xc63, .telugu)
-private let __pair_sc_4r: _T0 = (0xc66....0xc6f, .telugu)
-private let __pair_sc_4s: _T0 = (0xc77....0xc7f, .telugu)
-private let __pair_sc_4t: _T0 = (0xc80....0xc8c, .kannada)
-private let __pair_sc_4u: _T0 = (0xc8e....0xc90, .kannada)
-private let __pair_sc_4v: _T0 = (0xc92....0xca8, .kannada)
-private let __pair_sc_4w: _T0 = (0xcaa....0xcb3, .kannada)
-private let __pair_sc_4x: _T0 = (0xcb5....0xcb9, .kannada)
-private let __pair_sc_4y: _T0 = (0xcbc....0xcc4, .kannada)
-private let __pair_sc_4z: _T0 = (0xcc6....0xcc8, .kannada)
-private let __pair_sc_50: _T0 = (0xcca....0xccd, .kannada)
-private let __pair_sc_51: _T0 = (0xcd5....0xcd6, .kannada)
-private let __pair_sc_52: _T0 = (0xcde....0xcde, .kannada)
-private let __pair_sc_53: _T0 = (0xce0....0xce3, .kannada)
-private let __pair_sc_54: _T0 = (0xce6....0xcef, .kannada)
-private let __pair_sc_55: _T0 = (0xcf1....0xcf2, .kannada)
-private let __pair_sc_56: _T0 = (0xd00....0xd03, .malayalam)
-private let __pair_sc_57: _T0 = (0xd05....0xd0c, .malayalam)
-private let __pair_sc_58: _T0 = (0xd0e....0xd10, .malayalam)
-private let __pair_sc_59: _T0 = (0xd12....0xd44, .malayalam)
-private let __pair_sc_5a: _T0 = (0xd46....0xd48, .malayalam)
-private let __pair_sc_5b: _T0 = (0xd4a....0xd4f, .malayalam)
-private let __pair_sc_5c: _T0 = (0xd54....0xd63, .malayalam)
-private let __pair_sc_5d: _T0 = (0xd66....0xd7f, .malayalam)
-private let __pair_sc_5e: _T0 = (0xd82....0xd83, .sinhala)
-private let __pair_sc_5f: _T0 = (0xd85....0xd96, .sinhala)
-private let __pair_sc_5g: _T0 = (0xd9a....0xdb1, .sinhala)
-private let __pair_sc_5h: _T0 = (0xdb3....0xdbb, .sinhala)
-private let __pair_sc_5i: _T0 = (0xdbd....0xdbd, .sinhala)
-private let __pair_sc_5j: _T0 = (0xdc0....0xdc6, .sinhala)
-private let __pair_sc_5k: _T0 = (0xdca....0xdca, .sinhala)
-private let __pair_sc_5l: _T0 = (0xdcf....0xdd4, .sinhala)
-private let __pair_sc_5m: _T0 = (0xdd6....0xdd6, .sinhala)
-private let __pair_sc_5n: _T0 = (0xdd8....0xddf, .sinhala)
-private let __pair_sc_5o: _T0 = (0xde6....0xdef, .sinhala)
-private let __pair_sc_5p: _T0 = (0xdf2....0xdf4, .sinhala)
-private let __pair_sc_5q: _T0 = (0xe01....0xe3a, .thai)
-private let __pair_sc_5r: _T0 = (0xe3f....0xe3f, .common)
-private let __pair_sc_5s: _T0 = (0xe40....0xe5b, .thai)
-private let __pair_sc_5t: _T0 = (0xe81....0xe82, .lao)
-private let __pair_sc_5u: _T0 = (0xe84....0xe84, .lao)
-private let __pair_sc_5v: _T0 = (0xe86....0xe8a, .lao)
-private let __pair_sc_5w: _T0 = (0xe8c....0xea3, .lao)
-private let __pair_sc_5x: _T0 = (0xea5....0xea5, .lao)
-private let __pair_sc_5y: _T0 = (0xea7....0xebd, .lao)
-private let __pair_sc_5z: _T0 = (0xec0....0xec4, .lao)
-private let __pair_sc_60: _T0 = (0xec6....0xec6, .lao)
-private let __pair_sc_61: _T0 = (0xec8....0xecd, .lao)
-private let __pair_sc_62: _T0 = (0xed0....0xed9, .lao)
-private let __pair_sc_63: _T0 = (0xedc....0xedf, .lao)
-private let __pair_sc_64: _T0 = (0xf00....0xf47, .tibetan)
-private let __pair_sc_65: _T0 = (0xf49....0xf6c, .tibetan)
-private let __pair_sc_66: _T0 = (0xf71....0xf97, .tibetan)
-private let __pair_sc_67: _T0 = (0xf99....0xfbc, .tibetan)
-private let __pair_sc_68: _T0 = (0xfbe....0xfcc, .tibetan)
-private let __pair_sc_69: _T0 = (0xfce....0xfd4, .tibetan)
-private let __pair_sc_6a: _T0 = (0xfd5....0xfd8, .common)
-private let __pair_sc_6b: _T0 = (0xfd9....0xfda, .tibetan)
-private let __pair_sc_6c: _T0 = (0x1000....0x109f, .myanmar)
-private let __pair_sc_6d: _T0 = (0x10a0....0x10c5, .georgian)
-private let __pair_sc_6e: _T0 = (0x10c7....0x10c7, .georgian)
-private let __pair_sc_6f: _T0 = (0x10cd....0x10cd, .georgian)
-private let __pair_sc_6g: _T0 = (0x10d0....0x10fa, .georgian)
-private let __pair_sc_6h: _T0 = (0x10fb....0x10fb, .common)
-private let __pair_sc_6i: _T0 = (0x10fc....0x10ff, .georgian)
-private let __pair_sc_6j: _T0 = (0x1100....0x11ff, .hangul)
-private let __pair_sc_6k: _T0 = (0x1200....0x1248, .ethiopic)
-private let __pair_sc_6l: _T0 = (0x124a....0x124d, .ethiopic)
-private let __pair_sc_6m: _T0 = (0x1250....0x1256, .ethiopic)
-private let __pair_sc_6n: _T0 = (0x1258....0x1258, .ethiopic)
-private let __pair_sc_6o: _T0 = (0x125a....0x125d, .ethiopic)
-private let __pair_sc_6p: _T0 = (0x1260....0x1288, .ethiopic)
-private let __pair_sc_6q: _T0 = (0x128a....0x128d, .ethiopic)
-private let __pair_sc_6r: _T0 = (0x1290....0x12b0, .ethiopic)
-private let __pair_sc_6s: _T0 = (0x12b2....0x12b5, .ethiopic)
-private let __pair_sc_6t: _T0 = (0x12b8....0x12be, .ethiopic)
-private let __pair_sc_6u: _T0 = (0x12c0....0x12c0, .ethiopic)
-private let __pair_sc_6v: _T0 = (0x12c2....0x12c5, .ethiopic)
-private let __pair_sc_6w: _T0 = (0x12c8....0x12d6, .ethiopic)
-private let __pair_sc_6x: _T0 = (0x12d8....0x1310, .ethiopic)
-private let __pair_sc_6y: _T0 = (0x1312....0x1315, .ethiopic)
-private let __pair_sc_6z: _T0 = (0x1318....0x135a, .ethiopic)
-private let __pair_sc_70: _T0 = (0x135d....0x137c, .ethiopic)
-private let __pair_sc_71: _T0 = (0x1380....0x1399, .ethiopic)
-private let __pair_sc_72: _T0 = (0x13a0....0x13f5, .cherokee)
-private let __pair_sc_73: _T0 = (0x13f8....0x13fd, .cherokee)
-private let __pair_sc_74: _T0 = (0x1400....0x167f, .canadianAboriginal)
-private let __pair_sc_75: _T0 = (0x1680....0x169c, .ogham)
-private let __pair_sc_76: _T0 = (0x16a0....0x16ea, .runic)
-private let __pair_sc_77: _T0 = (0x16eb....0x16ed, .common)
-private let __pair_sc_78: _T0 = (0x16ee....0x16f8, .runic)
-private let __pair_sc_79: _T0 = (0x1700....0x170c, .tagalog)
-private let __pair_sc_7a: _T0 = (0x170e....0x1714, .tagalog)
-private let __pair_sc_7b: _T0 = (0x1720....0x1734, .hanunoo)
-private let __pair_sc_7c: _T0 = (0x1735....0x1736, .common)
-private let __pair_sc_7d: _T0 = (0x1740....0x1753, .buhid)
-private let __pair_sc_7e: _T0 = (0x1760....0x176c, .tagbanwa)
-private let __pair_sc_7f: _T0 = (0x176e....0x1770, .tagbanwa)
-private let __pair_sc_7g: _T0 = (0x1772....0x1773, .tagbanwa)
-private let __pair_sc_7h: _T0 = (0x1780....0x17dd, .khmer)
-private let __pair_sc_7i: _T0 = (0x17e0....0x17e9, .khmer)
-private let __pair_sc_7j: _T0 = (0x17f0....0x17f9, .khmer)
-private let __pair_sc_7k: _T0 = (0x1800....0x1801, .mongolian)
-private let __pair_sc_7l: _T0 = (0x1802....0x1803, .common)
-private let __pair_sc_7m: _T0 = (0x1804....0x1804, .mongolian)
-private let __pair_sc_7n: _T0 = (0x1805....0x1805, .common)
-private let __pair_sc_7o: _T0 = (0x1806....0x180e, .mongolian)
-private let __pair_sc_7p: _T0 = (0x1810....0x1819, .mongolian)
-private let __pair_sc_7q: _T0 = (0x1820....0x1878, .mongolian)
-private let __pair_sc_7r: _T0 = (0x1880....0x18aa, .mongolian)
-private let __pair_sc_7s: _T0 = (0x18b0....0x18f5, .canadianAboriginal)
-private let __pair_sc_7t: _T0 = (0x1900....0x191e, .limbu)
-private let __pair_sc_7u: _T0 = (0x1920....0x192b, .limbu)
-private let __pair_sc_7v: _T0 = (0x1930....0x193b, .limbu)
-private let __pair_sc_7w: _T0 = (0x1940....0x1940, .limbu)
-private let __pair_sc_7x: _T0 = (0x1944....0x194f, .limbu)
-private let __pair_sc_7y: _T0 = (0x1950....0x196d, .taiLe)
-private let __pair_sc_7z: _T0 = (0x1970....0x1974, .taiLe)
-private let __pair_sc_80: _T0 = (0x1980....0x19ab, .newTaiLue)
-private let __pair_sc_81: _T0 = (0x19b0....0x19c9, .newTaiLue)
-private let __pair_sc_82: _T0 = (0x19d0....0x19da, .newTaiLue)
-private let __pair_sc_83: _T0 = (0x19de....0x19df, .newTaiLue)
-private let __pair_sc_84: _T0 = (0x19e0....0x19ff, .khmer)
-private let __pair_sc_85: _T0 = (0x1a00....0x1a1b, .buginese)
-private let __pair_sc_86: _T0 = (0x1a1e....0x1a1f, .buginese)
-private let __pair_sc_87: _T0 = (0x1a20....0x1a5e, .taiTham)
-private let __pair_sc_88: _T0 = (0x1a60....0x1a7c, .taiTham)
-private let __pair_sc_89: _T0 = (0x1a7f....0x1a89, .taiTham)
-private let __pair_sc_8a: _T0 = (0x1a90....0x1a99, .taiTham)
-private let __pair_sc_8b: _T0 = (0x1aa0....0x1aad, .taiTham)
-private let __pair_sc_8c: _T0 = (0x1ab0....0x1abe, .inherited)
-private let __pair_sc_8d: _T0 = (0x1b00....0x1b4b, .balinese)
-private let __pair_sc_8e: _T0 = (0x1b50....0x1b7c, .balinese)
-private let __pair_sc_8f: _T0 = (0x1b80....0x1bbf, .sundanese)
-private let __pair_sc_8g: _T0 = (0x1bc0....0x1bf3, .batak)
-private let __pair_sc_8h: _T0 = (0x1bfc....0x1bff, .batak)
-private let __pair_sc_8i: _T0 = (0x1c00....0x1c37, .lepcha)
-private let __pair_sc_8j: _T0 = (0x1c3b....0x1c49, .lepcha)
-private let __pair_sc_8k: _T0 = (0x1c4d....0x1c4f, .lepcha)
-private let __pair_sc_8l: _T0 = (0x1c50....0x1c7f, .olChiki)
-private let __pair_sc_8m: _T0 = (0x1c80....0x1c88, .cyrillic)
-private let __pair_sc_8n: _T0 = (0x1c90....0x1cba, .georgian)
-private let __pair_sc_8o: _T0 = (0x1cbd....0x1cbf, .georgian)
-private let __pair_sc_8p: _T0 = (0x1cc0....0x1cc7, .sundanese)
-private let __pair_sc_8q: _T0 = (0x1cd0....0x1cd2, .inherited)
-private let __pair_sc_8r: _T0 = (0x1cd3....0x1cd3, .common)
-private let __pair_sc_8s: _T0 = (0x1cd4....0x1ce0, .inherited)
-private let __pair_sc_8t: _T0 = (0x1ce1....0x1ce1, .common)
-private let __pair_sc_8u: _T0 = (0x1ce2....0x1ce8, .inherited)
-private let __pair_sc_8v: _T0 = (0x1ce9....0x1cec, .common)
-private let __pair_sc_8w: _T0 = (0x1ced....0x1ced, .inherited)
-private let __pair_sc_8x: _T0 = (0x1cee....0x1cf3, .common)
-private let __pair_sc_8y: _T0 = (0x1cf4....0x1cf4, .inherited)
-private let __pair_sc_8z: _T0 = (0x1cf5....0x1cf7, .common)
-private let __pair_sc_90: _T0 = (0x1cf8....0x1cf9, .inherited)
-private let __pair_sc_91: _T0 = (0x1cfa....0x1cfa, .common)
-private let __pair_sc_92: _T0 = (0x1d00....0x1d25, .latin)
-private let __pair_sc_93: _T0 = (0x1d26....0x1d2a, .greek)
-private let __pair_sc_94: _T0 = (0x1d2b....0x1d2b, .cyrillic)
-private let __pair_sc_95: _T0 = (0x1d2c....0x1d5c, .latin)
-private let __pair_sc_96: _T0 = (0x1d5d....0x1d61, .greek)
-private let __pair_sc_97: _T0 = (0x1d62....0x1d65, .latin)
-private let __pair_sc_98: _T0 = (0x1d66....0x1d6a, .greek)
-private let __pair_sc_99: _T0 = (0x1d6b....0x1d77, .latin)
-private let __pair_sc_9a: _T0 = (0x1d78....0x1d78, .cyrillic)
-private let __pair_sc_9b: _T0 = (0x1d79....0x1dbe, .latin)
-private let __pair_sc_9c: _T0 = (0x1dbf....0x1dbf, .greek)
-private let __pair_sc_9d: _T0 = (0x1dc0....0x1df9, .inherited)
-private let __pair_sc_9e: _T0 = (0x1dfb....0x1dff, .inherited)
-private let __pair_sc_9f: _T0 = (0x1e00....0x1eff, .latin)
-private let __pair_sc_9g: _T0 = (0x1f00....0x1f15, .greek)
-private let __pair_sc_9h: _T0 = (0x1f18....0x1f1d, .greek)
-private let __pair_sc_9i: _T0 = (0x1f20....0x1f45, .greek)
-private let __pair_sc_9j: _T0 = (0x1f48....0x1f4d, .greek)
-private let __pair_sc_9k: _T0 = (0x1f50....0x1f57, .greek)
-private let __pair_sc_9l: _T0 = (0x1f59....0x1f59, .greek)
-private let __pair_sc_9m: _T0 = (0x1f5b....0x1f5b, .greek)
-private let __pair_sc_9n: _T0 = (0x1f5d....0x1f5d, .greek)
-private let __pair_sc_9o: _T0 = (0x1f5f....0x1f7d, .greek)
-private let __pair_sc_9p: _T0 = (0x1f80....0x1fb4, .greek)
-private let __pair_sc_9q: _T0 = (0x1fb6....0x1fc4, .greek)
-private let __pair_sc_9r: _T0 = (0x1fc6....0x1fd3, .greek)
-private let __pair_sc_9s: _T0 = (0x1fd6....0x1fdb, .greek)
-private let __pair_sc_9t: _T0 = (0x1fdd....0x1fef, .greek)
-private let __pair_sc_9u: _T0 = (0x1ff2....0x1ff4, .greek)
-private let __pair_sc_9v: _T0 = (0x1ff6....0x1ffe, .greek)
-private let __pair_sc_9w: _T0 = (0x2000....0x200b, .common)
-private let __pair_sc_9x: _T0 = (0x200c....0x200d, .inherited)
-private let __pair_sc_9y: _T0 = (0x200e....0x2064, .common)
-private let __pair_sc_9z: _T0 = (0x2066....0x2070, .common)
-private let __pair_sc_a0: _T0 = (0x2071....0x2071, .latin)
-private let __pair_sc_a1: _T0 = (0x2074....0x207e, .common)
-private let __pair_sc_a2: _T0 = (0x207f....0x207f, .latin)
-private let __pair_sc_a3: _T0 = (0x2080....0x208e, .common)
-private let __pair_sc_a4: _T0 = (0x2090....0x209c, .latin)
-private let __pair_sc_a5: _T0 = (0x20a0....0x20bf, .common)
-private let __pair_sc_a6: _T0 = (0x20d0....0x20f0, .inherited)
-private let __pair_sc_a7: _T0 = (0x2100....0x2125, .common)
-private let __pair_sc_a8: _T0 = (0x2126....0x2126, .greek)
-private let __pair_sc_a9: _T0 = (0x2127....0x2129, .common)
-private let __pair_sc_aa: _T0 = (0x212a....0x212b, .latin)
-private let __pair_sc_ab: _T0 = (0x212c....0x2131, .common)
-private let __pair_sc_ac: _T0 = (0x2132....0x2132, .latin)
-private let __pair_sc_ad: _T0 = (0x2133....0x214d, .common)
-private let __pair_sc_ae: _T0 = (0x214e....0x214e, .latin)
-private let __pair_sc_af: _T0 = (0x214f....0x215f, .common)
-private let __pair_sc_ag: _T0 = (0x2160....0x2188, .latin)
-private let __pair_sc_ah: _T0 = (0x2189....0x218b, .common)
-private let __pair_sc_ai: _T0 = (0x2190....0x2426, .common)
-private let __pair_sc_aj: _T0 = (0x2440....0x244a, .common)
-private let __pair_sc_ak: _T0 = (0x2460....0x27ff, .common)
-private let __pair_sc_al: _T0 = (0x2800....0x28ff, .braille)
-private let __pair_sc_am: _T0 = (0x2900....0x2b73, .common)
-private let __pair_sc_an: _T0 = (0x2b76....0x2b95, .common)
-private let __pair_sc_ao: _T0 = (0x2b98....0x2bff, .common)
-private let __pair_sc_ap: _T0 = (0x2c00....0x2c2e, .glagolitic)
-private let __pair_sc_aq: _T0 = (0x2c30....0x2c5e, .glagolitic)
-private let __pair_sc_ar: _T0 = (0x2c60....0x2c7f, .latin)
-private let __pair_sc_as: _T0 = (0x2c80....0x2cf3, .coptic)
-private let __pair_sc_at: _T0 = (0x2cf9....0x2cff, .coptic)
-private let __pair_sc_au: _T0 = (0x2d00....0x2d25, .georgian)
-private let __pair_sc_av: _T0 = (0x2d27....0x2d27, .georgian)
-private let __pair_sc_aw: _T0 = (0x2d2d....0x2d2d, .georgian)
-private let __pair_sc_ax: _T0 = (0x2d30....0x2d67, .tifinagh)
-private let __pair_sc_ay: _T0 = (0x2d6f....0x2d70, .tifinagh)
-private let __pair_sc_az: _T0 = (0x2d7f....0x2d7f, .tifinagh)
-private let __pair_sc_b0: _T0 = (0x2d80....0x2d96, .ethiopic)
-private let __pair_sc_b1: _T0 = (0x2da0....0x2da6, .ethiopic)
-private let __pair_sc_b2: _T0 = (0x2da8....0x2dae, .ethiopic)
-private let __pair_sc_b3: _T0 = (0x2db0....0x2db6, .ethiopic)
-private let __pair_sc_b4: _T0 = (0x2db8....0x2dbe, .ethiopic)
-private let __pair_sc_b5: _T0 = (0x2dc0....0x2dc6, .ethiopic)
-private let __pair_sc_b6: _T0 = (0x2dc8....0x2dce, .ethiopic)
-private let __pair_sc_b7: _T0 = (0x2dd0....0x2dd6, .ethiopic)
-private let __pair_sc_b8: _T0 = (0x2dd8....0x2dde, .ethiopic)
-private let __pair_sc_b9: _T0 = (0x2de0....0x2dff, .cyrillic)
-private let __pair_sc_ba: _T0 = (0x2e00....0x2e4f, .common)
-private let __pair_sc_bb: _T0 = (0x2e80....0x2e99, .han)
-private let __pair_sc_bc: _T0 = (0x2e9b....0x2ef3, .han)
-private let __pair_sc_bd: _T0 = (0x2f00....0x2fd5, .han)
-private let __pair_sc_be: _T0 = (0x2ff0....0x2ffb, .common)
-private let __pair_sc_bf: _T0 = (0x3000....0x3004, .common)
-private let __pair_sc_bg: _T0 = (0x3005....0x3005, .han)
-private let __pair_sc_bh: _T0 = (0x3006....0x3006, .common)
-private let __pair_sc_bi: _T0 = (0x3007....0x3007, .han)
-private let __pair_sc_bj: _T0 = (0x3008....0x3020, .common)
-private let __pair_sc_bk: _T0 = (0x3021....0x3029, .han)
-private let __pair_sc_bl: _T0 = (0x302a....0x302d, .inherited)
-private let __pair_sc_bm: _T0 = (0x302e....0x302f, .hangul)
-private let __pair_sc_bn: _T0 = (0x3030....0x3037, .common)
-private let __pair_sc_bo: _T0 = (0x3038....0x303b, .han)
-private let __pair_sc_bp: _T0 = (0x303c....0x303f, .common)
-private let __pair_sc_bq: _T0 = (0x3041....0x3096, .hiragana)
-private let __pair_sc_br: _T0 = (0x3099....0x309a, .inherited)
-private let __pair_sc_bs: _T0 = (0x309b....0x309c, .common)
-private let __pair_sc_bt: _T0 = (0x309d....0x309f, .hiragana)
-private let __pair_sc_bu: _T0 = (0x30a0....0x30a0, .common)
-private let __pair_sc_bv: _T0 = (0x30a1....0x30fa, .katakana)
-private let __pair_sc_bw: _T0 = (0x30fb....0x30fc, .common)
-private let __pair_sc_bx: _T0 = (0x30fd....0x30ff, .katakana)
-private let __pair_sc_by: _T0 = (0x3105....0x312f, .bopomofo)
-private let __pair_sc_bz: _T0 = (0x3131....0x318e, .hangul)
-private let __pair_sc_c0: _T0 = (0x3190....0x319f, .common)
-private let __pair_sc_c1: _T0 = (0x31a0....0x31ba, .bopomofo)
-private let __pair_sc_c2: _T0 = (0x31c0....0x31e3, .common)
-private let __pair_sc_c3: _T0 = (0x31f0....0x31ff, .katakana)
-private let __pair_sc_c4: _T0 = (0x3200....0x321e, .hangul)
-private let __pair_sc_c5: _T0 = (0x3220....0x325f, .common)
-private let __pair_sc_c6: _T0 = (0x3260....0x327e, .hangul)
-private let __pair_sc_c7: _T0 = (0x327f....0x32cf, .common)
-private let __pair_sc_c8: _T0 = (0x32d0....0x32fe, .katakana)
-private let __pair_sc_c9: _T0 = (0x32ff....0x32ff, .common)
-private let __pair_sc_ca: _T0 = (0x3300....0x3357, .katakana)
-private let __pair_sc_cb: _T0 = (0x3358....0x33ff, .common)
-private let __pair_sc_cc: _T0 = (0x3400....0x4db5, .han)
-private let __pair_sc_cd: _T0 = (0x4dc0....0x4dff, .common)
-private let __pair_sc_ce: _T0 = (0x4e00....0x9fef, .han)
-private let __pair_sc_cf: _T0 = (0xa000....0xa48c, .yi)
-private let __pair_sc_cg: _T0 = (0xa490....0xa4c6, .yi)
-private let __pair_sc_ch: _T0 = (0xa4d0....0xa4ff, .lisu)
-private let __pair_sc_ci: _T0 = (0xa500....0xa62b, .vai)
-private let __pair_sc_cj: _T0 = (0xa640....0xa69f, .cyrillic)
-private let __pair_sc_ck: _T0 = (0xa6a0....0xa6f7, .bamum)
-private let __pair_sc_cl: _T0 = (0xa700....0xa721, .common)
-private let __pair_sc_cm: _T0 = (0xa722....0xa787, .latin)
-private let __pair_sc_cn: _T0 = (0xa788....0xa78a, .common)
-private let __pair_sc_co: _T0 = (0xa78b....0xa7bf, .latin)
-private let __pair_sc_cp: _T0 = (0xa7c2....0xa7c6, .latin)
-private let __pair_sc_cq: _T0 = (0xa7f7....0xa7ff, .latin)
-private let __pair_sc_cr: _T0 = (0xa800....0xa82b, .sylotiNagri)
-private let __pair_sc_cs: _T0 = (0xa830....0xa839, .common)
-private let __pair_sc_ct: _T0 = (0xa840....0xa877, .phagsPa)
-private let __pair_sc_cu: _T0 = (0xa880....0xa8c5, .saurashtra)
-private let __pair_sc_cv: _T0 = (0xa8ce....0xa8d9, .saurashtra)
-private let __pair_sc_cw: _T0 = (0xa8e0....0xa8ff, .devanagari)
-private let __pair_sc_cx: _T0 = (0xa900....0xa92d, .kayahLi)
-private let __pair_sc_cy: _T0 = (0xa92e....0xa92e, .common)
-private let __pair_sc_cz: _T0 = (0xa92f....0xa92f, .kayahLi)
-private let __pair_sc_d0: _T0 = (0xa930....0xa953, .rejang)
-private let __pair_sc_d1: _T0 = (0xa95f....0xa95f, .rejang)
-private let __pair_sc_d2: _T0 = (0xa960....0xa97c, .hangul)
-private let __pair_sc_d3: _T0 = (0xa980....0xa9cd, .javanese)
-private let __pair_sc_d4: _T0 = (0xa9cf....0xa9cf, .common)
-private let __pair_sc_d5: _T0 = (0xa9d0....0xa9d9, .javanese)
-private let __pair_sc_d6: _T0 = (0xa9de....0xa9df, .javanese)
-private let __pair_sc_d7: _T0 = (0xa9e0....0xa9fe, .myanmar)
-private let __pair_sc_d8: _T0 = (0xaa00....0xaa36, .cham)
-private let __pair_sc_d9: _T0 = (0xaa40....0xaa4d, .cham)
-private let __pair_sc_da: _T0 = (0xaa50....0xaa59, .cham)
-private let __pair_sc_db: _T0 = (0xaa5c....0xaa5f, .cham)
-private let __pair_sc_dc: _T0 = (0xaa60....0xaa7f, .myanmar)
-private let __pair_sc_dd: _T0 = (0xaa80....0xaac2, .taiViet)
-private let __pair_sc_de: _T0 = (0xaadb....0xaadf, .taiViet)
-private let __pair_sc_df: _T0 = (0xaae0....0xaaf6, .meeteiMayek)
-private let __pair_sc_dg: _T0 = (0xab01....0xab06, .ethiopic)
-private let __pair_sc_dh: _T0 = (0xab09....0xab0e, .ethiopic)
-private let __pair_sc_di: _T0 = (0xab11....0xab16, .ethiopic)
-private let __pair_sc_dj: _T0 = (0xab20....0xab26, .ethiopic)
-private let __pair_sc_dk: _T0 = (0xab28....0xab2e, .ethiopic)
-private let __pair_sc_dl: _T0 = (0xab30....0xab5a, .latin)
-private let __pair_sc_dm: _T0 = (0xab5b....0xab5b, .common)
-private let __pair_sc_dn: _T0 = (0xab5c....0xab64, .latin)
-private let __pair_sc_do: _T0 = (0xab65....0xab65, .greek)
-private let __pair_sc_dp: _T0 = (0xab66....0xab67, .latin)
-private let __pair_sc_dq: _T0 = (0xab70....0xabbf, .cherokee)
-private let __pair_sc_dr: _T0 = (0xabc0....0xabed, .meeteiMayek)
-private let __pair_sc_ds: _T0 = (0xabf0....0xabf9, .meeteiMayek)
-private let __pair_sc_dt: _T0 = (0xac00....0xd7a3, .hangul)
-private let __pair_sc_du: _T0 = (0xd7b0....0xd7c6, .hangul)
-private let __pair_sc_dv: _T0 = (0xd7cb....0xd7fb, .hangul)
-private let __pair_sc_dw: _T0 = (0xf900....0xfa6d, .han)
-private let __pair_sc_dx: _T0 = (0xfa70....0xfad9, .han)
-private let __pair_sc_dy: _T0 = (0xfb00....0xfb06, .latin)
-private let __pair_sc_dz: _T0 = (0xfb13....0xfb17, .armenian)
-private let __pair_sc_e0: _T0 = (0xfb1d....0xfb36, .hebrew)
-private let __pair_sc_e1: _T0 = (0xfb38....0xfb3c, .hebrew)
-private let __pair_sc_e2: _T0 = (0xfb3e....0xfb3e, .hebrew)
-private let __pair_sc_e3: _T0 = (0xfb40....0xfb41, .hebrew)
-private let __pair_sc_e4: _T0 = (0xfb43....0xfb44, .hebrew)
-private let __pair_sc_e5: _T0 = (0xfb46....0xfb4f, .hebrew)
-private let __pair_sc_e6: _T0 = (0xfb50....0xfbc1, .arabic)
-private let __pair_sc_e7: _T0 = (0xfbd3....0xfd3d, .arabic)
-private let __pair_sc_e8: _T0 = (0xfd3e....0xfd3f, .common)
-private let __pair_sc_e9: _T0 = (0xfd50....0xfd8f, .arabic)
-private let __pair_sc_ea: _T0 = (0xfd92....0xfdc7, .arabic)
-private let __pair_sc_eb: _T0 = (0xfdf0....0xfdfd, .arabic)
-private let __pair_sc_ec: _T0 = (0xfe00....0xfe0f, .inherited)
-private let __pair_sc_ed: _T0 = (0xfe10....0xfe19, .common)
-private let __pair_sc_ee: _T0 = (0xfe20....0xfe2d, .inherited)
-private let __pair_sc_ef: _T0 = (0xfe2e....0xfe2f, .cyrillic)
-private let __pair_sc_eg: _T0 = (0xfe30....0xfe52, .common)
-private let __pair_sc_eh: _T0 = (0xfe54....0xfe66, .common)
-private let __pair_sc_ei: _T0 = (0xfe68....0xfe6b, .common)
-private let __pair_sc_ej: _T0 = (0xfe70....0xfe74, .arabic)
-private let __pair_sc_ek: _T0 = (0xfe76....0xfefc, .arabic)
-private let __pair_sc_el: _T0 = (0xfeff....0xfeff, .common)
-private let __pair_sc_em: _T0 = (0xff01....0xff20, .common)
-private let __pair_sc_en: _T0 = (0xff21....0xff3a, .latin)
-private let __pair_sc_eo: _T0 = (0xff3b....0xff40, .common)
-private let __pair_sc_ep: _T0 = (0xff41....0xff5a, .latin)
-private let __pair_sc_eq: _T0 = (0xff5b....0xff65, .common)
-private let __pair_sc_er: _T0 = (0xff66....0xff6f, .katakana)
-private let __pair_sc_es: _T0 = (0xff70....0xff70, .common)
-private let __pair_sc_et: _T0 = (0xff71....0xff9d, .katakana)
-private let __pair_sc_eu: _T0 = (0xff9e....0xff9f, .common)
-private let __pair_sc_ev: _T0 = (0xffa0....0xffbe, .hangul)
-private let __pair_sc_ew: _T0 = (0xffc2....0xffc7, .hangul)
-private let __pair_sc_ex: _T0 = (0xffca....0xffcf, .hangul)
-private let __pair_sc_ey: _T0 = (0xffd2....0xffd7, .hangul)
-private let __pair_sc_ez: _T0 = (0xffda....0xffdc, .hangul)
-private let __pair_sc_f0: _T0 = (0xffe0....0xffe6, .common)
-private let __pair_sc_f1: _T0 = (0xffe8....0xffee, .common)
-private let __pair_sc_f2: _T0 = (0xfff9....0xfffd, .common)
-private let __pair_sc_f3: _T0 = (0x10000....0x1000b, .linearB)
-private let __pair_sc_f4: _T0 = (0x1000d....0x10026, .linearB)
-private let __pair_sc_f5: _T0 = (0x10028....0x1003a, .linearB)
-private let __pair_sc_f6: _T0 = (0x1003c....0x1003d, .linearB)
-private let __pair_sc_f7: _T0 = (0x1003f....0x1004d, .linearB)
-private let __pair_sc_f8: _T0 = (0x10050....0x1005d, .linearB)
-private let __pair_sc_f9: _T0 = (0x10080....0x100fa, .linearB)
-private let __pair_sc_fa: _T0 = (0x10100....0x10102, .common)
-private let __pair_sc_fb: _T0 = (0x10107....0x10133, .common)
-private let __pair_sc_fc: _T0 = (0x10137....0x1013f, .common)
-private let __pair_sc_fd: _T0 = (0x10140....0x1018e, .greek)
-private let __pair_sc_fe: _T0 = (0x10190....0x1019b, .common)
-private let __pair_sc_ff: _T0 = (0x101a0....0x101a0, .greek)
-private let __pair_sc_fg: _T0 = (0x101d0....0x101fc, .common)
-private let __pair_sc_fh: _T0 = (0x101fd....0x101fd, .inherited)
-private let __pair_sc_fi: _T0 = (0x10280....0x1029c, .lycian)
-private let __pair_sc_fj: _T0 = (0x102a0....0x102d0, .carian)
-private let __pair_sc_fk: _T0 = (0x102e0....0x102e0, .inherited)
-private let __pair_sc_fl: _T0 = (0x102e1....0x102fb, .common)
-private let __pair_sc_fm: _T0 = (0x10300....0x10323, .oldItalic)
-private let __pair_sc_fn: _T0 = (0x1032d....0x1032f, .oldItalic)
-private let __pair_sc_fo: _T0 = (0x10330....0x1034a, .gothic)
-private let __pair_sc_fp: _T0 = (0x10350....0x1037a, .oldPermic)
-private let __pair_sc_fq: _T0 = (0x10380....0x1039d, .ugaritic)
-private let __pair_sc_fr: _T0 = (0x1039f....0x1039f, .ugaritic)
-private let __pair_sc_fs: _T0 = (0x103a0....0x103c3, .oldPersian)
-private let __pair_sc_ft: _T0 = (0x103c8....0x103d5, .oldPersian)
-private let __pair_sc_fu: _T0 = (0x10400....0x1044f, .deseret)
-private let __pair_sc_fv: _T0 = (0x10450....0x1047f, .shavian)
-private let __pair_sc_fw: _T0 = (0x10480....0x1049d, .osmanya)
-private let __pair_sc_fx: _T0 = (0x104a0....0x104a9, .osmanya)
-private let __pair_sc_fy: _T0 = (0x104b0....0x104d3, .osage)
-private let __pair_sc_fz: _T0 = (0x104d8....0x104fb, .osage)
-private let __pair_sc_g0: _T0 = (0x10500....0x10527, .elbasan)
-private let __pair_sc_g1: _T0 = (0x10530....0x10563, .caucasianAlbanian)
-private let __pair_sc_g2: _T0 = (0x1056f....0x1056f, .caucasianAlbanian)
-private let __pair_sc_g3: _T0 = (0x10600....0x10736, .linearA)
-private let __pair_sc_g4: _T0 = (0x10740....0x10755, .linearA)
-private let __pair_sc_g5: _T0 = (0x10760....0x10767, .linearA)
-private let __pair_sc_g6: _T0 = (0x10800....0x10805, .cypriot)
-private let __pair_sc_g7: _T0 = (0x10808....0x10808, .cypriot)
-private let __pair_sc_g8: _T0 = (0x1080a....0x10835, .cypriot)
-private let __pair_sc_g9: _T0 = (0x10837....0x10838, .cypriot)
-private let __pair_sc_ga: _T0 = (0x1083c....0x1083c, .cypriot)
-private let __pair_sc_gb: _T0 = (0x1083f....0x1083f, .cypriot)
-private let __pair_sc_gc: _T0 = (0x10840....0x10855, .imperialAramaic)
-private let __pair_sc_gd: _T0 = (0x10857....0x1085f, .imperialAramaic)
-private let __pair_sc_ge: _T0 = (0x10860....0x1087f, .palmyrene)
-private let __pair_sc_gf: _T0 = (0x10880....0x1089e, .nabataean)
-private let __pair_sc_gg: _T0 = (0x108a7....0x108af, .nabataean)
-private let __pair_sc_gh: _T0 = (0x108e0....0x108f2, .hatran)
-private let __pair_sc_gi: _T0 = (0x108f4....0x108f5, .hatran)
-private let __pair_sc_gj: _T0 = (0x108fb....0x108ff, .hatran)
-private let __pair_sc_gk: _T0 = (0x10900....0x1091b, .phoenician)
-private let __pair_sc_gl: _T0 = (0x1091f....0x1091f, .phoenician)
-private let __pair_sc_gm: _T0 = (0x10920....0x10939, .lydian)
-private let __pair_sc_gn: _T0 = (0x1093f....0x1093f, .lydian)
-private let __pair_sc_go: _T0 = (0x10980....0x1099f, .meroiticHieroglyphs)
-private let __pair_sc_gp: _T0 = (0x109a0....0x109b7, .meroiticCursive)
-private let __pair_sc_gq: _T0 = (0x109bc....0x109cf, .meroiticCursive)
-private let __pair_sc_gr: _T0 = (0x109d2....0x109ff, .meroiticCursive)
-private let __pair_sc_gs: _T0 = (0x10a00....0x10a03, .kharoshthi)
-private let __pair_sc_gt: _T0 = (0x10a05....0x10a06, .kharoshthi)
-private let __pair_sc_gu: _T0 = (0x10a0c....0x10a13, .kharoshthi)
-private let __pair_sc_gv: _T0 = (0x10a15....0x10a17, .kharoshthi)
-private let __pair_sc_gw: _T0 = (0x10a19....0x10a35, .kharoshthi)
-private let __pair_sc_gx: _T0 = (0x10a38....0x10a3a, .kharoshthi)
-private let __pair_sc_gy: _T0 = (0x10a3f....0x10a48, .kharoshthi)
-private let __pair_sc_gz: _T0 = (0x10a50....0x10a58, .kharoshthi)
-private let __pair_sc_h0: _T0 = (0x10a60....0x10a7f, .oldSouthArabian)
-private let __pair_sc_h1: _T0 = (0x10a80....0x10a9f, .oldNorthArabian)
-private let __pair_sc_h2: _T0 = (0x10ac0....0x10ae6, .manichaean)
-private let __pair_sc_h3: _T0 = (0x10aeb....0x10af6, .manichaean)
-private let __pair_sc_h4: _T0 = (0x10b00....0x10b35, .avestan)
-private let __pair_sc_h5: _T0 = (0x10b39....0x10b3f, .avestan)
-private let __pair_sc_h6: _T0 = (0x10b40....0x10b55, .inscriptionalParthian)
-private let __pair_sc_h7: _T0 = (0x10b58....0x10b5f, .inscriptionalParthian)
-private let __pair_sc_h8: _T0 = (0x10b60....0x10b72, .inscriptionalPahlavi)
-private let __pair_sc_h9: _T0 = (0x10b78....0x10b7f, .inscriptionalPahlavi)
-private let __pair_sc_ha: _T0 = (0x10b80....0x10b91, .psalterPahlavi)
-private let __pair_sc_hb: _T0 = (0x10b99....0x10b9c, .psalterPahlavi)
-private let __pair_sc_hc: _T0 = (0x10ba9....0x10baf, .psalterPahlavi)
-private let __pair_sc_hd: _T0 = (0x10c00....0x10c48, .oldTurkic)
-private let __pair_sc_he: _T0 = (0x10c80....0x10cb2, .oldHungarian)
-private let __pair_sc_hf: _T0 = (0x10cc0....0x10cf2, .oldHungarian)
-private let __pair_sc_hg: _T0 = (0x10cfa....0x10cff, .oldHungarian)
-private let __pair_sc_hh: _T0 = (0x10d00....0x10d27, .hanifiRohingya)
-private let __pair_sc_hi: _T0 = (0x10d30....0x10d39, .hanifiRohingya)
-private let __pair_sc_hj: _T0 = (0x10e60....0x10e7e, .arabic)
-private let __pair_sc_hk: _T0 = (0x10f00....0x10f27, .oldSogdian)
-private let __pair_sc_hl: _T0 = (0x10f30....0x10f59, .sogdian)
-private let __pair_sc_hm: _T0 = (0x10fe0....0x10ff6, .elymaic)
-private let __pair_sc_hn: _T0 = (0x11000....0x1104d, .brahmi)
-private let __pair_sc_ho: _T0 = (0x11052....0x1106f, .brahmi)
-private let __pair_sc_hp: _T0 = (0x1107f....0x1107f, .brahmi)
-private let __pair_sc_hq: _T0 = (0x11080....0x110c1, .kaithi)
-private let __pair_sc_hr: _T0 = (0x110cd....0x110cd, .kaithi)
-private let __pair_sc_hs: _T0 = (0x110d0....0x110e8, .soraSompeng)
-private let __pair_sc_ht: _T0 = (0x110f0....0x110f9, .soraSompeng)
-private let __pair_sc_hu: _T0 = (0x11100....0x11134, .chakma)
-private let __pair_sc_hv: _T0 = (0x11136....0x11146, .chakma)
-private let __pair_sc_hw: _T0 = (0x11150....0x11176, .mahajani)
-private let __pair_sc_hx: _T0 = (0x11180....0x111cd, .sharada)
-private let __pair_sc_hy: _T0 = (0x111d0....0x111df, .sharada)
-private let __pair_sc_hz: _T0 = (0x111e1....0x111f4, .sinhala)
-private let __pair_sc_i0: _T0 = (0x11200....0x11211, .khojki)
-private let __pair_sc_i1: _T0 = (0x11213....0x1123e, .khojki)
-private let __pair_sc_i2: _T0 = (0x11280....0x11286, .multani)
-private let __pair_sc_i3: _T0 = (0x11288....0x11288, .multani)
-private let __pair_sc_i4: _T0 = (0x1128a....0x1128d, .multani)
-private let __pair_sc_i5: _T0 = (0x1128f....0x1129d, .multani)
-private let __pair_sc_i6: _T0 = (0x1129f....0x112a9, .multani)
-private let __pair_sc_i7: _T0 = (0x112b0....0x112ea, .khudawadi)
-private let __pair_sc_i8: _T0 = (0x112f0....0x112f9, .khudawadi)
-private let __pair_sc_i9: _T0 = (0x11300....0x11303, .grantha)
-private let __pair_sc_ia: _T0 = (0x11305....0x1130c, .grantha)
-private let __pair_sc_ib: _T0 = (0x1130f....0x11310, .grantha)
-private let __pair_sc_ic: _T0 = (0x11313....0x11328, .grantha)
-private let __pair_sc_id: _T0 = (0x1132a....0x11330, .grantha)
-private let __pair_sc_ie: _T0 = (0x11332....0x11333, .grantha)
-private let __pair_sc_if: _T0 = (0x11335....0x11339, .grantha)
-private let __pair_sc_ig: _T0 = (0x1133b....0x1133b, .inherited)
-private let __pair_sc_ih: _T0 = (0x1133c....0x11344, .grantha)
-private let __pair_sc_ii: _T0 = (0x11347....0x11348, .grantha)
-private let __pair_sc_ij: _T0 = (0x1134b....0x1134d, .grantha)
-private let __pair_sc_ik: _T0 = (0x11350....0x11350, .grantha)
-private let __pair_sc_il: _T0 = (0x11357....0x11357, .grantha)
-private let __pair_sc_im: _T0 = (0x1135d....0x11363, .grantha)
-private let __pair_sc_in: _T0 = (0x11366....0x1136c, .grantha)
-private let __pair_sc_io: _T0 = (0x11370....0x11374, .grantha)
-private let __pair_sc_ip: _T0 = (0x11400....0x11459, .newa)
-private let __pair_sc_iq: _T0 = (0x1145b....0x1145b, .newa)
-private let __pair_sc_ir: _T0 = (0x1145d....0x1145f, .newa)
-private let __pair_sc_is: _T0 = (0x11480....0x114c7, .tirhuta)
-private let __pair_sc_it: _T0 = (0x114d0....0x114d9, .tirhuta)
-private let __pair_sc_iu: _T0 = (0x11580....0x115b5, .siddham)
-private let __pair_sc_iv: _T0 = (0x115b8....0x115dd, .siddham)
-private let __pair_sc_iw: _T0 = (0x11600....0x11644, .modi)
-private let __pair_sc_ix: _T0 = (0x11650....0x11659, .modi)
-private let __pair_sc_iy: _T0 = (0x11660....0x1166c, .mongolian)
-private let __pair_sc_iz: _T0 = (0x11680....0x116b8, .takri)
-private let __pair_sc_j0: _T0 = (0x116c0....0x116c9, .takri)
-private let __pair_sc_j1: _T0 = (0x11700....0x1171a, .ahom)
-private let __pair_sc_j2: _T0 = (0x1171d....0x1172b, .ahom)
-private let __pair_sc_j3: _T0 = (0x11730....0x1173f, .ahom)
-private let __pair_sc_j4: _T0 = (0x11800....0x1183b, .dogra)
-private let __pair_sc_j5: _T0 = (0x118a0....0x118f2, .warangCiti)
-private let __pair_sc_j6: _T0 = (0x118ff....0x118ff, .warangCiti)
-private let __pair_sc_j7: _T0 = (0x119a0....0x119a7, .nandinagari)
-private let __pair_sc_j8: _T0 = (0x119aa....0x119d7, .nandinagari)
-private let __pair_sc_j9: _T0 = (0x119da....0x119e4, .nandinagari)
-private let __pair_sc_ja: _T0 = (0x11a00....0x11a47, .zanabazarSquare)
-private let __pair_sc_jb: _T0 = (0x11a50....0x11aa2, .soyombo)
-private let __pair_sc_jc: _T0 = (0x11ac0....0x11af8, .pauCinHau)
-private let __pair_sc_jd: _T0 = (0x11c00....0x11c08, .bhaiksuki)
-private let __pair_sc_je: _T0 = (0x11c0a....0x11c36, .bhaiksuki)
-private let __pair_sc_jf: _T0 = (0x11c38....0x11c45, .bhaiksuki)
-private let __pair_sc_jg: _T0 = (0x11c50....0x11c6c, .bhaiksuki)
-private let __pair_sc_jh: _T0 = (0x11c70....0x11c8f, .marchen)
-private let __pair_sc_ji: _T0 = (0x11c92....0x11ca7, .marchen)
-private let __pair_sc_jj: _T0 = (0x11ca9....0x11cb6, .marchen)
-private let __pair_sc_jk: _T0 = (0x11d00....0x11d06, .masaramGondi)
-private let __pair_sc_jl: _T0 = (0x11d08....0x11d09, .masaramGondi)
-private let __pair_sc_jm: _T0 = (0x11d0b....0x11d36, .masaramGondi)
-private let __pair_sc_jn: _T0 = (0x11d3a....0x11d3a, .masaramGondi)
-private let __pair_sc_jo: _T0 = (0x11d3c....0x11d3d, .masaramGondi)
-private let __pair_sc_jp: _T0 = (0x11d3f....0x11d47, .masaramGondi)
-private let __pair_sc_jq: _T0 = (0x11d50....0x11d59, .masaramGondi)
-private let __pair_sc_jr: _T0 = (0x11d60....0x11d65, .gunjalaGondi)
-private let __pair_sc_js: _T0 = (0x11d67....0x11d68, .gunjalaGondi)
-private let __pair_sc_jt: _T0 = (0x11d6a....0x11d8e, .gunjalaGondi)
-private let __pair_sc_ju: _T0 = (0x11d90....0x11d91, .gunjalaGondi)
-private let __pair_sc_jv: _T0 = (0x11d93....0x11d98, .gunjalaGondi)
-private let __pair_sc_jw: _T0 = (0x11da0....0x11da9, .gunjalaGondi)
-private let __pair_sc_jx: _T0 = (0x11ee0....0x11ef8, .makasar)
-private let __pair_sc_jy: _T0 = (0x11fc0....0x11ff1, .tamil)
-private let __pair_sc_jz: _T0 = (0x11fff....0x11fff, .tamil)
-private let __pair_sc_k0: _T0 = (0x12000....0x12399, .cuneiform)
-private let __pair_sc_k1: _T0 = (0x12400....0x1246e, .cuneiform)
-private let __pair_sc_k2: _T0 = (0x12470....0x12474, .cuneiform)
-private let __pair_sc_k3: _T0 = (0x12480....0x12543, .cuneiform)
-private let __pair_sc_k4: _T0 = (0x13000....0x1342e, .egyptianHieroglyphs)
-private let __pair_sc_k5: _T0 = (0x13430....0x13438, .egyptianHieroglyphs)
-private let __pair_sc_k6: _T0 = (0x14400....0x14646, .anatolianHieroglyphs)
-private let __pair_sc_k7: _T0 = (0x16800....0x16a38, .bamum)
-private let __pair_sc_k8: _T0 = (0x16a40....0x16a5e, .mro)
-private let __pair_sc_k9: _T0 = (0x16a60....0x16a69, .mro)
-private let __pair_sc_ka: _T0 = (0x16a6e....0x16a6f, .mro)
-private let __pair_sc_kb: _T0 = (0x16ad0....0x16aed, .bassaVah)
-private let __pair_sc_kc: _T0 = (0x16af0....0x16af5, .bassaVah)
-private let __pair_sc_kd: _T0 = (0x16b00....0x16b45, .pahawhHmong)
-private let __pair_sc_ke: _T0 = (0x16b50....0x16b59, .pahawhHmong)
-private let __pair_sc_kf: _T0 = (0x16b5b....0x16b61, .pahawhHmong)
-private let __pair_sc_kg: _T0 = (0x16b63....0x16b77, .pahawhHmong)
-private let __pair_sc_kh: _T0 = (0x16b7d....0x16b8f, .pahawhHmong)
-private let __pair_sc_ki: _T0 = (0x16e40....0x16e9a, .medefaidrin)
-private let __pair_sc_kj: _T0 = (0x16f00....0x16f4a, .miao)
-private let __pair_sc_kk: _T0 = (0x16f4f....0x16f87, .miao)
-private let __pair_sc_kl: _T0 = (0x16f8f....0x16f9f, .miao)
-private let __pair_sc_km: _T0 = (0x16fe0....0x16fe0, .tangut)
-private let __pair_sc_kn: _T0 = (0x16fe1....0x16fe1, .nushu)
-private let __pair_sc_ko: _T0 = (0x16fe2....0x16fe3, .common)
-private let __pair_sc_kp: _T0 = (0x17000....0x187f7, .tangut)
-private let __pair_sc_kq: _T0 = (0x18800....0x18af2, .tangut)
-private let __pair_sc_kr: _T0 = (0x1b000....0x1b000, .katakana)
-private let __pair_sc_ks: _T0 = (0x1b001....0x1b11e, .hiragana)
-private let __pair_sc_kt: _T0 = (0x1b150....0x1b152, .hiragana)
-private let __pair_sc_ku: _T0 = (0x1b164....0x1b167, .katakana)
-private let __pair_sc_kv: _T0 = (0x1b170....0x1b2fb, .nushu)
-private let __pair_sc_kw: _T0 = (0x1bc00....0x1bc6a, .duployan)
-private let __pair_sc_kx: _T0 = (0x1bc70....0x1bc7c, .duployan)
-private let __pair_sc_ky: _T0 = (0x1bc80....0x1bc88, .duployan)
-private let __pair_sc_kz: _T0 = (0x1bc90....0x1bc99, .duployan)
-private let __pair_sc_l0: _T0 = (0x1bc9c....0x1bc9f, .duployan)
-private let __pair_sc_l1: _T0 = (0x1bca0....0x1bca3, .common)
-private let __pair_sc_l2: _T0 = (0x1d000....0x1d0f5, .common)
-private let __pair_sc_l3: _T0 = (0x1d100....0x1d126, .common)
-private let __pair_sc_l4: _T0 = (0x1d129....0x1d166, .common)
-private let __pair_sc_l5: _T0 = (0x1d167....0x1d169, .inherited)
-private let __pair_sc_l6: _T0 = (0x1d16a....0x1d17a, .common)
-private let __pair_sc_l7: _T0 = (0x1d17b....0x1d182, .inherited)
-private let __pair_sc_l8: _T0 = (0x1d183....0x1d184, .common)
-private let __pair_sc_l9: _T0 = (0x1d185....0x1d18b, .inherited)
-private let __pair_sc_la: _T0 = (0x1d18c....0x1d1a9, .common)
-private let __pair_sc_lb: _T0 = (0x1d1aa....0x1d1ad, .inherited)
-private let __pair_sc_lc: _T0 = (0x1d1ae....0x1d1e8, .common)
-private let __pair_sc_ld: _T0 = (0x1d200....0x1d245, .greek)
-private let __pair_sc_le: _T0 = (0x1d2e0....0x1d2f3, .common)
-private let __pair_sc_lf: _T0 = (0x1d300....0x1d356, .common)
-private let __pair_sc_lg: _T0 = (0x1d360....0x1d378, .common)
-private let __pair_sc_lh: _T0 = (0x1d400....0x1d454, .common)
-private let __pair_sc_li: _T0 = (0x1d456....0x1d49c, .common)
-private let __pair_sc_lj: _T0 = (0x1d49e....0x1d49f, .common)
-private let __pair_sc_lk: _T0 = (0x1d4a2....0x1d4a2, .common)
-private let __pair_sc_ll: _T0 = (0x1d4a5....0x1d4a6, .common)
-private let __pair_sc_lm: _T0 = (0x1d4a9....0x1d4ac, .common)
-private let __pair_sc_ln: _T0 = (0x1d4ae....0x1d4b9, .common)
-private let __pair_sc_lo: _T0 = (0x1d4bb....0x1d4bb, .common)
-private let __pair_sc_lp: _T0 = (0x1d4bd....0x1d4c3, .common)
-private let __pair_sc_lq: _T0 = (0x1d4c5....0x1d505, .common)
-private let __pair_sc_lr: _T0 = (0x1d507....0x1d50a, .common)
-private let __pair_sc_ls: _T0 = (0x1d50d....0x1d514, .common)
-private let __pair_sc_lt: _T0 = (0x1d516....0x1d51c, .common)
-private let __pair_sc_lu: _T0 = (0x1d51e....0x1d539, .common)
-private let __pair_sc_lv: _T0 = (0x1d53b....0x1d53e, .common)
-private let __pair_sc_lw: _T0 = (0x1d540....0x1d544, .common)
-private let __pair_sc_lx: _T0 = (0x1d546....0x1d546, .common)
-private let __pair_sc_ly: _T0 = (0x1d54a....0x1d550, .common)
-private let __pair_sc_lz: _T0 = (0x1d552....0x1d6a5, .common)
-private let __pair_sc_m0: _T0 = (0x1d6a8....0x1d7cb, .common)
-private let __pair_sc_m1: _T0 = (0x1d7ce....0x1d7ff, .common)
-private let __pair_sc_m2: _T0 = (0x1d800....0x1da8b, .signWriting)
-private let __pair_sc_m3: _T0 = (0x1da9b....0x1da9f, .signWriting)
-private let __pair_sc_m4: _T0 = (0x1daa1....0x1daaf, .signWriting)
-private let __pair_sc_m5: _T0 = (0x1e000....0x1e006, .glagolitic)
-private let __pair_sc_m6: _T0 = (0x1e008....0x1e018, .glagolitic)
-private let __pair_sc_m7: _T0 = (0x1e01b....0x1e021, .glagolitic)
-private let __pair_sc_m8: _T0 = (0x1e023....0x1e024, .glagolitic)
-private let __pair_sc_m9: _T0 = (0x1e026....0x1e02a, .glagolitic)
-private let __pair_sc_ma: _T0 = (0x1e100....0x1e12c, .nyiakengPuachueHmong)
-private let __pair_sc_mb: _T0 = (0x1e130....0x1e13d, .nyiakengPuachueHmong)
-private let __pair_sc_mc: _T0 = (0x1e140....0x1e149, .nyiakengPuachueHmong)
-private let __pair_sc_md: _T0 = (0x1e14e....0x1e14f, .nyiakengPuachueHmong)
-private let __pair_sc_me: _T0 = (0x1e2c0....0x1e2f9, .wancho)
-private let __pair_sc_mf: _T0 = (0x1e2ff....0x1e2ff, .wancho)
-private let __pair_sc_mg: _T0 = (0x1e800....0x1e8c4, .mendeKikakui)
-private let __pair_sc_mh: _T0 = (0x1e8c7....0x1e8d6, .mendeKikakui)
-private let __pair_sc_mi: _T0 = (0x1e900....0x1e94b, .adlam)
-private let __pair_sc_mj: _T0 = (0x1e950....0x1e959, .adlam)
-private let __pair_sc_mk: _T0 = (0x1e95e....0x1e95f, .adlam)
-private let __pair_sc_ml: _T0 = (0x1ec71....0x1ecb4, .common)
-private let __pair_sc_mm: _T0 = (0x1ed01....0x1ed3d, .common)
-private let __pair_sc_mn: _T0 = (0x1ee00....0x1ee03, .arabic)
-private let __pair_sc_mo: _T0 = (0x1ee05....0x1ee1f, .arabic)
-private let __pair_sc_mp: _T0 = (0x1ee21....0x1ee22, .arabic)
-private let __pair_sc_mq: _T0 = (0x1ee24....0x1ee24, .arabic)
-private let __pair_sc_mr: _T0 = (0x1ee27....0x1ee27, .arabic)
-private let __pair_sc_ms: _T0 = (0x1ee29....0x1ee32, .arabic)
-private let __pair_sc_mt: _T0 = (0x1ee34....0x1ee37, .arabic)
-private let __pair_sc_mu: _T0 = (0x1ee39....0x1ee39, .arabic)
-private let __pair_sc_mv: _T0 = (0x1ee3b....0x1ee3b, .arabic)
-private let __pair_sc_mw: _T0 = (0x1ee42....0x1ee42, .arabic)
-private let __pair_sc_mx: _T0 = (0x1ee47....0x1ee47, .arabic)
-private let __pair_sc_my: _T0 = (0x1ee49....0x1ee49, .arabic)
-private let __pair_sc_mz: _T0 = (0x1ee4b....0x1ee4b, .arabic)
-private let __pair_sc_n0: _T0 = (0x1ee4d....0x1ee4f, .arabic)
-private let __pair_sc_n1: _T0 = (0x1ee51....0x1ee52, .arabic)
-private let __pair_sc_n2: _T0 = (0x1ee54....0x1ee54, .arabic)
-private let __pair_sc_n3: _T0 = (0x1ee57....0x1ee57, .arabic)
-private let __pair_sc_n4: _T0 = (0x1ee59....0x1ee59, .arabic)
-private let __pair_sc_n5: _T0 = (0x1ee5b....0x1ee5b, .arabic)
-private let __pair_sc_n6: _T0 = (0x1ee5d....0x1ee5d, .arabic)
-private let __pair_sc_n7: _T0 = (0x1ee5f....0x1ee5f, .arabic)
-private let __pair_sc_n8: _T0 = (0x1ee61....0x1ee62, .arabic)
-private let __pair_sc_n9: _T0 = (0x1ee64....0x1ee64, .arabic)
-private let __pair_sc_na: _T0 = (0x1ee67....0x1ee6a, .arabic)
-private let __pair_sc_nb: _T0 = (0x1ee6c....0x1ee72, .arabic)
-private let __pair_sc_nc: _T0 = (0x1ee74....0x1ee77, .arabic)
-private let __pair_sc_nd: _T0 = (0x1ee79....0x1ee7c, .arabic)
-private let __pair_sc_ne: _T0 = (0x1ee7e....0x1ee7e, .arabic)
-private let __pair_sc_nf: _T0 = (0x1ee80....0x1ee89, .arabic)
-private let __pair_sc_ng: _T0 = (0x1ee8b....0x1ee9b, .arabic)
-private let __pair_sc_nh: _T0 = (0x1eea1....0x1eea3, .arabic)
-private let __pair_sc_ni: _T0 = (0x1eea5....0x1eea9, .arabic)
-private let __pair_sc_nj: _T0 = (0x1eeab....0x1eebb, .arabic)
-private let __pair_sc_nk: _T0 = (0x1eef0....0x1eef1, .arabic)
-private let __pair_sc_nl: _T0 = (0x1f000....0x1f02b, .common)
-private let __pair_sc_nm: _T0 = (0x1f030....0x1f093, .common)
-private let __pair_sc_nn: _T0 = (0x1f0a0....0x1f0ae, .common)
-private let __pair_sc_no: _T0 = (0x1f0b1....0x1f0bf, .common)
-private let __pair_sc_np: _T0 = (0x1f0c1....0x1f0cf, .common)
-private let __pair_sc_nq: _T0 = (0x1f0d1....0x1f0f5, .common)
-private let __pair_sc_nr: _T0 = (0x1f100....0x1f10c, .common)
-private let __pair_sc_ns: _T0 = (0x1f110....0x1f16c, .common)
-private let __pair_sc_nt: _T0 = (0x1f170....0x1f1ac, .common)
-private let __pair_sc_nu: _T0 = (0x1f1e6....0x1f1ff, .common)
-private let __pair_sc_nv: _T0 = (0x1f200....0x1f200, .hiragana)
-private let __pair_sc_nw: _T0 = (0x1f201....0x1f202, .common)
-private let __pair_sc_nx: _T0 = (0x1f210....0x1f23b, .common)
-private let __pair_sc_ny: _T0 = (0x1f240....0x1f248, .common)
-private let __pair_sc_nz: _T0 = (0x1f250....0x1f251, .common)
-private let __pair_sc_o0: _T0 = (0x1f260....0x1f265, .common)
-private let __pair_sc_o1: _T0 = (0x1f300....0x1f6d5, .common)
-private let __pair_sc_o2: _T0 = (0x1f6e0....0x1f6ec, .common)
-private let __pair_sc_o3: _T0 = (0x1f6f0....0x1f6fa, .common)
-private let __pair_sc_o4: _T0 = (0x1f700....0x1f773, .common)
-private let __pair_sc_o5: _T0 = (0x1f780....0x1f7d8, .common)
-private let __pair_sc_o6: _T0 = (0x1f7e0....0x1f7eb, .common)
-private let __pair_sc_o7: _T0 = (0x1f800....0x1f80b, .common)
-private let __pair_sc_o8: _T0 = (0x1f810....0x1f847, .common)
-private let __pair_sc_o9: _T0 = (0x1f850....0x1f859, .common)
-private let __pair_sc_oa: _T0 = (0x1f860....0x1f887, .common)
-private let __pair_sc_ob: _T0 = (0x1f890....0x1f8ad, .common)
-private let __pair_sc_oc: _T0 = (0x1f900....0x1f90b, .common)
-private let __pair_sc_od: _T0 = (0x1f90d....0x1f971, .common)
-private let __pair_sc_oe: _T0 = (0x1f973....0x1f976, .common)
-private let __pair_sc_of: _T0 = (0x1f97a....0x1f9a2, .common)
-private let __pair_sc_og: _T0 = (0x1f9a5....0x1f9aa, .common)
-private let __pair_sc_oh: _T0 = (0x1f9ae....0x1f9ca, .common)
-private let __pair_sc_oi: _T0 = (0x1f9cd....0x1fa53, .common)
-private let __pair_sc_oj: _T0 = (0x1fa60....0x1fa6d, .common)
-private let __pair_sc_ok: _T0 = (0x1fa70....0x1fa73, .common)
-private let __pair_sc_ol: _T0 = (0x1fa78....0x1fa7a, .common)
-private let __pair_sc_om: _T0 = (0x1fa80....0x1fa82, .common)
-private let __pair_sc_on: _T0 = (0x1fa90....0x1fa95, .common)
-private let __pair_sc_oo: _T0 = (0x20000....0x2a6d6, .han)
-private let __pair_sc_op: _T0 = (0x2a700....0x2b734, .han)
-private let __pair_sc_oq: _T0 = (0x2b740....0x2b81d, .han)
-private let __pair_sc_or: _T0 = (0x2b820....0x2cea1, .han)
-private let __pair_sc_os: _T0 = (0x2ceb0....0x2ebe0, .han)
-private let __pair_sc_ot: _T0 = (0x2f800....0x2fa1d, .han)
-private let __pair_sc_ou: _T0 = (0xe0001....0xe0001, .common)
-private let __pair_sc_ov: _T0 = (0xe0020....0xe007f, .common)
-private let __pair_sc_ow: _T0 = (0xe0100....0xe01ef, .inherited)
-private let __array_sc: _T1 = [
-  __pair_sc_0,
-  __pair_sc_1,
-  __pair_sc_2,
-  __pair_sc_3,
-  __pair_sc_4,
-  __pair_sc_5,
-  __pair_sc_6,
-  __pair_sc_7,
-  __pair_sc_8,
-  __pair_sc_9,
-  __pair_sc_a,
-  __pair_sc_b,
-  __pair_sc_c,
-  __pair_sc_d,
-  __pair_sc_e,
-  __pair_sc_f,
-  __pair_sc_g,
-  __pair_sc_h,
-  __pair_sc_i,
-  __pair_sc_j,
-  __pair_sc_k,
-  __pair_sc_l,
-  __pair_sc_m,
-  __pair_sc_n,
-  __pair_sc_o,
-  __pair_sc_p,
-  __pair_sc_q,
-  __pair_sc_r,
-  __pair_sc_s,
-  __pair_sc_t,
-  __pair_sc_u,
-  __pair_sc_v,
-  __pair_sc_w,
-  __pair_sc_x,
-  __pair_sc_y,
-  __pair_sc_z,
-  __pair_sc_10,
-  __pair_sc_11,
-  __pair_sc_12,
-  __pair_sc_13,
-  __pair_sc_14,
-  __pair_sc_15,
-  __pair_sc_16,
-  __pair_sc_17,
-  __pair_sc_18,
-  __pair_sc_19,
-  __pair_sc_1a,
-  __pair_sc_1b,
-  __pair_sc_1c,
-  __pair_sc_1d,
-  __pair_sc_1e,
-  __pair_sc_1f,
-  __pair_sc_1g,
-  __pair_sc_1h,
-  __pair_sc_1i,
-  __pair_sc_1j,
-  __pair_sc_1k,
-  __pair_sc_1l,
-  __pair_sc_1m,
-  __pair_sc_1n,
-  __pair_sc_1o,
-  __pair_sc_1p,
-  __pair_sc_1q,
-  __pair_sc_1r,
-  __pair_sc_1s,
-  __pair_sc_1t,
-  __pair_sc_1u,
-  __pair_sc_1v,
-  __pair_sc_1w,
-  __pair_sc_1x,
-  __pair_sc_1y,
-  __pair_sc_1z,
-  __pair_sc_20,
-  __pair_sc_21,
-  __pair_sc_22,
-  __pair_sc_23,
-  __pair_sc_24,
-  __pair_sc_25,
-  __pair_sc_26,
-  __pair_sc_27,
-  __pair_sc_28,
-  __pair_sc_29,
-  __pair_sc_2a,
-  __pair_sc_2b,
-  __pair_sc_2c,
-  __pair_sc_2d,
-  __pair_sc_2e,
-  __pair_sc_2f,
-  __pair_sc_2g,
-  __pair_sc_2h,
-  __pair_sc_2i,
-  __pair_sc_2j,
-  __pair_sc_2k,
-  __pair_sc_2l,
-  __pair_sc_2m,
-  __pair_sc_2n,
-  __pair_sc_2o,
-  __pair_sc_2p,
-  __pair_sc_2q,
-  __pair_sc_2r,
-  __pair_sc_2s,
-  __pair_sc_2t,
-  __pair_sc_2u,
-  __pair_sc_2v,
-  __pair_sc_2w,
-  __pair_sc_2x,
-  __pair_sc_2y,
-  __pair_sc_2z,
-  __pair_sc_30,
-  __pair_sc_31,
-  __pair_sc_32,
-  __pair_sc_33,
-  __pair_sc_34,
-  __pair_sc_35,
-  __pair_sc_36,
-  __pair_sc_37,
-  __pair_sc_38,
-  __pair_sc_39,
-  __pair_sc_3a,
-  __pair_sc_3b,
-  __pair_sc_3c,
-  __pair_sc_3d,
-  __pair_sc_3e,
-  __pair_sc_3f,
-  __pair_sc_3g,
-  __pair_sc_3h,
-  __pair_sc_3i,
-  __pair_sc_3j,
-  __pair_sc_3k,
-  __pair_sc_3l,
-  __pair_sc_3m,
-  __pair_sc_3n,
-  __pair_sc_3o,
-  __pair_sc_3p,
-  __pair_sc_3q,
-  __pair_sc_3r,
-  __pair_sc_3s,
-  __pair_sc_3t,
-  __pair_sc_3u,
-  __pair_sc_3v,
-  __pair_sc_3w,
-  __pair_sc_3x,
-  __pair_sc_3y,
-  __pair_sc_3z,
-  __pair_sc_40,
-  __pair_sc_41,
-  __pair_sc_42,
-  __pair_sc_43,
-  __pair_sc_44,
-  __pair_sc_45,
-  __pair_sc_46,
-  __pair_sc_47,
-  __pair_sc_48,
-  __pair_sc_49,
-  __pair_sc_4a,
-  __pair_sc_4b,
-  __pair_sc_4c,
-  __pair_sc_4d,
-  __pair_sc_4e,
-  __pair_sc_4f,
-  __pair_sc_4g,
-  __pair_sc_4h,
-  __pair_sc_4i,
-  __pair_sc_4j,
-  __pair_sc_4k,
-  __pair_sc_4l,
-  __pair_sc_4m,
-  __pair_sc_4n,
-  __pair_sc_4o,
-  __pair_sc_4p,
-  __pair_sc_4q,
-  __pair_sc_4r,
-  __pair_sc_4s,
-  __pair_sc_4t,
-  __pair_sc_4u,
-  __pair_sc_4v,
-  __pair_sc_4w,
-  __pair_sc_4x,
-  __pair_sc_4y,
-  __pair_sc_4z,
-  __pair_sc_50,
-  __pair_sc_51,
-  __pair_sc_52,
-  __pair_sc_53,
-  __pair_sc_54,
-  __pair_sc_55,
-  __pair_sc_56,
-  __pair_sc_57,
-  __pair_sc_58,
-  __pair_sc_59,
-  __pair_sc_5a,
-  __pair_sc_5b,
-  __pair_sc_5c,
-  __pair_sc_5d,
-  __pair_sc_5e,
-  __pair_sc_5f,
-  __pair_sc_5g,
-  __pair_sc_5h,
-  __pair_sc_5i,
-  __pair_sc_5j,
-  __pair_sc_5k,
-  __pair_sc_5l,
-  __pair_sc_5m,
-  __pair_sc_5n,
-  __pair_sc_5o,
-  __pair_sc_5p,
-  __pair_sc_5q,
-  __pair_sc_5r,
-  __pair_sc_5s,
-  __pair_sc_5t,
-  __pair_sc_5u,
-  __pair_sc_5v,
-  __pair_sc_5w,
-  __pair_sc_5x,
-  __pair_sc_5y,
-  __pair_sc_5z,
-  __pair_sc_60,
-  __pair_sc_61,
-  __pair_sc_62,
-  __pair_sc_63,
-  __pair_sc_64,
-  __pair_sc_65,
-  __pair_sc_66,
-  __pair_sc_67,
-  __pair_sc_68,
-  __pair_sc_69,
-  __pair_sc_6a,
-  __pair_sc_6b,
-  __pair_sc_6c,
-  __pair_sc_6d,
-  __pair_sc_6e,
-  __pair_sc_6f,
-  __pair_sc_6g,
-  __pair_sc_6h,
-  __pair_sc_6i,
-  __pair_sc_6j,
-  __pair_sc_6k,
-  __pair_sc_6l,
-  __pair_sc_6m,
-  __pair_sc_6n,
-  __pair_sc_6o,
-  __pair_sc_6p,
-  __pair_sc_6q,
-  __pair_sc_6r,
-  __pair_sc_6s,
-  __pair_sc_6t,
-  __pair_sc_6u,
-  __pair_sc_6v,
-  __pair_sc_6w,
-  __pair_sc_6x,
-  __pair_sc_6y,
-  __pair_sc_6z,
-  __pair_sc_70,
-  __pair_sc_71,
-  __pair_sc_72,
-  __pair_sc_73,
-  __pair_sc_74,
-  __pair_sc_75,
-  __pair_sc_76,
-  __pair_sc_77,
-  __pair_sc_78,
-  __pair_sc_79,
-  __pair_sc_7a,
-  __pair_sc_7b,
-  __pair_sc_7c,
-  __pair_sc_7d,
-  __pair_sc_7e,
-  __pair_sc_7f,
-  __pair_sc_7g,
-  __pair_sc_7h,
-  __pair_sc_7i,
-  __pair_sc_7j,
-  __pair_sc_7k,
-  __pair_sc_7l,
-  __pair_sc_7m,
-  __pair_sc_7n,
-  __pair_sc_7o,
-  __pair_sc_7p,
-  __pair_sc_7q,
-  __pair_sc_7r,
-  __pair_sc_7s,
-  __pair_sc_7t,
-  __pair_sc_7u,
-  __pair_sc_7v,
-  __pair_sc_7w,
-  __pair_sc_7x,
-  __pair_sc_7y,
-  __pair_sc_7z,
-  __pair_sc_80,
-  __pair_sc_81,
-  __pair_sc_82,
-  __pair_sc_83,
-  __pair_sc_84,
-  __pair_sc_85,
-  __pair_sc_86,
-  __pair_sc_87,
-  __pair_sc_88,
-  __pair_sc_89,
-  __pair_sc_8a,
-  __pair_sc_8b,
-  __pair_sc_8c,
-  __pair_sc_8d,
-  __pair_sc_8e,
-  __pair_sc_8f,
-  __pair_sc_8g,
-  __pair_sc_8h,
-  __pair_sc_8i,
-  __pair_sc_8j,
-  __pair_sc_8k,
-  __pair_sc_8l,
-  __pair_sc_8m,
-  __pair_sc_8n,
-  __pair_sc_8o,
-  __pair_sc_8p,
-  __pair_sc_8q,
-  __pair_sc_8r,
-  __pair_sc_8s,
-  __pair_sc_8t,
-  __pair_sc_8u,
-  __pair_sc_8v,
-  __pair_sc_8w,
-  __pair_sc_8x,
-  __pair_sc_8y,
-  __pair_sc_8z,
-  __pair_sc_90,
-  __pair_sc_91,
-  __pair_sc_92,
-  __pair_sc_93,
-  __pair_sc_94,
-  __pair_sc_95,
-  __pair_sc_96,
-  __pair_sc_97,
-  __pair_sc_98,
-  __pair_sc_99,
-  __pair_sc_9a,
-  __pair_sc_9b,
-  __pair_sc_9c,
-  __pair_sc_9d,
-  __pair_sc_9e,
-  __pair_sc_9f,
-  __pair_sc_9g,
-  __pair_sc_9h,
-  __pair_sc_9i,
-  __pair_sc_9j,
-  __pair_sc_9k,
-  __pair_sc_9l,
-  __pair_sc_9m,
-  __pair_sc_9n,
-  __pair_sc_9o,
-  __pair_sc_9p,
-  __pair_sc_9q,
-  __pair_sc_9r,
-  __pair_sc_9s,
-  __pair_sc_9t,
-  __pair_sc_9u,
-  __pair_sc_9v,
-  __pair_sc_9w,
-  __pair_sc_9x,
-  __pair_sc_9y,
-  __pair_sc_9z,
-  __pair_sc_a0,
-  __pair_sc_a1,
-  __pair_sc_a2,
-  __pair_sc_a3,
-  __pair_sc_a4,
-  __pair_sc_a5,
-  __pair_sc_a6,
-  __pair_sc_a7,
-  __pair_sc_a8,
-  __pair_sc_a9,
-  __pair_sc_aa,
-  __pair_sc_ab,
-  __pair_sc_ac,
-  __pair_sc_ad,
-  __pair_sc_ae,
-  __pair_sc_af,
-  __pair_sc_ag,
-  __pair_sc_ah,
-  __pair_sc_ai,
-  __pair_sc_aj,
-  __pair_sc_ak,
-  __pair_sc_al,
-  __pair_sc_am,
-  __pair_sc_an,
-  __pair_sc_ao,
-  __pair_sc_ap,
-  __pair_sc_aq,
-  __pair_sc_ar,
-  __pair_sc_as,
-  __pair_sc_at,
-  __pair_sc_au,
-  __pair_sc_av,
-  __pair_sc_aw,
-  __pair_sc_ax,
-  __pair_sc_ay,
-  __pair_sc_az,
-  __pair_sc_b0,
-  __pair_sc_b1,
-  __pair_sc_b2,
-  __pair_sc_b3,
-  __pair_sc_b4,
-  __pair_sc_b5,
-  __pair_sc_b6,
-  __pair_sc_b7,
-  __pair_sc_b8,
-  __pair_sc_b9,
-  __pair_sc_ba,
-  __pair_sc_bb,
-  __pair_sc_bc,
-  __pair_sc_bd,
-  __pair_sc_be,
-  __pair_sc_bf,
-  __pair_sc_bg,
-  __pair_sc_bh,
-  __pair_sc_bi,
-  __pair_sc_bj,
-  __pair_sc_bk,
-  __pair_sc_bl,
-  __pair_sc_bm,
-  __pair_sc_bn,
-  __pair_sc_bo,
-  __pair_sc_bp,
-  __pair_sc_bq,
-  __pair_sc_br,
-  __pair_sc_bs,
-  __pair_sc_bt,
-  __pair_sc_bu,
-  __pair_sc_bv,
-  __pair_sc_bw,
-  __pair_sc_bx,
-  __pair_sc_by,
-  __pair_sc_bz,
-  __pair_sc_c0,
-  __pair_sc_c1,
-  __pair_sc_c2,
-  __pair_sc_c3,
-  __pair_sc_c4,
-  __pair_sc_c5,
-  __pair_sc_c6,
-  __pair_sc_c7,
-  __pair_sc_c8,
-  __pair_sc_c9,
-  __pair_sc_ca,
-  __pair_sc_cb,
-  __pair_sc_cc,
-  __pair_sc_cd,
-  __pair_sc_ce,
-  __pair_sc_cf,
-  __pair_sc_cg,
-  __pair_sc_ch,
-  __pair_sc_ci,
-  __pair_sc_cj,
-  __pair_sc_ck,
-  __pair_sc_cl,
-  __pair_sc_cm,
-  __pair_sc_cn,
-  __pair_sc_co,
-  __pair_sc_cp,
-  __pair_sc_cq,
-  __pair_sc_cr,
-  __pair_sc_cs,
-  __pair_sc_ct,
-  __pair_sc_cu,
-  __pair_sc_cv,
-  __pair_sc_cw,
-  __pair_sc_cx,
-  __pair_sc_cy,
-  __pair_sc_cz,
-  __pair_sc_d0,
-  __pair_sc_d1,
-  __pair_sc_d2,
-  __pair_sc_d3,
-  __pair_sc_d4,
-  __pair_sc_d5,
-  __pair_sc_d6,
-  __pair_sc_d7,
-  __pair_sc_d8,
-  __pair_sc_d9,
-  __pair_sc_da,
-  __pair_sc_db,
-  __pair_sc_dc,
-  __pair_sc_dd,
-  __pair_sc_de,
-  __pair_sc_df,
-  __pair_sc_dg,
-  __pair_sc_dh,
-  __pair_sc_di,
-  __pair_sc_dj,
-  __pair_sc_dk,
-  __pair_sc_dl,
-  __pair_sc_dm,
-  __pair_sc_dn,
-  __pair_sc_do,
-  __pair_sc_dp,
-  __pair_sc_dq,
-  __pair_sc_dr,
-  __pair_sc_ds,
-  __pair_sc_dt,
-  __pair_sc_du,
-  __pair_sc_dv,
-  __pair_sc_dw,
-  __pair_sc_dx,
-  __pair_sc_dy,
-  __pair_sc_dz,
-  __pair_sc_e0,
-  __pair_sc_e1,
-  __pair_sc_e2,
-  __pair_sc_e3,
-  __pair_sc_e4,
-  __pair_sc_e5,
-  __pair_sc_e6,
-  __pair_sc_e7,
-  __pair_sc_e8,
-  __pair_sc_e9,
-  __pair_sc_ea,
-  __pair_sc_eb,
-  __pair_sc_ec,
-  __pair_sc_ed,
-  __pair_sc_ee,
-  __pair_sc_ef,
-  __pair_sc_eg,
-  __pair_sc_eh,
-  __pair_sc_ei,
-  __pair_sc_ej,
-  __pair_sc_ek,
-  __pair_sc_el,
-  __pair_sc_em,
-  __pair_sc_en,
-  __pair_sc_eo,
-  __pair_sc_ep,
-  __pair_sc_eq,
-  __pair_sc_er,
-  __pair_sc_es,
-  __pair_sc_et,
-  __pair_sc_eu,
-  __pair_sc_ev,
-  __pair_sc_ew,
-  __pair_sc_ex,
-  __pair_sc_ey,
-  __pair_sc_ez,
-  __pair_sc_f0,
-  __pair_sc_f1,
-  __pair_sc_f2,
-  __pair_sc_f3,
-  __pair_sc_f4,
-  __pair_sc_f5,
-  __pair_sc_f6,
-  __pair_sc_f7,
-  __pair_sc_f8,
-  __pair_sc_f9,
-  __pair_sc_fa,
-  __pair_sc_fb,
-  __pair_sc_fc,
-  __pair_sc_fd,
-  __pair_sc_fe,
-  __pair_sc_ff,
-  __pair_sc_fg,
-  __pair_sc_fh,
-  __pair_sc_fi,
-  __pair_sc_fj,
-  __pair_sc_fk,
-  __pair_sc_fl,
-  __pair_sc_fm,
-  __pair_sc_fn,
-  __pair_sc_fo,
-  __pair_sc_fp,
-  __pair_sc_fq,
-  __pair_sc_fr,
-  __pair_sc_fs,
-  __pair_sc_ft,
-  __pair_sc_fu,
-  __pair_sc_fv,
-  __pair_sc_fw,
-  __pair_sc_fx,
-  __pair_sc_fy,
-  __pair_sc_fz,
-  __pair_sc_g0,
-  __pair_sc_g1,
-  __pair_sc_g2,
-  __pair_sc_g3,
-  __pair_sc_g4,
-  __pair_sc_g5,
-  __pair_sc_g6,
-  __pair_sc_g7,
-  __pair_sc_g8,
-  __pair_sc_g9,
-  __pair_sc_ga,
-  __pair_sc_gb,
-  __pair_sc_gc,
-  __pair_sc_gd,
-  __pair_sc_ge,
-  __pair_sc_gf,
-  __pair_sc_gg,
-  __pair_sc_gh,
-  __pair_sc_gi,
-  __pair_sc_gj,
-  __pair_sc_gk,
-  __pair_sc_gl,
-  __pair_sc_gm,
-  __pair_sc_gn,
-  __pair_sc_go,
-  __pair_sc_gp,
-  __pair_sc_gq,
-  __pair_sc_gr,
-  __pair_sc_gs,
-  __pair_sc_gt,
-  __pair_sc_gu,
-  __pair_sc_gv,
-  __pair_sc_gw,
-  __pair_sc_gx,
-  __pair_sc_gy,
-  __pair_sc_gz,
-  __pair_sc_h0,
-  __pair_sc_h1,
-  __pair_sc_h2,
-  __pair_sc_h3,
-  __pair_sc_h4,
-  __pair_sc_h5,
-  __pair_sc_h6,
-  __pair_sc_h7,
-  __pair_sc_h8,
-  __pair_sc_h9,
-  __pair_sc_ha,
-  __pair_sc_hb,
-  __pair_sc_hc,
-  __pair_sc_hd,
-  __pair_sc_he,
-  __pair_sc_hf,
-  __pair_sc_hg,
-  __pair_sc_hh,
-  __pair_sc_hi,
-  __pair_sc_hj,
-  __pair_sc_hk,
-  __pair_sc_hl,
-  __pair_sc_hm,
-  __pair_sc_hn,
-  __pair_sc_ho,
-  __pair_sc_hp,
-  __pair_sc_hq,
-  __pair_sc_hr,
-  __pair_sc_hs,
-  __pair_sc_ht,
-  __pair_sc_hu,
-  __pair_sc_hv,
-  __pair_sc_hw,
-  __pair_sc_hx,
-  __pair_sc_hy,
-  __pair_sc_hz,
-  __pair_sc_i0,
-  __pair_sc_i1,
-  __pair_sc_i2,
-  __pair_sc_i3,
-  __pair_sc_i4,
-  __pair_sc_i5,
-  __pair_sc_i6,
-  __pair_sc_i7,
-  __pair_sc_i8,
-  __pair_sc_i9,
-  __pair_sc_ia,
-  __pair_sc_ib,
-  __pair_sc_ic,
-  __pair_sc_id,
-  __pair_sc_ie,
-  __pair_sc_if,
-  __pair_sc_ig,
-  __pair_sc_ih,
-  __pair_sc_ii,
-  __pair_sc_ij,
-  __pair_sc_ik,
-  __pair_sc_il,
-  __pair_sc_im,
-  __pair_sc_in,
-  __pair_sc_io,
-  __pair_sc_ip,
-  __pair_sc_iq,
-  __pair_sc_ir,
-  __pair_sc_is,
-  __pair_sc_it,
-  __pair_sc_iu,
-  __pair_sc_iv,
-  __pair_sc_iw,
-  __pair_sc_ix,
-  __pair_sc_iy,
-  __pair_sc_iz,
-  __pair_sc_j0,
-  __pair_sc_j1,
-  __pair_sc_j2,
-  __pair_sc_j3,
-  __pair_sc_j4,
-  __pair_sc_j5,
-  __pair_sc_j6,
-  __pair_sc_j7,
-  __pair_sc_j8,
-  __pair_sc_j9,
-  __pair_sc_ja,
-  __pair_sc_jb,
-  __pair_sc_jc,
-  __pair_sc_jd,
-  __pair_sc_je,
-  __pair_sc_jf,
-  __pair_sc_jg,
-  __pair_sc_jh,
-  __pair_sc_ji,
-  __pair_sc_jj,
-  __pair_sc_jk,
-  __pair_sc_jl,
-  __pair_sc_jm,
-  __pair_sc_jn,
-  __pair_sc_jo,
-  __pair_sc_jp,
-  __pair_sc_jq,
-  __pair_sc_jr,
-  __pair_sc_js,
-  __pair_sc_jt,
-  __pair_sc_ju,
-  __pair_sc_jv,
-  __pair_sc_jw,
-  __pair_sc_jx,
-  __pair_sc_jy,
-  __pair_sc_jz,
-  __pair_sc_k0,
-  __pair_sc_k1,
-  __pair_sc_k2,
-  __pair_sc_k3,
-  __pair_sc_k4,
-  __pair_sc_k5,
-  __pair_sc_k6,
-  __pair_sc_k7,
-  __pair_sc_k8,
-  __pair_sc_k9,
-  __pair_sc_ka,
-  __pair_sc_kb,
-  __pair_sc_kc,
-  __pair_sc_kd,
-  __pair_sc_ke,
-  __pair_sc_kf,
-  __pair_sc_kg,
-  __pair_sc_kh,
-  __pair_sc_ki,
-  __pair_sc_kj,
-  __pair_sc_kk,
-  __pair_sc_kl,
-  __pair_sc_km,
-  __pair_sc_kn,
-  __pair_sc_ko,
-  __pair_sc_kp,
-  __pair_sc_kq,
-  __pair_sc_kr,
-  __pair_sc_ks,
-  __pair_sc_kt,
-  __pair_sc_ku,
-  __pair_sc_kv,
-  __pair_sc_kw,
-  __pair_sc_kx,
-  __pair_sc_ky,
-  __pair_sc_kz,
-  __pair_sc_l0,
-  __pair_sc_l1,
-  __pair_sc_l2,
-  __pair_sc_l3,
-  __pair_sc_l4,
-  __pair_sc_l5,
-  __pair_sc_l6,
-  __pair_sc_l7,
-  __pair_sc_l8,
-  __pair_sc_l9,
-  __pair_sc_la,
-  __pair_sc_lb,
-  __pair_sc_lc,
-  __pair_sc_ld,
-  __pair_sc_le,
-  __pair_sc_lf,
-  __pair_sc_lg,
-  __pair_sc_lh,
-  __pair_sc_li,
-  __pair_sc_lj,
-  __pair_sc_lk,
-  __pair_sc_ll,
-  __pair_sc_lm,
-  __pair_sc_ln,
-  __pair_sc_lo,
-  __pair_sc_lp,
-  __pair_sc_lq,
-  __pair_sc_lr,
-  __pair_sc_ls,
-  __pair_sc_lt,
-  __pair_sc_lu,
-  __pair_sc_lv,
-  __pair_sc_lw,
-  __pair_sc_lx,
-  __pair_sc_ly,
-  __pair_sc_lz,
-  __pair_sc_m0,
-  __pair_sc_m1,
-  __pair_sc_m2,
-  __pair_sc_m3,
-  __pair_sc_m4,
-  __pair_sc_m5,
-  __pair_sc_m6,
-  __pair_sc_m7,
-  __pair_sc_m8,
-  __pair_sc_m9,
-  __pair_sc_ma,
-  __pair_sc_mb,
-  __pair_sc_mc,
-  __pair_sc_md,
-  __pair_sc_me,
-  __pair_sc_mf,
-  __pair_sc_mg,
-  __pair_sc_mh,
-  __pair_sc_mi,
-  __pair_sc_mj,
-  __pair_sc_mk,
-  __pair_sc_ml,
-  __pair_sc_mm,
-  __pair_sc_mn,
-  __pair_sc_mo,
-  __pair_sc_mp,
-  __pair_sc_mq,
-  __pair_sc_mr,
-  __pair_sc_ms,
-  __pair_sc_mt,
-  __pair_sc_mu,
-  __pair_sc_mv,
-  __pair_sc_mw,
-  __pair_sc_mx,
-  __pair_sc_my,
-  __pair_sc_mz,
-  __pair_sc_n0,
-  __pair_sc_n1,
-  __pair_sc_n2,
-  __pair_sc_n3,
-  __pair_sc_n4,
-  __pair_sc_n5,
-  __pair_sc_n6,
-  __pair_sc_n7,
-  __pair_sc_n8,
-  __pair_sc_n9,
-  __pair_sc_na,
-  __pair_sc_nb,
-  __pair_sc_nc,
-  __pair_sc_nd,
-  __pair_sc_ne,
-  __pair_sc_nf,
-  __pair_sc_ng,
-  __pair_sc_nh,
-  __pair_sc_ni,
-  __pair_sc_nj,
-  __pair_sc_nk,
-  __pair_sc_nl,
-  __pair_sc_nm,
-  __pair_sc_nn,
-  __pair_sc_no,
-  __pair_sc_np,
-  __pair_sc_nq,
-  __pair_sc_nr,
-  __pair_sc_ns,
-  __pair_sc_nt,
-  __pair_sc_nu,
-  __pair_sc_nv,
-  __pair_sc_nw,
-  __pair_sc_nx,
-  __pair_sc_ny,
-  __pair_sc_nz,
-  __pair_sc_o0,
-  __pair_sc_o1,
-  __pair_sc_o2,
-  __pair_sc_o3,
-  __pair_sc_o4,
-  __pair_sc_o5,
-  __pair_sc_o6,
-  __pair_sc_o7,
-  __pair_sc_o8,
-  __pair_sc_o9,
-  __pair_sc_oa,
-  __pair_sc_ob,
-  __pair_sc_oc,
-  __pair_sc_od,
-  __pair_sc_oe,
-  __pair_sc_of,
-  __pair_sc_og,
-  __pair_sc_oh,
-  __pair_sc_oi,
-  __pair_sc_oj,
-  __pair_sc_ok,
-  __pair_sc_ol,
-  __pair_sc_om,
-  __pair_sc_on,
-  __pair_sc_oo,
-  __pair_sc_op,
-  __pair_sc_oq,
-  __pair_sc_or,
-  __pair_sc_os,
-  __pair_sc_ot,
-  __pair_sc_ou,
-  __pair_sc_ov,
-  __pair_sc_ow,
+private let __sc_pair_0: _T1 = (0xaa, .latin)
+private let __sc_pair_1: _T1 = (0xba, .latin)
+private let __sc_pair_2: _T1 = (0xd7, .common)
+private let __sc_pair_3: _T1 = (0xf7, .common)
+private let __sc_pair_4: _T1 = (0x374, .common)
+private let __sc_pair_5: _T1 = (0x37e, .common)
+private let __sc_pair_6: _T1 = (0x37f, .greek)
+private let __sc_pair_7: _T1 = (0x384, .greek)
+private let __sc_pair_8: _T1 = (0x385, .common)
+private let __sc_pair_9: _T1 = (0x386, .greek)
+private let __sc_pair_a: _T1 = (0x387, .common)
+private let __sc_pair_b: _T1 = (0x38c, .greek)
+private let __sc_pair_c: _T1 = (0x589, .common)
+private let __sc_pair_d: _T1 = (0x58a, .armenian)
+private let __sc_pair_e: _T1 = (0x605, .common)
+private let __sc_pair_f: _T1 = (0x60c, .common)
+private let __sc_pair_g: _T1 = (0x61b, .common)
+private let __sc_pair_h: _T1 = (0x61c, .arabic)
+private let __sc_pair_i: _T1 = (0x61e, .arabic)
+private let __sc_pair_j: _T1 = (0x61f, .common)
+private let __sc_pair_k: _T1 = (0x640, .common)
+private let __sc_pair_l: _T1 = (0x670, .inherited)
+private let __sc_pair_m: _T1 = (0x6dd, .common)
+private let __sc_pair_n: _T1 = (0x85e, .mandaic)
+private let __sc_pair_o: _T1 = (0x8e2, .common)
+private let __sc_pair_p: _T1 = (0x9b2, .bengali)
+private let __sc_pair_q: _T1 = (0x9d7, .bengali)
+private let __sc_pair_r: _T1 = (0xa3c, .gurmukhi)
+private let __sc_pair_s: _T1 = (0xa51, .gurmukhi)
+private let __sc_pair_t: _T1 = (0xa5e, .gurmukhi)
+private let __sc_pair_u: _T1 = (0xad0, .gujarati)
+private let __sc_pair_v: _T1 = (0xb9c, .tamil)
+private let __sc_pair_w: _T1 = (0xbd0, .tamil)
+private let __sc_pair_x: _T1 = (0xbd7, .tamil)
+private let __sc_pair_y: _T1 = (0xcde, .kannada)
+private let __sc_pair_z: _T1 = (0xdbd, .sinhala)
+private let __sc_pair_10: _T1 = (0xdca, .sinhala)
+private let __sc_pair_11: _T1 = (0xdd6, .sinhala)
+private let __sc_pair_12: _T1 = (0xe3f, .common)
+private let __sc_pair_13: _T1 = (0xe84, .lao)
+private let __sc_pair_14: _T1 = (0xea5, .lao)
+private let __sc_pair_15: _T1 = (0xec6, .lao)
+private let __sc_pair_16: _T1 = (0x10c7, .georgian)
+private let __sc_pair_17: _T1 = (0x10cd, .georgian)
+private let __sc_pair_18: _T1 = (0x10fb, .common)
+private let __sc_pair_19: _T1 = (0x1258, .ethiopic)
+private let __sc_pair_1a: _T1 = (0x12c0, .ethiopic)
+private let __sc_pair_1b: _T1 = (0x1804, .mongolian)
+private let __sc_pair_1c: _T1 = (0x1805, .common)
+private let __sc_pair_1d: _T1 = (0x1940, .limbu)
+private let __sc_pair_1e: _T1 = (0x1cd3, .common)
+private let __sc_pair_1f: _T1 = (0x1ce1, .common)
+private let __sc_pair_1g: _T1 = (0x1ced, .inherited)
+private let __sc_pair_1h: _T1 = (0x1cf4, .inherited)
+private let __sc_pair_1i: _T1 = (0x1cfa, .common)
+private let __sc_pair_1j: _T1 = (0x1d2b, .cyrillic)
+private let __sc_pair_1k: _T1 = (0x1d78, .cyrillic)
+private let __sc_pair_1l: _T1 = (0x1dbf, .greek)
+private let __sc_pair_1m: _T1 = (0x1f59, .greek)
+private let __sc_pair_1n: _T1 = (0x1f5b, .greek)
+private let __sc_pair_1o: _T1 = (0x1f5d, .greek)
+private let __sc_pair_1p: _T1 = (0x2071, .latin)
+private let __sc_pair_1q: _T1 = (0x207f, .latin)
+private let __sc_pair_1r: _T1 = (0x2126, .greek)
+private let __sc_pair_1s: _T1 = (0x2132, .latin)
+private let __sc_pair_1t: _T1 = (0x214e, .latin)
+private let __sc_pair_1u: _T1 = (0x2d27, .georgian)
+private let __sc_pair_1v: _T1 = (0x2d2d, .georgian)
+private let __sc_pair_1w: _T1 = (0x2d7f, .tifinagh)
+private let __sc_pair_1x: _T1 = (0x3005, .han)
+private let __sc_pair_1y: _T1 = (0x3006, .common)
+private let __sc_pair_1z: _T1 = (0x3007, .han)
+private let __sc_pair_20: _T1 = (0x30a0, .common)
+private let __sc_pair_21: _T1 = (0x32ff, .common)
+private let __sc_pair_22: _T1 = (0xa92e, .common)
+private let __sc_pair_23: _T1 = (0xa92f, .kayahLi)
+private let __sc_pair_24: _T1 = (0xa95f, .rejang)
+private let __sc_pair_25: _T1 = (0xa9cf, .common)
+private let __sc_pair_26: _T1 = (0xab5b, .common)
+private let __sc_pair_27: _T1 = (0xab65, .greek)
+private let __sc_pair_28: _T1 = (0xfb3e, .hebrew)
+private let __sc_pair_29: _T1 = (0xfeff, .common)
+private let __sc_pair_2a: _T1 = (0xff70, .common)
+private let __sc_pair_2b: _T1 = (0x101a0, .greek)
+private let __sc_pair_2c: _T1 = (0x101fd, .inherited)
+private let __sc_pair_2d: _T1 = (0x102e0, .inherited)
+private let __sc_pair_2e: _T1 = (0x1039f, .ugaritic)
+private let __sc_pair_2f: _T1 = (0x1056f, .caucasianAlbanian)
+private let __sc_pair_2g: _T1 = (0x10808, .cypriot)
+private let __sc_pair_2h: _T1 = (0x1083c, .cypriot)
+private let __sc_pair_2i: _T1 = (0x1083f, .cypriot)
+private let __sc_pair_2j: _T1 = (0x1091f, .phoenician)
+private let __sc_pair_2k: _T1 = (0x1093f, .lydian)
+private let __sc_pair_2l: _T1 = (0x1107f, .brahmi)
+private let __sc_pair_2m: _T1 = (0x110cd, .kaithi)
+private let __sc_pair_2n: _T1 = (0x11288, .multani)
+private let __sc_pair_2o: _T1 = (0x1133b, .inherited)
+private let __sc_pair_2p: _T1 = (0x11350, .grantha)
+private let __sc_pair_2q: _T1 = (0x11357, .grantha)
+private let __sc_pair_2r: _T1 = (0x1145b, .newa)
+private let __sc_pair_2s: _T1 = (0x118ff, .warangCiti)
+private let __sc_pair_2t: _T1 = (0x11d3a, .masaramGondi)
+private let __sc_pair_2u: _T1 = (0x11fff, .tamil)
+private let __sc_pair_2v: _T1 = (0x16fe0, .tangut)
+private let __sc_pair_2w: _T1 = (0x16fe1, .nushu)
+private let __sc_pair_2x: _T1 = (0x1b000, .katakana)
+private let __sc_pair_2y: _T1 = (0x1d4a2, .common)
+private let __sc_pair_2z: _T1 = (0x1d4bb, .common)
+private let __sc_pair_30: _T1 = (0x1d546, .common)
+private let __sc_pair_31: _T1 = (0x1e2ff, .wancho)
+private let __sc_pair_32: _T1 = (0x1ee24, .arabic)
+private let __sc_pair_33: _T1 = (0x1ee27, .arabic)
+private let __sc_pair_34: _T1 = (0x1ee39, .arabic)
+private let __sc_pair_35: _T1 = (0x1ee3b, .arabic)
+private let __sc_pair_36: _T1 = (0x1ee42, .arabic)
+private let __sc_pair_37: _T1 = (0x1ee47, .arabic)
+private let __sc_pair_38: _T1 = (0x1ee49, .arabic)
+private let __sc_pair_39: _T1 = (0x1ee4b, .arabic)
+private let __sc_pair_3a: _T1 = (0x1ee54, .arabic)
+private let __sc_pair_3b: _T1 = (0x1ee57, .arabic)
+private let __sc_pair_3c: _T1 = (0x1ee59, .arabic)
+private let __sc_pair_3d: _T1 = (0x1ee5b, .arabic)
+private let __sc_pair_3e: _T1 = (0x1ee5d, .arabic)
+private let __sc_pair_3f: _T1 = (0x1ee5f, .arabic)
+private let __sc_pair_3g: _T1 = (0x1ee64, .arabic)
+private let __sc_pair_3h: _T1 = (0x1ee7e, .arabic)
+private let __sc_pair_3i: _T1 = (0x1f200, .hiragana)
+private let __sc_pair_3j: _T1 = (0xe0001, .common)
+private let __sc_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWithValues: [
+  __sc_pair_0,
+  __sc_pair_1,
+  __sc_pair_2,
+  __sc_pair_3,
+  __sc_pair_4,
+  __sc_pair_5,
+  __sc_pair_6,
+  __sc_pair_7,
+  __sc_pair_8,
+  __sc_pair_9,
+  __sc_pair_a,
+  __sc_pair_b,
+  __sc_pair_c,
+  __sc_pair_d,
+  __sc_pair_e,
+  __sc_pair_f,
+  __sc_pair_g,
+  __sc_pair_h,
+  __sc_pair_i,
+  __sc_pair_j,
+  __sc_pair_k,
+  __sc_pair_l,
+  __sc_pair_m,
+  __sc_pair_n,
+  __sc_pair_o,
+  __sc_pair_p,
+  __sc_pair_q,
+  __sc_pair_r,
+  __sc_pair_s,
+  __sc_pair_t,
+  __sc_pair_u,
+  __sc_pair_v,
+  __sc_pair_w,
+  __sc_pair_x,
+  __sc_pair_y,
+  __sc_pair_z,
+  __sc_pair_10,
+  __sc_pair_11,
+  __sc_pair_12,
+  __sc_pair_13,
+  __sc_pair_14,
+  __sc_pair_15,
+  __sc_pair_16,
+  __sc_pair_17,
+  __sc_pair_18,
+  __sc_pair_19,
+  __sc_pair_1a,
+  __sc_pair_1b,
+  __sc_pair_1c,
+  __sc_pair_1d,
+  __sc_pair_1e,
+  __sc_pair_1f,
+  __sc_pair_1g,
+  __sc_pair_1h,
+  __sc_pair_1i,
+  __sc_pair_1j,
+  __sc_pair_1k,
+  __sc_pair_1l,
+  __sc_pair_1m,
+  __sc_pair_1n,
+  __sc_pair_1o,
+  __sc_pair_1p,
+  __sc_pair_1q,
+  __sc_pair_1r,
+  __sc_pair_1s,
+  __sc_pair_1t,
+  __sc_pair_1u,
+  __sc_pair_1v,
+  __sc_pair_1w,
+  __sc_pair_1x,
+  __sc_pair_1y,
+  __sc_pair_1z,
+  __sc_pair_20,
+  __sc_pair_21,
+  __sc_pair_22,
+  __sc_pair_23,
+  __sc_pair_24,
+  __sc_pair_25,
+  __sc_pair_26,
+  __sc_pair_27,
+  __sc_pair_28,
+  __sc_pair_29,
+  __sc_pair_2a,
+  __sc_pair_2b,
+  __sc_pair_2c,
+  __sc_pair_2d,
+  __sc_pair_2e,
+  __sc_pair_2f,
+  __sc_pair_2g,
+  __sc_pair_2h,
+  __sc_pair_2i,
+  __sc_pair_2j,
+  __sc_pair_2k,
+  __sc_pair_2l,
+  __sc_pair_2m,
+  __sc_pair_2n,
+  __sc_pair_2o,
+  __sc_pair_2p,
+  __sc_pair_2q,
+  __sc_pair_2r,
+  __sc_pair_2s,
+  __sc_pair_2t,
+  __sc_pair_2u,
+  __sc_pair_2v,
+  __sc_pair_2w,
+  __sc_pair_2x,
+  __sc_pair_2y,
+  __sc_pair_2z,
+  __sc_pair_30,
+  __sc_pair_31,
+  __sc_pair_32,
+  __sc_pair_33,
+  __sc_pair_34,
+  __sc_pair_35,
+  __sc_pair_36,
+  __sc_pair_37,
+  __sc_pair_38,
+  __sc_pair_39,
+  __sc_pair_3a,
+  __sc_pair_3b,
+  __sc_pair_3c,
+  __sc_pair_3d,
+  __sc_pair_3e,
+  __sc_pair_3f,
+  __sc_pair_3g,
+  __sc_pair_3h,
+  __sc_pair_3i,
+  __sc_pair_3j,
+])
+private let __sc_rangePair_0: _T2 = (0x0....0x40, .common)
+private let __sc_rangePair_1: _T2 = (0x41....0x5a, .latin)
+private let __sc_rangePair_2: _T2 = (0x5b....0x60, .common)
+private let __sc_rangePair_3: _T2 = (0x61....0x7a, .latin)
+private let __sc_rangePair_4: _T2 = (0x7b....0xa9, .common)
+private let __sc_rangePair_5: _T2 = (0xab....0xb9, .common)
+private let __sc_rangePair_6: _T2 = (0xbb....0xbf, .common)
+private let __sc_rangePair_7: _T2 = (0xc0....0xd6, .latin)
+private let __sc_rangePair_8: _T2 = (0xd8....0xf6, .latin)
+private let __sc_rangePair_9: _T2 = (0xf8....0x2b8, .latin)
+private let __sc_rangePair_a: _T2 = (0x2b9....0x2df, .common)
+private let __sc_rangePair_b: _T2 = (0x2e0....0x2e4, .latin)
+private let __sc_rangePair_c: _T2 = (0x2e5....0x2e9, .common)
+private let __sc_rangePair_d: _T2 = (0x2ea....0x2eb, .bopomofo)
+private let __sc_rangePair_e: _T2 = (0x2ec....0x2ff, .common)
+private let __sc_rangePair_f: _T2 = (0x300....0x36f, .inherited)
+private let __sc_rangePair_g: _T2 = (0x370....0x373, .greek)
+private let __sc_rangePair_h: _T2 = (0x375....0x377, .greek)
+private let __sc_rangePair_i: _T2 = (0x37a....0x37d, .greek)
+private let __sc_rangePair_j: _T2 = (0x388....0x38a, .greek)
+private let __sc_rangePair_k: _T2 = (0x38e....0x3a1, .greek)
+private let __sc_rangePair_l: _T2 = (0x3a3....0x3e1, .greek)
+private let __sc_rangePair_m: _T2 = (0x3e2....0x3ef, .coptic)
+private let __sc_rangePair_n: _T2 = (0x3f0....0x3ff, .greek)
+private let __sc_rangePair_o: _T2 = (0x400....0x484, .cyrillic)
+private let __sc_rangePair_p: _T2 = (0x485....0x486, .inherited)
+private let __sc_rangePair_q: _T2 = (0x487....0x52f, .cyrillic)
+private let __sc_rangePair_r: _T2 = (0x531....0x556, .armenian)
+private let __sc_rangePair_s: _T2 = (0x559....0x588, .armenian)
+private let __sc_rangePair_t: _T2 = (0x58d....0x58f, .armenian)
+private let __sc_rangePair_u: _T2 = (0x591....0x5c7, .hebrew)
+private let __sc_rangePair_v: _T2 = (0x5d0....0x5ea, .hebrew)
+private let __sc_rangePair_w: _T2 = (0x5ef....0x5f4, .hebrew)
+private let __sc_rangePair_x: _T2 = (0x600....0x604, .arabic)
+private let __sc_rangePair_y: _T2 = (0x606....0x60b, .arabic)
+private let __sc_rangePair_z: _T2 = (0x60d....0x61a, .arabic)
+private let __sc_rangePair_10: _T2 = (0x620....0x63f, .arabic)
+private let __sc_rangePair_11: _T2 = (0x641....0x64a, .arabic)
+private let __sc_rangePair_12: _T2 = (0x64b....0x655, .inherited)
+private let __sc_rangePair_13: _T2 = (0x656....0x66f, .arabic)
+private let __sc_rangePair_14: _T2 = (0x671....0x6dc, .arabic)
+private let __sc_rangePair_15: _T2 = (0x6de....0x6ff, .arabic)
+private let __sc_rangePair_16: _T2 = (0x700....0x70d, .syriac)
+private let __sc_rangePair_17: _T2 = (0x70f....0x74a, .syriac)
+private let __sc_rangePair_18: _T2 = (0x74d....0x74f, .syriac)
+private let __sc_rangePair_19: _T2 = (0x750....0x77f, .arabic)
+private let __sc_rangePair_1a: _T2 = (0x780....0x7b1, .thaana)
+private let __sc_rangePair_1b: _T2 = (0x7c0....0x7fa, .nko)
+private let __sc_rangePair_1c: _T2 = (0x7fd....0x7ff, .nko)
+private let __sc_rangePair_1d: _T2 = (0x800....0x82d, .samaritan)
+private let __sc_rangePair_1e: _T2 = (0x830....0x83e, .samaritan)
+private let __sc_rangePair_1f: _T2 = (0x840....0x85b, .mandaic)
+private let __sc_rangePair_1g: _T2 = (0x860....0x86a, .syriac)
+private let __sc_rangePair_1h: _T2 = (0x8a0....0x8b4, .arabic)
+private let __sc_rangePair_1i: _T2 = (0x8b6....0x8bd, .arabic)
+private let __sc_rangePair_1j: _T2 = (0x8d3....0x8e1, .arabic)
+private let __sc_rangePair_1k: _T2 = (0x8e3....0x8ff, .arabic)
+private let __sc_rangePair_1l: _T2 = (0x900....0x950, .devanagari)
+private let __sc_rangePair_1m: _T2 = (0x951....0x954, .inherited)
+private let __sc_rangePair_1n: _T2 = (0x955....0x963, .devanagari)
+private let __sc_rangePair_1o: _T2 = (0x964....0x965, .common)
+private let __sc_rangePair_1p: _T2 = (0x966....0x97f, .devanagari)
+private let __sc_rangePair_1q: _T2 = (0x980....0x983, .bengali)
+private let __sc_rangePair_1r: _T2 = (0x985....0x98c, .bengali)
+private let __sc_rangePair_1s: _T2 = (0x98f....0x990, .bengali)
+private let __sc_rangePair_1t: _T2 = (0x993....0x9a8, .bengali)
+private let __sc_rangePair_1u: _T2 = (0x9aa....0x9b0, .bengali)
+private let __sc_rangePair_1v: _T2 = (0x9b6....0x9b9, .bengali)
+private let __sc_rangePair_1w: _T2 = (0x9bc....0x9c4, .bengali)
+private let __sc_rangePair_1x: _T2 = (0x9c7....0x9c8, .bengali)
+private let __sc_rangePair_1y: _T2 = (0x9cb....0x9ce, .bengali)
+private let __sc_rangePair_1z: _T2 = (0x9dc....0x9dd, .bengali)
+private let __sc_rangePair_20: _T2 = (0x9df....0x9e3, .bengali)
+private let __sc_rangePair_21: _T2 = (0x9e6....0x9fe, .bengali)
+private let __sc_rangePair_22: _T2 = (0xa01....0xa03, .gurmukhi)
+private let __sc_rangePair_23: _T2 = (0xa05....0xa0a, .gurmukhi)
+private let __sc_rangePair_24: _T2 = (0xa0f....0xa10, .gurmukhi)
+private let __sc_rangePair_25: _T2 = (0xa13....0xa28, .gurmukhi)
+private let __sc_rangePair_26: _T2 = (0xa2a....0xa30, .gurmukhi)
+private let __sc_rangePair_27: _T2 = (0xa32....0xa33, .gurmukhi)
+private let __sc_rangePair_28: _T2 = (0xa35....0xa36, .gurmukhi)
+private let __sc_rangePair_29: _T2 = (0xa38....0xa39, .gurmukhi)
+private let __sc_rangePair_2a: _T2 = (0xa3e....0xa42, .gurmukhi)
+private let __sc_rangePair_2b: _T2 = (0xa47....0xa48, .gurmukhi)
+private let __sc_rangePair_2c: _T2 = (0xa4b....0xa4d, .gurmukhi)
+private let __sc_rangePair_2d: _T2 = (0xa59....0xa5c, .gurmukhi)
+private let __sc_rangePair_2e: _T2 = (0xa66....0xa76, .gurmukhi)
+private let __sc_rangePair_2f: _T2 = (0xa81....0xa83, .gujarati)
+private let __sc_rangePair_2g: _T2 = (0xa85....0xa8d, .gujarati)
+private let __sc_rangePair_2h: _T2 = (0xa8f....0xa91, .gujarati)
+private let __sc_rangePair_2i: _T2 = (0xa93....0xaa8, .gujarati)
+private let __sc_rangePair_2j: _T2 = (0xaaa....0xab0, .gujarati)
+private let __sc_rangePair_2k: _T2 = (0xab2....0xab3, .gujarati)
+private let __sc_rangePair_2l: _T2 = (0xab5....0xab9, .gujarati)
+private let __sc_rangePair_2m: _T2 = (0xabc....0xac5, .gujarati)
+private let __sc_rangePair_2n: _T2 = (0xac7....0xac9, .gujarati)
+private let __sc_rangePair_2o: _T2 = (0xacb....0xacd, .gujarati)
+private let __sc_rangePair_2p: _T2 = (0xae0....0xae3, .gujarati)
+private let __sc_rangePair_2q: _T2 = (0xae6....0xaf1, .gujarati)
+private let __sc_rangePair_2r: _T2 = (0xaf9....0xaff, .gujarati)
+private let __sc_rangePair_2s: _T2 = (0xb01....0xb03, .oriya)
+private let __sc_rangePair_2t: _T2 = (0xb05....0xb0c, .oriya)
+private let __sc_rangePair_2u: _T2 = (0xb0f....0xb10, .oriya)
+private let __sc_rangePair_2v: _T2 = (0xb13....0xb28, .oriya)
+private let __sc_rangePair_2w: _T2 = (0xb2a....0xb30, .oriya)
+private let __sc_rangePair_2x: _T2 = (0xb32....0xb33, .oriya)
+private let __sc_rangePair_2y: _T2 = (0xb35....0xb39, .oriya)
+private let __sc_rangePair_2z: _T2 = (0xb3c....0xb44, .oriya)
+private let __sc_rangePair_30: _T2 = (0xb47....0xb48, .oriya)
+private let __sc_rangePair_31: _T2 = (0xb4b....0xb4d, .oriya)
+private let __sc_rangePair_32: _T2 = (0xb56....0xb57, .oriya)
+private let __sc_rangePair_33: _T2 = (0xb5c....0xb5d, .oriya)
+private let __sc_rangePair_34: _T2 = (0xb5f....0xb63, .oriya)
+private let __sc_rangePair_35: _T2 = (0xb66....0xb77, .oriya)
+private let __sc_rangePair_36: _T2 = (0xb82....0xb83, .tamil)
+private let __sc_rangePair_37: _T2 = (0xb85....0xb8a, .tamil)
+private let __sc_rangePair_38: _T2 = (0xb8e....0xb90, .tamil)
+private let __sc_rangePair_39: _T2 = (0xb92....0xb95, .tamil)
+private let __sc_rangePair_3a: _T2 = (0xb99....0xb9a, .tamil)
+private let __sc_rangePair_3b: _T2 = (0xb9e....0xb9f, .tamil)
+private let __sc_rangePair_3c: _T2 = (0xba3....0xba4, .tamil)
+private let __sc_rangePair_3d: _T2 = (0xba8....0xbaa, .tamil)
+private let __sc_rangePair_3e: _T2 = (0xbae....0xbb9, .tamil)
+private let __sc_rangePair_3f: _T2 = (0xbbe....0xbc2, .tamil)
+private let __sc_rangePair_3g: _T2 = (0xbc6....0xbc8, .tamil)
+private let __sc_rangePair_3h: _T2 = (0xbca....0xbcd, .tamil)
+private let __sc_rangePair_3i: _T2 = (0xbe6....0xbfa, .tamil)
+private let __sc_rangePair_3j: _T2 = (0xc00....0xc0c, .telugu)
+private let __sc_rangePair_3k: _T2 = (0xc0e....0xc10, .telugu)
+private let __sc_rangePair_3l: _T2 = (0xc12....0xc28, .telugu)
+private let __sc_rangePair_3m: _T2 = (0xc2a....0xc39, .telugu)
+private let __sc_rangePair_3n: _T2 = (0xc3d....0xc44, .telugu)
+private let __sc_rangePair_3o: _T2 = (0xc46....0xc48, .telugu)
+private let __sc_rangePair_3p: _T2 = (0xc4a....0xc4d, .telugu)
+private let __sc_rangePair_3q: _T2 = (0xc55....0xc56, .telugu)
+private let __sc_rangePair_3r: _T2 = (0xc58....0xc5a, .telugu)
+private let __sc_rangePair_3s: _T2 = (0xc60....0xc63, .telugu)
+private let __sc_rangePair_3t: _T2 = (0xc66....0xc6f, .telugu)
+private let __sc_rangePair_3u: _T2 = (0xc77....0xc7f, .telugu)
+private let __sc_rangePair_3v: _T2 = (0xc80....0xc8c, .kannada)
+private let __sc_rangePair_3w: _T2 = (0xc8e....0xc90, .kannada)
+private let __sc_rangePair_3x: _T2 = (0xc92....0xca8, .kannada)
+private let __sc_rangePair_3y: _T2 = (0xcaa....0xcb3, .kannada)
+private let __sc_rangePair_3z: _T2 = (0xcb5....0xcb9, .kannada)
+private let __sc_rangePair_40: _T2 = (0xcbc....0xcc4, .kannada)
+private let __sc_rangePair_41: _T2 = (0xcc6....0xcc8, .kannada)
+private let __sc_rangePair_42: _T2 = (0xcca....0xccd, .kannada)
+private let __sc_rangePair_43: _T2 = (0xcd5....0xcd6, .kannada)
+private let __sc_rangePair_44: _T2 = (0xce0....0xce3, .kannada)
+private let __sc_rangePair_45: _T2 = (0xce6....0xcef, .kannada)
+private let __sc_rangePair_46: _T2 = (0xcf1....0xcf2, .kannada)
+private let __sc_rangePair_47: _T2 = (0xd00....0xd03, .malayalam)
+private let __sc_rangePair_48: _T2 = (0xd05....0xd0c, .malayalam)
+private let __sc_rangePair_49: _T2 = (0xd0e....0xd10, .malayalam)
+private let __sc_rangePair_4a: _T2 = (0xd12....0xd44, .malayalam)
+private let __sc_rangePair_4b: _T2 = (0xd46....0xd48, .malayalam)
+private let __sc_rangePair_4c: _T2 = (0xd4a....0xd4f, .malayalam)
+private let __sc_rangePair_4d: _T2 = (0xd54....0xd63, .malayalam)
+private let __sc_rangePair_4e: _T2 = (0xd66....0xd7f, .malayalam)
+private let __sc_rangePair_4f: _T2 = (0xd82....0xd83, .sinhala)
+private let __sc_rangePair_4g: _T2 = (0xd85....0xd96, .sinhala)
+private let __sc_rangePair_4h: _T2 = (0xd9a....0xdb1, .sinhala)
+private let __sc_rangePair_4i: _T2 = (0xdb3....0xdbb, .sinhala)
+private let __sc_rangePair_4j: _T2 = (0xdc0....0xdc6, .sinhala)
+private let __sc_rangePair_4k: _T2 = (0xdcf....0xdd4, .sinhala)
+private let __sc_rangePair_4l: _T2 = (0xdd8....0xddf, .sinhala)
+private let __sc_rangePair_4m: _T2 = (0xde6....0xdef, .sinhala)
+private let __sc_rangePair_4n: _T2 = (0xdf2....0xdf4, .sinhala)
+private let __sc_rangePair_4o: _T2 = (0xe01....0xe3a, .thai)
+private let __sc_rangePair_4p: _T2 = (0xe40....0xe5b, .thai)
+private let __sc_rangePair_4q: _T2 = (0xe81....0xe82, .lao)
+private let __sc_rangePair_4r: _T2 = (0xe86....0xe8a, .lao)
+private let __sc_rangePair_4s: _T2 = (0xe8c....0xea3, .lao)
+private let __sc_rangePair_4t: _T2 = (0xea7....0xebd, .lao)
+private let __sc_rangePair_4u: _T2 = (0xec0....0xec4, .lao)
+private let __sc_rangePair_4v: _T2 = (0xec8....0xecd, .lao)
+private let __sc_rangePair_4w: _T2 = (0xed0....0xed9, .lao)
+private let __sc_rangePair_4x: _T2 = (0xedc....0xedf, .lao)
+private let __sc_rangePair_4y: _T2 = (0xf00....0xf47, .tibetan)
+private let __sc_rangePair_4z: _T2 = (0xf49....0xf6c, .tibetan)
+private let __sc_rangePair_50: _T2 = (0xf71....0xf97, .tibetan)
+private let __sc_rangePair_51: _T2 = (0xf99....0xfbc, .tibetan)
+private let __sc_rangePair_52: _T2 = (0xfbe....0xfcc, .tibetan)
+private let __sc_rangePair_53: _T2 = (0xfce....0xfd4, .tibetan)
+private let __sc_rangePair_54: _T2 = (0xfd5....0xfd8, .common)
+private let __sc_rangePair_55: _T2 = (0xfd9....0xfda, .tibetan)
+private let __sc_rangePair_56: _T2 = (0x1000....0x109f, .myanmar)
+private let __sc_rangePair_57: _T2 = (0x10a0....0x10c5, .georgian)
+private let __sc_rangePair_58: _T2 = (0x10d0....0x10fa, .georgian)
+private let __sc_rangePair_59: _T2 = (0x10fc....0x10ff, .georgian)
+private let __sc_rangePair_5a: _T2 = (0x1100....0x11ff, .hangul)
+private let __sc_rangePair_5b: _T2 = (0x1200....0x1248, .ethiopic)
+private let __sc_rangePair_5c: _T2 = (0x124a....0x124d, .ethiopic)
+private let __sc_rangePair_5d: _T2 = (0x1250....0x1256, .ethiopic)
+private let __sc_rangePair_5e: _T2 = (0x125a....0x125d, .ethiopic)
+private let __sc_rangePair_5f: _T2 = (0x1260....0x1288, .ethiopic)
+private let __sc_rangePair_5g: _T2 = (0x128a....0x128d, .ethiopic)
+private let __sc_rangePair_5h: _T2 = (0x1290....0x12b0, .ethiopic)
+private let __sc_rangePair_5i: _T2 = (0x12b2....0x12b5, .ethiopic)
+private let __sc_rangePair_5j: _T2 = (0x12b8....0x12be, .ethiopic)
+private let __sc_rangePair_5k: _T2 = (0x12c2....0x12c5, .ethiopic)
+private let __sc_rangePair_5l: _T2 = (0x12c8....0x12d6, .ethiopic)
+private let __sc_rangePair_5m: _T2 = (0x12d8....0x1310, .ethiopic)
+private let __sc_rangePair_5n: _T2 = (0x1312....0x1315, .ethiopic)
+private let __sc_rangePair_5o: _T2 = (0x1318....0x135a, .ethiopic)
+private let __sc_rangePair_5p: _T2 = (0x135d....0x137c, .ethiopic)
+private let __sc_rangePair_5q: _T2 = (0x1380....0x1399, .ethiopic)
+private let __sc_rangePair_5r: _T2 = (0x13a0....0x13f5, .cherokee)
+private let __sc_rangePair_5s: _T2 = (0x13f8....0x13fd, .cherokee)
+private let __sc_rangePair_5t: _T2 = (0x1400....0x167f, .canadianAboriginal)
+private let __sc_rangePair_5u: _T2 = (0x1680....0x169c, .ogham)
+private let __sc_rangePair_5v: _T2 = (0x16a0....0x16ea, .runic)
+private let __sc_rangePair_5w: _T2 = (0x16eb....0x16ed, .common)
+private let __sc_rangePair_5x: _T2 = (0x16ee....0x16f8, .runic)
+private let __sc_rangePair_5y: _T2 = (0x1700....0x170c, .tagalog)
+private let __sc_rangePair_5z: _T2 = (0x170e....0x1714, .tagalog)
+private let __sc_rangePair_60: _T2 = (0x1720....0x1734, .hanunoo)
+private let __sc_rangePair_61: _T2 = (0x1735....0x1736, .common)
+private let __sc_rangePair_62: _T2 = (0x1740....0x1753, .buhid)
+private let __sc_rangePair_63: _T2 = (0x1760....0x176c, .tagbanwa)
+private let __sc_rangePair_64: _T2 = (0x176e....0x1770, .tagbanwa)
+private let __sc_rangePair_65: _T2 = (0x1772....0x1773, .tagbanwa)
+private let __sc_rangePair_66: _T2 = (0x1780....0x17dd, .khmer)
+private let __sc_rangePair_67: _T2 = (0x17e0....0x17e9, .khmer)
+private let __sc_rangePair_68: _T2 = (0x17f0....0x17f9, .khmer)
+private let __sc_rangePair_69: _T2 = (0x1800....0x1801, .mongolian)
+private let __sc_rangePair_6a: _T2 = (0x1802....0x1803, .common)
+private let __sc_rangePair_6b: _T2 = (0x1806....0x180e, .mongolian)
+private let __sc_rangePair_6c: _T2 = (0x1810....0x1819, .mongolian)
+private let __sc_rangePair_6d: _T2 = (0x1820....0x1878, .mongolian)
+private let __sc_rangePair_6e: _T2 = (0x1880....0x18aa, .mongolian)
+private let __sc_rangePair_6f: _T2 = (0x18b0....0x18f5, .canadianAboriginal)
+private let __sc_rangePair_6g: _T2 = (0x1900....0x191e, .limbu)
+private let __sc_rangePair_6h: _T2 = (0x1920....0x192b, .limbu)
+private let __sc_rangePair_6i: _T2 = (0x1930....0x193b, .limbu)
+private let __sc_rangePair_6j: _T2 = (0x1944....0x194f, .limbu)
+private let __sc_rangePair_6k: _T2 = (0x1950....0x196d, .taiLe)
+private let __sc_rangePair_6l: _T2 = (0x1970....0x1974, .taiLe)
+private let __sc_rangePair_6m: _T2 = (0x1980....0x19ab, .newTaiLue)
+private let __sc_rangePair_6n: _T2 = (0x19b0....0x19c9, .newTaiLue)
+private let __sc_rangePair_6o: _T2 = (0x19d0....0x19da, .newTaiLue)
+private let __sc_rangePair_6p: _T2 = (0x19de....0x19df, .newTaiLue)
+private let __sc_rangePair_6q: _T2 = (0x19e0....0x19ff, .khmer)
+private let __sc_rangePair_6r: _T2 = (0x1a00....0x1a1b, .buginese)
+private let __sc_rangePair_6s: _T2 = (0x1a1e....0x1a1f, .buginese)
+private let __sc_rangePair_6t: _T2 = (0x1a20....0x1a5e, .taiTham)
+private let __sc_rangePair_6u: _T2 = (0x1a60....0x1a7c, .taiTham)
+private let __sc_rangePair_6v: _T2 = (0x1a7f....0x1a89, .taiTham)
+private let __sc_rangePair_6w: _T2 = (0x1a90....0x1a99, .taiTham)
+private let __sc_rangePair_6x: _T2 = (0x1aa0....0x1aad, .taiTham)
+private let __sc_rangePair_6y: _T2 = (0x1ab0....0x1abe, .inherited)
+private let __sc_rangePair_6z: _T2 = (0x1b00....0x1b4b, .balinese)
+private let __sc_rangePair_70: _T2 = (0x1b50....0x1b7c, .balinese)
+private let __sc_rangePair_71: _T2 = (0x1b80....0x1bbf, .sundanese)
+private let __sc_rangePair_72: _T2 = (0x1bc0....0x1bf3, .batak)
+private let __sc_rangePair_73: _T2 = (0x1bfc....0x1bff, .batak)
+private let __sc_rangePair_74: _T2 = (0x1c00....0x1c37, .lepcha)
+private let __sc_rangePair_75: _T2 = (0x1c3b....0x1c49, .lepcha)
+private let __sc_rangePair_76: _T2 = (0x1c4d....0x1c4f, .lepcha)
+private let __sc_rangePair_77: _T2 = (0x1c50....0x1c7f, .olChiki)
+private let __sc_rangePair_78: _T2 = (0x1c80....0x1c88, .cyrillic)
+private let __sc_rangePair_79: _T2 = (0x1c90....0x1cba, .georgian)
+private let __sc_rangePair_7a: _T2 = (0x1cbd....0x1cbf, .georgian)
+private let __sc_rangePair_7b: _T2 = (0x1cc0....0x1cc7, .sundanese)
+private let __sc_rangePair_7c: _T2 = (0x1cd0....0x1cd2, .inherited)
+private let __sc_rangePair_7d: _T2 = (0x1cd4....0x1ce0, .inherited)
+private let __sc_rangePair_7e: _T2 = (0x1ce2....0x1ce8, .inherited)
+private let __sc_rangePair_7f: _T2 = (0x1ce9....0x1cec, .common)
+private let __sc_rangePair_7g: _T2 = (0x1cee....0x1cf3, .common)
+private let __sc_rangePair_7h: _T2 = (0x1cf5....0x1cf7, .common)
+private let __sc_rangePair_7i: _T2 = (0x1cf8....0x1cf9, .inherited)
+private let __sc_rangePair_7j: _T2 = (0x1d00....0x1d25, .latin)
+private let __sc_rangePair_7k: _T2 = (0x1d26....0x1d2a, .greek)
+private let __sc_rangePair_7l: _T2 = (0x1d2c....0x1d5c, .latin)
+private let __sc_rangePair_7m: _T2 = (0x1d5d....0x1d61, .greek)
+private let __sc_rangePair_7n: _T2 = (0x1d62....0x1d65, .latin)
+private let __sc_rangePair_7o: _T2 = (0x1d66....0x1d6a, .greek)
+private let __sc_rangePair_7p: _T2 = (0x1d6b....0x1d77, .latin)
+private let __sc_rangePair_7q: _T2 = (0x1d79....0x1dbe, .latin)
+private let __sc_rangePair_7r: _T2 = (0x1dc0....0x1df9, .inherited)
+private let __sc_rangePair_7s: _T2 = (0x1dfb....0x1dff, .inherited)
+private let __sc_rangePair_7t: _T2 = (0x1e00....0x1eff, .latin)
+private let __sc_rangePair_7u: _T2 = (0x1f00....0x1f15, .greek)
+private let __sc_rangePair_7v: _T2 = (0x1f18....0x1f1d, .greek)
+private let __sc_rangePair_7w: _T2 = (0x1f20....0x1f45, .greek)
+private let __sc_rangePair_7x: _T2 = (0x1f48....0x1f4d, .greek)
+private let __sc_rangePair_7y: _T2 = (0x1f50....0x1f57, .greek)
+private let __sc_rangePair_7z: _T2 = (0x1f5f....0x1f7d, .greek)
+private let __sc_rangePair_80: _T2 = (0x1f80....0x1fb4, .greek)
+private let __sc_rangePair_81: _T2 = (0x1fb6....0x1fc4, .greek)
+private let __sc_rangePair_82: _T2 = (0x1fc6....0x1fd3, .greek)
+private let __sc_rangePair_83: _T2 = (0x1fd6....0x1fdb, .greek)
+private let __sc_rangePair_84: _T2 = (0x1fdd....0x1fef, .greek)
+private let __sc_rangePair_85: _T2 = (0x1ff2....0x1ff4, .greek)
+private let __sc_rangePair_86: _T2 = (0x1ff6....0x1ffe, .greek)
+private let __sc_rangePair_87: _T2 = (0x2000....0x200b, .common)
+private let __sc_rangePair_88: _T2 = (0x200c....0x200d, .inherited)
+private let __sc_rangePair_89: _T2 = (0x200e....0x2064, .common)
+private let __sc_rangePair_8a: _T2 = (0x2066....0x2070, .common)
+private let __sc_rangePair_8b: _T2 = (0x2074....0x207e, .common)
+private let __sc_rangePair_8c: _T2 = (0x2080....0x208e, .common)
+private let __sc_rangePair_8d: _T2 = (0x2090....0x209c, .latin)
+private let __sc_rangePair_8e: _T2 = (0x20a0....0x20bf, .common)
+private let __sc_rangePair_8f: _T2 = (0x20d0....0x20f0, .inherited)
+private let __sc_rangePair_8g: _T2 = (0x2100....0x2125, .common)
+private let __sc_rangePair_8h: _T2 = (0x2127....0x2129, .common)
+private let __sc_rangePair_8i: _T2 = (0x212a....0x212b, .latin)
+private let __sc_rangePair_8j: _T2 = (0x212c....0x2131, .common)
+private let __sc_rangePair_8k: _T2 = (0x2133....0x214d, .common)
+private let __sc_rangePair_8l: _T2 = (0x214f....0x215f, .common)
+private let __sc_rangePair_8m: _T2 = (0x2160....0x2188, .latin)
+private let __sc_rangePair_8n: _T2 = (0x2189....0x218b, .common)
+private let __sc_rangePair_8o: _T2 = (0x2190....0x2426, .common)
+private let __sc_rangePair_8p: _T2 = (0x2440....0x244a, .common)
+private let __sc_rangePair_8q: _T2 = (0x2460....0x27ff, .common)
+private let __sc_rangePair_8r: _T2 = (0x2800....0x28ff, .braille)
+private let __sc_rangePair_8s: _T2 = (0x2900....0x2b73, .common)
+private let __sc_rangePair_8t: _T2 = (0x2b76....0x2b95, .common)
+private let __sc_rangePair_8u: _T2 = (0x2b98....0x2bff, .common)
+private let __sc_rangePair_8v: _T2 = (0x2c00....0x2c2e, .glagolitic)
+private let __sc_rangePair_8w: _T2 = (0x2c30....0x2c5e, .glagolitic)
+private let __sc_rangePair_8x: _T2 = (0x2c60....0x2c7f, .latin)
+private let __sc_rangePair_8y: _T2 = (0x2c80....0x2cf3, .coptic)
+private let __sc_rangePair_8z: _T2 = (0x2cf9....0x2cff, .coptic)
+private let __sc_rangePair_90: _T2 = (0x2d00....0x2d25, .georgian)
+private let __sc_rangePair_91: _T2 = (0x2d30....0x2d67, .tifinagh)
+private let __sc_rangePair_92: _T2 = (0x2d6f....0x2d70, .tifinagh)
+private let __sc_rangePair_93: _T2 = (0x2d80....0x2d96, .ethiopic)
+private let __sc_rangePair_94: _T2 = (0x2da0....0x2da6, .ethiopic)
+private let __sc_rangePair_95: _T2 = (0x2da8....0x2dae, .ethiopic)
+private let __sc_rangePair_96: _T2 = (0x2db0....0x2db6, .ethiopic)
+private let __sc_rangePair_97: _T2 = (0x2db8....0x2dbe, .ethiopic)
+private let __sc_rangePair_98: _T2 = (0x2dc0....0x2dc6, .ethiopic)
+private let __sc_rangePair_99: _T2 = (0x2dc8....0x2dce, .ethiopic)
+private let __sc_rangePair_9a: _T2 = (0x2dd0....0x2dd6, .ethiopic)
+private let __sc_rangePair_9b: _T2 = (0x2dd8....0x2dde, .ethiopic)
+private let __sc_rangePair_9c: _T2 = (0x2de0....0x2dff, .cyrillic)
+private let __sc_rangePair_9d: _T2 = (0x2e00....0x2e4f, .common)
+private let __sc_rangePair_9e: _T2 = (0x2e80....0x2e99, .han)
+private let __sc_rangePair_9f: _T2 = (0x2e9b....0x2ef3, .han)
+private let __sc_rangePair_9g: _T2 = (0x2f00....0x2fd5, .han)
+private let __sc_rangePair_9h: _T2 = (0x2ff0....0x2ffb, .common)
+private let __sc_rangePair_9i: _T2 = (0x3000....0x3004, .common)
+private let __sc_rangePair_9j: _T2 = (0x3008....0x3020, .common)
+private let __sc_rangePair_9k: _T2 = (0x3021....0x3029, .han)
+private let __sc_rangePair_9l: _T2 = (0x302a....0x302d, .inherited)
+private let __sc_rangePair_9m: _T2 = (0x302e....0x302f, .hangul)
+private let __sc_rangePair_9n: _T2 = (0x3030....0x3037, .common)
+private let __sc_rangePair_9o: _T2 = (0x3038....0x303b, .han)
+private let __sc_rangePair_9p: _T2 = (0x303c....0x303f, .common)
+private let __sc_rangePair_9q: _T2 = (0x3041....0x3096, .hiragana)
+private let __sc_rangePair_9r: _T2 = (0x3099....0x309a, .inherited)
+private let __sc_rangePair_9s: _T2 = (0x309b....0x309c, .common)
+private let __sc_rangePair_9t: _T2 = (0x309d....0x309f, .hiragana)
+private let __sc_rangePair_9u: _T2 = (0x30a1....0x30fa, .katakana)
+private let __sc_rangePair_9v: _T2 = (0x30fb....0x30fc, .common)
+private let __sc_rangePair_9w: _T2 = (0x30fd....0x30ff, .katakana)
+private let __sc_rangePair_9x: _T2 = (0x3105....0x312f, .bopomofo)
+private let __sc_rangePair_9y: _T2 = (0x3131....0x318e, .hangul)
+private let __sc_rangePair_9z: _T2 = (0x3190....0x319f, .common)
+private let __sc_rangePair_a0: _T2 = (0x31a0....0x31ba, .bopomofo)
+private let __sc_rangePair_a1: _T2 = (0x31c0....0x31e3, .common)
+private let __sc_rangePair_a2: _T2 = (0x31f0....0x31ff, .katakana)
+private let __sc_rangePair_a3: _T2 = (0x3200....0x321e, .hangul)
+private let __sc_rangePair_a4: _T2 = (0x3220....0x325f, .common)
+private let __sc_rangePair_a5: _T2 = (0x3260....0x327e, .hangul)
+private let __sc_rangePair_a6: _T2 = (0x327f....0x32cf, .common)
+private let __sc_rangePair_a7: _T2 = (0x32d0....0x32fe, .katakana)
+private let __sc_rangePair_a8: _T2 = (0x3300....0x3357, .katakana)
+private let __sc_rangePair_a9: _T2 = (0x3358....0x33ff, .common)
+private let __sc_rangePair_aa: _T2 = (0x3400....0x4db5, .han)
+private let __sc_rangePair_ab: _T2 = (0x4dc0....0x4dff, .common)
+private let __sc_rangePair_ac: _T2 = (0x4e00....0x9fef, .han)
+private let __sc_rangePair_ad: _T2 = (0xa000....0xa48c, .yi)
+private let __sc_rangePair_ae: _T2 = (0xa490....0xa4c6, .yi)
+private let __sc_rangePair_af: _T2 = (0xa4d0....0xa4ff, .lisu)
+private let __sc_rangePair_ag: _T2 = (0xa500....0xa62b, .vai)
+private let __sc_rangePair_ah: _T2 = (0xa640....0xa69f, .cyrillic)
+private let __sc_rangePair_ai: _T2 = (0xa6a0....0xa6f7, .bamum)
+private let __sc_rangePair_aj: _T2 = (0xa700....0xa721, .common)
+private let __sc_rangePair_ak: _T2 = (0xa722....0xa787, .latin)
+private let __sc_rangePair_al: _T2 = (0xa788....0xa78a, .common)
+private let __sc_rangePair_am: _T2 = (0xa78b....0xa7bf, .latin)
+private let __sc_rangePair_an: _T2 = (0xa7c2....0xa7c6, .latin)
+private let __sc_rangePair_ao: _T2 = (0xa7f7....0xa7ff, .latin)
+private let __sc_rangePair_ap: _T2 = (0xa800....0xa82b, .sylotiNagri)
+private let __sc_rangePair_aq: _T2 = (0xa830....0xa839, .common)
+private let __sc_rangePair_ar: _T2 = (0xa840....0xa877, .phagsPa)
+private let __sc_rangePair_as: _T2 = (0xa880....0xa8c5, .saurashtra)
+private let __sc_rangePair_at: _T2 = (0xa8ce....0xa8d9, .saurashtra)
+private let __sc_rangePair_au: _T2 = (0xa8e0....0xa8ff, .devanagari)
+private let __sc_rangePair_av: _T2 = (0xa900....0xa92d, .kayahLi)
+private let __sc_rangePair_aw: _T2 = (0xa930....0xa953, .rejang)
+private let __sc_rangePair_ax: _T2 = (0xa960....0xa97c, .hangul)
+private let __sc_rangePair_ay: _T2 = (0xa980....0xa9cd, .javanese)
+private let __sc_rangePair_az: _T2 = (0xa9d0....0xa9d9, .javanese)
+private let __sc_rangePair_b0: _T2 = (0xa9de....0xa9df, .javanese)
+private let __sc_rangePair_b1: _T2 = (0xa9e0....0xa9fe, .myanmar)
+private let __sc_rangePair_b2: _T2 = (0xaa00....0xaa36, .cham)
+private let __sc_rangePair_b3: _T2 = (0xaa40....0xaa4d, .cham)
+private let __sc_rangePair_b4: _T2 = (0xaa50....0xaa59, .cham)
+private let __sc_rangePair_b5: _T2 = (0xaa5c....0xaa5f, .cham)
+private let __sc_rangePair_b6: _T2 = (0xaa60....0xaa7f, .myanmar)
+private let __sc_rangePair_b7: _T2 = (0xaa80....0xaac2, .taiViet)
+private let __sc_rangePair_b8: _T2 = (0xaadb....0xaadf, .taiViet)
+private let __sc_rangePair_b9: _T2 = (0xaae0....0xaaf6, .meeteiMayek)
+private let __sc_rangePair_ba: _T2 = (0xab01....0xab06, .ethiopic)
+private let __sc_rangePair_bb: _T2 = (0xab09....0xab0e, .ethiopic)
+private let __sc_rangePair_bc: _T2 = (0xab11....0xab16, .ethiopic)
+private let __sc_rangePair_bd: _T2 = (0xab20....0xab26, .ethiopic)
+private let __sc_rangePair_be: _T2 = (0xab28....0xab2e, .ethiopic)
+private let __sc_rangePair_bf: _T2 = (0xab30....0xab5a, .latin)
+private let __sc_rangePair_bg: _T2 = (0xab5c....0xab64, .latin)
+private let __sc_rangePair_bh: _T2 = (0xab66....0xab67, .latin)
+private let __sc_rangePair_bi: _T2 = (0xab70....0xabbf, .cherokee)
+private let __sc_rangePair_bj: _T2 = (0xabc0....0xabed, .meeteiMayek)
+private let __sc_rangePair_bk: _T2 = (0xabf0....0xabf9, .meeteiMayek)
+private let __sc_rangePair_bl: _T2 = (0xac00....0xd7a3, .hangul)
+private let __sc_rangePair_bm: _T2 = (0xd7b0....0xd7c6, .hangul)
+private let __sc_rangePair_bn: _T2 = (0xd7cb....0xd7fb, .hangul)
+private let __sc_rangePair_bo: _T2 = (0xf900....0xfa6d, .han)
+private let __sc_rangePair_bp: _T2 = (0xfa70....0xfad9, .han)
+private let __sc_rangePair_bq: _T2 = (0xfb00....0xfb06, .latin)
+private let __sc_rangePair_br: _T2 = (0xfb13....0xfb17, .armenian)
+private let __sc_rangePair_bs: _T2 = (0xfb1d....0xfb36, .hebrew)
+private let __sc_rangePair_bt: _T2 = (0xfb38....0xfb3c, .hebrew)
+private let __sc_rangePair_bu: _T2 = (0xfb40....0xfb41, .hebrew)
+private let __sc_rangePair_bv: _T2 = (0xfb43....0xfb44, .hebrew)
+private let __sc_rangePair_bw: _T2 = (0xfb46....0xfb4f, .hebrew)
+private let __sc_rangePair_bx: _T2 = (0xfb50....0xfbc1, .arabic)
+private let __sc_rangePair_by: _T2 = (0xfbd3....0xfd3d, .arabic)
+private let __sc_rangePair_bz: _T2 = (0xfd3e....0xfd3f, .common)
+private let __sc_rangePair_c0: _T2 = (0xfd50....0xfd8f, .arabic)
+private let __sc_rangePair_c1: _T2 = (0xfd92....0xfdc7, .arabic)
+private let __sc_rangePair_c2: _T2 = (0xfdf0....0xfdfd, .arabic)
+private let __sc_rangePair_c3: _T2 = (0xfe00....0xfe0f, .inherited)
+private let __sc_rangePair_c4: _T2 = (0xfe10....0xfe19, .common)
+private let __sc_rangePair_c5: _T2 = (0xfe20....0xfe2d, .inherited)
+private let __sc_rangePair_c6: _T2 = (0xfe2e....0xfe2f, .cyrillic)
+private let __sc_rangePair_c7: _T2 = (0xfe30....0xfe52, .common)
+private let __sc_rangePair_c8: _T2 = (0xfe54....0xfe66, .common)
+private let __sc_rangePair_c9: _T2 = (0xfe68....0xfe6b, .common)
+private let __sc_rangePair_ca: _T2 = (0xfe70....0xfe74, .arabic)
+private let __sc_rangePair_cb: _T2 = (0xfe76....0xfefc, .arabic)
+private let __sc_rangePair_cc: _T2 = (0xff01....0xff20, .common)
+private let __sc_rangePair_cd: _T2 = (0xff21....0xff3a, .latin)
+private let __sc_rangePair_ce: _T2 = (0xff3b....0xff40, .common)
+private let __sc_rangePair_cf: _T2 = (0xff41....0xff5a, .latin)
+private let __sc_rangePair_cg: _T2 = (0xff5b....0xff65, .common)
+private let __sc_rangePair_ch: _T2 = (0xff66....0xff6f, .katakana)
+private let __sc_rangePair_ci: _T2 = (0xff71....0xff9d, .katakana)
+private let __sc_rangePair_cj: _T2 = (0xff9e....0xff9f, .common)
+private let __sc_rangePair_ck: _T2 = (0xffa0....0xffbe, .hangul)
+private let __sc_rangePair_cl: _T2 = (0xffc2....0xffc7, .hangul)
+private let __sc_rangePair_cm: _T2 = (0xffca....0xffcf, .hangul)
+private let __sc_rangePair_cn: _T2 = (0xffd2....0xffd7, .hangul)
+private let __sc_rangePair_co: _T2 = (0xffda....0xffdc, .hangul)
+private let __sc_rangePair_cp: _T2 = (0xffe0....0xffe6, .common)
+private let __sc_rangePair_cq: _T2 = (0xffe8....0xffee, .common)
+private let __sc_rangePair_cr: _T2 = (0xfff9....0xfffd, .common)
+private let __sc_rangePair_cs: _T2 = (0x10000....0x1000b, .linearB)
+private let __sc_rangePair_ct: _T2 = (0x1000d....0x10026, .linearB)
+private let __sc_rangePair_cu: _T2 = (0x10028....0x1003a, .linearB)
+private let __sc_rangePair_cv: _T2 = (0x1003c....0x1003d, .linearB)
+private let __sc_rangePair_cw: _T2 = (0x1003f....0x1004d, .linearB)
+private let __sc_rangePair_cx: _T2 = (0x10050....0x1005d, .linearB)
+private let __sc_rangePair_cy: _T2 = (0x10080....0x100fa, .linearB)
+private let __sc_rangePair_cz: _T2 = (0x10100....0x10102, .common)
+private let __sc_rangePair_d0: _T2 = (0x10107....0x10133, .common)
+private let __sc_rangePair_d1: _T2 = (0x10137....0x1013f, .common)
+private let __sc_rangePair_d2: _T2 = (0x10140....0x1018e, .greek)
+private let __sc_rangePair_d3: _T2 = (0x10190....0x1019b, .common)
+private let __sc_rangePair_d4: _T2 = (0x101d0....0x101fc, .common)
+private let __sc_rangePair_d5: _T2 = (0x10280....0x1029c, .lycian)
+private let __sc_rangePair_d6: _T2 = (0x102a0....0x102d0, .carian)
+private let __sc_rangePair_d7: _T2 = (0x102e1....0x102fb, .common)
+private let __sc_rangePair_d8: _T2 = (0x10300....0x10323, .oldItalic)
+private let __sc_rangePair_d9: _T2 = (0x1032d....0x1032f, .oldItalic)
+private let __sc_rangePair_da: _T2 = (0x10330....0x1034a, .gothic)
+private let __sc_rangePair_db: _T2 = (0x10350....0x1037a, .oldPermic)
+private let __sc_rangePair_dc: _T2 = (0x10380....0x1039d, .ugaritic)
+private let __sc_rangePair_dd: _T2 = (0x103a0....0x103c3, .oldPersian)
+private let __sc_rangePair_de: _T2 = (0x103c8....0x103d5, .oldPersian)
+private let __sc_rangePair_df: _T2 = (0x10400....0x1044f, .deseret)
+private let __sc_rangePair_dg: _T2 = (0x10450....0x1047f, .shavian)
+private let __sc_rangePair_dh: _T2 = (0x10480....0x1049d, .osmanya)
+private let __sc_rangePair_di: _T2 = (0x104a0....0x104a9, .osmanya)
+private let __sc_rangePair_dj: _T2 = (0x104b0....0x104d3, .osage)
+private let __sc_rangePair_dk: _T2 = (0x104d8....0x104fb, .osage)
+private let __sc_rangePair_dl: _T2 = (0x10500....0x10527, .elbasan)
+private let __sc_rangePair_dm: _T2 = (0x10530....0x10563, .caucasianAlbanian)
+private let __sc_rangePair_dn: _T2 = (0x10600....0x10736, .linearA)
+private let __sc_rangePair_do: _T2 = (0x10740....0x10755, .linearA)
+private let __sc_rangePair_dp: _T2 = (0x10760....0x10767, .linearA)
+private let __sc_rangePair_dq: _T2 = (0x10800....0x10805, .cypriot)
+private let __sc_rangePair_dr: _T2 = (0x1080a....0x10835, .cypriot)
+private let __sc_rangePair_ds: _T2 = (0x10837....0x10838, .cypriot)
+private let __sc_rangePair_dt: _T2 = (0x10840....0x10855, .imperialAramaic)
+private let __sc_rangePair_du: _T2 = (0x10857....0x1085f, .imperialAramaic)
+private let __sc_rangePair_dv: _T2 = (0x10860....0x1087f, .palmyrene)
+private let __sc_rangePair_dw: _T2 = (0x10880....0x1089e, .nabataean)
+private let __sc_rangePair_dx: _T2 = (0x108a7....0x108af, .nabataean)
+private let __sc_rangePair_dy: _T2 = (0x108e0....0x108f2, .hatran)
+private let __sc_rangePair_dz: _T2 = (0x108f4....0x108f5, .hatran)
+private let __sc_rangePair_e0: _T2 = (0x108fb....0x108ff, .hatran)
+private let __sc_rangePair_e1: _T2 = (0x10900....0x1091b, .phoenician)
+private let __sc_rangePair_e2: _T2 = (0x10920....0x10939, .lydian)
+private let __sc_rangePair_e3: _T2 = (0x10980....0x1099f, .meroiticHieroglyphs)
+private let __sc_rangePair_e4: _T2 = (0x109a0....0x109b7, .meroiticCursive)
+private let __sc_rangePair_e5: _T2 = (0x109bc....0x109cf, .meroiticCursive)
+private let __sc_rangePair_e6: _T2 = (0x109d2....0x109ff, .meroiticCursive)
+private let __sc_rangePair_e7: _T2 = (0x10a00....0x10a03, .kharoshthi)
+private let __sc_rangePair_e8: _T2 = (0x10a05....0x10a06, .kharoshthi)
+private let __sc_rangePair_e9: _T2 = (0x10a0c....0x10a13, .kharoshthi)
+private let __sc_rangePair_ea: _T2 = (0x10a15....0x10a17, .kharoshthi)
+private let __sc_rangePair_eb: _T2 = (0x10a19....0x10a35, .kharoshthi)
+private let __sc_rangePair_ec: _T2 = (0x10a38....0x10a3a, .kharoshthi)
+private let __sc_rangePair_ed: _T2 = (0x10a3f....0x10a48, .kharoshthi)
+private let __sc_rangePair_ee: _T2 = (0x10a50....0x10a58, .kharoshthi)
+private let __sc_rangePair_ef: _T2 = (0x10a60....0x10a7f, .oldSouthArabian)
+private let __sc_rangePair_eg: _T2 = (0x10a80....0x10a9f, .oldNorthArabian)
+private let __sc_rangePair_eh: _T2 = (0x10ac0....0x10ae6, .manichaean)
+private let __sc_rangePair_ei: _T2 = (0x10aeb....0x10af6, .manichaean)
+private let __sc_rangePair_ej: _T2 = (0x10b00....0x10b35, .avestan)
+private let __sc_rangePair_ek: _T2 = (0x10b39....0x10b3f, .avestan)
+private let __sc_rangePair_el: _T2 = (0x10b40....0x10b55, .inscriptionalParthian)
+private let __sc_rangePair_em: _T2 = (0x10b58....0x10b5f, .inscriptionalParthian)
+private let __sc_rangePair_en: _T2 = (0x10b60....0x10b72, .inscriptionalPahlavi)
+private let __sc_rangePair_eo: _T2 = (0x10b78....0x10b7f, .inscriptionalPahlavi)
+private let __sc_rangePair_ep: _T2 = (0x10b80....0x10b91, .psalterPahlavi)
+private let __sc_rangePair_eq: _T2 = (0x10b99....0x10b9c, .psalterPahlavi)
+private let __sc_rangePair_er: _T2 = (0x10ba9....0x10baf, .psalterPahlavi)
+private let __sc_rangePair_es: _T2 = (0x10c00....0x10c48, .oldTurkic)
+private let __sc_rangePair_et: _T2 = (0x10c80....0x10cb2, .oldHungarian)
+private let __sc_rangePair_eu: _T2 = (0x10cc0....0x10cf2, .oldHungarian)
+private let __sc_rangePair_ev: _T2 = (0x10cfa....0x10cff, .oldHungarian)
+private let __sc_rangePair_ew: _T2 = (0x10d00....0x10d27, .hanifiRohingya)
+private let __sc_rangePair_ex: _T2 = (0x10d30....0x10d39, .hanifiRohingya)
+private let __sc_rangePair_ey: _T2 = (0x10e60....0x10e7e, .arabic)
+private let __sc_rangePair_ez: _T2 = (0x10f00....0x10f27, .oldSogdian)
+private let __sc_rangePair_f0: _T2 = (0x10f30....0x10f59, .sogdian)
+private let __sc_rangePair_f1: _T2 = (0x10fe0....0x10ff6, .elymaic)
+private let __sc_rangePair_f2: _T2 = (0x11000....0x1104d, .brahmi)
+private let __sc_rangePair_f3: _T2 = (0x11052....0x1106f, .brahmi)
+private let __sc_rangePair_f4: _T2 = (0x11080....0x110c1, .kaithi)
+private let __sc_rangePair_f5: _T2 = (0x110d0....0x110e8, .soraSompeng)
+private let __sc_rangePair_f6: _T2 = (0x110f0....0x110f9, .soraSompeng)
+private let __sc_rangePair_f7: _T2 = (0x11100....0x11134, .chakma)
+private let __sc_rangePair_f8: _T2 = (0x11136....0x11146, .chakma)
+private let __sc_rangePair_f9: _T2 = (0x11150....0x11176, .mahajani)
+private let __sc_rangePair_fa: _T2 = (0x11180....0x111cd, .sharada)
+private let __sc_rangePair_fb: _T2 = (0x111d0....0x111df, .sharada)
+private let __sc_rangePair_fc: _T2 = (0x111e1....0x111f4, .sinhala)
+private let __sc_rangePair_fd: _T2 = (0x11200....0x11211, .khojki)
+private let __sc_rangePair_fe: _T2 = (0x11213....0x1123e, .khojki)
+private let __sc_rangePair_ff: _T2 = (0x11280....0x11286, .multani)
+private let __sc_rangePair_fg: _T2 = (0x1128a....0x1128d, .multani)
+private let __sc_rangePair_fh: _T2 = (0x1128f....0x1129d, .multani)
+private let __sc_rangePair_fi: _T2 = (0x1129f....0x112a9, .multani)
+private let __sc_rangePair_fj: _T2 = (0x112b0....0x112ea, .khudawadi)
+private let __sc_rangePair_fk: _T2 = (0x112f0....0x112f9, .khudawadi)
+private let __sc_rangePair_fl: _T2 = (0x11300....0x11303, .grantha)
+private let __sc_rangePair_fm: _T2 = (0x11305....0x1130c, .grantha)
+private let __sc_rangePair_fn: _T2 = (0x1130f....0x11310, .grantha)
+private let __sc_rangePair_fo: _T2 = (0x11313....0x11328, .grantha)
+private let __sc_rangePair_fp: _T2 = (0x1132a....0x11330, .grantha)
+private let __sc_rangePair_fq: _T2 = (0x11332....0x11333, .grantha)
+private let __sc_rangePair_fr: _T2 = (0x11335....0x11339, .grantha)
+private let __sc_rangePair_fs: _T2 = (0x1133c....0x11344, .grantha)
+private let __sc_rangePair_ft: _T2 = (0x11347....0x11348, .grantha)
+private let __sc_rangePair_fu: _T2 = (0x1134b....0x1134d, .grantha)
+private let __sc_rangePair_fv: _T2 = (0x1135d....0x11363, .grantha)
+private let __sc_rangePair_fw: _T2 = (0x11366....0x1136c, .grantha)
+private let __sc_rangePair_fx: _T2 = (0x11370....0x11374, .grantha)
+private let __sc_rangePair_fy: _T2 = (0x11400....0x11459, .newa)
+private let __sc_rangePair_fz: _T2 = (0x1145d....0x1145f, .newa)
+private let __sc_rangePair_g0: _T2 = (0x11480....0x114c7, .tirhuta)
+private let __sc_rangePair_g1: _T2 = (0x114d0....0x114d9, .tirhuta)
+private let __sc_rangePair_g2: _T2 = (0x11580....0x115b5, .siddham)
+private let __sc_rangePair_g3: _T2 = (0x115b8....0x115dd, .siddham)
+private let __sc_rangePair_g4: _T2 = (0x11600....0x11644, .modi)
+private let __sc_rangePair_g5: _T2 = (0x11650....0x11659, .modi)
+private let __sc_rangePair_g6: _T2 = (0x11660....0x1166c, .mongolian)
+private let __sc_rangePair_g7: _T2 = (0x11680....0x116b8, .takri)
+private let __sc_rangePair_g8: _T2 = (0x116c0....0x116c9, .takri)
+private let __sc_rangePair_g9: _T2 = (0x11700....0x1171a, .ahom)
+private let __sc_rangePair_ga: _T2 = (0x1171d....0x1172b, .ahom)
+private let __sc_rangePair_gb: _T2 = (0x11730....0x1173f, .ahom)
+private let __sc_rangePair_gc: _T2 = (0x11800....0x1183b, .dogra)
+private let __sc_rangePair_gd: _T2 = (0x118a0....0x118f2, .warangCiti)
+private let __sc_rangePair_ge: _T2 = (0x119a0....0x119a7, .nandinagari)
+private let __sc_rangePair_gf: _T2 = (0x119aa....0x119d7, .nandinagari)
+private let __sc_rangePair_gg: _T2 = (0x119da....0x119e4, .nandinagari)
+private let __sc_rangePair_gh: _T2 = (0x11a00....0x11a47, .zanabazarSquare)
+private let __sc_rangePair_gi: _T2 = (0x11a50....0x11aa2, .soyombo)
+private let __sc_rangePair_gj: _T2 = (0x11ac0....0x11af8, .pauCinHau)
+private let __sc_rangePair_gk: _T2 = (0x11c00....0x11c08, .bhaiksuki)
+private let __sc_rangePair_gl: _T2 = (0x11c0a....0x11c36, .bhaiksuki)
+private let __sc_rangePair_gm: _T2 = (0x11c38....0x11c45, .bhaiksuki)
+private let __sc_rangePair_gn: _T2 = (0x11c50....0x11c6c, .bhaiksuki)
+private let __sc_rangePair_go: _T2 = (0x11c70....0x11c8f, .marchen)
+private let __sc_rangePair_gp: _T2 = (0x11c92....0x11ca7, .marchen)
+private let __sc_rangePair_gq: _T2 = (0x11ca9....0x11cb6, .marchen)
+private let __sc_rangePair_gr: _T2 = (0x11d00....0x11d06, .masaramGondi)
+private let __sc_rangePair_gs: _T2 = (0x11d08....0x11d09, .masaramGondi)
+private let __sc_rangePair_gt: _T2 = (0x11d0b....0x11d36, .masaramGondi)
+private let __sc_rangePair_gu: _T2 = (0x11d3c....0x11d3d, .masaramGondi)
+private let __sc_rangePair_gv: _T2 = (0x11d3f....0x11d47, .masaramGondi)
+private let __sc_rangePair_gw: _T2 = (0x11d50....0x11d59, .masaramGondi)
+private let __sc_rangePair_gx: _T2 = (0x11d60....0x11d65, .gunjalaGondi)
+private let __sc_rangePair_gy: _T2 = (0x11d67....0x11d68, .gunjalaGondi)
+private let __sc_rangePair_gz: _T2 = (0x11d6a....0x11d8e, .gunjalaGondi)
+private let __sc_rangePair_h0: _T2 = (0x11d90....0x11d91, .gunjalaGondi)
+private let __sc_rangePair_h1: _T2 = (0x11d93....0x11d98, .gunjalaGondi)
+private let __sc_rangePair_h2: _T2 = (0x11da0....0x11da9, .gunjalaGondi)
+private let __sc_rangePair_h3: _T2 = (0x11ee0....0x11ef8, .makasar)
+private let __sc_rangePair_h4: _T2 = (0x11fc0....0x11ff1, .tamil)
+private let __sc_rangePair_h5: _T2 = (0x12000....0x12399, .cuneiform)
+private let __sc_rangePair_h6: _T2 = (0x12400....0x1246e, .cuneiform)
+private let __sc_rangePair_h7: _T2 = (0x12470....0x12474, .cuneiform)
+private let __sc_rangePair_h8: _T2 = (0x12480....0x12543, .cuneiform)
+private let __sc_rangePair_h9: _T2 = (0x13000....0x1342e, .egyptianHieroglyphs)
+private let __sc_rangePair_ha: _T2 = (0x13430....0x13438, .egyptianHieroglyphs)
+private let __sc_rangePair_hb: _T2 = (0x14400....0x14646, .anatolianHieroglyphs)
+private let __sc_rangePair_hc: _T2 = (0x16800....0x16a38, .bamum)
+private let __sc_rangePair_hd: _T2 = (0x16a40....0x16a5e, .mro)
+private let __sc_rangePair_he: _T2 = (0x16a60....0x16a69, .mro)
+private let __sc_rangePair_hf: _T2 = (0x16a6e....0x16a6f, .mro)
+private let __sc_rangePair_hg: _T2 = (0x16ad0....0x16aed, .bassaVah)
+private let __sc_rangePair_hh: _T2 = (0x16af0....0x16af5, .bassaVah)
+private let __sc_rangePair_hi: _T2 = (0x16b00....0x16b45, .pahawhHmong)
+private let __sc_rangePair_hj: _T2 = (0x16b50....0x16b59, .pahawhHmong)
+private let __sc_rangePair_hk: _T2 = (0x16b5b....0x16b61, .pahawhHmong)
+private let __sc_rangePair_hl: _T2 = (0x16b63....0x16b77, .pahawhHmong)
+private let __sc_rangePair_hm: _T2 = (0x16b7d....0x16b8f, .pahawhHmong)
+private let __sc_rangePair_hn: _T2 = (0x16e40....0x16e9a, .medefaidrin)
+private let __sc_rangePair_ho: _T2 = (0x16f00....0x16f4a, .miao)
+private let __sc_rangePair_hp: _T2 = (0x16f4f....0x16f87, .miao)
+private let __sc_rangePair_hq: _T2 = (0x16f8f....0x16f9f, .miao)
+private let __sc_rangePair_hr: _T2 = (0x16fe2....0x16fe3, .common)
+private let __sc_rangePair_hs: _T2 = (0x17000....0x187f7, .tangut)
+private let __sc_rangePair_ht: _T2 = (0x18800....0x18af2, .tangut)
+private let __sc_rangePair_hu: _T2 = (0x1b001....0x1b11e, .hiragana)
+private let __sc_rangePair_hv: _T2 = (0x1b150....0x1b152, .hiragana)
+private let __sc_rangePair_hw: _T2 = (0x1b164....0x1b167, .katakana)
+private let __sc_rangePair_hx: _T2 = (0x1b170....0x1b2fb, .nushu)
+private let __sc_rangePair_hy: _T2 = (0x1bc00....0x1bc6a, .duployan)
+private let __sc_rangePair_hz: _T2 = (0x1bc70....0x1bc7c, .duployan)
+private let __sc_rangePair_i0: _T2 = (0x1bc80....0x1bc88, .duployan)
+private let __sc_rangePair_i1: _T2 = (0x1bc90....0x1bc99, .duployan)
+private let __sc_rangePair_i2: _T2 = (0x1bc9c....0x1bc9f, .duployan)
+private let __sc_rangePair_i3: _T2 = (0x1bca0....0x1bca3, .common)
+private let __sc_rangePair_i4: _T2 = (0x1d000....0x1d0f5, .common)
+private let __sc_rangePair_i5: _T2 = (0x1d100....0x1d126, .common)
+private let __sc_rangePair_i6: _T2 = (0x1d129....0x1d166, .common)
+private let __sc_rangePair_i7: _T2 = (0x1d167....0x1d169, .inherited)
+private let __sc_rangePair_i8: _T2 = (0x1d16a....0x1d17a, .common)
+private let __sc_rangePair_i9: _T2 = (0x1d17b....0x1d182, .inherited)
+private let __sc_rangePair_ia: _T2 = (0x1d183....0x1d184, .common)
+private let __sc_rangePair_ib: _T2 = (0x1d185....0x1d18b, .inherited)
+private let __sc_rangePair_ic: _T2 = (0x1d18c....0x1d1a9, .common)
+private let __sc_rangePair_id: _T2 = (0x1d1aa....0x1d1ad, .inherited)
+private let __sc_rangePair_ie: _T2 = (0x1d1ae....0x1d1e8, .common)
+private let __sc_rangePair_if: _T2 = (0x1d200....0x1d245, .greek)
+private let __sc_rangePair_ig: _T2 = (0x1d2e0....0x1d2f3, .common)
+private let __sc_rangePair_ih: _T2 = (0x1d300....0x1d356, .common)
+private let __sc_rangePair_ii: _T2 = (0x1d360....0x1d378, .common)
+private let __sc_rangePair_ij: _T2 = (0x1d400....0x1d454, .common)
+private let __sc_rangePair_ik: _T2 = (0x1d456....0x1d49c, .common)
+private let __sc_rangePair_il: _T2 = (0x1d49e....0x1d49f, .common)
+private let __sc_rangePair_im: _T2 = (0x1d4a5....0x1d4a6, .common)
+private let __sc_rangePair_in: _T2 = (0x1d4a9....0x1d4ac, .common)
+private let __sc_rangePair_io: _T2 = (0x1d4ae....0x1d4b9, .common)
+private let __sc_rangePair_ip: _T2 = (0x1d4bd....0x1d4c3, .common)
+private let __sc_rangePair_iq: _T2 = (0x1d4c5....0x1d505, .common)
+private let __sc_rangePair_ir: _T2 = (0x1d507....0x1d50a, .common)
+private let __sc_rangePair_is: _T2 = (0x1d50d....0x1d514, .common)
+private let __sc_rangePair_it: _T2 = (0x1d516....0x1d51c, .common)
+private let __sc_rangePair_iu: _T2 = (0x1d51e....0x1d539, .common)
+private let __sc_rangePair_iv: _T2 = (0x1d53b....0x1d53e, .common)
+private let __sc_rangePair_iw: _T2 = (0x1d540....0x1d544, .common)
+private let __sc_rangePair_ix: _T2 = (0x1d54a....0x1d550, .common)
+private let __sc_rangePair_iy: _T2 = (0x1d552....0x1d6a5, .common)
+private let __sc_rangePair_iz: _T2 = (0x1d6a8....0x1d7cb, .common)
+private let __sc_rangePair_j0: _T2 = (0x1d7ce....0x1d7ff, .common)
+private let __sc_rangePair_j1: _T2 = (0x1d800....0x1da8b, .signWriting)
+private let __sc_rangePair_j2: _T2 = (0x1da9b....0x1da9f, .signWriting)
+private let __sc_rangePair_j3: _T2 = (0x1daa1....0x1daaf, .signWriting)
+private let __sc_rangePair_j4: _T2 = (0x1e000....0x1e006, .glagolitic)
+private let __sc_rangePair_j5: _T2 = (0x1e008....0x1e018, .glagolitic)
+private let __sc_rangePair_j6: _T2 = (0x1e01b....0x1e021, .glagolitic)
+private let __sc_rangePair_j7: _T2 = (0x1e023....0x1e024, .glagolitic)
+private let __sc_rangePair_j8: _T2 = (0x1e026....0x1e02a, .glagolitic)
+private let __sc_rangePair_j9: _T2 = (0x1e100....0x1e12c, .nyiakengPuachueHmong)
+private let __sc_rangePair_ja: _T2 = (0x1e130....0x1e13d, .nyiakengPuachueHmong)
+private let __sc_rangePair_jb: _T2 = (0x1e140....0x1e149, .nyiakengPuachueHmong)
+private let __sc_rangePair_jc: _T2 = (0x1e14e....0x1e14f, .nyiakengPuachueHmong)
+private let __sc_rangePair_jd: _T2 = (0x1e2c0....0x1e2f9, .wancho)
+private let __sc_rangePair_je: _T2 = (0x1e800....0x1e8c4, .mendeKikakui)
+private let __sc_rangePair_jf: _T2 = (0x1e8c7....0x1e8d6, .mendeKikakui)
+private let __sc_rangePair_jg: _T2 = (0x1e900....0x1e94b, .adlam)
+private let __sc_rangePair_jh: _T2 = (0x1e950....0x1e959, .adlam)
+private let __sc_rangePair_ji: _T2 = (0x1e95e....0x1e95f, .adlam)
+private let __sc_rangePair_jj: _T2 = (0x1ec71....0x1ecb4, .common)
+private let __sc_rangePair_jk: _T2 = (0x1ed01....0x1ed3d, .common)
+private let __sc_rangePair_jl: _T2 = (0x1ee00....0x1ee03, .arabic)
+private let __sc_rangePair_jm: _T2 = (0x1ee05....0x1ee1f, .arabic)
+private let __sc_rangePair_jn: _T2 = (0x1ee21....0x1ee22, .arabic)
+private let __sc_rangePair_jo: _T2 = (0x1ee29....0x1ee32, .arabic)
+private let __sc_rangePair_jp: _T2 = (0x1ee34....0x1ee37, .arabic)
+private let __sc_rangePair_jq: _T2 = (0x1ee4d....0x1ee4f, .arabic)
+private let __sc_rangePair_jr: _T2 = (0x1ee51....0x1ee52, .arabic)
+private let __sc_rangePair_js: _T2 = (0x1ee61....0x1ee62, .arabic)
+private let __sc_rangePair_jt: _T2 = (0x1ee67....0x1ee6a, .arabic)
+private let __sc_rangePair_ju: _T2 = (0x1ee6c....0x1ee72, .arabic)
+private let __sc_rangePair_jv: _T2 = (0x1ee74....0x1ee77, .arabic)
+private let __sc_rangePair_jw: _T2 = (0x1ee79....0x1ee7c, .arabic)
+private let __sc_rangePair_jx: _T2 = (0x1ee80....0x1ee89, .arabic)
+private let __sc_rangePair_jy: _T2 = (0x1ee8b....0x1ee9b, .arabic)
+private let __sc_rangePair_jz: _T2 = (0x1eea1....0x1eea3, .arabic)
+private let __sc_rangePair_k0: _T2 = (0x1eea5....0x1eea9, .arabic)
+private let __sc_rangePair_k1: _T2 = (0x1eeab....0x1eebb, .arabic)
+private let __sc_rangePair_k2: _T2 = (0x1eef0....0x1eef1, .arabic)
+private let __sc_rangePair_k3: _T2 = (0x1f000....0x1f02b, .common)
+private let __sc_rangePair_k4: _T2 = (0x1f030....0x1f093, .common)
+private let __sc_rangePair_k5: _T2 = (0x1f0a0....0x1f0ae, .common)
+private let __sc_rangePair_k6: _T2 = (0x1f0b1....0x1f0bf, .common)
+private let __sc_rangePair_k7: _T2 = (0x1f0c1....0x1f0cf, .common)
+private let __sc_rangePair_k8: _T2 = (0x1f0d1....0x1f0f5, .common)
+private let __sc_rangePair_k9: _T2 = (0x1f100....0x1f10c, .common)
+private let __sc_rangePair_ka: _T2 = (0x1f110....0x1f16c, .common)
+private let __sc_rangePair_kb: _T2 = (0x1f170....0x1f1ac, .common)
+private let __sc_rangePair_kc: _T2 = (0x1f1e6....0x1f1ff, .common)
+private let __sc_rangePair_kd: _T2 = (0x1f201....0x1f202, .common)
+private let __sc_rangePair_ke: _T2 = (0x1f210....0x1f23b, .common)
+private let __sc_rangePair_kf: _T2 = (0x1f240....0x1f248, .common)
+private let __sc_rangePair_kg: _T2 = (0x1f250....0x1f251, .common)
+private let __sc_rangePair_kh: _T2 = (0x1f260....0x1f265, .common)
+private let __sc_rangePair_ki: _T2 = (0x1f300....0x1f6d5, .common)
+private let __sc_rangePair_kj: _T2 = (0x1f6e0....0x1f6ec, .common)
+private let __sc_rangePair_kk: _T2 = (0x1f6f0....0x1f6fa, .common)
+private let __sc_rangePair_kl: _T2 = (0x1f700....0x1f773, .common)
+private let __sc_rangePair_km: _T2 = (0x1f780....0x1f7d8, .common)
+private let __sc_rangePair_kn: _T2 = (0x1f7e0....0x1f7eb, .common)
+private let __sc_rangePair_ko: _T2 = (0x1f800....0x1f80b, .common)
+private let __sc_rangePair_kp: _T2 = (0x1f810....0x1f847, .common)
+private let __sc_rangePair_kq: _T2 = (0x1f850....0x1f859, .common)
+private let __sc_rangePair_kr: _T2 = (0x1f860....0x1f887, .common)
+private let __sc_rangePair_ks: _T2 = (0x1f890....0x1f8ad, .common)
+private let __sc_rangePair_kt: _T2 = (0x1f900....0x1f90b, .common)
+private let __sc_rangePair_ku: _T2 = (0x1f90d....0x1f971, .common)
+private let __sc_rangePair_kv: _T2 = (0x1f973....0x1f976, .common)
+private let __sc_rangePair_kw: _T2 = (0x1f97a....0x1f9a2, .common)
+private let __sc_rangePair_kx: _T2 = (0x1f9a5....0x1f9aa, .common)
+private let __sc_rangePair_ky: _T2 = (0x1f9ae....0x1f9ca, .common)
+private let __sc_rangePair_kz: _T2 = (0x1f9cd....0x1fa53, .common)
+private let __sc_rangePair_l0: _T2 = (0x1fa60....0x1fa6d, .common)
+private let __sc_rangePair_l1: _T2 = (0x1fa70....0x1fa73, .common)
+private let __sc_rangePair_l2: _T2 = (0x1fa78....0x1fa7a, .common)
+private let __sc_rangePair_l3: _T2 = (0x1fa80....0x1fa82, .common)
+private let __sc_rangePair_l4: _T2 = (0x1fa90....0x1fa95, .common)
+private let __sc_rangePair_l5: _T2 = (0x20000....0x2a6d6, .han)
+private let __sc_rangePair_l6: _T2 = (0x2a700....0x2b734, .han)
+private let __sc_rangePair_l7: _T2 = (0x2b740....0x2b81d, .han)
+private let __sc_rangePair_l8: _T2 = (0x2b820....0x2cea1, .han)
+private let __sc_rangePair_l9: _T2 = (0x2ceb0....0x2ebe0, .han)
+private let __sc_rangePair_la: _T2 = (0x2f800....0x2fa1d, .han)
+private let __sc_rangePair_lb: _T2 = (0xe0020....0xe007f, .common)
+private let __sc_rangePair_lc: _T2 = (0xe0100....0xe01ef, .inherited)
+private let __sc_rangePairArray: _T3 = [
+  __sc_rangePair_0,
+  __sc_rangePair_1,
+  __sc_rangePair_2,
+  __sc_rangePair_3,
+  __sc_rangePair_4,
+  __sc_rangePair_5,
+  __sc_rangePair_6,
+  __sc_rangePair_7,
+  __sc_rangePair_8,
+  __sc_rangePair_9,
+  __sc_rangePair_a,
+  __sc_rangePair_b,
+  __sc_rangePair_c,
+  __sc_rangePair_d,
+  __sc_rangePair_e,
+  __sc_rangePair_f,
+  __sc_rangePair_g,
+  __sc_rangePair_h,
+  __sc_rangePair_i,
+  __sc_rangePair_j,
+  __sc_rangePair_k,
+  __sc_rangePair_l,
+  __sc_rangePair_m,
+  __sc_rangePair_n,
+  __sc_rangePair_o,
+  __sc_rangePair_p,
+  __sc_rangePair_q,
+  __sc_rangePair_r,
+  __sc_rangePair_s,
+  __sc_rangePair_t,
+  __sc_rangePair_u,
+  __sc_rangePair_v,
+  __sc_rangePair_w,
+  __sc_rangePair_x,
+  __sc_rangePair_y,
+  __sc_rangePair_z,
+  __sc_rangePair_10,
+  __sc_rangePair_11,
+  __sc_rangePair_12,
+  __sc_rangePair_13,
+  __sc_rangePair_14,
+  __sc_rangePair_15,
+  __sc_rangePair_16,
+  __sc_rangePair_17,
+  __sc_rangePair_18,
+  __sc_rangePair_19,
+  __sc_rangePair_1a,
+  __sc_rangePair_1b,
+  __sc_rangePair_1c,
+  __sc_rangePair_1d,
+  __sc_rangePair_1e,
+  __sc_rangePair_1f,
+  __sc_rangePair_1g,
+  __sc_rangePair_1h,
+  __sc_rangePair_1i,
+  __sc_rangePair_1j,
+  __sc_rangePair_1k,
+  __sc_rangePair_1l,
+  __sc_rangePair_1m,
+  __sc_rangePair_1n,
+  __sc_rangePair_1o,
+  __sc_rangePair_1p,
+  __sc_rangePair_1q,
+  __sc_rangePair_1r,
+  __sc_rangePair_1s,
+  __sc_rangePair_1t,
+  __sc_rangePair_1u,
+  __sc_rangePair_1v,
+  __sc_rangePair_1w,
+  __sc_rangePair_1x,
+  __sc_rangePair_1y,
+  __sc_rangePair_1z,
+  __sc_rangePair_20,
+  __sc_rangePair_21,
+  __sc_rangePair_22,
+  __sc_rangePair_23,
+  __sc_rangePair_24,
+  __sc_rangePair_25,
+  __sc_rangePair_26,
+  __sc_rangePair_27,
+  __sc_rangePair_28,
+  __sc_rangePair_29,
+  __sc_rangePair_2a,
+  __sc_rangePair_2b,
+  __sc_rangePair_2c,
+  __sc_rangePair_2d,
+  __sc_rangePair_2e,
+  __sc_rangePair_2f,
+  __sc_rangePair_2g,
+  __sc_rangePair_2h,
+  __sc_rangePair_2i,
+  __sc_rangePair_2j,
+  __sc_rangePair_2k,
+  __sc_rangePair_2l,
+  __sc_rangePair_2m,
+  __sc_rangePair_2n,
+  __sc_rangePair_2o,
+  __sc_rangePair_2p,
+  __sc_rangePair_2q,
+  __sc_rangePair_2r,
+  __sc_rangePair_2s,
+  __sc_rangePair_2t,
+  __sc_rangePair_2u,
+  __sc_rangePair_2v,
+  __sc_rangePair_2w,
+  __sc_rangePair_2x,
+  __sc_rangePair_2y,
+  __sc_rangePair_2z,
+  __sc_rangePair_30,
+  __sc_rangePair_31,
+  __sc_rangePair_32,
+  __sc_rangePair_33,
+  __sc_rangePair_34,
+  __sc_rangePair_35,
+  __sc_rangePair_36,
+  __sc_rangePair_37,
+  __sc_rangePair_38,
+  __sc_rangePair_39,
+  __sc_rangePair_3a,
+  __sc_rangePair_3b,
+  __sc_rangePair_3c,
+  __sc_rangePair_3d,
+  __sc_rangePair_3e,
+  __sc_rangePair_3f,
+  __sc_rangePair_3g,
+  __sc_rangePair_3h,
+  __sc_rangePair_3i,
+  __sc_rangePair_3j,
+  __sc_rangePair_3k,
+  __sc_rangePair_3l,
+  __sc_rangePair_3m,
+  __sc_rangePair_3n,
+  __sc_rangePair_3o,
+  __sc_rangePair_3p,
+  __sc_rangePair_3q,
+  __sc_rangePair_3r,
+  __sc_rangePair_3s,
+  __sc_rangePair_3t,
+  __sc_rangePair_3u,
+  __sc_rangePair_3v,
+  __sc_rangePair_3w,
+  __sc_rangePair_3x,
+  __sc_rangePair_3y,
+  __sc_rangePair_3z,
+  __sc_rangePair_40,
+  __sc_rangePair_41,
+  __sc_rangePair_42,
+  __sc_rangePair_43,
+  __sc_rangePair_44,
+  __sc_rangePair_45,
+  __sc_rangePair_46,
+  __sc_rangePair_47,
+  __sc_rangePair_48,
+  __sc_rangePair_49,
+  __sc_rangePair_4a,
+  __sc_rangePair_4b,
+  __sc_rangePair_4c,
+  __sc_rangePair_4d,
+  __sc_rangePair_4e,
+  __sc_rangePair_4f,
+  __sc_rangePair_4g,
+  __sc_rangePair_4h,
+  __sc_rangePair_4i,
+  __sc_rangePair_4j,
+  __sc_rangePair_4k,
+  __sc_rangePair_4l,
+  __sc_rangePair_4m,
+  __sc_rangePair_4n,
+  __sc_rangePair_4o,
+  __sc_rangePair_4p,
+  __sc_rangePair_4q,
+  __sc_rangePair_4r,
+  __sc_rangePair_4s,
+  __sc_rangePair_4t,
+  __sc_rangePair_4u,
+  __sc_rangePair_4v,
+  __sc_rangePair_4w,
+  __sc_rangePair_4x,
+  __sc_rangePair_4y,
+  __sc_rangePair_4z,
+  __sc_rangePair_50,
+  __sc_rangePair_51,
+  __sc_rangePair_52,
+  __sc_rangePair_53,
+  __sc_rangePair_54,
+  __sc_rangePair_55,
+  __sc_rangePair_56,
+  __sc_rangePair_57,
+  __sc_rangePair_58,
+  __sc_rangePair_59,
+  __sc_rangePair_5a,
+  __sc_rangePair_5b,
+  __sc_rangePair_5c,
+  __sc_rangePair_5d,
+  __sc_rangePair_5e,
+  __sc_rangePair_5f,
+  __sc_rangePair_5g,
+  __sc_rangePair_5h,
+  __sc_rangePair_5i,
+  __sc_rangePair_5j,
+  __sc_rangePair_5k,
+  __sc_rangePair_5l,
+  __sc_rangePair_5m,
+  __sc_rangePair_5n,
+  __sc_rangePair_5o,
+  __sc_rangePair_5p,
+  __sc_rangePair_5q,
+  __sc_rangePair_5r,
+  __sc_rangePair_5s,
+  __sc_rangePair_5t,
+  __sc_rangePair_5u,
+  __sc_rangePair_5v,
+  __sc_rangePair_5w,
+  __sc_rangePair_5x,
+  __sc_rangePair_5y,
+  __sc_rangePair_5z,
+  __sc_rangePair_60,
+  __sc_rangePair_61,
+  __sc_rangePair_62,
+  __sc_rangePair_63,
+  __sc_rangePair_64,
+  __sc_rangePair_65,
+  __sc_rangePair_66,
+  __sc_rangePair_67,
+  __sc_rangePair_68,
+  __sc_rangePair_69,
+  __sc_rangePair_6a,
+  __sc_rangePair_6b,
+  __sc_rangePair_6c,
+  __sc_rangePair_6d,
+  __sc_rangePair_6e,
+  __sc_rangePair_6f,
+  __sc_rangePair_6g,
+  __sc_rangePair_6h,
+  __sc_rangePair_6i,
+  __sc_rangePair_6j,
+  __sc_rangePair_6k,
+  __sc_rangePair_6l,
+  __sc_rangePair_6m,
+  __sc_rangePair_6n,
+  __sc_rangePair_6o,
+  __sc_rangePair_6p,
+  __sc_rangePair_6q,
+  __sc_rangePair_6r,
+  __sc_rangePair_6s,
+  __sc_rangePair_6t,
+  __sc_rangePair_6u,
+  __sc_rangePair_6v,
+  __sc_rangePair_6w,
+  __sc_rangePair_6x,
+  __sc_rangePair_6y,
+  __sc_rangePair_6z,
+  __sc_rangePair_70,
+  __sc_rangePair_71,
+  __sc_rangePair_72,
+  __sc_rangePair_73,
+  __sc_rangePair_74,
+  __sc_rangePair_75,
+  __sc_rangePair_76,
+  __sc_rangePair_77,
+  __sc_rangePair_78,
+  __sc_rangePair_79,
+  __sc_rangePair_7a,
+  __sc_rangePair_7b,
+  __sc_rangePair_7c,
+  __sc_rangePair_7d,
+  __sc_rangePair_7e,
+  __sc_rangePair_7f,
+  __sc_rangePair_7g,
+  __sc_rangePair_7h,
+  __sc_rangePair_7i,
+  __sc_rangePair_7j,
+  __sc_rangePair_7k,
+  __sc_rangePair_7l,
+  __sc_rangePair_7m,
+  __sc_rangePair_7n,
+  __sc_rangePair_7o,
+  __sc_rangePair_7p,
+  __sc_rangePair_7q,
+  __sc_rangePair_7r,
+  __sc_rangePair_7s,
+  __sc_rangePair_7t,
+  __sc_rangePair_7u,
+  __sc_rangePair_7v,
+  __sc_rangePair_7w,
+  __sc_rangePair_7x,
+  __sc_rangePair_7y,
+  __sc_rangePair_7z,
+  __sc_rangePair_80,
+  __sc_rangePair_81,
+  __sc_rangePair_82,
+  __sc_rangePair_83,
+  __sc_rangePair_84,
+  __sc_rangePair_85,
+  __sc_rangePair_86,
+  __sc_rangePair_87,
+  __sc_rangePair_88,
+  __sc_rangePair_89,
+  __sc_rangePair_8a,
+  __sc_rangePair_8b,
+  __sc_rangePair_8c,
+  __sc_rangePair_8d,
+  __sc_rangePair_8e,
+  __sc_rangePair_8f,
+  __sc_rangePair_8g,
+  __sc_rangePair_8h,
+  __sc_rangePair_8i,
+  __sc_rangePair_8j,
+  __sc_rangePair_8k,
+  __sc_rangePair_8l,
+  __sc_rangePair_8m,
+  __sc_rangePair_8n,
+  __sc_rangePair_8o,
+  __sc_rangePair_8p,
+  __sc_rangePair_8q,
+  __sc_rangePair_8r,
+  __sc_rangePair_8s,
+  __sc_rangePair_8t,
+  __sc_rangePair_8u,
+  __sc_rangePair_8v,
+  __sc_rangePair_8w,
+  __sc_rangePair_8x,
+  __sc_rangePair_8y,
+  __sc_rangePair_8z,
+  __sc_rangePair_90,
+  __sc_rangePair_91,
+  __sc_rangePair_92,
+  __sc_rangePair_93,
+  __sc_rangePair_94,
+  __sc_rangePair_95,
+  __sc_rangePair_96,
+  __sc_rangePair_97,
+  __sc_rangePair_98,
+  __sc_rangePair_99,
+  __sc_rangePair_9a,
+  __sc_rangePair_9b,
+  __sc_rangePair_9c,
+  __sc_rangePair_9d,
+  __sc_rangePair_9e,
+  __sc_rangePair_9f,
+  __sc_rangePair_9g,
+  __sc_rangePair_9h,
+  __sc_rangePair_9i,
+  __sc_rangePair_9j,
+  __sc_rangePair_9k,
+  __sc_rangePair_9l,
+  __sc_rangePair_9m,
+  __sc_rangePair_9n,
+  __sc_rangePair_9o,
+  __sc_rangePair_9p,
+  __sc_rangePair_9q,
+  __sc_rangePair_9r,
+  __sc_rangePair_9s,
+  __sc_rangePair_9t,
+  __sc_rangePair_9u,
+  __sc_rangePair_9v,
+  __sc_rangePair_9w,
+  __sc_rangePair_9x,
+  __sc_rangePair_9y,
+  __sc_rangePair_9z,
+  __sc_rangePair_a0,
+  __sc_rangePair_a1,
+  __sc_rangePair_a2,
+  __sc_rangePair_a3,
+  __sc_rangePair_a4,
+  __sc_rangePair_a5,
+  __sc_rangePair_a6,
+  __sc_rangePair_a7,
+  __sc_rangePair_a8,
+  __sc_rangePair_a9,
+  __sc_rangePair_aa,
+  __sc_rangePair_ab,
+  __sc_rangePair_ac,
+  __sc_rangePair_ad,
+  __sc_rangePair_ae,
+  __sc_rangePair_af,
+  __sc_rangePair_ag,
+  __sc_rangePair_ah,
+  __sc_rangePair_ai,
+  __sc_rangePair_aj,
+  __sc_rangePair_ak,
+  __sc_rangePair_al,
+  __sc_rangePair_am,
+  __sc_rangePair_an,
+  __sc_rangePair_ao,
+  __sc_rangePair_ap,
+  __sc_rangePair_aq,
+  __sc_rangePair_ar,
+  __sc_rangePair_as,
+  __sc_rangePair_at,
+  __sc_rangePair_au,
+  __sc_rangePair_av,
+  __sc_rangePair_aw,
+  __sc_rangePair_ax,
+  __sc_rangePair_ay,
+  __sc_rangePair_az,
+  __sc_rangePair_b0,
+  __sc_rangePair_b1,
+  __sc_rangePair_b2,
+  __sc_rangePair_b3,
+  __sc_rangePair_b4,
+  __sc_rangePair_b5,
+  __sc_rangePair_b6,
+  __sc_rangePair_b7,
+  __sc_rangePair_b8,
+  __sc_rangePair_b9,
+  __sc_rangePair_ba,
+  __sc_rangePair_bb,
+  __sc_rangePair_bc,
+  __sc_rangePair_bd,
+  __sc_rangePair_be,
+  __sc_rangePair_bf,
+  __sc_rangePair_bg,
+  __sc_rangePair_bh,
+  __sc_rangePair_bi,
+  __sc_rangePair_bj,
+  __sc_rangePair_bk,
+  __sc_rangePair_bl,
+  __sc_rangePair_bm,
+  __sc_rangePair_bn,
+  __sc_rangePair_bo,
+  __sc_rangePair_bp,
+  __sc_rangePair_bq,
+  __sc_rangePair_br,
+  __sc_rangePair_bs,
+  __sc_rangePair_bt,
+  __sc_rangePair_bu,
+  __sc_rangePair_bv,
+  __sc_rangePair_bw,
+  __sc_rangePair_bx,
+  __sc_rangePair_by,
+  __sc_rangePair_bz,
+  __sc_rangePair_c0,
+  __sc_rangePair_c1,
+  __sc_rangePair_c2,
+  __sc_rangePair_c3,
+  __sc_rangePair_c4,
+  __sc_rangePair_c5,
+  __sc_rangePair_c6,
+  __sc_rangePair_c7,
+  __sc_rangePair_c8,
+  __sc_rangePair_c9,
+  __sc_rangePair_ca,
+  __sc_rangePair_cb,
+  __sc_rangePair_cc,
+  __sc_rangePair_cd,
+  __sc_rangePair_ce,
+  __sc_rangePair_cf,
+  __sc_rangePair_cg,
+  __sc_rangePair_ch,
+  __sc_rangePair_ci,
+  __sc_rangePair_cj,
+  __sc_rangePair_ck,
+  __sc_rangePair_cl,
+  __sc_rangePair_cm,
+  __sc_rangePair_cn,
+  __sc_rangePair_co,
+  __sc_rangePair_cp,
+  __sc_rangePair_cq,
+  __sc_rangePair_cr,
+  __sc_rangePair_cs,
+  __sc_rangePair_ct,
+  __sc_rangePair_cu,
+  __sc_rangePair_cv,
+  __sc_rangePair_cw,
+  __sc_rangePair_cx,
+  __sc_rangePair_cy,
+  __sc_rangePair_cz,
+  __sc_rangePair_d0,
+  __sc_rangePair_d1,
+  __sc_rangePair_d2,
+  __sc_rangePair_d3,
+  __sc_rangePair_d4,
+  __sc_rangePair_d5,
+  __sc_rangePair_d6,
+  __sc_rangePair_d7,
+  __sc_rangePair_d8,
+  __sc_rangePair_d9,
+  __sc_rangePair_da,
+  __sc_rangePair_db,
+  __sc_rangePair_dc,
+  __sc_rangePair_dd,
+  __sc_rangePair_de,
+  __sc_rangePair_df,
+  __sc_rangePair_dg,
+  __sc_rangePair_dh,
+  __sc_rangePair_di,
+  __sc_rangePair_dj,
+  __sc_rangePair_dk,
+  __sc_rangePair_dl,
+  __sc_rangePair_dm,
+  __sc_rangePair_dn,
+  __sc_rangePair_do,
+  __sc_rangePair_dp,
+  __sc_rangePair_dq,
+  __sc_rangePair_dr,
+  __sc_rangePair_ds,
+  __sc_rangePair_dt,
+  __sc_rangePair_du,
+  __sc_rangePair_dv,
+  __sc_rangePair_dw,
+  __sc_rangePair_dx,
+  __sc_rangePair_dy,
+  __sc_rangePair_dz,
+  __sc_rangePair_e0,
+  __sc_rangePair_e1,
+  __sc_rangePair_e2,
+  __sc_rangePair_e3,
+  __sc_rangePair_e4,
+  __sc_rangePair_e5,
+  __sc_rangePair_e6,
+  __sc_rangePair_e7,
+  __sc_rangePair_e8,
+  __sc_rangePair_e9,
+  __sc_rangePair_ea,
+  __sc_rangePair_eb,
+  __sc_rangePair_ec,
+  __sc_rangePair_ed,
+  __sc_rangePair_ee,
+  __sc_rangePair_ef,
+  __sc_rangePair_eg,
+  __sc_rangePair_eh,
+  __sc_rangePair_ei,
+  __sc_rangePair_ej,
+  __sc_rangePair_ek,
+  __sc_rangePair_el,
+  __sc_rangePair_em,
+  __sc_rangePair_en,
+  __sc_rangePair_eo,
+  __sc_rangePair_ep,
+  __sc_rangePair_eq,
+  __sc_rangePair_er,
+  __sc_rangePair_es,
+  __sc_rangePair_et,
+  __sc_rangePair_eu,
+  __sc_rangePair_ev,
+  __sc_rangePair_ew,
+  __sc_rangePair_ex,
+  __sc_rangePair_ey,
+  __sc_rangePair_ez,
+  __sc_rangePair_f0,
+  __sc_rangePair_f1,
+  __sc_rangePair_f2,
+  __sc_rangePair_f3,
+  __sc_rangePair_f4,
+  __sc_rangePair_f5,
+  __sc_rangePair_f6,
+  __sc_rangePair_f7,
+  __sc_rangePair_f8,
+  __sc_rangePair_f9,
+  __sc_rangePair_fa,
+  __sc_rangePair_fb,
+  __sc_rangePair_fc,
+  __sc_rangePair_fd,
+  __sc_rangePair_fe,
+  __sc_rangePair_ff,
+  __sc_rangePair_fg,
+  __sc_rangePair_fh,
+  __sc_rangePair_fi,
+  __sc_rangePair_fj,
+  __sc_rangePair_fk,
+  __sc_rangePair_fl,
+  __sc_rangePair_fm,
+  __sc_rangePair_fn,
+  __sc_rangePair_fo,
+  __sc_rangePair_fp,
+  __sc_rangePair_fq,
+  __sc_rangePair_fr,
+  __sc_rangePair_fs,
+  __sc_rangePair_ft,
+  __sc_rangePair_fu,
+  __sc_rangePair_fv,
+  __sc_rangePair_fw,
+  __sc_rangePair_fx,
+  __sc_rangePair_fy,
+  __sc_rangePair_fz,
+  __sc_rangePair_g0,
+  __sc_rangePair_g1,
+  __sc_rangePair_g2,
+  __sc_rangePair_g3,
+  __sc_rangePair_g4,
+  __sc_rangePair_g5,
+  __sc_rangePair_g6,
+  __sc_rangePair_g7,
+  __sc_rangePair_g8,
+  __sc_rangePair_g9,
+  __sc_rangePair_ga,
+  __sc_rangePair_gb,
+  __sc_rangePair_gc,
+  __sc_rangePair_gd,
+  __sc_rangePair_ge,
+  __sc_rangePair_gf,
+  __sc_rangePair_gg,
+  __sc_rangePair_gh,
+  __sc_rangePair_gi,
+  __sc_rangePair_gj,
+  __sc_rangePair_gk,
+  __sc_rangePair_gl,
+  __sc_rangePair_gm,
+  __sc_rangePair_gn,
+  __sc_rangePair_go,
+  __sc_rangePair_gp,
+  __sc_rangePair_gq,
+  __sc_rangePair_gr,
+  __sc_rangePair_gs,
+  __sc_rangePair_gt,
+  __sc_rangePair_gu,
+  __sc_rangePair_gv,
+  __sc_rangePair_gw,
+  __sc_rangePair_gx,
+  __sc_rangePair_gy,
+  __sc_rangePair_gz,
+  __sc_rangePair_h0,
+  __sc_rangePair_h1,
+  __sc_rangePair_h2,
+  __sc_rangePair_h3,
+  __sc_rangePair_h4,
+  __sc_rangePair_h5,
+  __sc_rangePair_h6,
+  __sc_rangePair_h7,
+  __sc_rangePair_h8,
+  __sc_rangePair_h9,
+  __sc_rangePair_ha,
+  __sc_rangePair_hb,
+  __sc_rangePair_hc,
+  __sc_rangePair_hd,
+  __sc_rangePair_he,
+  __sc_rangePair_hf,
+  __sc_rangePair_hg,
+  __sc_rangePair_hh,
+  __sc_rangePair_hi,
+  __sc_rangePair_hj,
+  __sc_rangePair_hk,
+  __sc_rangePair_hl,
+  __sc_rangePair_hm,
+  __sc_rangePair_hn,
+  __sc_rangePair_ho,
+  __sc_rangePair_hp,
+  __sc_rangePair_hq,
+  __sc_rangePair_hr,
+  __sc_rangePair_hs,
+  __sc_rangePair_ht,
+  __sc_rangePair_hu,
+  __sc_rangePair_hv,
+  __sc_rangePair_hw,
+  __sc_rangePair_hx,
+  __sc_rangePair_hy,
+  __sc_rangePair_hz,
+  __sc_rangePair_i0,
+  __sc_rangePair_i1,
+  __sc_rangePair_i2,
+  __sc_rangePair_i3,
+  __sc_rangePair_i4,
+  __sc_rangePair_i5,
+  __sc_rangePair_i6,
+  __sc_rangePair_i7,
+  __sc_rangePair_i8,
+  __sc_rangePair_i9,
+  __sc_rangePair_ia,
+  __sc_rangePair_ib,
+  __sc_rangePair_ic,
+  __sc_rangePair_id,
+  __sc_rangePair_ie,
+  __sc_rangePair_if,
+  __sc_rangePair_ig,
+  __sc_rangePair_ih,
+  __sc_rangePair_ii,
+  __sc_rangePair_ij,
+  __sc_rangePair_ik,
+  __sc_rangePair_il,
+  __sc_rangePair_im,
+  __sc_rangePair_in,
+  __sc_rangePair_io,
+  __sc_rangePair_ip,
+  __sc_rangePair_iq,
+  __sc_rangePair_ir,
+  __sc_rangePair_is,
+  __sc_rangePair_it,
+  __sc_rangePair_iu,
+  __sc_rangePair_iv,
+  __sc_rangePair_iw,
+  __sc_rangePair_ix,
+  __sc_rangePair_iy,
+  __sc_rangePair_iz,
+  __sc_rangePair_j0,
+  __sc_rangePair_j1,
+  __sc_rangePair_j2,
+  __sc_rangePair_j3,
+  __sc_rangePair_j4,
+  __sc_rangePair_j5,
+  __sc_rangePair_j6,
+  __sc_rangePair_j7,
+  __sc_rangePair_j8,
+  __sc_rangePair_j9,
+  __sc_rangePair_ja,
+  __sc_rangePair_jb,
+  __sc_rangePair_jc,
+  __sc_rangePair_jd,
+  __sc_rangePair_je,
+  __sc_rangePair_jf,
+  __sc_rangePair_jg,
+  __sc_rangePair_jh,
+  __sc_rangePair_ji,
+  __sc_rangePair_jj,
+  __sc_rangePair_jk,
+  __sc_rangePair_jl,
+  __sc_rangePair_jm,
+  __sc_rangePair_jn,
+  __sc_rangePair_jo,
+  __sc_rangePair_jp,
+  __sc_rangePair_jq,
+  __sc_rangePair_jr,
+  __sc_rangePair_js,
+  __sc_rangePair_jt,
+  __sc_rangePair_ju,
+  __sc_rangePair_jv,
+  __sc_rangePair_jw,
+  __sc_rangePair_jx,
+  __sc_rangePair_jy,
+  __sc_rangePair_jz,
+  __sc_rangePair_k0,
+  __sc_rangePair_k1,
+  __sc_rangePair_k2,
+  __sc_rangePair_k3,
+  __sc_rangePair_k4,
+  __sc_rangePair_k5,
+  __sc_rangePair_k6,
+  __sc_rangePair_k7,
+  __sc_rangePair_k8,
+  __sc_rangePair_k9,
+  __sc_rangePair_ka,
+  __sc_rangePair_kb,
+  __sc_rangePair_kc,
+  __sc_rangePair_kd,
+  __sc_rangePair_ke,
+  __sc_rangePair_kf,
+  __sc_rangePair_kg,
+  __sc_rangePair_kh,
+  __sc_rangePair_ki,
+  __sc_rangePair_kj,
+  __sc_rangePair_kk,
+  __sc_rangePair_kl,
+  __sc_rangePair_km,
+  __sc_rangePair_kn,
+  __sc_rangePair_ko,
+  __sc_rangePair_kp,
+  __sc_rangePair_kq,
+  __sc_rangePair_kr,
+  __sc_rangePair_ks,
+  __sc_rangePair_kt,
+  __sc_rangePair_ku,
+  __sc_rangePair_kv,
+  __sc_rangePair_kw,
+  __sc_rangePair_kx,
+  __sc_rangePair_ky,
+  __sc_rangePair_kz,
+  __sc_rangePair_l0,
+  __sc_rangePair_l1,
+  __sc_rangePair_l2,
+  __sc_rangePair_l3,
+  __sc_rangePair_l4,
+  __sc_rangePair_l5,
+  __sc_rangePair_l6,
+  __sc_rangePair_l7,
+  __sc_rangePair_l8,
+  __sc_rangePair_l9,
+  __sc_rangePair_la,
+  __sc_rangePair_lb,
+  __sc_rangePair_lc,
 ]
-internal let _sc = RangeDictionary<UInt32, Unicode.Script>(carefullySortedRangesAndValues: __array_sc)
+private let __sc_rangeDictionary = RangeDictionary<Unicode.Scalar.Value, _T0>(carefullySortedRangesAndValues: __sc_rangePairArray)
+internal let _sc = UnicodeScalarValueDictionary<Unicode.Script>(dictionary: __sc_dictionary, rangeDictionary: __sc_rangeDictionary)

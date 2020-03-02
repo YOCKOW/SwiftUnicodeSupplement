@@ -97,7 +97,7 @@ extension Unicode.IDNAStatus._ImmatureStatus {
   }
 }
 
-open class IDNAMappingTable: UCDCodeUpdaterDelegate {
+open class IDNAMappingTable: UCDPropertiesCodeUpdaterDelegate<Unicode.IDNAStatus._ImmatureStatus> {
   open override var prefix: String { return "idna" }
   
   open override var sourceURLs: Array<URL> {
@@ -108,45 +108,11 @@ open class IDNAMappingTable: UCDCodeUpdaterDelegate {
   
   open override var subdirectory: String { return "IDNA" }
   
-  open override func convert<S>(_ intermediates: S) throws -> String where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    var singleScalarValueTable: [Unicode.Scalar.Value: Unicode.IDNAStatus._ImmatureStatus] = [:]
-    var otherStatusTable: RangeDictionary<Unicode.Scalar.Value, Unicode.IDNAStatus._ImmatureStatus> = [:]
-    
-    for interm in intermediates {
-      for row in interm.content.rows {
-        guard let payload = row.payload else { continue }
-        let status = try Unicode.IDNAStatus._ImmatureStatus(payload.columns)
-        if payload.range.lowerBound == payload.range.upperBound {
-          singleScalarValueTable[payload.range.lowerBound] = status
-        } else {
-          otherStatusTable.insert(status, forRange: AnyRange(payload.range))
-        }
-      }
-    }
-    
-    var result = ""
-    
-    result += "internal let _\(self._identifierPrefix(for: 0))_dic: [UInt32: Unicode.IDNAStatus._ImmatureStatus] = [\n"
-    for vv in singleScalarValueTable.keys.sorted() {
-      result += "  \(vv._description): \(singleScalarValueTable[vv]!._description),\n"
-    }
-    result += "]\n"
-    
-    self.requires(module: "Ranges")
-    let pairTypeName = self.typeAliasName(for: "(AnyRange<UInt32>, Unicode.IDNAStatus._ImmatureStatus)")
-    func _pairID(for nn: Int) -> String { return "__pair_\(self._identifierPrefix(for: 0))_rangeDic_\(nn._base36)" }
-    for (ii, (range, status)) in otherStatusTable.enumerated() {
-      result += "private let \(_pairID(for: ii)): \(pairTypeName) = (\(range._rangeDescription), \(status._description))\n"
-    }
-    let arrayID = "__array_\(self._identifierPrefix(for: 0))_rangeDic"
-    let arrayTypeName = self.typeAliasName(for: "Array<\(pairTypeName)>")
-    result += "private let \(arrayID): \(arrayTypeName) = [\n"
-    for ii in 0..<otherStatusTable.count {
-      result += "  \(_pairID(for: ii)),\n"
-    }
-    result += "]\n"
-    result += "internal let _\(self._identifierPrefix(for: 0))_rangeDic = RangeDictionary<UInt32, Unicode.IDNAStatus._ImmatureStatus>(carefullySortedRangesAndValues: \(arrayID))\n"
-    
-    return result
+  open override func reduce(columns: [String]) throws -> Unicode.IDNAStatus._ImmatureStatus {
+    return try .init(columns)
+  }
+  
+  open override func describe(value: Unicode.IDNAStatus._ImmatureStatus) -> String {
+    return value._description
   }
 }

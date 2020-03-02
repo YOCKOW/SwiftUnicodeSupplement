@@ -27,13 +27,19 @@ extension Unicode.Scalar.LatestProperties {
     } else if let bidiClass = _bidiClass_default_ranges[self._value] {
       return bidiClass
     } else {
-      for propertyStatus in _bidiClass_default_properties {
-        if self[keyPath: propertyStatus.0] == propertyStatus.1 {
-          return propertyStatus.2
+      for (keyPath, status, bidiClass) in _bidiClass_default_properties {
+        if self[keyPath: keyPath] == status {
+          return bidiClass
         }
       }
     }
     return .leftToRight
+  }
+}
+
+extension Unicode.Scalar.LatestProperties {
+  public var eastAsianWidth: Unicode.EastAsianWidth {
+    return _ea[self._value] ?? .neutral
   }
 }
 
@@ -44,13 +50,7 @@ extension Unicode.Scalar.LatestProperties {
   public func idnaStatus(usingSTD3ASCIIRules std3:Bool = true,
                          idna2008Compatible idna2008:Bool = false) -> Unicode.IDNAStatus?
   {
-    func _immatureStatus() -> Unicode.IDNAStatus._ImmatureStatus? {
-      if let status = _idna_dic[self._value] { return status }
-      if let status = _idna_rangeDic[self._value] { return status }
-      return nil
-    }
-    
-    guard let immatureStatus = _immatureStatus() else { return nil }
+    guard let immatureStatus = _idna[self._value] else { return nil }
     switch immatureStatus {
     case ._valid_idna2008_disallowed:
       return idna2008 ? .disallowed : .valid

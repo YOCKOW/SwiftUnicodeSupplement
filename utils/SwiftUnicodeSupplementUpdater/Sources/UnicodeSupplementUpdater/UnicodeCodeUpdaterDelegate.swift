@@ -7,6 +7,8 @@
 
 import Foundation
 import Ranges
+import StringComposition
+import UnicodeSupplement
 import yCodeUpdater
 
 private func _mustBeOverridden(function: StaticString = #function, file: StaticString = #file, line: UInt = #line) -> Never {
@@ -35,21 +37,25 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     return _dataDirectory.appendingPathComponent(self.subdirectory, isDirectory: true).appendingPathComponent(self.identifier).appendingPathExtension("swift")
   }
   
+  open var prefix: String {
+    _mustBeOverridden()
+  }
+  
   open func prepare(sourceURL: URL) throws -> IntermediateDataContainer<UnicodeData> {
     return .init(content: try IntermediateDataType(url: sourceURL))
   }
   
-  open func convert<S>(_ intermidiates: S) throws -> String where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  open func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     _mustBeOverridden()
   }
   
   private var _modules: Set<String> = []
-  open func requires(module name: String) {
+  public final func requires(module name: String) {
     self._modules.insert(name)
   }
   
   private var _typeAliases: [String] = []
-  open func typeAliasName(for typeName: String) -> String {
+  public final func typeAliasName(for typeName: String) -> String {
     func _name(for index: Int) -> String { return "_T\(index._base36)" }
     if let index = self._typeAliases.firstIndex(of: typeName) {
       return _name(for: index)
@@ -59,79 +65,194 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
   }
   
   public final func convert<S>(_ intermidiates: S) throws -> Data where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    let code: String = try self.convert(intermidiates)
+    let code: StringLines = try self.convert(intermidiates)
     
-    let license = unicodeLicense()
-    let imports = self._modules.sorted().map({ "import \($0)\n" }).joined()
-    let typealiases = self._typeAliases.map({ "private typealias \(self.typeAliasName(for: $0)) = \($0)\n" }).joined()
+    var result = StringLines()
     
-    let header = """
-    /*
-      \(license.split(whereSeparator: { $0.isNewline }).joined(separator: "\n  "))
-    */
+    license: do {
+      result.append("/*")
+      defer { result.append("*/") }
+      
+      var license = StringLines(unicodeLicense(), detectIndent: false)
+      license.shiftRight()
+      result.append(contentsOf: license)
+    }
+    result.append("")
     
-    // Required Modules
-    \(imports)
+    modules: do {
+      guard !self._modules.isEmpty else { break modules }
+      result.append("// Required Modules")
+      for moduleName in self._modules.sorted() {
+        result.append(String.Line("import \(moduleName)"))
+      }
+    }
+    result.append("")
     
-    // Type Aliases
-    \(typealiases)
+    type_aliases: do {
+      guard !self._typeAliases.isEmpty else { break type_aliases }
+      result.append("// Type Aliases")
+      for typeName in self._typeAliases {
+        result.append("private typealias \(self.typeAliasName(for: typeName)) = \(typeName)")
+      }
+    }
+    result.append("")
     
+    result.append(contentsOf: code)
     
-    """
-    
-    return (header + code).data(using: .utf8)!
-  }
-}
-
-open class UCDCodeUpdaterDelegate: UnicodeCodeUpdaterDelegate {
-  open var prefix: String {
-    _mustBeOverridden()
+    return result.data(using: .utf8)!
   }
   
-  open override var subdirectory: String {
-    return "UCD"
-  }
-  
-  internal func _identifierPrefix(for nn: Int) -> String {
+  private func _identifierPrefix(for nn: Int) -> String {
     switch nn {
     case 0: return self.prefix
     default: return "\(self.prefix)_\(nn._base36)"
     }
   }
+  
+  private var _setConversionCount: [String: Int] = [:]
+  internal func _convert(_ ranges: MultipleRanges<Unicode.Scalar.Value>, key: String) -> StringLines {
+    let nn = _setConversionCount[key] ?? 0
+    defer { _setConversionCount[key] = nn + 1 }
+    
+    var singleValues: [Unicode.Scalar.Value] = []
+    var anyRanges: [AnyRange<Unicode.Scalar.Value>] = []
+    
+    for range in ranges {
+      let bounds = range.bounds!
+      if bounds.lower == bounds.upper {
+        singleValues.append(bounds.lower.value!)
+      } else {
+        anyRanges.append(range)
+      }
+    }
+    
+    var result = StringLines()
+    
+    self.requires(module: "Ranges")
+    let idPrefix = self._identifierPrefix(for: nn)
+    let scalarValueTypeName = self.typeAliasName(for: "Unicode.Scalar.Value")
+    let setTypeName = self.typeAliasName(for: "Set<\(scalarValueTypeName)>")
+    let rangeTypeName = self.typeAliasName(for: "AnyRange<\(scalarValueTypeName)>")
+    let arrayTypeName = self.typeAliasName(for: "Array<\(rangeTypeName)>")
+    let setID = "__\(idPrefix)_\(key)_set"
+    let arrayID = "__\(idPrefix)_\(key)_array"
+    let rangesID = "__\(idPrefix)_\(key)_ranges"
+    
+    // Single Values
+    result.append("private let \(setID): \(setTypeName) = [")
+    for value in singleValues {
+      result.append(String.Line("\(value._description),", indentLevel: 1)!)
+    }
+    result.append("]")
+    
+    // Ranges
+    func _rangeID(_ nn: Int) -> String {
+      return "__\(idPrefix)_\(key)_range_\(nn._base36)"
+    }
+    for (ii, range) in anyRanges.enumerated() {
+      result.append("private let \(_rangeID(ii)): \(rangeTypeName) = \(range._description)")
+    }
+    result.append("private let \(arrayID): \(arrayTypeName) = [")
+    for ii in 0..<anyRanges.count {
+      result.append(String.Line("\(_rangeID(ii)),", indentLevel: 1)!)
+    }
+    result.append("]")
+    result.append("private let \(rangesID) = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: \(arrayID))")
+    
+    // What we want
+    result.append("internal let _\(idPrefix)_\(key) = UnicodeScalarValueSet(singleValues: \(setID), ranges: \(rangesID))")
+    
+    return result
+  }
+  
+  private var _dicConversionCount: [String?: Int] = [:]
+  internal func _convert<T>(_ rangeDictionary: RangeDictionary<Unicode.Scalar.Value, T>, key: String? = nil, describer: (T) -> String) -> StringLines where T: Equatable {
+    let nn = _dicConversionCount[key] ?? 0
+    defer { _dicConversionCount[key] = nn + 1 }
+    
+    var dictionary: [Unicode.Scalar.Value: T] = [:]
+    var extractedRangeDictionary: RangeDictionary<Unicode.Scalar.Value, T> = [:]
+    
+    for (range, value) in rangeDictionary {
+      let bounds = range.bounds!
+      if bounds.lower == bounds.upper {
+        dictionary[bounds.lower.value!] = value
+      } else {
+        extractedRangeDictionary.insert(value, forRange: range)
+      }
+    }
+    
+    var result = StringLines()
+    
+    self.requires(module: "Ranges")
+    let assocTypeOriginalName = _typeName(of: T.self)
+    let idPrefix = self._identifierPrefix(for: nn) + (key != nil ? "_\(key!)" : "")
+    let assocTypeName = self.typeAliasName(for: assocTypeOriginalName)
+    let pairTypeName = self.typeAliasName(for: "(Unicode.Scalar.Value, \(assocTypeName))")
+    let rangePairTypeName = self.typeAliasName(for: "(AnyRange<UInt32>, \(assocTypeName))")
+    let arrayTypeName = self.typeAliasName(for: "Array<\(rangePairTypeName)>")
+    let dictionaryID = "__\(idPrefix)_dictionary"
+    let rangePairArrayID = "__\(idPrefix)_rangePairArray"
+    let rangeDictionaryID = "__\(idPrefix)_rangeDictionary"
+    
+    // Single Values
+    func _pairID(_ nn: Int) -> String {
+      return "__\(idPrefix)_pair_\(nn._base36)"
+    }
+    for (ii, (scalarValue, value)) in dictionary.sorted(by: { $0.key < $1.key }).enumerated() {
+      result.append("private let \(_pairID(ii)): \(pairTypeName) = (\(scalarValue._description), \(describer(value)))")
+    }
+    result.append("private let \(dictionaryID) = Dictionary<Unicode.Scalar.Value, \(assocTypeName)>(uniqueKeysWithValues: [")
+    for ii in 0..<dictionary.count {
+      result.append(String.Line("\(_pairID(ii)),", indentLevel: 1)!)
+    }
+    result.append("])")
+    
+    // Range-associated Values
+    func _rangePairID(_ nn: Int) -> String {
+      return "__\(idPrefix)_rangePair_\(nn._base36)"
+    }
+    for (ii, (range, value)) in extractedRangeDictionary.enumerated() {
+      result.append("private let \(_rangePairID(ii)): \(rangePairTypeName) = (\(range._description), \(describer(value)))")
+    }
+    result.append("private let \(rangePairArrayID): \(arrayTypeName) = [")
+    for ii in 0..<extractedRangeDictionary.count {
+      result.append(String.Line("\(_rangePairID(ii)),", indentLevel: 1)!)
+    }
+    result.append("]")
+    result.append("private let \(rangeDictionaryID) = RangeDictionary<Unicode.Scalar.Value, \(assocTypeName)>(carefullySortedRangesAndValues: \(rangePairArrayID))")
+    
+    // What we want
+    result.append("internal let _\(idPrefix) = UnicodeScalarValueDictionary<\(assocTypeOriginalName)>(dictionary: \(dictionaryID), rangeDictionary: \(rangeDictionaryID))")
+    
+    return result
+  }
+}
+
+open class UCDCodeUpdaterDelegate: UnicodeCodeUpdaterDelegate {
+  open override var subdirectory: String {
+    return "UCD"
+  }
 }
 
 open class UCDBinaryPropertiesCodeUpdaterDelegate: UCDCodeUpdaterDelegate {
-  open override func convert<S>(_ intermidiates: S) throws -> String where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    self.requires(module: "Ranges")
-    let rangeTypeName = self.typeAliasName(for: "AnyRange<UInt32>")
-    let arrayTypeName = self.typeAliasName(for: "Array<\(rangeTypeName)>")
+  open override func convert<S>(_ intermediates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    var arranged: [String: MultipleRanges<Unicode.Scalar.Value>] = [:]
     
-    var result = ""
-    var nn = 0
-    for interm in intermidiates {
-      defer { nn += 1 }
-      
+    for interm in intermediates {
       let dic = try interm.content.split()
-      for key in dic.keys.sorted() {
-        func _rangeID(_ number: Int) -> String {
-          return "__range_\(self._identifierPrefix(for: nn))_\(key)_\(number._base36)"
+      for (key, value) in dic {
+        if let ranges = arranged[key] {
+          arranged[key] = ranges.union(value)
+        } else {
+          arranged[key] = value
         }
-        
-        let ranges = dic[key]!.ranges
-        for ii in 0..<ranges.count {
-          let range = ranges[ii]
-          result += "private let \(_rangeID(ii)): \(rangeTypeName) = \(range._rangeDescription)\n"
-        }
-        
-        let arrayID = "__array_\(self._identifierPrefix(for: nn))_\(key)"
-        result += "private let \(arrayID): \(arrayTypeName) = [\n"
-        for ii in 0..<ranges.count {
-          result += "  \(_rangeID(ii)),\n"
-        }
-        result += "]\n"
-        
-        result += "internal let _\(self._identifierPrefix(for: nn))_\(key) = MultipleRanges<UInt32>(carefullySortedRanges: \(arrayID))\n"
       }
+    }
+    
+    var result = StringLines()
+    for key in arranged.keys.sorted() {
+      result.append(contentsOf: self._convert(arranged[key]!, key: key))
     }
     return result
   }
@@ -146,37 +267,12 @@ open class UCDPropertiesCodeUpdaterDelegate<T>: UCDCodeUpdaterDelegate where T: 
     _mustBeOverridden()
   }
   
-  open override func convert<S>(_ intermidiates: S) throws -> String where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    self.requires(module: "Ranges")
-    let pairTypeName = self.typeAliasName(for: "(AnyRange<UInt32>, \(_typeName(of: T.self)))")
-    let arrayTypeName = self.typeAliasName(for: "Array<\(pairTypeName)>")
-    
-    var result = ""
-    var nn = 0
-    for interm in intermidiates {
-      defer { nn += 1}
-      
-      let rangeDictionary = try interm.content.rangeDictionary { try self.reduce(columns: $0) }
-      func _pairID(_ number: Int) -> String {
-        return "__pair_\(self._identifierPrefix(for: nn))_\(number._base36)"
+  open override func convert<S>(_ intermidiates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    let reduced: RangeDictionary<Unicode.Scalar.Value, T> = try intermidiates.reduce(into: [:]) { [unowned self] in
+      for (range, value) in  try $1.content.rangeDictionary(converter: { try self.reduce(columns: $0) }) {
+        $0.insert(value, forRange: range)
       }
-      
-      var ii = 0
-      for pair: (range: AnyRange<Unicode.Scalar.Value>, value: T) in rangeDictionary {
-        defer { ii += 1 }
-        result += "private let \(_pairID(ii)): \(pairTypeName) = (\(pair.range._rangeDescription), \(self.describe(value: pair.value)))\n"
-      }
-      
-      let arrayID = "__array_\(self._identifierPrefix(for: nn))"
-      result += "private let \(arrayID): \(arrayTypeName) = [\n"
-      for ii in 0..<ii {
-        result += "  \(_pairID(ii)),\n"
-      }
-      result += "]\n"
-      
-      result += "internal let _\(self._identifierPrefix(for: nn)) = RangeDictionary<UInt32, \(_typeName(of: T.self))>(carefullySortedRangesAndValues: \(arrayID))\n"
     }
-    
-    return result
+    return self._convert(reduced, describer: self.describe(value:))
   }
 }

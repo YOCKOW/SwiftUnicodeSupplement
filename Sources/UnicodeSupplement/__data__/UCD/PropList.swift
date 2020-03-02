@@ -9,6 +9,7 @@
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
+  
   See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
   Data Files and Software.
   NOTICE TO USER: Carefully read the following legal agreement.
@@ -19,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -52,2135 +53,1866 @@
 // Required Modules
 import Ranges
 
-
 // Type Aliases
-private typealias _T0 = AnyRange<UInt32>
-private typealias _T1 = Array<_T0>
+private typealias _T0 = Unicode.Scalar.Value
+private typealias _T1 = Set<_T0>
+private typealias _T2 = AnyRange<_T0>
+private typealias _T3 = Array<_T2>
 
-
-private let __range_prop_ASCII_Hex_Digit_0: _T0 = 0x30....0x39
-private let __range_prop_ASCII_Hex_Digit_1: _T0 = 0x41....0x46
-private let __range_prop_ASCII_Hex_Digit_2: _T0 = 0x61....0x66
-private let __array_prop_ASCII_Hex_Digit: _T1 = [
-  __range_prop_ASCII_Hex_Digit_0,
-  __range_prop_ASCII_Hex_Digit_1,
-  __range_prop_ASCII_Hex_Digit_2,
+private let __prop_ASCII_Hex_Digit_set: _T1 = [
 ]
-internal let _prop_ASCII_Hex_Digit = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_ASCII_Hex_Digit)
-private let __range_prop_Bidi_Control_0: _T0 = 0x61c....0x61c
-private let __range_prop_Bidi_Control_1: _T0 = 0x200e....0x200f
-private let __range_prop_Bidi_Control_2: _T0 = 0x202a....0x202e
-private let __range_prop_Bidi_Control_3: _T0 = 0x2066....0x2069
-private let __array_prop_Bidi_Control: _T1 = [
-  __range_prop_Bidi_Control_0,
-  __range_prop_Bidi_Control_1,
-  __range_prop_Bidi_Control_2,
-  __range_prop_Bidi_Control_3,
+private let __prop_ASCII_Hex_Digit_range_0: _T2 = 0x30....0x39
+private let __prop_ASCII_Hex_Digit_range_1: _T2 = 0x41....0x46
+private let __prop_ASCII_Hex_Digit_range_2: _T2 = 0x61....0x66
+private let __prop_ASCII_Hex_Digit_array: _T3 = [
+  __prop_ASCII_Hex_Digit_range_0,
+  __prop_ASCII_Hex_Digit_range_1,
+  __prop_ASCII_Hex_Digit_range_2,
 ]
-internal let _prop_Bidi_Control = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Bidi_Control)
-private let __range_prop_Dash_0: _T0 = 0x2d....0x2d
-private let __range_prop_Dash_1: _T0 = 0x58a....0x58a
-private let __range_prop_Dash_2: _T0 = 0x5be....0x5be
-private let __range_prop_Dash_3: _T0 = 0x1400....0x1400
-private let __range_prop_Dash_4: _T0 = 0x1806....0x1806
-private let __range_prop_Dash_5: _T0 = 0x2010....0x2015
-private let __range_prop_Dash_6: _T0 = 0x2053....0x2053
-private let __range_prop_Dash_7: _T0 = 0x207b....0x207b
-private let __range_prop_Dash_8: _T0 = 0x208b....0x208b
-private let __range_prop_Dash_9: _T0 = 0x2212....0x2212
-private let __range_prop_Dash_a: _T0 = 0x2e17....0x2e17
-private let __range_prop_Dash_b: _T0 = 0x2e1a....0x2e1a
-private let __range_prop_Dash_c: _T0 = 0x2e3a....0x2e3b
-private let __range_prop_Dash_d: _T0 = 0x2e40....0x2e40
-private let __range_prop_Dash_e: _T0 = 0x301c....0x301c
-private let __range_prop_Dash_f: _T0 = 0x3030....0x3030
-private let __range_prop_Dash_g: _T0 = 0x30a0....0x30a0
-private let __range_prop_Dash_h: _T0 = 0xfe31....0xfe32
-private let __range_prop_Dash_i: _T0 = 0xfe58....0xfe58
-private let __range_prop_Dash_j: _T0 = 0xfe63....0xfe63
-private let __range_prop_Dash_k: _T0 = 0xff0d....0xff0d
-private let __array_prop_Dash: _T1 = [
-  __range_prop_Dash_0,
-  __range_prop_Dash_1,
-  __range_prop_Dash_2,
-  __range_prop_Dash_3,
-  __range_prop_Dash_4,
-  __range_prop_Dash_5,
-  __range_prop_Dash_6,
-  __range_prop_Dash_7,
-  __range_prop_Dash_8,
-  __range_prop_Dash_9,
-  __range_prop_Dash_a,
-  __range_prop_Dash_b,
-  __range_prop_Dash_c,
-  __range_prop_Dash_d,
-  __range_prop_Dash_e,
-  __range_prop_Dash_f,
-  __range_prop_Dash_g,
-  __range_prop_Dash_h,
-  __range_prop_Dash_i,
-  __range_prop_Dash_j,
-  __range_prop_Dash_k,
+private let __prop_ASCII_Hex_Digit_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_ASCII_Hex_Digit_array)
+internal let _prop_ASCII_Hex_Digit = UnicodeScalarValueSet(singleValues: __prop_ASCII_Hex_Digit_set, ranges: __prop_ASCII_Hex_Digit_ranges)
+private let __prop_Bidi_Control_set: _T1 = [
+  0x61c,
 ]
-internal let _prop_Dash = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Dash)
-private let __range_prop_Deprecated_0: _T0 = 0x149....0x149
-private let __range_prop_Deprecated_1: _T0 = 0x673....0x673
-private let __range_prop_Deprecated_2: _T0 = 0xf77....0xf77
-private let __range_prop_Deprecated_3: _T0 = 0xf79....0xf79
-private let __range_prop_Deprecated_4: _T0 = 0x17a3....0x17a4
-private let __range_prop_Deprecated_5: _T0 = 0x206a....0x206f
-private let __range_prop_Deprecated_6: _T0 = 0x2329....0x232a
-private let __range_prop_Deprecated_7: _T0 = 0xe0001....0xe0001
-private let __array_prop_Deprecated: _T1 = [
-  __range_prop_Deprecated_0,
-  __range_prop_Deprecated_1,
-  __range_prop_Deprecated_2,
-  __range_prop_Deprecated_3,
-  __range_prop_Deprecated_4,
-  __range_prop_Deprecated_5,
-  __range_prop_Deprecated_6,
-  __range_prop_Deprecated_7,
+private let __prop_Bidi_Control_range_0: _T2 = 0x200e....0x200f
+private let __prop_Bidi_Control_range_1: _T2 = 0x202a....0x202e
+private let __prop_Bidi_Control_range_2: _T2 = 0x2066....0x2069
+private let __prop_Bidi_Control_array: _T3 = [
+  __prop_Bidi_Control_range_0,
+  __prop_Bidi_Control_range_1,
+  __prop_Bidi_Control_range_2,
 ]
-internal let _prop_Deprecated = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Deprecated)
-private let __range_prop_Diacritic_0: _T0 = 0x5e....0x5e
-private let __range_prop_Diacritic_1: _T0 = 0x60....0x60
-private let __range_prop_Diacritic_2: _T0 = 0xa8....0xa8
-private let __range_prop_Diacritic_3: _T0 = 0xaf....0xaf
-private let __range_prop_Diacritic_4: _T0 = 0xb4....0xb4
-private let __range_prop_Diacritic_5: _T0 = 0xb7....0xb8
-private let __range_prop_Diacritic_6: _T0 = 0x2b0....0x34e
-private let __range_prop_Diacritic_7: _T0 = 0x350....0x357
-private let __range_prop_Diacritic_8: _T0 = 0x35d....0x362
-private let __range_prop_Diacritic_9: _T0 = 0x374....0x375
-private let __range_prop_Diacritic_a: _T0 = 0x37a....0x37a
-private let __range_prop_Diacritic_b: _T0 = 0x384....0x385
-private let __range_prop_Diacritic_c: _T0 = 0x483....0x487
-private let __range_prop_Diacritic_d: _T0 = 0x559....0x559
-private let __range_prop_Diacritic_e: _T0 = 0x591....0x5a1
-private let __range_prop_Diacritic_f: _T0 = 0x5a3....0x5bd
-private let __range_prop_Diacritic_g: _T0 = 0x5bf....0x5bf
-private let __range_prop_Diacritic_h: _T0 = 0x5c1....0x5c2
-private let __range_prop_Diacritic_i: _T0 = 0x5c4....0x5c4
-private let __range_prop_Diacritic_j: _T0 = 0x64b....0x652
-private let __range_prop_Diacritic_k: _T0 = 0x657....0x658
-private let __range_prop_Diacritic_l: _T0 = 0x6df....0x6e0
-private let __range_prop_Diacritic_m: _T0 = 0x6e5....0x6e6
-private let __range_prop_Diacritic_n: _T0 = 0x6ea....0x6ec
-private let __range_prop_Diacritic_o: _T0 = 0x730....0x74a
-private let __range_prop_Diacritic_p: _T0 = 0x7a6....0x7b0
-private let __range_prop_Diacritic_q: _T0 = 0x7eb....0x7f5
-private let __range_prop_Diacritic_r: _T0 = 0x818....0x819
-private let __range_prop_Diacritic_s: _T0 = 0x8e3....0x8fe
-private let __range_prop_Diacritic_t: _T0 = 0x93c....0x93c
-private let __range_prop_Diacritic_u: _T0 = 0x94d....0x94d
-private let __range_prop_Diacritic_v: _T0 = 0x951....0x954
-private let __range_prop_Diacritic_w: _T0 = 0x971....0x971
-private let __range_prop_Diacritic_x: _T0 = 0x9bc....0x9bc
-private let __range_prop_Diacritic_y: _T0 = 0x9cd....0x9cd
-private let __range_prop_Diacritic_z: _T0 = 0xa3c....0xa3c
-private let __range_prop_Diacritic_10: _T0 = 0xa4d....0xa4d
-private let __range_prop_Diacritic_11: _T0 = 0xabc....0xabc
-private let __range_prop_Diacritic_12: _T0 = 0xacd....0xacd
-private let __range_prop_Diacritic_13: _T0 = 0xafd....0xaff
-private let __range_prop_Diacritic_14: _T0 = 0xb3c....0xb3c
-private let __range_prop_Diacritic_15: _T0 = 0xb4d....0xb4d
-private let __range_prop_Diacritic_16: _T0 = 0xbcd....0xbcd
-private let __range_prop_Diacritic_17: _T0 = 0xc4d....0xc4d
-private let __range_prop_Diacritic_18: _T0 = 0xcbc....0xcbc
-private let __range_prop_Diacritic_19: _T0 = 0xccd....0xccd
-private let __range_prop_Diacritic_1a: _T0 = 0xd3b....0xd3c
-private let __range_prop_Diacritic_1b: _T0 = 0xd4d....0xd4d
-private let __range_prop_Diacritic_1c: _T0 = 0xdca....0xdca
-private let __range_prop_Diacritic_1d: _T0 = 0xe47....0xe4c
-private let __range_prop_Diacritic_1e: _T0 = 0xe4e....0xe4e
-private let __range_prop_Diacritic_1f: _T0 = 0xeba....0xeba
-private let __range_prop_Diacritic_1g: _T0 = 0xec8....0xecc
-private let __range_prop_Diacritic_1h: _T0 = 0xf18....0xf19
-private let __range_prop_Diacritic_1i: _T0 = 0xf35....0xf35
-private let __range_prop_Diacritic_1j: _T0 = 0xf37....0xf37
-private let __range_prop_Diacritic_1k: _T0 = 0xf39....0xf39
-private let __range_prop_Diacritic_1l: _T0 = 0xf3e....0xf3f
-private let __range_prop_Diacritic_1m: _T0 = 0xf82....0xf84
-private let __range_prop_Diacritic_1n: _T0 = 0xf86....0xf87
-private let __range_prop_Diacritic_1o: _T0 = 0xfc6....0xfc6
-private let __range_prop_Diacritic_1p: _T0 = 0x1037....0x1037
-private let __range_prop_Diacritic_1q: _T0 = 0x1039....0x103a
-private let __range_prop_Diacritic_1r: _T0 = 0x1063....0x1064
-private let __range_prop_Diacritic_1s: _T0 = 0x1069....0x106d
-private let __range_prop_Diacritic_1t: _T0 = 0x1087....0x108d
-private let __range_prop_Diacritic_1u: _T0 = 0x108f....0x108f
-private let __range_prop_Diacritic_1v: _T0 = 0x109a....0x109b
-private let __range_prop_Diacritic_1w: _T0 = 0x135d....0x135f
-private let __range_prop_Diacritic_1x: _T0 = 0x17c9....0x17d3
-private let __range_prop_Diacritic_1y: _T0 = 0x17dd....0x17dd
-private let __range_prop_Diacritic_1z: _T0 = 0x1939....0x193b
-private let __range_prop_Diacritic_20: _T0 = 0x1a75....0x1a7c
-private let __range_prop_Diacritic_21: _T0 = 0x1a7f....0x1a7f
-private let __range_prop_Diacritic_22: _T0 = 0x1ab0....0x1abd
-private let __range_prop_Diacritic_23: _T0 = 0x1b34....0x1b34
-private let __range_prop_Diacritic_24: _T0 = 0x1b44....0x1b44
-private let __range_prop_Diacritic_25: _T0 = 0x1b6b....0x1b73
-private let __range_prop_Diacritic_26: _T0 = 0x1baa....0x1bab
-private let __range_prop_Diacritic_27: _T0 = 0x1c36....0x1c37
-private let __range_prop_Diacritic_28: _T0 = 0x1c78....0x1c7d
-private let __range_prop_Diacritic_29: _T0 = 0x1cd0....0x1ce8
-private let __range_prop_Diacritic_2a: _T0 = 0x1ced....0x1ced
-private let __range_prop_Diacritic_2b: _T0 = 0x1cf4....0x1cf4
-private let __range_prop_Diacritic_2c: _T0 = 0x1cf7....0x1cf9
-private let __range_prop_Diacritic_2d: _T0 = 0x1d2c....0x1d6a
-private let __range_prop_Diacritic_2e: _T0 = 0x1dc4....0x1dcf
-private let __range_prop_Diacritic_2f: _T0 = 0x1df5....0x1df9
-private let __range_prop_Diacritic_2g: _T0 = 0x1dfd....0x1dff
-private let __range_prop_Diacritic_2h: _T0 = 0x1fbd....0x1fbd
-private let __range_prop_Diacritic_2i: _T0 = 0x1fbf....0x1fc1
-private let __range_prop_Diacritic_2j: _T0 = 0x1fcd....0x1fcf
-private let __range_prop_Diacritic_2k: _T0 = 0x1fdd....0x1fdf
-private let __range_prop_Diacritic_2l: _T0 = 0x1fed....0x1fef
-private let __range_prop_Diacritic_2m: _T0 = 0x1ffd....0x1ffe
-private let __range_prop_Diacritic_2n: _T0 = 0x2cef....0x2cf1
-private let __range_prop_Diacritic_2o: _T0 = 0x2e2f....0x2e2f
-private let __range_prop_Diacritic_2p: _T0 = 0x302a....0x302f
-private let __range_prop_Diacritic_2q: _T0 = 0x3099....0x309c
-private let __range_prop_Diacritic_2r: _T0 = 0x30fc....0x30fc
-private let __range_prop_Diacritic_2s: _T0 = 0xa66f....0xa66f
-private let __range_prop_Diacritic_2t: _T0 = 0xa67c....0xa67d
-private let __range_prop_Diacritic_2u: _T0 = 0xa67f....0xa67f
-private let __range_prop_Diacritic_2v: _T0 = 0xa69c....0xa69d
-private let __range_prop_Diacritic_2w: _T0 = 0xa6f0....0xa6f1
-private let __range_prop_Diacritic_2x: _T0 = 0xa700....0xa721
-private let __range_prop_Diacritic_2y: _T0 = 0xa788....0xa78a
-private let __range_prop_Diacritic_2z: _T0 = 0xa7f8....0xa7f9
-private let __range_prop_Diacritic_30: _T0 = 0xa8c4....0xa8c4
-private let __range_prop_Diacritic_31: _T0 = 0xa8e0....0xa8f1
-private let __range_prop_Diacritic_32: _T0 = 0xa92b....0xa92e
-private let __range_prop_Diacritic_33: _T0 = 0xa953....0xa953
-private let __range_prop_Diacritic_34: _T0 = 0xa9b3....0xa9b3
-private let __range_prop_Diacritic_35: _T0 = 0xa9c0....0xa9c0
-private let __range_prop_Diacritic_36: _T0 = 0xa9e5....0xa9e5
-private let __range_prop_Diacritic_37: _T0 = 0xaa7b....0xaa7d
-private let __range_prop_Diacritic_38: _T0 = 0xaabf....0xaac2
-private let __range_prop_Diacritic_39: _T0 = 0xaaf6....0xaaf6
-private let __range_prop_Diacritic_3a: _T0 = 0xab5b....0xab5f
-private let __range_prop_Diacritic_3b: _T0 = 0xabec....0xabed
-private let __range_prop_Diacritic_3c: _T0 = 0xfb1e....0xfb1e
-private let __range_prop_Diacritic_3d: _T0 = 0xfe20....0xfe2f
-private let __range_prop_Diacritic_3e: _T0 = 0xff3e....0xff3e
-private let __range_prop_Diacritic_3f: _T0 = 0xff40....0xff40
-private let __range_prop_Diacritic_3g: _T0 = 0xff70....0xff70
-private let __range_prop_Diacritic_3h: _T0 = 0xff9e....0xff9f
-private let __range_prop_Diacritic_3i: _T0 = 0xffe3....0xffe3
-private let __range_prop_Diacritic_3j: _T0 = 0x102e0....0x102e0
-private let __range_prop_Diacritic_3k: _T0 = 0x10ae5....0x10ae6
-private let __range_prop_Diacritic_3l: _T0 = 0x10d22....0x10d27
-private let __range_prop_Diacritic_3m: _T0 = 0x10f46....0x10f50
-private let __range_prop_Diacritic_3n: _T0 = 0x110b9....0x110ba
-private let __range_prop_Diacritic_3o: _T0 = 0x11133....0x11134
-private let __range_prop_Diacritic_3p: _T0 = 0x11173....0x11173
-private let __range_prop_Diacritic_3q: _T0 = 0x111c0....0x111c0
-private let __range_prop_Diacritic_3r: _T0 = 0x111ca....0x111cc
-private let __range_prop_Diacritic_3s: _T0 = 0x11235....0x11236
-private let __range_prop_Diacritic_3t: _T0 = 0x112e9....0x112ea
-private let __range_prop_Diacritic_3u: _T0 = 0x1133c....0x1133c
-private let __range_prop_Diacritic_3v: _T0 = 0x1134d....0x1134d
-private let __range_prop_Diacritic_3w: _T0 = 0x11366....0x1136c
-private let __range_prop_Diacritic_3x: _T0 = 0x11370....0x11374
-private let __range_prop_Diacritic_3y: _T0 = 0x11442....0x11442
-private let __range_prop_Diacritic_3z: _T0 = 0x11446....0x11446
-private let __range_prop_Diacritic_40: _T0 = 0x114c2....0x114c3
-private let __range_prop_Diacritic_41: _T0 = 0x115bf....0x115c0
-private let __range_prop_Diacritic_42: _T0 = 0x1163f....0x1163f
-private let __range_prop_Diacritic_43: _T0 = 0x116b6....0x116b7
-private let __range_prop_Diacritic_44: _T0 = 0x1172b....0x1172b
-private let __range_prop_Diacritic_45: _T0 = 0x11839....0x1183a
-private let __range_prop_Diacritic_46: _T0 = 0x119e0....0x119e0
-private let __range_prop_Diacritic_47: _T0 = 0x11a34....0x11a34
-private let __range_prop_Diacritic_48: _T0 = 0x11a47....0x11a47
-private let __range_prop_Diacritic_49: _T0 = 0x11a99....0x11a99
-private let __range_prop_Diacritic_4a: _T0 = 0x11c3f....0x11c3f
-private let __range_prop_Diacritic_4b: _T0 = 0x11d42....0x11d42
-private let __range_prop_Diacritic_4c: _T0 = 0x11d44....0x11d45
-private let __range_prop_Diacritic_4d: _T0 = 0x11d97....0x11d97
-private let __range_prop_Diacritic_4e: _T0 = 0x16af0....0x16af4
-private let __range_prop_Diacritic_4f: _T0 = 0x16b30....0x16b36
-private let __range_prop_Diacritic_4g: _T0 = 0x16f8f....0x16f9f
-private let __range_prop_Diacritic_4h: _T0 = 0x1d167....0x1d169
-private let __range_prop_Diacritic_4i: _T0 = 0x1d16d....0x1d172
-private let __range_prop_Diacritic_4j: _T0 = 0x1d17b....0x1d182
-private let __range_prop_Diacritic_4k: _T0 = 0x1d185....0x1d18b
-private let __range_prop_Diacritic_4l: _T0 = 0x1d1aa....0x1d1ad
-private let __range_prop_Diacritic_4m: _T0 = 0x1e130....0x1e136
-private let __range_prop_Diacritic_4n: _T0 = 0x1e2ec....0x1e2ef
-private let __range_prop_Diacritic_4o: _T0 = 0x1e8d0....0x1e8d6
-private let __range_prop_Diacritic_4p: _T0 = 0x1e944....0x1e946
-private let __range_prop_Diacritic_4q: _T0 = 0x1e948....0x1e94a
-private let __array_prop_Diacritic: _T1 = [
-  __range_prop_Diacritic_0,
-  __range_prop_Diacritic_1,
-  __range_prop_Diacritic_2,
-  __range_prop_Diacritic_3,
-  __range_prop_Diacritic_4,
-  __range_prop_Diacritic_5,
-  __range_prop_Diacritic_6,
-  __range_prop_Diacritic_7,
-  __range_prop_Diacritic_8,
-  __range_prop_Diacritic_9,
-  __range_prop_Diacritic_a,
-  __range_prop_Diacritic_b,
-  __range_prop_Diacritic_c,
-  __range_prop_Diacritic_d,
-  __range_prop_Diacritic_e,
-  __range_prop_Diacritic_f,
-  __range_prop_Diacritic_g,
-  __range_prop_Diacritic_h,
-  __range_prop_Diacritic_i,
-  __range_prop_Diacritic_j,
-  __range_prop_Diacritic_k,
-  __range_prop_Diacritic_l,
-  __range_prop_Diacritic_m,
-  __range_prop_Diacritic_n,
-  __range_prop_Diacritic_o,
-  __range_prop_Diacritic_p,
-  __range_prop_Diacritic_q,
-  __range_prop_Diacritic_r,
-  __range_prop_Diacritic_s,
-  __range_prop_Diacritic_t,
-  __range_prop_Diacritic_u,
-  __range_prop_Diacritic_v,
-  __range_prop_Diacritic_w,
-  __range_prop_Diacritic_x,
-  __range_prop_Diacritic_y,
-  __range_prop_Diacritic_z,
-  __range_prop_Diacritic_10,
-  __range_prop_Diacritic_11,
-  __range_prop_Diacritic_12,
-  __range_prop_Diacritic_13,
-  __range_prop_Diacritic_14,
-  __range_prop_Diacritic_15,
-  __range_prop_Diacritic_16,
-  __range_prop_Diacritic_17,
-  __range_prop_Diacritic_18,
-  __range_prop_Diacritic_19,
-  __range_prop_Diacritic_1a,
-  __range_prop_Diacritic_1b,
-  __range_prop_Diacritic_1c,
-  __range_prop_Diacritic_1d,
-  __range_prop_Diacritic_1e,
-  __range_prop_Diacritic_1f,
-  __range_prop_Diacritic_1g,
-  __range_prop_Diacritic_1h,
-  __range_prop_Diacritic_1i,
-  __range_prop_Diacritic_1j,
-  __range_prop_Diacritic_1k,
-  __range_prop_Diacritic_1l,
-  __range_prop_Diacritic_1m,
-  __range_prop_Diacritic_1n,
-  __range_prop_Diacritic_1o,
-  __range_prop_Diacritic_1p,
-  __range_prop_Diacritic_1q,
-  __range_prop_Diacritic_1r,
-  __range_prop_Diacritic_1s,
-  __range_prop_Diacritic_1t,
-  __range_prop_Diacritic_1u,
-  __range_prop_Diacritic_1v,
-  __range_prop_Diacritic_1w,
-  __range_prop_Diacritic_1x,
-  __range_prop_Diacritic_1y,
-  __range_prop_Diacritic_1z,
-  __range_prop_Diacritic_20,
-  __range_prop_Diacritic_21,
-  __range_prop_Diacritic_22,
-  __range_prop_Diacritic_23,
-  __range_prop_Diacritic_24,
-  __range_prop_Diacritic_25,
-  __range_prop_Diacritic_26,
-  __range_prop_Diacritic_27,
-  __range_prop_Diacritic_28,
-  __range_prop_Diacritic_29,
-  __range_prop_Diacritic_2a,
-  __range_prop_Diacritic_2b,
-  __range_prop_Diacritic_2c,
-  __range_prop_Diacritic_2d,
-  __range_prop_Diacritic_2e,
-  __range_prop_Diacritic_2f,
-  __range_prop_Diacritic_2g,
-  __range_prop_Diacritic_2h,
-  __range_prop_Diacritic_2i,
-  __range_prop_Diacritic_2j,
-  __range_prop_Diacritic_2k,
-  __range_prop_Diacritic_2l,
-  __range_prop_Diacritic_2m,
-  __range_prop_Diacritic_2n,
-  __range_prop_Diacritic_2o,
-  __range_prop_Diacritic_2p,
-  __range_prop_Diacritic_2q,
-  __range_prop_Diacritic_2r,
-  __range_prop_Diacritic_2s,
-  __range_prop_Diacritic_2t,
-  __range_prop_Diacritic_2u,
-  __range_prop_Diacritic_2v,
-  __range_prop_Diacritic_2w,
-  __range_prop_Diacritic_2x,
-  __range_prop_Diacritic_2y,
-  __range_prop_Diacritic_2z,
-  __range_prop_Diacritic_30,
-  __range_prop_Diacritic_31,
-  __range_prop_Diacritic_32,
-  __range_prop_Diacritic_33,
-  __range_prop_Diacritic_34,
-  __range_prop_Diacritic_35,
-  __range_prop_Diacritic_36,
-  __range_prop_Diacritic_37,
-  __range_prop_Diacritic_38,
-  __range_prop_Diacritic_39,
-  __range_prop_Diacritic_3a,
-  __range_prop_Diacritic_3b,
-  __range_prop_Diacritic_3c,
-  __range_prop_Diacritic_3d,
-  __range_prop_Diacritic_3e,
-  __range_prop_Diacritic_3f,
-  __range_prop_Diacritic_3g,
-  __range_prop_Diacritic_3h,
-  __range_prop_Diacritic_3i,
-  __range_prop_Diacritic_3j,
-  __range_prop_Diacritic_3k,
-  __range_prop_Diacritic_3l,
-  __range_prop_Diacritic_3m,
-  __range_prop_Diacritic_3n,
-  __range_prop_Diacritic_3o,
-  __range_prop_Diacritic_3p,
-  __range_prop_Diacritic_3q,
-  __range_prop_Diacritic_3r,
-  __range_prop_Diacritic_3s,
-  __range_prop_Diacritic_3t,
-  __range_prop_Diacritic_3u,
-  __range_prop_Diacritic_3v,
-  __range_prop_Diacritic_3w,
-  __range_prop_Diacritic_3x,
-  __range_prop_Diacritic_3y,
-  __range_prop_Diacritic_3z,
-  __range_prop_Diacritic_40,
-  __range_prop_Diacritic_41,
-  __range_prop_Diacritic_42,
-  __range_prop_Diacritic_43,
-  __range_prop_Diacritic_44,
-  __range_prop_Diacritic_45,
-  __range_prop_Diacritic_46,
-  __range_prop_Diacritic_47,
-  __range_prop_Diacritic_48,
-  __range_prop_Diacritic_49,
-  __range_prop_Diacritic_4a,
-  __range_prop_Diacritic_4b,
-  __range_prop_Diacritic_4c,
-  __range_prop_Diacritic_4d,
-  __range_prop_Diacritic_4e,
-  __range_prop_Diacritic_4f,
-  __range_prop_Diacritic_4g,
-  __range_prop_Diacritic_4h,
-  __range_prop_Diacritic_4i,
-  __range_prop_Diacritic_4j,
-  __range_prop_Diacritic_4k,
-  __range_prop_Diacritic_4l,
-  __range_prop_Diacritic_4m,
-  __range_prop_Diacritic_4n,
-  __range_prop_Diacritic_4o,
-  __range_prop_Diacritic_4p,
-  __range_prop_Diacritic_4q,
+private let __prop_Bidi_Control_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Bidi_Control_array)
+internal let _prop_Bidi_Control = UnicodeScalarValueSet(singleValues: __prop_Bidi_Control_set, ranges: __prop_Bidi_Control_ranges)
+private let __prop_Dash_set: _T1 = [
+  0x2d,
+  0x58a,
+  0x5be,
+  0x1400,
+  0x1806,
+  0x2053,
+  0x207b,
+  0x208b,
+  0x2212,
+  0x2e17,
+  0x2e1a,
+  0x2e40,
+  0x301c,
+  0x3030,
+  0x30a0,
+  0xfe58,
+  0xfe63,
+  0xff0d,
 ]
-internal let _prop_Diacritic = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Diacritic)
-private let __range_prop_Extender_0: _T0 = 0xb7....0xb7
-private let __range_prop_Extender_1: _T0 = 0x2d0....0x2d1
-private let __range_prop_Extender_2: _T0 = 0x640....0x640
-private let __range_prop_Extender_3: _T0 = 0x7fa....0x7fa
-private let __range_prop_Extender_4: _T0 = 0xe46....0xe46
-private let __range_prop_Extender_5: _T0 = 0xec6....0xec6
-private let __range_prop_Extender_6: _T0 = 0x180a....0x180a
-private let __range_prop_Extender_7: _T0 = 0x1843....0x1843
-private let __range_prop_Extender_8: _T0 = 0x1aa7....0x1aa7
-private let __range_prop_Extender_9: _T0 = 0x1c36....0x1c36
-private let __range_prop_Extender_a: _T0 = 0x1c7b....0x1c7b
-private let __range_prop_Extender_b: _T0 = 0x3005....0x3005
-private let __range_prop_Extender_c: _T0 = 0x3031....0x3035
-private let __range_prop_Extender_d: _T0 = 0x309d....0x309e
-private let __range_prop_Extender_e: _T0 = 0x30fc....0x30fe
-private let __range_prop_Extender_f: _T0 = 0xa015....0xa015
-private let __range_prop_Extender_g: _T0 = 0xa60c....0xa60c
-private let __range_prop_Extender_h: _T0 = 0xa9cf....0xa9cf
-private let __range_prop_Extender_i: _T0 = 0xa9e6....0xa9e6
-private let __range_prop_Extender_j: _T0 = 0xaa70....0xaa70
-private let __range_prop_Extender_k: _T0 = 0xaadd....0xaadd
-private let __range_prop_Extender_l: _T0 = 0xaaf3....0xaaf4
-private let __range_prop_Extender_m: _T0 = 0xff70....0xff70
-private let __range_prop_Extender_n: _T0 = 0x1135d....0x1135d
-private let __range_prop_Extender_o: _T0 = 0x115c6....0x115c8
-private let __range_prop_Extender_p: _T0 = 0x11a98....0x11a98
-private let __range_prop_Extender_q: _T0 = 0x16b42....0x16b43
-private let __range_prop_Extender_r: _T0 = 0x16fe0....0x16fe1
-private let __range_prop_Extender_s: _T0 = 0x16fe3....0x16fe3
-private let __range_prop_Extender_t: _T0 = 0x1e13c....0x1e13d
-private let __range_prop_Extender_u: _T0 = 0x1e944....0x1e946
-private let __array_prop_Extender: _T1 = [
-  __range_prop_Extender_0,
-  __range_prop_Extender_1,
-  __range_prop_Extender_2,
-  __range_prop_Extender_3,
-  __range_prop_Extender_4,
-  __range_prop_Extender_5,
-  __range_prop_Extender_6,
-  __range_prop_Extender_7,
-  __range_prop_Extender_8,
-  __range_prop_Extender_9,
-  __range_prop_Extender_a,
-  __range_prop_Extender_b,
-  __range_prop_Extender_c,
-  __range_prop_Extender_d,
-  __range_prop_Extender_e,
-  __range_prop_Extender_f,
-  __range_prop_Extender_g,
-  __range_prop_Extender_h,
-  __range_prop_Extender_i,
-  __range_prop_Extender_j,
-  __range_prop_Extender_k,
-  __range_prop_Extender_l,
-  __range_prop_Extender_m,
-  __range_prop_Extender_n,
-  __range_prop_Extender_o,
-  __range_prop_Extender_p,
-  __range_prop_Extender_q,
-  __range_prop_Extender_r,
-  __range_prop_Extender_s,
-  __range_prop_Extender_t,
-  __range_prop_Extender_u,
+private let __prop_Dash_range_0: _T2 = 0x2010....0x2015
+private let __prop_Dash_range_1: _T2 = 0x2e3a....0x2e3b
+private let __prop_Dash_range_2: _T2 = 0xfe31....0xfe32
+private let __prop_Dash_array: _T3 = [
+  __prop_Dash_range_0,
+  __prop_Dash_range_1,
+  __prop_Dash_range_2,
 ]
-internal let _prop_Extender = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Extender)
-private let __range_prop_Hex_Digit_0: _T0 = 0x30....0x39
-private let __range_prop_Hex_Digit_1: _T0 = 0x41....0x46
-private let __range_prop_Hex_Digit_2: _T0 = 0x61....0x66
-private let __range_prop_Hex_Digit_3: _T0 = 0xff10....0xff19
-private let __range_prop_Hex_Digit_4: _T0 = 0xff21....0xff26
-private let __range_prop_Hex_Digit_5: _T0 = 0xff41....0xff46
-private let __array_prop_Hex_Digit: _T1 = [
-  __range_prop_Hex_Digit_0,
-  __range_prop_Hex_Digit_1,
-  __range_prop_Hex_Digit_2,
-  __range_prop_Hex_Digit_3,
-  __range_prop_Hex_Digit_4,
-  __range_prop_Hex_Digit_5,
+private let __prop_Dash_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Dash_array)
+internal let _prop_Dash = UnicodeScalarValueSet(singleValues: __prop_Dash_set, ranges: __prop_Dash_ranges)
+private let __prop_Deprecated_set: _T1 = [
+  0x149,
+  0x673,
+  0xf77,
+  0xf79,
+  0xe0001,
 ]
-internal let _prop_Hex_Digit = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Hex_Digit)
-private let __range_prop_Hyphen_0: _T0 = 0x2d....0x2d
-private let __range_prop_Hyphen_1: _T0 = 0xad....0xad
-private let __range_prop_Hyphen_2: _T0 = 0x58a....0x58a
-private let __range_prop_Hyphen_3: _T0 = 0x1806....0x1806
-private let __range_prop_Hyphen_4: _T0 = 0x2010....0x2011
-private let __range_prop_Hyphen_5: _T0 = 0x2e17....0x2e17
-private let __range_prop_Hyphen_6: _T0 = 0x30fb....0x30fb
-private let __range_prop_Hyphen_7: _T0 = 0xfe63....0xfe63
-private let __range_prop_Hyphen_8: _T0 = 0xff0d....0xff0d
-private let __range_prop_Hyphen_9: _T0 = 0xff65....0xff65
-private let __array_prop_Hyphen: _T1 = [
-  __range_prop_Hyphen_0,
-  __range_prop_Hyphen_1,
-  __range_prop_Hyphen_2,
-  __range_prop_Hyphen_3,
-  __range_prop_Hyphen_4,
-  __range_prop_Hyphen_5,
-  __range_prop_Hyphen_6,
-  __range_prop_Hyphen_7,
-  __range_prop_Hyphen_8,
-  __range_prop_Hyphen_9,
+private let __prop_Deprecated_range_0: _T2 = 0x17a3....0x17a4
+private let __prop_Deprecated_range_1: _T2 = 0x206a....0x206f
+private let __prop_Deprecated_range_2: _T2 = 0x2329....0x232a
+private let __prop_Deprecated_array: _T3 = [
+  __prop_Deprecated_range_0,
+  __prop_Deprecated_range_1,
+  __prop_Deprecated_range_2,
 ]
-internal let _prop_Hyphen = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Hyphen)
-private let __range_prop_IDS_Binary_Operator_0: _T0 = 0x2ff0....0x2ff1
-private let __range_prop_IDS_Binary_Operator_1: _T0 = 0x2ff4....0x2ffb
-private let __array_prop_IDS_Binary_Operator: _T1 = [
-  __range_prop_IDS_Binary_Operator_0,
-  __range_prop_IDS_Binary_Operator_1,
+private let __prop_Deprecated_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Deprecated_array)
+internal let _prop_Deprecated = UnicodeScalarValueSet(singleValues: __prop_Deprecated_set, ranges: __prop_Deprecated_ranges)
+private let __prop_Diacritic_set: _T1 = [
+  0x5e,
+  0x60,
+  0xa8,
+  0xaf,
+  0xb4,
+  0x37a,
+  0x559,
+  0x5bf,
+  0x5c4,
+  0x93c,
+  0x94d,
+  0x971,
+  0x9bc,
+  0x9cd,
+  0xa3c,
+  0xa4d,
+  0xabc,
+  0xacd,
+  0xb3c,
+  0xb4d,
+  0xbcd,
+  0xc4d,
+  0xcbc,
+  0xccd,
+  0xd4d,
+  0xdca,
+  0xe4e,
+  0xeba,
+  0xf35,
+  0xf37,
+  0xf39,
+  0xfc6,
+  0x1037,
+  0x108f,
+  0x17dd,
+  0x1a7f,
+  0x1b34,
+  0x1b44,
+  0x1ced,
+  0x1cf4,
+  0x1fbd,
+  0x2e2f,
+  0x30fc,
+  0xa66f,
+  0xa67f,
+  0xa8c4,
+  0xa953,
+  0xa9b3,
+  0xa9c0,
+  0xa9e5,
+  0xaaf6,
+  0xfb1e,
+  0xff3e,
+  0xff40,
+  0xff70,
+  0xffe3,
+  0x102e0,
+  0x11173,
+  0x111c0,
+  0x1133c,
+  0x1134d,
+  0x11442,
+  0x11446,
+  0x1163f,
+  0x1172b,
+  0x119e0,
+  0x11a34,
+  0x11a47,
+  0x11a99,
+  0x11c3f,
+  0x11d42,
+  0x11d97,
 ]
-internal let _prop_IDS_Binary_Operator = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_IDS_Binary_Operator)
-private let __range_prop_IDS_Trinary_Operator_0: _T0 = 0x2ff2....0x2ff3
-private let __array_prop_IDS_Trinary_Operator: _T1 = [
-  __range_prop_IDS_Trinary_Operator_0,
+private let __prop_Diacritic_range_0: _T2 = 0xb7....0xb8
+private let __prop_Diacritic_range_1: _T2 = 0x2b0....0x34e
+private let __prop_Diacritic_range_2: _T2 = 0x350....0x357
+private let __prop_Diacritic_range_3: _T2 = 0x35d....0x362
+private let __prop_Diacritic_range_4: _T2 = 0x374....0x375
+private let __prop_Diacritic_range_5: _T2 = 0x384....0x385
+private let __prop_Diacritic_range_6: _T2 = 0x483....0x487
+private let __prop_Diacritic_range_7: _T2 = 0x591....0x5a1
+private let __prop_Diacritic_range_8: _T2 = 0x5a3....0x5bd
+private let __prop_Diacritic_range_9: _T2 = 0x5c1....0x5c2
+private let __prop_Diacritic_range_a: _T2 = 0x64b....0x652
+private let __prop_Diacritic_range_b: _T2 = 0x657....0x658
+private let __prop_Diacritic_range_c: _T2 = 0x6df....0x6e0
+private let __prop_Diacritic_range_d: _T2 = 0x6e5....0x6e6
+private let __prop_Diacritic_range_e: _T2 = 0x6ea....0x6ec
+private let __prop_Diacritic_range_f: _T2 = 0x730....0x74a
+private let __prop_Diacritic_range_g: _T2 = 0x7a6....0x7b0
+private let __prop_Diacritic_range_h: _T2 = 0x7eb....0x7f5
+private let __prop_Diacritic_range_i: _T2 = 0x818....0x819
+private let __prop_Diacritic_range_j: _T2 = 0x8e3....0x8fe
+private let __prop_Diacritic_range_k: _T2 = 0x951....0x954
+private let __prop_Diacritic_range_l: _T2 = 0xafd....0xaff
+private let __prop_Diacritic_range_m: _T2 = 0xd3b....0xd3c
+private let __prop_Diacritic_range_n: _T2 = 0xe47....0xe4c
+private let __prop_Diacritic_range_o: _T2 = 0xec8....0xecc
+private let __prop_Diacritic_range_p: _T2 = 0xf18....0xf19
+private let __prop_Diacritic_range_q: _T2 = 0xf3e....0xf3f
+private let __prop_Diacritic_range_r: _T2 = 0xf82....0xf84
+private let __prop_Diacritic_range_s: _T2 = 0xf86....0xf87
+private let __prop_Diacritic_range_t: _T2 = 0x1039....0x103a
+private let __prop_Diacritic_range_u: _T2 = 0x1063....0x1064
+private let __prop_Diacritic_range_v: _T2 = 0x1069....0x106d
+private let __prop_Diacritic_range_w: _T2 = 0x1087....0x108d
+private let __prop_Diacritic_range_x: _T2 = 0x109a....0x109b
+private let __prop_Diacritic_range_y: _T2 = 0x135d....0x135f
+private let __prop_Diacritic_range_z: _T2 = 0x17c9....0x17d3
+private let __prop_Diacritic_range_10: _T2 = 0x1939....0x193b
+private let __prop_Diacritic_range_11: _T2 = 0x1a75....0x1a7c
+private let __prop_Diacritic_range_12: _T2 = 0x1ab0....0x1abd
+private let __prop_Diacritic_range_13: _T2 = 0x1b6b....0x1b73
+private let __prop_Diacritic_range_14: _T2 = 0x1baa....0x1bab
+private let __prop_Diacritic_range_15: _T2 = 0x1c36....0x1c37
+private let __prop_Diacritic_range_16: _T2 = 0x1c78....0x1c7d
+private let __prop_Diacritic_range_17: _T2 = 0x1cd0....0x1ce8
+private let __prop_Diacritic_range_18: _T2 = 0x1cf7....0x1cf9
+private let __prop_Diacritic_range_19: _T2 = 0x1d2c....0x1d6a
+private let __prop_Diacritic_range_1a: _T2 = 0x1dc4....0x1dcf
+private let __prop_Diacritic_range_1b: _T2 = 0x1df5....0x1df9
+private let __prop_Diacritic_range_1c: _T2 = 0x1dfd....0x1dff
+private let __prop_Diacritic_range_1d: _T2 = 0x1fbf....0x1fc1
+private let __prop_Diacritic_range_1e: _T2 = 0x1fcd....0x1fcf
+private let __prop_Diacritic_range_1f: _T2 = 0x1fdd....0x1fdf
+private let __prop_Diacritic_range_1g: _T2 = 0x1fed....0x1fef
+private let __prop_Diacritic_range_1h: _T2 = 0x1ffd....0x1ffe
+private let __prop_Diacritic_range_1i: _T2 = 0x2cef....0x2cf1
+private let __prop_Diacritic_range_1j: _T2 = 0x302a....0x302f
+private let __prop_Diacritic_range_1k: _T2 = 0x3099....0x309c
+private let __prop_Diacritic_range_1l: _T2 = 0xa67c....0xa67d
+private let __prop_Diacritic_range_1m: _T2 = 0xa69c....0xa69d
+private let __prop_Diacritic_range_1n: _T2 = 0xa6f0....0xa6f1
+private let __prop_Diacritic_range_1o: _T2 = 0xa700....0xa721
+private let __prop_Diacritic_range_1p: _T2 = 0xa788....0xa78a
+private let __prop_Diacritic_range_1q: _T2 = 0xa7f8....0xa7f9
+private let __prop_Diacritic_range_1r: _T2 = 0xa8e0....0xa8f1
+private let __prop_Diacritic_range_1s: _T2 = 0xa92b....0xa92e
+private let __prop_Diacritic_range_1t: _T2 = 0xaa7b....0xaa7d
+private let __prop_Diacritic_range_1u: _T2 = 0xaabf....0xaac2
+private let __prop_Diacritic_range_1v: _T2 = 0xab5b....0xab5f
+private let __prop_Diacritic_range_1w: _T2 = 0xabec....0xabed
+private let __prop_Diacritic_range_1x: _T2 = 0xfe20....0xfe2f
+private let __prop_Diacritic_range_1y: _T2 = 0xff9e....0xff9f
+private let __prop_Diacritic_range_1z: _T2 = 0x10ae5....0x10ae6
+private let __prop_Diacritic_range_20: _T2 = 0x10d22....0x10d27
+private let __prop_Diacritic_range_21: _T2 = 0x10f46....0x10f50
+private let __prop_Diacritic_range_22: _T2 = 0x110b9....0x110ba
+private let __prop_Diacritic_range_23: _T2 = 0x11133....0x11134
+private let __prop_Diacritic_range_24: _T2 = 0x111ca....0x111cc
+private let __prop_Diacritic_range_25: _T2 = 0x11235....0x11236
+private let __prop_Diacritic_range_26: _T2 = 0x112e9....0x112ea
+private let __prop_Diacritic_range_27: _T2 = 0x11366....0x1136c
+private let __prop_Diacritic_range_28: _T2 = 0x11370....0x11374
+private let __prop_Diacritic_range_29: _T2 = 0x114c2....0x114c3
+private let __prop_Diacritic_range_2a: _T2 = 0x115bf....0x115c0
+private let __prop_Diacritic_range_2b: _T2 = 0x116b6....0x116b7
+private let __prop_Diacritic_range_2c: _T2 = 0x11839....0x1183a
+private let __prop_Diacritic_range_2d: _T2 = 0x11d44....0x11d45
+private let __prop_Diacritic_range_2e: _T2 = 0x16af0....0x16af4
+private let __prop_Diacritic_range_2f: _T2 = 0x16b30....0x16b36
+private let __prop_Diacritic_range_2g: _T2 = 0x16f8f....0x16f9f
+private let __prop_Diacritic_range_2h: _T2 = 0x1d167....0x1d169
+private let __prop_Diacritic_range_2i: _T2 = 0x1d16d....0x1d172
+private let __prop_Diacritic_range_2j: _T2 = 0x1d17b....0x1d182
+private let __prop_Diacritic_range_2k: _T2 = 0x1d185....0x1d18b
+private let __prop_Diacritic_range_2l: _T2 = 0x1d1aa....0x1d1ad
+private let __prop_Diacritic_range_2m: _T2 = 0x1e130....0x1e136
+private let __prop_Diacritic_range_2n: _T2 = 0x1e2ec....0x1e2ef
+private let __prop_Diacritic_range_2o: _T2 = 0x1e8d0....0x1e8d6
+private let __prop_Diacritic_range_2p: _T2 = 0x1e944....0x1e946
+private let __prop_Diacritic_range_2q: _T2 = 0x1e948....0x1e94a
+private let __prop_Diacritic_array: _T3 = [
+  __prop_Diacritic_range_0,
+  __prop_Diacritic_range_1,
+  __prop_Diacritic_range_2,
+  __prop_Diacritic_range_3,
+  __prop_Diacritic_range_4,
+  __prop_Diacritic_range_5,
+  __prop_Diacritic_range_6,
+  __prop_Diacritic_range_7,
+  __prop_Diacritic_range_8,
+  __prop_Diacritic_range_9,
+  __prop_Diacritic_range_a,
+  __prop_Diacritic_range_b,
+  __prop_Diacritic_range_c,
+  __prop_Diacritic_range_d,
+  __prop_Diacritic_range_e,
+  __prop_Diacritic_range_f,
+  __prop_Diacritic_range_g,
+  __prop_Diacritic_range_h,
+  __prop_Diacritic_range_i,
+  __prop_Diacritic_range_j,
+  __prop_Diacritic_range_k,
+  __prop_Diacritic_range_l,
+  __prop_Diacritic_range_m,
+  __prop_Diacritic_range_n,
+  __prop_Diacritic_range_o,
+  __prop_Diacritic_range_p,
+  __prop_Diacritic_range_q,
+  __prop_Diacritic_range_r,
+  __prop_Diacritic_range_s,
+  __prop_Diacritic_range_t,
+  __prop_Diacritic_range_u,
+  __prop_Diacritic_range_v,
+  __prop_Diacritic_range_w,
+  __prop_Diacritic_range_x,
+  __prop_Diacritic_range_y,
+  __prop_Diacritic_range_z,
+  __prop_Diacritic_range_10,
+  __prop_Diacritic_range_11,
+  __prop_Diacritic_range_12,
+  __prop_Diacritic_range_13,
+  __prop_Diacritic_range_14,
+  __prop_Diacritic_range_15,
+  __prop_Diacritic_range_16,
+  __prop_Diacritic_range_17,
+  __prop_Diacritic_range_18,
+  __prop_Diacritic_range_19,
+  __prop_Diacritic_range_1a,
+  __prop_Diacritic_range_1b,
+  __prop_Diacritic_range_1c,
+  __prop_Diacritic_range_1d,
+  __prop_Diacritic_range_1e,
+  __prop_Diacritic_range_1f,
+  __prop_Diacritic_range_1g,
+  __prop_Diacritic_range_1h,
+  __prop_Diacritic_range_1i,
+  __prop_Diacritic_range_1j,
+  __prop_Diacritic_range_1k,
+  __prop_Diacritic_range_1l,
+  __prop_Diacritic_range_1m,
+  __prop_Diacritic_range_1n,
+  __prop_Diacritic_range_1o,
+  __prop_Diacritic_range_1p,
+  __prop_Diacritic_range_1q,
+  __prop_Diacritic_range_1r,
+  __prop_Diacritic_range_1s,
+  __prop_Diacritic_range_1t,
+  __prop_Diacritic_range_1u,
+  __prop_Diacritic_range_1v,
+  __prop_Diacritic_range_1w,
+  __prop_Diacritic_range_1x,
+  __prop_Diacritic_range_1y,
+  __prop_Diacritic_range_1z,
+  __prop_Diacritic_range_20,
+  __prop_Diacritic_range_21,
+  __prop_Diacritic_range_22,
+  __prop_Diacritic_range_23,
+  __prop_Diacritic_range_24,
+  __prop_Diacritic_range_25,
+  __prop_Diacritic_range_26,
+  __prop_Diacritic_range_27,
+  __prop_Diacritic_range_28,
+  __prop_Diacritic_range_29,
+  __prop_Diacritic_range_2a,
+  __prop_Diacritic_range_2b,
+  __prop_Diacritic_range_2c,
+  __prop_Diacritic_range_2d,
+  __prop_Diacritic_range_2e,
+  __prop_Diacritic_range_2f,
+  __prop_Diacritic_range_2g,
+  __prop_Diacritic_range_2h,
+  __prop_Diacritic_range_2i,
+  __prop_Diacritic_range_2j,
+  __prop_Diacritic_range_2k,
+  __prop_Diacritic_range_2l,
+  __prop_Diacritic_range_2m,
+  __prop_Diacritic_range_2n,
+  __prop_Diacritic_range_2o,
+  __prop_Diacritic_range_2p,
+  __prop_Diacritic_range_2q,
 ]
-internal let _prop_IDS_Trinary_Operator = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_IDS_Trinary_Operator)
-private let __range_prop_Ideographic_0: _T0 = 0x3006....0x3007
-private let __range_prop_Ideographic_1: _T0 = 0x3021....0x3029
-private let __range_prop_Ideographic_2: _T0 = 0x3038....0x303a
-private let __range_prop_Ideographic_3: _T0 = 0x3400....0x4db5
-private let __range_prop_Ideographic_4: _T0 = 0x4e00....0x9fef
-private let __range_prop_Ideographic_5: _T0 = 0xf900....0xfa6d
-private let __range_prop_Ideographic_6: _T0 = 0xfa70....0xfad9
-private let __range_prop_Ideographic_7: _T0 = 0x17000....0x187f7
-private let __range_prop_Ideographic_8: _T0 = 0x18800....0x18af2
-private let __range_prop_Ideographic_9: _T0 = 0x1b170....0x1b2fb
-private let __range_prop_Ideographic_a: _T0 = 0x20000....0x2a6d6
-private let __range_prop_Ideographic_b: _T0 = 0x2a700....0x2b734
-private let __range_prop_Ideographic_c: _T0 = 0x2b740....0x2b81d
-private let __range_prop_Ideographic_d: _T0 = 0x2b820....0x2cea1
-private let __range_prop_Ideographic_e: _T0 = 0x2ceb0....0x2ebe0
-private let __range_prop_Ideographic_f: _T0 = 0x2f800....0x2fa1d
-private let __array_prop_Ideographic: _T1 = [
-  __range_prop_Ideographic_0,
-  __range_prop_Ideographic_1,
-  __range_prop_Ideographic_2,
-  __range_prop_Ideographic_3,
-  __range_prop_Ideographic_4,
-  __range_prop_Ideographic_5,
-  __range_prop_Ideographic_6,
-  __range_prop_Ideographic_7,
-  __range_prop_Ideographic_8,
-  __range_prop_Ideographic_9,
-  __range_prop_Ideographic_a,
-  __range_prop_Ideographic_b,
-  __range_prop_Ideographic_c,
-  __range_prop_Ideographic_d,
-  __range_prop_Ideographic_e,
-  __range_prop_Ideographic_f,
+private let __prop_Diacritic_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Diacritic_array)
+internal let _prop_Diacritic = UnicodeScalarValueSet(singleValues: __prop_Diacritic_set, ranges: __prop_Diacritic_ranges)
+private let __prop_Extender_set: _T1 = [
+  0xb7,
+  0x640,
+  0x7fa,
+  0xe46,
+  0xec6,
+  0x180a,
+  0x1843,
+  0x1aa7,
+  0x1c36,
+  0x1c7b,
+  0x3005,
+  0xa015,
+  0xa60c,
+  0xa9cf,
+  0xa9e6,
+  0xaa70,
+  0xaadd,
+  0xff70,
+  0x1135d,
+  0x11a98,
+  0x16fe3,
 ]
-internal let _prop_Ideographic = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Ideographic)
-private let __range_prop_Join_Control_0: _T0 = 0x200c....0x200d
-private let __array_prop_Join_Control: _T1 = [
-  __range_prop_Join_Control_0,
+private let __prop_Extender_range_0: _T2 = 0x2d0....0x2d1
+private let __prop_Extender_range_1: _T2 = 0x3031....0x3035
+private let __prop_Extender_range_2: _T2 = 0x309d....0x309e
+private let __prop_Extender_range_3: _T2 = 0x30fc....0x30fe
+private let __prop_Extender_range_4: _T2 = 0xaaf3....0xaaf4
+private let __prop_Extender_range_5: _T2 = 0x115c6....0x115c8
+private let __prop_Extender_range_6: _T2 = 0x16b42....0x16b43
+private let __prop_Extender_range_7: _T2 = 0x16fe0....0x16fe1
+private let __prop_Extender_range_8: _T2 = 0x1e13c....0x1e13d
+private let __prop_Extender_range_9: _T2 = 0x1e944....0x1e946
+private let __prop_Extender_array: _T3 = [
+  __prop_Extender_range_0,
+  __prop_Extender_range_1,
+  __prop_Extender_range_2,
+  __prop_Extender_range_3,
+  __prop_Extender_range_4,
+  __prop_Extender_range_5,
+  __prop_Extender_range_6,
+  __prop_Extender_range_7,
+  __prop_Extender_range_8,
+  __prop_Extender_range_9,
 ]
-internal let _prop_Join_Control = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Join_Control)
-private let __range_prop_Logical_Order_Exception_0: _T0 = 0xe40....0xe44
-private let __range_prop_Logical_Order_Exception_1: _T0 = 0xec0....0xec4
-private let __range_prop_Logical_Order_Exception_2: _T0 = 0x19b5....0x19b7
-private let __range_prop_Logical_Order_Exception_3: _T0 = 0x19ba....0x19ba
-private let __range_prop_Logical_Order_Exception_4: _T0 = 0xaab5....0xaab6
-private let __range_prop_Logical_Order_Exception_5: _T0 = 0xaab9....0xaab9
-private let __range_prop_Logical_Order_Exception_6: _T0 = 0xaabb....0xaabc
-private let __array_prop_Logical_Order_Exception: _T1 = [
-  __range_prop_Logical_Order_Exception_0,
-  __range_prop_Logical_Order_Exception_1,
-  __range_prop_Logical_Order_Exception_2,
-  __range_prop_Logical_Order_Exception_3,
-  __range_prop_Logical_Order_Exception_4,
-  __range_prop_Logical_Order_Exception_5,
-  __range_prop_Logical_Order_Exception_6,
+private let __prop_Extender_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Extender_array)
+internal let _prop_Extender = UnicodeScalarValueSet(singleValues: __prop_Extender_set, ranges: __prop_Extender_ranges)
+private let __prop_Hex_Digit_set: _T1 = [
 ]
-internal let _prop_Logical_Order_Exception = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Logical_Order_Exception)
-private let __range_prop_Noncharacter_Code_Point_0: _T0 = 0xfdd0....0xfdef
-private let __range_prop_Noncharacter_Code_Point_1: _T0 = 0xfffe....0xffff
-private let __range_prop_Noncharacter_Code_Point_2: _T0 = 0x1fffe....0x1ffff
-private let __range_prop_Noncharacter_Code_Point_3: _T0 = 0x2fffe....0x2ffff
-private let __range_prop_Noncharacter_Code_Point_4: _T0 = 0x3fffe....0x3ffff
-private let __range_prop_Noncharacter_Code_Point_5: _T0 = 0x4fffe....0x4ffff
-private let __range_prop_Noncharacter_Code_Point_6: _T0 = 0x5fffe....0x5ffff
-private let __range_prop_Noncharacter_Code_Point_7: _T0 = 0x6fffe....0x6ffff
-private let __range_prop_Noncharacter_Code_Point_8: _T0 = 0x7fffe....0x7ffff
-private let __range_prop_Noncharacter_Code_Point_9: _T0 = 0x8fffe....0x8ffff
-private let __range_prop_Noncharacter_Code_Point_a: _T0 = 0x9fffe....0x9ffff
-private let __range_prop_Noncharacter_Code_Point_b: _T0 = 0xafffe....0xaffff
-private let __range_prop_Noncharacter_Code_Point_c: _T0 = 0xbfffe....0xbffff
-private let __range_prop_Noncharacter_Code_Point_d: _T0 = 0xcfffe....0xcffff
-private let __range_prop_Noncharacter_Code_Point_e: _T0 = 0xdfffe....0xdffff
-private let __range_prop_Noncharacter_Code_Point_f: _T0 = 0xefffe....0xeffff
-private let __range_prop_Noncharacter_Code_Point_g: _T0 = 0xffffe....0xfffff
-private let __range_prop_Noncharacter_Code_Point_h: _T0 = 0x10fffe....0x10ffff
-private let __array_prop_Noncharacter_Code_Point: _T1 = [
-  __range_prop_Noncharacter_Code_Point_0,
-  __range_prop_Noncharacter_Code_Point_1,
-  __range_prop_Noncharacter_Code_Point_2,
-  __range_prop_Noncharacter_Code_Point_3,
-  __range_prop_Noncharacter_Code_Point_4,
-  __range_prop_Noncharacter_Code_Point_5,
-  __range_prop_Noncharacter_Code_Point_6,
-  __range_prop_Noncharacter_Code_Point_7,
-  __range_prop_Noncharacter_Code_Point_8,
-  __range_prop_Noncharacter_Code_Point_9,
-  __range_prop_Noncharacter_Code_Point_a,
-  __range_prop_Noncharacter_Code_Point_b,
-  __range_prop_Noncharacter_Code_Point_c,
-  __range_prop_Noncharacter_Code_Point_d,
-  __range_prop_Noncharacter_Code_Point_e,
-  __range_prop_Noncharacter_Code_Point_f,
-  __range_prop_Noncharacter_Code_Point_g,
-  __range_prop_Noncharacter_Code_Point_h,
+private let __prop_Hex_Digit_range_0: _T2 = 0x30....0x39
+private let __prop_Hex_Digit_range_1: _T2 = 0x41....0x46
+private let __prop_Hex_Digit_range_2: _T2 = 0x61....0x66
+private let __prop_Hex_Digit_range_3: _T2 = 0xff10....0xff19
+private let __prop_Hex_Digit_range_4: _T2 = 0xff21....0xff26
+private let __prop_Hex_Digit_range_5: _T2 = 0xff41....0xff46
+private let __prop_Hex_Digit_array: _T3 = [
+  __prop_Hex_Digit_range_0,
+  __prop_Hex_Digit_range_1,
+  __prop_Hex_Digit_range_2,
+  __prop_Hex_Digit_range_3,
+  __prop_Hex_Digit_range_4,
+  __prop_Hex_Digit_range_5,
 ]
-internal let _prop_Noncharacter_Code_Point = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Noncharacter_Code_Point)
-private let __range_prop_Other_Alphabetic_0: _T0 = 0x345....0x345
-private let __range_prop_Other_Alphabetic_1: _T0 = 0x5b0....0x5bd
-private let __range_prop_Other_Alphabetic_2: _T0 = 0x5bf....0x5bf
-private let __range_prop_Other_Alphabetic_3: _T0 = 0x5c1....0x5c2
-private let __range_prop_Other_Alphabetic_4: _T0 = 0x5c4....0x5c5
-private let __range_prop_Other_Alphabetic_5: _T0 = 0x5c7....0x5c7
-private let __range_prop_Other_Alphabetic_6: _T0 = 0x610....0x61a
-private let __range_prop_Other_Alphabetic_7: _T0 = 0x64b....0x657
-private let __range_prop_Other_Alphabetic_8: _T0 = 0x659....0x65f
-private let __range_prop_Other_Alphabetic_9: _T0 = 0x670....0x670
-private let __range_prop_Other_Alphabetic_a: _T0 = 0x6d6....0x6dc
-private let __range_prop_Other_Alphabetic_b: _T0 = 0x6e1....0x6e4
-private let __range_prop_Other_Alphabetic_c: _T0 = 0x6e7....0x6e8
-private let __range_prop_Other_Alphabetic_d: _T0 = 0x6ed....0x6ed
-private let __range_prop_Other_Alphabetic_e: _T0 = 0x711....0x711
-private let __range_prop_Other_Alphabetic_f: _T0 = 0x730....0x73f
-private let __range_prop_Other_Alphabetic_g: _T0 = 0x7a6....0x7b0
-private let __range_prop_Other_Alphabetic_h: _T0 = 0x816....0x817
-private let __range_prop_Other_Alphabetic_i: _T0 = 0x81b....0x823
-private let __range_prop_Other_Alphabetic_j: _T0 = 0x825....0x827
-private let __range_prop_Other_Alphabetic_k: _T0 = 0x829....0x82c
-private let __range_prop_Other_Alphabetic_l: _T0 = 0x8d4....0x8df
-private let __range_prop_Other_Alphabetic_m: _T0 = 0x8e3....0x8e9
-private let __range_prop_Other_Alphabetic_n: _T0 = 0x8f0....0x903
-private let __range_prop_Other_Alphabetic_o: _T0 = 0x93a....0x93b
-private let __range_prop_Other_Alphabetic_p: _T0 = 0x93e....0x94c
-private let __range_prop_Other_Alphabetic_q: _T0 = 0x94e....0x94f
-private let __range_prop_Other_Alphabetic_r: _T0 = 0x955....0x957
-private let __range_prop_Other_Alphabetic_s: _T0 = 0x962....0x963
-private let __range_prop_Other_Alphabetic_t: _T0 = 0x981....0x983
-private let __range_prop_Other_Alphabetic_u: _T0 = 0x9be....0x9c4
-private let __range_prop_Other_Alphabetic_v: _T0 = 0x9c7....0x9c8
-private let __range_prop_Other_Alphabetic_w: _T0 = 0x9cb....0x9cc
-private let __range_prop_Other_Alphabetic_x: _T0 = 0x9d7....0x9d7
-private let __range_prop_Other_Alphabetic_y: _T0 = 0x9e2....0x9e3
-private let __range_prop_Other_Alphabetic_z: _T0 = 0xa01....0xa03
-private let __range_prop_Other_Alphabetic_10: _T0 = 0xa3e....0xa42
-private let __range_prop_Other_Alphabetic_11: _T0 = 0xa47....0xa48
-private let __range_prop_Other_Alphabetic_12: _T0 = 0xa4b....0xa4c
-private let __range_prop_Other_Alphabetic_13: _T0 = 0xa51....0xa51
-private let __range_prop_Other_Alphabetic_14: _T0 = 0xa70....0xa71
-private let __range_prop_Other_Alphabetic_15: _T0 = 0xa75....0xa75
-private let __range_prop_Other_Alphabetic_16: _T0 = 0xa81....0xa83
-private let __range_prop_Other_Alphabetic_17: _T0 = 0xabe....0xac5
-private let __range_prop_Other_Alphabetic_18: _T0 = 0xac7....0xac9
-private let __range_prop_Other_Alphabetic_19: _T0 = 0xacb....0xacc
-private let __range_prop_Other_Alphabetic_1a: _T0 = 0xae2....0xae3
-private let __range_prop_Other_Alphabetic_1b: _T0 = 0xafa....0xafc
-private let __range_prop_Other_Alphabetic_1c: _T0 = 0xb01....0xb03
-private let __range_prop_Other_Alphabetic_1d: _T0 = 0xb3e....0xb44
-private let __range_prop_Other_Alphabetic_1e: _T0 = 0xb47....0xb48
-private let __range_prop_Other_Alphabetic_1f: _T0 = 0xb4b....0xb4c
-private let __range_prop_Other_Alphabetic_1g: _T0 = 0xb56....0xb57
-private let __range_prop_Other_Alphabetic_1h: _T0 = 0xb62....0xb63
-private let __range_prop_Other_Alphabetic_1i: _T0 = 0xb82....0xb82
-private let __range_prop_Other_Alphabetic_1j: _T0 = 0xbbe....0xbc2
-private let __range_prop_Other_Alphabetic_1k: _T0 = 0xbc6....0xbc8
-private let __range_prop_Other_Alphabetic_1l: _T0 = 0xbca....0xbcc
-private let __range_prop_Other_Alphabetic_1m: _T0 = 0xbd7....0xbd7
-private let __range_prop_Other_Alphabetic_1n: _T0 = 0xc00....0xc03
-private let __range_prop_Other_Alphabetic_1o: _T0 = 0xc3e....0xc44
-private let __range_prop_Other_Alphabetic_1p: _T0 = 0xc46....0xc48
-private let __range_prop_Other_Alphabetic_1q: _T0 = 0xc4a....0xc4c
-private let __range_prop_Other_Alphabetic_1r: _T0 = 0xc55....0xc56
-private let __range_prop_Other_Alphabetic_1s: _T0 = 0xc62....0xc63
-private let __range_prop_Other_Alphabetic_1t: _T0 = 0xc81....0xc83
-private let __range_prop_Other_Alphabetic_1u: _T0 = 0xcbe....0xcc4
-private let __range_prop_Other_Alphabetic_1v: _T0 = 0xcc6....0xcc8
-private let __range_prop_Other_Alphabetic_1w: _T0 = 0xcca....0xccc
-private let __range_prop_Other_Alphabetic_1x: _T0 = 0xcd5....0xcd6
-private let __range_prop_Other_Alphabetic_1y: _T0 = 0xce2....0xce3
-private let __range_prop_Other_Alphabetic_1z: _T0 = 0xd00....0xd03
-private let __range_prop_Other_Alphabetic_20: _T0 = 0xd3e....0xd44
-private let __range_prop_Other_Alphabetic_21: _T0 = 0xd46....0xd48
-private let __range_prop_Other_Alphabetic_22: _T0 = 0xd4a....0xd4c
-private let __range_prop_Other_Alphabetic_23: _T0 = 0xd57....0xd57
-private let __range_prop_Other_Alphabetic_24: _T0 = 0xd62....0xd63
-private let __range_prop_Other_Alphabetic_25: _T0 = 0xd82....0xd83
-private let __range_prop_Other_Alphabetic_26: _T0 = 0xdcf....0xdd4
-private let __range_prop_Other_Alphabetic_27: _T0 = 0xdd6....0xdd6
-private let __range_prop_Other_Alphabetic_28: _T0 = 0xdd8....0xddf
-private let __range_prop_Other_Alphabetic_29: _T0 = 0xdf2....0xdf3
-private let __range_prop_Other_Alphabetic_2a: _T0 = 0xe31....0xe31
-private let __range_prop_Other_Alphabetic_2b: _T0 = 0xe34....0xe3a
-private let __range_prop_Other_Alphabetic_2c: _T0 = 0xe4d....0xe4d
-private let __range_prop_Other_Alphabetic_2d: _T0 = 0xeb1....0xeb1
-private let __range_prop_Other_Alphabetic_2e: _T0 = 0xeb4....0xeb9
-private let __range_prop_Other_Alphabetic_2f: _T0 = 0xebb....0xebc
-private let __range_prop_Other_Alphabetic_2g: _T0 = 0xecd....0xecd
-private let __range_prop_Other_Alphabetic_2h: _T0 = 0xf71....0xf81
-private let __range_prop_Other_Alphabetic_2i: _T0 = 0xf8d....0xf97
-private let __range_prop_Other_Alphabetic_2j: _T0 = 0xf99....0xfbc
-private let __range_prop_Other_Alphabetic_2k: _T0 = 0x102b....0x1036
-private let __range_prop_Other_Alphabetic_2l: _T0 = 0x1038....0x1038
-private let __range_prop_Other_Alphabetic_2m: _T0 = 0x103b....0x103e
-private let __range_prop_Other_Alphabetic_2n: _T0 = 0x1056....0x1059
-private let __range_prop_Other_Alphabetic_2o: _T0 = 0x105e....0x1060
-private let __range_prop_Other_Alphabetic_2p: _T0 = 0x1062....0x1064
-private let __range_prop_Other_Alphabetic_2q: _T0 = 0x1067....0x106d
-private let __range_prop_Other_Alphabetic_2r: _T0 = 0x1071....0x1074
-private let __range_prop_Other_Alphabetic_2s: _T0 = 0x1082....0x108d
-private let __range_prop_Other_Alphabetic_2t: _T0 = 0x108f....0x108f
-private let __range_prop_Other_Alphabetic_2u: _T0 = 0x109a....0x109d
-private let __range_prop_Other_Alphabetic_2v: _T0 = 0x1712....0x1713
-private let __range_prop_Other_Alphabetic_2w: _T0 = 0x1732....0x1733
-private let __range_prop_Other_Alphabetic_2x: _T0 = 0x1752....0x1753
-private let __range_prop_Other_Alphabetic_2y: _T0 = 0x1772....0x1773
-private let __range_prop_Other_Alphabetic_2z: _T0 = 0x17b6....0x17c8
-private let __range_prop_Other_Alphabetic_30: _T0 = 0x1885....0x1886
-private let __range_prop_Other_Alphabetic_31: _T0 = 0x18a9....0x18a9
-private let __range_prop_Other_Alphabetic_32: _T0 = 0x1920....0x192b
-private let __range_prop_Other_Alphabetic_33: _T0 = 0x1930....0x1938
-private let __range_prop_Other_Alphabetic_34: _T0 = 0x1a17....0x1a1b
-private let __range_prop_Other_Alphabetic_35: _T0 = 0x1a55....0x1a5e
-private let __range_prop_Other_Alphabetic_36: _T0 = 0x1a61....0x1a74
-private let __range_prop_Other_Alphabetic_37: _T0 = 0x1b00....0x1b04
-private let __range_prop_Other_Alphabetic_38: _T0 = 0x1b35....0x1b43
-private let __range_prop_Other_Alphabetic_39: _T0 = 0x1b80....0x1b82
-private let __range_prop_Other_Alphabetic_3a: _T0 = 0x1ba1....0x1ba9
-private let __range_prop_Other_Alphabetic_3b: _T0 = 0x1bac....0x1bad
-private let __range_prop_Other_Alphabetic_3c: _T0 = 0x1be7....0x1bf1
-private let __range_prop_Other_Alphabetic_3d: _T0 = 0x1c24....0x1c36
-private let __range_prop_Other_Alphabetic_3e: _T0 = 0x1de7....0x1df4
-private let __range_prop_Other_Alphabetic_3f: _T0 = 0x24b6....0x24e9
-private let __range_prop_Other_Alphabetic_3g: _T0 = 0x2de0....0x2dff
-private let __range_prop_Other_Alphabetic_3h: _T0 = 0xa674....0xa67b
-private let __range_prop_Other_Alphabetic_3i: _T0 = 0xa69e....0xa69f
-private let __range_prop_Other_Alphabetic_3j: _T0 = 0xa802....0xa802
-private let __range_prop_Other_Alphabetic_3k: _T0 = 0xa80b....0xa80b
-private let __range_prop_Other_Alphabetic_3l: _T0 = 0xa823....0xa827
-private let __range_prop_Other_Alphabetic_3m: _T0 = 0xa880....0xa881
-private let __range_prop_Other_Alphabetic_3n: _T0 = 0xa8b4....0xa8c3
-private let __range_prop_Other_Alphabetic_3o: _T0 = 0xa8c5....0xa8c5
-private let __range_prop_Other_Alphabetic_3p: _T0 = 0xa8ff....0xa8ff
-private let __range_prop_Other_Alphabetic_3q: _T0 = 0xa926....0xa92a
-private let __range_prop_Other_Alphabetic_3r: _T0 = 0xa947....0xa952
-private let __range_prop_Other_Alphabetic_3s: _T0 = 0xa980....0xa983
-private let __range_prop_Other_Alphabetic_3t: _T0 = 0xa9b4....0xa9bf
-private let __range_prop_Other_Alphabetic_3u: _T0 = 0xa9e5....0xa9e5
-private let __range_prop_Other_Alphabetic_3v: _T0 = 0xaa29....0xaa36
-private let __range_prop_Other_Alphabetic_3w: _T0 = 0xaa43....0xaa43
-private let __range_prop_Other_Alphabetic_3x: _T0 = 0xaa4c....0xaa4d
-private let __range_prop_Other_Alphabetic_3y: _T0 = 0xaa7b....0xaa7d
-private let __range_prop_Other_Alphabetic_3z: _T0 = 0xaab0....0xaab0
-private let __range_prop_Other_Alphabetic_40: _T0 = 0xaab2....0xaab4
-private let __range_prop_Other_Alphabetic_41: _T0 = 0xaab7....0xaab8
-private let __range_prop_Other_Alphabetic_42: _T0 = 0xaabe....0xaabe
-private let __range_prop_Other_Alphabetic_43: _T0 = 0xaaeb....0xaaef
-private let __range_prop_Other_Alphabetic_44: _T0 = 0xaaf5....0xaaf5
-private let __range_prop_Other_Alphabetic_45: _T0 = 0xabe3....0xabea
-private let __range_prop_Other_Alphabetic_46: _T0 = 0xfb1e....0xfb1e
-private let __range_prop_Other_Alphabetic_47: _T0 = 0x10376....0x1037a
-private let __range_prop_Other_Alphabetic_48: _T0 = 0x10a01....0x10a03
-private let __range_prop_Other_Alphabetic_49: _T0 = 0x10a05....0x10a06
-private let __range_prop_Other_Alphabetic_4a: _T0 = 0x10a0c....0x10a0f
-private let __range_prop_Other_Alphabetic_4b: _T0 = 0x10d24....0x10d27
-private let __range_prop_Other_Alphabetic_4c: _T0 = 0x11000....0x11002
-private let __range_prop_Other_Alphabetic_4d: _T0 = 0x11038....0x11045
-private let __range_prop_Other_Alphabetic_4e: _T0 = 0x11082....0x11082
-private let __range_prop_Other_Alphabetic_4f: _T0 = 0x110b0....0x110b8
-private let __range_prop_Other_Alphabetic_4g: _T0 = 0x11100....0x11102
-private let __range_prop_Other_Alphabetic_4h: _T0 = 0x11127....0x11132
-private let __range_prop_Other_Alphabetic_4i: _T0 = 0x11145....0x11146
-private let __range_prop_Other_Alphabetic_4j: _T0 = 0x11180....0x11182
-private let __range_prop_Other_Alphabetic_4k: _T0 = 0x111b3....0x111bf
-private let __range_prop_Other_Alphabetic_4l: _T0 = 0x1122c....0x11234
-private let __range_prop_Other_Alphabetic_4m: _T0 = 0x11237....0x11237
-private let __range_prop_Other_Alphabetic_4n: _T0 = 0x1123e....0x1123e
-private let __range_prop_Other_Alphabetic_4o: _T0 = 0x112df....0x112e8
-private let __range_prop_Other_Alphabetic_4p: _T0 = 0x11300....0x11303
-private let __range_prop_Other_Alphabetic_4q: _T0 = 0x1133e....0x11344
-private let __range_prop_Other_Alphabetic_4r: _T0 = 0x11347....0x11348
-private let __range_prop_Other_Alphabetic_4s: _T0 = 0x1134b....0x1134c
-private let __range_prop_Other_Alphabetic_4t: _T0 = 0x11357....0x11357
-private let __range_prop_Other_Alphabetic_4u: _T0 = 0x11362....0x11363
-private let __range_prop_Other_Alphabetic_4v: _T0 = 0x11435....0x11441
-private let __range_prop_Other_Alphabetic_4w: _T0 = 0x11443....0x11445
-private let __range_prop_Other_Alphabetic_4x: _T0 = 0x114b0....0x114c1
-private let __range_prop_Other_Alphabetic_4y: _T0 = 0x115af....0x115b5
-private let __range_prop_Other_Alphabetic_4z: _T0 = 0x115b8....0x115be
-private let __range_prop_Other_Alphabetic_50: _T0 = 0x115dc....0x115dd
-private let __range_prop_Other_Alphabetic_51: _T0 = 0x11630....0x1163e
-private let __range_prop_Other_Alphabetic_52: _T0 = 0x11640....0x11640
-private let __range_prop_Other_Alphabetic_53: _T0 = 0x116ab....0x116b5
-private let __range_prop_Other_Alphabetic_54: _T0 = 0x1171d....0x1172a
-private let __range_prop_Other_Alphabetic_55: _T0 = 0x1182c....0x11838
-private let __range_prop_Other_Alphabetic_56: _T0 = 0x119d1....0x119d7
-private let __range_prop_Other_Alphabetic_57: _T0 = 0x119da....0x119df
-private let __range_prop_Other_Alphabetic_58: _T0 = 0x119e4....0x119e4
-private let __range_prop_Other_Alphabetic_59: _T0 = 0x11a01....0x11a0a
-private let __range_prop_Other_Alphabetic_5a: _T0 = 0x11a35....0x11a39
-private let __range_prop_Other_Alphabetic_5b: _T0 = 0x11a3b....0x11a3e
-private let __range_prop_Other_Alphabetic_5c: _T0 = 0x11a51....0x11a5b
-private let __range_prop_Other_Alphabetic_5d: _T0 = 0x11a8a....0x11a97
-private let __range_prop_Other_Alphabetic_5e: _T0 = 0x11c2f....0x11c36
-private let __range_prop_Other_Alphabetic_5f: _T0 = 0x11c38....0x11c3e
-private let __range_prop_Other_Alphabetic_5g: _T0 = 0x11c92....0x11ca7
-private let __range_prop_Other_Alphabetic_5h: _T0 = 0x11ca9....0x11cb6
-private let __range_prop_Other_Alphabetic_5i: _T0 = 0x11d31....0x11d36
-private let __range_prop_Other_Alphabetic_5j: _T0 = 0x11d3a....0x11d3a
-private let __range_prop_Other_Alphabetic_5k: _T0 = 0x11d3c....0x11d3d
-private let __range_prop_Other_Alphabetic_5l: _T0 = 0x11d3f....0x11d41
-private let __range_prop_Other_Alphabetic_5m: _T0 = 0x11d43....0x11d43
-private let __range_prop_Other_Alphabetic_5n: _T0 = 0x11d47....0x11d47
-private let __range_prop_Other_Alphabetic_5o: _T0 = 0x11d8a....0x11d8e
-private let __range_prop_Other_Alphabetic_5p: _T0 = 0x11d90....0x11d91
-private let __range_prop_Other_Alphabetic_5q: _T0 = 0x11d93....0x11d96
-private let __range_prop_Other_Alphabetic_5r: _T0 = 0x11ef3....0x11ef6
-private let __range_prop_Other_Alphabetic_5s: _T0 = 0x16f4f....0x16f4f
-private let __range_prop_Other_Alphabetic_5t: _T0 = 0x16f51....0x16f87
-private let __range_prop_Other_Alphabetic_5u: _T0 = 0x16f8f....0x16f92
-private let __range_prop_Other_Alphabetic_5v: _T0 = 0x1bc9e....0x1bc9e
-private let __range_prop_Other_Alphabetic_5w: _T0 = 0x1e000....0x1e006
-private let __range_prop_Other_Alphabetic_5x: _T0 = 0x1e008....0x1e018
-private let __range_prop_Other_Alphabetic_5y: _T0 = 0x1e01b....0x1e021
-private let __range_prop_Other_Alphabetic_5z: _T0 = 0x1e023....0x1e024
-private let __range_prop_Other_Alphabetic_60: _T0 = 0x1e026....0x1e02a
-private let __range_prop_Other_Alphabetic_61: _T0 = 0x1e947....0x1e947
-private let __range_prop_Other_Alphabetic_62: _T0 = 0x1f130....0x1f149
-private let __range_prop_Other_Alphabetic_63: _T0 = 0x1f150....0x1f169
-private let __range_prop_Other_Alphabetic_64: _T0 = 0x1f170....0x1f189
-private let __array_prop_Other_Alphabetic: _T1 = [
-  __range_prop_Other_Alphabetic_0,
-  __range_prop_Other_Alphabetic_1,
-  __range_prop_Other_Alphabetic_2,
-  __range_prop_Other_Alphabetic_3,
-  __range_prop_Other_Alphabetic_4,
-  __range_prop_Other_Alphabetic_5,
-  __range_prop_Other_Alphabetic_6,
-  __range_prop_Other_Alphabetic_7,
-  __range_prop_Other_Alphabetic_8,
-  __range_prop_Other_Alphabetic_9,
-  __range_prop_Other_Alphabetic_a,
-  __range_prop_Other_Alphabetic_b,
-  __range_prop_Other_Alphabetic_c,
-  __range_prop_Other_Alphabetic_d,
-  __range_prop_Other_Alphabetic_e,
-  __range_prop_Other_Alphabetic_f,
-  __range_prop_Other_Alphabetic_g,
-  __range_prop_Other_Alphabetic_h,
-  __range_prop_Other_Alphabetic_i,
-  __range_prop_Other_Alphabetic_j,
-  __range_prop_Other_Alphabetic_k,
-  __range_prop_Other_Alphabetic_l,
-  __range_prop_Other_Alphabetic_m,
-  __range_prop_Other_Alphabetic_n,
-  __range_prop_Other_Alphabetic_o,
-  __range_prop_Other_Alphabetic_p,
-  __range_prop_Other_Alphabetic_q,
-  __range_prop_Other_Alphabetic_r,
-  __range_prop_Other_Alphabetic_s,
-  __range_prop_Other_Alphabetic_t,
-  __range_prop_Other_Alphabetic_u,
-  __range_prop_Other_Alphabetic_v,
-  __range_prop_Other_Alphabetic_w,
-  __range_prop_Other_Alphabetic_x,
-  __range_prop_Other_Alphabetic_y,
-  __range_prop_Other_Alphabetic_z,
-  __range_prop_Other_Alphabetic_10,
-  __range_prop_Other_Alphabetic_11,
-  __range_prop_Other_Alphabetic_12,
-  __range_prop_Other_Alphabetic_13,
-  __range_prop_Other_Alphabetic_14,
-  __range_prop_Other_Alphabetic_15,
-  __range_prop_Other_Alphabetic_16,
-  __range_prop_Other_Alphabetic_17,
-  __range_prop_Other_Alphabetic_18,
-  __range_prop_Other_Alphabetic_19,
-  __range_prop_Other_Alphabetic_1a,
-  __range_prop_Other_Alphabetic_1b,
-  __range_prop_Other_Alphabetic_1c,
-  __range_prop_Other_Alphabetic_1d,
-  __range_prop_Other_Alphabetic_1e,
-  __range_prop_Other_Alphabetic_1f,
-  __range_prop_Other_Alphabetic_1g,
-  __range_prop_Other_Alphabetic_1h,
-  __range_prop_Other_Alphabetic_1i,
-  __range_prop_Other_Alphabetic_1j,
-  __range_prop_Other_Alphabetic_1k,
-  __range_prop_Other_Alphabetic_1l,
-  __range_prop_Other_Alphabetic_1m,
-  __range_prop_Other_Alphabetic_1n,
-  __range_prop_Other_Alphabetic_1o,
-  __range_prop_Other_Alphabetic_1p,
-  __range_prop_Other_Alphabetic_1q,
-  __range_prop_Other_Alphabetic_1r,
-  __range_prop_Other_Alphabetic_1s,
-  __range_prop_Other_Alphabetic_1t,
-  __range_prop_Other_Alphabetic_1u,
-  __range_prop_Other_Alphabetic_1v,
-  __range_prop_Other_Alphabetic_1w,
-  __range_prop_Other_Alphabetic_1x,
-  __range_prop_Other_Alphabetic_1y,
-  __range_prop_Other_Alphabetic_1z,
-  __range_prop_Other_Alphabetic_20,
-  __range_prop_Other_Alphabetic_21,
-  __range_prop_Other_Alphabetic_22,
-  __range_prop_Other_Alphabetic_23,
-  __range_prop_Other_Alphabetic_24,
-  __range_prop_Other_Alphabetic_25,
-  __range_prop_Other_Alphabetic_26,
-  __range_prop_Other_Alphabetic_27,
-  __range_prop_Other_Alphabetic_28,
-  __range_prop_Other_Alphabetic_29,
-  __range_prop_Other_Alphabetic_2a,
-  __range_prop_Other_Alphabetic_2b,
-  __range_prop_Other_Alphabetic_2c,
-  __range_prop_Other_Alphabetic_2d,
-  __range_prop_Other_Alphabetic_2e,
-  __range_prop_Other_Alphabetic_2f,
-  __range_prop_Other_Alphabetic_2g,
-  __range_prop_Other_Alphabetic_2h,
-  __range_prop_Other_Alphabetic_2i,
-  __range_prop_Other_Alphabetic_2j,
-  __range_prop_Other_Alphabetic_2k,
-  __range_prop_Other_Alphabetic_2l,
-  __range_prop_Other_Alphabetic_2m,
-  __range_prop_Other_Alphabetic_2n,
-  __range_prop_Other_Alphabetic_2o,
-  __range_prop_Other_Alphabetic_2p,
-  __range_prop_Other_Alphabetic_2q,
-  __range_prop_Other_Alphabetic_2r,
-  __range_prop_Other_Alphabetic_2s,
-  __range_prop_Other_Alphabetic_2t,
-  __range_prop_Other_Alphabetic_2u,
-  __range_prop_Other_Alphabetic_2v,
-  __range_prop_Other_Alphabetic_2w,
-  __range_prop_Other_Alphabetic_2x,
-  __range_prop_Other_Alphabetic_2y,
-  __range_prop_Other_Alphabetic_2z,
-  __range_prop_Other_Alphabetic_30,
-  __range_prop_Other_Alphabetic_31,
-  __range_prop_Other_Alphabetic_32,
-  __range_prop_Other_Alphabetic_33,
-  __range_prop_Other_Alphabetic_34,
-  __range_prop_Other_Alphabetic_35,
-  __range_prop_Other_Alphabetic_36,
-  __range_prop_Other_Alphabetic_37,
-  __range_prop_Other_Alphabetic_38,
-  __range_prop_Other_Alphabetic_39,
-  __range_prop_Other_Alphabetic_3a,
-  __range_prop_Other_Alphabetic_3b,
-  __range_prop_Other_Alphabetic_3c,
-  __range_prop_Other_Alphabetic_3d,
-  __range_prop_Other_Alphabetic_3e,
-  __range_prop_Other_Alphabetic_3f,
-  __range_prop_Other_Alphabetic_3g,
-  __range_prop_Other_Alphabetic_3h,
-  __range_prop_Other_Alphabetic_3i,
-  __range_prop_Other_Alphabetic_3j,
-  __range_prop_Other_Alphabetic_3k,
-  __range_prop_Other_Alphabetic_3l,
-  __range_prop_Other_Alphabetic_3m,
-  __range_prop_Other_Alphabetic_3n,
-  __range_prop_Other_Alphabetic_3o,
-  __range_prop_Other_Alphabetic_3p,
-  __range_prop_Other_Alphabetic_3q,
-  __range_prop_Other_Alphabetic_3r,
-  __range_prop_Other_Alphabetic_3s,
-  __range_prop_Other_Alphabetic_3t,
-  __range_prop_Other_Alphabetic_3u,
-  __range_prop_Other_Alphabetic_3v,
-  __range_prop_Other_Alphabetic_3w,
-  __range_prop_Other_Alphabetic_3x,
-  __range_prop_Other_Alphabetic_3y,
-  __range_prop_Other_Alphabetic_3z,
-  __range_prop_Other_Alphabetic_40,
-  __range_prop_Other_Alphabetic_41,
-  __range_prop_Other_Alphabetic_42,
-  __range_prop_Other_Alphabetic_43,
-  __range_prop_Other_Alphabetic_44,
-  __range_prop_Other_Alphabetic_45,
-  __range_prop_Other_Alphabetic_46,
-  __range_prop_Other_Alphabetic_47,
-  __range_prop_Other_Alphabetic_48,
-  __range_prop_Other_Alphabetic_49,
-  __range_prop_Other_Alphabetic_4a,
-  __range_prop_Other_Alphabetic_4b,
-  __range_prop_Other_Alphabetic_4c,
-  __range_prop_Other_Alphabetic_4d,
-  __range_prop_Other_Alphabetic_4e,
-  __range_prop_Other_Alphabetic_4f,
-  __range_prop_Other_Alphabetic_4g,
-  __range_prop_Other_Alphabetic_4h,
-  __range_prop_Other_Alphabetic_4i,
-  __range_prop_Other_Alphabetic_4j,
-  __range_prop_Other_Alphabetic_4k,
-  __range_prop_Other_Alphabetic_4l,
-  __range_prop_Other_Alphabetic_4m,
-  __range_prop_Other_Alphabetic_4n,
-  __range_prop_Other_Alphabetic_4o,
-  __range_prop_Other_Alphabetic_4p,
-  __range_prop_Other_Alphabetic_4q,
-  __range_prop_Other_Alphabetic_4r,
-  __range_prop_Other_Alphabetic_4s,
-  __range_prop_Other_Alphabetic_4t,
-  __range_prop_Other_Alphabetic_4u,
-  __range_prop_Other_Alphabetic_4v,
-  __range_prop_Other_Alphabetic_4w,
-  __range_prop_Other_Alphabetic_4x,
-  __range_prop_Other_Alphabetic_4y,
-  __range_prop_Other_Alphabetic_4z,
-  __range_prop_Other_Alphabetic_50,
-  __range_prop_Other_Alphabetic_51,
-  __range_prop_Other_Alphabetic_52,
-  __range_prop_Other_Alphabetic_53,
-  __range_prop_Other_Alphabetic_54,
-  __range_prop_Other_Alphabetic_55,
-  __range_prop_Other_Alphabetic_56,
-  __range_prop_Other_Alphabetic_57,
-  __range_prop_Other_Alphabetic_58,
-  __range_prop_Other_Alphabetic_59,
-  __range_prop_Other_Alphabetic_5a,
-  __range_prop_Other_Alphabetic_5b,
-  __range_prop_Other_Alphabetic_5c,
-  __range_prop_Other_Alphabetic_5d,
-  __range_prop_Other_Alphabetic_5e,
-  __range_prop_Other_Alphabetic_5f,
-  __range_prop_Other_Alphabetic_5g,
-  __range_prop_Other_Alphabetic_5h,
-  __range_prop_Other_Alphabetic_5i,
-  __range_prop_Other_Alphabetic_5j,
-  __range_prop_Other_Alphabetic_5k,
-  __range_prop_Other_Alphabetic_5l,
-  __range_prop_Other_Alphabetic_5m,
-  __range_prop_Other_Alphabetic_5n,
-  __range_prop_Other_Alphabetic_5o,
-  __range_prop_Other_Alphabetic_5p,
-  __range_prop_Other_Alphabetic_5q,
-  __range_prop_Other_Alphabetic_5r,
-  __range_prop_Other_Alphabetic_5s,
-  __range_prop_Other_Alphabetic_5t,
-  __range_prop_Other_Alphabetic_5u,
-  __range_prop_Other_Alphabetic_5v,
-  __range_prop_Other_Alphabetic_5w,
-  __range_prop_Other_Alphabetic_5x,
-  __range_prop_Other_Alphabetic_5y,
-  __range_prop_Other_Alphabetic_5z,
-  __range_prop_Other_Alphabetic_60,
-  __range_prop_Other_Alphabetic_61,
-  __range_prop_Other_Alphabetic_62,
-  __range_prop_Other_Alphabetic_63,
-  __range_prop_Other_Alphabetic_64,
+private let __prop_Hex_Digit_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Hex_Digit_array)
+internal let _prop_Hex_Digit = UnicodeScalarValueSet(singleValues: __prop_Hex_Digit_set, ranges: __prop_Hex_Digit_ranges)
+private let __prop_Hyphen_set: _T1 = [
+  0x2d,
+  0xad,
+  0x58a,
+  0x1806,
+  0x2e17,
+  0x30fb,
+  0xfe63,
+  0xff0d,
+  0xff65,
 ]
-internal let _prop_Other_Alphabetic = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Other_Alphabetic)
-private let __range_prop_Other_Default_Ignorable_Code_Point_0: _T0 = 0x34f....0x34f
-private let __range_prop_Other_Default_Ignorable_Code_Point_1: _T0 = 0x115f....0x1160
-private let __range_prop_Other_Default_Ignorable_Code_Point_2: _T0 = 0x17b4....0x17b5
-private let __range_prop_Other_Default_Ignorable_Code_Point_3: _T0 = 0x2065....0x2065
-private let __range_prop_Other_Default_Ignorable_Code_Point_4: _T0 = 0x3164....0x3164
-private let __range_prop_Other_Default_Ignorable_Code_Point_5: _T0 = 0xffa0....0xffa0
-private let __range_prop_Other_Default_Ignorable_Code_Point_6: _T0 = 0xfff0....0xfff8
-private let __range_prop_Other_Default_Ignorable_Code_Point_7: _T0 = 0xe0000....0xe0000
-private let __range_prop_Other_Default_Ignorable_Code_Point_8: _T0 = 0xe0002....0xe001f
-private let __range_prop_Other_Default_Ignorable_Code_Point_9: _T0 = 0xe0080....0xe00ff
-private let __range_prop_Other_Default_Ignorable_Code_Point_a: _T0 = 0xe01f0....0xe0fff
-private let __array_prop_Other_Default_Ignorable_Code_Point: _T1 = [
-  __range_prop_Other_Default_Ignorable_Code_Point_0,
-  __range_prop_Other_Default_Ignorable_Code_Point_1,
-  __range_prop_Other_Default_Ignorable_Code_Point_2,
-  __range_prop_Other_Default_Ignorable_Code_Point_3,
-  __range_prop_Other_Default_Ignorable_Code_Point_4,
-  __range_prop_Other_Default_Ignorable_Code_Point_5,
-  __range_prop_Other_Default_Ignorable_Code_Point_6,
-  __range_prop_Other_Default_Ignorable_Code_Point_7,
-  __range_prop_Other_Default_Ignorable_Code_Point_8,
-  __range_prop_Other_Default_Ignorable_Code_Point_9,
-  __range_prop_Other_Default_Ignorable_Code_Point_a,
+private let __prop_Hyphen_range_0: _T2 = 0x2010....0x2011
+private let __prop_Hyphen_array: _T3 = [
+  __prop_Hyphen_range_0,
 ]
-internal let _prop_Other_Default_Ignorable_Code_Point = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Other_Default_Ignorable_Code_Point)
-private let __range_prop_Other_Grapheme_Extend_0: _T0 = 0x9be....0x9be
-private let __range_prop_Other_Grapheme_Extend_1: _T0 = 0x9d7....0x9d7
-private let __range_prop_Other_Grapheme_Extend_2: _T0 = 0xb3e....0xb3e
-private let __range_prop_Other_Grapheme_Extend_3: _T0 = 0xb57....0xb57
-private let __range_prop_Other_Grapheme_Extend_4: _T0 = 0xbbe....0xbbe
-private let __range_prop_Other_Grapheme_Extend_5: _T0 = 0xbd7....0xbd7
-private let __range_prop_Other_Grapheme_Extend_6: _T0 = 0xcc2....0xcc2
-private let __range_prop_Other_Grapheme_Extend_7: _T0 = 0xcd5....0xcd6
-private let __range_prop_Other_Grapheme_Extend_8: _T0 = 0xd3e....0xd3e
-private let __range_prop_Other_Grapheme_Extend_9: _T0 = 0xd57....0xd57
-private let __range_prop_Other_Grapheme_Extend_a: _T0 = 0xdcf....0xdcf
-private let __range_prop_Other_Grapheme_Extend_b: _T0 = 0xddf....0xddf
-private let __range_prop_Other_Grapheme_Extend_c: _T0 = 0x1b35....0x1b35
-private let __range_prop_Other_Grapheme_Extend_d: _T0 = 0x200c....0x200c
-private let __range_prop_Other_Grapheme_Extend_e: _T0 = 0x302e....0x302f
-private let __range_prop_Other_Grapheme_Extend_f: _T0 = 0xff9e....0xff9f
-private let __range_prop_Other_Grapheme_Extend_g: _T0 = 0x1133e....0x1133e
-private let __range_prop_Other_Grapheme_Extend_h: _T0 = 0x11357....0x11357
-private let __range_prop_Other_Grapheme_Extend_i: _T0 = 0x114b0....0x114b0
-private let __range_prop_Other_Grapheme_Extend_j: _T0 = 0x114bd....0x114bd
-private let __range_prop_Other_Grapheme_Extend_k: _T0 = 0x115af....0x115af
-private let __range_prop_Other_Grapheme_Extend_l: _T0 = 0x1d165....0x1d165
-private let __range_prop_Other_Grapheme_Extend_m: _T0 = 0x1d16e....0x1d172
-private let __range_prop_Other_Grapheme_Extend_n: _T0 = 0xe0020....0xe007f
-private let __array_prop_Other_Grapheme_Extend: _T1 = [
-  __range_prop_Other_Grapheme_Extend_0,
-  __range_prop_Other_Grapheme_Extend_1,
-  __range_prop_Other_Grapheme_Extend_2,
-  __range_prop_Other_Grapheme_Extend_3,
-  __range_prop_Other_Grapheme_Extend_4,
-  __range_prop_Other_Grapheme_Extend_5,
-  __range_prop_Other_Grapheme_Extend_6,
-  __range_prop_Other_Grapheme_Extend_7,
-  __range_prop_Other_Grapheme_Extend_8,
-  __range_prop_Other_Grapheme_Extend_9,
-  __range_prop_Other_Grapheme_Extend_a,
-  __range_prop_Other_Grapheme_Extend_b,
-  __range_prop_Other_Grapheme_Extend_c,
-  __range_prop_Other_Grapheme_Extend_d,
-  __range_prop_Other_Grapheme_Extend_e,
-  __range_prop_Other_Grapheme_Extend_f,
-  __range_prop_Other_Grapheme_Extend_g,
-  __range_prop_Other_Grapheme_Extend_h,
-  __range_prop_Other_Grapheme_Extend_i,
-  __range_prop_Other_Grapheme_Extend_j,
-  __range_prop_Other_Grapheme_Extend_k,
-  __range_prop_Other_Grapheme_Extend_l,
-  __range_prop_Other_Grapheme_Extend_m,
-  __range_prop_Other_Grapheme_Extend_n,
+private let __prop_Hyphen_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Hyphen_array)
+internal let _prop_Hyphen = UnicodeScalarValueSet(singleValues: __prop_Hyphen_set, ranges: __prop_Hyphen_ranges)
+private let __prop_IDS_Binary_Operator_set: _T1 = [
 ]
-internal let _prop_Other_Grapheme_Extend = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Other_Grapheme_Extend)
-private let __range_prop_Other_ID_Continue_0: _T0 = 0xb7....0xb7
-private let __range_prop_Other_ID_Continue_1: _T0 = 0x387....0x387
-private let __range_prop_Other_ID_Continue_2: _T0 = 0x1369....0x1371
-private let __range_prop_Other_ID_Continue_3: _T0 = 0x19da....0x19da
-private let __array_prop_Other_ID_Continue: _T1 = [
-  __range_prop_Other_ID_Continue_0,
-  __range_prop_Other_ID_Continue_1,
-  __range_prop_Other_ID_Continue_2,
-  __range_prop_Other_ID_Continue_3,
+private let __prop_IDS_Binary_Operator_range_0: _T2 = 0x2ff0....0x2ff1
+private let __prop_IDS_Binary_Operator_range_1: _T2 = 0x2ff4....0x2ffb
+private let __prop_IDS_Binary_Operator_array: _T3 = [
+  __prop_IDS_Binary_Operator_range_0,
+  __prop_IDS_Binary_Operator_range_1,
 ]
-internal let _prop_Other_ID_Continue = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Other_ID_Continue)
-private let __range_prop_Other_ID_Start_0: _T0 = 0x1885....0x1886
-private let __range_prop_Other_ID_Start_1: _T0 = 0x2118....0x2118
-private let __range_prop_Other_ID_Start_2: _T0 = 0x212e....0x212e
-private let __range_prop_Other_ID_Start_3: _T0 = 0x309b....0x309c
-private let __array_prop_Other_ID_Start: _T1 = [
-  __range_prop_Other_ID_Start_0,
-  __range_prop_Other_ID_Start_1,
-  __range_prop_Other_ID_Start_2,
-  __range_prop_Other_ID_Start_3,
+private let __prop_IDS_Binary_Operator_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_IDS_Binary_Operator_array)
+internal let _prop_IDS_Binary_Operator = UnicodeScalarValueSet(singleValues: __prop_IDS_Binary_Operator_set, ranges: __prop_IDS_Binary_Operator_ranges)
+private let __prop_IDS_Trinary_Operator_set: _T1 = [
 ]
-internal let _prop_Other_ID_Start = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Other_ID_Start)
-private let __range_prop_Other_Lowercase_0: _T0 = 0xaa....0xaa
-private let __range_prop_Other_Lowercase_1: _T0 = 0xba....0xba
-private let __range_prop_Other_Lowercase_2: _T0 = 0x2b0....0x2b8
-private let __range_prop_Other_Lowercase_3: _T0 = 0x2c0....0x2c1
-private let __range_prop_Other_Lowercase_4: _T0 = 0x2e0....0x2e4
-private let __range_prop_Other_Lowercase_5: _T0 = 0x345....0x345
-private let __range_prop_Other_Lowercase_6: _T0 = 0x37a....0x37a
-private let __range_prop_Other_Lowercase_7: _T0 = 0x1d2c....0x1d6a
-private let __range_prop_Other_Lowercase_8: _T0 = 0x1d78....0x1d78
-private let __range_prop_Other_Lowercase_9: _T0 = 0x1d9b....0x1dbf
-private let __range_prop_Other_Lowercase_a: _T0 = 0x2071....0x2071
-private let __range_prop_Other_Lowercase_b: _T0 = 0x207f....0x207f
-private let __range_prop_Other_Lowercase_c: _T0 = 0x2090....0x209c
-private let __range_prop_Other_Lowercase_d: _T0 = 0x2170....0x217f
-private let __range_prop_Other_Lowercase_e: _T0 = 0x24d0....0x24e9
-private let __range_prop_Other_Lowercase_f: _T0 = 0x2c7c....0x2c7d
-private let __range_prop_Other_Lowercase_g: _T0 = 0xa69c....0xa69d
-private let __range_prop_Other_Lowercase_h: _T0 = 0xa770....0xa770
-private let __range_prop_Other_Lowercase_i: _T0 = 0xa7f8....0xa7f9
-private let __range_prop_Other_Lowercase_j: _T0 = 0xab5c....0xab5f
-private let __array_prop_Other_Lowercase: _T1 = [
-  __range_prop_Other_Lowercase_0,
-  __range_prop_Other_Lowercase_1,
-  __range_prop_Other_Lowercase_2,
-  __range_prop_Other_Lowercase_3,
-  __range_prop_Other_Lowercase_4,
-  __range_prop_Other_Lowercase_5,
-  __range_prop_Other_Lowercase_6,
-  __range_prop_Other_Lowercase_7,
-  __range_prop_Other_Lowercase_8,
-  __range_prop_Other_Lowercase_9,
-  __range_prop_Other_Lowercase_a,
-  __range_prop_Other_Lowercase_b,
-  __range_prop_Other_Lowercase_c,
-  __range_prop_Other_Lowercase_d,
-  __range_prop_Other_Lowercase_e,
-  __range_prop_Other_Lowercase_f,
-  __range_prop_Other_Lowercase_g,
-  __range_prop_Other_Lowercase_h,
-  __range_prop_Other_Lowercase_i,
-  __range_prop_Other_Lowercase_j,
+private let __prop_IDS_Trinary_Operator_range_0: _T2 = 0x2ff2....0x2ff3
+private let __prop_IDS_Trinary_Operator_array: _T3 = [
+  __prop_IDS_Trinary_Operator_range_0,
 ]
-internal let _prop_Other_Lowercase = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Other_Lowercase)
-private let __range_prop_Other_Math_0: _T0 = 0x5e....0x5e
-private let __range_prop_Other_Math_1: _T0 = 0x3d0....0x3d2
-private let __range_prop_Other_Math_2: _T0 = 0x3d5....0x3d5
-private let __range_prop_Other_Math_3: _T0 = 0x3f0....0x3f1
-private let __range_prop_Other_Math_4: _T0 = 0x3f4....0x3f5
-private let __range_prop_Other_Math_5: _T0 = 0x2016....0x2016
-private let __range_prop_Other_Math_6: _T0 = 0x2032....0x2034
-private let __range_prop_Other_Math_7: _T0 = 0x2040....0x2040
-private let __range_prop_Other_Math_8: _T0 = 0x2061....0x2064
-private let __range_prop_Other_Math_9: _T0 = 0x207d....0x207e
-private let __range_prop_Other_Math_a: _T0 = 0x208d....0x208e
-private let __range_prop_Other_Math_b: _T0 = 0x20d0....0x20dc
-private let __range_prop_Other_Math_c: _T0 = 0x20e1....0x20e1
-private let __range_prop_Other_Math_d: _T0 = 0x20e5....0x20e6
-private let __range_prop_Other_Math_e: _T0 = 0x20eb....0x20ef
-private let __range_prop_Other_Math_f: _T0 = 0x2102....0x2102
-private let __range_prop_Other_Math_g: _T0 = 0x2107....0x2107
-private let __range_prop_Other_Math_h: _T0 = 0x210a....0x2113
-private let __range_prop_Other_Math_i: _T0 = 0x2115....0x2115
-private let __range_prop_Other_Math_j: _T0 = 0x2119....0x211d
-private let __range_prop_Other_Math_k: _T0 = 0x2124....0x2124
-private let __range_prop_Other_Math_l: _T0 = 0x2128....0x2129
-private let __range_prop_Other_Math_m: _T0 = 0x212c....0x212d
-private let __range_prop_Other_Math_n: _T0 = 0x212f....0x2131
-private let __range_prop_Other_Math_o: _T0 = 0x2133....0x2138
-private let __range_prop_Other_Math_p: _T0 = 0x213c....0x213f
-private let __range_prop_Other_Math_q: _T0 = 0x2145....0x2149
-private let __range_prop_Other_Math_r: _T0 = 0x2195....0x2199
-private let __range_prop_Other_Math_s: _T0 = 0x219c....0x219f
-private let __range_prop_Other_Math_t: _T0 = 0x21a1....0x21a2
-private let __range_prop_Other_Math_u: _T0 = 0x21a4....0x21a5
-private let __range_prop_Other_Math_v: _T0 = 0x21a7....0x21a7
-private let __range_prop_Other_Math_w: _T0 = 0x21a9....0x21ad
-private let __range_prop_Other_Math_x: _T0 = 0x21b0....0x21b1
-private let __range_prop_Other_Math_y: _T0 = 0x21b6....0x21b7
-private let __range_prop_Other_Math_z: _T0 = 0x21bc....0x21cd
-private let __range_prop_Other_Math_10: _T0 = 0x21d0....0x21d1
-private let __range_prop_Other_Math_11: _T0 = 0x21d3....0x21d3
-private let __range_prop_Other_Math_12: _T0 = 0x21d5....0x21db
-private let __range_prop_Other_Math_13: _T0 = 0x21dd....0x21dd
-private let __range_prop_Other_Math_14: _T0 = 0x21e4....0x21e5
-private let __range_prop_Other_Math_15: _T0 = 0x2308....0x230b
-private let __range_prop_Other_Math_16: _T0 = 0x23b4....0x23b5
-private let __range_prop_Other_Math_17: _T0 = 0x23b7....0x23b7
-private let __range_prop_Other_Math_18: _T0 = 0x23d0....0x23d0
-private let __range_prop_Other_Math_19: _T0 = 0x23e2....0x23e2
-private let __range_prop_Other_Math_1a: _T0 = 0x25a0....0x25a1
-private let __range_prop_Other_Math_1b: _T0 = 0x25ae....0x25b6
-private let __range_prop_Other_Math_1c: _T0 = 0x25bc....0x25c0
-private let __range_prop_Other_Math_1d: _T0 = 0x25c6....0x25c7
-private let __range_prop_Other_Math_1e: _T0 = 0x25ca....0x25cb
-private let __range_prop_Other_Math_1f: _T0 = 0x25cf....0x25d3
-private let __range_prop_Other_Math_1g: _T0 = 0x25e2....0x25e2
-private let __range_prop_Other_Math_1h: _T0 = 0x25e4....0x25e4
-private let __range_prop_Other_Math_1i: _T0 = 0x25e7....0x25ec
-private let __range_prop_Other_Math_1j: _T0 = 0x2605....0x2606
-private let __range_prop_Other_Math_1k: _T0 = 0x2640....0x2640
-private let __range_prop_Other_Math_1l: _T0 = 0x2642....0x2642
-private let __range_prop_Other_Math_1m: _T0 = 0x2660....0x2663
-private let __range_prop_Other_Math_1n: _T0 = 0x266d....0x266e
-private let __range_prop_Other_Math_1o: _T0 = 0x27c5....0x27c6
-private let __range_prop_Other_Math_1p: _T0 = 0x27e6....0x27ef
-private let __range_prop_Other_Math_1q: _T0 = 0x2983....0x2998
-private let __range_prop_Other_Math_1r: _T0 = 0x29d8....0x29db
-private let __range_prop_Other_Math_1s: _T0 = 0x29fc....0x29fd
-private let __range_prop_Other_Math_1t: _T0 = 0xfe61....0xfe61
-private let __range_prop_Other_Math_1u: _T0 = 0xfe63....0xfe63
-private let __range_prop_Other_Math_1v: _T0 = 0xfe68....0xfe68
-private let __range_prop_Other_Math_1w: _T0 = 0xff3c....0xff3c
-private let __range_prop_Other_Math_1x: _T0 = 0xff3e....0xff3e
-private let __range_prop_Other_Math_1y: _T0 = 0x1d400....0x1d454
-private let __range_prop_Other_Math_1z: _T0 = 0x1d456....0x1d49c
-private let __range_prop_Other_Math_20: _T0 = 0x1d49e....0x1d49f
-private let __range_prop_Other_Math_21: _T0 = 0x1d4a2....0x1d4a2
-private let __range_prop_Other_Math_22: _T0 = 0x1d4a5....0x1d4a6
-private let __range_prop_Other_Math_23: _T0 = 0x1d4a9....0x1d4ac
-private let __range_prop_Other_Math_24: _T0 = 0x1d4ae....0x1d4b9
-private let __range_prop_Other_Math_25: _T0 = 0x1d4bb....0x1d4bb
-private let __range_prop_Other_Math_26: _T0 = 0x1d4bd....0x1d4c3
-private let __range_prop_Other_Math_27: _T0 = 0x1d4c5....0x1d505
-private let __range_prop_Other_Math_28: _T0 = 0x1d507....0x1d50a
-private let __range_prop_Other_Math_29: _T0 = 0x1d50d....0x1d514
-private let __range_prop_Other_Math_2a: _T0 = 0x1d516....0x1d51c
-private let __range_prop_Other_Math_2b: _T0 = 0x1d51e....0x1d539
-private let __range_prop_Other_Math_2c: _T0 = 0x1d53b....0x1d53e
-private let __range_prop_Other_Math_2d: _T0 = 0x1d540....0x1d544
-private let __range_prop_Other_Math_2e: _T0 = 0x1d546....0x1d546
-private let __range_prop_Other_Math_2f: _T0 = 0x1d54a....0x1d550
-private let __range_prop_Other_Math_2g: _T0 = 0x1d552....0x1d6a5
-private let __range_prop_Other_Math_2h: _T0 = 0x1d6a8....0x1d6c0
-private let __range_prop_Other_Math_2i: _T0 = 0x1d6c2....0x1d6da
-private let __range_prop_Other_Math_2j: _T0 = 0x1d6dc....0x1d6fa
-private let __range_prop_Other_Math_2k: _T0 = 0x1d6fc....0x1d714
-private let __range_prop_Other_Math_2l: _T0 = 0x1d716....0x1d734
-private let __range_prop_Other_Math_2m: _T0 = 0x1d736....0x1d74e
-private let __range_prop_Other_Math_2n: _T0 = 0x1d750....0x1d76e
-private let __range_prop_Other_Math_2o: _T0 = 0x1d770....0x1d788
-private let __range_prop_Other_Math_2p: _T0 = 0x1d78a....0x1d7a8
-private let __range_prop_Other_Math_2q: _T0 = 0x1d7aa....0x1d7c2
-private let __range_prop_Other_Math_2r: _T0 = 0x1d7c4....0x1d7cb
-private let __range_prop_Other_Math_2s: _T0 = 0x1d7ce....0x1d7ff
-private let __range_prop_Other_Math_2t: _T0 = 0x1ee00....0x1ee03
-private let __range_prop_Other_Math_2u: _T0 = 0x1ee05....0x1ee1f
-private let __range_prop_Other_Math_2v: _T0 = 0x1ee21....0x1ee22
-private let __range_prop_Other_Math_2w: _T0 = 0x1ee24....0x1ee24
-private let __range_prop_Other_Math_2x: _T0 = 0x1ee27....0x1ee27
-private let __range_prop_Other_Math_2y: _T0 = 0x1ee29....0x1ee32
-private let __range_prop_Other_Math_2z: _T0 = 0x1ee34....0x1ee37
-private let __range_prop_Other_Math_30: _T0 = 0x1ee39....0x1ee39
-private let __range_prop_Other_Math_31: _T0 = 0x1ee3b....0x1ee3b
-private let __range_prop_Other_Math_32: _T0 = 0x1ee42....0x1ee42
-private let __range_prop_Other_Math_33: _T0 = 0x1ee47....0x1ee47
-private let __range_prop_Other_Math_34: _T0 = 0x1ee49....0x1ee49
-private let __range_prop_Other_Math_35: _T0 = 0x1ee4b....0x1ee4b
-private let __range_prop_Other_Math_36: _T0 = 0x1ee4d....0x1ee4f
-private let __range_prop_Other_Math_37: _T0 = 0x1ee51....0x1ee52
-private let __range_prop_Other_Math_38: _T0 = 0x1ee54....0x1ee54
-private let __range_prop_Other_Math_39: _T0 = 0x1ee57....0x1ee57
-private let __range_prop_Other_Math_3a: _T0 = 0x1ee59....0x1ee59
-private let __range_prop_Other_Math_3b: _T0 = 0x1ee5b....0x1ee5b
-private let __range_prop_Other_Math_3c: _T0 = 0x1ee5d....0x1ee5d
-private let __range_prop_Other_Math_3d: _T0 = 0x1ee5f....0x1ee5f
-private let __range_prop_Other_Math_3e: _T0 = 0x1ee61....0x1ee62
-private let __range_prop_Other_Math_3f: _T0 = 0x1ee64....0x1ee64
-private let __range_prop_Other_Math_3g: _T0 = 0x1ee67....0x1ee6a
-private let __range_prop_Other_Math_3h: _T0 = 0x1ee6c....0x1ee72
-private let __range_prop_Other_Math_3i: _T0 = 0x1ee74....0x1ee77
-private let __range_prop_Other_Math_3j: _T0 = 0x1ee79....0x1ee7c
-private let __range_prop_Other_Math_3k: _T0 = 0x1ee7e....0x1ee7e
-private let __range_prop_Other_Math_3l: _T0 = 0x1ee80....0x1ee89
-private let __range_prop_Other_Math_3m: _T0 = 0x1ee8b....0x1ee9b
-private let __range_prop_Other_Math_3n: _T0 = 0x1eea1....0x1eea3
-private let __range_prop_Other_Math_3o: _T0 = 0x1eea5....0x1eea9
-private let __range_prop_Other_Math_3p: _T0 = 0x1eeab....0x1eebb
-private let __array_prop_Other_Math: _T1 = [
-  __range_prop_Other_Math_0,
-  __range_prop_Other_Math_1,
-  __range_prop_Other_Math_2,
-  __range_prop_Other_Math_3,
-  __range_prop_Other_Math_4,
-  __range_prop_Other_Math_5,
-  __range_prop_Other_Math_6,
-  __range_prop_Other_Math_7,
-  __range_prop_Other_Math_8,
-  __range_prop_Other_Math_9,
-  __range_prop_Other_Math_a,
-  __range_prop_Other_Math_b,
-  __range_prop_Other_Math_c,
-  __range_prop_Other_Math_d,
-  __range_prop_Other_Math_e,
-  __range_prop_Other_Math_f,
-  __range_prop_Other_Math_g,
-  __range_prop_Other_Math_h,
-  __range_prop_Other_Math_i,
-  __range_prop_Other_Math_j,
-  __range_prop_Other_Math_k,
-  __range_prop_Other_Math_l,
-  __range_prop_Other_Math_m,
-  __range_prop_Other_Math_n,
-  __range_prop_Other_Math_o,
-  __range_prop_Other_Math_p,
-  __range_prop_Other_Math_q,
-  __range_prop_Other_Math_r,
-  __range_prop_Other_Math_s,
-  __range_prop_Other_Math_t,
-  __range_prop_Other_Math_u,
-  __range_prop_Other_Math_v,
-  __range_prop_Other_Math_w,
-  __range_prop_Other_Math_x,
-  __range_prop_Other_Math_y,
-  __range_prop_Other_Math_z,
-  __range_prop_Other_Math_10,
-  __range_prop_Other_Math_11,
-  __range_prop_Other_Math_12,
-  __range_prop_Other_Math_13,
-  __range_prop_Other_Math_14,
-  __range_prop_Other_Math_15,
-  __range_prop_Other_Math_16,
-  __range_prop_Other_Math_17,
-  __range_prop_Other_Math_18,
-  __range_prop_Other_Math_19,
-  __range_prop_Other_Math_1a,
-  __range_prop_Other_Math_1b,
-  __range_prop_Other_Math_1c,
-  __range_prop_Other_Math_1d,
-  __range_prop_Other_Math_1e,
-  __range_prop_Other_Math_1f,
-  __range_prop_Other_Math_1g,
-  __range_prop_Other_Math_1h,
-  __range_prop_Other_Math_1i,
-  __range_prop_Other_Math_1j,
-  __range_prop_Other_Math_1k,
-  __range_prop_Other_Math_1l,
-  __range_prop_Other_Math_1m,
-  __range_prop_Other_Math_1n,
-  __range_prop_Other_Math_1o,
-  __range_prop_Other_Math_1p,
-  __range_prop_Other_Math_1q,
-  __range_prop_Other_Math_1r,
-  __range_prop_Other_Math_1s,
-  __range_prop_Other_Math_1t,
-  __range_prop_Other_Math_1u,
-  __range_prop_Other_Math_1v,
-  __range_prop_Other_Math_1w,
-  __range_prop_Other_Math_1x,
-  __range_prop_Other_Math_1y,
-  __range_prop_Other_Math_1z,
-  __range_prop_Other_Math_20,
-  __range_prop_Other_Math_21,
-  __range_prop_Other_Math_22,
-  __range_prop_Other_Math_23,
-  __range_prop_Other_Math_24,
-  __range_prop_Other_Math_25,
-  __range_prop_Other_Math_26,
-  __range_prop_Other_Math_27,
-  __range_prop_Other_Math_28,
-  __range_prop_Other_Math_29,
-  __range_prop_Other_Math_2a,
-  __range_prop_Other_Math_2b,
-  __range_prop_Other_Math_2c,
-  __range_prop_Other_Math_2d,
-  __range_prop_Other_Math_2e,
-  __range_prop_Other_Math_2f,
-  __range_prop_Other_Math_2g,
-  __range_prop_Other_Math_2h,
-  __range_prop_Other_Math_2i,
-  __range_prop_Other_Math_2j,
-  __range_prop_Other_Math_2k,
-  __range_prop_Other_Math_2l,
-  __range_prop_Other_Math_2m,
-  __range_prop_Other_Math_2n,
-  __range_prop_Other_Math_2o,
-  __range_prop_Other_Math_2p,
-  __range_prop_Other_Math_2q,
-  __range_prop_Other_Math_2r,
-  __range_prop_Other_Math_2s,
-  __range_prop_Other_Math_2t,
-  __range_prop_Other_Math_2u,
-  __range_prop_Other_Math_2v,
-  __range_prop_Other_Math_2w,
-  __range_prop_Other_Math_2x,
-  __range_prop_Other_Math_2y,
-  __range_prop_Other_Math_2z,
-  __range_prop_Other_Math_30,
-  __range_prop_Other_Math_31,
-  __range_prop_Other_Math_32,
-  __range_prop_Other_Math_33,
-  __range_prop_Other_Math_34,
-  __range_prop_Other_Math_35,
-  __range_prop_Other_Math_36,
-  __range_prop_Other_Math_37,
-  __range_prop_Other_Math_38,
-  __range_prop_Other_Math_39,
-  __range_prop_Other_Math_3a,
-  __range_prop_Other_Math_3b,
-  __range_prop_Other_Math_3c,
-  __range_prop_Other_Math_3d,
-  __range_prop_Other_Math_3e,
-  __range_prop_Other_Math_3f,
-  __range_prop_Other_Math_3g,
-  __range_prop_Other_Math_3h,
-  __range_prop_Other_Math_3i,
-  __range_prop_Other_Math_3j,
-  __range_prop_Other_Math_3k,
-  __range_prop_Other_Math_3l,
-  __range_prop_Other_Math_3m,
-  __range_prop_Other_Math_3n,
-  __range_prop_Other_Math_3o,
-  __range_prop_Other_Math_3p,
+private let __prop_IDS_Trinary_Operator_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_IDS_Trinary_Operator_array)
+internal let _prop_IDS_Trinary_Operator = UnicodeScalarValueSet(singleValues: __prop_IDS_Trinary_Operator_set, ranges: __prop_IDS_Trinary_Operator_ranges)
+private let __prop_Ideographic_set: _T1 = [
 ]
-internal let _prop_Other_Math = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Other_Math)
-private let __range_prop_Other_Uppercase_0: _T0 = 0x2160....0x216f
-private let __range_prop_Other_Uppercase_1: _T0 = 0x24b6....0x24cf
-private let __range_prop_Other_Uppercase_2: _T0 = 0x1f130....0x1f149
-private let __range_prop_Other_Uppercase_3: _T0 = 0x1f150....0x1f169
-private let __range_prop_Other_Uppercase_4: _T0 = 0x1f170....0x1f189
-private let __array_prop_Other_Uppercase: _T1 = [
-  __range_prop_Other_Uppercase_0,
-  __range_prop_Other_Uppercase_1,
-  __range_prop_Other_Uppercase_2,
-  __range_prop_Other_Uppercase_3,
-  __range_prop_Other_Uppercase_4,
+private let __prop_Ideographic_range_0: _T2 = 0x3006....0x3007
+private let __prop_Ideographic_range_1: _T2 = 0x3021....0x3029
+private let __prop_Ideographic_range_2: _T2 = 0x3038....0x303a
+private let __prop_Ideographic_range_3: _T2 = 0x3400....0x4db5
+private let __prop_Ideographic_range_4: _T2 = 0x4e00....0x9fef
+private let __prop_Ideographic_range_5: _T2 = 0xf900....0xfa6d
+private let __prop_Ideographic_range_6: _T2 = 0xfa70....0xfad9
+private let __prop_Ideographic_range_7: _T2 = 0x17000....0x187f7
+private let __prop_Ideographic_range_8: _T2 = 0x18800....0x18af2
+private let __prop_Ideographic_range_9: _T2 = 0x1b170....0x1b2fb
+private let __prop_Ideographic_range_a: _T2 = 0x20000....0x2a6d6
+private let __prop_Ideographic_range_b: _T2 = 0x2a700....0x2b734
+private let __prop_Ideographic_range_c: _T2 = 0x2b740....0x2b81d
+private let __prop_Ideographic_range_d: _T2 = 0x2b820....0x2cea1
+private let __prop_Ideographic_range_e: _T2 = 0x2ceb0....0x2ebe0
+private let __prop_Ideographic_range_f: _T2 = 0x2f800....0x2fa1d
+private let __prop_Ideographic_array: _T3 = [
+  __prop_Ideographic_range_0,
+  __prop_Ideographic_range_1,
+  __prop_Ideographic_range_2,
+  __prop_Ideographic_range_3,
+  __prop_Ideographic_range_4,
+  __prop_Ideographic_range_5,
+  __prop_Ideographic_range_6,
+  __prop_Ideographic_range_7,
+  __prop_Ideographic_range_8,
+  __prop_Ideographic_range_9,
+  __prop_Ideographic_range_a,
+  __prop_Ideographic_range_b,
+  __prop_Ideographic_range_c,
+  __prop_Ideographic_range_d,
+  __prop_Ideographic_range_e,
+  __prop_Ideographic_range_f,
 ]
-internal let _prop_Other_Uppercase = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Other_Uppercase)
-private let __range_prop_Pattern_Syntax_0: _T0 = 0x21....0x2f
-private let __range_prop_Pattern_Syntax_1: _T0 = 0x3a....0x40
-private let __range_prop_Pattern_Syntax_2: _T0 = 0x5b....0x5e
-private let __range_prop_Pattern_Syntax_3: _T0 = 0x60....0x60
-private let __range_prop_Pattern_Syntax_4: _T0 = 0x7b....0x7e
-private let __range_prop_Pattern_Syntax_5: _T0 = 0xa1....0xa7
-private let __range_prop_Pattern_Syntax_6: _T0 = 0xa9....0xa9
-private let __range_prop_Pattern_Syntax_7: _T0 = 0xab....0xac
-private let __range_prop_Pattern_Syntax_8: _T0 = 0xae....0xae
-private let __range_prop_Pattern_Syntax_9: _T0 = 0xb0....0xb1
-private let __range_prop_Pattern_Syntax_a: _T0 = 0xb6....0xb6
-private let __range_prop_Pattern_Syntax_b: _T0 = 0xbb....0xbb
-private let __range_prop_Pattern_Syntax_c: _T0 = 0xbf....0xbf
-private let __range_prop_Pattern_Syntax_d: _T0 = 0xd7....0xd7
-private let __range_prop_Pattern_Syntax_e: _T0 = 0xf7....0xf7
-private let __range_prop_Pattern_Syntax_f: _T0 = 0x2010....0x2027
-private let __range_prop_Pattern_Syntax_g: _T0 = 0x2030....0x203e
-private let __range_prop_Pattern_Syntax_h: _T0 = 0x2041....0x2053
-private let __range_prop_Pattern_Syntax_i: _T0 = 0x2055....0x205e
-private let __range_prop_Pattern_Syntax_j: _T0 = 0x2190....0x245f
-private let __range_prop_Pattern_Syntax_k: _T0 = 0x2500....0x2775
-private let __range_prop_Pattern_Syntax_l: _T0 = 0x2794....0x2bff
-private let __range_prop_Pattern_Syntax_m: _T0 = 0x2e00....0x2e7f
-private let __range_prop_Pattern_Syntax_n: _T0 = 0x3001....0x3003
-private let __range_prop_Pattern_Syntax_o: _T0 = 0x3008....0x3020
-private let __range_prop_Pattern_Syntax_p: _T0 = 0x3030....0x3030
-private let __range_prop_Pattern_Syntax_q: _T0 = 0xfd3e....0xfd3f
-private let __range_prop_Pattern_Syntax_r: _T0 = 0xfe45....0xfe46
-private let __array_prop_Pattern_Syntax: _T1 = [
-  __range_prop_Pattern_Syntax_0,
-  __range_prop_Pattern_Syntax_1,
-  __range_prop_Pattern_Syntax_2,
-  __range_prop_Pattern_Syntax_3,
-  __range_prop_Pattern_Syntax_4,
-  __range_prop_Pattern_Syntax_5,
-  __range_prop_Pattern_Syntax_6,
-  __range_prop_Pattern_Syntax_7,
-  __range_prop_Pattern_Syntax_8,
-  __range_prop_Pattern_Syntax_9,
-  __range_prop_Pattern_Syntax_a,
-  __range_prop_Pattern_Syntax_b,
-  __range_prop_Pattern_Syntax_c,
-  __range_prop_Pattern_Syntax_d,
-  __range_prop_Pattern_Syntax_e,
-  __range_prop_Pattern_Syntax_f,
-  __range_prop_Pattern_Syntax_g,
-  __range_prop_Pattern_Syntax_h,
-  __range_prop_Pattern_Syntax_i,
-  __range_prop_Pattern_Syntax_j,
-  __range_prop_Pattern_Syntax_k,
-  __range_prop_Pattern_Syntax_l,
-  __range_prop_Pattern_Syntax_m,
-  __range_prop_Pattern_Syntax_n,
-  __range_prop_Pattern_Syntax_o,
-  __range_prop_Pattern_Syntax_p,
-  __range_prop_Pattern_Syntax_q,
-  __range_prop_Pattern_Syntax_r,
+private let __prop_Ideographic_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Ideographic_array)
+internal let _prop_Ideographic = UnicodeScalarValueSet(singleValues: __prop_Ideographic_set, ranges: __prop_Ideographic_ranges)
+private let __prop_Join_Control_set: _T1 = [
 ]
-internal let _prop_Pattern_Syntax = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Pattern_Syntax)
-private let __range_prop_Pattern_White_Space_0: _T0 = 0x9....0xd
-private let __range_prop_Pattern_White_Space_1: _T0 = 0x20....0x20
-private let __range_prop_Pattern_White_Space_2: _T0 = 0x85....0x85
-private let __range_prop_Pattern_White_Space_3: _T0 = 0x200e....0x200f
-private let __range_prop_Pattern_White_Space_4: _T0 = 0x2028....0x2029
-private let __array_prop_Pattern_White_Space: _T1 = [
-  __range_prop_Pattern_White_Space_0,
-  __range_prop_Pattern_White_Space_1,
-  __range_prop_Pattern_White_Space_2,
-  __range_prop_Pattern_White_Space_3,
-  __range_prop_Pattern_White_Space_4,
+private let __prop_Join_Control_range_0: _T2 = 0x200c....0x200d
+private let __prop_Join_Control_array: _T3 = [
+  __prop_Join_Control_range_0,
 ]
-internal let _prop_Pattern_White_Space = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Pattern_White_Space)
-private let __range_prop_Prepended_Concatenation_Mark_0: _T0 = 0x600....0x605
-private let __range_prop_Prepended_Concatenation_Mark_1: _T0 = 0x6dd....0x6dd
-private let __range_prop_Prepended_Concatenation_Mark_2: _T0 = 0x70f....0x70f
-private let __range_prop_Prepended_Concatenation_Mark_3: _T0 = 0x8e2....0x8e2
-private let __range_prop_Prepended_Concatenation_Mark_4: _T0 = 0x110bd....0x110bd
-private let __range_prop_Prepended_Concatenation_Mark_5: _T0 = 0x110cd....0x110cd
-private let __array_prop_Prepended_Concatenation_Mark: _T1 = [
-  __range_prop_Prepended_Concatenation_Mark_0,
-  __range_prop_Prepended_Concatenation_Mark_1,
-  __range_prop_Prepended_Concatenation_Mark_2,
-  __range_prop_Prepended_Concatenation_Mark_3,
-  __range_prop_Prepended_Concatenation_Mark_4,
-  __range_prop_Prepended_Concatenation_Mark_5,
+private let __prop_Join_Control_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Join_Control_array)
+internal let _prop_Join_Control = UnicodeScalarValueSet(singleValues: __prop_Join_Control_set, ranges: __prop_Join_Control_ranges)
+private let __prop_Logical_Order_Exception_set: _T1 = [
+  0x19ba,
+  0xaab9,
 ]
-internal let _prop_Prepended_Concatenation_Mark = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Prepended_Concatenation_Mark)
-private let __range_prop_Quotation_Mark_0: _T0 = 0x22....0x22
-private let __range_prop_Quotation_Mark_1: _T0 = 0x27....0x27
-private let __range_prop_Quotation_Mark_2: _T0 = 0xab....0xab
-private let __range_prop_Quotation_Mark_3: _T0 = 0xbb....0xbb
-private let __range_prop_Quotation_Mark_4: _T0 = 0x2018....0x201f
-private let __range_prop_Quotation_Mark_5: _T0 = 0x2039....0x203a
-private let __range_prop_Quotation_Mark_6: _T0 = 0x2e42....0x2e42
-private let __range_prop_Quotation_Mark_7: _T0 = 0x300c....0x300f
-private let __range_prop_Quotation_Mark_8: _T0 = 0x301d....0x301f
-private let __range_prop_Quotation_Mark_9: _T0 = 0xfe41....0xfe44
-private let __range_prop_Quotation_Mark_a: _T0 = 0xff02....0xff02
-private let __range_prop_Quotation_Mark_b: _T0 = 0xff07....0xff07
-private let __range_prop_Quotation_Mark_c: _T0 = 0xff62....0xff63
-private let __array_prop_Quotation_Mark: _T1 = [
-  __range_prop_Quotation_Mark_0,
-  __range_prop_Quotation_Mark_1,
-  __range_prop_Quotation_Mark_2,
-  __range_prop_Quotation_Mark_3,
-  __range_prop_Quotation_Mark_4,
-  __range_prop_Quotation_Mark_5,
-  __range_prop_Quotation_Mark_6,
-  __range_prop_Quotation_Mark_7,
-  __range_prop_Quotation_Mark_8,
-  __range_prop_Quotation_Mark_9,
-  __range_prop_Quotation_Mark_a,
-  __range_prop_Quotation_Mark_b,
-  __range_prop_Quotation_Mark_c,
+private let __prop_Logical_Order_Exception_range_0: _T2 = 0xe40....0xe44
+private let __prop_Logical_Order_Exception_range_1: _T2 = 0xec0....0xec4
+private let __prop_Logical_Order_Exception_range_2: _T2 = 0x19b5....0x19b7
+private let __prop_Logical_Order_Exception_range_3: _T2 = 0xaab5....0xaab6
+private let __prop_Logical_Order_Exception_range_4: _T2 = 0xaabb....0xaabc
+private let __prop_Logical_Order_Exception_array: _T3 = [
+  __prop_Logical_Order_Exception_range_0,
+  __prop_Logical_Order_Exception_range_1,
+  __prop_Logical_Order_Exception_range_2,
+  __prop_Logical_Order_Exception_range_3,
+  __prop_Logical_Order_Exception_range_4,
 ]
-internal let _prop_Quotation_Mark = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Quotation_Mark)
-private let __range_prop_Radical_0: _T0 = 0x2e80....0x2e99
-private let __range_prop_Radical_1: _T0 = 0x2e9b....0x2ef3
-private let __range_prop_Radical_2: _T0 = 0x2f00....0x2fd5
-private let __array_prop_Radical: _T1 = [
-  __range_prop_Radical_0,
-  __range_prop_Radical_1,
-  __range_prop_Radical_2,
+private let __prop_Logical_Order_Exception_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Logical_Order_Exception_array)
+internal let _prop_Logical_Order_Exception = UnicodeScalarValueSet(singleValues: __prop_Logical_Order_Exception_set, ranges: __prop_Logical_Order_Exception_ranges)
+private let __prop_Noncharacter_Code_Point_set: _T1 = [
 ]
-internal let _prop_Radical = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Radical)
-private let __range_prop_Regional_Indicator_0: _T0 = 0x1f1e6....0x1f1ff
-private let __array_prop_Regional_Indicator: _T1 = [
-  __range_prop_Regional_Indicator_0,
+private let __prop_Noncharacter_Code_Point_range_0: _T2 = 0xfdd0....0xfdef
+private let __prop_Noncharacter_Code_Point_range_1: _T2 = 0xfffe....0xffff
+private let __prop_Noncharacter_Code_Point_range_2: _T2 = 0x1fffe....0x1ffff
+private let __prop_Noncharacter_Code_Point_range_3: _T2 = 0x2fffe....0x2ffff
+private let __prop_Noncharacter_Code_Point_range_4: _T2 = 0x3fffe....0x3ffff
+private let __prop_Noncharacter_Code_Point_range_5: _T2 = 0x4fffe....0x4ffff
+private let __prop_Noncharacter_Code_Point_range_6: _T2 = 0x5fffe....0x5ffff
+private let __prop_Noncharacter_Code_Point_range_7: _T2 = 0x6fffe....0x6ffff
+private let __prop_Noncharacter_Code_Point_range_8: _T2 = 0x7fffe....0x7ffff
+private let __prop_Noncharacter_Code_Point_range_9: _T2 = 0x8fffe....0x8ffff
+private let __prop_Noncharacter_Code_Point_range_a: _T2 = 0x9fffe....0x9ffff
+private let __prop_Noncharacter_Code_Point_range_b: _T2 = 0xafffe....0xaffff
+private let __prop_Noncharacter_Code_Point_range_c: _T2 = 0xbfffe....0xbffff
+private let __prop_Noncharacter_Code_Point_range_d: _T2 = 0xcfffe....0xcffff
+private let __prop_Noncharacter_Code_Point_range_e: _T2 = 0xdfffe....0xdffff
+private let __prop_Noncharacter_Code_Point_range_f: _T2 = 0xefffe....0xeffff
+private let __prop_Noncharacter_Code_Point_range_g: _T2 = 0xffffe....0xfffff
+private let __prop_Noncharacter_Code_Point_range_h: _T2 = 0x10fffe....0x10ffff
+private let __prop_Noncharacter_Code_Point_array: _T3 = [
+  __prop_Noncharacter_Code_Point_range_0,
+  __prop_Noncharacter_Code_Point_range_1,
+  __prop_Noncharacter_Code_Point_range_2,
+  __prop_Noncharacter_Code_Point_range_3,
+  __prop_Noncharacter_Code_Point_range_4,
+  __prop_Noncharacter_Code_Point_range_5,
+  __prop_Noncharacter_Code_Point_range_6,
+  __prop_Noncharacter_Code_Point_range_7,
+  __prop_Noncharacter_Code_Point_range_8,
+  __prop_Noncharacter_Code_Point_range_9,
+  __prop_Noncharacter_Code_Point_range_a,
+  __prop_Noncharacter_Code_Point_range_b,
+  __prop_Noncharacter_Code_Point_range_c,
+  __prop_Noncharacter_Code_Point_range_d,
+  __prop_Noncharacter_Code_Point_range_e,
+  __prop_Noncharacter_Code_Point_range_f,
+  __prop_Noncharacter_Code_Point_range_g,
+  __prop_Noncharacter_Code_Point_range_h,
 ]
-internal let _prop_Regional_Indicator = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Regional_Indicator)
-private let __range_prop_Sentence_Terminal_0: _T0 = 0x21....0x21
-private let __range_prop_Sentence_Terminal_1: _T0 = 0x2e....0x2e
-private let __range_prop_Sentence_Terminal_2: _T0 = 0x3f....0x3f
-private let __range_prop_Sentence_Terminal_3: _T0 = 0x589....0x589
-private let __range_prop_Sentence_Terminal_4: _T0 = 0x61e....0x61f
-private let __range_prop_Sentence_Terminal_5: _T0 = 0x6d4....0x6d4
-private let __range_prop_Sentence_Terminal_6: _T0 = 0x700....0x702
-private let __range_prop_Sentence_Terminal_7: _T0 = 0x7f9....0x7f9
-private let __range_prop_Sentence_Terminal_8: _T0 = 0x837....0x837
-private let __range_prop_Sentence_Terminal_9: _T0 = 0x839....0x839
-private let __range_prop_Sentence_Terminal_a: _T0 = 0x83d....0x83e
-private let __range_prop_Sentence_Terminal_b: _T0 = 0x964....0x965
-private let __range_prop_Sentence_Terminal_c: _T0 = 0x104a....0x104b
-private let __range_prop_Sentence_Terminal_d: _T0 = 0x1362....0x1362
-private let __range_prop_Sentence_Terminal_e: _T0 = 0x1367....0x1368
-private let __range_prop_Sentence_Terminal_f: _T0 = 0x166e....0x166e
-private let __range_prop_Sentence_Terminal_g: _T0 = 0x1735....0x1736
-private let __range_prop_Sentence_Terminal_h: _T0 = 0x1803....0x1803
-private let __range_prop_Sentence_Terminal_i: _T0 = 0x1809....0x1809
-private let __range_prop_Sentence_Terminal_j: _T0 = 0x1944....0x1945
-private let __range_prop_Sentence_Terminal_k: _T0 = 0x1aa8....0x1aab
-private let __range_prop_Sentence_Terminal_l: _T0 = 0x1b5a....0x1b5b
-private let __range_prop_Sentence_Terminal_m: _T0 = 0x1b5e....0x1b5f
-private let __range_prop_Sentence_Terminal_n: _T0 = 0x1c3b....0x1c3c
-private let __range_prop_Sentence_Terminal_o: _T0 = 0x1c7e....0x1c7f
-private let __range_prop_Sentence_Terminal_p: _T0 = 0x203c....0x203d
-private let __range_prop_Sentence_Terminal_q: _T0 = 0x2047....0x2049
-private let __range_prop_Sentence_Terminal_r: _T0 = 0x2e2e....0x2e2e
-private let __range_prop_Sentence_Terminal_s: _T0 = 0x2e3c....0x2e3c
-private let __range_prop_Sentence_Terminal_t: _T0 = 0x3002....0x3002
-private let __range_prop_Sentence_Terminal_u: _T0 = 0xa4ff....0xa4ff
-private let __range_prop_Sentence_Terminal_v: _T0 = 0xa60e....0xa60f
-private let __range_prop_Sentence_Terminal_w: _T0 = 0xa6f3....0xa6f3
-private let __range_prop_Sentence_Terminal_x: _T0 = 0xa6f7....0xa6f7
-private let __range_prop_Sentence_Terminal_y: _T0 = 0xa876....0xa877
-private let __range_prop_Sentence_Terminal_z: _T0 = 0xa8ce....0xa8cf
-private let __range_prop_Sentence_Terminal_10: _T0 = 0xa92f....0xa92f
-private let __range_prop_Sentence_Terminal_11: _T0 = 0xa9c8....0xa9c9
-private let __range_prop_Sentence_Terminal_12: _T0 = 0xaa5d....0xaa5f
-private let __range_prop_Sentence_Terminal_13: _T0 = 0xaaf0....0xaaf1
-private let __range_prop_Sentence_Terminal_14: _T0 = 0xabeb....0xabeb
-private let __range_prop_Sentence_Terminal_15: _T0 = 0xfe52....0xfe52
-private let __range_prop_Sentence_Terminal_16: _T0 = 0xfe56....0xfe57
-private let __range_prop_Sentence_Terminal_17: _T0 = 0xff01....0xff01
-private let __range_prop_Sentence_Terminal_18: _T0 = 0xff0e....0xff0e
-private let __range_prop_Sentence_Terminal_19: _T0 = 0xff1f....0xff1f
-private let __range_prop_Sentence_Terminal_1a: _T0 = 0xff61....0xff61
-private let __range_prop_Sentence_Terminal_1b: _T0 = 0x10a56....0x10a57
-private let __range_prop_Sentence_Terminal_1c: _T0 = 0x10f55....0x10f59
-private let __range_prop_Sentence_Terminal_1d: _T0 = 0x11047....0x11048
-private let __range_prop_Sentence_Terminal_1e: _T0 = 0x110be....0x110c1
-private let __range_prop_Sentence_Terminal_1f: _T0 = 0x11141....0x11143
-private let __range_prop_Sentence_Terminal_1g: _T0 = 0x111c5....0x111c6
-private let __range_prop_Sentence_Terminal_1h: _T0 = 0x111cd....0x111cd
-private let __range_prop_Sentence_Terminal_1i: _T0 = 0x111de....0x111df
-private let __range_prop_Sentence_Terminal_1j: _T0 = 0x11238....0x11239
-private let __range_prop_Sentence_Terminal_1k: _T0 = 0x1123b....0x1123c
-private let __range_prop_Sentence_Terminal_1l: _T0 = 0x112a9....0x112a9
-private let __range_prop_Sentence_Terminal_1m: _T0 = 0x1144b....0x1144c
-private let __range_prop_Sentence_Terminal_1n: _T0 = 0x115c2....0x115c3
-private let __range_prop_Sentence_Terminal_1o: _T0 = 0x115c9....0x115d7
-private let __range_prop_Sentence_Terminal_1p: _T0 = 0x11641....0x11642
-private let __range_prop_Sentence_Terminal_1q: _T0 = 0x1173c....0x1173e
-private let __range_prop_Sentence_Terminal_1r: _T0 = 0x11a42....0x11a43
-private let __range_prop_Sentence_Terminal_1s: _T0 = 0x11a9b....0x11a9c
-private let __range_prop_Sentence_Terminal_1t: _T0 = 0x11c41....0x11c42
-private let __range_prop_Sentence_Terminal_1u: _T0 = 0x11ef7....0x11ef8
-private let __range_prop_Sentence_Terminal_1v: _T0 = 0x16a6e....0x16a6f
-private let __range_prop_Sentence_Terminal_1w: _T0 = 0x16af5....0x16af5
-private let __range_prop_Sentence_Terminal_1x: _T0 = 0x16b37....0x16b38
-private let __range_prop_Sentence_Terminal_1y: _T0 = 0x16b44....0x16b44
-private let __range_prop_Sentence_Terminal_1z: _T0 = 0x16e98....0x16e98
-private let __range_prop_Sentence_Terminal_20: _T0 = 0x1bc9f....0x1bc9f
-private let __range_prop_Sentence_Terminal_21: _T0 = 0x1da88....0x1da88
-private let __array_prop_Sentence_Terminal: _T1 = [
-  __range_prop_Sentence_Terminal_0,
-  __range_prop_Sentence_Terminal_1,
-  __range_prop_Sentence_Terminal_2,
-  __range_prop_Sentence_Terminal_3,
-  __range_prop_Sentence_Terminal_4,
-  __range_prop_Sentence_Terminal_5,
-  __range_prop_Sentence_Terminal_6,
-  __range_prop_Sentence_Terminal_7,
-  __range_prop_Sentence_Terminal_8,
-  __range_prop_Sentence_Terminal_9,
-  __range_prop_Sentence_Terminal_a,
-  __range_prop_Sentence_Terminal_b,
-  __range_prop_Sentence_Terminal_c,
-  __range_prop_Sentence_Terminal_d,
-  __range_prop_Sentence_Terminal_e,
-  __range_prop_Sentence_Terminal_f,
-  __range_prop_Sentence_Terminal_g,
-  __range_prop_Sentence_Terminal_h,
-  __range_prop_Sentence_Terminal_i,
-  __range_prop_Sentence_Terminal_j,
-  __range_prop_Sentence_Terminal_k,
-  __range_prop_Sentence_Terminal_l,
-  __range_prop_Sentence_Terminal_m,
-  __range_prop_Sentence_Terminal_n,
-  __range_prop_Sentence_Terminal_o,
-  __range_prop_Sentence_Terminal_p,
-  __range_prop_Sentence_Terminal_q,
-  __range_prop_Sentence_Terminal_r,
-  __range_prop_Sentence_Terminal_s,
-  __range_prop_Sentence_Terminal_t,
-  __range_prop_Sentence_Terminal_u,
-  __range_prop_Sentence_Terminal_v,
-  __range_prop_Sentence_Terminal_w,
-  __range_prop_Sentence_Terminal_x,
-  __range_prop_Sentence_Terminal_y,
-  __range_prop_Sentence_Terminal_z,
-  __range_prop_Sentence_Terminal_10,
-  __range_prop_Sentence_Terminal_11,
-  __range_prop_Sentence_Terminal_12,
-  __range_prop_Sentence_Terminal_13,
-  __range_prop_Sentence_Terminal_14,
-  __range_prop_Sentence_Terminal_15,
-  __range_prop_Sentence_Terminal_16,
-  __range_prop_Sentence_Terminal_17,
-  __range_prop_Sentence_Terminal_18,
-  __range_prop_Sentence_Terminal_19,
-  __range_prop_Sentence_Terminal_1a,
-  __range_prop_Sentence_Terminal_1b,
-  __range_prop_Sentence_Terminal_1c,
-  __range_prop_Sentence_Terminal_1d,
-  __range_prop_Sentence_Terminal_1e,
-  __range_prop_Sentence_Terminal_1f,
-  __range_prop_Sentence_Terminal_1g,
-  __range_prop_Sentence_Terminal_1h,
-  __range_prop_Sentence_Terminal_1i,
-  __range_prop_Sentence_Terminal_1j,
-  __range_prop_Sentence_Terminal_1k,
-  __range_prop_Sentence_Terminal_1l,
-  __range_prop_Sentence_Terminal_1m,
-  __range_prop_Sentence_Terminal_1n,
-  __range_prop_Sentence_Terminal_1o,
-  __range_prop_Sentence_Terminal_1p,
-  __range_prop_Sentence_Terminal_1q,
-  __range_prop_Sentence_Terminal_1r,
-  __range_prop_Sentence_Terminal_1s,
-  __range_prop_Sentence_Terminal_1t,
-  __range_prop_Sentence_Terminal_1u,
-  __range_prop_Sentence_Terminal_1v,
-  __range_prop_Sentence_Terminal_1w,
-  __range_prop_Sentence_Terminal_1x,
-  __range_prop_Sentence_Terminal_1y,
-  __range_prop_Sentence_Terminal_1z,
-  __range_prop_Sentence_Terminal_20,
-  __range_prop_Sentence_Terminal_21,
+private let __prop_Noncharacter_Code_Point_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Noncharacter_Code_Point_array)
+internal let _prop_Noncharacter_Code_Point = UnicodeScalarValueSet(singleValues: __prop_Noncharacter_Code_Point_set, ranges: __prop_Noncharacter_Code_Point_ranges)
+private let __prop_Other_Alphabetic_set: _T1 = [
+  0x345,
+  0x5bf,
+  0x5c7,
+  0x670,
+  0x6ed,
+  0x711,
+  0x9d7,
+  0xa51,
+  0xa75,
+  0xb82,
+  0xbd7,
+  0xd57,
+  0xdd6,
+  0xe31,
+  0xe4d,
+  0xeb1,
+  0xecd,
+  0x1038,
+  0x108f,
+  0x18a9,
+  0xa802,
+  0xa80b,
+  0xa8c5,
+  0xa8ff,
+  0xa9e5,
+  0xaa43,
+  0xaab0,
+  0xaabe,
+  0xaaf5,
+  0xfb1e,
+  0x11082,
+  0x11237,
+  0x1123e,
+  0x11357,
+  0x11640,
+  0x119e4,
+  0x11d3a,
+  0x11d43,
+  0x11d47,
+  0x16f4f,
+  0x1bc9e,
+  0x1e947,
 ]
-internal let _prop_Sentence_Terminal = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Sentence_Terminal)
-private let __range_prop_Soft_Dotted_0: _T0 = 0x69....0x6a
-private let __range_prop_Soft_Dotted_1: _T0 = 0x12f....0x12f
-private let __range_prop_Soft_Dotted_2: _T0 = 0x249....0x249
-private let __range_prop_Soft_Dotted_3: _T0 = 0x268....0x268
-private let __range_prop_Soft_Dotted_4: _T0 = 0x29d....0x29d
-private let __range_prop_Soft_Dotted_5: _T0 = 0x2b2....0x2b2
-private let __range_prop_Soft_Dotted_6: _T0 = 0x3f3....0x3f3
-private let __range_prop_Soft_Dotted_7: _T0 = 0x456....0x456
-private let __range_prop_Soft_Dotted_8: _T0 = 0x458....0x458
-private let __range_prop_Soft_Dotted_9: _T0 = 0x1d62....0x1d62
-private let __range_prop_Soft_Dotted_a: _T0 = 0x1d96....0x1d96
-private let __range_prop_Soft_Dotted_b: _T0 = 0x1da4....0x1da4
-private let __range_prop_Soft_Dotted_c: _T0 = 0x1da8....0x1da8
-private let __range_prop_Soft_Dotted_d: _T0 = 0x1e2d....0x1e2d
-private let __range_prop_Soft_Dotted_e: _T0 = 0x1ecb....0x1ecb
-private let __range_prop_Soft_Dotted_f: _T0 = 0x2071....0x2071
-private let __range_prop_Soft_Dotted_g: _T0 = 0x2148....0x2149
-private let __range_prop_Soft_Dotted_h: _T0 = 0x2c7c....0x2c7c
-private let __range_prop_Soft_Dotted_i: _T0 = 0x1d422....0x1d423
-private let __range_prop_Soft_Dotted_j: _T0 = 0x1d456....0x1d457
-private let __range_prop_Soft_Dotted_k: _T0 = 0x1d48a....0x1d48b
-private let __range_prop_Soft_Dotted_l: _T0 = 0x1d4be....0x1d4bf
-private let __range_prop_Soft_Dotted_m: _T0 = 0x1d4f2....0x1d4f3
-private let __range_prop_Soft_Dotted_n: _T0 = 0x1d526....0x1d527
-private let __range_prop_Soft_Dotted_o: _T0 = 0x1d55a....0x1d55b
-private let __range_prop_Soft_Dotted_p: _T0 = 0x1d58e....0x1d58f
-private let __range_prop_Soft_Dotted_q: _T0 = 0x1d5c2....0x1d5c3
-private let __range_prop_Soft_Dotted_r: _T0 = 0x1d5f6....0x1d5f7
-private let __range_prop_Soft_Dotted_s: _T0 = 0x1d62a....0x1d62b
-private let __range_prop_Soft_Dotted_t: _T0 = 0x1d65e....0x1d65f
-private let __range_prop_Soft_Dotted_u: _T0 = 0x1d692....0x1d693
-private let __array_prop_Soft_Dotted: _T1 = [
-  __range_prop_Soft_Dotted_0,
-  __range_prop_Soft_Dotted_1,
-  __range_prop_Soft_Dotted_2,
-  __range_prop_Soft_Dotted_3,
-  __range_prop_Soft_Dotted_4,
-  __range_prop_Soft_Dotted_5,
-  __range_prop_Soft_Dotted_6,
-  __range_prop_Soft_Dotted_7,
-  __range_prop_Soft_Dotted_8,
-  __range_prop_Soft_Dotted_9,
-  __range_prop_Soft_Dotted_a,
-  __range_prop_Soft_Dotted_b,
-  __range_prop_Soft_Dotted_c,
-  __range_prop_Soft_Dotted_d,
-  __range_prop_Soft_Dotted_e,
-  __range_prop_Soft_Dotted_f,
-  __range_prop_Soft_Dotted_g,
-  __range_prop_Soft_Dotted_h,
-  __range_prop_Soft_Dotted_i,
-  __range_prop_Soft_Dotted_j,
-  __range_prop_Soft_Dotted_k,
-  __range_prop_Soft_Dotted_l,
-  __range_prop_Soft_Dotted_m,
-  __range_prop_Soft_Dotted_n,
-  __range_prop_Soft_Dotted_o,
-  __range_prop_Soft_Dotted_p,
-  __range_prop_Soft_Dotted_q,
-  __range_prop_Soft_Dotted_r,
-  __range_prop_Soft_Dotted_s,
-  __range_prop_Soft_Dotted_t,
-  __range_prop_Soft_Dotted_u,
+private let __prop_Other_Alphabetic_range_0: _T2 = 0x5b0....0x5bd
+private let __prop_Other_Alphabetic_range_1: _T2 = 0x5c1....0x5c2
+private let __prop_Other_Alphabetic_range_2: _T2 = 0x5c4....0x5c5
+private let __prop_Other_Alphabetic_range_3: _T2 = 0x610....0x61a
+private let __prop_Other_Alphabetic_range_4: _T2 = 0x64b....0x657
+private let __prop_Other_Alphabetic_range_5: _T2 = 0x659....0x65f
+private let __prop_Other_Alphabetic_range_6: _T2 = 0x6d6....0x6dc
+private let __prop_Other_Alphabetic_range_7: _T2 = 0x6e1....0x6e4
+private let __prop_Other_Alphabetic_range_8: _T2 = 0x6e7....0x6e8
+private let __prop_Other_Alphabetic_range_9: _T2 = 0x730....0x73f
+private let __prop_Other_Alphabetic_range_a: _T2 = 0x7a6....0x7b0
+private let __prop_Other_Alphabetic_range_b: _T2 = 0x816....0x817
+private let __prop_Other_Alphabetic_range_c: _T2 = 0x81b....0x823
+private let __prop_Other_Alphabetic_range_d: _T2 = 0x825....0x827
+private let __prop_Other_Alphabetic_range_e: _T2 = 0x829....0x82c
+private let __prop_Other_Alphabetic_range_f: _T2 = 0x8d4....0x8df
+private let __prop_Other_Alphabetic_range_g: _T2 = 0x8e3....0x8e9
+private let __prop_Other_Alphabetic_range_h: _T2 = 0x8f0....0x903
+private let __prop_Other_Alphabetic_range_i: _T2 = 0x93a....0x93b
+private let __prop_Other_Alphabetic_range_j: _T2 = 0x93e....0x94c
+private let __prop_Other_Alphabetic_range_k: _T2 = 0x94e....0x94f
+private let __prop_Other_Alphabetic_range_l: _T2 = 0x955....0x957
+private let __prop_Other_Alphabetic_range_m: _T2 = 0x962....0x963
+private let __prop_Other_Alphabetic_range_n: _T2 = 0x981....0x983
+private let __prop_Other_Alphabetic_range_o: _T2 = 0x9be....0x9c4
+private let __prop_Other_Alphabetic_range_p: _T2 = 0x9c7....0x9c8
+private let __prop_Other_Alphabetic_range_q: _T2 = 0x9cb....0x9cc
+private let __prop_Other_Alphabetic_range_r: _T2 = 0x9e2....0x9e3
+private let __prop_Other_Alphabetic_range_s: _T2 = 0xa01....0xa03
+private let __prop_Other_Alphabetic_range_t: _T2 = 0xa3e....0xa42
+private let __prop_Other_Alphabetic_range_u: _T2 = 0xa47....0xa48
+private let __prop_Other_Alphabetic_range_v: _T2 = 0xa4b....0xa4c
+private let __prop_Other_Alphabetic_range_w: _T2 = 0xa70....0xa71
+private let __prop_Other_Alphabetic_range_x: _T2 = 0xa81....0xa83
+private let __prop_Other_Alphabetic_range_y: _T2 = 0xabe....0xac5
+private let __prop_Other_Alphabetic_range_z: _T2 = 0xac7....0xac9
+private let __prop_Other_Alphabetic_range_10: _T2 = 0xacb....0xacc
+private let __prop_Other_Alphabetic_range_11: _T2 = 0xae2....0xae3
+private let __prop_Other_Alphabetic_range_12: _T2 = 0xafa....0xafc
+private let __prop_Other_Alphabetic_range_13: _T2 = 0xb01....0xb03
+private let __prop_Other_Alphabetic_range_14: _T2 = 0xb3e....0xb44
+private let __prop_Other_Alphabetic_range_15: _T2 = 0xb47....0xb48
+private let __prop_Other_Alphabetic_range_16: _T2 = 0xb4b....0xb4c
+private let __prop_Other_Alphabetic_range_17: _T2 = 0xb56....0xb57
+private let __prop_Other_Alphabetic_range_18: _T2 = 0xb62....0xb63
+private let __prop_Other_Alphabetic_range_19: _T2 = 0xbbe....0xbc2
+private let __prop_Other_Alphabetic_range_1a: _T2 = 0xbc6....0xbc8
+private let __prop_Other_Alphabetic_range_1b: _T2 = 0xbca....0xbcc
+private let __prop_Other_Alphabetic_range_1c: _T2 = 0xc00....0xc03
+private let __prop_Other_Alphabetic_range_1d: _T2 = 0xc3e....0xc44
+private let __prop_Other_Alphabetic_range_1e: _T2 = 0xc46....0xc48
+private let __prop_Other_Alphabetic_range_1f: _T2 = 0xc4a....0xc4c
+private let __prop_Other_Alphabetic_range_1g: _T2 = 0xc55....0xc56
+private let __prop_Other_Alphabetic_range_1h: _T2 = 0xc62....0xc63
+private let __prop_Other_Alphabetic_range_1i: _T2 = 0xc81....0xc83
+private let __prop_Other_Alphabetic_range_1j: _T2 = 0xcbe....0xcc4
+private let __prop_Other_Alphabetic_range_1k: _T2 = 0xcc6....0xcc8
+private let __prop_Other_Alphabetic_range_1l: _T2 = 0xcca....0xccc
+private let __prop_Other_Alphabetic_range_1m: _T2 = 0xcd5....0xcd6
+private let __prop_Other_Alphabetic_range_1n: _T2 = 0xce2....0xce3
+private let __prop_Other_Alphabetic_range_1o: _T2 = 0xd00....0xd03
+private let __prop_Other_Alphabetic_range_1p: _T2 = 0xd3e....0xd44
+private let __prop_Other_Alphabetic_range_1q: _T2 = 0xd46....0xd48
+private let __prop_Other_Alphabetic_range_1r: _T2 = 0xd4a....0xd4c
+private let __prop_Other_Alphabetic_range_1s: _T2 = 0xd62....0xd63
+private let __prop_Other_Alphabetic_range_1t: _T2 = 0xd82....0xd83
+private let __prop_Other_Alphabetic_range_1u: _T2 = 0xdcf....0xdd4
+private let __prop_Other_Alphabetic_range_1v: _T2 = 0xdd8....0xddf
+private let __prop_Other_Alphabetic_range_1w: _T2 = 0xdf2....0xdf3
+private let __prop_Other_Alphabetic_range_1x: _T2 = 0xe34....0xe3a
+private let __prop_Other_Alphabetic_range_1y: _T2 = 0xeb4....0xeb9
+private let __prop_Other_Alphabetic_range_1z: _T2 = 0xebb....0xebc
+private let __prop_Other_Alphabetic_range_20: _T2 = 0xf71....0xf81
+private let __prop_Other_Alphabetic_range_21: _T2 = 0xf8d....0xf97
+private let __prop_Other_Alphabetic_range_22: _T2 = 0xf99....0xfbc
+private let __prop_Other_Alphabetic_range_23: _T2 = 0x102b....0x1036
+private let __prop_Other_Alphabetic_range_24: _T2 = 0x103b....0x103e
+private let __prop_Other_Alphabetic_range_25: _T2 = 0x1056....0x1059
+private let __prop_Other_Alphabetic_range_26: _T2 = 0x105e....0x1060
+private let __prop_Other_Alphabetic_range_27: _T2 = 0x1062....0x1064
+private let __prop_Other_Alphabetic_range_28: _T2 = 0x1067....0x106d
+private let __prop_Other_Alphabetic_range_29: _T2 = 0x1071....0x1074
+private let __prop_Other_Alphabetic_range_2a: _T2 = 0x1082....0x108d
+private let __prop_Other_Alphabetic_range_2b: _T2 = 0x109a....0x109d
+private let __prop_Other_Alphabetic_range_2c: _T2 = 0x1712....0x1713
+private let __prop_Other_Alphabetic_range_2d: _T2 = 0x1732....0x1733
+private let __prop_Other_Alphabetic_range_2e: _T2 = 0x1752....0x1753
+private let __prop_Other_Alphabetic_range_2f: _T2 = 0x1772....0x1773
+private let __prop_Other_Alphabetic_range_2g: _T2 = 0x17b6....0x17c8
+private let __prop_Other_Alphabetic_range_2h: _T2 = 0x1885....0x1886
+private let __prop_Other_Alphabetic_range_2i: _T2 = 0x1920....0x192b
+private let __prop_Other_Alphabetic_range_2j: _T2 = 0x1930....0x1938
+private let __prop_Other_Alphabetic_range_2k: _T2 = 0x1a17....0x1a1b
+private let __prop_Other_Alphabetic_range_2l: _T2 = 0x1a55....0x1a5e
+private let __prop_Other_Alphabetic_range_2m: _T2 = 0x1a61....0x1a74
+private let __prop_Other_Alphabetic_range_2n: _T2 = 0x1b00....0x1b04
+private let __prop_Other_Alphabetic_range_2o: _T2 = 0x1b35....0x1b43
+private let __prop_Other_Alphabetic_range_2p: _T2 = 0x1b80....0x1b82
+private let __prop_Other_Alphabetic_range_2q: _T2 = 0x1ba1....0x1ba9
+private let __prop_Other_Alphabetic_range_2r: _T2 = 0x1bac....0x1bad
+private let __prop_Other_Alphabetic_range_2s: _T2 = 0x1be7....0x1bf1
+private let __prop_Other_Alphabetic_range_2t: _T2 = 0x1c24....0x1c36
+private let __prop_Other_Alphabetic_range_2u: _T2 = 0x1de7....0x1df4
+private let __prop_Other_Alphabetic_range_2v: _T2 = 0x24b6....0x24e9
+private let __prop_Other_Alphabetic_range_2w: _T2 = 0x2de0....0x2dff
+private let __prop_Other_Alphabetic_range_2x: _T2 = 0xa674....0xa67b
+private let __prop_Other_Alphabetic_range_2y: _T2 = 0xa69e....0xa69f
+private let __prop_Other_Alphabetic_range_2z: _T2 = 0xa823....0xa827
+private let __prop_Other_Alphabetic_range_30: _T2 = 0xa880....0xa881
+private let __prop_Other_Alphabetic_range_31: _T2 = 0xa8b4....0xa8c3
+private let __prop_Other_Alphabetic_range_32: _T2 = 0xa926....0xa92a
+private let __prop_Other_Alphabetic_range_33: _T2 = 0xa947....0xa952
+private let __prop_Other_Alphabetic_range_34: _T2 = 0xa980....0xa983
+private let __prop_Other_Alphabetic_range_35: _T2 = 0xa9b4....0xa9bf
+private let __prop_Other_Alphabetic_range_36: _T2 = 0xaa29....0xaa36
+private let __prop_Other_Alphabetic_range_37: _T2 = 0xaa4c....0xaa4d
+private let __prop_Other_Alphabetic_range_38: _T2 = 0xaa7b....0xaa7d
+private let __prop_Other_Alphabetic_range_39: _T2 = 0xaab2....0xaab4
+private let __prop_Other_Alphabetic_range_3a: _T2 = 0xaab7....0xaab8
+private let __prop_Other_Alphabetic_range_3b: _T2 = 0xaaeb....0xaaef
+private let __prop_Other_Alphabetic_range_3c: _T2 = 0xabe3....0xabea
+private let __prop_Other_Alphabetic_range_3d: _T2 = 0x10376....0x1037a
+private let __prop_Other_Alphabetic_range_3e: _T2 = 0x10a01....0x10a03
+private let __prop_Other_Alphabetic_range_3f: _T2 = 0x10a05....0x10a06
+private let __prop_Other_Alphabetic_range_3g: _T2 = 0x10a0c....0x10a0f
+private let __prop_Other_Alphabetic_range_3h: _T2 = 0x10d24....0x10d27
+private let __prop_Other_Alphabetic_range_3i: _T2 = 0x11000....0x11002
+private let __prop_Other_Alphabetic_range_3j: _T2 = 0x11038....0x11045
+private let __prop_Other_Alphabetic_range_3k: _T2 = 0x110b0....0x110b8
+private let __prop_Other_Alphabetic_range_3l: _T2 = 0x11100....0x11102
+private let __prop_Other_Alphabetic_range_3m: _T2 = 0x11127....0x11132
+private let __prop_Other_Alphabetic_range_3n: _T2 = 0x11145....0x11146
+private let __prop_Other_Alphabetic_range_3o: _T2 = 0x11180....0x11182
+private let __prop_Other_Alphabetic_range_3p: _T2 = 0x111b3....0x111bf
+private let __prop_Other_Alphabetic_range_3q: _T2 = 0x1122c....0x11234
+private let __prop_Other_Alphabetic_range_3r: _T2 = 0x112df....0x112e8
+private let __prop_Other_Alphabetic_range_3s: _T2 = 0x11300....0x11303
+private let __prop_Other_Alphabetic_range_3t: _T2 = 0x1133e....0x11344
+private let __prop_Other_Alphabetic_range_3u: _T2 = 0x11347....0x11348
+private let __prop_Other_Alphabetic_range_3v: _T2 = 0x1134b....0x1134c
+private let __prop_Other_Alphabetic_range_3w: _T2 = 0x11362....0x11363
+private let __prop_Other_Alphabetic_range_3x: _T2 = 0x11435....0x11441
+private let __prop_Other_Alphabetic_range_3y: _T2 = 0x11443....0x11445
+private let __prop_Other_Alphabetic_range_3z: _T2 = 0x114b0....0x114c1
+private let __prop_Other_Alphabetic_range_40: _T2 = 0x115af....0x115b5
+private let __prop_Other_Alphabetic_range_41: _T2 = 0x115b8....0x115be
+private let __prop_Other_Alphabetic_range_42: _T2 = 0x115dc....0x115dd
+private let __prop_Other_Alphabetic_range_43: _T2 = 0x11630....0x1163e
+private let __prop_Other_Alphabetic_range_44: _T2 = 0x116ab....0x116b5
+private let __prop_Other_Alphabetic_range_45: _T2 = 0x1171d....0x1172a
+private let __prop_Other_Alphabetic_range_46: _T2 = 0x1182c....0x11838
+private let __prop_Other_Alphabetic_range_47: _T2 = 0x119d1....0x119d7
+private let __prop_Other_Alphabetic_range_48: _T2 = 0x119da....0x119df
+private let __prop_Other_Alphabetic_range_49: _T2 = 0x11a01....0x11a0a
+private let __prop_Other_Alphabetic_range_4a: _T2 = 0x11a35....0x11a39
+private let __prop_Other_Alphabetic_range_4b: _T2 = 0x11a3b....0x11a3e
+private let __prop_Other_Alphabetic_range_4c: _T2 = 0x11a51....0x11a5b
+private let __prop_Other_Alphabetic_range_4d: _T2 = 0x11a8a....0x11a97
+private let __prop_Other_Alphabetic_range_4e: _T2 = 0x11c2f....0x11c36
+private let __prop_Other_Alphabetic_range_4f: _T2 = 0x11c38....0x11c3e
+private let __prop_Other_Alphabetic_range_4g: _T2 = 0x11c92....0x11ca7
+private let __prop_Other_Alphabetic_range_4h: _T2 = 0x11ca9....0x11cb6
+private let __prop_Other_Alphabetic_range_4i: _T2 = 0x11d31....0x11d36
+private let __prop_Other_Alphabetic_range_4j: _T2 = 0x11d3c....0x11d3d
+private let __prop_Other_Alphabetic_range_4k: _T2 = 0x11d3f....0x11d41
+private let __prop_Other_Alphabetic_range_4l: _T2 = 0x11d8a....0x11d8e
+private let __prop_Other_Alphabetic_range_4m: _T2 = 0x11d90....0x11d91
+private let __prop_Other_Alphabetic_range_4n: _T2 = 0x11d93....0x11d96
+private let __prop_Other_Alphabetic_range_4o: _T2 = 0x11ef3....0x11ef6
+private let __prop_Other_Alphabetic_range_4p: _T2 = 0x16f51....0x16f87
+private let __prop_Other_Alphabetic_range_4q: _T2 = 0x16f8f....0x16f92
+private let __prop_Other_Alphabetic_range_4r: _T2 = 0x1e000....0x1e006
+private let __prop_Other_Alphabetic_range_4s: _T2 = 0x1e008....0x1e018
+private let __prop_Other_Alphabetic_range_4t: _T2 = 0x1e01b....0x1e021
+private let __prop_Other_Alphabetic_range_4u: _T2 = 0x1e023....0x1e024
+private let __prop_Other_Alphabetic_range_4v: _T2 = 0x1e026....0x1e02a
+private let __prop_Other_Alphabetic_range_4w: _T2 = 0x1f130....0x1f149
+private let __prop_Other_Alphabetic_range_4x: _T2 = 0x1f150....0x1f169
+private let __prop_Other_Alphabetic_range_4y: _T2 = 0x1f170....0x1f189
+private let __prop_Other_Alphabetic_array: _T3 = [
+  __prop_Other_Alphabetic_range_0,
+  __prop_Other_Alphabetic_range_1,
+  __prop_Other_Alphabetic_range_2,
+  __prop_Other_Alphabetic_range_3,
+  __prop_Other_Alphabetic_range_4,
+  __prop_Other_Alphabetic_range_5,
+  __prop_Other_Alphabetic_range_6,
+  __prop_Other_Alphabetic_range_7,
+  __prop_Other_Alphabetic_range_8,
+  __prop_Other_Alphabetic_range_9,
+  __prop_Other_Alphabetic_range_a,
+  __prop_Other_Alphabetic_range_b,
+  __prop_Other_Alphabetic_range_c,
+  __prop_Other_Alphabetic_range_d,
+  __prop_Other_Alphabetic_range_e,
+  __prop_Other_Alphabetic_range_f,
+  __prop_Other_Alphabetic_range_g,
+  __prop_Other_Alphabetic_range_h,
+  __prop_Other_Alphabetic_range_i,
+  __prop_Other_Alphabetic_range_j,
+  __prop_Other_Alphabetic_range_k,
+  __prop_Other_Alphabetic_range_l,
+  __prop_Other_Alphabetic_range_m,
+  __prop_Other_Alphabetic_range_n,
+  __prop_Other_Alphabetic_range_o,
+  __prop_Other_Alphabetic_range_p,
+  __prop_Other_Alphabetic_range_q,
+  __prop_Other_Alphabetic_range_r,
+  __prop_Other_Alphabetic_range_s,
+  __prop_Other_Alphabetic_range_t,
+  __prop_Other_Alphabetic_range_u,
+  __prop_Other_Alphabetic_range_v,
+  __prop_Other_Alphabetic_range_w,
+  __prop_Other_Alphabetic_range_x,
+  __prop_Other_Alphabetic_range_y,
+  __prop_Other_Alphabetic_range_z,
+  __prop_Other_Alphabetic_range_10,
+  __prop_Other_Alphabetic_range_11,
+  __prop_Other_Alphabetic_range_12,
+  __prop_Other_Alphabetic_range_13,
+  __prop_Other_Alphabetic_range_14,
+  __prop_Other_Alphabetic_range_15,
+  __prop_Other_Alphabetic_range_16,
+  __prop_Other_Alphabetic_range_17,
+  __prop_Other_Alphabetic_range_18,
+  __prop_Other_Alphabetic_range_19,
+  __prop_Other_Alphabetic_range_1a,
+  __prop_Other_Alphabetic_range_1b,
+  __prop_Other_Alphabetic_range_1c,
+  __prop_Other_Alphabetic_range_1d,
+  __prop_Other_Alphabetic_range_1e,
+  __prop_Other_Alphabetic_range_1f,
+  __prop_Other_Alphabetic_range_1g,
+  __prop_Other_Alphabetic_range_1h,
+  __prop_Other_Alphabetic_range_1i,
+  __prop_Other_Alphabetic_range_1j,
+  __prop_Other_Alphabetic_range_1k,
+  __prop_Other_Alphabetic_range_1l,
+  __prop_Other_Alphabetic_range_1m,
+  __prop_Other_Alphabetic_range_1n,
+  __prop_Other_Alphabetic_range_1o,
+  __prop_Other_Alphabetic_range_1p,
+  __prop_Other_Alphabetic_range_1q,
+  __prop_Other_Alphabetic_range_1r,
+  __prop_Other_Alphabetic_range_1s,
+  __prop_Other_Alphabetic_range_1t,
+  __prop_Other_Alphabetic_range_1u,
+  __prop_Other_Alphabetic_range_1v,
+  __prop_Other_Alphabetic_range_1w,
+  __prop_Other_Alphabetic_range_1x,
+  __prop_Other_Alphabetic_range_1y,
+  __prop_Other_Alphabetic_range_1z,
+  __prop_Other_Alphabetic_range_20,
+  __prop_Other_Alphabetic_range_21,
+  __prop_Other_Alphabetic_range_22,
+  __prop_Other_Alphabetic_range_23,
+  __prop_Other_Alphabetic_range_24,
+  __prop_Other_Alphabetic_range_25,
+  __prop_Other_Alphabetic_range_26,
+  __prop_Other_Alphabetic_range_27,
+  __prop_Other_Alphabetic_range_28,
+  __prop_Other_Alphabetic_range_29,
+  __prop_Other_Alphabetic_range_2a,
+  __prop_Other_Alphabetic_range_2b,
+  __prop_Other_Alphabetic_range_2c,
+  __prop_Other_Alphabetic_range_2d,
+  __prop_Other_Alphabetic_range_2e,
+  __prop_Other_Alphabetic_range_2f,
+  __prop_Other_Alphabetic_range_2g,
+  __prop_Other_Alphabetic_range_2h,
+  __prop_Other_Alphabetic_range_2i,
+  __prop_Other_Alphabetic_range_2j,
+  __prop_Other_Alphabetic_range_2k,
+  __prop_Other_Alphabetic_range_2l,
+  __prop_Other_Alphabetic_range_2m,
+  __prop_Other_Alphabetic_range_2n,
+  __prop_Other_Alphabetic_range_2o,
+  __prop_Other_Alphabetic_range_2p,
+  __prop_Other_Alphabetic_range_2q,
+  __prop_Other_Alphabetic_range_2r,
+  __prop_Other_Alphabetic_range_2s,
+  __prop_Other_Alphabetic_range_2t,
+  __prop_Other_Alphabetic_range_2u,
+  __prop_Other_Alphabetic_range_2v,
+  __prop_Other_Alphabetic_range_2w,
+  __prop_Other_Alphabetic_range_2x,
+  __prop_Other_Alphabetic_range_2y,
+  __prop_Other_Alphabetic_range_2z,
+  __prop_Other_Alphabetic_range_30,
+  __prop_Other_Alphabetic_range_31,
+  __prop_Other_Alphabetic_range_32,
+  __prop_Other_Alphabetic_range_33,
+  __prop_Other_Alphabetic_range_34,
+  __prop_Other_Alphabetic_range_35,
+  __prop_Other_Alphabetic_range_36,
+  __prop_Other_Alphabetic_range_37,
+  __prop_Other_Alphabetic_range_38,
+  __prop_Other_Alphabetic_range_39,
+  __prop_Other_Alphabetic_range_3a,
+  __prop_Other_Alphabetic_range_3b,
+  __prop_Other_Alphabetic_range_3c,
+  __prop_Other_Alphabetic_range_3d,
+  __prop_Other_Alphabetic_range_3e,
+  __prop_Other_Alphabetic_range_3f,
+  __prop_Other_Alphabetic_range_3g,
+  __prop_Other_Alphabetic_range_3h,
+  __prop_Other_Alphabetic_range_3i,
+  __prop_Other_Alphabetic_range_3j,
+  __prop_Other_Alphabetic_range_3k,
+  __prop_Other_Alphabetic_range_3l,
+  __prop_Other_Alphabetic_range_3m,
+  __prop_Other_Alphabetic_range_3n,
+  __prop_Other_Alphabetic_range_3o,
+  __prop_Other_Alphabetic_range_3p,
+  __prop_Other_Alphabetic_range_3q,
+  __prop_Other_Alphabetic_range_3r,
+  __prop_Other_Alphabetic_range_3s,
+  __prop_Other_Alphabetic_range_3t,
+  __prop_Other_Alphabetic_range_3u,
+  __prop_Other_Alphabetic_range_3v,
+  __prop_Other_Alphabetic_range_3w,
+  __prop_Other_Alphabetic_range_3x,
+  __prop_Other_Alphabetic_range_3y,
+  __prop_Other_Alphabetic_range_3z,
+  __prop_Other_Alphabetic_range_40,
+  __prop_Other_Alphabetic_range_41,
+  __prop_Other_Alphabetic_range_42,
+  __prop_Other_Alphabetic_range_43,
+  __prop_Other_Alphabetic_range_44,
+  __prop_Other_Alphabetic_range_45,
+  __prop_Other_Alphabetic_range_46,
+  __prop_Other_Alphabetic_range_47,
+  __prop_Other_Alphabetic_range_48,
+  __prop_Other_Alphabetic_range_49,
+  __prop_Other_Alphabetic_range_4a,
+  __prop_Other_Alphabetic_range_4b,
+  __prop_Other_Alphabetic_range_4c,
+  __prop_Other_Alphabetic_range_4d,
+  __prop_Other_Alphabetic_range_4e,
+  __prop_Other_Alphabetic_range_4f,
+  __prop_Other_Alphabetic_range_4g,
+  __prop_Other_Alphabetic_range_4h,
+  __prop_Other_Alphabetic_range_4i,
+  __prop_Other_Alphabetic_range_4j,
+  __prop_Other_Alphabetic_range_4k,
+  __prop_Other_Alphabetic_range_4l,
+  __prop_Other_Alphabetic_range_4m,
+  __prop_Other_Alphabetic_range_4n,
+  __prop_Other_Alphabetic_range_4o,
+  __prop_Other_Alphabetic_range_4p,
+  __prop_Other_Alphabetic_range_4q,
+  __prop_Other_Alphabetic_range_4r,
+  __prop_Other_Alphabetic_range_4s,
+  __prop_Other_Alphabetic_range_4t,
+  __prop_Other_Alphabetic_range_4u,
+  __prop_Other_Alphabetic_range_4v,
+  __prop_Other_Alphabetic_range_4w,
+  __prop_Other_Alphabetic_range_4x,
+  __prop_Other_Alphabetic_range_4y,
 ]
-internal let _prop_Soft_Dotted = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Soft_Dotted)
-private let __range_prop_Terminal_Punctuation_0: _T0 = 0x21....0x21
-private let __range_prop_Terminal_Punctuation_1: _T0 = 0x2c....0x2c
-private let __range_prop_Terminal_Punctuation_2: _T0 = 0x2e....0x2e
-private let __range_prop_Terminal_Punctuation_3: _T0 = 0x3a....0x3b
-private let __range_prop_Terminal_Punctuation_4: _T0 = 0x3f....0x3f
-private let __range_prop_Terminal_Punctuation_5: _T0 = 0x37e....0x37e
-private let __range_prop_Terminal_Punctuation_6: _T0 = 0x387....0x387
-private let __range_prop_Terminal_Punctuation_7: _T0 = 0x589....0x589
-private let __range_prop_Terminal_Punctuation_8: _T0 = 0x5c3....0x5c3
-private let __range_prop_Terminal_Punctuation_9: _T0 = 0x60c....0x60c
-private let __range_prop_Terminal_Punctuation_a: _T0 = 0x61b....0x61b
-private let __range_prop_Terminal_Punctuation_b: _T0 = 0x61e....0x61f
-private let __range_prop_Terminal_Punctuation_c: _T0 = 0x6d4....0x6d4
-private let __range_prop_Terminal_Punctuation_d: _T0 = 0x700....0x70a
-private let __range_prop_Terminal_Punctuation_e: _T0 = 0x70c....0x70c
-private let __range_prop_Terminal_Punctuation_f: _T0 = 0x7f8....0x7f9
-private let __range_prop_Terminal_Punctuation_g: _T0 = 0x830....0x83e
-private let __range_prop_Terminal_Punctuation_h: _T0 = 0x85e....0x85e
-private let __range_prop_Terminal_Punctuation_i: _T0 = 0x964....0x965
-private let __range_prop_Terminal_Punctuation_j: _T0 = 0xe5a....0xe5b
-private let __range_prop_Terminal_Punctuation_k: _T0 = 0xf08....0xf08
-private let __range_prop_Terminal_Punctuation_l: _T0 = 0xf0d....0xf12
-private let __range_prop_Terminal_Punctuation_m: _T0 = 0x104a....0x104b
-private let __range_prop_Terminal_Punctuation_n: _T0 = 0x1361....0x1368
-private let __range_prop_Terminal_Punctuation_o: _T0 = 0x166e....0x166e
-private let __range_prop_Terminal_Punctuation_p: _T0 = 0x16eb....0x16ed
-private let __range_prop_Terminal_Punctuation_q: _T0 = 0x1735....0x1736
-private let __range_prop_Terminal_Punctuation_r: _T0 = 0x17d4....0x17d6
-private let __range_prop_Terminal_Punctuation_s: _T0 = 0x17da....0x17da
-private let __range_prop_Terminal_Punctuation_t: _T0 = 0x1802....0x1805
-private let __range_prop_Terminal_Punctuation_u: _T0 = 0x1808....0x1809
-private let __range_prop_Terminal_Punctuation_v: _T0 = 0x1944....0x1945
-private let __range_prop_Terminal_Punctuation_w: _T0 = 0x1aa8....0x1aab
-private let __range_prop_Terminal_Punctuation_x: _T0 = 0x1b5a....0x1b5b
-private let __range_prop_Terminal_Punctuation_y: _T0 = 0x1b5d....0x1b5f
-private let __range_prop_Terminal_Punctuation_z: _T0 = 0x1c3b....0x1c3f
-private let __range_prop_Terminal_Punctuation_10: _T0 = 0x1c7e....0x1c7f
-private let __range_prop_Terminal_Punctuation_11: _T0 = 0x203c....0x203d
-private let __range_prop_Terminal_Punctuation_12: _T0 = 0x2047....0x2049
-private let __range_prop_Terminal_Punctuation_13: _T0 = 0x2e2e....0x2e2e
-private let __range_prop_Terminal_Punctuation_14: _T0 = 0x2e3c....0x2e3c
-private let __range_prop_Terminal_Punctuation_15: _T0 = 0x2e41....0x2e41
-private let __range_prop_Terminal_Punctuation_16: _T0 = 0x2e4c....0x2e4c
-private let __range_prop_Terminal_Punctuation_17: _T0 = 0x2e4e....0x2e4f
-private let __range_prop_Terminal_Punctuation_18: _T0 = 0x3001....0x3002
-private let __range_prop_Terminal_Punctuation_19: _T0 = 0xa4fe....0xa4ff
-private let __range_prop_Terminal_Punctuation_1a: _T0 = 0xa60d....0xa60f
-private let __range_prop_Terminal_Punctuation_1b: _T0 = 0xa6f3....0xa6f7
-private let __range_prop_Terminal_Punctuation_1c: _T0 = 0xa876....0xa877
-private let __range_prop_Terminal_Punctuation_1d: _T0 = 0xa8ce....0xa8cf
-private let __range_prop_Terminal_Punctuation_1e: _T0 = 0xa92f....0xa92f
-private let __range_prop_Terminal_Punctuation_1f: _T0 = 0xa9c7....0xa9c9
-private let __range_prop_Terminal_Punctuation_1g: _T0 = 0xaa5d....0xaa5f
-private let __range_prop_Terminal_Punctuation_1h: _T0 = 0xaadf....0xaadf
-private let __range_prop_Terminal_Punctuation_1i: _T0 = 0xaaf0....0xaaf1
-private let __range_prop_Terminal_Punctuation_1j: _T0 = 0xabeb....0xabeb
-private let __range_prop_Terminal_Punctuation_1k: _T0 = 0xfe50....0xfe52
-private let __range_prop_Terminal_Punctuation_1l: _T0 = 0xfe54....0xfe57
-private let __range_prop_Terminal_Punctuation_1m: _T0 = 0xff01....0xff01
-private let __range_prop_Terminal_Punctuation_1n: _T0 = 0xff0c....0xff0c
-private let __range_prop_Terminal_Punctuation_1o: _T0 = 0xff0e....0xff0e
-private let __range_prop_Terminal_Punctuation_1p: _T0 = 0xff1a....0xff1b
-private let __range_prop_Terminal_Punctuation_1q: _T0 = 0xff1f....0xff1f
-private let __range_prop_Terminal_Punctuation_1r: _T0 = 0xff61....0xff61
-private let __range_prop_Terminal_Punctuation_1s: _T0 = 0xff64....0xff64
-private let __range_prop_Terminal_Punctuation_1t: _T0 = 0x1039f....0x1039f
-private let __range_prop_Terminal_Punctuation_1u: _T0 = 0x103d0....0x103d0
-private let __range_prop_Terminal_Punctuation_1v: _T0 = 0x10857....0x10857
-private let __range_prop_Terminal_Punctuation_1w: _T0 = 0x1091f....0x1091f
-private let __range_prop_Terminal_Punctuation_1x: _T0 = 0x10a56....0x10a57
-private let __range_prop_Terminal_Punctuation_1y: _T0 = 0x10af0....0x10af5
-private let __range_prop_Terminal_Punctuation_1z: _T0 = 0x10b3a....0x10b3f
-private let __range_prop_Terminal_Punctuation_20: _T0 = 0x10b99....0x10b9c
-private let __range_prop_Terminal_Punctuation_21: _T0 = 0x10f55....0x10f59
-private let __range_prop_Terminal_Punctuation_22: _T0 = 0x11047....0x1104d
-private let __range_prop_Terminal_Punctuation_23: _T0 = 0x110be....0x110c1
-private let __range_prop_Terminal_Punctuation_24: _T0 = 0x11141....0x11143
-private let __range_prop_Terminal_Punctuation_25: _T0 = 0x111c5....0x111c6
-private let __range_prop_Terminal_Punctuation_26: _T0 = 0x111cd....0x111cd
-private let __range_prop_Terminal_Punctuation_27: _T0 = 0x111de....0x111df
-private let __range_prop_Terminal_Punctuation_28: _T0 = 0x11238....0x1123c
-private let __range_prop_Terminal_Punctuation_29: _T0 = 0x112a9....0x112a9
-private let __range_prop_Terminal_Punctuation_2a: _T0 = 0x1144b....0x1144d
-private let __range_prop_Terminal_Punctuation_2b: _T0 = 0x1145b....0x1145b
-private let __range_prop_Terminal_Punctuation_2c: _T0 = 0x115c2....0x115c5
-private let __range_prop_Terminal_Punctuation_2d: _T0 = 0x115c9....0x115d7
-private let __range_prop_Terminal_Punctuation_2e: _T0 = 0x11641....0x11642
-private let __range_prop_Terminal_Punctuation_2f: _T0 = 0x1173c....0x1173e
-private let __range_prop_Terminal_Punctuation_2g: _T0 = 0x11a42....0x11a43
-private let __range_prop_Terminal_Punctuation_2h: _T0 = 0x11a9b....0x11a9c
-private let __range_prop_Terminal_Punctuation_2i: _T0 = 0x11aa1....0x11aa2
-private let __range_prop_Terminal_Punctuation_2j: _T0 = 0x11c41....0x11c43
-private let __range_prop_Terminal_Punctuation_2k: _T0 = 0x11c71....0x11c71
-private let __range_prop_Terminal_Punctuation_2l: _T0 = 0x11ef7....0x11ef8
-private let __range_prop_Terminal_Punctuation_2m: _T0 = 0x12470....0x12474
-private let __range_prop_Terminal_Punctuation_2n: _T0 = 0x16a6e....0x16a6f
-private let __range_prop_Terminal_Punctuation_2o: _T0 = 0x16af5....0x16af5
-private let __range_prop_Terminal_Punctuation_2p: _T0 = 0x16b37....0x16b39
-private let __range_prop_Terminal_Punctuation_2q: _T0 = 0x16b44....0x16b44
-private let __range_prop_Terminal_Punctuation_2r: _T0 = 0x16e97....0x16e98
-private let __range_prop_Terminal_Punctuation_2s: _T0 = 0x1bc9f....0x1bc9f
-private let __range_prop_Terminal_Punctuation_2t: _T0 = 0x1da87....0x1da8a
-private let __array_prop_Terminal_Punctuation: _T1 = [
-  __range_prop_Terminal_Punctuation_0,
-  __range_prop_Terminal_Punctuation_1,
-  __range_prop_Terminal_Punctuation_2,
-  __range_prop_Terminal_Punctuation_3,
-  __range_prop_Terminal_Punctuation_4,
-  __range_prop_Terminal_Punctuation_5,
-  __range_prop_Terminal_Punctuation_6,
-  __range_prop_Terminal_Punctuation_7,
-  __range_prop_Terminal_Punctuation_8,
-  __range_prop_Terminal_Punctuation_9,
-  __range_prop_Terminal_Punctuation_a,
-  __range_prop_Terminal_Punctuation_b,
-  __range_prop_Terminal_Punctuation_c,
-  __range_prop_Terminal_Punctuation_d,
-  __range_prop_Terminal_Punctuation_e,
-  __range_prop_Terminal_Punctuation_f,
-  __range_prop_Terminal_Punctuation_g,
-  __range_prop_Terminal_Punctuation_h,
-  __range_prop_Terminal_Punctuation_i,
-  __range_prop_Terminal_Punctuation_j,
-  __range_prop_Terminal_Punctuation_k,
-  __range_prop_Terminal_Punctuation_l,
-  __range_prop_Terminal_Punctuation_m,
-  __range_prop_Terminal_Punctuation_n,
-  __range_prop_Terminal_Punctuation_o,
-  __range_prop_Terminal_Punctuation_p,
-  __range_prop_Terminal_Punctuation_q,
-  __range_prop_Terminal_Punctuation_r,
-  __range_prop_Terminal_Punctuation_s,
-  __range_prop_Terminal_Punctuation_t,
-  __range_prop_Terminal_Punctuation_u,
-  __range_prop_Terminal_Punctuation_v,
-  __range_prop_Terminal_Punctuation_w,
-  __range_prop_Terminal_Punctuation_x,
-  __range_prop_Terminal_Punctuation_y,
-  __range_prop_Terminal_Punctuation_z,
-  __range_prop_Terminal_Punctuation_10,
-  __range_prop_Terminal_Punctuation_11,
-  __range_prop_Terminal_Punctuation_12,
-  __range_prop_Terminal_Punctuation_13,
-  __range_prop_Terminal_Punctuation_14,
-  __range_prop_Terminal_Punctuation_15,
-  __range_prop_Terminal_Punctuation_16,
-  __range_prop_Terminal_Punctuation_17,
-  __range_prop_Terminal_Punctuation_18,
-  __range_prop_Terminal_Punctuation_19,
-  __range_prop_Terminal_Punctuation_1a,
-  __range_prop_Terminal_Punctuation_1b,
-  __range_prop_Terminal_Punctuation_1c,
-  __range_prop_Terminal_Punctuation_1d,
-  __range_prop_Terminal_Punctuation_1e,
-  __range_prop_Terminal_Punctuation_1f,
-  __range_prop_Terminal_Punctuation_1g,
-  __range_prop_Terminal_Punctuation_1h,
-  __range_prop_Terminal_Punctuation_1i,
-  __range_prop_Terminal_Punctuation_1j,
-  __range_prop_Terminal_Punctuation_1k,
-  __range_prop_Terminal_Punctuation_1l,
-  __range_prop_Terminal_Punctuation_1m,
-  __range_prop_Terminal_Punctuation_1n,
-  __range_prop_Terminal_Punctuation_1o,
-  __range_prop_Terminal_Punctuation_1p,
-  __range_prop_Terminal_Punctuation_1q,
-  __range_prop_Terminal_Punctuation_1r,
-  __range_prop_Terminal_Punctuation_1s,
-  __range_prop_Terminal_Punctuation_1t,
-  __range_prop_Terminal_Punctuation_1u,
-  __range_prop_Terminal_Punctuation_1v,
-  __range_prop_Terminal_Punctuation_1w,
-  __range_prop_Terminal_Punctuation_1x,
-  __range_prop_Terminal_Punctuation_1y,
-  __range_prop_Terminal_Punctuation_1z,
-  __range_prop_Terminal_Punctuation_20,
-  __range_prop_Terminal_Punctuation_21,
-  __range_prop_Terminal_Punctuation_22,
-  __range_prop_Terminal_Punctuation_23,
-  __range_prop_Terminal_Punctuation_24,
-  __range_prop_Terminal_Punctuation_25,
-  __range_prop_Terminal_Punctuation_26,
-  __range_prop_Terminal_Punctuation_27,
-  __range_prop_Terminal_Punctuation_28,
-  __range_prop_Terminal_Punctuation_29,
-  __range_prop_Terminal_Punctuation_2a,
-  __range_prop_Terminal_Punctuation_2b,
-  __range_prop_Terminal_Punctuation_2c,
-  __range_prop_Terminal_Punctuation_2d,
-  __range_prop_Terminal_Punctuation_2e,
-  __range_prop_Terminal_Punctuation_2f,
-  __range_prop_Terminal_Punctuation_2g,
-  __range_prop_Terminal_Punctuation_2h,
-  __range_prop_Terminal_Punctuation_2i,
-  __range_prop_Terminal_Punctuation_2j,
-  __range_prop_Terminal_Punctuation_2k,
-  __range_prop_Terminal_Punctuation_2l,
-  __range_prop_Terminal_Punctuation_2m,
-  __range_prop_Terminal_Punctuation_2n,
-  __range_prop_Terminal_Punctuation_2o,
-  __range_prop_Terminal_Punctuation_2p,
-  __range_prop_Terminal_Punctuation_2q,
-  __range_prop_Terminal_Punctuation_2r,
-  __range_prop_Terminal_Punctuation_2s,
-  __range_prop_Terminal_Punctuation_2t,
+private let __prop_Other_Alphabetic_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Other_Alphabetic_array)
+internal let _prop_Other_Alphabetic = UnicodeScalarValueSet(singleValues: __prop_Other_Alphabetic_set, ranges: __prop_Other_Alphabetic_ranges)
+private let __prop_Other_Default_Ignorable_Code_Point_set: _T1 = [
+  0x34f,
+  0x2065,
+  0x3164,
+  0xffa0,
+  0xe0000,
 ]
-internal let _prop_Terminal_Punctuation = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Terminal_Punctuation)
-private let __range_prop_Unified_Ideograph_0: _T0 = 0x3400....0x4db5
-private let __range_prop_Unified_Ideograph_1: _T0 = 0x4e00....0x9fef
-private let __range_prop_Unified_Ideograph_2: _T0 = 0xfa0e....0xfa0f
-private let __range_prop_Unified_Ideograph_3: _T0 = 0xfa11....0xfa11
-private let __range_prop_Unified_Ideograph_4: _T0 = 0xfa13....0xfa14
-private let __range_prop_Unified_Ideograph_5: _T0 = 0xfa1f....0xfa1f
-private let __range_prop_Unified_Ideograph_6: _T0 = 0xfa21....0xfa21
-private let __range_prop_Unified_Ideograph_7: _T0 = 0xfa23....0xfa24
-private let __range_prop_Unified_Ideograph_8: _T0 = 0xfa27....0xfa29
-private let __range_prop_Unified_Ideograph_9: _T0 = 0x20000....0x2a6d6
-private let __range_prop_Unified_Ideograph_a: _T0 = 0x2a700....0x2b734
-private let __range_prop_Unified_Ideograph_b: _T0 = 0x2b740....0x2b81d
-private let __range_prop_Unified_Ideograph_c: _T0 = 0x2b820....0x2cea1
-private let __range_prop_Unified_Ideograph_d: _T0 = 0x2ceb0....0x2ebe0
-private let __array_prop_Unified_Ideograph: _T1 = [
-  __range_prop_Unified_Ideograph_0,
-  __range_prop_Unified_Ideograph_1,
-  __range_prop_Unified_Ideograph_2,
-  __range_prop_Unified_Ideograph_3,
-  __range_prop_Unified_Ideograph_4,
-  __range_prop_Unified_Ideograph_5,
-  __range_prop_Unified_Ideograph_6,
-  __range_prop_Unified_Ideograph_7,
-  __range_prop_Unified_Ideograph_8,
-  __range_prop_Unified_Ideograph_9,
-  __range_prop_Unified_Ideograph_a,
-  __range_prop_Unified_Ideograph_b,
-  __range_prop_Unified_Ideograph_c,
-  __range_prop_Unified_Ideograph_d,
+private let __prop_Other_Default_Ignorable_Code_Point_range_0: _T2 = 0x115f....0x1160
+private let __prop_Other_Default_Ignorable_Code_Point_range_1: _T2 = 0x17b4....0x17b5
+private let __prop_Other_Default_Ignorable_Code_Point_range_2: _T2 = 0xfff0....0xfff8
+private let __prop_Other_Default_Ignorable_Code_Point_range_3: _T2 = 0xe0002....0xe001f
+private let __prop_Other_Default_Ignorable_Code_Point_range_4: _T2 = 0xe0080....0xe00ff
+private let __prop_Other_Default_Ignorable_Code_Point_range_5: _T2 = 0xe01f0....0xe0fff
+private let __prop_Other_Default_Ignorable_Code_Point_array: _T3 = [
+  __prop_Other_Default_Ignorable_Code_Point_range_0,
+  __prop_Other_Default_Ignorable_Code_Point_range_1,
+  __prop_Other_Default_Ignorable_Code_Point_range_2,
+  __prop_Other_Default_Ignorable_Code_Point_range_3,
+  __prop_Other_Default_Ignorable_Code_Point_range_4,
+  __prop_Other_Default_Ignorable_Code_Point_range_5,
 ]
-internal let _prop_Unified_Ideograph = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Unified_Ideograph)
-private let __range_prop_Variation_Selector_0: _T0 = 0x180b....0x180d
-private let __range_prop_Variation_Selector_1: _T0 = 0xfe00....0xfe0f
-private let __range_prop_Variation_Selector_2: _T0 = 0xe0100....0xe01ef
-private let __array_prop_Variation_Selector: _T1 = [
-  __range_prop_Variation_Selector_0,
-  __range_prop_Variation_Selector_1,
-  __range_prop_Variation_Selector_2,
+private let __prop_Other_Default_Ignorable_Code_Point_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Other_Default_Ignorable_Code_Point_array)
+internal let _prop_Other_Default_Ignorable_Code_Point = UnicodeScalarValueSet(singleValues: __prop_Other_Default_Ignorable_Code_Point_set, ranges: __prop_Other_Default_Ignorable_Code_Point_ranges)
+private let __prop_Other_Grapheme_Extend_set: _T1 = [
+  0x9be,
+  0x9d7,
+  0xb3e,
+  0xb57,
+  0xbbe,
+  0xbd7,
+  0xcc2,
+  0xd3e,
+  0xd57,
+  0xdcf,
+  0xddf,
+  0x1b35,
+  0x200c,
+  0x1133e,
+  0x11357,
+  0x114b0,
+  0x114bd,
+  0x115af,
+  0x1d165,
 ]
-internal let _prop_Variation_Selector = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_Variation_Selector)
-private let __range_prop_White_Space_0: _T0 = 0x9....0xd
-private let __range_prop_White_Space_1: _T0 = 0x20....0x20
-private let __range_prop_White_Space_2: _T0 = 0x85....0x85
-private let __range_prop_White_Space_3: _T0 = 0xa0....0xa0
-private let __range_prop_White_Space_4: _T0 = 0x1680....0x1680
-private let __range_prop_White_Space_5: _T0 = 0x2000....0x200a
-private let __range_prop_White_Space_6: _T0 = 0x2028....0x2029
-private let __range_prop_White_Space_7: _T0 = 0x202f....0x202f
-private let __range_prop_White_Space_8: _T0 = 0x205f....0x205f
-private let __range_prop_White_Space_9: _T0 = 0x3000....0x3000
-private let __array_prop_White_Space: _T1 = [
-  __range_prop_White_Space_0,
-  __range_prop_White_Space_1,
-  __range_prop_White_Space_2,
-  __range_prop_White_Space_3,
-  __range_prop_White_Space_4,
-  __range_prop_White_Space_5,
-  __range_prop_White_Space_6,
-  __range_prop_White_Space_7,
-  __range_prop_White_Space_8,
-  __range_prop_White_Space_9,
+private let __prop_Other_Grapheme_Extend_range_0: _T2 = 0xcd5....0xcd6
+private let __prop_Other_Grapheme_Extend_range_1: _T2 = 0x302e....0x302f
+private let __prop_Other_Grapheme_Extend_range_2: _T2 = 0xff9e....0xff9f
+private let __prop_Other_Grapheme_Extend_range_3: _T2 = 0x1d16e....0x1d172
+private let __prop_Other_Grapheme_Extend_range_4: _T2 = 0xe0020....0xe007f
+private let __prop_Other_Grapheme_Extend_array: _T3 = [
+  __prop_Other_Grapheme_Extend_range_0,
+  __prop_Other_Grapheme_Extend_range_1,
+  __prop_Other_Grapheme_Extend_range_2,
+  __prop_Other_Grapheme_Extend_range_3,
+  __prop_Other_Grapheme_Extend_range_4,
 ]
-internal let _prop_White_Space = MultipleRanges<UInt32>(carefullySortedRanges: __array_prop_White_Space)
+private let __prop_Other_Grapheme_Extend_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Other_Grapheme_Extend_array)
+internal let _prop_Other_Grapheme_Extend = UnicodeScalarValueSet(singleValues: __prop_Other_Grapheme_Extend_set, ranges: __prop_Other_Grapheme_Extend_ranges)
+private let __prop_Other_ID_Continue_set: _T1 = [
+  0xb7,
+  0x387,
+  0x19da,
+]
+private let __prop_Other_ID_Continue_range_0: _T2 = 0x1369....0x1371
+private let __prop_Other_ID_Continue_array: _T3 = [
+  __prop_Other_ID_Continue_range_0,
+]
+private let __prop_Other_ID_Continue_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Other_ID_Continue_array)
+internal let _prop_Other_ID_Continue = UnicodeScalarValueSet(singleValues: __prop_Other_ID_Continue_set, ranges: __prop_Other_ID_Continue_ranges)
+private let __prop_Other_ID_Start_set: _T1 = [
+  0x2118,
+  0x212e,
+]
+private let __prop_Other_ID_Start_range_0: _T2 = 0x1885....0x1886
+private let __prop_Other_ID_Start_range_1: _T2 = 0x309b....0x309c
+private let __prop_Other_ID_Start_array: _T3 = [
+  __prop_Other_ID_Start_range_0,
+  __prop_Other_ID_Start_range_1,
+]
+private let __prop_Other_ID_Start_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Other_ID_Start_array)
+internal let _prop_Other_ID_Start = UnicodeScalarValueSet(singleValues: __prop_Other_ID_Start_set, ranges: __prop_Other_ID_Start_ranges)
+private let __prop_Other_Lowercase_set: _T1 = [
+  0xaa,
+  0xba,
+  0x345,
+  0x37a,
+  0x1d78,
+  0x2071,
+  0x207f,
+  0xa770,
+]
+private let __prop_Other_Lowercase_range_0: _T2 = 0x2b0....0x2b8
+private let __prop_Other_Lowercase_range_1: _T2 = 0x2c0....0x2c1
+private let __prop_Other_Lowercase_range_2: _T2 = 0x2e0....0x2e4
+private let __prop_Other_Lowercase_range_3: _T2 = 0x1d2c....0x1d6a
+private let __prop_Other_Lowercase_range_4: _T2 = 0x1d9b....0x1dbf
+private let __prop_Other_Lowercase_range_5: _T2 = 0x2090....0x209c
+private let __prop_Other_Lowercase_range_6: _T2 = 0x2170....0x217f
+private let __prop_Other_Lowercase_range_7: _T2 = 0x24d0....0x24e9
+private let __prop_Other_Lowercase_range_8: _T2 = 0x2c7c....0x2c7d
+private let __prop_Other_Lowercase_range_9: _T2 = 0xa69c....0xa69d
+private let __prop_Other_Lowercase_range_a: _T2 = 0xa7f8....0xa7f9
+private let __prop_Other_Lowercase_range_b: _T2 = 0xab5c....0xab5f
+private let __prop_Other_Lowercase_array: _T3 = [
+  __prop_Other_Lowercase_range_0,
+  __prop_Other_Lowercase_range_1,
+  __prop_Other_Lowercase_range_2,
+  __prop_Other_Lowercase_range_3,
+  __prop_Other_Lowercase_range_4,
+  __prop_Other_Lowercase_range_5,
+  __prop_Other_Lowercase_range_6,
+  __prop_Other_Lowercase_range_7,
+  __prop_Other_Lowercase_range_8,
+  __prop_Other_Lowercase_range_9,
+  __prop_Other_Lowercase_range_a,
+  __prop_Other_Lowercase_range_b,
+]
+private let __prop_Other_Lowercase_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Other_Lowercase_array)
+internal let _prop_Other_Lowercase = UnicodeScalarValueSet(singleValues: __prop_Other_Lowercase_set, ranges: __prop_Other_Lowercase_ranges)
+private let __prop_Other_Math_set: _T1 = [
+  0x5e,
+  0x3d5,
+  0x2016,
+  0x2040,
+  0x20e1,
+  0x2102,
+  0x2107,
+  0x2115,
+  0x2124,
+  0x21a7,
+  0x21d3,
+  0x21dd,
+  0x23b7,
+  0x23d0,
+  0x23e2,
+  0x25e2,
+  0x25e4,
+  0x2640,
+  0x2642,
+  0xfe61,
+  0xfe63,
+  0xfe68,
+  0xff3c,
+  0xff3e,
+  0x1d4a2,
+  0x1d4bb,
+  0x1d546,
+  0x1ee24,
+  0x1ee27,
+  0x1ee39,
+  0x1ee3b,
+  0x1ee42,
+  0x1ee47,
+  0x1ee49,
+  0x1ee4b,
+  0x1ee54,
+  0x1ee57,
+  0x1ee59,
+  0x1ee5b,
+  0x1ee5d,
+  0x1ee5f,
+  0x1ee64,
+  0x1ee7e,
+]
+private let __prop_Other_Math_range_0: _T2 = 0x3d0....0x3d2
+private let __prop_Other_Math_range_1: _T2 = 0x3f0....0x3f1
+private let __prop_Other_Math_range_2: _T2 = 0x3f4....0x3f5
+private let __prop_Other_Math_range_3: _T2 = 0x2032....0x2034
+private let __prop_Other_Math_range_4: _T2 = 0x2061....0x2064
+private let __prop_Other_Math_range_5: _T2 = 0x207d....0x207e
+private let __prop_Other_Math_range_6: _T2 = 0x208d....0x208e
+private let __prop_Other_Math_range_7: _T2 = 0x20d0....0x20dc
+private let __prop_Other_Math_range_8: _T2 = 0x20e5....0x20e6
+private let __prop_Other_Math_range_9: _T2 = 0x20eb....0x20ef
+private let __prop_Other_Math_range_a: _T2 = 0x210a....0x2113
+private let __prop_Other_Math_range_b: _T2 = 0x2119....0x211d
+private let __prop_Other_Math_range_c: _T2 = 0x2128....0x2129
+private let __prop_Other_Math_range_d: _T2 = 0x212c....0x212d
+private let __prop_Other_Math_range_e: _T2 = 0x212f....0x2131
+private let __prop_Other_Math_range_f: _T2 = 0x2133....0x2138
+private let __prop_Other_Math_range_g: _T2 = 0x213c....0x213f
+private let __prop_Other_Math_range_h: _T2 = 0x2145....0x2149
+private let __prop_Other_Math_range_i: _T2 = 0x2195....0x2199
+private let __prop_Other_Math_range_j: _T2 = 0x219c....0x219f
+private let __prop_Other_Math_range_k: _T2 = 0x21a1....0x21a2
+private let __prop_Other_Math_range_l: _T2 = 0x21a4....0x21a5
+private let __prop_Other_Math_range_m: _T2 = 0x21a9....0x21ad
+private let __prop_Other_Math_range_n: _T2 = 0x21b0....0x21b1
+private let __prop_Other_Math_range_o: _T2 = 0x21b6....0x21b7
+private let __prop_Other_Math_range_p: _T2 = 0x21bc....0x21cd
+private let __prop_Other_Math_range_q: _T2 = 0x21d0....0x21d1
+private let __prop_Other_Math_range_r: _T2 = 0x21d5....0x21db
+private let __prop_Other_Math_range_s: _T2 = 0x21e4....0x21e5
+private let __prop_Other_Math_range_t: _T2 = 0x2308....0x230b
+private let __prop_Other_Math_range_u: _T2 = 0x23b4....0x23b5
+private let __prop_Other_Math_range_v: _T2 = 0x25a0....0x25a1
+private let __prop_Other_Math_range_w: _T2 = 0x25ae....0x25b6
+private let __prop_Other_Math_range_x: _T2 = 0x25bc....0x25c0
+private let __prop_Other_Math_range_y: _T2 = 0x25c6....0x25c7
+private let __prop_Other_Math_range_z: _T2 = 0x25ca....0x25cb
+private let __prop_Other_Math_range_10: _T2 = 0x25cf....0x25d3
+private let __prop_Other_Math_range_11: _T2 = 0x25e7....0x25ec
+private let __prop_Other_Math_range_12: _T2 = 0x2605....0x2606
+private let __prop_Other_Math_range_13: _T2 = 0x2660....0x2663
+private let __prop_Other_Math_range_14: _T2 = 0x266d....0x266e
+private let __prop_Other_Math_range_15: _T2 = 0x27c5....0x27c6
+private let __prop_Other_Math_range_16: _T2 = 0x27e6....0x27ef
+private let __prop_Other_Math_range_17: _T2 = 0x2983....0x2998
+private let __prop_Other_Math_range_18: _T2 = 0x29d8....0x29db
+private let __prop_Other_Math_range_19: _T2 = 0x29fc....0x29fd
+private let __prop_Other_Math_range_1a: _T2 = 0x1d400....0x1d454
+private let __prop_Other_Math_range_1b: _T2 = 0x1d456....0x1d49c
+private let __prop_Other_Math_range_1c: _T2 = 0x1d49e....0x1d49f
+private let __prop_Other_Math_range_1d: _T2 = 0x1d4a5....0x1d4a6
+private let __prop_Other_Math_range_1e: _T2 = 0x1d4a9....0x1d4ac
+private let __prop_Other_Math_range_1f: _T2 = 0x1d4ae....0x1d4b9
+private let __prop_Other_Math_range_1g: _T2 = 0x1d4bd....0x1d4c3
+private let __prop_Other_Math_range_1h: _T2 = 0x1d4c5....0x1d505
+private let __prop_Other_Math_range_1i: _T2 = 0x1d507....0x1d50a
+private let __prop_Other_Math_range_1j: _T2 = 0x1d50d....0x1d514
+private let __prop_Other_Math_range_1k: _T2 = 0x1d516....0x1d51c
+private let __prop_Other_Math_range_1l: _T2 = 0x1d51e....0x1d539
+private let __prop_Other_Math_range_1m: _T2 = 0x1d53b....0x1d53e
+private let __prop_Other_Math_range_1n: _T2 = 0x1d540....0x1d544
+private let __prop_Other_Math_range_1o: _T2 = 0x1d54a....0x1d550
+private let __prop_Other_Math_range_1p: _T2 = 0x1d552....0x1d6a5
+private let __prop_Other_Math_range_1q: _T2 = 0x1d6a8....0x1d6c0
+private let __prop_Other_Math_range_1r: _T2 = 0x1d6c2....0x1d6da
+private let __prop_Other_Math_range_1s: _T2 = 0x1d6dc....0x1d6fa
+private let __prop_Other_Math_range_1t: _T2 = 0x1d6fc....0x1d714
+private let __prop_Other_Math_range_1u: _T2 = 0x1d716....0x1d734
+private let __prop_Other_Math_range_1v: _T2 = 0x1d736....0x1d74e
+private let __prop_Other_Math_range_1w: _T2 = 0x1d750....0x1d76e
+private let __prop_Other_Math_range_1x: _T2 = 0x1d770....0x1d788
+private let __prop_Other_Math_range_1y: _T2 = 0x1d78a....0x1d7a8
+private let __prop_Other_Math_range_1z: _T2 = 0x1d7aa....0x1d7c2
+private let __prop_Other_Math_range_20: _T2 = 0x1d7c4....0x1d7cb
+private let __prop_Other_Math_range_21: _T2 = 0x1d7ce....0x1d7ff
+private let __prop_Other_Math_range_22: _T2 = 0x1ee00....0x1ee03
+private let __prop_Other_Math_range_23: _T2 = 0x1ee05....0x1ee1f
+private let __prop_Other_Math_range_24: _T2 = 0x1ee21....0x1ee22
+private let __prop_Other_Math_range_25: _T2 = 0x1ee29....0x1ee32
+private let __prop_Other_Math_range_26: _T2 = 0x1ee34....0x1ee37
+private let __prop_Other_Math_range_27: _T2 = 0x1ee4d....0x1ee4f
+private let __prop_Other_Math_range_28: _T2 = 0x1ee51....0x1ee52
+private let __prop_Other_Math_range_29: _T2 = 0x1ee61....0x1ee62
+private let __prop_Other_Math_range_2a: _T2 = 0x1ee67....0x1ee6a
+private let __prop_Other_Math_range_2b: _T2 = 0x1ee6c....0x1ee72
+private let __prop_Other_Math_range_2c: _T2 = 0x1ee74....0x1ee77
+private let __prop_Other_Math_range_2d: _T2 = 0x1ee79....0x1ee7c
+private let __prop_Other_Math_range_2e: _T2 = 0x1ee80....0x1ee89
+private let __prop_Other_Math_range_2f: _T2 = 0x1ee8b....0x1ee9b
+private let __prop_Other_Math_range_2g: _T2 = 0x1eea1....0x1eea3
+private let __prop_Other_Math_range_2h: _T2 = 0x1eea5....0x1eea9
+private let __prop_Other_Math_range_2i: _T2 = 0x1eeab....0x1eebb
+private let __prop_Other_Math_array: _T3 = [
+  __prop_Other_Math_range_0,
+  __prop_Other_Math_range_1,
+  __prop_Other_Math_range_2,
+  __prop_Other_Math_range_3,
+  __prop_Other_Math_range_4,
+  __prop_Other_Math_range_5,
+  __prop_Other_Math_range_6,
+  __prop_Other_Math_range_7,
+  __prop_Other_Math_range_8,
+  __prop_Other_Math_range_9,
+  __prop_Other_Math_range_a,
+  __prop_Other_Math_range_b,
+  __prop_Other_Math_range_c,
+  __prop_Other_Math_range_d,
+  __prop_Other_Math_range_e,
+  __prop_Other_Math_range_f,
+  __prop_Other_Math_range_g,
+  __prop_Other_Math_range_h,
+  __prop_Other_Math_range_i,
+  __prop_Other_Math_range_j,
+  __prop_Other_Math_range_k,
+  __prop_Other_Math_range_l,
+  __prop_Other_Math_range_m,
+  __prop_Other_Math_range_n,
+  __prop_Other_Math_range_o,
+  __prop_Other_Math_range_p,
+  __prop_Other_Math_range_q,
+  __prop_Other_Math_range_r,
+  __prop_Other_Math_range_s,
+  __prop_Other_Math_range_t,
+  __prop_Other_Math_range_u,
+  __prop_Other_Math_range_v,
+  __prop_Other_Math_range_w,
+  __prop_Other_Math_range_x,
+  __prop_Other_Math_range_y,
+  __prop_Other_Math_range_z,
+  __prop_Other_Math_range_10,
+  __prop_Other_Math_range_11,
+  __prop_Other_Math_range_12,
+  __prop_Other_Math_range_13,
+  __prop_Other_Math_range_14,
+  __prop_Other_Math_range_15,
+  __prop_Other_Math_range_16,
+  __prop_Other_Math_range_17,
+  __prop_Other_Math_range_18,
+  __prop_Other_Math_range_19,
+  __prop_Other_Math_range_1a,
+  __prop_Other_Math_range_1b,
+  __prop_Other_Math_range_1c,
+  __prop_Other_Math_range_1d,
+  __prop_Other_Math_range_1e,
+  __prop_Other_Math_range_1f,
+  __prop_Other_Math_range_1g,
+  __prop_Other_Math_range_1h,
+  __prop_Other_Math_range_1i,
+  __prop_Other_Math_range_1j,
+  __prop_Other_Math_range_1k,
+  __prop_Other_Math_range_1l,
+  __prop_Other_Math_range_1m,
+  __prop_Other_Math_range_1n,
+  __prop_Other_Math_range_1o,
+  __prop_Other_Math_range_1p,
+  __prop_Other_Math_range_1q,
+  __prop_Other_Math_range_1r,
+  __prop_Other_Math_range_1s,
+  __prop_Other_Math_range_1t,
+  __prop_Other_Math_range_1u,
+  __prop_Other_Math_range_1v,
+  __prop_Other_Math_range_1w,
+  __prop_Other_Math_range_1x,
+  __prop_Other_Math_range_1y,
+  __prop_Other_Math_range_1z,
+  __prop_Other_Math_range_20,
+  __prop_Other_Math_range_21,
+  __prop_Other_Math_range_22,
+  __prop_Other_Math_range_23,
+  __prop_Other_Math_range_24,
+  __prop_Other_Math_range_25,
+  __prop_Other_Math_range_26,
+  __prop_Other_Math_range_27,
+  __prop_Other_Math_range_28,
+  __prop_Other_Math_range_29,
+  __prop_Other_Math_range_2a,
+  __prop_Other_Math_range_2b,
+  __prop_Other_Math_range_2c,
+  __prop_Other_Math_range_2d,
+  __prop_Other_Math_range_2e,
+  __prop_Other_Math_range_2f,
+  __prop_Other_Math_range_2g,
+  __prop_Other_Math_range_2h,
+  __prop_Other_Math_range_2i,
+]
+private let __prop_Other_Math_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Other_Math_array)
+internal let _prop_Other_Math = UnicodeScalarValueSet(singleValues: __prop_Other_Math_set, ranges: __prop_Other_Math_ranges)
+private let __prop_Other_Uppercase_set: _T1 = [
+]
+private let __prop_Other_Uppercase_range_0: _T2 = 0x2160....0x216f
+private let __prop_Other_Uppercase_range_1: _T2 = 0x24b6....0x24cf
+private let __prop_Other_Uppercase_range_2: _T2 = 0x1f130....0x1f149
+private let __prop_Other_Uppercase_range_3: _T2 = 0x1f150....0x1f169
+private let __prop_Other_Uppercase_range_4: _T2 = 0x1f170....0x1f189
+private let __prop_Other_Uppercase_array: _T3 = [
+  __prop_Other_Uppercase_range_0,
+  __prop_Other_Uppercase_range_1,
+  __prop_Other_Uppercase_range_2,
+  __prop_Other_Uppercase_range_3,
+  __prop_Other_Uppercase_range_4,
+]
+private let __prop_Other_Uppercase_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Other_Uppercase_array)
+internal let _prop_Other_Uppercase = UnicodeScalarValueSet(singleValues: __prop_Other_Uppercase_set, ranges: __prop_Other_Uppercase_ranges)
+private let __prop_Pattern_Syntax_set: _T1 = [
+  0x60,
+  0xa9,
+  0xae,
+  0xb6,
+  0xbb,
+  0xbf,
+  0xd7,
+  0xf7,
+  0x3030,
+]
+private let __prop_Pattern_Syntax_range_0: _T2 = 0x21....0x2f
+private let __prop_Pattern_Syntax_range_1: _T2 = 0x3a....0x40
+private let __prop_Pattern_Syntax_range_2: _T2 = 0x5b....0x5e
+private let __prop_Pattern_Syntax_range_3: _T2 = 0x7b....0x7e
+private let __prop_Pattern_Syntax_range_4: _T2 = 0xa1....0xa7
+private let __prop_Pattern_Syntax_range_5: _T2 = 0xab....0xac
+private let __prop_Pattern_Syntax_range_6: _T2 = 0xb0....0xb1
+private let __prop_Pattern_Syntax_range_7: _T2 = 0x2010....0x2027
+private let __prop_Pattern_Syntax_range_8: _T2 = 0x2030....0x203e
+private let __prop_Pattern_Syntax_range_9: _T2 = 0x2041....0x2053
+private let __prop_Pattern_Syntax_range_a: _T2 = 0x2055....0x205e
+private let __prop_Pattern_Syntax_range_b: _T2 = 0x2190....0x245f
+private let __prop_Pattern_Syntax_range_c: _T2 = 0x2500....0x2775
+private let __prop_Pattern_Syntax_range_d: _T2 = 0x2794....0x2bff
+private let __prop_Pattern_Syntax_range_e: _T2 = 0x2e00....0x2e7f
+private let __prop_Pattern_Syntax_range_f: _T2 = 0x3001....0x3003
+private let __prop_Pattern_Syntax_range_g: _T2 = 0x3008....0x3020
+private let __prop_Pattern_Syntax_range_h: _T2 = 0xfd3e....0xfd3f
+private let __prop_Pattern_Syntax_range_i: _T2 = 0xfe45....0xfe46
+private let __prop_Pattern_Syntax_array: _T3 = [
+  __prop_Pattern_Syntax_range_0,
+  __prop_Pattern_Syntax_range_1,
+  __prop_Pattern_Syntax_range_2,
+  __prop_Pattern_Syntax_range_3,
+  __prop_Pattern_Syntax_range_4,
+  __prop_Pattern_Syntax_range_5,
+  __prop_Pattern_Syntax_range_6,
+  __prop_Pattern_Syntax_range_7,
+  __prop_Pattern_Syntax_range_8,
+  __prop_Pattern_Syntax_range_9,
+  __prop_Pattern_Syntax_range_a,
+  __prop_Pattern_Syntax_range_b,
+  __prop_Pattern_Syntax_range_c,
+  __prop_Pattern_Syntax_range_d,
+  __prop_Pattern_Syntax_range_e,
+  __prop_Pattern_Syntax_range_f,
+  __prop_Pattern_Syntax_range_g,
+  __prop_Pattern_Syntax_range_h,
+  __prop_Pattern_Syntax_range_i,
+]
+private let __prop_Pattern_Syntax_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Pattern_Syntax_array)
+internal let _prop_Pattern_Syntax = UnicodeScalarValueSet(singleValues: __prop_Pattern_Syntax_set, ranges: __prop_Pattern_Syntax_ranges)
+private let __prop_Pattern_White_Space_set: _T1 = [
+  0x20,
+  0x85,
+]
+private let __prop_Pattern_White_Space_range_0: _T2 = 0x9....0xd
+private let __prop_Pattern_White_Space_range_1: _T2 = 0x200e....0x200f
+private let __prop_Pattern_White_Space_range_2: _T2 = 0x2028....0x2029
+private let __prop_Pattern_White_Space_array: _T3 = [
+  __prop_Pattern_White_Space_range_0,
+  __prop_Pattern_White_Space_range_1,
+  __prop_Pattern_White_Space_range_2,
+]
+private let __prop_Pattern_White_Space_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Pattern_White_Space_array)
+internal let _prop_Pattern_White_Space = UnicodeScalarValueSet(singleValues: __prop_Pattern_White_Space_set, ranges: __prop_Pattern_White_Space_ranges)
+private let __prop_Prepended_Concatenation_Mark_set: _T1 = [
+  0x6dd,
+  0x70f,
+  0x8e2,
+  0x110bd,
+  0x110cd,
+]
+private let __prop_Prepended_Concatenation_Mark_range_0: _T2 = 0x600....0x605
+private let __prop_Prepended_Concatenation_Mark_array: _T3 = [
+  __prop_Prepended_Concatenation_Mark_range_0,
+]
+private let __prop_Prepended_Concatenation_Mark_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Prepended_Concatenation_Mark_array)
+internal let _prop_Prepended_Concatenation_Mark = UnicodeScalarValueSet(singleValues: __prop_Prepended_Concatenation_Mark_set, ranges: __prop_Prepended_Concatenation_Mark_ranges)
+private let __prop_Quotation_Mark_set: _T1 = [
+  0x22,
+  0x27,
+  0xab,
+  0xbb,
+  0x2e42,
+  0xff02,
+  0xff07,
+]
+private let __prop_Quotation_Mark_range_0: _T2 = 0x2018....0x201f
+private let __prop_Quotation_Mark_range_1: _T2 = 0x2039....0x203a
+private let __prop_Quotation_Mark_range_2: _T2 = 0x300c....0x300f
+private let __prop_Quotation_Mark_range_3: _T2 = 0x301d....0x301f
+private let __prop_Quotation_Mark_range_4: _T2 = 0xfe41....0xfe44
+private let __prop_Quotation_Mark_range_5: _T2 = 0xff62....0xff63
+private let __prop_Quotation_Mark_array: _T3 = [
+  __prop_Quotation_Mark_range_0,
+  __prop_Quotation_Mark_range_1,
+  __prop_Quotation_Mark_range_2,
+  __prop_Quotation_Mark_range_3,
+  __prop_Quotation_Mark_range_4,
+  __prop_Quotation_Mark_range_5,
+]
+private let __prop_Quotation_Mark_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Quotation_Mark_array)
+internal let _prop_Quotation_Mark = UnicodeScalarValueSet(singleValues: __prop_Quotation_Mark_set, ranges: __prop_Quotation_Mark_ranges)
+private let __prop_Radical_set: _T1 = [
+]
+private let __prop_Radical_range_0: _T2 = 0x2e80....0x2e99
+private let __prop_Radical_range_1: _T2 = 0x2e9b....0x2ef3
+private let __prop_Radical_range_2: _T2 = 0x2f00....0x2fd5
+private let __prop_Radical_array: _T3 = [
+  __prop_Radical_range_0,
+  __prop_Radical_range_1,
+  __prop_Radical_range_2,
+]
+private let __prop_Radical_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Radical_array)
+internal let _prop_Radical = UnicodeScalarValueSet(singleValues: __prop_Radical_set, ranges: __prop_Radical_ranges)
+private let __prop_Regional_Indicator_set: _T1 = [
+]
+private let __prop_Regional_Indicator_range_0: _T2 = 0x1f1e6....0x1f1ff
+private let __prop_Regional_Indicator_array: _T3 = [
+  __prop_Regional_Indicator_range_0,
+]
+private let __prop_Regional_Indicator_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Regional_Indicator_array)
+internal let _prop_Regional_Indicator = UnicodeScalarValueSet(singleValues: __prop_Regional_Indicator_set, ranges: __prop_Regional_Indicator_ranges)
+private let __prop_Sentence_Terminal_set: _T1 = [
+  0x21,
+  0x2e,
+  0x3f,
+  0x589,
+  0x6d4,
+  0x7f9,
+  0x837,
+  0x839,
+  0x1362,
+  0x166e,
+  0x1803,
+  0x1809,
+  0x2e2e,
+  0x2e3c,
+  0x3002,
+  0xa4ff,
+  0xa6f3,
+  0xa6f7,
+  0xa92f,
+  0xabeb,
+  0xfe52,
+  0xff01,
+  0xff0e,
+  0xff1f,
+  0xff61,
+  0x111cd,
+  0x112a9,
+  0x16af5,
+  0x16b44,
+  0x16e98,
+  0x1bc9f,
+  0x1da88,
+]
+private let __prop_Sentence_Terminal_range_0: _T2 = 0x61e....0x61f
+private let __prop_Sentence_Terminal_range_1: _T2 = 0x700....0x702
+private let __prop_Sentence_Terminal_range_2: _T2 = 0x83d....0x83e
+private let __prop_Sentence_Terminal_range_3: _T2 = 0x964....0x965
+private let __prop_Sentence_Terminal_range_4: _T2 = 0x104a....0x104b
+private let __prop_Sentence_Terminal_range_5: _T2 = 0x1367....0x1368
+private let __prop_Sentence_Terminal_range_6: _T2 = 0x1735....0x1736
+private let __prop_Sentence_Terminal_range_7: _T2 = 0x1944....0x1945
+private let __prop_Sentence_Terminal_range_8: _T2 = 0x1aa8....0x1aab
+private let __prop_Sentence_Terminal_range_9: _T2 = 0x1b5a....0x1b5b
+private let __prop_Sentence_Terminal_range_a: _T2 = 0x1b5e....0x1b5f
+private let __prop_Sentence_Terminal_range_b: _T2 = 0x1c3b....0x1c3c
+private let __prop_Sentence_Terminal_range_c: _T2 = 0x1c7e....0x1c7f
+private let __prop_Sentence_Terminal_range_d: _T2 = 0x203c....0x203d
+private let __prop_Sentence_Terminal_range_e: _T2 = 0x2047....0x2049
+private let __prop_Sentence_Terminal_range_f: _T2 = 0xa60e....0xa60f
+private let __prop_Sentence_Terminal_range_g: _T2 = 0xa876....0xa877
+private let __prop_Sentence_Terminal_range_h: _T2 = 0xa8ce....0xa8cf
+private let __prop_Sentence_Terminal_range_i: _T2 = 0xa9c8....0xa9c9
+private let __prop_Sentence_Terminal_range_j: _T2 = 0xaa5d....0xaa5f
+private let __prop_Sentence_Terminal_range_k: _T2 = 0xaaf0....0xaaf1
+private let __prop_Sentence_Terminal_range_l: _T2 = 0xfe56....0xfe57
+private let __prop_Sentence_Terminal_range_m: _T2 = 0x10a56....0x10a57
+private let __prop_Sentence_Terminal_range_n: _T2 = 0x10f55....0x10f59
+private let __prop_Sentence_Terminal_range_o: _T2 = 0x11047....0x11048
+private let __prop_Sentence_Terminal_range_p: _T2 = 0x110be....0x110c1
+private let __prop_Sentence_Terminal_range_q: _T2 = 0x11141....0x11143
+private let __prop_Sentence_Terminal_range_r: _T2 = 0x111c5....0x111c6
+private let __prop_Sentence_Terminal_range_s: _T2 = 0x111de....0x111df
+private let __prop_Sentence_Terminal_range_t: _T2 = 0x11238....0x11239
+private let __prop_Sentence_Terminal_range_u: _T2 = 0x1123b....0x1123c
+private let __prop_Sentence_Terminal_range_v: _T2 = 0x1144b....0x1144c
+private let __prop_Sentence_Terminal_range_w: _T2 = 0x115c2....0x115c3
+private let __prop_Sentence_Terminal_range_x: _T2 = 0x115c9....0x115d7
+private let __prop_Sentence_Terminal_range_y: _T2 = 0x11641....0x11642
+private let __prop_Sentence_Terminal_range_z: _T2 = 0x1173c....0x1173e
+private let __prop_Sentence_Terminal_range_10: _T2 = 0x11a42....0x11a43
+private let __prop_Sentence_Terminal_range_11: _T2 = 0x11a9b....0x11a9c
+private let __prop_Sentence_Terminal_range_12: _T2 = 0x11c41....0x11c42
+private let __prop_Sentence_Terminal_range_13: _T2 = 0x11ef7....0x11ef8
+private let __prop_Sentence_Terminal_range_14: _T2 = 0x16a6e....0x16a6f
+private let __prop_Sentence_Terminal_range_15: _T2 = 0x16b37....0x16b38
+private let __prop_Sentence_Terminal_array: _T3 = [
+  __prop_Sentence_Terminal_range_0,
+  __prop_Sentence_Terminal_range_1,
+  __prop_Sentence_Terminal_range_2,
+  __prop_Sentence_Terminal_range_3,
+  __prop_Sentence_Terminal_range_4,
+  __prop_Sentence_Terminal_range_5,
+  __prop_Sentence_Terminal_range_6,
+  __prop_Sentence_Terminal_range_7,
+  __prop_Sentence_Terminal_range_8,
+  __prop_Sentence_Terminal_range_9,
+  __prop_Sentence_Terminal_range_a,
+  __prop_Sentence_Terminal_range_b,
+  __prop_Sentence_Terminal_range_c,
+  __prop_Sentence_Terminal_range_d,
+  __prop_Sentence_Terminal_range_e,
+  __prop_Sentence_Terminal_range_f,
+  __prop_Sentence_Terminal_range_g,
+  __prop_Sentence_Terminal_range_h,
+  __prop_Sentence_Terminal_range_i,
+  __prop_Sentence_Terminal_range_j,
+  __prop_Sentence_Terminal_range_k,
+  __prop_Sentence_Terminal_range_l,
+  __prop_Sentence_Terminal_range_m,
+  __prop_Sentence_Terminal_range_n,
+  __prop_Sentence_Terminal_range_o,
+  __prop_Sentence_Terminal_range_p,
+  __prop_Sentence_Terminal_range_q,
+  __prop_Sentence_Terminal_range_r,
+  __prop_Sentence_Terminal_range_s,
+  __prop_Sentence_Terminal_range_t,
+  __prop_Sentence_Terminal_range_u,
+  __prop_Sentence_Terminal_range_v,
+  __prop_Sentence_Terminal_range_w,
+  __prop_Sentence_Terminal_range_x,
+  __prop_Sentence_Terminal_range_y,
+  __prop_Sentence_Terminal_range_z,
+  __prop_Sentence_Terminal_range_10,
+  __prop_Sentence_Terminal_range_11,
+  __prop_Sentence_Terminal_range_12,
+  __prop_Sentence_Terminal_range_13,
+  __prop_Sentence_Terminal_range_14,
+  __prop_Sentence_Terminal_range_15,
+]
+private let __prop_Sentence_Terminal_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Sentence_Terminal_array)
+internal let _prop_Sentence_Terminal = UnicodeScalarValueSet(singleValues: __prop_Sentence_Terminal_set, ranges: __prop_Sentence_Terminal_ranges)
+private let __prop_Soft_Dotted_set: _T1 = [
+  0x12f,
+  0x249,
+  0x268,
+  0x29d,
+  0x2b2,
+  0x3f3,
+  0x456,
+  0x458,
+  0x1d62,
+  0x1d96,
+  0x1da4,
+  0x1da8,
+  0x1e2d,
+  0x1ecb,
+  0x2071,
+  0x2c7c,
+]
+private let __prop_Soft_Dotted_range_0: _T2 = 0x69....0x6a
+private let __prop_Soft_Dotted_range_1: _T2 = 0x2148....0x2149
+private let __prop_Soft_Dotted_range_2: _T2 = 0x1d422....0x1d423
+private let __prop_Soft_Dotted_range_3: _T2 = 0x1d456....0x1d457
+private let __prop_Soft_Dotted_range_4: _T2 = 0x1d48a....0x1d48b
+private let __prop_Soft_Dotted_range_5: _T2 = 0x1d4be....0x1d4bf
+private let __prop_Soft_Dotted_range_6: _T2 = 0x1d4f2....0x1d4f3
+private let __prop_Soft_Dotted_range_7: _T2 = 0x1d526....0x1d527
+private let __prop_Soft_Dotted_range_8: _T2 = 0x1d55a....0x1d55b
+private let __prop_Soft_Dotted_range_9: _T2 = 0x1d58e....0x1d58f
+private let __prop_Soft_Dotted_range_a: _T2 = 0x1d5c2....0x1d5c3
+private let __prop_Soft_Dotted_range_b: _T2 = 0x1d5f6....0x1d5f7
+private let __prop_Soft_Dotted_range_c: _T2 = 0x1d62a....0x1d62b
+private let __prop_Soft_Dotted_range_d: _T2 = 0x1d65e....0x1d65f
+private let __prop_Soft_Dotted_range_e: _T2 = 0x1d692....0x1d693
+private let __prop_Soft_Dotted_array: _T3 = [
+  __prop_Soft_Dotted_range_0,
+  __prop_Soft_Dotted_range_1,
+  __prop_Soft_Dotted_range_2,
+  __prop_Soft_Dotted_range_3,
+  __prop_Soft_Dotted_range_4,
+  __prop_Soft_Dotted_range_5,
+  __prop_Soft_Dotted_range_6,
+  __prop_Soft_Dotted_range_7,
+  __prop_Soft_Dotted_range_8,
+  __prop_Soft_Dotted_range_9,
+  __prop_Soft_Dotted_range_a,
+  __prop_Soft_Dotted_range_b,
+  __prop_Soft_Dotted_range_c,
+  __prop_Soft_Dotted_range_d,
+  __prop_Soft_Dotted_range_e,
+]
+private let __prop_Soft_Dotted_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Soft_Dotted_array)
+internal let _prop_Soft_Dotted = UnicodeScalarValueSet(singleValues: __prop_Soft_Dotted_set, ranges: __prop_Soft_Dotted_ranges)
+private let __prop_Terminal_Punctuation_set: _T1 = [
+  0x21,
+  0x2c,
+  0x2e,
+  0x3f,
+  0x37e,
+  0x387,
+  0x589,
+  0x5c3,
+  0x60c,
+  0x61b,
+  0x6d4,
+  0x70c,
+  0x85e,
+  0xf08,
+  0x166e,
+  0x17da,
+  0x2e2e,
+  0x2e3c,
+  0x2e41,
+  0x2e4c,
+  0xa92f,
+  0xaadf,
+  0xabeb,
+  0xff01,
+  0xff0c,
+  0xff0e,
+  0xff1f,
+  0xff61,
+  0xff64,
+  0x1039f,
+  0x103d0,
+  0x10857,
+  0x1091f,
+  0x111cd,
+  0x112a9,
+  0x1145b,
+  0x11c71,
+  0x16af5,
+  0x16b44,
+  0x1bc9f,
+]
+private let __prop_Terminal_Punctuation_range_0: _T2 = 0x3a....0x3b
+private let __prop_Terminal_Punctuation_range_1: _T2 = 0x61e....0x61f
+private let __prop_Terminal_Punctuation_range_2: _T2 = 0x700....0x70a
+private let __prop_Terminal_Punctuation_range_3: _T2 = 0x7f8....0x7f9
+private let __prop_Terminal_Punctuation_range_4: _T2 = 0x830....0x83e
+private let __prop_Terminal_Punctuation_range_5: _T2 = 0x964....0x965
+private let __prop_Terminal_Punctuation_range_6: _T2 = 0xe5a....0xe5b
+private let __prop_Terminal_Punctuation_range_7: _T2 = 0xf0d....0xf12
+private let __prop_Terminal_Punctuation_range_8: _T2 = 0x104a....0x104b
+private let __prop_Terminal_Punctuation_range_9: _T2 = 0x1361....0x1368
+private let __prop_Terminal_Punctuation_range_a: _T2 = 0x16eb....0x16ed
+private let __prop_Terminal_Punctuation_range_b: _T2 = 0x1735....0x1736
+private let __prop_Terminal_Punctuation_range_c: _T2 = 0x17d4....0x17d6
+private let __prop_Terminal_Punctuation_range_d: _T2 = 0x1802....0x1805
+private let __prop_Terminal_Punctuation_range_e: _T2 = 0x1808....0x1809
+private let __prop_Terminal_Punctuation_range_f: _T2 = 0x1944....0x1945
+private let __prop_Terminal_Punctuation_range_g: _T2 = 0x1aa8....0x1aab
+private let __prop_Terminal_Punctuation_range_h: _T2 = 0x1b5a....0x1b5b
+private let __prop_Terminal_Punctuation_range_i: _T2 = 0x1b5d....0x1b5f
+private let __prop_Terminal_Punctuation_range_j: _T2 = 0x1c3b....0x1c3f
+private let __prop_Terminal_Punctuation_range_k: _T2 = 0x1c7e....0x1c7f
+private let __prop_Terminal_Punctuation_range_l: _T2 = 0x203c....0x203d
+private let __prop_Terminal_Punctuation_range_m: _T2 = 0x2047....0x2049
+private let __prop_Terminal_Punctuation_range_n: _T2 = 0x2e4e....0x2e4f
+private let __prop_Terminal_Punctuation_range_o: _T2 = 0x3001....0x3002
+private let __prop_Terminal_Punctuation_range_p: _T2 = 0xa4fe....0xa4ff
+private let __prop_Terminal_Punctuation_range_q: _T2 = 0xa60d....0xa60f
+private let __prop_Terminal_Punctuation_range_r: _T2 = 0xa6f3....0xa6f7
+private let __prop_Terminal_Punctuation_range_s: _T2 = 0xa876....0xa877
+private let __prop_Terminal_Punctuation_range_t: _T2 = 0xa8ce....0xa8cf
+private let __prop_Terminal_Punctuation_range_u: _T2 = 0xa9c7....0xa9c9
+private let __prop_Terminal_Punctuation_range_v: _T2 = 0xaa5d....0xaa5f
+private let __prop_Terminal_Punctuation_range_w: _T2 = 0xaaf0....0xaaf1
+private let __prop_Terminal_Punctuation_range_x: _T2 = 0xfe50....0xfe52
+private let __prop_Terminal_Punctuation_range_y: _T2 = 0xfe54....0xfe57
+private let __prop_Terminal_Punctuation_range_z: _T2 = 0xff1a....0xff1b
+private let __prop_Terminal_Punctuation_range_10: _T2 = 0x10a56....0x10a57
+private let __prop_Terminal_Punctuation_range_11: _T2 = 0x10af0....0x10af5
+private let __prop_Terminal_Punctuation_range_12: _T2 = 0x10b3a....0x10b3f
+private let __prop_Terminal_Punctuation_range_13: _T2 = 0x10b99....0x10b9c
+private let __prop_Terminal_Punctuation_range_14: _T2 = 0x10f55....0x10f59
+private let __prop_Terminal_Punctuation_range_15: _T2 = 0x11047....0x1104d
+private let __prop_Terminal_Punctuation_range_16: _T2 = 0x110be....0x110c1
+private let __prop_Terminal_Punctuation_range_17: _T2 = 0x11141....0x11143
+private let __prop_Terminal_Punctuation_range_18: _T2 = 0x111c5....0x111c6
+private let __prop_Terminal_Punctuation_range_19: _T2 = 0x111de....0x111df
+private let __prop_Terminal_Punctuation_range_1a: _T2 = 0x11238....0x1123c
+private let __prop_Terminal_Punctuation_range_1b: _T2 = 0x1144b....0x1144d
+private let __prop_Terminal_Punctuation_range_1c: _T2 = 0x115c2....0x115c5
+private let __prop_Terminal_Punctuation_range_1d: _T2 = 0x115c9....0x115d7
+private let __prop_Terminal_Punctuation_range_1e: _T2 = 0x11641....0x11642
+private let __prop_Terminal_Punctuation_range_1f: _T2 = 0x1173c....0x1173e
+private let __prop_Terminal_Punctuation_range_1g: _T2 = 0x11a42....0x11a43
+private let __prop_Terminal_Punctuation_range_1h: _T2 = 0x11a9b....0x11a9c
+private let __prop_Terminal_Punctuation_range_1i: _T2 = 0x11aa1....0x11aa2
+private let __prop_Terminal_Punctuation_range_1j: _T2 = 0x11c41....0x11c43
+private let __prop_Terminal_Punctuation_range_1k: _T2 = 0x11ef7....0x11ef8
+private let __prop_Terminal_Punctuation_range_1l: _T2 = 0x12470....0x12474
+private let __prop_Terminal_Punctuation_range_1m: _T2 = 0x16a6e....0x16a6f
+private let __prop_Terminal_Punctuation_range_1n: _T2 = 0x16b37....0x16b39
+private let __prop_Terminal_Punctuation_range_1o: _T2 = 0x16e97....0x16e98
+private let __prop_Terminal_Punctuation_range_1p: _T2 = 0x1da87....0x1da8a
+private let __prop_Terminal_Punctuation_array: _T3 = [
+  __prop_Terminal_Punctuation_range_0,
+  __prop_Terminal_Punctuation_range_1,
+  __prop_Terminal_Punctuation_range_2,
+  __prop_Terminal_Punctuation_range_3,
+  __prop_Terminal_Punctuation_range_4,
+  __prop_Terminal_Punctuation_range_5,
+  __prop_Terminal_Punctuation_range_6,
+  __prop_Terminal_Punctuation_range_7,
+  __prop_Terminal_Punctuation_range_8,
+  __prop_Terminal_Punctuation_range_9,
+  __prop_Terminal_Punctuation_range_a,
+  __prop_Terminal_Punctuation_range_b,
+  __prop_Terminal_Punctuation_range_c,
+  __prop_Terminal_Punctuation_range_d,
+  __prop_Terminal_Punctuation_range_e,
+  __prop_Terminal_Punctuation_range_f,
+  __prop_Terminal_Punctuation_range_g,
+  __prop_Terminal_Punctuation_range_h,
+  __prop_Terminal_Punctuation_range_i,
+  __prop_Terminal_Punctuation_range_j,
+  __prop_Terminal_Punctuation_range_k,
+  __prop_Terminal_Punctuation_range_l,
+  __prop_Terminal_Punctuation_range_m,
+  __prop_Terminal_Punctuation_range_n,
+  __prop_Terminal_Punctuation_range_o,
+  __prop_Terminal_Punctuation_range_p,
+  __prop_Terminal_Punctuation_range_q,
+  __prop_Terminal_Punctuation_range_r,
+  __prop_Terminal_Punctuation_range_s,
+  __prop_Terminal_Punctuation_range_t,
+  __prop_Terminal_Punctuation_range_u,
+  __prop_Terminal_Punctuation_range_v,
+  __prop_Terminal_Punctuation_range_w,
+  __prop_Terminal_Punctuation_range_x,
+  __prop_Terminal_Punctuation_range_y,
+  __prop_Terminal_Punctuation_range_z,
+  __prop_Terminal_Punctuation_range_10,
+  __prop_Terminal_Punctuation_range_11,
+  __prop_Terminal_Punctuation_range_12,
+  __prop_Terminal_Punctuation_range_13,
+  __prop_Terminal_Punctuation_range_14,
+  __prop_Terminal_Punctuation_range_15,
+  __prop_Terminal_Punctuation_range_16,
+  __prop_Terminal_Punctuation_range_17,
+  __prop_Terminal_Punctuation_range_18,
+  __prop_Terminal_Punctuation_range_19,
+  __prop_Terminal_Punctuation_range_1a,
+  __prop_Terminal_Punctuation_range_1b,
+  __prop_Terminal_Punctuation_range_1c,
+  __prop_Terminal_Punctuation_range_1d,
+  __prop_Terminal_Punctuation_range_1e,
+  __prop_Terminal_Punctuation_range_1f,
+  __prop_Terminal_Punctuation_range_1g,
+  __prop_Terminal_Punctuation_range_1h,
+  __prop_Terminal_Punctuation_range_1i,
+  __prop_Terminal_Punctuation_range_1j,
+  __prop_Terminal_Punctuation_range_1k,
+  __prop_Terminal_Punctuation_range_1l,
+  __prop_Terminal_Punctuation_range_1m,
+  __prop_Terminal_Punctuation_range_1n,
+  __prop_Terminal_Punctuation_range_1o,
+  __prop_Terminal_Punctuation_range_1p,
+]
+private let __prop_Terminal_Punctuation_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Terminal_Punctuation_array)
+internal let _prop_Terminal_Punctuation = UnicodeScalarValueSet(singleValues: __prop_Terminal_Punctuation_set, ranges: __prop_Terminal_Punctuation_ranges)
+private let __prop_Unified_Ideograph_set: _T1 = [
+  0xfa11,
+  0xfa1f,
+  0xfa21,
+]
+private let __prop_Unified_Ideograph_range_0: _T2 = 0x3400....0x4db5
+private let __prop_Unified_Ideograph_range_1: _T2 = 0x4e00....0x9fef
+private let __prop_Unified_Ideograph_range_2: _T2 = 0xfa0e....0xfa0f
+private let __prop_Unified_Ideograph_range_3: _T2 = 0xfa13....0xfa14
+private let __prop_Unified_Ideograph_range_4: _T2 = 0xfa23....0xfa24
+private let __prop_Unified_Ideograph_range_5: _T2 = 0xfa27....0xfa29
+private let __prop_Unified_Ideograph_range_6: _T2 = 0x20000....0x2a6d6
+private let __prop_Unified_Ideograph_range_7: _T2 = 0x2a700....0x2b734
+private let __prop_Unified_Ideograph_range_8: _T2 = 0x2b740....0x2b81d
+private let __prop_Unified_Ideograph_range_9: _T2 = 0x2b820....0x2cea1
+private let __prop_Unified_Ideograph_range_a: _T2 = 0x2ceb0....0x2ebe0
+private let __prop_Unified_Ideograph_array: _T3 = [
+  __prop_Unified_Ideograph_range_0,
+  __prop_Unified_Ideograph_range_1,
+  __prop_Unified_Ideograph_range_2,
+  __prop_Unified_Ideograph_range_3,
+  __prop_Unified_Ideograph_range_4,
+  __prop_Unified_Ideograph_range_5,
+  __prop_Unified_Ideograph_range_6,
+  __prop_Unified_Ideograph_range_7,
+  __prop_Unified_Ideograph_range_8,
+  __prop_Unified_Ideograph_range_9,
+  __prop_Unified_Ideograph_range_a,
+]
+private let __prop_Unified_Ideograph_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Unified_Ideograph_array)
+internal let _prop_Unified_Ideograph = UnicodeScalarValueSet(singleValues: __prop_Unified_Ideograph_set, ranges: __prop_Unified_Ideograph_ranges)
+private let __prop_Variation_Selector_set: _T1 = [
+]
+private let __prop_Variation_Selector_range_0: _T2 = 0x180b....0x180d
+private let __prop_Variation_Selector_range_1: _T2 = 0xfe00....0xfe0f
+private let __prop_Variation_Selector_range_2: _T2 = 0xe0100....0xe01ef
+private let __prop_Variation_Selector_array: _T3 = [
+  __prop_Variation_Selector_range_0,
+  __prop_Variation_Selector_range_1,
+  __prop_Variation_Selector_range_2,
+]
+private let __prop_Variation_Selector_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Variation_Selector_array)
+internal let _prop_Variation_Selector = UnicodeScalarValueSet(singleValues: __prop_Variation_Selector_set, ranges: __prop_Variation_Selector_ranges)
+private let __prop_White_Space_set: _T1 = [
+  0x20,
+  0x85,
+  0xa0,
+  0x1680,
+  0x202f,
+  0x205f,
+  0x3000,
+]
+private let __prop_White_Space_range_0: _T2 = 0x9....0xd
+private let __prop_White_Space_range_1: _T2 = 0x2000....0x200a
+private let __prop_White_Space_range_2: _T2 = 0x2028....0x2029
+private let __prop_White_Space_array: _T3 = [
+  __prop_White_Space_range_0,
+  __prop_White_Space_range_1,
+  __prop_White_Space_range_2,
+]
+private let __prop_White_Space_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_White_Space_array)
+internal let _prop_White_Space = UnicodeScalarValueSet(singleValues: __prop_White_Space_set, ranges: __prop_White_Space_ranges)

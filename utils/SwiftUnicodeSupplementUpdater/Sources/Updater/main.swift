@@ -18,6 +18,7 @@ manager.updaters = [
   .init(delegate: DerivedJoiningGroup()),
   .init(delegate: DerivedJoiningType()),
   .init(delegate: DerivedNormalizationProps()),
+  .init(delegate: EastAsianWidth()),
   .init(delegate: EmojiData()),
   .init(delegate: IDNAMappingTable()),
   .init(delegate: PropertyValueAliases()),

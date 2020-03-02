@@ -4,7 +4,7 @@
 import PackageDescription
 
 let package = Package(
-  name: "SwiftUnicodeSupplementUpdater",
+  name: "UnicodeSupplementUpdater",
   products: [
     // Products define the executables and libraries produced by a package, and make them visible to other packages.
     .library(name: "SwiftUnicodeSupplementUpdater", targets: ["UnicodeSupplementUpdater"]),
@@ -14,7 +14,8 @@ let package = Package(
     // Dependencies declare other packages that this package depends on.
     .package(url: "https://github.com/YOCKOW/SwiftBonaFideCharacterSet.git", from: "1.6.1"),
     .package(url: "https://github.com/YOCKOW/SwiftRanges.git", from: "3.0.2"),
-    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", from: "0.6.0"),
+    .package(url: "https://github.com/YOCKOW/SwiftStringComposition.git", from: "1.1.0-beta.002"),
+    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", from: "0.7.0-alpha.002"),
     .package(url: "https://github.com/YOCKOW/ySwiftCodeUpdater.git", from: "1.1.0"),
     .package(url: "https://github.com/YOCKOW/ySwiftExtensions.git", from: "0.8.1"),
   ],
@@ -25,12 +26,18 @@ let package = Package(
             dependencies: [
               "SwiftBonaFideCharacterSet",
               "SwiftRanges",
+              "SwiftStringComposition",
               "SwiftUnicodeSupplement",
               "ySwiftCodeUpdater",
               "ySwiftExtensions",
             ]),
     .target(name: "Updater", dependencies: ["ySwiftCodeUpdater", "UnicodeSupplementUpdater"]),
-    .testTarget(name: "UnicodeSupplementUpdaterTests", dependencies: ["UnicodeSupplementUpdater", "ySwiftCodeUpdater"]),
+    .testTarget(name: "UnicodeSupplementUpdaterTests",
+                dependencies: [
+                  "UnicodeSupplementUpdater",
+                  "SwiftStringComposition",
+                  "ySwiftCodeUpdater",
+                ]),
   ]
 )
 
