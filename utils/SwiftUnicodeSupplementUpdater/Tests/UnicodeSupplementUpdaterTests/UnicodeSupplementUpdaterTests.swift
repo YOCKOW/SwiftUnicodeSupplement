@@ -63,6 +63,12 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
     ])
   }
   
+  func test_ea() throws {
+    try _assert(delegate: EastAsianWidth(), expectedLines: [
+      "internal let _ea = UnicodeScalarValueDictionary<Unicode.EastAsianWidth>(dictionary: __ea_dictionary, rangeDictionary: __ea_rangeDictionary)",
+    ])
+  }
+  
   func test_gc() throws {
     try _assert(delegate: DerivedGeneralCategory(), expectedLines: [
       "internal let _gc = UnicodeScalarValueDictionary<Unicode.GeneralCategory>(dictionary: __gc_dictionary, rangeDictionary: __gc_rangeDictionary)",

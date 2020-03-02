@@ -32,6 +32,17 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(bc("\u{2069}"), .popDirectionalIsolate)
   }
   
+  func test_EastAsianWidth() {
+    func ea(_ scalar: Unicode.Scalar) -> Unicode.EastAsianWidth {
+      return scalar.latestProperties.eastAsianWidth
+    }
+    
+    XCTAssertEqual(ea("\n"), .neutral)
+    XCTAssertEqual(ea("0"), .narrow)
+    XCTAssertEqual(ea("A"), .narrow)
+    XCTAssertEqual(ea("あ"), .wide)
+  }
+  
   func test_IDNAStatus() {
     func _assert(_ scalar: Unicode.Scalar,
                  std3: Bool, idna2008: Bool,

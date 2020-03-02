@@ -38,6 +38,12 @@ extension Unicode.Scalar.LatestProperties {
 }
 
 extension Unicode.Scalar.LatestProperties {
+  public var eastAsianWidth: Unicode.EastAsianWidth {
+    return _ea[self._value] ?? .neutral
+  }
+}
+
+extension Unicode.Scalar.LatestProperties {
   /// Returns IDNA Status Value.
   /// - parameter usingSTD3ASCIIRules: Specify whether STD3 ASCII Rules should be used or not.
   /// - parameter idna2008Compatible: Specify whether the status should conform to IDNA 2008 or not.

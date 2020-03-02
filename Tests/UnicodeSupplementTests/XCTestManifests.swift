@@ -18,6 +18,7 @@ extension UnicodeSupplementTests {
     static let __allTests__UnicodeSupplementTests = [
         ("test_BidiClass", test_BidiClass),
         ("test_CanonicalCombiningClass", test_CanonicalCombiningClass),
+        ("test_EastAsianWidth", test_EastAsianWidth),
         ("test_GeneralCategory", test_GeneralCategory),
         ("test_IDNAStatus", test_IDNAStatus),
         ("test_JoiningGroup", test_JoiningGroup),
