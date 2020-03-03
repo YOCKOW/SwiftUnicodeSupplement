@@ -109,6 +109,8 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     }
   }
   
+  internal var _expandingThreshold: UInt32 = 0x30 // I don't know this value is appropriate...
+  
   private var _setConversionCount: [String: Int] = [:]
   internal func _convert(_ ranges: MultipleRanges<Unicode.Scalar.Value>, key: String) -> StringLines {
     let nn = _setConversionCount[key] ?? 0
@@ -121,6 +123,10 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
       let bounds = range.bounds!
       if bounds.lower == bounds.upper {
         singleValues.append(bounds.lower.value!)
+      } else if bounds.upper.value! - bounds.lower.value! < _expandingThreshold {
+        for sv in bounds.lower.value!...bounds.upper.value! {
+          singleValues.append(sv)
+        }
       } else {
         anyRanges.append(range)
       }
@@ -177,6 +183,10 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
       let bounds = range.bounds!
       if bounds.lower == bounds.upper {
         dictionary[bounds.lower.value!] = value
+      } else if bounds.upper.value! - bounds.lower.value! < _expandingThreshold {
+        for sv in bounds.lower.value!...bounds.upper.value! {
+          dictionary[sv] = value
+        }
       } else {
         extractedRangeDictionary.insert(value, forRange: range)
       }
