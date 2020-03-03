@@ -71,11 +71,10 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
       }
     }
   }
-  open override func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    let intermidiates = Array(intermidiates)
-    var result: StringLines = try super.convert(intermidiates)
+  open override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    let intermediates = Array(intermediates)
     
-    assert(intermidiates.count == 1)
+    assert(intermediates.count == 1)
     // Extract special default values in comments
     var defaultValue: _DefaultValue? = nil
     var key: Substring? = nil
@@ -84,7 +83,7 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
     let rangesSuffix = " are in the ranges:"
     let rangeSuffix = " are in the range:"
     let propertiesSuffix = " have one of the following properties:"
-    for row in intermidiates.first!.content.rows {
+    for row in intermediates.first!.content.rows {
       // Break out the loop when comment lines end.
       if row.payload != nil { break }
       guard let comment = row.comment else { continue }
@@ -123,10 +122,12 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
       }
     }
     
-    do { // Default Ranges
-      result.append("// Default Values defined by ranges")
-      result.append(contentsOf: self._convert(defaultValueRanges, key: "default_ranges", describer: self.describe(value:)))
+    var rawRangeDictionary: RangeDictionary<Unicode.Scalar.Value, Unicode.BidiClass> = try self._convert(intermediates)
+    for (range, value) in defaultValueRanges {
+      rawRangeDictionary.insert(value, forRange: range)
     }
+    
+    var result: StringLines = self._convert(rawRangeDictionary, describer: self.describe(value:))
     
     do { // Default Properties
       result.append("// Default Values defined by core properties")

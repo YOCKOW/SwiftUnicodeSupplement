@@ -277,12 +277,16 @@ open class UCDPropertiesCodeUpdaterDelegate<T>: UCDCodeUpdaterDelegate where T: 
     _mustBeOverridden()
   }
   
-  open override func convert<S>(_ intermidiates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    let reduced: RangeDictionary<Unicode.Scalar.Value, T> = try intermidiates.reduce(into: [:]) { [unowned self] in
+  internal func _convert<S>(_ intermediates: S) throws -> RangeDictionary<Unicode.Scalar.Value, T>
+    where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    return try intermediates.reduce(into: [:]) { [unowned self] in
       for (range, value) in  try $1.content.rangeDictionary(converter: { try self.reduce(columns: $0) }) {
         $0.insert(value, forRange: range)
       }
     }
-    return self._convert(reduced, describer: self.describe(value:))
+  }
+  
+  open override func convert<S>(_ intermediates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    return self._convert(try self._convert(intermediates), describer: self.describe(value:))
   }
 }
