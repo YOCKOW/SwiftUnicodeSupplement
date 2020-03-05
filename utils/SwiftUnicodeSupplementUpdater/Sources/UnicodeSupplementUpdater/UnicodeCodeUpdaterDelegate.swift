@@ -109,7 +109,7 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     }
   }
   
-  internal var _expandingLimit: UInt32 = 0x10
+  internal var _expandingLimit: UInt32 = 8
   
   private var _setConversionCount: [String: Int] = [:]
   internal func _convert(_ ranges: MultipleRanges<Unicode.Scalar.Value>, key: String) -> StringLines {
