@@ -122,12 +122,12 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
       }
     }
     
-    var rawRangeDictionary: RangeDictionary<Unicode.Scalar.Value, Unicode.BidiClass> = try self._convert(intermediates)
-    for (range, value) in defaultValueRanges {
-      rawRangeDictionary.insert(value, forRange: range)
+    var rangeDictionary = defaultValueRanges
+    for (range, value) in try self._convert(intermediates) {
+      rangeDictionary.insert(value, forRange: range)
     }
     
-    var result: StringLines = self._convert(rawRangeDictionary, describer: self.describe(value:))
+    var result: StringLines = self._convert(rangeDictionary, describer: self.describe(value:))
     
     do { // Default Properties
       result.append("// Default Values defined by core properties")
