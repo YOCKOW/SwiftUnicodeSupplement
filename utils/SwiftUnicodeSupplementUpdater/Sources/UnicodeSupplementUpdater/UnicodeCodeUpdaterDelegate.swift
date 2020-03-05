@@ -124,7 +124,7 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
       if bounds.lower == bounds.upper {
         singleValues.append(bounds.lower.value!)
       } else if bounds.upper.value! - bounds.lower.value! < _expandingLimit {
-        for sv in bounds.lower.value!...bounds.upper.value! {
+        for sv in range._values {
           singleValues.append(sv)
         }
       } else {
@@ -184,7 +184,7 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
       if bounds.lower == bounds.upper {
         dictionary[bounds.lower.value!] = value
       } else if bounds.upper.value! - bounds.lower.value! < _expandingLimit {
-        for sv in bounds.lower.value!...bounds.upper.value! {
+        for sv in range._values {
           dictionary[sv] = value
         }
       } else {
