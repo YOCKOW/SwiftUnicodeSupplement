@@ -8,7 +8,7 @@
 import Foundation
 import UnicodeSupplement
 
-open class DerivedJoiningGroup: UCDPropertiesCodeUpdaterDelegate<Unicode.JoiningGroup> {
+open class DerivedJoiningGroup: UCDDefaultablePropertiesCodeUpdaterDelegate<Unicode.JoiningGroup> {
   open override var prefix: String { return "jg" }
 
   open override var sourceURLs: Array<URL> {
@@ -23,6 +23,10 @@ open class DerivedJoiningGroup: UCDPropertiesCodeUpdaterDelegate<Unicode.Joining
 
   open override func describe(value: Unicode.JoiningGroup) -> String {
     return ".\(String(describing: value))"
+  }
+  
+  open override var defaultValue: Unicode.JoiningGroup {
+    return .noJoiningGroup
   }
 }
 
