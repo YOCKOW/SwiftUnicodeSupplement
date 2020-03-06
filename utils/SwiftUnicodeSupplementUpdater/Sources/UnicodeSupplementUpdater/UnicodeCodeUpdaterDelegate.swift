@@ -290,3 +290,21 @@ open class UCDPropertiesCodeUpdaterDelegate<T>: UCDCodeUpdaterDelegate where T: 
     return self._convert(try self._convert(intermediates), describer: self.describe(value:))
   }
 }
+
+open class UCDDefaultablePropertiesCodeUpdaterDelegate<T>: UCDPropertiesCodeUpdaterDelegate<T> where T: Equatable {
+  open var defaultValue: T {
+    _mustBeOverridden()
+  }
+  
+  open override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    var rangeDictionary = RangeDictionary<Unicode.Scalar.Value, T>([
+      (0x0000....0x10FFFF, self.defaultValue),
+    ])
+    
+    for (range, value) in try self._convert(intermediates) {
+      rangeDictionary.insert(value, forRange: range)
+    }
+    
+    return self._convert(rangeDictionary, describer: self.describe(value: ))
+  }
+}
