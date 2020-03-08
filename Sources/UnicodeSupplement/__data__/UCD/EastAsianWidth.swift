@@ -255,1620 +255,732 @@ private let __ea_pair_5c: _T1 = (0x2dc, .neutral)
 private let __ea_pair_5d: _T1 = (0x2dd, .ambiguous)
 private let __ea_pair_5e: _T1 = (0x2de, .neutral)
 private let __ea_pair_5f: _T1 = (0x2df, .ambiguous)
-private let __ea_pair_5g: _T1 = (0x370, .neutral)
-private let __ea_pair_5h: _T1 = (0x371, .neutral)
-private let __ea_pair_5i: _T1 = (0x372, .neutral)
-private let __ea_pair_5j: _T1 = (0x373, .neutral)
-private let __ea_pair_5k: _T1 = (0x374, .neutral)
-private let __ea_pair_5l: _T1 = (0x375, .neutral)
-private let __ea_pair_5m: _T1 = (0x376, .neutral)
-private let __ea_pair_5n: _T1 = (0x377, .neutral)
-private let __ea_pair_5o: _T1 = (0x37a, .neutral)
-private let __ea_pair_5p: _T1 = (0x37b, .neutral)
-private let __ea_pair_5q: _T1 = (0x37c, .neutral)
-private let __ea_pair_5r: _T1 = (0x37d, .neutral)
-private let __ea_pair_5s: _T1 = (0x37e, .neutral)
-private let __ea_pair_5t: _T1 = (0x37f, .neutral)
-private let __ea_pair_5u: _T1 = (0x384, .neutral)
-private let __ea_pair_5v: _T1 = (0x385, .neutral)
-private let __ea_pair_5w: _T1 = (0x386, .neutral)
-private let __ea_pair_5x: _T1 = (0x387, .neutral)
-private let __ea_pair_5y: _T1 = (0x388, .neutral)
-private let __ea_pair_5z: _T1 = (0x389, .neutral)
-private let __ea_pair_60: _T1 = (0x38a, .neutral)
-private let __ea_pair_61: _T1 = (0x38c, .neutral)
-private let __ea_pair_62: _T1 = (0x38e, .neutral)
-private let __ea_pair_63: _T1 = (0x38f, .neutral)
-private let __ea_pair_64: _T1 = (0x390, .neutral)
-private let __ea_pair_65: _T1 = (0x3a3, .ambiguous)
-private let __ea_pair_66: _T1 = (0x3a4, .ambiguous)
-private let __ea_pair_67: _T1 = (0x3a5, .ambiguous)
-private let __ea_pair_68: _T1 = (0x3a6, .ambiguous)
-private let __ea_pair_69: _T1 = (0x3a7, .ambiguous)
-private let __ea_pair_6a: _T1 = (0x3a8, .ambiguous)
-private let __ea_pair_6b: _T1 = (0x3a9, .ambiguous)
-private let __ea_pair_6c: _T1 = (0x3aa, .neutral)
-private let __ea_pair_6d: _T1 = (0x3ab, .neutral)
-private let __ea_pair_6e: _T1 = (0x3ac, .neutral)
-private let __ea_pair_6f: _T1 = (0x3ad, .neutral)
-private let __ea_pair_6g: _T1 = (0x3ae, .neutral)
-private let __ea_pair_6h: _T1 = (0x3af, .neutral)
-private let __ea_pair_6i: _T1 = (0x3b0, .neutral)
-private let __ea_pair_6j: _T1 = (0x3c2, .neutral)
-private let __ea_pair_6k: _T1 = (0x3c3, .ambiguous)
-private let __ea_pair_6l: _T1 = (0x3c4, .ambiguous)
-private let __ea_pair_6m: _T1 = (0x3c5, .ambiguous)
-private let __ea_pair_6n: _T1 = (0x3c6, .ambiguous)
-private let __ea_pair_6o: _T1 = (0x3c7, .ambiguous)
-private let __ea_pair_6p: _T1 = (0x3c8, .ambiguous)
-private let __ea_pair_6q: _T1 = (0x3c9, .ambiguous)
-private let __ea_pair_6r: _T1 = (0x401, .ambiguous)
-private let __ea_pair_6s: _T1 = (0x450, .neutral)
-private let __ea_pair_6t: _T1 = (0x451, .ambiguous)
-private let __ea_pair_6u: _T1 = (0x58d, .neutral)
-private let __ea_pair_6v: _T1 = (0x58e, .neutral)
-private let __ea_pair_6w: _T1 = (0x58f, .neutral)
-private let __ea_pair_6x: _T1 = (0x5ef, .neutral)
-private let __ea_pair_6y: _T1 = (0x5f0, .neutral)
-private let __ea_pair_6z: _T1 = (0x5f1, .neutral)
-private let __ea_pair_70: _T1 = (0x5f2, .neutral)
-private let __ea_pair_71: _T1 = (0x5f3, .neutral)
-private let __ea_pair_72: _T1 = (0x5f4, .neutral)
-private let __ea_pair_73: _T1 = (0x85e, .neutral)
-private let __ea_pair_74: _T1 = (0x8b6, .neutral)
-private let __ea_pair_75: _T1 = (0x8b7, .neutral)
-private let __ea_pair_76: _T1 = (0x8b8, .neutral)
-private let __ea_pair_77: _T1 = (0x8b9, .neutral)
-private let __ea_pair_78: _T1 = (0x8ba, .neutral)
-private let __ea_pair_79: _T1 = (0x8bb, .neutral)
-private let __ea_pair_7a: _T1 = (0x8bc, .neutral)
-private let __ea_pair_7b: _T1 = (0x8bd, .neutral)
-private let __ea_pair_7c: _T1 = (0x985, .neutral)
-private let __ea_pair_7d: _T1 = (0x986, .neutral)
-private let __ea_pair_7e: _T1 = (0x987, .neutral)
-private let __ea_pair_7f: _T1 = (0x988, .neutral)
-private let __ea_pair_7g: _T1 = (0x989, .neutral)
-private let __ea_pair_7h: _T1 = (0x98a, .neutral)
-private let __ea_pair_7i: _T1 = (0x98b, .neutral)
-private let __ea_pair_7j: _T1 = (0x98c, .neutral)
-private let __ea_pair_7k: _T1 = (0x98f, .neutral)
-private let __ea_pair_7l: _T1 = (0x990, .neutral)
-private let __ea_pair_7m: _T1 = (0x9aa, .neutral)
-private let __ea_pair_7n: _T1 = (0x9ab, .neutral)
-private let __ea_pair_7o: _T1 = (0x9ac, .neutral)
-private let __ea_pair_7p: _T1 = (0x9ad, .neutral)
-private let __ea_pair_7q: _T1 = (0x9ae, .neutral)
-private let __ea_pair_7r: _T1 = (0x9af, .neutral)
-private let __ea_pair_7s: _T1 = (0x9b0, .neutral)
-private let __ea_pair_7t: _T1 = (0x9b2, .neutral)
-private let __ea_pair_7u: _T1 = (0x9b6, .neutral)
-private let __ea_pair_7v: _T1 = (0x9b7, .neutral)
-private let __ea_pair_7w: _T1 = (0x9b8, .neutral)
-private let __ea_pair_7x: _T1 = (0x9b9, .neutral)
-private let __ea_pair_7y: _T1 = (0x9c7, .neutral)
-private let __ea_pair_7z: _T1 = (0x9c8, .neutral)
-private let __ea_pair_80: _T1 = (0x9cb, .neutral)
-private let __ea_pair_81: _T1 = (0x9cc, .neutral)
-private let __ea_pair_82: _T1 = (0x9cd, .neutral)
-private let __ea_pair_83: _T1 = (0x9ce, .neutral)
-private let __ea_pair_84: _T1 = (0x9d7, .neutral)
-private let __ea_pair_85: _T1 = (0x9dc, .neutral)
-private let __ea_pair_86: _T1 = (0x9dd, .neutral)
-private let __ea_pair_87: _T1 = (0x9df, .neutral)
-private let __ea_pair_88: _T1 = (0x9e0, .neutral)
-private let __ea_pair_89: _T1 = (0x9e1, .neutral)
-private let __ea_pair_8a: _T1 = (0x9e2, .neutral)
-private let __ea_pair_8b: _T1 = (0x9e3, .neutral)
-private let __ea_pair_8c: _T1 = (0xa01, .neutral)
-private let __ea_pair_8d: _T1 = (0xa02, .neutral)
-private let __ea_pair_8e: _T1 = (0xa03, .neutral)
-private let __ea_pair_8f: _T1 = (0xa05, .neutral)
-private let __ea_pair_8g: _T1 = (0xa06, .neutral)
-private let __ea_pair_8h: _T1 = (0xa07, .neutral)
-private let __ea_pair_8i: _T1 = (0xa08, .neutral)
-private let __ea_pair_8j: _T1 = (0xa09, .neutral)
-private let __ea_pair_8k: _T1 = (0xa0a, .neutral)
-private let __ea_pair_8l: _T1 = (0xa0f, .neutral)
-private let __ea_pair_8m: _T1 = (0xa10, .neutral)
-private let __ea_pair_8n: _T1 = (0xa2a, .neutral)
-private let __ea_pair_8o: _T1 = (0xa2b, .neutral)
-private let __ea_pair_8p: _T1 = (0xa2c, .neutral)
-private let __ea_pair_8q: _T1 = (0xa2d, .neutral)
-private let __ea_pair_8r: _T1 = (0xa2e, .neutral)
-private let __ea_pair_8s: _T1 = (0xa2f, .neutral)
-private let __ea_pair_8t: _T1 = (0xa30, .neutral)
-private let __ea_pair_8u: _T1 = (0xa32, .neutral)
-private let __ea_pair_8v: _T1 = (0xa33, .neutral)
-private let __ea_pair_8w: _T1 = (0xa35, .neutral)
-private let __ea_pair_8x: _T1 = (0xa36, .neutral)
-private let __ea_pair_8y: _T1 = (0xa38, .neutral)
-private let __ea_pair_8z: _T1 = (0xa39, .neutral)
-private let __ea_pair_90: _T1 = (0xa3c, .neutral)
-private let __ea_pair_91: _T1 = (0xa3e, .neutral)
-private let __ea_pair_92: _T1 = (0xa3f, .neutral)
-private let __ea_pair_93: _T1 = (0xa40, .neutral)
-private let __ea_pair_94: _T1 = (0xa41, .neutral)
-private let __ea_pair_95: _T1 = (0xa42, .neutral)
-private let __ea_pair_96: _T1 = (0xa47, .neutral)
-private let __ea_pair_97: _T1 = (0xa48, .neutral)
-private let __ea_pair_98: _T1 = (0xa4b, .neutral)
-private let __ea_pair_99: _T1 = (0xa4c, .neutral)
-private let __ea_pair_9a: _T1 = (0xa4d, .neutral)
-private let __ea_pair_9b: _T1 = (0xa51, .neutral)
-private let __ea_pair_9c: _T1 = (0xa59, .neutral)
-private let __ea_pair_9d: _T1 = (0xa5a, .neutral)
-private let __ea_pair_9e: _T1 = (0xa5b, .neutral)
-private let __ea_pair_9f: _T1 = (0xa5c, .neutral)
-private let __ea_pair_9g: _T1 = (0xa5e, .neutral)
-private let __ea_pair_9h: _T1 = (0xa81, .neutral)
-private let __ea_pair_9i: _T1 = (0xa82, .neutral)
-private let __ea_pair_9j: _T1 = (0xa83, .neutral)
-private let __ea_pair_9k: _T1 = (0xa8f, .neutral)
-private let __ea_pair_9l: _T1 = (0xa90, .neutral)
-private let __ea_pair_9m: _T1 = (0xa91, .neutral)
-private let __ea_pair_9n: _T1 = (0xaaa, .neutral)
-private let __ea_pair_9o: _T1 = (0xaab, .neutral)
-private let __ea_pair_9p: _T1 = (0xaac, .neutral)
-private let __ea_pair_9q: _T1 = (0xaad, .neutral)
-private let __ea_pair_9r: _T1 = (0xaae, .neutral)
-private let __ea_pair_9s: _T1 = (0xaaf, .neutral)
-private let __ea_pair_9t: _T1 = (0xab0, .neutral)
-private let __ea_pair_9u: _T1 = (0xab2, .neutral)
-private let __ea_pair_9v: _T1 = (0xab3, .neutral)
-private let __ea_pair_9w: _T1 = (0xab5, .neutral)
-private let __ea_pair_9x: _T1 = (0xab6, .neutral)
-private let __ea_pair_9y: _T1 = (0xab7, .neutral)
-private let __ea_pair_9z: _T1 = (0xab8, .neutral)
-private let __ea_pair_a0: _T1 = (0xab9, .neutral)
-private let __ea_pair_a1: _T1 = (0xac7, .neutral)
-private let __ea_pair_a2: _T1 = (0xac8, .neutral)
-private let __ea_pair_a3: _T1 = (0xac9, .neutral)
-private let __ea_pair_a4: _T1 = (0xacb, .neutral)
-private let __ea_pair_a5: _T1 = (0xacc, .neutral)
-private let __ea_pair_a6: _T1 = (0xacd, .neutral)
-private let __ea_pair_a7: _T1 = (0xad0, .neutral)
-private let __ea_pair_a8: _T1 = (0xae0, .neutral)
-private let __ea_pair_a9: _T1 = (0xae1, .neutral)
-private let __ea_pair_aa: _T1 = (0xae2, .neutral)
-private let __ea_pair_ab: _T1 = (0xae3, .neutral)
-private let __ea_pair_ac: _T1 = (0xaf9, .neutral)
-private let __ea_pair_ad: _T1 = (0xafa, .neutral)
-private let __ea_pair_ae: _T1 = (0xafb, .neutral)
-private let __ea_pair_af: _T1 = (0xafc, .neutral)
-private let __ea_pair_ag: _T1 = (0xafd, .neutral)
-private let __ea_pair_ah: _T1 = (0xafe, .neutral)
-private let __ea_pair_ai: _T1 = (0xaff, .neutral)
-private let __ea_pair_aj: _T1 = (0xb01, .neutral)
-private let __ea_pair_ak: _T1 = (0xb02, .neutral)
-private let __ea_pair_al: _T1 = (0xb03, .neutral)
-private let __ea_pair_am: _T1 = (0xb05, .neutral)
-private let __ea_pair_an: _T1 = (0xb06, .neutral)
-private let __ea_pair_ao: _T1 = (0xb07, .neutral)
-private let __ea_pair_ap: _T1 = (0xb08, .neutral)
-private let __ea_pair_aq: _T1 = (0xb09, .neutral)
-private let __ea_pair_ar: _T1 = (0xb0a, .neutral)
-private let __ea_pair_as: _T1 = (0xb0b, .neutral)
-private let __ea_pair_at: _T1 = (0xb0c, .neutral)
-private let __ea_pair_au: _T1 = (0xb0f, .neutral)
-private let __ea_pair_av: _T1 = (0xb10, .neutral)
-private let __ea_pair_aw: _T1 = (0xb2a, .neutral)
-private let __ea_pair_ax: _T1 = (0xb2b, .neutral)
-private let __ea_pair_ay: _T1 = (0xb2c, .neutral)
-private let __ea_pair_az: _T1 = (0xb2d, .neutral)
-private let __ea_pair_b0: _T1 = (0xb2e, .neutral)
-private let __ea_pair_b1: _T1 = (0xb2f, .neutral)
-private let __ea_pair_b2: _T1 = (0xb30, .neutral)
-private let __ea_pair_b3: _T1 = (0xb32, .neutral)
-private let __ea_pair_b4: _T1 = (0xb33, .neutral)
-private let __ea_pair_b5: _T1 = (0xb35, .neutral)
-private let __ea_pair_b6: _T1 = (0xb36, .neutral)
-private let __ea_pair_b7: _T1 = (0xb37, .neutral)
-private let __ea_pair_b8: _T1 = (0xb38, .neutral)
-private let __ea_pair_b9: _T1 = (0xb39, .neutral)
-private let __ea_pair_ba: _T1 = (0xb47, .neutral)
-private let __ea_pair_bb: _T1 = (0xb48, .neutral)
-private let __ea_pair_bc: _T1 = (0xb4b, .neutral)
-private let __ea_pair_bd: _T1 = (0xb4c, .neutral)
-private let __ea_pair_be: _T1 = (0xb4d, .neutral)
-private let __ea_pair_bf: _T1 = (0xb56, .neutral)
-private let __ea_pair_bg: _T1 = (0xb57, .neutral)
-private let __ea_pair_bh: _T1 = (0xb5c, .neutral)
-private let __ea_pair_bi: _T1 = (0xb5d, .neutral)
-private let __ea_pair_bj: _T1 = (0xb5f, .neutral)
-private let __ea_pair_bk: _T1 = (0xb60, .neutral)
-private let __ea_pair_bl: _T1 = (0xb61, .neutral)
-private let __ea_pair_bm: _T1 = (0xb62, .neutral)
-private let __ea_pair_bn: _T1 = (0xb63, .neutral)
-private let __ea_pair_bo: _T1 = (0xb82, .neutral)
-private let __ea_pair_bp: _T1 = (0xb83, .neutral)
-private let __ea_pair_bq: _T1 = (0xb85, .neutral)
-private let __ea_pair_br: _T1 = (0xb86, .neutral)
-private let __ea_pair_bs: _T1 = (0xb87, .neutral)
-private let __ea_pair_bt: _T1 = (0xb88, .neutral)
-private let __ea_pair_bu: _T1 = (0xb89, .neutral)
-private let __ea_pair_bv: _T1 = (0xb8a, .neutral)
-private let __ea_pair_bw: _T1 = (0xb8e, .neutral)
-private let __ea_pair_bx: _T1 = (0xb8f, .neutral)
-private let __ea_pair_by: _T1 = (0xb90, .neutral)
-private let __ea_pair_bz: _T1 = (0xb92, .neutral)
-private let __ea_pair_c0: _T1 = (0xb93, .neutral)
-private let __ea_pair_c1: _T1 = (0xb94, .neutral)
-private let __ea_pair_c2: _T1 = (0xb95, .neutral)
-private let __ea_pair_c3: _T1 = (0xb99, .neutral)
-private let __ea_pair_c4: _T1 = (0xb9a, .neutral)
-private let __ea_pair_c5: _T1 = (0xb9c, .neutral)
-private let __ea_pair_c6: _T1 = (0xb9e, .neutral)
-private let __ea_pair_c7: _T1 = (0xb9f, .neutral)
-private let __ea_pair_c8: _T1 = (0xba3, .neutral)
-private let __ea_pair_c9: _T1 = (0xba4, .neutral)
-private let __ea_pair_ca: _T1 = (0xba8, .neutral)
-private let __ea_pair_cb: _T1 = (0xba9, .neutral)
-private let __ea_pair_cc: _T1 = (0xbaa, .neutral)
-private let __ea_pair_cd: _T1 = (0xbbe, .neutral)
-private let __ea_pair_ce: _T1 = (0xbbf, .neutral)
-private let __ea_pair_cf: _T1 = (0xbc0, .neutral)
-private let __ea_pair_cg: _T1 = (0xbc1, .neutral)
-private let __ea_pair_ch: _T1 = (0xbc2, .neutral)
-private let __ea_pair_ci: _T1 = (0xbc6, .neutral)
-private let __ea_pair_cj: _T1 = (0xbc7, .neutral)
-private let __ea_pair_ck: _T1 = (0xbc8, .neutral)
-private let __ea_pair_cl: _T1 = (0xbca, .neutral)
-private let __ea_pair_cm: _T1 = (0xbcb, .neutral)
-private let __ea_pair_cn: _T1 = (0xbcc, .neutral)
-private let __ea_pair_co: _T1 = (0xbcd, .neutral)
-private let __ea_pair_cp: _T1 = (0xbd0, .neutral)
-private let __ea_pair_cq: _T1 = (0xbd7, .neutral)
-private let __ea_pair_cr: _T1 = (0xc0e, .neutral)
-private let __ea_pair_cs: _T1 = (0xc0f, .neutral)
-private let __ea_pair_ct: _T1 = (0xc10, .neutral)
-private let __ea_pair_cu: _T1 = (0xc3d, .neutral)
-private let __ea_pair_cv: _T1 = (0xc3e, .neutral)
-private let __ea_pair_cw: _T1 = (0xc3f, .neutral)
-private let __ea_pair_cx: _T1 = (0xc40, .neutral)
-private let __ea_pair_cy: _T1 = (0xc41, .neutral)
-private let __ea_pair_cz: _T1 = (0xc42, .neutral)
-private let __ea_pair_d0: _T1 = (0xc43, .neutral)
-private let __ea_pair_d1: _T1 = (0xc44, .neutral)
-private let __ea_pair_d2: _T1 = (0xc46, .neutral)
-private let __ea_pair_d3: _T1 = (0xc47, .neutral)
-private let __ea_pair_d4: _T1 = (0xc48, .neutral)
-private let __ea_pair_d5: _T1 = (0xc4a, .neutral)
-private let __ea_pair_d6: _T1 = (0xc4b, .neutral)
-private let __ea_pair_d7: _T1 = (0xc4c, .neutral)
-private let __ea_pair_d8: _T1 = (0xc4d, .neutral)
-private let __ea_pair_d9: _T1 = (0xc55, .neutral)
-private let __ea_pair_da: _T1 = (0xc56, .neutral)
-private let __ea_pair_db: _T1 = (0xc58, .neutral)
-private let __ea_pair_dc: _T1 = (0xc59, .neutral)
-private let __ea_pair_dd: _T1 = (0xc5a, .neutral)
-private let __ea_pair_de: _T1 = (0xc60, .neutral)
-private let __ea_pair_df: _T1 = (0xc61, .neutral)
-private let __ea_pair_dg: _T1 = (0xc62, .neutral)
-private let __ea_pair_dh: _T1 = (0xc63, .neutral)
-private let __ea_pair_di: _T1 = (0xc8e, .neutral)
-private let __ea_pair_dj: _T1 = (0xc8f, .neutral)
-private let __ea_pair_dk: _T1 = (0xc90, .neutral)
-private let __ea_pair_dl: _T1 = (0xcb5, .neutral)
-private let __ea_pair_dm: _T1 = (0xcb6, .neutral)
-private let __ea_pair_dn: _T1 = (0xcb7, .neutral)
-private let __ea_pair_do: _T1 = (0xcb8, .neutral)
-private let __ea_pair_dp: _T1 = (0xcb9, .neutral)
-private let __ea_pair_dq: _T1 = (0xcc6, .neutral)
-private let __ea_pair_dr: _T1 = (0xcc7, .neutral)
-private let __ea_pair_ds: _T1 = (0xcc8, .neutral)
-private let __ea_pair_dt: _T1 = (0xcca, .neutral)
-private let __ea_pair_du: _T1 = (0xccb, .neutral)
-private let __ea_pair_dv: _T1 = (0xccc, .neutral)
-private let __ea_pair_dw: _T1 = (0xccd, .neutral)
-private let __ea_pair_dx: _T1 = (0xcd5, .neutral)
-private let __ea_pair_dy: _T1 = (0xcd6, .neutral)
-private let __ea_pair_dz: _T1 = (0xcde, .neutral)
-private let __ea_pair_e0: _T1 = (0xce0, .neutral)
-private let __ea_pair_e1: _T1 = (0xce1, .neutral)
-private let __ea_pair_e2: _T1 = (0xce2, .neutral)
-private let __ea_pair_e3: _T1 = (0xce3, .neutral)
-private let __ea_pair_e4: _T1 = (0xcf1, .neutral)
-private let __ea_pair_e5: _T1 = (0xcf2, .neutral)
-private let __ea_pair_e6: _T1 = (0xd00, .neutral)
-private let __ea_pair_e7: _T1 = (0xd01, .neutral)
-private let __ea_pair_e8: _T1 = (0xd02, .neutral)
-private let __ea_pair_e9: _T1 = (0xd03, .neutral)
-private let __ea_pair_ea: _T1 = (0xd05, .neutral)
-private let __ea_pair_eb: _T1 = (0xd06, .neutral)
-private let __ea_pair_ec: _T1 = (0xd07, .neutral)
-private let __ea_pair_ed: _T1 = (0xd08, .neutral)
-private let __ea_pair_ee: _T1 = (0xd09, .neutral)
-private let __ea_pair_ef: _T1 = (0xd0a, .neutral)
-private let __ea_pair_eg: _T1 = (0xd0b, .neutral)
-private let __ea_pair_eh: _T1 = (0xd0c, .neutral)
-private let __ea_pair_ei: _T1 = (0xd0e, .neutral)
-private let __ea_pair_ej: _T1 = (0xd0f, .neutral)
-private let __ea_pair_ek: _T1 = (0xd10, .neutral)
-private let __ea_pair_el: _T1 = (0xd46, .neutral)
-private let __ea_pair_em: _T1 = (0xd47, .neutral)
-private let __ea_pair_en: _T1 = (0xd48, .neutral)
-private let __ea_pair_eo: _T1 = (0xd4a, .neutral)
-private let __ea_pair_ep: _T1 = (0xd4b, .neutral)
-private let __ea_pair_eq: _T1 = (0xd4c, .neutral)
-private let __ea_pair_er: _T1 = (0xd4d, .neutral)
-private let __ea_pair_es: _T1 = (0xd4e, .neutral)
-private let __ea_pair_et: _T1 = (0xd4f, .neutral)
-private let __ea_pair_eu: _T1 = (0xd82, .neutral)
-private let __ea_pair_ev: _T1 = (0xd83, .neutral)
-private let __ea_pair_ew: _T1 = (0xdbd, .neutral)
-private let __ea_pair_ex: _T1 = (0xdc0, .neutral)
-private let __ea_pair_ey: _T1 = (0xdc1, .neutral)
-private let __ea_pair_ez: _T1 = (0xdc2, .neutral)
-private let __ea_pair_f0: _T1 = (0xdc3, .neutral)
-private let __ea_pair_f1: _T1 = (0xdc4, .neutral)
-private let __ea_pair_f2: _T1 = (0xdc5, .neutral)
-private let __ea_pair_f3: _T1 = (0xdc6, .neutral)
-private let __ea_pair_f4: _T1 = (0xdca, .neutral)
-private let __ea_pair_f5: _T1 = (0xdcf, .neutral)
-private let __ea_pair_f6: _T1 = (0xdd0, .neutral)
-private let __ea_pair_f7: _T1 = (0xdd1, .neutral)
-private let __ea_pair_f8: _T1 = (0xdd2, .neutral)
-private let __ea_pair_f9: _T1 = (0xdd3, .neutral)
-private let __ea_pair_fa: _T1 = (0xdd4, .neutral)
-private let __ea_pair_fb: _T1 = (0xdd6, .neutral)
-private let __ea_pair_fc: _T1 = (0xdd8, .neutral)
-private let __ea_pair_fd: _T1 = (0xdd9, .neutral)
-private let __ea_pair_fe: _T1 = (0xdda, .neutral)
-private let __ea_pair_ff: _T1 = (0xddb, .neutral)
-private let __ea_pair_fg: _T1 = (0xddc, .neutral)
-private let __ea_pair_fh: _T1 = (0xddd, .neutral)
-private let __ea_pair_fi: _T1 = (0xdde, .neutral)
-private let __ea_pair_fj: _T1 = (0xddf, .neutral)
-private let __ea_pair_fk: _T1 = (0xdf2, .neutral)
-private let __ea_pair_fl: _T1 = (0xdf3, .neutral)
-private let __ea_pair_fm: _T1 = (0xdf4, .neutral)
-private let __ea_pair_fn: _T1 = (0xe81, .neutral)
-private let __ea_pair_fo: _T1 = (0xe82, .neutral)
-private let __ea_pair_fp: _T1 = (0xe84, .neutral)
-private let __ea_pair_fq: _T1 = (0xe86, .neutral)
-private let __ea_pair_fr: _T1 = (0xe87, .neutral)
-private let __ea_pair_fs: _T1 = (0xe88, .neutral)
-private let __ea_pair_ft: _T1 = (0xe89, .neutral)
-private let __ea_pair_fu: _T1 = (0xe8a, .neutral)
-private let __ea_pair_fv: _T1 = (0xea5, .neutral)
-private let __ea_pair_fw: _T1 = (0xec0, .neutral)
-private let __ea_pair_fx: _T1 = (0xec1, .neutral)
-private let __ea_pair_fy: _T1 = (0xec2, .neutral)
-private let __ea_pair_fz: _T1 = (0xec3, .neutral)
-private let __ea_pair_g0: _T1 = (0xec4, .neutral)
-private let __ea_pair_g1: _T1 = (0xec6, .neutral)
-private let __ea_pair_g2: _T1 = (0xec8, .neutral)
-private let __ea_pair_g3: _T1 = (0xec9, .neutral)
-private let __ea_pair_g4: _T1 = (0xeca, .neutral)
-private let __ea_pair_g5: _T1 = (0xecb, .neutral)
-private let __ea_pair_g6: _T1 = (0xecc, .neutral)
-private let __ea_pair_g7: _T1 = (0xecd, .neutral)
-private let __ea_pair_g8: _T1 = (0xedc, .neutral)
-private let __ea_pair_g9: _T1 = (0xedd, .neutral)
-private let __ea_pair_ga: _T1 = (0xede, .neutral)
-private let __ea_pair_gb: _T1 = (0xedf, .neutral)
-private let __ea_pair_gc: _T1 = (0x10c7, .neutral)
-private let __ea_pair_gd: _T1 = (0x10cd, .neutral)
-private let __ea_pair_ge: _T1 = (0x124a, .neutral)
-private let __ea_pair_gf: _T1 = (0x124b, .neutral)
-private let __ea_pair_gg: _T1 = (0x124c, .neutral)
-private let __ea_pair_gh: _T1 = (0x124d, .neutral)
-private let __ea_pair_gi: _T1 = (0x1250, .neutral)
-private let __ea_pair_gj: _T1 = (0x1251, .neutral)
-private let __ea_pair_gk: _T1 = (0x1252, .neutral)
-private let __ea_pair_gl: _T1 = (0x1253, .neutral)
-private let __ea_pair_gm: _T1 = (0x1254, .neutral)
-private let __ea_pair_gn: _T1 = (0x1255, .neutral)
-private let __ea_pair_go: _T1 = (0x1256, .neutral)
-private let __ea_pair_gp: _T1 = (0x1258, .neutral)
-private let __ea_pair_gq: _T1 = (0x125a, .neutral)
-private let __ea_pair_gr: _T1 = (0x125b, .neutral)
-private let __ea_pair_gs: _T1 = (0x125c, .neutral)
-private let __ea_pair_gt: _T1 = (0x125d, .neutral)
-private let __ea_pair_gu: _T1 = (0x128a, .neutral)
-private let __ea_pair_gv: _T1 = (0x128b, .neutral)
-private let __ea_pair_gw: _T1 = (0x128c, .neutral)
-private let __ea_pair_gx: _T1 = (0x128d, .neutral)
-private let __ea_pair_gy: _T1 = (0x12b2, .neutral)
-private let __ea_pair_gz: _T1 = (0x12b3, .neutral)
-private let __ea_pair_h0: _T1 = (0x12b4, .neutral)
-private let __ea_pair_h1: _T1 = (0x12b5, .neutral)
-private let __ea_pair_h2: _T1 = (0x12b8, .neutral)
-private let __ea_pair_h3: _T1 = (0x12b9, .neutral)
-private let __ea_pair_h4: _T1 = (0x12ba, .neutral)
-private let __ea_pair_h5: _T1 = (0x12bb, .neutral)
-private let __ea_pair_h6: _T1 = (0x12bc, .neutral)
-private let __ea_pair_h7: _T1 = (0x12bd, .neutral)
-private let __ea_pair_h8: _T1 = (0x12be, .neutral)
-private let __ea_pair_h9: _T1 = (0x12c0, .neutral)
-private let __ea_pair_ha: _T1 = (0x12c2, .neutral)
-private let __ea_pair_hb: _T1 = (0x12c3, .neutral)
-private let __ea_pair_hc: _T1 = (0x12c4, .neutral)
-private let __ea_pair_hd: _T1 = (0x12c5, .neutral)
-private let __ea_pair_he: _T1 = (0x1312, .neutral)
-private let __ea_pair_hf: _T1 = (0x1313, .neutral)
-private let __ea_pair_hg: _T1 = (0x1314, .neutral)
-private let __ea_pair_hh: _T1 = (0x1315, .neutral)
-private let __ea_pair_hi: _T1 = (0x13f8, .neutral)
-private let __ea_pair_hj: _T1 = (0x13f9, .neutral)
-private let __ea_pair_hk: _T1 = (0x13fa, .neutral)
-private let __ea_pair_hl: _T1 = (0x13fb, .neutral)
-private let __ea_pair_hm: _T1 = (0x13fc, .neutral)
-private let __ea_pair_hn: _T1 = (0x13fd, .neutral)
-private let __ea_pair_ho: _T1 = (0x170e, .neutral)
-private let __ea_pair_hp: _T1 = (0x170f, .neutral)
-private let __ea_pair_hq: _T1 = (0x1710, .neutral)
-private let __ea_pair_hr: _T1 = (0x1711, .neutral)
-private let __ea_pair_hs: _T1 = (0x1712, .neutral)
-private let __ea_pair_ht: _T1 = (0x1713, .neutral)
-private let __ea_pair_hu: _T1 = (0x1714, .neutral)
-private let __ea_pair_hv: _T1 = (0x176e, .neutral)
-private let __ea_pair_hw: _T1 = (0x176f, .neutral)
-private let __ea_pair_hx: _T1 = (0x1770, .neutral)
-private let __ea_pair_hy: _T1 = (0x1772, .neutral)
-private let __ea_pair_hz: _T1 = (0x1773, .neutral)
-private let __ea_pair_i0: _T1 = (0x1940, .neutral)
-private let __ea_pair_i1: _T1 = (0x1970, .neutral)
-private let __ea_pair_i2: _T1 = (0x1971, .neutral)
-private let __ea_pair_i3: _T1 = (0x1972, .neutral)
-private let __ea_pair_i4: _T1 = (0x1973, .neutral)
-private let __ea_pair_i5: _T1 = (0x1974, .neutral)
-private let __ea_pair_i6: _T1 = (0x1f18, .neutral)
-private let __ea_pair_i7: _T1 = (0x1f19, .neutral)
-private let __ea_pair_i8: _T1 = (0x1f1a, .neutral)
-private let __ea_pair_i9: _T1 = (0x1f1b, .neutral)
-private let __ea_pair_ia: _T1 = (0x1f1c, .neutral)
-private let __ea_pair_ib: _T1 = (0x1f1d, .neutral)
-private let __ea_pair_ic: _T1 = (0x1f48, .neutral)
-private let __ea_pair_id: _T1 = (0x1f49, .neutral)
-private let __ea_pair_ie: _T1 = (0x1f4a, .neutral)
-private let __ea_pair_if: _T1 = (0x1f4b, .neutral)
-private let __ea_pair_ig: _T1 = (0x1f4c, .neutral)
-private let __ea_pair_ih: _T1 = (0x1f4d, .neutral)
-private let __ea_pair_ii: _T1 = (0x1f50, .neutral)
-private let __ea_pair_ij: _T1 = (0x1f51, .neutral)
-private let __ea_pair_ik: _T1 = (0x1f52, .neutral)
-private let __ea_pair_il: _T1 = (0x1f53, .neutral)
-private let __ea_pair_im: _T1 = (0x1f54, .neutral)
-private let __ea_pair_in: _T1 = (0x1f55, .neutral)
-private let __ea_pair_io: _T1 = (0x1f56, .neutral)
-private let __ea_pair_ip: _T1 = (0x1f57, .neutral)
-private let __ea_pair_iq: _T1 = (0x1f59, .neutral)
-private let __ea_pair_ir: _T1 = (0x1f5b, .neutral)
-private let __ea_pair_is: _T1 = (0x1f5d, .neutral)
-private let __ea_pair_it: _T1 = (0x1fd6, .neutral)
-private let __ea_pair_iu: _T1 = (0x1fd7, .neutral)
-private let __ea_pair_iv: _T1 = (0x1fd8, .neutral)
-private let __ea_pair_iw: _T1 = (0x1fd9, .neutral)
-private let __ea_pair_ix: _T1 = (0x1fda, .neutral)
-private let __ea_pair_iy: _T1 = (0x1fdb, .neutral)
-private let __ea_pair_iz: _T1 = (0x1ff2, .neutral)
-private let __ea_pair_j0: _T1 = (0x1ff3, .neutral)
-private let __ea_pair_j1: _T1 = (0x1ff4, .neutral)
-private let __ea_pair_j2: _T1 = (0x2010, .ambiguous)
-private let __ea_pair_j3: _T1 = (0x2011, .neutral)
-private let __ea_pair_j4: _T1 = (0x2012, .neutral)
-private let __ea_pair_j5: _T1 = (0x2013, .ambiguous)
-private let __ea_pair_j6: _T1 = (0x2014, .ambiguous)
-private let __ea_pair_j7: _T1 = (0x2015, .ambiguous)
-private let __ea_pair_j8: _T1 = (0x2016, .ambiguous)
-private let __ea_pair_j9: _T1 = (0x2017, .neutral)
-private let __ea_pair_ja: _T1 = (0x2018, .ambiguous)
-private let __ea_pair_jb: _T1 = (0x2019, .ambiguous)
-private let __ea_pair_jc: _T1 = (0x201a, .neutral)
-private let __ea_pair_jd: _T1 = (0x201b, .neutral)
-private let __ea_pair_je: _T1 = (0x201c, .ambiguous)
-private let __ea_pair_jf: _T1 = (0x201d, .ambiguous)
-private let __ea_pair_jg: _T1 = (0x201e, .neutral)
-private let __ea_pair_jh: _T1 = (0x201f, .neutral)
-private let __ea_pair_ji: _T1 = (0x2020, .ambiguous)
-private let __ea_pair_jj: _T1 = (0x2021, .ambiguous)
-private let __ea_pair_jk: _T1 = (0x2022, .ambiguous)
-private let __ea_pair_jl: _T1 = (0x2023, .neutral)
-private let __ea_pair_jm: _T1 = (0x2024, .ambiguous)
-private let __ea_pair_jn: _T1 = (0x2025, .ambiguous)
-private let __ea_pair_jo: _T1 = (0x2026, .ambiguous)
-private let __ea_pair_jp: _T1 = (0x2027, .ambiguous)
-private let __ea_pair_jq: _T1 = (0x2028, .neutral)
-private let __ea_pair_jr: _T1 = (0x2029, .neutral)
-private let __ea_pair_js: _T1 = (0x202a, .neutral)
-private let __ea_pair_jt: _T1 = (0x202b, .neutral)
-private let __ea_pair_ju: _T1 = (0x202c, .neutral)
-private let __ea_pair_jv: _T1 = (0x202d, .neutral)
-private let __ea_pair_jw: _T1 = (0x202e, .neutral)
-private let __ea_pair_jx: _T1 = (0x202f, .neutral)
-private let __ea_pair_jy: _T1 = (0x2030, .ambiguous)
-private let __ea_pair_jz: _T1 = (0x2031, .neutral)
-private let __ea_pair_k0: _T1 = (0x2032, .ambiguous)
-private let __ea_pair_k1: _T1 = (0x2033, .ambiguous)
-private let __ea_pair_k2: _T1 = (0x2034, .neutral)
-private let __ea_pair_k3: _T1 = (0x2035, .ambiguous)
-private let __ea_pair_k4: _T1 = (0x2036, .neutral)
-private let __ea_pair_k5: _T1 = (0x2037, .neutral)
-private let __ea_pair_k6: _T1 = (0x2038, .neutral)
-private let __ea_pair_k7: _T1 = (0x2039, .neutral)
-private let __ea_pair_k8: _T1 = (0x203a, .neutral)
-private let __ea_pair_k9: _T1 = (0x203b, .ambiguous)
-private let __ea_pair_ka: _T1 = (0x203c, .neutral)
-private let __ea_pair_kb: _T1 = (0x203d, .neutral)
-private let __ea_pair_kc: _T1 = (0x203e, .ambiguous)
-private let __ea_pair_kd: _T1 = (0x2074, .ambiguous)
-private let __ea_pair_ke: _T1 = (0x207f, .ambiguous)
-private let __ea_pair_kf: _T1 = (0x2080, .neutral)
-private let __ea_pair_kg: _T1 = (0x2081, .ambiguous)
-private let __ea_pair_kh: _T1 = (0x2082, .ambiguous)
-private let __ea_pair_ki: _T1 = (0x2083, .ambiguous)
-private let __ea_pair_kj: _T1 = (0x2084, .ambiguous)
-private let __ea_pair_kk: _T1 = (0x20a9, .halfwidth)
-private let __ea_pair_kl: _T1 = (0x20aa, .neutral)
-private let __ea_pair_km: _T1 = (0x20ab, .neutral)
-private let __ea_pair_kn: _T1 = (0x20ac, .ambiguous)
-private let __ea_pair_ko: _T1 = (0x2100, .neutral)
-private let __ea_pair_kp: _T1 = (0x2101, .neutral)
-private let __ea_pair_kq: _T1 = (0x2102, .neutral)
-private let __ea_pair_kr: _T1 = (0x2103, .ambiguous)
-private let __ea_pair_ks: _T1 = (0x2104, .neutral)
-private let __ea_pair_kt: _T1 = (0x2105, .ambiguous)
-private let __ea_pair_ku: _T1 = (0x2106, .neutral)
-private let __ea_pair_kv: _T1 = (0x2107, .neutral)
-private let __ea_pair_kw: _T1 = (0x2108, .neutral)
-private let __ea_pair_kx: _T1 = (0x2109, .ambiguous)
-private let __ea_pair_ky: _T1 = (0x2113, .ambiguous)
-private let __ea_pair_kz: _T1 = (0x2114, .neutral)
-private let __ea_pair_l0: _T1 = (0x2115, .neutral)
-private let __ea_pair_l1: _T1 = (0x2116, .ambiguous)
-private let __ea_pair_l2: _T1 = (0x2121, .ambiguous)
-private let __ea_pair_l3: _T1 = (0x2122, .ambiguous)
-private let __ea_pair_l4: _T1 = (0x2123, .neutral)
-private let __ea_pair_l5: _T1 = (0x2124, .neutral)
-private let __ea_pair_l6: _T1 = (0x2125, .neutral)
-private let __ea_pair_l7: _T1 = (0x2126, .ambiguous)
-private let __ea_pair_l8: _T1 = (0x2127, .neutral)
-private let __ea_pair_l9: _T1 = (0x2128, .neutral)
-private let __ea_pair_la: _T1 = (0x2129, .neutral)
-private let __ea_pair_lb: _T1 = (0x212a, .neutral)
-private let __ea_pair_lc: _T1 = (0x212b, .ambiguous)
-private let __ea_pair_ld: _T1 = (0x2153, .ambiguous)
-private let __ea_pair_le: _T1 = (0x2154, .ambiguous)
-private let __ea_pair_lf: _T1 = (0x2155, .neutral)
-private let __ea_pair_lg: _T1 = (0x2156, .neutral)
-private let __ea_pair_lh: _T1 = (0x2157, .neutral)
-private let __ea_pair_li: _T1 = (0x2158, .neutral)
-private let __ea_pair_lj: _T1 = (0x2159, .neutral)
-private let __ea_pair_lk: _T1 = (0x215a, .neutral)
-private let __ea_pair_ll: _T1 = (0x215b, .ambiguous)
-private let __ea_pair_lm: _T1 = (0x215c, .ambiguous)
-private let __ea_pair_ln: _T1 = (0x215d, .ambiguous)
-private let __ea_pair_lo: _T1 = (0x215e, .ambiguous)
-private let __ea_pair_lp: _T1 = (0x215f, .neutral)
-private let __ea_pair_lq: _T1 = (0x216c, .neutral)
-private let __ea_pair_lr: _T1 = (0x216d, .neutral)
-private let __ea_pair_ls: _T1 = (0x216e, .neutral)
-private let __ea_pair_lt: _T1 = (0x216f, .neutral)
-private let __ea_pair_lu: _T1 = (0x2189, .ambiguous)
-private let __ea_pair_lv: _T1 = (0x218a, .neutral)
-private let __ea_pair_lw: _T1 = (0x218b, .neutral)
-private let __ea_pair_lx: _T1 = (0x21b8, .ambiguous)
-private let __ea_pair_ly: _T1 = (0x21b9, .ambiguous)
-private let __ea_pair_lz: _T1 = (0x21d2, .ambiguous)
-private let __ea_pair_m0: _T1 = (0x21d3, .neutral)
-private let __ea_pair_m1: _T1 = (0x21d4, .ambiguous)
-private let __ea_pair_m2: _T1 = (0x21e7, .ambiguous)
-private let __ea_pair_m3: _T1 = (0x2200, .ambiguous)
-private let __ea_pair_m4: _T1 = (0x2201, .neutral)
-private let __ea_pair_m5: _T1 = (0x2202, .ambiguous)
-private let __ea_pair_m6: _T1 = (0x2203, .ambiguous)
-private let __ea_pair_m7: _T1 = (0x2204, .neutral)
-private let __ea_pair_m8: _T1 = (0x2205, .neutral)
-private let __ea_pair_m9: _T1 = (0x2206, .neutral)
-private let __ea_pair_ma: _T1 = (0x2207, .ambiguous)
-private let __ea_pair_mb: _T1 = (0x2208, .ambiguous)
-private let __ea_pair_mc: _T1 = (0x2209, .neutral)
-private let __ea_pair_md: _T1 = (0x220a, .neutral)
-private let __ea_pair_me: _T1 = (0x220b, .ambiguous)
-private let __ea_pair_mf: _T1 = (0x220c, .neutral)
-private let __ea_pair_mg: _T1 = (0x220d, .neutral)
-private let __ea_pair_mh: _T1 = (0x220e, .neutral)
-private let __ea_pair_mi: _T1 = (0x220f, .ambiguous)
-private let __ea_pair_mj: _T1 = (0x2210, .neutral)
-private let __ea_pair_mk: _T1 = (0x2211, .ambiguous)
-private let __ea_pair_ml: _T1 = (0x2212, .neutral)
-private let __ea_pair_mm: _T1 = (0x2213, .neutral)
-private let __ea_pair_mn: _T1 = (0x2214, .neutral)
-private let __ea_pair_mo: _T1 = (0x2215, .ambiguous)
-private let __ea_pair_mp: _T1 = (0x2216, .neutral)
-private let __ea_pair_mq: _T1 = (0x2217, .neutral)
-private let __ea_pair_mr: _T1 = (0x2218, .neutral)
-private let __ea_pair_ms: _T1 = (0x2219, .neutral)
-private let __ea_pair_mt: _T1 = (0x221a, .ambiguous)
-private let __ea_pair_mu: _T1 = (0x221b, .neutral)
-private let __ea_pair_mv: _T1 = (0x221c, .neutral)
-private let __ea_pair_mw: _T1 = (0x221d, .ambiguous)
-private let __ea_pair_mx: _T1 = (0x221e, .ambiguous)
-private let __ea_pair_my: _T1 = (0x221f, .ambiguous)
-private let __ea_pair_mz: _T1 = (0x2220, .ambiguous)
-private let __ea_pair_n0: _T1 = (0x2221, .neutral)
-private let __ea_pair_n1: _T1 = (0x2222, .neutral)
-private let __ea_pair_n2: _T1 = (0x2223, .ambiguous)
-private let __ea_pair_n3: _T1 = (0x2224, .neutral)
-private let __ea_pair_n4: _T1 = (0x2225, .ambiguous)
-private let __ea_pair_n5: _T1 = (0x2226, .neutral)
-private let __ea_pair_n6: _T1 = (0x2227, .ambiguous)
-private let __ea_pair_n7: _T1 = (0x2228, .ambiguous)
-private let __ea_pair_n8: _T1 = (0x2229, .ambiguous)
-private let __ea_pair_n9: _T1 = (0x222a, .ambiguous)
-private let __ea_pair_na: _T1 = (0x222b, .ambiguous)
-private let __ea_pair_nb: _T1 = (0x222c, .ambiguous)
-private let __ea_pair_nc: _T1 = (0x222d, .neutral)
-private let __ea_pair_nd: _T1 = (0x222e, .ambiguous)
-private let __ea_pair_ne: _T1 = (0x222f, .neutral)
-private let __ea_pair_nf: _T1 = (0x2230, .neutral)
-private let __ea_pair_ng: _T1 = (0x2231, .neutral)
-private let __ea_pair_nh: _T1 = (0x2232, .neutral)
-private let __ea_pair_ni: _T1 = (0x2233, .neutral)
-private let __ea_pair_nj: _T1 = (0x2234, .ambiguous)
-private let __ea_pair_nk: _T1 = (0x2235, .ambiguous)
-private let __ea_pair_nl: _T1 = (0x2236, .ambiguous)
-private let __ea_pair_nm: _T1 = (0x2237, .ambiguous)
-private let __ea_pair_nn: _T1 = (0x2238, .neutral)
-private let __ea_pair_no: _T1 = (0x2239, .neutral)
-private let __ea_pair_np: _T1 = (0x223a, .neutral)
-private let __ea_pair_nq: _T1 = (0x223b, .neutral)
-private let __ea_pair_nr: _T1 = (0x223c, .ambiguous)
-private let __ea_pair_ns: _T1 = (0x223d, .ambiguous)
-private let __ea_pair_nt: _T1 = (0x2248, .ambiguous)
-private let __ea_pair_nu: _T1 = (0x2249, .neutral)
-private let __ea_pair_nv: _T1 = (0x224a, .neutral)
-private let __ea_pair_nw: _T1 = (0x224b, .neutral)
-private let __ea_pair_nx: _T1 = (0x224c, .ambiguous)
-private let __ea_pair_ny: _T1 = (0x224d, .neutral)
-private let __ea_pair_nz: _T1 = (0x224e, .neutral)
-private let __ea_pair_o0: _T1 = (0x224f, .neutral)
-private let __ea_pair_o1: _T1 = (0x2250, .neutral)
-private let __ea_pair_o2: _T1 = (0x2251, .neutral)
-private let __ea_pair_o3: _T1 = (0x2252, .ambiguous)
-private let __ea_pair_o4: _T1 = (0x2260, .ambiguous)
-private let __ea_pair_o5: _T1 = (0x2261, .ambiguous)
-private let __ea_pair_o6: _T1 = (0x2262, .neutral)
-private let __ea_pair_o7: _T1 = (0x2263, .neutral)
-private let __ea_pair_o8: _T1 = (0x2264, .ambiguous)
-private let __ea_pair_o9: _T1 = (0x2265, .ambiguous)
-private let __ea_pair_oa: _T1 = (0x2266, .ambiguous)
-private let __ea_pair_ob: _T1 = (0x2267, .ambiguous)
-private let __ea_pair_oc: _T1 = (0x2268, .neutral)
-private let __ea_pair_od: _T1 = (0x2269, .neutral)
-private let __ea_pair_oe: _T1 = (0x226a, .ambiguous)
-private let __ea_pair_of: _T1 = (0x226b, .ambiguous)
-private let __ea_pair_og: _T1 = (0x226c, .neutral)
-private let __ea_pair_oh: _T1 = (0x226d, .neutral)
-private let __ea_pair_oi: _T1 = (0x226e, .ambiguous)
-private let __ea_pair_oj: _T1 = (0x226f, .ambiguous)
-private let __ea_pair_ok: _T1 = (0x2282, .ambiguous)
-private let __ea_pair_ol: _T1 = (0x2283, .ambiguous)
-private let __ea_pair_om: _T1 = (0x2284, .neutral)
-private let __ea_pair_on: _T1 = (0x2285, .neutral)
-private let __ea_pair_oo: _T1 = (0x2286, .ambiguous)
-private let __ea_pair_op: _T1 = (0x2287, .ambiguous)
-private let __ea_pair_oq: _T1 = (0x2295, .ambiguous)
-private let __ea_pair_or: _T1 = (0x2296, .neutral)
-private let __ea_pair_os: _T1 = (0x2297, .neutral)
-private let __ea_pair_ot: _T1 = (0x2298, .neutral)
-private let __ea_pair_ou: _T1 = (0x2299, .ambiguous)
-private let __ea_pair_ov: _T1 = (0x22a5, .ambiguous)
-private let __ea_pair_ow: _T1 = (0x22bf, .ambiguous)
-private let __ea_pair_ox: _T1 = (0x2312, .ambiguous)
-private let __ea_pair_oy: _T1 = (0x2313, .neutral)
-private let __ea_pair_oz: _T1 = (0x2314, .neutral)
-private let __ea_pair_p0: _T1 = (0x2315, .neutral)
-private let __ea_pair_p1: _T1 = (0x2316, .neutral)
-private let __ea_pair_p2: _T1 = (0x2317, .neutral)
-private let __ea_pair_p3: _T1 = (0x2318, .neutral)
-private let __ea_pair_p4: _T1 = (0x2319, .neutral)
-private let __ea_pair_p5: _T1 = (0x231a, .wide)
-private let __ea_pair_p6: _T1 = (0x231b, .wide)
-private let __ea_pair_p7: _T1 = (0x2329, .wide)
-private let __ea_pair_p8: _T1 = (0x232a, .wide)
-private let __ea_pair_p9: _T1 = (0x23e9, .wide)
-private let __ea_pair_pa: _T1 = (0x23ea, .wide)
-private let __ea_pair_pb: _T1 = (0x23eb, .wide)
-private let __ea_pair_pc: _T1 = (0x23ec, .wide)
-private let __ea_pair_pd: _T1 = (0x23ed, .neutral)
-private let __ea_pair_pe: _T1 = (0x23ee, .neutral)
-private let __ea_pair_pf: _T1 = (0x23ef, .neutral)
-private let __ea_pair_pg: _T1 = (0x23f0, .wide)
-private let __ea_pair_ph: _T1 = (0x23f1, .neutral)
-private let __ea_pair_pi: _T1 = (0x23f2, .neutral)
-private let __ea_pair_pj: _T1 = (0x23f3, .wide)
-private let __ea_pair_pk: _T1 = (0x24ea, .neutral)
-private let __ea_pair_pl: _T1 = (0x254c, .neutral)
-private let __ea_pair_pm: _T1 = (0x254d, .neutral)
-private let __ea_pair_pn: _T1 = (0x254e, .neutral)
-private let __ea_pair_po: _T1 = (0x254f, .neutral)
-private let __ea_pair_pp: _T1 = (0x2590, .neutral)
-private let __ea_pair_pq: _T1 = (0x2591, .neutral)
-private let __ea_pair_pr: _T1 = (0x2592, .ambiguous)
-private let __ea_pair_ps: _T1 = (0x2593, .ambiguous)
-private let __ea_pair_pt: _T1 = (0x2594, .ambiguous)
-private let __ea_pair_pu: _T1 = (0x2595, .ambiguous)
-private let __ea_pair_pv: _T1 = (0x25a0, .ambiguous)
-private let __ea_pair_pw: _T1 = (0x25a1, .ambiguous)
-private let __ea_pair_px: _T1 = (0x25a2, .neutral)
-private let __ea_pair_py: _T1 = (0x25a3, .ambiguous)
-private let __ea_pair_pz: _T1 = (0x25a4, .ambiguous)
-private let __ea_pair_q0: _T1 = (0x25a5, .ambiguous)
-private let __ea_pair_q1: _T1 = (0x25a6, .ambiguous)
-private let __ea_pair_q2: _T1 = (0x25a7, .ambiguous)
-private let __ea_pair_q3: _T1 = (0x25a8, .ambiguous)
-private let __ea_pair_q4: _T1 = (0x25a9, .ambiguous)
-private let __ea_pair_q5: _T1 = (0x25aa, .neutral)
-private let __ea_pair_q6: _T1 = (0x25ab, .neutral)
-private let __ea_pair_q7: _T1 = (0x25ac, .neutral)
-private let __ea_pair_q8: _T1 = (0x25ad, .neutral)
-private let __ea_pair_q9: _T1 = (0x25ae, .neutral)
-private let __ea_pair_qa: _T1 = (0x25af, .neutral)
-private let __ea_pair_qb: _T1 = (0x25b0, .neutral)
-private let __ea_pair_qc: _T1 = (0x25b1, .neutral)
-private let __ea_pair_qd: _T1 = (0x25b2, .ambiguous)
-private let __ea_pair_qe: _T1 = (0x25b3, .ambiguous)
-private let __ea_pair_qf: _T1 = (0x25b4, .neutral)
-private let __ea_pair_qg: _T1 = (0x25b5, .neutral)
-private let __ea_pair_qh: _T1 = (0x25b6, .ambiguous)
-private let __ea_pair_qi: _T1 = (0x25b7, .ambiguous)
-private let __ea_pair_qj: _T1 = (0x25b8, .neutral)
-private let __ea_pair_qk: _T1 = (0x25b9, .neutral)
-private let __ea_pair_ql: _T1 = (0x25ba, .neutral)
-private let __ea_pair_qm: _T1 = (0x25bb, .neutral)
-private let __ea_pair_qn: _T1 = (0x25bc, .ambiguous)
-private let __ea_pair_qo: _T1 = (0x25bd, .ambiguous)
-private let __ea_pair_qp: _T1 = (0x25be, .neutral)
-private let __ea_pair_qq: _T1 = (0x25bf, .neutral)
-private let __ea_pair_qr: _T1 = (0x25c0, .ambiguous)
-private let __ea_pair_qs: _T1 = (0x25c1, .ambiguous)
-private let __ea_pair_qt: _T1 = (0x25c2, .neutral)
-private let __ea_pair_qu: _T1 = (0x25c3, .neutral)
-private let __ea_pair_qv: _T1 = (0x25c4, .neutral)
-private let __ea_pair_qw: _T1 = (0x25c5, .neutral)
-private let __ea_pair_qx: _T1 = (0x25c6, .ambiguous)
-private let __ea_pair_qy: _T1 = (0x25c7, .ambiguous)
-private let __ea_pair_qz: _T1 = (0x25c8, .ambiguous)
-private let __ea_pair_r0: _T1 = (0x25c9, .neutral)
-private let __ea_pair_r1: _T1 = (0x25ca, .neutral)
-private let __ea_pair_r2: _T1 = (0x25cb, .ambiguous)
-private let __ea_pair_r3: _T1 = (0x25cc, .neutral)
-private let __ea_pair_r4: _T1 = (0x25cd, .neutral)
-private let __ea_pair_r5: _T1 = (0x25ce, .ambiguous)
-private let __ea_pair_r6: _T1 = (0x25cf, .ambiguous)
-private let __ea_pair_r7: _T1 = (0x25d0, .ambiguous)
-private let __ea_pair_r8: _T1 = (0x25d1, .ambiguous)
-private let __ea_pair_r9: _T1 = (0x25e2, .ambiguous)
-private let __ea_pair_ra: _T1 = (0x25e3, .ambiguous)
-private let __ea_pair_rb: _T1 = (0x25e4, .ambiguous)
-private let __ea_pair_rc: _T1 = (0x25e5, .ambiguous)
-private let __ea_pair_rd: _T1 = (0x25ef, .ambiguous)
-private let __ea_pair_re: _T1 = (0x25fd, .wide)
-private let __ea_pair_rf: _T1 = (0x25fe, .wide)
-private let __ea_pair_rg: _T1 = (0x25ff, .neutral)
-private let __ea_pair_rh: _T1 = (0x2600, .neutral)
-private let __ea_pair_ri: _T1 = (0x2601, .neutral)
-private let __ea_pair_rj: _T1 = (0x2602, .neutral)
-private let __ea_pair_rk: _T1 = (0x2603, .neutral)
-private let __ea_pair_rl: _T1 = (0x2604, .neutral)
-private let __ea_pair_rm: _T1 = (0x2605, .ambiguous)
-private let __ea_pair_rn: _T1 = (0x2606, .ambiguous)
-private let __ea_pair_ro: _T1 = (0x2607, .neutral)
-private let __ea_pair_rp: _T1 = (0x2608, .neutral)
-private let __ea_pair_rq: _T1 = (0x2609, .ambiguous)
-private let __ea_pair_rr: _T1 = (0x260a, .neutral)
-private let __ea_pair_rs: _T1 = (0x260b, .neutral)
-private let __ea_pair_rt: _T1 = (0x260c, .neutral)
-private let __ea_pair_ru: _T1 = (0x260d, .neutral)
-private let __ea_pair_rv: _T1 = (0x260e, .ambiguous)
-private let __ea_pair_rw: _T1 = (0x260f, .ambiguous)
-private let __ea_pair_rx: _T1 = (0x2610, .neutral)
-private let __ea_pair_ry: _T1 = (0x2611, .neutral)
-private let __ea_pair_rz: _T1 = (0x2612, .neutral)
-private let __ea_pair_s0: _T1 = (0x2613, .neutral)
-private let __ea_pair_s1: _T1 = (0x2614, .wide)
-private let __ea_pair_s2: _T1 = (0x2615, .wide)
-private let __ea_pair_s3: _T1 = (0x2616, .neutral)
-private let __ea_pair_s4: _T1 = (0x2617, .neutral)
-private let __ea_pair_s5: _T1 = (0x2618, .neutral)
-private let __ea_pair_s6: _T1 = (0x2619, .neutral)
-private let __ea_pair_s7: _T1 = (0x261a, .neutral)
-private let __ea_pair_s8: _T1 = (0x261b, .neutral)
-private let __ea_pair_s9: _T1 = (0x261c, .ambiguous)
-private let __ea_pair_sa: _T1 = (0x261d, .neutral)
-private let __ea_pair_sb: _T1 = (0x261e, .ambiguous)
-private let __ea_pair_sc: _T1 = (0x2640, .ambiguous)
-private let __ea_pair_sd: _T1 = (0x2641, .neutral)
-private let __ea_pair_se: _T1 = (0x2642, .ambiguous)
-private let __ea_pair_sf: _T1 = (0x2643, .neutral)
-private let __ea_pair_sg: _T1 = (0x2644, .neutral)
-private let __ea_pair_sh: _T1 = (0x2645, .neutral)
-private let __ea_pair_si: _T1 = (0x2646, .neutral)
-private let __ea_pair_sj: _T1 = (0x2647, .neutral)
-private let __ea_pair_sk: _T1 = (0x2660, .ambiguous)
-private let __ea_pair_sl: _T1 = (0x2661, .ambiguous)
-private let __ea_pair_sm: _T1 = (0x2662, .neutral)
-private let __ea_pair_sn: _T1 = (0x2663, .ambiguous)
-private let __ea_pair_so: _T1 = (0x2664, .ambiguous)
-private let __ea_pair_sp: _T1 = (0x2665, .ambiguous)
-private let __ea_pair_sq: _T1 = (0x2666, .neutral)
-private let __ea_pair_sr: _T1 = (0x2667, .ambiguous)
-private let __ea_pair_ss: _T1 = (0x2668, .ambiguous)
-private let __ea_pair_st: _T1 = (0x2669, .ambiguous)
-private let __ea_pair_su: _T1 = (0x266a, .ambiguous)
-private let __ea_pair_sv: _T1 = (0x266b, .neutral)
-private let __ea_pair_sw: _T1 = (0x266c, .ambiguous)
-private let __ea_pair_sx: _T1 = (0x266d, .ambiguous)
-private let __ea_pair_sy: _T1 = (0x266e, .neutral)
-private let __ea_pair_sz: _T1 = (0x266f, .ambiguous)
-private let __ea_pair_t0: _T1 = (0x267f, .wide)
-private let __ea_pair_t1: _T1 = (0x2693, .wide)
-private let __ea_pair_t2: _T1 = (0x269e, .ambiguous)
-private let __ea_pair_t3: _T1 = (0x269f, .ambiguous)
-private let __ea_pair_t4: _T1 = (0x26a0, .neutral)
-private let __ea_pair_t5: _T1 = (0x26a1, .wide)
-private let __ea_pair_t6: _T1 = (0x26a2, .neutral)
-private let __ea_pair_t7: _T1 = (0x26a3, .neutral)
-private let __ea_pair_t8: _T1 = (0x26a4, .neutral)
-private let __ea_pair_t9: _T1 = (0x26a5, .neutral)
-private let __ea_pair_ta: _T1 = (0x26a6, .neutral)
-private let __ea_pair_tb: _T1 = (0x26a7, .neutral)
-private let __ea_pair_tc: _T1 = (0x26a8, .neutral)
-private let __ea_pair_td: _T1 = (0x26a9, .neutral)
-private let __ea_pair_te: _T1 = (0x26aa, .wide)
-private let __ea_pair_tf: _T1 = (0x26ab, .wide)
-private let __ea_pair_tg: _T1 = (0x26bd, .wide)
-private let __ea_pair_th: _T1 = (0x26be, .wide)
-private let __ea_pair_ti: _T1 = (0x26bf, .ambiguous)
-private let __ea_pair_tj: _T1 = (0x26c0, .neutral)
-private let __ea_pair_tk: _T1 = (0x26c1, .neutral)
-private let __ea_pair_tl: _T1 = (0x26c2, .neutral)
-private let __ea_pair_tm: _T1 = (0x26c3, .neutral)
-private let __ea_pair_tn: _T1 = (0x26c4, .wide)
-private let __ea_pair_to: _T1 = (0x26c5, .wide)
-private let __ea_pair_tp: _T1 = (0x26c6, .ambiguous)
-private let __ea_pair_tq: _T1 = (0x26c7, .ambiguous)
-private let __ea_pair_tr: _T1 = (0x26c8, .ambiguous)
-private let __ea_pair_ts: _T1 = (0x26c9, .ambiguous)
-private let __ea_pair_tt: _T1 = (0x26ca, .ambiguous)
-private let __ea_pair_tu: _T1 = (0x26cb, .ambiguous)
-private let __ea_pair_tv: _T1 = (0x26cc, .ambiguous)
-private let __ea_pair_tw: _T1 = (0x26cd, .ambiguous)
-private let __ea_pair_tx: _T1 = (0x26ce, .wide)
-private let __ea_pair_ty: _T1 = (0x26cf, .ambiguous)
-private let __ea_pair_tz: _T1 = (0x26d0, .ambiguous)
-private let __ea_pair_u0: _T1 = (0x26d1, .ambiguous)
-private let __ea_pair_u1: _T1 = (0x26d2, .ambiguous)
-private let __ea_pair_u2: _T1 = (0x26d3, .ambiguous)
-private let __ea_pair_u3: _T1 = (0x26d4, .wide)
-private let __ea_pair_u4: _T1 = (0x26e2, .neutral)
-private let __ea_pair_u5: _T1 = (0x26e3, .ambiguous)
-private let __ea_pair_u6: _T1 = (0x26e4, .neutral)
-private let __ea_pair_u7: _T1 = (0x26e5, .neutral)
-private let __ea_pair_u8: _T1 = (0x26e6, .neutral)
-private let __ea_pair_u9: _T1 = (0x26e7, .neutral)
-private let __ea_pair_ua: _T1 = (0x26e8, .ambiguous)
-private let __ea_pair_ub: _T1 = (0x26e9, .ambiguous)
-private let __ea_pair_uc: _T1 = (0x26ea, .wide)
-private let __ea_pair_ud: _T1 = (0x26eb, .ambiguous)
-private let __ea_pair_ue: _T1 = (0x26ec, .ambiguous)
-private let __ea_pair_uf: _T1 = (0x26ed, .ambiguous)
-private let __ea_pair_ug: _T1 = (0x26ee, .ambiguous)
-private let __ea_pair_uh: _T1 = (0x26ef, .ambiguous)
-private let __ea_pair_ui: _T1 = (0x26f0, .ambiguous)
-private let __ea_pair_uj: _T1 = (0x26f1, .ambiguous)
-private let __ea_pair_uk: _T1 = (0x26f2, .wide)
-private let __ea_pair_ul: _T1 = (0x26f3, .wide)
-private let __ea_pair_um: _T1 = (0x26f4, .ambiguous)
-private let __ea_pair_un: _T1 = (0x26f5, .wide)
-private let __ea_pair_uo: _T1 = (0x26f6, .ambiguous)
-private let __ea_pair_up: _T1 = (0x26f7, .ambiguous)
-private let __ea_pair_uq: _T1 = (0x26f8, .ambiguous)
-private let __ea_pair_ur: _T1 = (0x26f9, .ambiguous)
-private let __ea_pair_us: _T1 = (0x26fa, .wide)
-private let __ea_pair_ut: _T1 = (0x26fb, .ambiguous)
-private let __ea_pair_uu: _T1 = (0x26fc, .ambiguous)
-private let __ea_pair_uv: _T1 = (0x26fd, .wide)
-private let __ea_pair_uw: _T1 = (0x26fe, .ambiguous)
-private let __ea_pair_ux: _T1 = (0x26ff, .ambiguous)
-private let __ea_pair_uy: _T1 = (0x2700, .neutral)
-private let __ea_pair_uz: _T1 = (0x2701, .neutral)
-private let __ea_pair_v0: _T1 = (0x2702, .neutral)
-private let __ea_pair_v1: _T1 = (0x2703, .neutral)
-private let __ea_pair_v2: _T1 = (0x2704, .neutral)
-private let __ea_pair_v3: _T1 = (0x2705, .wide)
-private let __ea_pair_v4: _T1 = (0x2706, .neutral)
-private let __ea_pair_v5: _T1 = (0x2707, .neutral)
-private let __ea_pair_v6: _T1 = (0x2708, .neutral)
-private let __ea_pair_v7: _T1 = (0x2709, .neutral)
-private let __ea_pair_v8: _T1 = (0x270a, .wide)
-private let __ea_pair_v9: _T1 = (0x270b, .wide)
-private let __ea_pair_va: _T1 = (0x2728, .wide)
-private let __ea_pair_vb: _T1 = (0x273d, .ambiguous)
-private let __ea_pair_vc: _T1 = (0x274c, .wide)
-private let __ea_pair_vd: _T1 = (0x274d, .neutral)
-private let __ea_pair_ve: _T1 = (0x274e, .wide)
-private let __ea_pair_vf: _T1 = (0x274f, .neutral)
-private let __ea_pair_vg: _T1 = (0x2750, .neutral)
-private let __ea_pair_vh: _T1 = (0x2751, .neutral)
-private let __ea_pair_vi: _T1 = (0x2752, .neutral)
-private let __ea_pair_vj: _T1 = (0x2753, .wide)
-private let __ea_pair_vk: _T1 = (0x2754, .wide)
-private let __ea_pair_vl: _T1 = (0x2755, .wide)
-private let __ea_pair_vm: _T1 = (0x2756, .neutral)
-private let __ea_pair_vn: _T1 = (0x2757, .wide)
-private let __ea_pair_vo: _T1 = (0x2795, .wide)
-private let __ea_pair_vp: _T1 = (0x2796, .wide)
-private let __ea_pair_vq: _T1 = (0x2797, .wide)
-private let __ea_pair_vr: _T1 = (0x27b0, .wide)
-private let __ea_pair_vs: _T1 = (0x27bf, .wide)
-private let __ea_pair_vt: _T1 = (0x27e6, .narrow)
-private let __ea_pair_vu: _T1 = (0x27e7, .narrow)
-private let __ea_pair_vv: _T1 = (0x27e8, .narrow)
-private let __ea_pair_vw: _T1 = (0x27e9, .narrow)
-private let __ea_pair_vx: _T1 = (0x27ea, .narrow)
-private let __ea_pair_vy: _T1 = (0x27eb, .narrow)
-private let __ea_pair_vz: _T1 = (0x27ec, .narrow)
-private let __ea_pair_w0: _T1 = (0x27ed, .narrow)
-private let __ea_pair_w1: _T1 = (0x2985, .narrow)
-private let __ea_pair_w2: _T1 = (0x2986, .narrow)
-private let __ea_pair_w3: _T1 = (0x2b1b, .wide)
-private let __ea_pair_w4: _T1 = (0x2b1c, .wide)
-private let __ea_pair_w5: _T1 = (0x2b50, .wide)
-private let __ea_pair_w6: _T1 = (0x2b51, .neutral)
-private let __ea_pair_w7: _T1 = (0x2b52, .neutral)
-private let __ea_pair_w8: _T1 = (0x2b53, .neutral)
-private let __ea_pair_w9: _T1 = (0x2b54, .neutral)
-private let __ea_pair_wa: _T1 = (0x2b55, .wide)
-private let __ea_pair_wb: _T1 = (0x2b56, .ambiguous)
-private let __ea_pair_wc: _T1 = (0x2b57, .ambiguous)
-private let __ea_pair_wd: _T1 = (0x2b58, .ambiguous)
-private let __ea_pair_we: _T1 = (0x2b59, .ambiguous)
-private let __ea_pair_wf: _T1 = (0x2d27, .neutral)
-private let __ea_pair_wg: _T1 = (0x2d2d, .neutral)
-private let __ea_pair_wh: _T1 = (0x2d6f, .neutral)
-private let __ea_pair_wi: _T1 = (0x2d70, .neutral)
-private let __ea_pair_wj: _T1 = (0x2da0, .neutral)
-private let __ea_pair_wk: _T1 = (0x2da1, .neutral)
-private let __ea_pair_wl: _T1 = (0x2da2, .neutral)
-private let __ea_pair_wm: _T1 = (0x2da3, .neutral)
-private let __ea_pair_wn: _T1 = (0x2da4, .neutral)
-private let __ea_pair_wo: _T1 = (0x2da5, .neutral)
-private let __ea_pair_wp: _T1 = (0x2da6, .neutral)
-private let __ea_pair_wq: _T1 = (0x2da8, .neutral)
-private let __ea_pair_wr: _T1 = (0x2da9, .neutral)
-private let __ea_pair_ws: _T1 = (0x2daa, .neutral)
-private let __ea_pair_wt: _T1 = (0x2dab, .neutral)
-private let __ea_pair_wu: _T1 = (0x2dac, .neutral)
-private let __ea_pair_wv: _T1 = (0x2dad, .neutral)
-private let __ea_pair_ww: _T1 = (0x2dae, .neutral)
-private let __ea_pair_wx: _T1 = (0x2db0, .neutral)
-private let __ea_pair_wy: _T1 = (0x2db1, .neutral)
-private let __ea_pair_wz: _T1 = (0x2db2, .neutral)
-private let __ea_pair_x0: _T1 = (0x2db3, .neutral)
-private let __ea_pair_x1: _T1 = (0x2db4, .neutral)
-private let __ea_pair_x2: _T1 = (0x2db5, .neutral)
-private let __ea_pair_x3: _T1 = (0x2db6, .neutral)
-private let __ea_pair_x4: _T1 = (0x2db8, .neutral)
-private let __ea_pair_x5: _T1 = (0x2db9, .neutral)
-private let __ea_pair_x6: _T1 = (0x2dba, .neutral)
-private let __ea_pair_x7: _T1 = (0x2dbb, .neutral)
-private let __ea_pair_x8: _T1 = (0x2dbc, .neutral)
-private let __ea_pair_x9: _T1 = (0x2dbd, .neutral)
-private let __ea_pair_xa: _T1 = (0x2dbe, .neutral)
-private let __ea_pair_xb: _T1 = (0x2dc0, .neutral)
-private let __ea_pair_xc: _T1 = (0x2dc1, .neutral)
-private let __ea_pair_xd: _T1 = (0x2dc2, .neutral)
-private let __ea_pair_xe: _T1 = (0x2dc3, .neutral)
-private let __ea_pair_xf: _T1 = (0x2dc4, .neutral)
-private let __ea_pair_xg: _T1 = (0x2dc5, .neutral)
-private let __ea_pair_xh: _T1 = (0x2dc6, .neutral)
-private let __ea_pair_xi: _T1 = (0x2dc8, .neutral)
-private let __ea_pair_xj: _T1 = (0x2dc9, .neutral)
-private let __ea_pair_xk: _T1 = (0x2dca, .neutral)
-private let __ea_pair_xl: _T1 = (0x2dcb, .neutral)
-private let __ea_pair_xm: _T1 = (0x2dcc, .neutral)
-private let __ea_pair_xn: _T1 = (0x2dcd, .neutral)
-private let __ea_pair_xo: _T1 = (0x2dce, .neutral)
-private let __ea_pair_xp: _T1 = (0x2dd0, .neutral)
-private let __ea_pair_xq: _T1 = (0x2dd1, .neutral)
-private let __ea_pair_xr: _T1 = (0x2dd2, .neutral)
-private let __ea_pair_xs: _T1 = (0x2dd3, .neutral)
-private let __ea_pair_xt: _T1 = (0x2dd4, .neutral)
-private let __ea_pair_xu: _T1 = (0x2dd5, .neutral)
-private let __ea_pair_xv: _T1 = (0x2dd6, .neutral)
-private let __ea_pair_xw: _T1 = (0x2dd8, .neutral)
-private let __ea_pair_xx: _T1 = (0x2dd9, .neutral)
-private let __ea_pair_xy: _T1 = (0x2dda, .neutral)
-private let __ea_pair_xz: _T1 = (0x2ddb, .neutral)
-private let __ea_pair_y0: _T1 = (0x2ddc, .neutral)
-private let __ea_pair_y1: _T1 = (0x2ddd, .neutral)
-private let __ea_pair_y2: _T1 = (0x2dde, .neutral)
-private let __ea_pair_y3: _T1 = (0x3000, .fullwidth)
-private let __ea_pair_y4: _T1 = (0x303f, .neutral)
-private let __ea_pair_y5: _T1 = (0x3248, .ambiguous)
-private let __ea_pair_y6: _T1 = (0x3249, .ambiguous)
-private let __ea_pair_y7: _T1 = (0x324a, .ambiguous)
-private let __ea_pair_y8: _T1 = (0x324b, .ambiguous)
-private let __ea_pair_y9: _T1 = (0x324c, .ambiguous)
-private let __ea_pair_ya: _T1 = (0x324d, .ambiguous)
-private let __ea_pair_yb: _T1 = (0x324e, .ambiguous)
-private let __ea_pair_yc: _T1 = (0x324f, .ambiguous)
-private let __ea_pair_yd: _T1 = (0xa7c2, .neutral)
-private let __ea_pair_ye: _T1 = (0xa7c3, .neutral)
-private let __ea_pair_yf: _T1 = (0xa7c4, .neutral)
-private let __ea_pair_yg: _T1 = (0xa7c5, .neutral)
-private let __ea_pair_yh: _T1 = (0xa7c6, .neutral)
-private let __ea_pair_yi: _T1 = (0xa95f, .neutral)
-private let __ea_pair_yj: _T1 = (0xab01, .neutral)
-private let __ea_pair_yk: _T1 = (0xab02, .neutral)
-private let __ea_pair_yl: _T1 = (0xab03, .neutral)
-private let __ea_pair_ym: _T1 = (0xab04, .neutral)
-private let __ea_pair_yn: _T1 = (0xab05, .neutral)
-private let __ea_pair_yo: _T1 = (0xab06, .neutral)
-private let __ea_pair_yp: _T1 = (0xab09, .neutral)
-private let __ea_pair_yq: _T1 = (0xab0a, .neutral)
-private let __ea_pair_yr: _T1 = (0xab0b, .neutral)
-private let __ea_pair_ys: _T1 = (0xab0c, .neutral)
-private let __ea_pair_yt: _T1 = (0xab0d, .neutral)
-private let __ea_pair_yu: _T1 = (0xab0e, .neutral)
-private let __ea_pair_yv: _T1 = (0xab11, .neutral)
-private let __ea_pair_yw: _T1 = (0xab12, .neutral)
-private let __ea_pair_yx: _T1 = (0xab13, .neutral)
-private let __ea_pair_yy: _T1 = (0xab14, .neutral)
-private let __ea_pair_yz: _T1 = (0xab15, .neutral)
-private let __ea_pair_z0: _T1 = (0xab16, .neutral)
-private let __ea_pair_z1: _T1 = (0xab20, .neutral)
-private let __ea_pair_z2: _T1 = (0xab21, .neutral)
-private let __ea_pair_z3: _T1 = (0xab22, .neutral)
-private let __ea_pair_z4: _T1 = (0xab23, .neutral)
-private let __ea_pair_z5: _T1 = (0xab24, .neutral)
-private let __ea_pair_z6: _T1 = (0xab25, .neutral)
-private let __ea_pair_z7: _T1 = (0xab26, .neutral)
-private let __ea_pair_z8: _T1 = (0xab28, .neutral)
-private let __ea_pair_z9: _T1 = (0xab29, .neutral)
-private let __ea_pair_za: _T1 = (0xab2a, .neutral)
-private let __ea_pair_zb: _T1 = (0xab2b, .neutral)
-private let __ea_pair_zc: _T1 = (0xab2c, .neutral)
-private let __ea_pair_zd: _T1 = (0xab2d, .neutral)
-private let __ea_pair_ze: _T1 = (0xab2e, .neutral)
-private let __ea_pair_zf: _T1 = (0xfb00, .neutral)
-private let __ea_pair_zg: _T1 = (0xfb01, .neutral)
-private let __ea_pair_zh: _T1 = (0xfb02, .neutral)
-private let __ea_pair_zi: _T1 = (0xfb03, .neutral)
-private let __ea_pair_zj: _T1 = (0xfb04, .neutral)
-private let __ea_pair_zk: _T1 = (0xfb05, .neutral)
-private let __ea_pair_zl: _T1 = (0xfb06, .neutral)
-private let __ea_pair_zm: _T1 = (0xfb13, .neutral)
-private let __ea_pair_zn: _T1 = (0xfb14, .neutral)
-private let __ea_pair_zo: _T1 = (0xfb15, .neutral)
-private let __ea_pair_zp: _T1 = (0xfb16, .neutral)
-private let __ea_pair_zq: _T1 = (0xfb17, .neutral)
-private let __ea_pair_zr: _T1 = (0xfb38, .neutral)
-private let __ea_pair_zs: _T1 = (0xfb39, .neutral)
-private let __ea_pair_zt: _T1 = (0xfb3a, .neutral)
-private let __ea_pair_zu: _T1 = (0xfb3b, .neutral)
-private let __ea_pair_zv: _T1 = (0xfb3c, .neutral)
-private let __ea_pair_zw: _T1 = (0xfb3e, .neutral)
-private let __ea_pair_zx: _T1 = (0xfb40, .neutral)
-private let __ea_pair_zy: _T1 = (0xfb41, .neutral)
-private let __ea_pair_zz: _T1 = (0xfb43, .neutral)
-private let __ea_pair_100: _T1 = (0xfb44, .neutral)
-private let __ea_pair_101: _T1 = (0xfe68, .wide)
-private let __ea_pair_102: _T1 = (0xfe69, .wide)
-private let __ea_pair_103: _T1 = (0xfe6a, .wide)
-private let __ea_pair_104: _T1 = (0xfe6b, .wide)
-private let __ea_pair_105: _T1 = (0xfe70, .neutral)
-private let __ea_pair_106: _T1 = (0xfe71, .neutral)
-private let __ea_pair_107: _T1 = (0xfe72, .neutral)
-private let __ea_pair_108: _T1 = (0xfe73, .neutral)
-private let __ea_pair_109: _T1 = (0xfe74, .neutral)
-private let __ea_pair_10a: _T1 = (0xfeff, .neutral)
-private let __ea_pair_10b: _T1 = (0xffc2, .halfwidth)
-private let __ea_pair_10c: _T1 = (0xffc3, .halfwidth)
-private let __ea_pair_10d: _T1 = (0xffc4, .halfwidth)
-private let __ea_pair_10e: _T1 = (0xffc5, .halfwidth)
-private let __ea_pair_10f: _T1 = (0xffc6, .halfwidth)
-private let __ea_pair_10g: _T1 = (0xffc7, .halfwidth)
-private let __ea_pair_10h: _T1 = (0xffca, .halfwidth)
-private let __ea_pair_10i: _T1 = (0xffcb, .halfwidth)
-private let __ea_pair_10j: _T1 = (0xffcc, .halfwidth)
-private let __ea_pair_10k: _T1 = (0xffcd, .halfwidth)
-private let __ea_pair_10l: _T1 = (0xffce, .halfwidth)
-private let __ea_pair_10m: _T1 = (0xffcf, .halfwidth)
-private let __ea_pair_10n: _T1 = (0xffd2, .halfwidth)
-private let __ea_pair_10o: _T1 = (0xffd3, .halfwidth)
-private let __ea_pair_10p: _T1 = (0xffd4, .halfwidth)
-private let __ea_pair_10q: _T1 = (0xffd5, .halfwidth)
-private let __ea_pair_10r: _T1 = (0xffd6, .halfwidth)
-private let __ea_pair_10s: _T1 = (0xffd7, .halfwidth)
-private let __ea_pair_10t: _T1 = (0xffda, .halfwidth)
-private let __ea_pair_10u: _T1 = (0xffdb, .halfwidth)
-private let __ea_pair_10v: _T1 = (0xffdc, .halfwidth)
-private let __ea_pair_10w: _T1 = (0xffe0, .fullwidth)
-private let __ea_pair_10x: _T1 = (0xffe1, .fullwidth)
-private let __ea_pair_10y: _T1 = (0xffe2, .fullwidth)
-private let __ea_pair_10z: _T1 = (0xffe3, .fullwidth)
-private let __ea_pair_110: _T1 = (0xffe4, .fullwidth)
-private let __ea_pair_111: _T1 = (0xffe5, .fullwidth)
-private let __ea_pair_112: _T1 = (0xffe6, .fullwidth)
-private let __ea_pair_113: _T1 = (0xffe8, .halfwidth)
-private let __ea_pair_114: _T1 = (0xffe9, .halfwidth)
-private let __ea_pair_115: _T1 = (0xffea, .halfwidth)
-private let __ea_pair_116: _T1 = (0xffeb, .halfwidth)
-private let __ea_pair_117: _T1 = (0xffec, .halfwidth)
-private let __ea_pair_118: _T1 = (0xffed, .halfwidth)
-private let __ea_pair_119: _T1 = (0xffee, .halfwidth)
-private let __ea_pair_11a: _T1 = (0xfff9, .neutral)
-private let __ea_pair_11b: _T1 = (0xfffa, .neutral)
-private let __ea_pair_11c: _T1 = (0xfffb, .neutral)
-private let __ea_pair_11d: _T1 = (0xfffc, .neutral)
-private let __ea_pair_11e: _T1 = (0xfffd, .ambiguous)
-private let __ea_pair_11f: _T1 = (0x1003c, .neutral)
-private let __ea_pair_11g: _T1 = (0x1003d, .neutral)
-private let __ea_pair_11h: _T1 = (0x10100, .neutral)
-private let __ea_pair_11i: _T1 = (0x10101, .neutral)
-private let __ea_pair_11j: _T1 = (0x10102, .neutral)
-private let __ea_pair_11k: _T1 = (0x101a0, .neutral)
-private let __ea_pair_11l: _T1 = (0x1056f, .neutral)
-private let __ea_pair_11m: _T1 = (0x10760, .neutral)
-private let __ea_pair_11n: _T1 = (0x10761, .neutral)
-private let __ea_pair_11o: _T1 = (0x10762, .neutral)
-private let __ea_pair_11p: _T1 = (0x10763, .neutral)
-private let __ea_pair_11q: _T1 = (0x10764, .neutral)
-private let __ea_pair_11r: _T1 = (0x10765, .neutral)
-private let __ea_pair_11s: _T1 = (0x10766, .neutral)
-private let __ea_pair_11t: _T1 = (0x10767, .neutral)
-private let __ea_pair_11u: _T1 = (0x10800, .neutral)
-private let __ea_pair_11v: _T1 = (0x10801, .neutral)
-private let __ea_pair_11w: _T1 = (0x10802, .neutral)
-private let __ea_pair_11x: _T1 = (0x10803, .neutral)
-private let __ea_pair_11y: _T1 = (0x10804, .neutral)
-private let __ea_pair_11z: _T1 = (0x10805, .neutral)
-private let __ea_pair_120: _T1 = (0x10808, .neutral)
-private let __ea_pair_121: _T1 = (0x10837, .neutral)
-private let __ea_pair_122: _T1 = (0x10838, .neutral)
-private let __ea_pair_123: _T1 = (0x1083c, .neutral)
-private let __ea_pair_124: _T1 = (0x108f4, .neutral)
-private let __ea_pair_125: _T1 = (0x108f5, .neutral)
-private let __ea_pair_126: _T1 = (0x1093f, .neutral)
-private let __ea_pair_127: _T1 = (0x10a05, .neutral)
-private let __ea_pair_128: _T1 = (0x10a06, .neutral)
-private let __ea_pair_129: _T1 = (0x10a0c, .neutral)
-private let __ea_pair_12a: _T1 = (0x10a0d, .neutral)
-private let __ea_pair_12b: _T1 = (0x10a0e, .neutral)
-private let __ea_pair_12c: _T1 = (0x10a0f, .neutral)
-private let __ea_pair_12d: _T1 = (0x10a10, .neutral)
-private let __ea_pair_12e: _T1 = (0x10a11, .neutral)
-private let __ea_pair_12f: _T1 = (0x10a12, .neutral)
-private let __ea_pair_12g: _T1 = (0x10a13, .neutral)
-private let __ea_pair_12h: _T1 = (0x10a15, .neutral)
-private let __ea_pair_12i: _T1 = (0x10a16, .neutral)
-private let __ea_pair_12j: _T1 = (0x10a17, .neutral)
-private let __ea_pair_12k: _T1 = (0x10a38, .neutral)
-private let __ea_pair_12l: _T1 = (0x10a39, .neutral)
-private let __ea_pair_12m: _T1 = (0x10a3a, .neutral)
-private let __ea_pair_12n: _T1 = (0x10b99, .neutral)
-private let __ea_pair_12o: _T1 = (0x10b9a, .neutral)
-private let __ea_pair_12p: _T1 = (0x10b9b, .neutral)
-private let __ea_pair_12q: _T1 = (0x10b9c, .neutral)
-private let __ea_pair_12r: _T1 = (0x10ba9, .neutral)
-private let __ea_pair_12s: _T1 = (0x10baa, .neutral)
-private let __ea_pair_12t: _T1 = (0x10bab, .neutral)
-private let __ea_pair_12u: _T1 = (0x10bac, .neutral)
-private let __ea_pair_12v: _T1 = (0x10bad, .neutral)
-private let __ea_pair_12w: _T1 = (0x10bae, .neutral)
-private let __ea_pair_12x: _T1 = (0x10baf, .neutral)
-private let __ea_pair_12y: _T1 = (0x110cd, .neutral)
-private let __ea_pair_12z: _T1 = (0x11280, .neutral)
-private let __ea_pair_130: _T1 = (0x11281, .neutral)
-private let __ea_pair_131: _T1 = (0x11282, .neutral)
-private let __ea_pair_132: _T1 = (0x11283, .neutral)
-private let __ea_pair_133: _T1 = (0x11284, .neutral)
-private let __ea_pair_134: _T1 = (0x11285, .neutral)
-private let __ea_pair_135: _T1 = (0x11286, .neutral)
-private let __ea_pair_136: _T1 = (0x11288, .neutral)
-private let __ea_pair_137: _T1 = (0x1128a, .neutral)
-private let __ea_pair_138: _T1 = (0x1128b, .neutral)
-private let __ea_pair_139: _T1 = (0x1128c, .neutral)
-private let __ea_pair_13a: _T1 = (0x1128d, .neutral)
-private let __ea_pair_13b: _T1 = (0x11300, .neutral)
-private let __ea_pair_13c: _T1 = (0x11301, .neutral)
-private let __ea_pair_13d: _T1 = (0x11302, .neutral)
-private let __ea_pair_13e: _T1 = (0x11303, .neutral)
-private let __ea_pair_13f: _T1 = (0x11305, .neutral)
-private let __ea_pair_13g: _T1 = (0x11306, .neutral)
-private let __ea_pair_13h: _T1 = (0x11307, .neutral)
-private let __ea_pair_13i: _T1 = (0x11308, .neutral)
-private let __ea_pair_13j: _T1 = (0x11309, .neutral)
-private let __ea_pair_13k: _T1 = (0x1130a, .neutral)
-private let __ea_pair_13l: _T1 = (0x1130b, .neutral)
-private let __ea_pair_13m: _T1 = (0x1130c, .neutral)
-private let __ea_pair_13n: _T1 = (0x1130f, .neutral)
-private let __ea_pair_13o: _T1 = (0x11310, .neutral)
-private let __ea_pair_13p: _T1 = (0x1132a, .neutral)
-private let __ea_pair_13q: _T1 = (0x1132b, .neutral)
-private let __ea_pair_13r: _T1 = (0x1132c, .neutral)
-private let __ea_pair_13s: _T1 = (0x1132d, .neutral)
-private let __ea_pair_13t: _T1 = (0x1132e, .neutral)
-private let __ea_pair_13u: _T1 = (0x1132f, .neutral)
-private let __ea_pair_13v: _T1 = (0x11330, .neutral)
-private let __ea_pair_13w: _T1 = (0x11332, .neutral)
-private let __ea_pair_13x: _T1 = (0x11333, .neutral)
-private let __ea_pair_13y: _T1 = (0x11335, .neutral)
-private let __ea_pair_13z: _T1 = (0x11336, .neutral)
-private let __ea_pair_140: _T1 = (0x11337, .neutral)
-private let __ea_pair_141: _T1 = (0x11338, .neutral)
-private let __ea_pair_142: _T1 = (0x11339, .neutral)
-private let __ea_pair_143: _T1 = (0x11347, .neutral)
-private let __ea_pair_144: _T1 = (0x11348, .neutral)
-private let __ea_pair_145: _T1 = (0x1134b, .neutral)
-private let __ea_pair_146: _T1 = (0x1134c, .neutral)
-private let __ea_pair_147: _T1 = (0x1134d, .neutral)
-private let __ea_pair_148: _T1 = (0x11350, .neutral)
-private let __ea_pair_149: _T1 = (0x11357, .neutral)
-private let __ea_pair_14a: _T1 = (0x1135d, .neutral)
-private let __ea_pair_14b: _T1 = (0x1135e, .neutral)
-private let __ea_pair_14c: _T1 = (0x1135f, .neutral)
-private let __ea_pair_14d: _T1 = (0x11360, .neutral)
-private let __ea_pair_14e: _T1 = (0x11361, .neutral)
-private let __ea_pair_14f: _T1 = (0x11362, .neutral)
-private let __ea_pair_14g: _T1 = (0x11363, .neutral)
-private let __ea_pair_14h: _T1 = (0x11366, .neutral)
-private let __ea_pair_14i: _T1 = (0x11367, .neutral)
-private let __ea_pair_14j: _T1 = (0x11368, .neutral)
-private let __ea_pair_14k: _T1 = (0x11369, .neutral)
-private let __ea_pair_14l: _T1 = (0x1136a, .neutral)
-private let __ea_pair_14m: _T1 = (0x1136b, .neutral)
-private let __ea_pair_14n: _T1 = (0x1136c, .neutral)
-private let __ea_pair_14o: _T1 = (0x11370, .neutral)
-private let __ea_pair_14p: _T1 = (0x11371, .neutral)
-private let __ea_pair_14q: _T1 = (0x11372, .neutral)
-private let __ea_pair_14r: _T1 = (0x11373, .neutral)
-private let __ea_pair_14s: _T1 = (0x11374, .neutral)
-private let __ea_pair_14t: _T1 = (0x1145b, .neutral)
-private let __ea_pair_14u: _T1 = (0x1145d, .neutral)
-private let __ea_pair_14v: _T1 = (0x1145e, .neutral)
-private let __ea_pair_14w: _T1 = (0x1145f, .neutral)
-private let __ea_pair_14x: _T1 = (0x118ff, .neutral)
-private let __ea_pair_14y: _T1 = (0x119a0, .neutral)
-private let __ea_pair_14z: _T1 = (0x119a1, .neutral)
-private let __ea_pair_150: _T1 = (0x119a2, .neutral)
-private let __ea_pair_151: _T1 = (0x119a3, .neutral)
-private let __ea_pair_152: _T1 = (0x119a4, .neutral)
-private let __ea_pair_153: _T1 = (0x119a5, .neutral)
-private let __ea_pair_154: _T1 = (0x119a6, .neutral)
-private let __ea_pair_155: _T1 = (0x119a7, .neutral)
-private let __ea_pair_156: _T1 = (0x11d00, .neutral)
-private let __ea_pair_157: _T1 = (0x11d01, .neutral)
-private let __ea_pair_158: _T1 = (0x11d02, .neutral)
-private let __ea_pair_159: _T1 = (0x11d03, .neutral)
-private let __ea_pair_15a: _T1 = (0x11d04, .neutral)
-private let __ea_pair_15b: _T1 = (0x11d05, .neutral)
-private let __ea_pair_15c: _T1 = (0x11d06, .neutral)
-private let __ea_pair_15d: _T1 = (0x11d08, .neutral)
-private let __ea_pair_15e: _T1 = (0x11d09, .neutral)
-private let __ea_pair_15f: _T1 = (0x11d3a, .neutral)
-private let __ea_pair_15g: _T1 = (0x11d3c, .neutral)
-private let __ea_pair_15h: _T1 = (0x11d3d, .neutral)
-private let __ea_pair_15i: _T1 = (0x11d60, .neutral)
-private let __ea_pair_15j: _T1 = (0x11d61, .neutral)
-private let __ea_pair_15k: _T1 = (0x11d62, .neutral)
-private let __ea_pair_15l: _T1 = (0x11d63, .neutral)
-private let __ea_pair_15m: _T1 = (0x11d64, .neutral)
-private let __ea_pair_15n: _T1 = (0x11d65, .neutral)
-private let __ea_pair_15o: _T1 = (0x11d67, .neutral)
-private let __ea_pair_15p: _T1 = (0x11d68, .neutral)
-private let __ea_pair_15q: _T1 = (0x11d90, .neutral)
-private let __ea_pair_15r: _T1 = (0x11d91, .neutral)
-private let __ea_pair_15s: _T1 = (0x11d93, .neutral)
-private let __ea_pair_15t: _T1 = (0x11d94, .neutral)
-private let __ea_pair_15u: _T1 = (0x11d95, .neutral)
-private let __ea_pair_15v: _T1 = (0x11d96, .neutral)
-private let __ea_pair_15w: _T1 = (0x11d97, .neutral)
-private let __ea_pair_15x: _T1 = (0x11d98, .neutral)
-private let __ea_pair_15y: _T1 = (0x12470, .neutral)
-private let __ea_pair_15z: _T1 = (0x12471, .neutral)
-private let __ea_pair_160: _T1 = (0x12472, .neutral)
-private let __ea_pair_161: _T1 = (0x12473, .neutral)
-private let __ea_pair_162: _T1 = (0x12474, .neutral)
-private let __ea_pair_163: _T1 = (0x16a6e, .neutral)
-private let __ea_pair_164: _T1 = (0x16a6f, .neutral)
-private let __ea_pair_165: _T1 = (0x16af0, .neutral)
-private let __ea_pair_166: _T1 = (0x16af1, .neutral)
-private let __ea_pair_167: _T1 = (0x16af2, .neutral)
-private let __ea_pair_168: _T1 = (0x16af3, .neutral)
-private let __ea_pair_169: _T1 = (0x16af4, .neutral)
-private let __ea_pair_16a: _T1 = (0x16af5, .neutral)
-private let __ea_pair_16b: _T1 = (0x16b5b, .neutral)
-private let __ea_pair_16c: _T1 = (0x16b5c, .neutral)
-private let __ea_pair_16d: _T1 = (0x16b5d, .neutral)
-private let __ea_pair_16e: _T1 = (0x16b5e, .neutral)
-private let __ea_pair_16f: _T1 = (0x16b5f, .neutral)
-private let __ea_pair_16g: _T1 = (0x16b60, .neutral)
-private let __ea_pair_16h: _T1 = (0x16b61, .neutral)
-private let __ea_pair_16i: _T1 = (0x16fe0, .wide)
-private let __ea_pair_16j: _T1 = (0x16fe1, .wide)
-private let __ea_pair_16k: _T1 = (0x16fe2, .wide)
-private let __ea_pair_16l: _T1 = (0x16fe3, .wide)
-private let __ea_pair_16m: _T1 = (0x1b150, .wide)
-private let __ea_pair_16n: _T1 = (0x1b151, .wide)
-private let __ea_pair_16o: _T1 = (0x1b152, .wide)
-private let __ea_pair_16p: _T1 = (0x1b164, .wide)
-private let __ea_pair_16q: _T1 = (0x1b165, .wide)
-private let __ea_pair_16r: _T1 = (0x1b166, .wide)
-private let __ea_pair_16s: _T1 = (0x1b167, .wide)
-private let __ea_pair_16t: _T1 = (0x1bc9c, .neutral)
-private let __ea_pair_16u: _T1 = (0x1bc9d, .neutral)
-private let __ea_pair_16v: _T1 = (0x1bc9e, .neutral)
-private let __ea_pair_16w: _T1 = (0x1bc9f, .neutral)
-private let __ea_pair_16x: _T1 = (0x1bca0, .neutral)
-private let __ea_pair_16y: _T1 = (0x1bca1, .neutral)
-private let __ea_pair_16z: _T1 = (0x1bca2, .neutral)
-private let __ea_pair_170: _T1 = (0x1bca3, .neutral)
-private let __ea_pair_171: _T1 = (0x1d49e, .neutral)
-private let __ea_pair_172: _T1 = (0x1d49f, .neutral)
-private let __ea_pair_173: _T1 = (0x1d4a2, .neutral)
-private let __ea_pair_174: _T1 = (0x1d4a5, .neutral)
-private let __ea_pair_175: _T1 = (0x1d4a6, .neutral)
-private let __ea_pair_176: _T1 = (0x1d4a9, .neutral)
-private let __ea_pair_177: _T1 = (0x1d4aa, .neutral)
-private let __ea_pair_178: _T1 = (0x1d4ab, .neutral)
-private let __ea_pair_179: _T1 = (0x1d4ac, .neutral)
-private let __ea_pair_17a: _T1 = (0x1d4bb, .neutral)
-private let __ea_pair_17b: _T1 = (0x1d4bd, .neutral)
-private let __ea_pair_17c: _T1 = (0x1d4be, .neutral)
-private let __ea_pair_17d: _T1 = (0x1d4bf, .neutral)
-private let __ea_pair_17e: _T1 = (0x1d4c0, .neutral)
-private let __ea_pair_17f: _T1 = (0x1d4c1, .neutral)
-private let __ea_pair_17g: _T1 = (0x1d4c2, .neutral)
-private let __ea_pair_17h: _T1 = (0x1d4c3, .neutral)
-private let __ea_pair_17i: _T1 = (0x1d507, .neutral)
-private let __ea_pair_17j: _T1 = (0x1d508, .neutral)
-private let __ea_pair_17k: _T1 = (0x1d509, .neutral)
-private let __ea_pair_17l: _T1 = (0x1d50a, .neutral)
-private let __ea_pair_17m: _T1 = (0x1d50d, .neutral)
-private let __ea_pair_17n: _T1 = (0x1d50e, .neutral)
-private let __ea_pair_17o: _T1 = (0x1d50f, .neutral)
-private let __ea_pair_17p: _T1 = (0x1d510, .neutral)
-private let __ea_pair_17q: _T1 = (0x1d511, .neutral)
-private let __ea_pair_17r: _T1 = (0x1d512, .neutral)
-private let __ea_pair_17s: _T1 = (0x1d513, .neutral)
-private let __ea_pair_17t: _T1 = (0x1d514, .neutral)
-private let __ea_pair_17u: _T1 = (0x1d516, .neutral)
-private let __ea_pair_17v: _T1 = (0x1d517, .neutral)
-private let __ea_pair_17w: _T1 = (0x1d518, .neutral)
-private let __ea_pair_17x: _T1 = (0x1d519, .neutral)
-private let __ea_pair_17y: _T1 = (0x1d51a, .neutral)
-private let __ea_pair_17z: _T1 = (0x1d51b, .neutral)
-private let __ea_pair_180: _T1 = (0x1d51c, .neutral)
-private let __ea_pair_181: _T1 = (0x1d53b, .neutral)
-private let __ea_pair_182: _T1 = (0x1d53c, .neutral)
-private let __ea_pair_183: _T1 = (0x1d53d, .neutral)
-private let __ea_pair_184: _T1 = (0x1d53e, .neutral)
-private let __ea_pair_185: _T1 = (0x1d540, .neutral)
-private let __ea_pair_186: _T1 = (0x1d541, .neutral)
-private let __ea_pair_187: _T1 = (0x1d542, .neutral)
-private let __ea_pair_188: _T1 = (0x1d543, .neutral)
-private let __ea_pair_189: _T1 = (0x1d544, .neutral)
-private let __ea_pair_18a: _T1 = (0x1d546, .neutral)
-private let __ea_pair_18b: _T1 = (0x1d54a, .neutral)
-private let __ea_pair_18c: _T1 = (0x1d54b, .neutral)
-private let __ea_pair_18d: _T1 = (0x1d54c, .neutral)
-private let __ea_pair_18e: _T1 = (0x1d54d, .neutral)
-private let __ea_pair_18f: _T1 = (0x1d54e, .neutral)
-private let __ea_pair_18g: _T1 = (0x1d54f, .neutral)
-private let __ea_pair_18h: _T1 = (0x1d550, .neutral)
-private let __ea_pair_18i: _T1 = (0x1da9b, .neutral)
-private let __ea_pair_18j: _T1 = (0x1da9c, .neutral)
-private let __ea_pair_18k: _T1 = (0x1da9d, .neutral)
-private let __ea_pair_18l: _T1 = (0x1da9e, .neutral)
-private let __ea_pair_18m: _T1 = (0x1da9f, .neutral)
-private let __ea_pair_18n: _T1 = (0x1e000, .neutral)
-private let __ea_pair_18o: _T1 = (0x1e001, .neutral)
-private let __ea_pair_18p: _T1 = (0x1e002, .neutral)
-private let __ea_pair_18q: _T1 = (0x1e003, .neutral)
-private let __ea_pair_18r: _T1 = (0x1e004, .neutral)
-private let __ea_pair_18s: _T1 = (0x1e005, .neutral)
-private let __ea_pair_18t: _T1 = (0x1e006, .neutral)
-private let __ea_pair_18u: _T1 = (0x1e01b, .neutral)
-private let __ea_pair_18v: _T1 = (0x1e01c, .neutral)
-private let __ea_pair_18w: _T1 = (0x1e01d, .neutral)
-private let __ea_pair_18x: _T1 = (0x1e01e, .neutral)
-private let __ea_pair_18y: _T1 = (0x1e01f, .neutral)
-private let __ea_pair_18z: _T1 = (0x1e020, .neutral)
-private let __ea_pair_190: _T1 = (0x1e021, .neutral)
-private let __ea_pair_191: _T1 = (0x1e023, .neutral)
-private let __ea_pair_192: _T1 = (0x1e024, .neutral)
-private let __ea_pair_193: _T1 = (0x1e026, .neutral)
-private let __ea_pair_194: _T1 = (0x1e027, .neutral)
-private let __ea_pair_195: _T1 = (0x1e028, .neutral)
-private let __ea_pair_196: _T1 = (0x1e029, .neutral)
-private let __ea_pair_197: _T1 = (0x1e02a, .neutral)
-private let __ea_pair_198: _T1 = (0x1e14e, .neutral)
-private let __ea_pair_199: _T1 = (0x1e14f, .neutral)
-private let __ea_pair_19a: _T1 = (0x1e2ff, .neutral)
-private let __ea_pair_19b: _T1 = (0x1e95e, .neutral)
-private let __ea_pair_19c: _T1 = (0x1e95f, .neutral)
-private let __ea_pair_19d: _T1 = (0x1ee00, .neutral)
-private let __ea_pair_19e: _T1 = (0x1ee01, .neutral)
-private let __ea_pair_19f: _T1 = (0x1ee02, .neutral)
-private let __ea_pair_19g: _T1 = (0x1ee03, .neutral)
-private let __ea_pair_19h: _T1 = (0x1ee21, .neutral)
-private let __ea_pair_19i: _T1 = (0x1ee22, .neutral)
-private let __ea_pair_19j: _T1 = (0x1ee24, .neutral)
-private let __ea_pair_19k: _T1 = (0x1ee27, .neutral)
-private let __ea_pair_19l: _T1 = (0x1ee34, .neutral)
-private let __ea_pair_19m: _T1 = (0x1ee35, .neutral)
-private let __ea_pair_19n: _T1 = (0x1ee36, .neutral)
-private let __ea_pair_19o: _T1 = (0x1ee37, .neutral)
-private let __ea_pair_19p: _T1 = (0x1ee39, .neutral)
-private let __ea_pair_19q: _T1 = (0x1ee3b, .neutral)
-private let __ea_pair_19r: _T1 = (0x1ee42, .neutral)
-private let __ea_pair_19s: _T1 = (0x1ee47, .neutral)
-private let __ea_pair_19t: _T1 = (0x1ee49, .neutral)
-private let __ea_pair_19u: _T1 = (0x1ee4b, .neutral)
-private let __ea_pair_19v: _T1 = (0x1ee4d, .neutral)
-private let __ea_pair_19w: _T1 = (0x1ee4e, .neutral)
-private let __ea_pair_19x: _T1 = (0x1ee4f, .neutral)
-private let __ea_pair_19y: _T1 = (0x1ee51, .neutral)
-private let __ea_pair_19z: _T1 = (0x1ee52, .neutral)
-private let __ea_pair_1a0: _T1 = (0x1ee54, .neutral)
-private let __ea_pair_1a1: _T1 = (0x1ee57, .neutral)
-private let __ea_pair_1a2: _T1 = (0x1ee59, .neutral)
-private let __ea_pair_1a3: _T1 = (0x1ee5b, .neutral)
-private let __ea_pair_1a4: _T1 = (0x1ee5d, .neutral)
-private let __ea_pair_1a5: _T1 = (0x1ee5f, .neutral)
-private let __ea_pair_1a6: _T1 = (0x1ee61, .neutral)
-private let __ea_pair_1a7: _T1 = (0x1ee62, .neutral)
-private let __ea_pair_1a8: _T1 = (0x1ee64, .neutral)
-private let __ea_pair_1a9: _T1 = (0x1ee67, .neutral)
-private let __ea_pair_1aa: _T1 = (0x1ee68, .neutral)
-private let __ea_pair_1ab: _T1 = (0x1ee69, .neutral)
-private let __ea_pair_1ac: _T1 = (0x1ee6a, .neutral)
-private let __ea_pair_1ad: _T1 = (0x1ee6c, .neutral)
-private let __ea_pair_1ae: _T1 = (0x1ee6d, .neutral)
-private let __ea_pair_1af: _T1 = (0x1ee6e, .neutral)
-private let __ea_pair_1ag: _T1 = (0x1ee6f, .neutral)
-private let __ea_pair_1ah: _T1 = (0x1ee70, .neutral)
-private let __ea_pair_1ai: _T1 = (0x1ee71, .neutral)
-private let __ea_pair_1aj: _T1 = (0x1ee72, .neutral)
-private let __ea_pair_1ak: _T1 = (0x1ee74, .neutral)
-private let __ea_pair_1al: _T1 = (0x1ee75, .neutral)
-private let __ea_pair_1am: _T1 = (0x1ee76, .neutral)
-private let __ea_pair_1an: _T1 = (0x1ee77, .neutral)
-private let __ea_pair_1ao: _T1 = (0x1ee79, .neutral)
-private let __ea_pair_1ap: _T1 = (0x1ee7a, .neutral)
-private let __ea_pair_1aq: _T1 = (0x1ee7b, .neutral)
-private let __ea_pair_1ar: _T1 = (0x1ee7c, .neutral)
-private let __ea_pair_1as: _T1 = (0x1ee7e, .neutral)
-private let __ea_pair_1at: _T1 = (0x1eea1, .neutral)
-private let __ea_pair_1au: _T1 = (0x1eea2, .neutral)
-private let __ea_pair_1av: _T1 = (0x1eea3, .neutral)
-private let __ea_pair_1aw: _T1 = (0x1eea5, .neutral)
-private let __ea_pair_1ax: _T1 = (0x1eea6, .neutral)
-private let __ea_pair_1ay: _T1 = (0x1eea7, .neutral)
-private let __ea_pair_1az: _T1 = (0x1eea8, .neutral)
-private let __ea_pair_1b0: _T1 = (0x1eea9, .neutral)
-private let __ea_pair_1b1: _T1 = (0x1eef0, .neutral)
-private let __ea_pair_1b2: _T1 = (0x1eef1, .neutral)
-private let __ea_pair_1b3: _T1 = (0x1f000, .neutral)
-private let __ea_pair_1b4: _T1 = (0x1f001, .neutral)
-private let __ea_pair_1b5: _T1 = (0x1f002, .neutral)
-private let __ea_pair_1b6: _T1 = (0x1f003, .neutral)
-private let __ea_pair_1b7: _T1 = (0x1f004, .wide)
-private let __ea_pair_1b8: _T1 = (0x1f0cf, .wide)
-private let __ea_pair_1b9: _T1 = (0x1f10b, .neutral)
-private let __ea_pair_1ba: _T1 = (0x1f10c, .neutral)
-private let __ea_pair_1bb: _T1 = (0x1f12e, .neutral)
-private let __ea_pair_1bc: _T1 = (0x1f12f, .neutral)
-private let __ea_pair_1bd: _T1 = (0x1f16a, .neutral)
-private let __ea_pair_1be: _T1 = (0x1f16b, .neutral)
-private let __ea_pair_1bf: _T1 = (0x1f16c, .neutral)
-private let __ea_pair_1bg: _T1 = (0x1f18e, .wide)
-private let __ea_pair_1bh: _T1 = (0x1f18f, .ambiguous)
-private let __ea_pair_1bi: _T1 = (0x1f190, .ambiguous)
-private let __ea_pair_1bj: _T1 = (0x1f200, .wide)
-private let __ea_pair_1bk: _T1 = (0x1f201, .wide)
-private let __ea_pair_1bl: _T1 = (0x1f202, .wide)
-private let __ea_pair_1bm: _T1 = (0x1f250, .wide)
-private let __ea_pair_1bn: _T1 = (0x1f251, .wide)
-private let __ea_pair_1bo: _T1 = (0x1f260, .wide)
-private let __ea_pair_1bp: _T1 = (0x1f261, .wide)
-private let __ea_pair_1bq: _T1 = (0x1f262, .wide)
-private let __ea_pair_1br: _T1 = (0x1f263, .wide)
-private let __ea_pair_1bs: _T1 = (0x1f264, .wide)
-private let __ea_pair_1bt: _T1 = (0x1f265, .wide)
-private let __ea_pair_1bu: _T1 = (0x1f336, .neutral)
-private let __ea_pair_1bv: _T1 = (0x1f37d, .neutral)
-private let __ea_pair_1bw: _T1 = (0x1f3cb, .neutral)
-private let __ea_pair_1bx: _T1 = (0x1f3cc, .neutral)
-private let __ea_pair_1by: _T1 = (0x1f3cd, .neutral)
-private let __ea_pair_1bz: _T1 = (0x1f3ce, .neutral)
-private let __ea_pair_1c0: _T1 = (0x1f3cf, .wide)
-private let __ea_pair_1c1: _T1 = (0x1f3d0, .wide)
-private let __ea_pair_1c2: _T1 = (0x1f3d1, .wide)
-private let __ea_pair_1c3: _T1 = (0x1f3d2, .wide)
-private let __ea_pair_1c4: _T1 = (0x1f3d3, .wide)
-private let __ea_pair_1c5: _T1 = (0x1f3f1, .neutral)
-private let __ea_pair_1c6: _T1 = (0x1f3f2, .neutral)
-private let __ea_pair_1c7: _T1 = (0x1f3f3, .neutral)
-private let __ea_pair_1c8: _T1 = (0x1f3f4, .wide)
-private let __ea_pair_1c9: _T1 = (0x1f3f5, .neutral)
-private let __ea_pair_1ca: _T1 = (0x1f3f6, .neutral)
-private let __ea_pair_1cb: _T1 = (0x1f3f7, .neutral)
-private let __ea_pair_1cc: _T1 = (0x1f43f, .neutral)
-private let __ea_pair_1cd: _T1 = (0x1f440, .wide)
-private let __ea_pair_1ce: _T1 = (0x1f441, .neutral)
-private let __ea_pair_1cf: _T1 = (0x1f4fd, .neutral)
-private let __ea_pair_1cg: _T1 = (0x1f4fe, .neutral)
-private let __ea_pair_1ch: _T1 = (0x1f54b, .wide)
-private let __ea_pair_1ci: _T1 = (0x1f54c, .wide)
-private let __ea_pair_1cj: _T1 = (0x1f54d, .wide)
-private let __ea_pair_1ck: _T1 = (0x1f54e, .wide)
-private let __ea_pair_1cl: _T1 = (0x1f54f, .neutral)
-private let __ea_pair_1cm: _T1 = (0x1f57a, .wide)
-private let __ea_pair_1cn: _T1 = (0x1f595, .wide)
-private let __ea_pair_1co: _T1 = (0x1f596, .wide)
-private let __ea_pair_1cp: _T1 = (0x1f5a4, .wide)
-private let __ea_pair_1cq: _T1 = (0x1f6c6, .neutral)
-private let __ea_pair_1cr: _T1 = (0x1f6c7, .neutral)
-private let __ea_pair_1cs: _T1 = (0x1f6c8, .neutral)
-private let __ea_pair_1ct: _T1 = (0x1f6c9, .neutral)
-private let __ea_pair_1cu: _T1 = (0x1f6ca, .neutral)
-private let __ea_pair_1cv: _T1 = (0x1f6cb, .neutral)
-private let __ea_pair_1cw: _T1 = (0x1f6cc, .wide)
-private let __ea_pair_1cx: _T1 = (0x1f6cd, .neutral)
-private let __ea_pair_1cy: _T1 = (0x1f6ce, .neutral)
-private let __ea_pair_1cz: _T1 = (0x1f6cf, .neutral)
-private let __ea_pair_1d0: _T1 = (0x1f6d0, .wide)
-private let __ea_pair_1d1: _T1 = (0x1f6d1, .wide)
-private let __ea_pair_1d2: _T1 = (0x1f6d2, .wide)
-private let __ea_pair_1d3: _T1 = (0x1f6d3, .neutral)
-private let __ea_pair_1d4: _T1 = (0x1f6d4, .neutral)
-private let __ea_pair_1d5: _T1 = (0x1f6d5, .wide)
-private let __ea_pair_1d6: _T1 = (0x1f6eb, .wide)
-private let __ea_pair_1d7: _T1 = (0x1f6ec, .wide)
-private let __ea_pair_1d8: _T1 = (0x1f6f0, .neutral)
-private let __ea_pair_1d9: _T1 = (0x1f6f1, .neutral)
-private let __ea_pair_1da: _T1 = (0x1f6f2, .neutral)
-private let __ea_pair_1db: _T1 = (0x1f6f3, .neutral)
-private let __ea_pair_1dc: _T1 = (0x1f6f4, .wide)
-private let __ea_pair_1dd: _T1 = (0x1f6f5, .wide)
-private let __ea_pair_1de: _T1 = (0x1f6f6, .wide)
-private let __ea_pair_1df: _T1 = (0x1f6f7, .wide)
-private let __ea_pair_1dg: _T1 = (0x1f6f8, .wide)
-private let __ea_pair_1dh: _T1 = (0x1f6f9, .wide)
-private let __ea_pair_1di: _T1 = (0x1f6fa, .wide)
-private let __ea_pair_1dj: _T1 = (0x1f973, .wide)
-private let __ea_pair_1dk: _T1 = (0x1f974, .wide)
-private let __ea_pair_1dl: _T1 = (0x1f975, .wide)
-private let __ea_pair_1dm: _T1 = (0x1f976, .wide)
-private let __ea_pair_1dn: _T1 = (0x1f9a5, .wide)
-private let __ea_pair_1do: _T1 = (0x1f9a6, .wide)
-private let __ea_pair_1dp: _T1 = (0x1f9a7, .wide)
-private let __ea_pair_1dq: _T1 = (0x1f9a8, .wide)
-private let __ea_pair_1dr: _T1 = (0x1f9a9, .wide)
-private let __ea_pair_1ds: _T1 = (0x1f9aa, .wide)
-private let __ea_pair_1dt: _T1 = (0x1fa70, .wide)
-private let __ea_pair_1du: _T1 = (0x1fa71, .wide)
-private let __ea_pair_1dv: _T1 = (0x1fa72, .wide)
-private let __ea_pair_1dw: _T1 = (0x1fa73, .wide)
-private let __ea_pair_1dx: _T1 = (0x1fa78, .wide)
-private let __ea_pair_1dy: _T1 = (0x1fa79, .wide)
-private let __ea_pair_1dz: _T1 = (0x1fa7a, .wide)
-private let __ea_pair_1e0: _T1 = (0x1fa80, .wide)
-private let __ea_pair_1e1: _T1 = (0x1fa81, .wide)
-private let __ea_pair_1e2: _T1 = (0x1fa82, .wide)
-private let __ea_pair_1e3: _T1 = (0x1fa90, .wide)
-private let __ea_pair_1e4: _T1 = (0x1fa91, .wide)
-private let __ea_pair_1e5: _T1 = (0x1fa92, .wide)
-private let __ea_pair_1e6: _T1 = (0x1fa93, .wide)
-private let __ea_pair_1e7: _T1 = (0x1fa94, .wide)
-private let __ea_pair_1e8: _T1 = (0x1fa95, .wide)
-private let __ea_pair_1e9: _T1 = (0xe0001, .neutral)
+private let __ea_pair_5g: _T1 = (0x3a2, .neutral)
+private let __ea_pair_5h: _T1 = (0x3a3, .ambiguous)
+private let __ea_pair_5i: _T1 = (0x3a4, .ambiguous)
+private let __ea_pair_5j: _T1 = (0x3a5, .ambiguous)
+private let __ea_pair_5k: _T1 = (0x3a6, .ambiguous)
+private let __ea_pair_5l: _T1 = (0x3a7, .ambiguous)
+private let __ea_pair_5m: _T1 = (0x3a8, .ambiguous)
+private let __ea_pair_5n: _T1 = (0x3a9, .ambiguous)
+private let __ea_pair_5o: _T1 = (0x3aa, .neutral)
+private let __ea_pair_5p: _T1 = (0x3ab, .neutral)
+private let __ea_pair_5q: _T1 = (0x3ac, .neutral)
+private let __ea_pair_5r: _T1 = (0x3ad, .neutral)
+private let __ea_pair_5s: _T1 = (0x3ae, .neutral)
+private let __ea_pair_5t: _T1 = (0x3af, .neutral)
+private let __ea_pair_5u: _T1 = (0x3b0, .neutral)
+private let __ea_pair_5v: _T1 = (0x3c2, .neutral)
+private let __ea_pair_5w: _T1 = (0x3c3, .ambiguous)
+private let __ea_pair_5x: _T1 = (0x3c4, .ambiguous)
+private let __ea_pair_5y: _T1 = (0x3c5, .ambiguous)
+private let __ea_pair_5z: _T1 = (0x3c6, .ambiguous)
+private let __ea_pair_60: _T1 = (0x3c7, .ambiguous)
+private let __ea_pair_61: _T1 = (0x3c8, .ambiguous)
+private let __ea_pair_62: _T1 = (0x3c9, .ambiguous)
+private let __ea_pair_63: _T1 = (0x401, .ambiguous)
+private let __ea_pair_64: _T1 = (0x450, .neutral)
+private let __ea_pair_65: _T1 = (0x451, .ambiguous)
+private let __ea_pair_66: _T1 = (0x2010, .ambiguous)
+private let __ea_pair_67: _T1 = (0x2011, .neutral)
+private let __ea_pair_68: _T1 = (0x2012, .neutral)
+private let __ea_pair_69: _T1 = (0x2013, .ambiguous)
+private let __ea_pair_6a: _T1 = (0x2014, .ambiguous)
+private let __ea_pair_6b: _T1 = (0x2015, .ambiguous)
+private let __ea_pair_6c: _T1 = (0x2016, .ambiguous)
+private let __ea_pair_6d: _T1 = (0x2017, .neutral)
+private let __ea_pair_6e: _T1 = (0x2018, .ambiguous)
+private let __ea_pair_6f: _T1 = (0x2019, .ambiguous)
+private let __ea_pair_6g: _T1 = (0x201a, .neutral)
+private let __ea_pair_6h: _T1 = (0x201b, .neutral)
+private let __ea_pair_6i: _T1 = (0x201c, .ambiguous)
+private let __ea_pair_6j: _T1 = (0x201d, .ambiguous)
+private let __ea_pair_6k: _T1 = (0x201e, .neutral)
+private let __ea_pair_6l: _T1 = (0x201f, .neutral)
+private let __ea_pair_6m: _T1 = (0x2020, .ambiguous)
+private let __ea_pair_6n: _T1 = (0x2021, .ambiguous)
+private let __ea_pair_6o: _T1 = (0x2022, .ambiguous)
+private let __ea_pair_6p: _T1 = (0x2023, .neutral)
+private let __ea_pair_6q: _T1 = (0x2024, .ambiguous)
+private let __ea_pair_6r: _T1 = (0x2025, .ambiguous)
+private let __ea_pair_6s: _T1 = (0x2026, .ambiguous)
+private let __ea_pair_6t: _T1 = (0x2027, .ambiguous)
+private let __ea_pair_6u: _T1 = (0x2030, .ambiguous)
+private let __ea_pair_6v: _T1 = (0x2031, .neutral)
+private let __ea_pair_6w: _T1 = (0x2032, .ambiguous)
+private let __ea_pair_6x: _T1 = (0x2033, .ambiguous)
+private let __ea_pair_6y: _T1 = (0x2034, .neutral)
+private let __ea_pair_6z: _T1 = (0x2035, .ambiguous)
+private let __ea_pair_70: _T1 = (0x2036, .neutral)
+private let __ea_pair_71: _T1 = (0x2037, .neutral)
+private let __ea_pair_72: _T1 = (0x2038, .neutral)
+private let __ea_pair_73: _T1 = (0x2039, .neutral)
+private let __ea_pair_74: _T1 = (0x203a, .neutral)
+private let __ea_pair_75: _T1 = (0x203b, .ambiguous)
+private let __ea_pair_76: _T1 = (0x203c, .neutral)
+private let __ea_pair_77: _T1 = (0x203d, .neutral)
+private let __ea_pair_78: _T1 = (0x203e, .ambiguous)
+private let __ea_pair_79: _T1 = (0x2074, .ambiguous)
+private let __ea_pair_7a: _T1 = (0x207f, .ambiguous)
+private let __ea_pair_7b: _T1 = (0x2080, .neutral)
+private let __ea_pair_7c: _T1 = (0x2081, .ambiguous)
+private let __ea_pair_7d: _T1 = (0x2082, .ambiguous)
+private let __ea_pair_7e: _T1 = (0x2083, .ambiguous)
+private let __ea_pair_7f: _T1 = (0x2084, .ambiguous)
+private let __ea_pair_7g: _T1 = (0x20a9, .halfwidth)
+private let __ea_pair_7h: _T1 = (0x20aa, .neutral)
+private let __ea_pair_7i: _T1 = (0x20ab, .neutral)
+private let __ea_pair_7j: _T1 = (0x20ac, .ambiguous)
+private let __ea_pair_7k: _T1 = (0x2103, .ambiguous)
+private let __ea_pair_7l: _T1 = (0x2104, .neutral)
+private let __ea_pair_7m: _T1 = (0x2105, .ambiguous)
+private let __ea_pair_7n: _T1 = (0x2106, .neutral)
+private let __ea_pair_7o: _T1 = (0x2107, .neutral)
+private let __ea_pair_7p: _T1 = (0x2108, .neutral)
+private let __ea_pair_7q: _T1 = (0x2109, .ambiguous)
+private let __ea_pair_7r: _T1 = (0x2113, .ambiguous)
+private let __ea_pair_7s: _T1 = (0x2114, .neutral)
+private let __ea_pair_7t: _T1 = (0x2115, .neutral)
+private let __ea_pair_7u: _T1 = (0x2116, .ambiguous)
+private let __ea_pair_7v: _T1 = (0x2121, .ambiguous)
+private let __ea_pair_7w: _T1 = (0x2122, .ambiguous)
+private let __ea_pair_7x: _T1 = (0x2123, .neutral)
+private let __ea_pair_7y: _T1 = (0x2124, .neutral)
+private let __ea_pair_7z: _T1 = (0x2125, .neutral)
+private let __ea_pair_80: _T1 = (0x2126, .ambiguous)
+private let __ea_pair_81: _T1 = (0x2127, .neutral)
+private let __ea_pair_82: _T1 = (0x2128, .neutral)
+private let __ea_pair_83: _T1 = (0x2129, .neutral)
+private let __ea_pair_84: _T1 = (0x212a, .neutral)
+private let __ea_pair_85: _T1 = (0x212b, .ambiguous)
+private let __ea_pair_86: _T1 = (0x2153, .ambiguous)
+private let __ea_pair_87: _T1 = (0x2154, .ambiguous)
+private let __ea_pair_88: _T1 = (0x2155, .neutral)
+private let __ea_pair_89: _T1 = (0x2156, .neutral)
+private let __ea_pair_8a: _T1 = (0x2157, .neutral)
+private let __ea_pair_8b: _T1 = (0x2158, .neutral)
+private let __ea_pair_8c: _T1 = (0x2159, .neutral)
+private let __ea_pair_8d: _T1 = (0x215a, .neutral)
+private let __ea_pair_8e: _T1 = (0x215b, .ambiguous)
+private let __ea_pair_8f: _T1 = (0x215c, .ambiguous)
+private let __ea_pair_8g: _T1 = (0x215d, .ambiguous)
+private let __ea_pair_8h: _T1 = (0x215e, .ambiguous)
+private let __ea_pair_8i: _T1 = (0x215f, .neutral)
+private let __ea_pair_8j: _T1 = (0x216c, .neutral)
+private let __ea_pair_8k: _T1 = (0x216d, .neutral)
+private let __ea_pair_8l: _T1 = (0x216e, .neutral)
+private let __ea_pair_8m: _T1 = (0x216f, .neutral)
+private let __ea_pair_8n: _T1 = (0x2189, .ambiguous)
+private let __ea_pair_8o: _T1 = (0x218a, .neutral)
+private let __ea_pair_8p: _T1 = (0x218b, .neutral)
+private let __ea_pair_8q: _T1 = (0x218c, .neutral)
+private let __ea_pair_8r: _T1 = (0x218d, .neutral)
+private let __ea_pair_8s: _T1 = (0x218e, .neutral)
+private let __ea_pair_8t: _T1 = (0x218f, .neutral)
+private let __ea_pair_8u: _T1 = (0x21b8, .ambiguous)
+private let __ea_pair_8v: _T1 = (0x21b9, .ambiguous)
+private let __ea_pair_8w: _T1 = (0x21d2, .ambiguous)
+private let __ea_pair_8x: _T1 = (0x21d3, .neutral)
+private let __ea_pair_8y: _T1 = (0x21d4, .ambiguous)
+private let __ea_pair_8z: _T1 = (0x21e7, .ambiguous)
+private let __ea_pair_90: _T1 = (0x2200, .ambiguous)
+private let __ea_pair_91: _T1 = (0x2201, .neutral)
+private let __ea_pair_92: _T1 = (0x2202, .ambiguous)
+private let __ea_pair_93: _T1 = (0x2203, .ambiguous)
+private let __ea_pair_94: _T1 = (0x2204, .neutral)
+private let __ea_pair_95: _T1 = (0x2205, .neutral)
+private let __ea_pair_96: _T1 = (0x2206, .neutral)
+private let __ea_pair_97: _T1 = (0x2207, .ambiguous)
+private let __ea_pair_98: _T1 = (0x2208, .ambiguous)
+private let __ea_pair_99: _T1 = (0x2209, .neutral)
+private let __ea_pair_9a: _T1 = (0x220a, .neutral)
+private let __ea_pair_9b: _T1 = (0x220b, .ambiguous)
+private let __ea_pair_9c: _T1 = (0x220c, .neutral)
+private let __ea_pair_9d: _T1 = (0x220d, .neutral)
+private let __ea_pair_9e: _T1 = (0x220e, .neutral)
+private let __ea_pair_9f: _T1 = (0x220f, .ambiguous)
+private let __ea_pair_9g: _T1 = (0x2210, .neutral)
+private let __ea_pair_9h: _T1 = (0x2211, .ambiguous)
+private let __ea_pair_9i: _T1 = (0x2212, .neutral)
+private let __ea_pair_9j: _T1 = (0x2213, .neutral)
+private let __ea_pair_9k: _T1 = (0x2214, .neutral)
+private let __ea_pair_9l: _T1 = (0x2215, .ambiguous)
+private let __ea_pair_9m: _T1 = (0x2216, .neutral)
+private let __ea_pair_9n: _T1 = (0x2217, .neutral)
+private let __ea_pair_9o: _T1 = (0x2218, .neutral)
+private let __ea_pair_9p: _T1 = (0x2219, .neutral)
+private let __ea_pair_9q: _T1 = (0x221a, .ambiguous)
+private let __ea_pair_9r: _T1 = (0x221b, .neutral)
+private let __ea_pair_9s: _T1 = (0x221c, .neutral)
+private let __ea_pair_9t: _T1 = (0x221d, .ambiguous)
+private let __ea_pair_9u: _T1 = (0x221e, .ambiguous)
+private let __ea_pair_9v: _T1 = (0x221f, .ambiguous)
+private let __ea_pair_9w: _T1 = (0x2220, .ambiguous)
+private let __ea_pair_9x: _T1 = (0x2221, .neutral)
+private let __ea_pair_9y: _T1 = (0x2222, .neutral)
+private let __ea_pair_9z: _T1 = (0x2223, .ambiguous)
+private let __ea_pair_a0: _T1 = (0x2224, .neutral)
+private let __ea_pair_a1: _T1 = (0x2225, .ambiguous)
+private let __ea_pair_a2: _T1 = (0x2226, .neutral)
+private let __ea_pair_a3: _T1 = (0x2227, .ambiguous)
+private let __ea_pair_a4: _T1 = (0x2228, .ambiguous)
+private let __ea_pair_a5: _T1 = (0x2229, .ambiguous)
+private let __ea_pair_a6: _T1 = (0x222a, .ambiguous)
+private let __ea_pair_a7: _T1 = (0x222b, .ambiguous)
+private let __ea_pair_a8: _T1 = (0x222c, .ambiguous)
+private let __ea_pair_a9: _T1 = (0x222d, .neutral)
+private let __ea_pair_aa: _T1 = (0x222e, .ambiguous)
+private let __ea_pair_ab: _T1 = (0x222f, .neutral)
+private let __ea_pair_ac: _T1 = (0x2230, .neutral)
+private let __ea_pair_ad: _T1 = (0x2231, .neutral)
+private let __ea_pair_ae: _T1 = (0x2232, .neutral)
+private let __ea_pair_af: _T1 = (0x2233, .neutral)
+private let __ea_pair_ag: _T1 = (0x2234, .ambiguous)
+private let __ea_pair_ah: _T1 = (0x2235, .ambiguous)
+private let __ea_pair_ai: _T1 = (0x2236, .ambiguous)
+private let __ea_pair_aj: _T1 = (0x2237, .ambiguous)
+private let __ea_pair_ak: _T1 = (0x2238, .neutral)
+private let __ea_pair_al: _T1 = (0x2239, .neutral)
+private let __ea_pair_am: _T1 = (0x223a, .neutral)
+private let __ea_pair_an: _T1 = (0x223b, .neutral)
+private let __ea_pair_ao: _T1 = (0x223c, .ambiguous)
+private let __ea_pair_ap: _T1 = (0x223d, .ambiguous)
+private let __ea_pair_aq: _T1 = (0x2248, .ambiguous)
+private let __ea_pair_ar: _T1 = (0x2249, .neutral)
+private let __ea_pair_as: _T1 = (0x224a, .neutral)
+private let __ea_pair_at: _T1 = (0x224b, .neutral)
+private let __ea_pair_au: _T1 = (0x224c, .ambiguous)
+private let __ea_pair_av: _T1 = (0x224d, .neutral)
+private let __ea_pair_aw: _T1 = (0x224e, .neutral)
+private let __ea_pair_ax: _T1 = (0x224f, .neutral)
+private let __ea_pair_ay: _T1 = (0x2250, .neutral)
+private let __ea_pair_az: _T1 = (0x2251, .neutral)
+private let __ea_pair_b0: _T1 = (0x2252, .ambiguous)
+private let __ea_pair_b1: _T1 = (0x2260, .ambiguous)
+private let __ea_pair_b2: _T1 = (0x2261, .ambiguous)
+private let __ea_pair_b3: _T1 = (0x2262, .neutral)
+private let __ea_pair_b4: _T1 = (0x2263, .neutral)
+private let __ea_pair_b5: _T1 = (0x2264, .ambiguous)
+private let __ea_pair_b6: _T1 = (0x2265, .ambiguous)
+private let __ea_pair_b7: _T1 = (0x2266, .ambiguous)
+private let __ea_pair_b8: _T1 = (0x2267, .ambiguous)
+private let __ea_pair_b9: _T1 = (0x2268, .neutral)
+private let __ea_pair_ba: _T1 = (0x2269, .neutral)
+private let __ea_pair_bb: _T1 = (0x226a, .ambiguous)
+private let __ea_pair_bc: _T1 = (0x226b, .ambiguous)
+private let __ea_pair_bd: _T1 = (0x226c, .neutral)
+private let __ea_pair_be: _T1 = (0x226d, .neutral)
+private let __ea_pair_bf: _T1 = (0x226e, .ambiguous)
+private let __ea_pair_bg: _T1 = (0x226f, .ambiguous)
+private let __ea_pair_bh: _T1 = (0x2282, .ambiguous)
+private let __ea_pair_bi: _T1 = (0x2283, .ambiguous)
+private let __ea_pair_bj: _T1 = (0x2284, .neutral)
+private let __ea_pair_bk: _T1 = (0x2285, .neutral)
+private let __ea_pair_bl: _T1 = (0x2286, .ambiguous)
+private let __ea_pair_bm: _T1 = (0x2287, .ambiguous)
+private let __ea_pair_bn: _T1 = (0x2295, .ambiguous)
+private let __ea_pair_bo: _T1 = (0x2296, .neutral)
+private let __ea_pair_bp: _T1 = (0x2297, .neutral)
+private let __ea_pair_bq: _T1 = (0x2298, .neutral)
+private let __ea_pair_br: _T1 = (0x2299, .ambiguous)
+private let __ea_pair_bs: _T1 = (0x22a5, .ambiguous)
+private let __ea_pair_bt: _T1 = (0x22bf, .ambiguous)
+private let __ea_pair_bu: _T1 = (0x2312, .ambiguous)
+private let __ea_pair_bv: _T1 = (0x2313, .neutral)
+private let __ea_pair_bw: _T1 = (0x2314, .neutral)
+private let __ea_pair_bx: _T1 = (0x2315, .neutral)
+private let __ea_pair_by: _T1 = (0x2316, .neutral)
+private let __ea_pair_bz: _T1 = (0x2317, .neutral)
+private let __ea_pair_c0: _T1 = (0x2318, .neutral)
+private let __ea_pair_c1: _T1 = (0x2319, .neutral)
+private let __ea_pair_c2: _T1 = (0x231a, .wide)
+private let __ea_pair_c3: _T1 = (0x231b, .wide)
+private let __ea_pair_c4: _T1 = (0x2329, .wide)
+private let __ea_pair_c5: _T1 = (0x232a, .wide)
+private let __ea_pair_c6: _T1 = (0x23e9, .wide)
+private let __ea_pair_c7: _T1 = (0x23ea, .wide)
+private let __ea_pair_c8: _T1 = (0x23eb, .wide)
+private let __ea_pair_c9: _T1 = (0x23ec, .wide)
+private let __ea_pair_ca: _T1 = (0x23ed, .neutral)
+private let __ea_pair_cb: _T1 = (0x23ee, .neutral)
+private let __ea_pair_cc: _T1 = (0x23ef, .neutral)
+private let __ea_pair_cd: _T1 = (0x23f0, .wide)
+private let __ea_pair_ce: _T1 = (0x23f1, .neutral)
+private let __ea_pair_cf: _T1 = (0x23f2, .neutral)
+private let __ea_pair_cg: _T1 = (0x23f3, .wide)
+private let __ea_pair_ch: _T1 = (0x24ea, .neutral)
+private let __ea_pair_ci: _T1 = (0x254c, .neutral)
+private let __ea_pair_cj: _T1 = (0x254d, .neutral)
+private let __ea_pair_ck: _T1 = (0x254e, .neutral)
+private let __ea_pair_cl: _T1 = (0x254f, .neutral)
+private let __ea_pair_cm: _T1 = (0x2590, .neutral)
+private let __ea_pair_cn: _T1 = (0x2591, .neutral)
+private let __ea_pair_co: _T1 = (0x2592, .ambiguous)
+private let __ea_pair_cp: _T1 = (0x2593, .ambiguous)
+private let __ea_pair_cq: _T1 = (0x2594, .ambiguous)
+private let __ea_pair_cr: _T1 = (0x2595, .ambiguous)
+private let __ea_pair_cs: _T1 = (0x25a0, .ambiguous)
+private let __ea_pair_ct: _T1 = (0x25a1, .ambiguous)
+private let __ea_pair_cu: _T1 = (0x25a2, .neutral)
+private let __ea_pair_cv: _T1 = (0x25a3, .ambiguous)
+private let __ea_pair_cw: _T1 = (0x25a4, .ambiguous)
+private let __ea_pair_cx: _T1 = (0x25a5, .ambiguous)
+private let __ea_pair_cy: _T1 = (0x25a6, .ambiguous)
+private let __ea_pair_cz: _T1 = (0x25a7, .ambiguous)
+private let __ea_pair_d0: _T1 = (0x25a8, .ambiguous)
+private let __ea_pair_d1: _T1 = (0x25a9, .ambiguous)
+private let __ea_pair_d2: _T1 = (0x25b2, .ambiguous)
+private let __ea_pair_d3: _T1 = (0x25b3, .ambiguous)
+private let __ea_pair_d4: _T1 = (0x25b4, .neutral)
+private let __ea_pair_d5: _T1 = (0x25b5, .neutral)
+private let __ea_pair_d6: _T1 = (0x25b6, .ambiguous)
+private let __ea_pair_d7: _T1 = (0x25b7, .ambiguous)
+private let __ea_pair_d8: _T1 = (0x25b8, .neutral)
+private let __ea_pair_d9: _T1 = (0x25b9, .neutral)
+private let __ea_pair_da: _T1 = (0x25ba, .neutral)
+private let __ea_pair_db: _T1 = (0x25bb, .neutral)
+private let __ea_pair_dc: _T1 = (0x25bc, .ambiguous)
+private let __ea_pair_dd: _T1 = (0x25bd, .ambiguous)
+private let __ea_pair_de: _T1 = (0x25be, .neutral)
+private let __ea_pair_df: _T1 = (0x25bf, .neutral)
+private let __ea_pair_dg: _T1 = (0x25c0, .ambiguous)
+private let __ea_pair_dh: _T1 = (0x25c1, .ambiguous)
+private let __ea_pair_di: _T1 = (0x25c2, .neutral)
+private let __ea_pair_dj: _T1 = (0x25c3, .neutral)
+private let __ea_pair_dk: _T1 = (0x25c4, .neutral)
+private let __ea_pair_dl: _T1 = (0x25c5, .neutral)
+private let __ea_pair_dm: _T1 = (0x25c6, .ambiguous)
+private let __ea_pair_dn: _T1 = (0x25c7, .ambiguous)
+private let __ea_pair_do: _T1 = (0x25c8, .ambiguous)
+private let __ea_pair_dp: _T1 = (0x25c9, .neutral)
+private let __ea_pair_dq: _T1 = (0x25ca, .neutral)
+private let __ea_pair_dr: _T1 = (0x25cb, .ambiguous)
+private let __ea_pair_ds: _T1 = (0x25cc, .neutral)
+private let __ea_pair_dt: _T1 = (0x25cd, .neutral)
+private let __ea_pair_du: _T1 = (0x25ce, .ambiguous)
+private let __ea_pair_dv: _T1 = (0x25cf, .ambiguous)
+private let __ea_pair_dw: _T1 = (0x25d0, .ambiguous)
+private let __ea_pair_dx: _T1 = (0x25d1, .ambiguous)
+private let __ea_pair_dy: _T1 = (0x25e2, .ambiguous)
+private let __ea_pair_dz: _T1 = (0x25e3, .ambiguous)
+private let __ea_pair_e0: _T1 = (0x25e4, .ambiguous)
+private let __ea_pair_e1: _T1 = (0x25e5, .ambiguous)
+private let __ea_pair_e2: _T1 = (0x25ef, .ambiguous)
+private let __ea_pair_e3: _T1 = (0x25fd, .wide)
+private let __ea_pair_e4: _T1 = (0x25fe, .wide)
+private let __ea_pair_e5: _T1 = (0x25ff, .neutral)
+private let __ea_pair_e6: _T1 = (0x2600, .neutral)
+private let __ea_pair_e7: _T1 = (0x2601, .neutral)
+private let __ea_pair_e8: _T1 = (0x2602, .neutral)
+private let __ea_pair_e9: _T1 = (0x2603, .neutral)
+private let __ea_pair_ea: _T1 = (0x2604, .neutral)
+private let __ea_pair_eb: _T1 = (0x2605, .ambiguous)
+private let __ea_pair_ec: _T1 = (0x2606, .ambiguous)
+private let __ea_pair_ed: _T1 = (0x2607, .neutral)
+private let __ea_pair_ee: _T1 = (0x2608, .neutral)
+private let __ea_pair_ef: _T1 = (0x2609, .ambiguous)
+private let __ea_pair_eg: _T1 = (0x260a, .neutral)
+private let __ea_pair_eh: _T1 = (0x260b, .neutral)
+private let __ea_pair_ei: _T1 = (0x260c, .neutral)
+private let __ea_pair_ej: _T1 = (0x260d, .neutral)
+private let __ea_pair_ek: _T1 = (0x260e, .ambiguous)
+private let __ea_pair_el: _T1 = (0x260f, .ambiguous)
+private let __ea_pair_em: _T1 = (0x2610, .neutral)
+private let __ea_pair_en: _T1 = (0x2611, .neutral)
+private let __ea_pair_eo: _T1 = (0x2612, .neutral)
+private let __ea_pair_ep: _T1 = (0x2613, .neutral)
+private let __ea_pair_eq: _T1 = (0x2614, .wide)
+private let __ea_pair_er: _T1 = (0x2615, .wide)
+private let __ea_pair_es: _T1 = (0x2616, .neutral)
+private let __ea_pair_et: _T1 = (0x2617, .neutral)
+private let __ea_pair_eu: _T1 = (0x2618, .neutral)
+private let __ea_pair_ev: _T1 = (0x2619, .neutral)
+private let __ea_pair_ew: _T1 = (0x261a, .neutral)
+private let __ea_pair_ex: _T1 = (0x261b, .neutral)
+private let __ea_pair_ey: _T1 = (0x261c, .ambiguous)
+private let __ea_pair_ez: _T1 = (0x261d, .neutral)
+private let __ea_pair_f0: _T1 = (0x261e, .ambiguous)
+private let __ea_pair_f1: _T1 = (0x2640, .ambiguous)
+private let __ea_pair_f2: _T1 = (0x2641, .neutral)
+private let __ea_pair_f3: _T1 = (0x2642, .ambiguous)
+private let __ea_pair_f4: _T1 = (0x2643, .neutral)
+private let __ea_pair_f5: _T1 = (0x2644, .neutral)
+private let __ea_pair_f6: _T1 = (0x2645, .neutral)
+private let __ea_pair_f7: _T1 = (0x2646, .neutral)
+private let __ea_pair_f8: _T1 = (0x2647, .neutral)
+private let __ea_pair_f9: _T1 = (0x2660, .ambiguous)
+private let __ea_pair_fa: _T1 = (0x2661, .ambiguous)
+private let __ea_pair_fb: _T1 = (0x2662, .neutral)
+private let __ea_pair_fc: _T1 = (0x2663, .ambiguous)
+private let __ea_pair_fd: _T1 = (0x2664, .ambiguous)
+private let __ea_pair_fe: _T1 = (0x2665, .ambiguous)
+private let __ea_pair_ff: _T1 = (0x2666, .neutral)
+private let __ea_pair_fg: _T1 = (0x2667, .ambiguous)
+private let __ea_pair_fh: _T1 = (0x2668, .ambiguous)
+private let __ea_pair_fi: _T1 = (0x2669, .ambiguous)
+private let __ea_pair_fj: _T1 = (0x266a, .ambiguous)
+private let __ea_pair_fk: _T1 = (0x266b, .neutral)
+private let __ea_pair_fl: _T1 = (0x266c, .ambiguous)
+private let __ea_pair_fm: _T1 = (0x266d, .ambiguous)
+private let __ea_pair_fn: _T1 = (0x266e, .neutral)
+private let __ea_pair_fo: _T1 = (0x266f, .ambiguous)
+private let __ea_pair_fp: _T1 = (0x267f, .wide)
+private let __ea_pair_fq: _T1 = (0x2693, .wide)
+private let __ea_pair_fr: _T1 = (0x269e, .ambiguous)
+private let __ea_pair_fs: _T1 = (0x269f, .ambiguous)
+private let __ea_pair_ft: _T1 = (0x26a0, .neutral)
+private let __ea_pair_fu: _T1 = (0x26a1, .wide)
+private let __ea_pair_fv: _T1 = (0x26aa, .wide)
+private let __ea_pair_fw: _T1 = (0x26ab, .wide)
+private let __ea_pair_fx: _T1 = (0x26bd, .wide)
+private let __ea_pair_fy: _T1 = (0x26be, .wide)
+private let __ea_pair_fz: _T1 = (0x26bf, .ambiguous)
+private let __ea_pair_g0: _T1 = (0x26c0, .neutral)
+private let __ea_pair_g1: _T1 = (0x26c1, .neutral)
+private let __ea_pair_g2: _T1 = (0x26c2, .neutral)
+private let __ea_pair_g3: _T1 = (0x26c3, .neutral)
+private let __ea_pair_g4: _T1 = (0x26c4, .wide)
+private let __ea_pair_g5: _T1 = (0x26c5, .wide)
+private let __ea_pair_g6: _T1 = (0x26c6, .ambiguous)
+private let __ea_pair_g7: _T1 = (0x26c7, .ambiguous)
+private let __ea_pair_g8: _T1 = (0x26c8, .ambiguous)
+private let __ea_pair_g9: _T1 = (0x26c9, .ambiguous)
+private let __ea_pair_ga: _T1 = (0x26ca, .ambiguous)
+private let __ea_pair_gb: _T1 = (0x26cb, .ambiguous)
+private let __ea_pair_gc: _T1 = (0x26cc, .ambiguous)
+private let __ea_pair_gd: _T1 = (0x26cd, .ambiguous)
+private let __ea_pair_ge: _T1 = (0x26ce, .wide)
+private let __ea_pair_gf: _T1 = (0x26cf, .ambiguous)
+private let __ea_pair_gg: _T1 = (0x26d0, .ambiguous)
+private let __ea_pair_gh: _T1 = (0x26d1, .ambiguous)
+private let __ea_pair_gi: _T1 = (0x26d2, .ambiguous)
+private let __ea_pair_gj: _T1 = (0x26d3, .ambiguous)
+private let __ea_pair_gk: _T1 = (0x26d4, .wide)
+private let __ea_pair_gl: _T1 = (0x26e2, .neutral)
+private let __ea_pair_gm: _T1 = (0x26e3, .ambiguous)
+private let __ea_pair_gn: _T1 = (0x26e4, .neutral)
+private let __ea_pair_go: _T1 = (0x26e5, .neutral)
+private let __ea_pair_gp: _T1 = (0x26e6, .neutral)
+private let __ea_pair_gq: _T1 = (0x26e7, .neutral)
+private let __ea_pair_gr: _T1 = (0x26e8, .ambiguous)
+private let __ea_pair_gs: _T1 = (0x26e9, .ambiguous)
+private let __ea_pair_gt: _T1 = (0x26ea, .wide)
+private let __ea_pair_gu: _T1 = (0x26eb, .ambiguous)
+private let __ea_pair_gv: _T1 = (0x26ec, .ambiguous)
+private let __ea_pair_gw: _T1 = (0x26ed, .ambiguous)
+private let __ea_pair_gx: _T1 = (0x26ee, .ambiguous)
+private let __ea_pair_gy: _T1 = (0x26ef, .ambiguous)
+private let __ea_pair_gz: _T1 = (0x26f0, .ambiguous)
+private let __ea_pair_h0: _T1 = (0x26f1, .ambiguous)
+private let __ea_pair_h1: _T1 = (0x26f2, .wide)
+private let __ea_pair_h2: _T1 = (0x26f3, .wide)
+private let __ea_pair_h3: _T1 = (0x26f4, .ambiguous)
+private let __ea_pair_h4: _T1 = (0x26f5, .wide)
+private let __ea_pair_h5: _T1 = (0x26f6, .ambiguous)
+private let __ea_pair_h6: _T1 = (0x26f7, .ambiguous)
+private let __ea_pair_h7: _T1 = (0x26f8, .ambiguous)
+private let __ea_pair_h8: _T1 = (0x26f9, .ambiguous)
+private let __ea_pair_h9: _T1 = (0x26fa, .wide)
+private let __ea_pair_ha: _T1 = (0x26fb, .ambiguous)
+private let __ea_pair_hb: _T1 = (0x26fc, .ambiguous)
+private let __ea_pair_hc: _T1 = (0x26fd, .wide)
+private let __ea_pair_hd: _T1 = (0x26fe, .ambiguous)
+private let __ea_pair_he: _T1 = (0x26ff, .ambiguous)
+private let __ea_pair_hf: _T1 = (0x2700, .neutral)
+private let __ea_pair_hg: _T1 = (0x2701, .neutral)
+private let __ea_pair_hh: _T1 = (0x2702, .neutral)
+private let __ea_pair_hi: _T1 = (0x2703, .neutral)
+private let __ea_pair_hj: _T1 = (0x2704, .neutral)
+private let __ea_pair_hk: _T1 = (0x2705, .wide)
+private let __ea_pair_hl: _T1 = (0x2706, .neutral)
+private let __ea_pair_hm: _T1 = (0x2707, .neutral)
+private let __ea_pair_hn: _T1 = (0x2708, .neutral)
+private let __ea_pair_ho: _T1 = (0x2709, .neutral)
+private let __ea_pair_hp: _T1 = (0x270a, .wide)
+private let __ea_pair_hq: _T1 = (0x270b, .wide)
+private let __ea_pair_hr: _T1 = (0x2728, .wide)
+private let __ea_pair_hs: _T1 = (0x273d, .ambiguous)
+private let __ea_pair_ht: _T1 = (0x274c, .wide)
+private let __ea_pair_hu: _T1 = (0x274d, .neutral)
+private let __ea_pair_hv: _T1 = (0x274e, .wide)
+private let __ea_pair_hw: _T1 = (0x274f, .neutral)
+private let __ea_pair_hx: _T1 = (0x2750, .neutral)
+private let __ea_pair_hy: _T1 = (0x2751, .neutral)
+private let __ea_pair_hz: _T1 = (0x2752, .neutral)
+private let __ea_pair_i0: _T1 = (0x2753, .wide)
+private let __ea_pair_i1: _T1 = (0x2754, .wide)
+private let __ea_pair_i2: _T1 = (0x2755, .wide)
+private let __ea_pair_i3: _T1 = (0x2756, .neutral)
+private let __ea_pair_i4: _T1 = (0x2757, .wide)
+private let __ea_pair_i5: _T1 = (0x2795, .wide)
+private let __ea_pair_i6: _T1 = (0x2796, .wide)
+private let __ea_pair_i7: _T1 = (0x2797, .wide)
+private let __ea_pair_i8: _T1 = (0x27b0, .wide)
+private let __ea_pair_i9: _T1 = (0x27bf, .wide)
+private let __ea_pair_ia: _T1 = (0x27e6, .narrow)
+private let __ea_pair_ib: _T1 = (0x27e7, .narrow)
+private let __ea_pair_ic: _T1 = (0x27e8, .narrow)
+private let __ea_pair_id: _T1 = (0x27e9, .narrow)
+private let __ea_pair_ie: _T1 = (0x27ea, .narrow)
+private let __ea_pair_if: _T1 = (0x27eb, .narrow)
+private let __ea_pair_ig: _T1 = (0x27ec, .narrow)
+private let __ea_pair_ih: _T1 = (0x27ed, .narrow)
+private let __ea_pair_ii: _T1 = (0x2985, .narrow)
+private let __ea_pair_ij: _T1 = (0x2986, .narrow)
+private let __ea_pair_ik: _T1 = (0x2b1b, .wide)
+private let __ea_pair_il: _T1 = (0x2b1c, .wide)
+private let __ea_pair_im: _T1 = (0x2b50, .wide)
+private let __ea_pair_in: _T1 = (0x2b51, .neutral)
+private let __ea_pair_io: _T1 = (0x2b52, .neutral)
+private let __ea_pair_ip: _T1 = (0x2b53, .neutral)
+private let __ea_pair_iq: _T1 = (0x2b54, .neutral)
+private let __ea_pair_ir: _T1 = (0x2b55, .wide)
+private let __ea_pair_is: _T1 = (0x2b56, .ambiguous)
+private let __ea_pair_it: _T1 = (0x2b57, .ambiguous)
+private let __ea_pair_iu: _T1 = (0x2b58, .ambiguous)
+private let __ea_pair_iv: _T1 = (0x2b59, .ambiguous)
+private let __ea_pair_iw: _T1 = (0x2e9a, .neutral)
+private let __ea_pair_ix: _T1 = (0x2ffc, .neutral)
+private let __ea_pair_iy: _T1 = (0x2ffd, .neutral)
+private let __ea_pair_iz: _T1 = (0x2ffe, .neutral)
+private let __ea_pair_j0: _T1 = (0x2fff, .neutral)
+private let __ea_pair_j1: _T1 = (0x3000, .fullwidth)
+private let __ea_pair_j2: _T1 = (0x303f, .neutral)
+private let __ea_pair_j3: _T1 = (0x3040, .neutral)
+private let __ea_pair_j4: _T1 = (0x3097, .neutral)
+private let __ea_pair_j5: _T1 = (0x3098, .neutral)
+private let __ea_pair_j6: _T1 = (0x3100, .neutral)
+private let __ea_pair_j7: _T1 = (0x3101, .neutral)
+private let __ea_pair_j8: _T1 = (0x3102, .neutral)
+private let __ea_pair_j9: _T1 = (0x3103, .neutral)
+private let __ea_pair_ja: _T1 = (0x3104, .neutral)
+private let __ea_pair_jb: _T1 = (0x3130, .neutral)
+private let __ea_pair_jc: _T1 = (0x318f, .neutral)
+private let __ea_pair_jd: _T1 = (0x31bb, .neutral)
+private let __ea_pair_je: _T1 = (0x31bc, .neutral)
+private let __ea_pair_jf: _T1 = (0x31bd, .neutral)
+private let __ea_pair_jg: _T1 = (0x31be, .neutral)
+private let __ea_pair_jh: _T1 = (0x31bf, .neutral)
+private let __ea_pair_ji: _T1 = (0x321f, .neutral)
+private let __ea_pair_jj: _T1 = (0x3248, .ambiguous)
+private let __ea_pair_jk: _T1 = (0x3249, .ambiguous)
+private let __ea_pair_jl: _T1 = (0x324a, .ambiguous)
+private let __ea_pair_jm: _T1 = (0x324b, .ambiguous)
+private let __ea_pair_jn: _T1 = (0x324c, .ambiguous)
+private let __ea_pair_jo: _T1 = (0x324d, .ambiguous)
+private let __ea_pair_jp: _T1 = (0x324e, .ambiguous)
+private let __ea_pair_jq: _T1 = (0x324f, .ambiguous)
+private let __ea_pair_jr: _T1 = (0xa48d, .neutral)
+private let __ea_pair_js: _T1 = (0xa48e, .neutral)
+private let __ea_pair_jt: _T1 = (0xa48f, .neutral)
+private let __ea_pair_ju: _T1 = (0xfe53, .neutral)
+private let __ea_pair_jv: _T1 = (0xfe67, .neutral)
+private let __ea_pair_jw: _T1 = (0xfe68, .wide)
+private let __ea_pair_jx: _T1 = (0xfe69, .wide)
+private let __ea_pair_jy: _T1 = (0xfe6a, .wide)
+private let __ea_pair_jz: _T1 = (0xfe6b, .wide)
+private let __ea_pair_k0: _T1 = (0xffbf, .neutral)
+private let __ea_pair_k1: _T1 = (0xffc0, .neutral)
+private let __ea_pair_k2: _T1 = (0xffc1, .neutral)
+private let __ea_pair_k3: _T1 = (0xffc2, .halfwidth)
+private let __ea_pair_k4: _T1 = (0xffc3, .halfwidth)
+private let __ea_pair_k5: _T1 = (0xffc4, .halfwidth)
+private let __ea_pair_k6: _T1 = (0xffc5, .halfwidth)
+private let __ea_pair_k7: _T1 = (0xffc6, .halfwidth)
+private let __ea_pair_k8: _T1 = (0xffc7, .halfwidth)
+private let __ea_pair_k9: _T1 = (0xffc8, .neutral)
+private let __ea_pair_ka: _T1 = (0xffc9, .neutral)
+private let __ea_pair_kb: _T1 = (0xffca, .halfwidth)
+private let __ea_pair_kc: _T1 = (0xffcb, .halfwidth)
+private let __ea_pair_kd: _T1 = (0xffcc, .halfwidth)
+private let __ea_pair_ke: _T1 = (0xffcd, .halfwidth)
+private let __ea_pair_kf: _T1 = (0xffce, .halfwidth)
+private let __ea_pair_kg: _T1 = (0xffcf, .halfwidth)
+private let __ea_pair_kh: _T1 = (0xffd0, .neutral)
+private let __ea_pair_ki: _T1 = (0xffd1, .neutral)
+private let __ea_pair_kj: _T1 = (0xffd2, .halfwidth)
+private let __ea_pair_kk: _T1 = (0xffd3, .halfwidth)
+private let __ea_pair_kl: _T1 = (0xffd4, .halfwidth)
+private let __ea_pair_km: _T1 = (0xffd5, .halfwidth)
+private let __ea_pair_kn: _T1 = (0xffd6, .halfwidth)
+private let __ea_pair_ko: _T1 = (0xffd7, .halfwidth)
+private let __ea_pair_kp: _T1 = (0xffd8, .neutral)
+private let __ea_pair_kq: _T1 = (0xffd9, .neutral)
+private let __ea_pair_kr: _T1 = (0xffda, .halfwidth)
+private let __ea_pair_ks: _T1 = (0xffdb, .halfwidth)
+private let __ea_pair_kt: _T1 = (0xffdc, .halfwidth)
+private let __ea_pair_ku: _T1 = (0xffdd, .neutral)
+private let __ea_pair_kv: _T1 = (0xffde, .neutral)
+private let __ea_pair_kw: _T1 = (0xffdf, .neutral)
+private let __ea_pair_kx: _T1 = (0xffe0, .fullwidth)
+private let __ea_pair_ky: _T1 = (0xffe1, .fullwidth)
+private let __ea_pair_kz: _T1 = (0xffe2, .fullwidth)
+private let __ea_pair_l0: _T1 = (0xffe3, .fullwidth)
+private let __ea_pair_l1: _T1 = (0xffe4, .fullwidth)
+private let __ea_pair_l2: _T1 = (0xffe5, .fullwidth)
+private let __ea_pair_l3: _T1 = (0xffe6, .fullwidth)
+private let __ea_pair_l4: _T1 = (0xffe7, .neutral)
+private let __ea_pair_l5: _T1 = (0xffe8, .halfwidth)
+private let __ea_pair_l6: _T1 = (0xffe9, .halfwidth)
+private let __ea_pair_l7: _T1 = (0xffea, .halfwidth)
+private let __ea_pair_l8: _T1 = (0xffeb, .halfwidth)
+private let __ea_pair_l9: _T1 = (0xffec, .halfwidth)
+private let __ea_pair_la: _T1 = (0xffed, .halfwidth)
+private let __ea_pair_lb: _T1 = (0xffee, .halfwidth)
+private let __ea_pair_lc: _T1 = (0xfffd, .ambiguous)
+private let __ea_pair_ld: _T1 = (0x16fe0, .wide)
+private let __ea_pair_le: _T1 = (0x16fe1, .wide)
+private let __ea_pair_lf: _T1 = (0x16fe2, .wide)
+private let __ea_pair_lg: _T1 = (0x16fe3, .wide)
+private let __ea_pair_lh: _T1 = (0x1b150, .wide)
+private let __ea_pair_li: _T1 = (0x1b151, .wide)
+private let __ea_pair_lj: _T1 = (0x1b152, .wide)
+private let __ea_pair_lk: _T1 = (0x1b164, .wide)
+private let __ea_pair_ll: _T1 = (0x1b165, .wide)
+private let __ea_pair_lm: _T1 = (0x1b166, .wide)
+private let __ea_pair_ln: _T1 = (0x1b167, .wide)
+private let __ea_pair_lo: _T1 = (0x1f004, .wide)
+private let __ea_pair_lp: _T1 = (0x1f0cf, .wide)
+private let __ea_pair_lq: _T1 = (0x1f10b, .neutral)
+private let __ea_pair_lr: _T1 = (0x1f10c, .neutral)
+private let __ea_pair_ls: _T1 = (0x1f10d, .neutral)
+private let __ea_pair_lt: _T1 = (0x1f10e, .neutral)
+private let __ea_pair_lu: _T1 = (0x1f10f, .neutral)
+private let __ea_pair_lv: _T1 = (0x1f12e, .neutral)
+private let __ea_pair_lw: _T1 = (0x1f12f, .neutral)
+private let __ea_pair_lx: _T1 = (0x1f16a, .neutral)
+private let __ea_pair_ly: _T1 = (0x1f16b, .neutral)
+private let __ea_pair_lz: _T1 = (0x1f16c, .neutral)
+private let __ea_pair_m0: _T1 = (0x1f16d, .neutral)
+private let __ea_pair_m1: _T1 = (0x1f16e, .neutral)
+private let __ea_pair_m2: _T1 = (0x1f16f, .neutral)
+private let __ea_pair_m3: _T1 = (0x1f18e, .wide)
+private let __ea_pair_m4: _T1 = (0x1f18f, .ambiguous)
+private let __ea_pair_m5: _T1 = (0x1f190, .ambiguous)
+private let __ea_pair_m6: _T1 = (0x1f200, .wide)
+private let __ea_pair_m7: _T1 = (0x1f201, .wide)
+private let __ea_pair_m8: _T1 = (0x1f202, .wide)
+private let __ea_pair_m9: _T1 = (0x1f23c, .neutral)
+private let __ea_pair_ma: _T1 = (0x1f23d, .neutral)
+private let __ea_pair_mb: _T1 = (0x1f23e, .neutral)
+private let __ea_pair_mc: _T1 = (0x1f23f, .neutral)
+private let __ea_pair_md: _T1 = (0x1f250, .wide)
+private let __ea_pair_me: _T1 = (0x1f251, .wide)
+private let __ea_pair_mf: _T1 = (0x1f260, .wide)
+private let __ea_pair_mg: _T1 = (0x1f261, .wide)
+private let __ea_pair_mh: _T1 = (0x1f262, .wide)
+private let __ea_pair_mi: _T1 = (0x1f263, .wide)
+private let __ea_pair_mj: _T1 = (0x1f264, .wide)
+private let __ea_pair_mk: _T1 = (0x1f265, .wide)
+private let __ea_pair_ml: _T1 = (0x1f336, .neutral)
+private let __ea_pair_mm: _T1 = (0x1f37d, .neutral)
+private let __ea_pair_mn: _T1 = (0x1f3cb, .neutral)
+private let __ea_pair_mo: _T1 = (0x1f3cc, .neutral)
+private let __ea_pair_mp: _T1 = (0x1f3cd, .neutral)
+private let __ea_pair_mq: _T1 = (0x1f3ce, .neutral)
+private let __ea_pair_mr: _T1 = (0x1f3cf, .wide)
+private let __ea_pair_ms: _T1 = (0x1f3d0, .wide)
+private let __ea_pair_mt: _T1 = (0x1f3d1, .wide)
+private let __ea_pair_mu: _T1 = (0x1f3d2, .wide)
+private let __ea_pair_mv: _T1 = (0x1f3d3, .wide)
+private let __ea_pair_mw: _T1 = (0x1f3f1, .neutral)
+private let __ea_pair_mx: _T1 = (0x1f3f2, .neutral)
+private let __ea_pair_my: _T1 = (0x1f3f3, .neutral)
+private let __ea_pair_mz: _T1 = (0x1f3f4, .wide)
+private let __ea_pair_n0: _T1 = (0x1f3f5, .neutral)
+private let __ea_pair_n1: _T1 = (0x1f3f6, .neutral)
+private let __ea_pair_n2: _T1 = (0x1f3f7, .neutral)
+private let __ea_pair_n3: _T1 = (0x1f43f, .neutral)
+private let __ea_pair_n4: _T1 = (0x1f440, .wide)
+private let __ea_pair_n5: _T1 = (0x1f441, .neutral)
+private let __ea_pair_n6: _T1 = (0x1f4fd, .neutral)
+private let __ea_pair_n7: _T1 = (0x1f4fe, .neutral)
+private let __ea_pair_n8: _T1 = (0x1f54b, .wide)
+private let __ea_pair_n9: _T1 = (0x1f54c, .wide)
+private let __ea_pair_na: _T1 = (0x1f54d, .wide)
+private let __ea_pair_nb: _T1 = (0x1f54e, .wide)
+private let __ea_pair_nc: _T1 = (0x1f54f, .neutral)
+private let __ea_pair_nd: _T1 = (0x1f57a, .wide)
+private let __ea_pair_ne: _T1 = (0x1f595, .wide)
+private let __ea_pair_nf: _T1 = (0x1f596, .wide)
+private let __ea_pair_ng: _T1 = (0x1f5a4, .wide)
+private let __ea_pair_nh: _T1 = (0x1f6c6, .neutral)
+private let __ea_pair_ni: _T1 = (0x1f6c7, .neutral)
+private let __ea_pair_nj: _T1 = (0x1f6c8, .neutral)
+private let __ea_pair_nk: _T1 = (0x1f6c9, .neutral)
+private let __ea_pair_nl: _T1 = (0x1f6ca, .neutral)
+private let __ea_pair_nm: _T1 = (0x1f6cb, .neutral)
+private let __ea_pair_nn: _T1 = (0x1f6cc, .wide)
+private let __ea_pair_no: _T1 = (0x1f6cd, .neutral)
+private let __ea_pair_np: _T1 = (0x1f6ce, .neutral)
+private let __ea_pair_nq: _T1 = (0x1f6cf, .neutral)
+private let __ea_pair_nr: _T1 = (0x1f6d0, .wide)
+private let __ea_pair_ns: _T1 = (0x1f6d1, .wide)
+private let __ea_pair_nt: _T1 = (0x1f6d2, .wide)
+private let __ea_pair_nu: _T1 = (0x1f6d3, .neutral)
+private let __ea_pair_nv: _T1 = (0x1f6d4, .neutral)
+private let __ea_pair_nw: _T1 = (0x1f6d5, .wide)
+private let __ea_pair_nx: _T1 = (0x1f6eb, .wide)
+private let __ea_pair_ny: _T1 = (0x1f6ec, .wide)
+private let __ea_pair_nz: _T1 = (0x1f6f4, .wide)
+private let __ea_pair_o0: _T1 = (0x1f6f5, .wide)
+private let __ea_pair_o1: _T1 = (0x1f6f6, .wide)
+private let __ea_pair_o2: _T1 = (0x1f6f7, .wide)
+private let __ea_pair_o3: _T1 = (0x1f6f8, .wide)
+private let __ea_pair_o4: _T1 = (0x1f6f9, .wide)
+private let __ea_pair_o5: _T1 = (0x1f6fa, .wide)
+private let __ea_pair_o6: _T1 = (0x1f972, .neutral)
+private let __ea_pair_o7: _T1 = (0x1f973, .wide)
+private let __ea_pair_o8: _T1 = (0x1f974, .wide)
+private let __ea_pair_o9: _T1 = (0x1f975, .wide)
+private let __ea_pair_oa: _T1 = (0x1f976, .wide)
+private let __ea_pair_ob: _T1 = (0x1f977, .neutral)
+private let __ea_pair_oc: _T1 = (0x1f978, .neutral)
+private let __ea_pair_od: _T1 = (0x1f979, .neutral)
+private let __ea_pair_oe: _T1 = (0x1f9a3, .neutral)
+private let __ea_pair_of: _T1 = (0x1f9a4, .neutral)
+private let __ea_pair_og: _T1 = (0x1f9a5, .wide)
+private let __ea_pair_oh: _T1 = (0x1f9a6, .wide)
+private let __ea_pair_oi: _T1 = (0x1f9a7, .wide)
+private let __ea_pair_oj: _T1 = (0x1f9a8, .wide)
+private let __ea_pair_ok: _T1 = (0x1f9a9, .wide)
+private let __ea_pair_ol: _T1 = (0x1f9aa, .wide)
+private let __ea_pair_om: _T1 = (0x1f9ab, .neutral)
+private let __ea_pair_on: _T1 = (0x1f9ac, .neutral)
+private let __ea_pair_oo: _T1 = (0x1f9ad, .neutral)
+private let __ea_pair_op: _T1 = (0x1f9cb, .neutral)
+private let __ea_pair_oq: _T1 = (0x1f9cc, .neutral)
+private let __ea_pair_or: _T1 = (0x1fa70, .wide)
+private let __ea_pair_os: _T1 = (0x1fa71, .wide)
+private let __ea_pair_ot: _T1 = (0x1fa72, .wide)
+private let __ea_pair_ou: _T1 = (0x1fa73, .wide)
+private let __ea_pair_ov: _T1 = (0x1fa74, .neutral)
+private let __ea_pair_ow: _T1 = (0x1fa75, .neutral)
+private let __ea_pair_ox: _T1 = (0x1fa76, .neutral)
+private let __ea_pair_oy: _T1 = (0x1fa77, .neutral)
+private let __ea_pair_oz: _T1 = (0x1fa78, .wide)
+private let __ea_pair_p0: _T1 = (0x1fa79, .wide)
+private let __ea_pair_p1: _T1 = (0x1fa7a, .wide)
+private let __ea_pair_p2: _T1 = (0x1fa7b, .neutral)
+private let __ea_pair_p3: _T1 = (0x1fa7c, .neutral)
+private let __ea_pair_p4: _T1 = (0x1fa7d, .neutral)
+private let __ea_pair_p5: _T1 = (0x1fa7e, .neutral)
+private let __ea_pair_p6: _T1 = (0x1fa7f, .neutral)
+private let __ea_pair_p7: _T1 = (0x1fa80, .wide)
+private let __ea_pair_p8: _T1 = (0x1fa81, .wide)
+private let __ea_pair_p9: _T1 = (0x1fa82, .wide)
+private let __ea_pair_pa: _T1 = (0x1fa90, .wide)
+private let __ea_pair_pb: _T1 = (0x1fa91, .wide)
+private let __ea_pair_pc: _T1 = (0x1fa92, .wide)
+private let __ea_pair_pd: _T1 = (0x1fa93, .wide)
+private let __ea_pair_pe: _T1 = (0x1fa94, .wide)
+private let __ea_pair_pf: _T1 = (0x1fa95, .wide)
+private let __ea_pair_pg: _T1 = (0x2fffe, .neutral)
+private let __ea_pair_ph: _T1 = (0x2ffff, .neutral)
+private let __ea_pair_pi: _T1 = (0xffffe, .neutral)
+private let __ea_pair_pj: _T1 = (0xfffff, .neutral)
+private let __ea_pair_pk: _T1 = (0x10fffe, .neutral)
+private let __ea_pair_pl: _T1 = (0x10ffff, .neutral)
 private let __ea_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWithValues: [
   __ea_pair_0,
   __ea_pair_1,
@@ -2792,1380 +1904,191 @@ private let __ea_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWi
   __ea_pair_pj,
   __ea_pair_pk,
   __ea_pair_pl,
-  __ea_pair_pm,
-  __ea_pair_pn,
-  __ea_pair_po,
-  __ea_pair_pp,
-  __ea_pair_pq,
-  __ea_pair_pr,
-  __ea_pair_ps,
-  __ea_pair_pt,
-  __ea_pair_pu,
-  __ea_pair_pv,
-  __ea_pair_pw,
-  __ea_pair_px,
-  __ea_pair_py,
-  __ea_pair_pz,
-  __ea_pair_q0,
-  __ea_pair_q1,
-  __ea_pair_q2,
-  __ea_pair_q3,
-  __ea_pair_q4,
-  __ea_pair_q5,
-  __ea_pair_q6,
-  __ea_pair_q7,
-  __ea_pair_q8,
-  __ea_pair_q9,
-  __ea_pair_qa,
-  __ea_pair_qb,
-  __ea_pair_qc,
-  __ea_pair_qd,
-  __ea_pair_qe,
-  __ea_pair_qf,
-  __ea_pair_qg,
-  __ea_pair_qh,
-  __ea_pair_qi,
-  __ea_pair_qj,
-  __ea_pair_qk,
-  __ea_pair_ql,
-  __ea_pair_qm,
-  __ea_pair_qn,
-  __ea_pair_qo,
-  __ea_pair_qp,
-  __ea_pair_qq,
-  __ea_pair_qr,
-  __ea_pair_qs,
-  __ea_pair_qt,
-  __ea_pair_qu,
-  __ea_pair_qv,
-  __ea_pair_qw,
-  __ea_pair_qx,
-  __ea_pair_qy,
-  __ea_pair_qz,
-  __ea_pair_r0,
-  __ea_pair_r1,
-  __ea_pair_r2,
-  __ea_pair_r3,
-  __ea_pair_r4,
-  __ea_pair_r5,
-  __ea_pair_r6,
-  __ea_pair_r7,
-  __ea_pair_r8,
-  __ea_pair_r9,
-  __ea_pair_ra,
-  __ea_pair_rb,
-  __ea_pair_rc,
-  __ea_pair_rd,
-  __ea_pair_re,
-  __ea_pair_rf,
-  __ea_pair_rg,
-  __ea_pair_rh,
-  __ea_pair_ri,
-  __ea_pair_rj,
-  __ea_pair_rk,
-  __ea_pair_rl,
-  __ea_pair_rm,
-  __ea_pair_rn,
-  __ea_pair_ro,
-  __ea_pair_rp,
-  __ea_pair_rq,
-  __ea_pair_rr,
-  __ea_pair_rs,
-  __ea_pair_rt,
-  __ea_pair_ru,
-  __ea_pair_rv,
-  __ea_pair_rw,
-  __ea_pair_rx,
-  __ea_pair_ry,
-  __ea_pair_rz,
-  __ea_pair_s0,
-  __ea_pair_s1,
-  __ea_pair_s2,
-  __ea_pair_s3,
-  __ea_pair_s4,
-  __ea_pair_s5,
-  __ea_pair_s6,
-  __ea_pair_s7,
-  __ea_pair_s8,
-  __ea_pair_s9,
-  __ea_pair_sa,
-  __ea_pair_sb,
-  __ea_pair_sc,
-  __ea_pair_sd,
-  __ea_pair_se,
-  __ea_pair_sf,
-  __ea_pair_sg,
-  __ea_pair_sh,
-  __ea_pair_si,
-  __ea_pair_sj,
-  __ea_pair_sk,
-  __ea_pair_sl,
-  __ea_pair_sm,
-  __ea_pair_sn,
-  __ea_pair_so,
-  __ea_pair_sp,
-  __ea_pair_sq,
-  __ea_pair_sr,
-  __ea_pair_ss,
-  __ea_pair_st,
-  __ea_pair_su,
-  __ea_pair_sv,
-  __ea_pair_sw,
-  __ea_pair_sx,
-  __ea_pair_sy,
-  __ea_pair_sz,
-  __ea_pair_t0,
-  __ea_pair_t1,
-  __ea_pair_t2,
-  __ea_pair_t3,
-  __ea_pair_t4,
-  __ea_pair_t5,
-  __ea_pair_t6,
-  __ea_pair_t7,
-  __ea_pair_t8,
-  __ea_pair_t9,
-  __ea_pair_ta,
-  __ea_pair_tb,
-  __ea_pair_tc,
-  __ea_pair_td,
-  __ea_pair_te,
-  __ea_pair_tf,
-  __ea_pair_tg,
-  __ea_pair_th,
-  __ea_pair_ti,
-  __ea_pair_tj,
-  __ea_pair_tk,
-  __ea_pair_tl,
-  __ea_pair_tm,
-  __ea_pair_tn,
-  __ea_pair_to,
-  __ea_pair_tp,
-  __ea_pair_tq,
-  __ea_pair_tr,
-  __ea_pair_ts,
-  __ea_pair_tt,
-  __ea_pair_tu,
-  __ea_pair_tv,
-  __ea_pair_tw,
-  __ea_pair_tx,
-  __ea_pair_ty,
-  __ea_pair_tz,
-  __ea_pair_u0,
-  __ea_pair_u1,
-  __ea_pair_u2,
-  __ea_pair_u3,
-  __ea_pair_u4,
-  __ea_pair_u5,
-  __ea_pair_u6,
-  __ea_pair_u7,
-  __ea_pair_u8,
-  __ea_pair_u9,
-  __ea_pair_ua,
-  __ea_pair_ub,
-  __ea_pair_uc,
-  __ea_pair_ud,
-  __ea_pair_ue,
-  __ea_pair_uf,
-  __ea_pair_ug,
-  __ea_pair_uh,
-  __ea_pair_ui,
-  __ea_pair_uj,
-  __ea_pair_uk,
-  __ea_pair_ul,
-  __ea_pair_um,
-  __ea_pair_un,
-  __ea_pair_uo,
-  __ea_pair_up,
-  __ea_pair_uq,
-  __ea_pair_ur,
-  __ea_pair_us,
-  __ea_pair_ut,
-  __ea_pair_uu,
-  __ea_pair_uv,
-  __ea_pair_uw,
-  __ea_pair_ux,
-  __ea_pair_uy,
-  __ea_pair_uz,
-  __ea_pair_v0,
-  __ea_pair_v1,
-  __ea_pair_v2,
-  __ea_pair_v3,
-  __ea_pair_v4,
-  __ea_pair_v5,
-  __ea_pair_v6,
-  __ea_pair_v7,
-  __ea_pair_v8,
-  __ea_pair_v9,
-  __ea_pair_va,
-  __ea_pair_vb,
-  __ea_pair_vc,
-  __ea_pair_vd,
-  __ea_pair_ve,
-  __ea_pair_vf,
-  __ea_pair_vg,
-  __ea_pair_vh,
-  __ea_pair_vi,
-  __ea_pair_vj,
-  __ea_pair_vk,
-  __ea_pair_vl,
-  __ea_pair_vm,
-  __ea_pair_vn,
-  __ea_pair_vo,
-  __ea_pair_vp,
-  __ea_pair_vq,
-  __ea_pair_vr,
-  __ea_pair_vs,
-  __ea_pair_vt,
-  __ea_pair_vu,
-  __ea_pair_vv,
-  __ea_pair_vw,
-  __ea_pair_vx,
-  __ea_pair_vy,
-  __ea_pair_vz,
-  __ea_pair_w0,
-  __ea_pair_w1,
-  __ea_pair_w2,
-  __ea_pair_w3,
-  __ea_pair_w4,
-  __ea_pair_w5,
-  __ea_pair_w6,
-  __ea_pair_w7,
-  __ea_pair_w8,
-  __ea_pair_w9,
-  __ea_pair_wa,
-  __ea_pair_wb,
-  __ea_pair_wc,
-  __ea_pair_wd,
-  __ea_pair_we,
-  __ea_pair_wf,
-  __ea_pair_wg,
-  __ea_pair_wh,
-  __ea_pair_wi,
-  __ea_pair_wj,
-  __ea_pair_wk,
-  __ea_pair_wl,
-  __ea_pair_wm,
-  __ea_pair_wn,
-  __ea_pair_wo,
-  __ea_pair_wp,
-  __ea_pair_wq,
-  __ea_pair_wr,
-  __ea_pair_ws,
-  __ea_pair_wt,
-  __ea_pair_wu,
-  __ea_pair_wv,
-  __ea_pair_ww,
-  __ea_pair_wx,
-  __ea_pair_wy,
-  __ea_pair_wz,
-  __ea_pair_x0,
-  __ea_pair_x1,
-  __ea_pair_x2,
-  __ea_pair_x3,
-  __ea_pair_x4,
-  __ea_pair_x5,
-  __ea_pair_x6,
-  __ea_pair_x7,
-  __ea_pair_x8,
-  __ea_pair_x9,
-  __ea_pair_xa,
-  __ea_pair_xb,
-  __ea_pair_xc,
-  __ea_pair_xd,
-  __ea_pair_xe,
-  __ea_pair_xf,
-  __ea_pair_xg,
-  __ea_pair_xh,
-  __ea_pair_xi,
-  __ea_pair_xj,
-  __ea_pair_xk,
-  __ea_pair_xl,
-  __ea_pair_xm,
-  __ea_pair_xn,
-  __ea_pair_xo,
-  __ea_pair_xp,
-  __ea_pair_xq,
-  __ea_pair_xr,
-  __ea_pair_xs,
-  __ea_pair_xt,
-  __ea_pair_xu,
-  __ea_pair_xv,
-  __ea_pair_xw,
-  __ea_pair_xx,
-  __ea_pair_xy,
-  __ea_pair_xz,
-  __ea_pair_y0,
-  __ea_pair_y1,
-  __ea_pair_y2,
-  __ea_pair_y3,
-  __ea_pair_y4,
-  __ea_pair_y5,
-  __ea_pair_y6,
-  __ea_pair_y7,
-  __ea_pair_y8,
-  __ea_pair_y9,
-  __ea_pair_ya,
-  __ea_pair_yb,
-  __ea_pair_yc,
-  __ea_pair_yd,
-  __ea_pair_ye,
-  __ea_pair_yf,
-  __ea_pair_yg,
-  __ea_pair_yh,
-  __ea_pair_yi,
-  __ea_pair_yj,
-  __ea_pair_yk,
-  __ea_pair_yl,
-  __ea_pair_ym,
-  __ea_pair_yn,
-  __ea_pair_yo,
-  __ea_pair_yp,
-  __ea_pair_yq,
-  __ea_pair_yr,
-  __ea_pair_ys,
-  __ea_pair_yt,
-  __ea_pair_yu,
-  __ea_pair_yv,
-  __ea_pair_yw,
-  __ea_pair_yx,
-  __ea_pair_yy,
-  __ea_pair_yz,
-  __ea_pair_z0,
-  __ea_pair_z1,
-  __ea_pair_z2,
-  __ea_pair_z3,
-  __ea_pair_z4,
-  __ea_pair_z5,
-  __ea_pair_z6,
-  __ea_pair_z7,
-  __ea_pair_z8,
-  __ea_pair_z9,
-  __ea_pair_za,
-  __ea_pair_zb,
-  __ea_pair_zc,
-  __ea_pair_zd,
-  __ea_pair_ze,
-  __ea_pair_zf,
-  __ea_pair_zg,
-  __ea_pair_zh,
-  __ea_pair_zi,
-  __ea_pair_zj,
-  __ea_pair_zk,
-  __ea_pair_zl,
-  __ea_pair_zm,
-  __ea_pair_zn,
-  __ea_pair_zo,
-  __ea_pair_zp,
-  __ea_pair_zq,
-  __ea_pair_zr,
-  __ea_pair_zs,
-  __ea_pair_zt,
-  __ea_pair_zu,
-  __ea_pair_zv,
-  __ea_pair_zw,
-  __ea_pair_zx,
-  __ea_pair_zy,
-  __ea_pair_zz,
-  __ea_pair_100,
-  __ea_pair_101,
-  __ea_pair_102,
-  __ea_pair_103,
-  __ea_pair_104,
-  __ea_pair_105,
-  __ea_pair_106,
-  __ea_pair_107,
-  __ea_pair_108,
-  __ea_pair_109,
-  __ea_pair_10a,
-  __ea_pair_10b,
-  __ea_pair_10c,
-  __ea_pair_10d,
-  __ea_pair_10e,
-  __ea_pair_10f,
-  __ea_pair_10g,
-  __ea_pair_10h,
-  __ea_pair_10i,
-  __ea_pair_10j,
-  __ea_pair_10k,
-  __ea_pair_10l,
-  __ea_pair_10m,
-  __ea_pair_10n,
-  __ea_pair_10o,
-  __ea_pair_10p,
-  __ea_pair_10q,
-  __ea_pair_10r,
-  __ea_pair_10s,
-  __ea_pair_10t,
-  __ea_pair_10u,
-  __ea_pair_10v,
-  __ea_pair_10w,
-  __ea_pair_10x,
-  __ea_pair_10y,
-  __ea_pair_10z,
-  __ea_pair_110,
-  __ea_pair_111,
-  __ea_pair_112,
-  __ea_pair_113,
-  __ea_pair_114,
-  __ea_pair_115,
-  __ea_pair_116,
-  __ea_pair_117,
-  __ea_pair_118,
-  __ea_pair_119,
-  __ea_pair_11a,
-  __ea_pair_11b,
-  __ea_pair_11c,
-  __ea_pair_11d,
-  __ea_pair_11e,
-  __ea_pair_11f,
-  __ea_pair_11g,
-  __ea_pair_11h,
-  __ea_pair_11i,
-  __ea_pair_11j,
-  __ea_pair_11k,
-  __ea_pair_11l,
-  __ea_pair_11m,
-  __ea_pair_11n,
-  __ea_pair_11o,
-  __ea_pair_11p,
-  __ea_pair_11q,
-  __ea_pair_11r,
-  __ea_pair_11s,
-  __ea_pair_11t,
-  __ea_pair_11u,
-  __ea_pair_11v,
-  __ea_pair_11w,
-  __ea_pair_11x,
-  __ea_pair_11y,
-  __ea_pair_11z,
-  __ea_pair_120,
-  __ea_pair_121,
-  __ea_pair_122,
-  __ea_pair_123,
-  __ea_pair_124,
-  __ea_pair_125,
-  __ea_pair_126,
-  __ea_pair_127,
-  __ea_pair_128,
-  __ea_pair_129,
-  __ea_pair_12a,
-  __ea_pair_12b,
-  __ea_pair_12c,
-  __ea_pair_12d,
-  __ea_pair_12e,
-  __ea_pair_12f,
-  __ea_pair_12g,
-  __ea_pair_12h,
-  __ea_pair_12i,
-  __ea_pair_12j,
-  __ea_pair_12k,
-  __ea_pair_12l,
-  __ea_pair_12m,
-  __ea_pair_12n,
-  __ea_pair_12o,
-  __ea_pair_12p,
-  __ea_pair_12q,
-  __ea_pair_12r,
-  __ea_pair_12s,
-  __ea_pair_12t,
-  __ea_pair_12u,
-  __ea_pair_12v,
-  __ea_pair_12w,
-  __ea_pair_12x,
-  __ea_pair_12y,
-  __ea_pair_12z,
-  __ea_pair_130,
-  __ea_pair_131,
-  __ea_pair_132,
-  __ea_pair_133,
-  __ea_pair_134,
-  __ea_pair_135,
-  __ea_pair_136,
-  __ea_pair_137,
-  __ea_pair_138,
-  __ea_pair_139,
-  __ea_pair_13a,
-  __ea_pair_13b,
-  __ea_pair_13c,
-  __ea_pair_13d,
-  __ea_pair_13e,
-  __ea_pair_13f,
-  __ea_pair_13g,
-  __ea_pair_13h,
-  __ea_pair_13i,
-  __ea_pair_13j,
-  __ea_pair_13k,
-  __ea_pair_13l,
-  __ea_pair_13m,
-  __ea_pair_13n,
-  __ea_pair_13o,
-  __ea_pair_13p,
-  __ea_pair_13q,
-  __ea_pair_13r,
-  __ea_pair_13s,
-  __ea_pair_13t,
-  __ea_pair_13u,
-  __ea_pair_13v,
-  __ea_pair_13w,
-  __ea_pair_13x,
-  __ea_pair_13y,
-  __ea_pair_13z,
-  __ea_pair_140,
-  __ea_pair_141,
-  __ea_pair_142,
-  __ea_pair_143,
-  __ea_pair_144,
-  __ea_pair_145,
-  __ea_pair_146,
-  __ea_pair_147,
-  __ea_pair_148,
-  __ea_pair_149,
-  __ea_pair_14a,
-  __ea_pair_14b,
-  __ea_pair_14c,
-  __ea_pair_14d,
-  __ea_pair_14e,
-  __ea_pair_14f,
-  __ea_pair_14g,
-  __ea_pair_14h,
-  __ea_pair_14i,
-  __ea_pair_14j,
-  __ea_pair_14k,
-  __ea_pair_14l,
-  __ea_pair_14m,
-  __ea_pair_14n,
-  __ea_pair_14o,
-  __ea_pair_14p,
-  __ea_pair_14q,
-  __ea_pair_14r,
-  __ea_pair_14s,
-  __ea_pair_14t,
-  __ea_pair_14u,
-  __ea_pair_14v,
-  __ea_pair_14w,
-  __ea_pair_14x,
-  __ea_pair_14y,
-  __ea_pair_14z,
-  __ea_pair_150,
-  __ea_pair_151,
-  __ea_pair_152,
-  __ea_pair_153,
-  __ea_pair_154,
-  __ea_pair_155,
-  __ea_pair_156,
-  __ea_pair_157,
-  __ea_pair_158,
-  __ea_pair_159,
-  __ea_pair_15a,
-  __ea_pair_15b,
-  __ea_pair_15c,
-  __ea_pair_15d,
-  __ea_pair_15e,
-  __ea_pair_15f,
-  __ea_pair_15g,
-  __ea_pair_15h,
-  __ea_pair_15i,
-  __ea_pair_15j,
-  __ea_pair_15k,
-  __ea_pair_15l,
-  __ea_pair_15m,
-  __ea_pair_15n,
-  __ea_pair_15o,
-  __ea_pair_15p,
-  __ea_pair_15q,
-  __ea_pair_15r,
-  __ea_pair_15s,
-  __ea_pair_15t,
-  __ea_pair_15u,
-  __ea_pair_15v,
-  __ea_pair_15w,
-  __ea_pair_15x,
-  __ea_pair_15y,
-  __ea_pair_15z,
-  __ea_pair_160,
-  __ea_pair_161,
-  __ea_pair_162,
-  __ea_pair_163,
-  __ea_pair_164,
-  __ea_pair_165,
-  __ea_pair_166,
-  __ea_pair_167,
-  __ea_pair_168,
-  __ea_pair_169,
-  __ea_pair_16a,
-  __ea_pair_16b,
-  __ea_pair_16c,
-  __ea_pair_16d,
-  __ea_pair_16e,
-  __ea_pair_16f,
-  __ea_pair_16g,
-  __ea_pair_16h,
-  __ea_pair_16i,
-  __ea_pair_16j,
-  __ea_pair_16k,
-  __ea_pair_16l,
-  __ea_pair_16m,
-  __ea_pair_16n,
-  __ea_pair_16o,
-  __ea_pair_16p,
-  __ea_pair_16q,
-  __ea_pair_16r,
-  __ea_pair_16s,
-  __ea_pair_16t,
-  __ea_pair_16u,
-  __ea_pair_16v,
-  __ea_pair_16w,
-  __ea_pair_16x,
-  __ea_pair_16y,
-  __ea_pair_16z,
-  __ea_pair_170,
-  __ea_pair_171,
-  __ea_pair_172,
-  __ea_pair_173,
-  __ea_pair_174,
-  __ea_pair_175,
-  __ea_pair_176,
-  __ea_pair_177,
-  __ea_pair_178,
-  __ea_pair_179,
-  __ea_pair_17a,
-  __ea_pair_17b,
-  __ea_pair_17c,
-  __ea_pair_17d,
-  __ea_pair_17e,
-  __ea_pair_17f,
-  __ea_pair_17g,
-  __ea_pair_17h,
-  __ea_pair_17i,
-  __ea_pair_17j,
-  __ea_pair_17k,
-  __ea_pair_17l,
-  __ea_pair_17m,
-  __ea_pair_17n,
-  __ea_pair_17o,
-  __ea_pair_17p,
-  __ea_pair_17q,
-  __ea_pair_17r,
-  __ea_pair_17s,
-  __ea_pair_17t,
-  __ea_pair_17u,
-  __ea_pair_17v,
-  __ea_pair_17w,
-  __ea_pair_17x,
-  __ea_pair_17y,
-  __ea_pair_17z,
-  __ea_pair_180,
-  __ea_pair_181,
-  __ea_pair_182,
-  __ea_pair_183,
-  __ea_pair_184,
-  __ea_pair_185,
-  __ea_pair_186,
-  __ea_pair_187,
-  __ea_pair_188,
-  __ea_pair_189,
-  __ea_pair_18a,
-  __ea_pair_18b,
-  __ea_pair_18c,
-  __ea_pair_18d,
-  __ea_pair_18e,
-  __ea_pair_18f,
-  __ea_pair_18g,
-  __ea_pair_18h,
-  __ea_pair_18i,
-  __ea_pair_18j,
-  __ea_pair_18k,
-  __ea_pair_18l,
-  __ea_pair_18m,
-  __ea_pair_18n,
-  __ea_pair_18o,
-  __ea_pair_18p,
-  __ea_pair_18q,
-  __ea_pair_18r,
-  __ea_pair_18s,
-  __ea_pair_18t,
-  __ea_pair_18u,
-  __ea_pair_18v,
-  __ea_pair_18w,
-  __ea_pair_18x,
-  __ea_pair_18y,
-  __ea_pair_18z,
-  __ea_pair_190,
-  __ea_pair_191,
-  __ea_pair_192,
-  __ea_pair_193,
-  __ea_pair_194,
-  __ea_pair_195,
-  __ea_pair_196,
-  __ea_pair_197,
-  __ea_pair_198,
-  __ea_pair_199,
-  __ea_pair_19a,
-  __ea_pair_19b,
-  __ea_pair_19c,
-  __ea_pair_19d,
-  __ea_pair_19e,
-  __ea_pair_19f,
-  __ea_pair_19g,
-  __ea_pair_19h,
-  __ea_pair_19i,
-  __ea_pair_19j,
-  __ea_pair_19k,
-  __ea_pair_19l,
-  __ea_pair_19m,
-  __ea_pair_19n,
-  __ea_pair_19o,
-  __ea_pair_19p,
-  __ea_pair_19q,
-  __ea_pair_19r,
-  __ea_pair_19s,
-  __ea_pair_19t,
-  __ea_pair_19u,
-  __ea_pair_19v,
-  __ea_pair_19w,
-  __ea_pair_19x,
-  __ea_pair_19y,
-  __ea_pair_19z,
-  __ea_pair_1a0,
-  __ea_pair_1a1,
-  __ea_pair_1a2,
-  __ea_pair_1a3,
-  __ea_pair_1a4,
-  __ea_pair_1a5,
-  __ea_pair_1a6,
-  __ea_pair_1a7,
-  __ea_pair_1a8,
-  __ea_pair_1a9,
-  __ea_pair_1aa,
-  __ea_pair_1ab,
-  __ea_pair_1ac,
-  __ea_pair_1ad,
-  __ea_pair_1ae,
-  __ea_pair_1af,
-  __ea_pair_1ag,
-  __ea_pair_1ah,
-  __ea_pair_1ai,
-  __ea_pair_1aj,
-  __ea_pair_1ak,
-  __ea_pair_1al,
-  __ea_pair_1am,
-  __ea_pair_1an,
-  __ea_pair_1ao,
-  __ea_pair_1ap,
-  __ea_pair_1aq,
-  __ea_pair_1ar,
-  __ea_pair_1as,
-  __ea_pair_1at,
-  __ea_pair_1au,
-  __ea_pair_1av,
-  __ea_pair_1aw,
-  __ea_pair_1ax,
-  __ea_pair_1ay,
-  __ea_pair_1az,
-  __ea_pair_1b0,
-  __ea_pair_1b1,
-  __ea_pair_1b2,
-  __ea_pair_1b3,
-  __ea_pair_1b4,
-  __ea_pair_1b5,
-  __ea_pair_1b6,
-  __ea_pair_1b7,
-  __ea_pair_1b8,
-  __ea_pair_1b9,
-  __ea_pair_1ba,
-  __ea_pair_1bb,
-  __ea_pair_1bc,
-  __ea_pair_1bd,
-  __ea_pair_1be,
-  __ea_pair_1bf,
-  __ea_pair_1bg,
-  __ea_pair_1bh,
-  __ea_pair_1bi,
-  __ea_pair_1bj,
-  __ea_pair_1bk,
-  __ea_pair_1bl,
-  __ea_pair_1bm,
-  __ea_pair_1bn,
-  __ea_pair_1bo,
-  __ea_pair_1bp,
-  __ea_pair_1bq,
-  __ea_pair_1br,
-  __ea_pair_1bs,
-  __ea_pair_1bt,
-  __ea_pair_1bu,
-  __ea_pair_1bv,
-  __ea_pair_1bw,
-  __ea_pair_1bx,
-  __ea_pair_1by,
-  __ea_pair_1bz,
-  __ea_pair_1c0,
-  __ea_pair_1c1,
-  __ea_pair_1c2,
-  __ea_pair_1c3,
-  __ea_pair_1c4,
-  __ea_pair_1c5,
-  __ea_pair_1c6,
-  __ea_pair_1c7,
-  __ea_pair_1c8,
-  __ea_pair_1c9,
-  __ea_pair_1ca,
-  __ea_pair_1cb,
-  __ea_pair_1cc,
-  __ea_pair_1cd,
-  __ea_pair_1ce,
-  __ea_pair_1cf,
-  __ea_pair_1cg,
-  __ea_pair_1ch,
-  __ea_pair_1ci,
-  __ea_pair_1cj,
-  __ea_pair_1ck,
-  __ea_pair_1cl,
-  __ea_pair_1cm,
-  __ea_pair_1cn,
-  __ea_pair_1co,
-  __ea_pair_1cp,
-  __ea_pair_1cq,
-  __ea_pair_1cr,
-  __ea_pair_1cs,
-  __ea_pair_1ct,
-  __ea_pair_1cu,
-  __ea_pair_1cv,
-  __ea_pair_1cw,
-  __ea_pair_1cx,
-  __ea_pair_1cy,
-  __ea_pair_1cz,
-  __ea_pair_1d0,
-  __ea_pair_1d1,
-  __ea_pair_1d2,
-  __ea_pair_1d3,
-  __ea_pair_1d4,
-  __ea_pair_1d5,
-  __ea_pair_1d6,
-  __ea_pair_1d7,
-  __ea_pair_1d8,
-  __ea_pair_1d9,
-  __ea_pair_1da,
-  __ea_pair_1db,
-  __ea_pair_1dc,
-  __ea_pair_1dd,
-  __ea_pair_1de,
-  __ea_pair_1df,
-  __ea_pair_1dg,
-  __ea_pair_1dh,
-  __ea_pair_1di,
-  __ea_pair_1dj,
-  __ea_pair_1dk,
-  __ea_pair_1dl,
-  __ea_pair_1dm,
-  __ea_pair_1dn,
-  __ea_pair_1do,
-  __ea_pair_1dp,
-  __ea_pair_1dq,
-  __ea_pair_1dr,
-  __ea_pair_1ds,
-  __ea_pair_1dt,
-  __ea_pair_1du,
-  __ea_pair_1dv,
-  __ea_pair_1dw,
-  __ea_pair_1dx,
-  __ea_pair_1dy,
-  __ea_pair_1dz,
-  __ea_pair_1e0,
-  __ea_pair_1e1,
-  __ea_pair_1e2,
-  __ea_pair_1e3,
-  __ea_pair_1e4,
-  __ea_pair_1e5,
-  __ea_pair_1e6,
-  __ea_pair_1e7,
-  __ea_pair_1e8,
-  __ea_pair_1e9,
 ])
-private let __ea_rangePair_0: _T2 = (0x0....0x1f, .neutral)
+private let __ea_rangePair_0: _T2 = (0x0...<0x20, .neutral)
 private let __ea_rangePair_1: _T2 = (0x20....0x7e, .narrow)
-private let __ea_rangePair_2: _T2 = (0x7f....0xa0, .neutral)
-private let __ea_rangePair_3: _T2 = (0xc7....0xcf, .neutral)
-private let __ea_rangePair_4: _T2 = (0x102....0x110, .neutral)
-private let __ea_rangePair_5: _T2 = (0x11c....0x125, .neutral)
-private let __ea_rangePair_6: _T2 = (0x154....0x165, .neutral)
-private let __ea_rangePair_7: _T2 = (0x16c....0x1cd, .neutral)
-private let __ea_rangePair_8: _T2 = (0x1dd....0x250, .neutral)
-private let __ea_rangePair_9: _T2 = (0x252....0x260, .neutral)
-private let __ea_rangePair_a: _T2 = (0x262....0x2c3, .neutral)
-private let __ea_rangePair_b: _T2 = (0x2e0....0x2ff, .neutral)
+private let __ea_rangePair_2: _T2 = (0x7f...<0xa1, .neutral)
+private let __ea_rangePair_3: _T2 = (0xc7...<0xd0, .neutral)
+private let __ea_rangePair_4: _T2 = (0x102...<0x111, .neutral)
+private let __ea_rangePair_5: _T2 = (0x11c...<0x126, .neutral)
+private let __ea_rangePair_6: _T2 = (0x154...<0x166, .neutral)
+private let __ea_rangePair_7: _T2 = (0x16c...<0x1ce, .neutral)
+private let __ea_rangePair_8: _T2 = (0x1dd...<0x251, .neutral)
+private let __ea_rangePair_9: _T2 = (0x252...<0x261, .neutral)
+private let __ea_rangePair_a: _T2 = (0x262...<0x2c4, .neutral)
+private let __ea_rangePair_b: _T2 = (0x2e0...<0x300, .neutral)
 private let __ea_rangePair_c: _T2 = (0x300....0x36f, .ambiguous)
-private let __ea_rangePair_d: _T2 = (0x391....0x3a1, .ambiguous)
-private let __ea_rangePair_e: _T2 = (0x3b1....0x3c1, .ambiguous)
-private let __ea_rangePair_f: _T2 = (0x3ca....0x400, .neutral)
-private let __ea_rangePair_g: _T2 = (0x402....0x40f, .neutral)
-private let __ea_rangePair_h: _T2 = (0x410....0x44f, .ambiguous)
-private let __ea_rangePair_i: _T2 = (0x452....0x52f, .neutral)
-private let __ea_rangePair_j: _T2 = (0x531....0x556, .neutral)
-private let __ea_rangePair_k: _T2 = (0x559....0x58a, .neutral)
-private let __ea_rangePair_l: _T2 = (0x591....0x5c7, .neutral)
-private let __ea_rangePair_m: _T2 = (0x5d0....0x5ea, .neutral)
-private let __ea_rangePair_n: _T2 = (0x600....0x61c, .neutral)
-private let __ea_rangePair_o: _T2 = (0x61e....0x70d, .neutral)
-private let __ea_rangePair_p: _T2 = (0x70f....0x74a, .neutral)
-private let __ea_rangePair_q: _T2 = (0x74d....0x7b1, .neutral)
-private let __ea_rangePair_r: _T2 = (0x7c0....0x7fa, .neutral)
-private let __ea_rangePair_s: _T2 = (0x7fd....0x82d, .neutral)
-private let __ea_rangePair_t: _T2 = (0x830....0x83e, .neutral)
-private let __ea_rangePair_u: _T2 = (0x840....0x85b, .neutral)
-private let __ea_rangePair_v: _T2 = (0x860....0x86a, .neutral)
-private let __ea_rangePair_w: _T2 = (0x8a0....0x8b4, .neutral)
-private let __ea_rangePair_x: _T2 = (0x8d3....0x983, .neutral)
-private let __ea_rangePair_y: _T2 = (0x993....0x9a8, .neutral)
-private let __ea_rangePair_z: _T2 = (0x9bc....0x9c4, .neutral)
-private let __ea_rangePair_10: _T2 = (0x9e6....0x9fe, .neutral)
-private let __ea_rangePair_11: _T2 = (0xa13....0xa28, .neutral)
-private let __ea_rangePair_12: _T2 = (0xa66....0xa76, .neutral)
-private let __ea_rangePair_13: _T2 = (0xa85....0xa8d, .neutral)
-private let __ea_rangePair_14: _T2 = (0xa93....0xaa8, .neutral)
-private let __ea_rangePair_15: _T2 = (0xabc....0xac5, .neutral)
-private let __ea_rangePair_16: _T2 = (0xae6....0xaf1, .neutral)
-private let __ea_rangePair_17: _T2 = (0xb13....0xb28, .neutral)
-private let __ea_rangePair_18: _T2 = (0xb3c....0xb44, .neutral)
-private let __ea_rangePair_19: _T2 = (0xb66....0xb77, .neutral)
-private let __ea_rangePair_1a: _T2 = (0xbae....0xbb9, .neutral)
-private let __ea_rangePair_1b: _T2 = (0xbe6....0xbfa, .neutral)
-private let __ea_rangePair_1c: _T2 = (0xc00....0xc0c, .neutral)
-private let __ea_rangePair_1d: _T2 = (0xc12....0xc28, .neutral)
-private let __ea_rangePair_1e: _T2 = (0xc2a....0xc39, .neutral)
-private let __ea_rangePair_1f: _T2 = (0xc66....0xc6f, .neutral)
-private let __ea_rangePair_1g: _T2 = (0xc77....0xc8c, .neutral)
-private let __ea_rangePair_1h: _T2 = (0xc92....0xca8, .neutral)
-private let __ea_rangePair_1i: _T2 = (0xcaa....0xcb3, .neutral)
-private let __ea_rangePair_1j: _T2 = (0xcbc....0xcc4, .neutral)
-private let __ea_rangePair_1k: _T2 = (0xce6....0xcef, .neutral)
-private let __ea_rangePair_1l: _T2 = (0xd12....0xd44, .neutral)
-private let __ea_rangePair_1m: _T2 = (0xd54....0xd63, .neutral)
-private let __ea_rangePair_1n: _T2 = (0xd66....0xd7f, .neutral)
-private let __ea_rangePair_1o: _T2 = (0xd85....0xd96, .neutral)
-private let __ea_rangePair_1p: _T2 = (0xd9a....0xdb1, .neutral)
-private let __ea_rangePair_1q: _T2 = (0xdb3....0xdbb, .neutral)
-private let __ea_rangePair_1r: _T2 = (0xde6....0xdef, .neutral)
-private let __ea_rangePair_1s: _T2 = (0xe01....0xe3a, .neutral)
-private let __ea_rangePair_1t: _T2 = (0xe3f....0xe5b, .neutral)
-private let __ea_rangePair_1u: _T2 = (0xe8c....0xea3, .neutral)
-private let __ea_rangePair_1v: _T2 = (0xea7....0xebd, .neutral)
-private let __ea_rangePair_1w: _T2 = (0xed0....0xed9, .neutral)
-private let __ea_rangePair_1x: _T2 = (0xf00....0xf47, .neutral)
-private let __ea_rangePair_1y: _T2 = (0xf49....0xf6c, .neutral)
-private let __ea_rangePair_1z: _T2 = (0xf71....0xf97, .neutral)
-private let __ea_rangePair_20: _T2 = (0xf99....0xfbc, .neutral)
-private let __ea_rangePair_21: _T2 = (0xfbe....0xfcc, .neutral)
-private let __ea_rangePair_22: _T2 = (0xfce....0xfda, .neutral)
-private let __ea_rangePair_23: _T2 = (0x1000....0x10c5, .neutral)
-private let __ea_rangePair_24: _T2 = (0x10d0....0x10ff, .neutral)
-private let __ea_rangePair_25: _T2 = (0x1100....0x115f, .wide)
-private let __ea_rangePair_26: _T2 = (0x1160....0x1248, .neutral)
-private let __ea_rangePair_27: _T2 = (0x1260....0x1288, .neutral)
-private let __ea_rangePair_28: _T2 = (0x1290....0x12b0, .neutral)
-private let __ea_rangePair_29: _T2 = (0x12c8....0x12d6, .neutral)
-private let __ea_rangePair_2a: _T2 = (0x12d8....0x1310, .neutral)
-private let __ea_rangePair_2b: _T2 = (0x1318....0x135a, .neutral)
-private let __ea_rangePair_2c: _T2 = (0x135d....0x137c, .neutral)
-private let __ea_rangePair_2d: _T2 = (0x1380....0x1399, .neutral)
-private let __ea_rangePair_2e: _T2 = (0x13a0....0x13f5, .neutral)
-private let __ea_rangePair_2f: _T2 = (0x1400....0x169c, .neutral)
-private let __ea_rangePair_2g: _T2 = (0x16a0....0x16f8, .neutral)
-private let __ea_rangePair_2h: _T2 = (0x1700....0x170c, .neutral)
-private let __ea_rangePair_2i: _T2 = (0x1720....0x1736, .neutral)
-private let __ea_rangePair_2j: _T2 = (0x1740....0x1753, .neutral)
-private let __ea_rangePair_2k: _T2 = (0x1760....0x176c, .neutral)
-private let __ea_rangePair_2l: _T2 = (0x1780....0x17dd, .neutral)
-private let __ea_rangePair_2m: _T2 = (0x17e0....0x17e9, .neutral)
-private let __ea_rangePair_2n: _T2 = (0x17f0....0x17f9, .neutral)
-private let __ea_rangePair_2o: _T2 = (0x1800....0x180e, .neutral)
-private let __ea_rangePair_2p: _T2 = (0x1810....0x1819, .neutral)
-private let __ea_rangePair_2q: _T2 = (0x1820....0x1878, .neutral)
-private let __ea_rangePair_2r: _T2 = (0x1880....0x18aa, .neutral)
-private let __ea_rangePair_2s: _T2 = (0x18b0....0x18f5, .neutral)
-private let __ea_rangePair_2t: _T2 = (0x1900....0x191e, .neutral)
-private let __ea_rangePair_2u: _T2 = (0x1920....0x192b, .neutral)
-private let __ea_rangePair_2v: _T2 = (0x1930....0x193b, .neutral)
-private let __ea_rangePair_2w: _T2 = (0x1944....0x196d, .neutral)
-private let __ea_rangePair_2x: _T2 = (0x1980....0x19ab, .neutral)
-private let __ea_rangePair_2y: _T2 = (0x19b0....0x19c9, .neutral)
-private let __ea_rangePair_2z: _T2 = (0x19d0....0x19da, .neutral)
-private let __ea_rangePair_30: _T2 = (0x19de....0x1a1b, .neutral)
-private let __ea_rangePair_31: _T2 = (0x1a1e....0x1a5e, .neutral)
-private let __ea_rangePair_32: _T2 = (0x1a60....0x1a7c, .neutral)
-private let __ea_rangePair_33: _T2 = (0x1a7f....0x1a89, .neutral)
-private let __ea_rangePair_34: _T2 = (0x1a90....0x1a99, .neutral)
-private let __ea_rangePair_35: _T2 = (0x1aa0....0x1aad, .neutral)
-private let __ea_rangePair_36: _T2 = (0x1ab0....0x1abe, .neutral)
-private let __ea_rangePair_37: _T2 = (0x1b00....0x1b4b, .neutral)
-private let __ea_rangePair_38: _T2 = (0x1b50....0x1b7c, .neutral)
-private let __ea_rangePair_39: _T2 = (0x1b80....0x1bf3, .neutral)
-private let __ea_rangePair_3a: _T2 = (0x1bfc....0x1c37, .neutral)
-private let __ea_rangePair_3b: _T2 = (0x1c3b....0x1c49, .neutral)
-private let __ea_rangePair_3c: _T2 = (0x1c4d....0x1c88, .neutral)
-private let __ea_rangePair_3d: _T2 = (0x1c90....0x1cba, .neutral)
-private let __ea_rangePair_3e: _T2 = (0x1cbd....0x1cc7, .neutral)
-private let __ea_rangePair_3f: _T2 = (0x1cd0....0x1cfa, .neutral)
-private let __ea_rangePair_3g: _T2 = (0x1d00....0x1df9, .neutral)
-private let __ea_rangePair_3h: _T2 = (0x1dfb....0x1f15, .neutral)
-private let __ea_rangePair_3i: _T2 = (0x1f20....0x1f45, .neutral)
-private let __ea_rangePair_3j: _T2 = (0x1f5f....0x1f7d, .neutral)
-private let __ea_rangePair_3k: _T2 = (0x1f80....0x1fb4, .neutral)
-private let __ea_rangePair_3l: _T2 = (0x1fb6....0x1fc4, .neutral)
-private let __ea_rangePair_3m: _T2 = (0x1fc6....0x1fd3, .neutral)
-private let __ea_rangePair_3n: _T2 = (0x1fdd....0x1fef, .neutral)
-private let __ea_rangePair_3o: _T2 = (0x1ff6....0x1ffe, .neutral)
-private let __ea_rangePair_3p: _T2 = (0x2000....0x200f, .neutral)
-private let __ea_rangePair_3q: _T2 = (0x203f....0x2064, .neutral)
-private let __ea_rangePair_3r: _T2 = (0x2066....0x2071, .neutral)
-private let __ea_rangePair_3s: _T2 = (0x2075....0x207e, .neutral)
-private let __ea_rangePair_3t: _T2 = (0x2085....0x208e, .neutral)
-private let __ea_rangePair_3u: _T2 = (0x2090....0x209c, .neutral)
-private let __ea_rangePair_3v: _T2 = (0x20a0....0x20a8, .neutral)
-private let __ea_rangePair_3w: _T2 = (0x20ad....0x20bf, .neutral)
-private let __ea_rangePair_3x: _T2 = (0x20d0....0x20f0, .neutral)
-private let __ea_rangePair_3y: _T2 = (0x210a....0x2112, .neutral)
-private let __ea_rangePair_3z: _T2 = (0x2117....0x2120, .neutral)
-private let __ea_rangePair_40: _T2 = (0x212c....0x2152, .neutral)
-private let __ea_rangePair_41: _T2 = (0x2160....0x216b, .ambiguous)
-private let __ea_rangePair_42: _T2 = (0x2170....0x2179, .ambiguous)
-private let __ea_rangePair_43: _T2 = (0x217a....0x2188, .neutral)
-private let __ea_rangePair_44: _T2 = (0x2190....0x2199, .ambiguous)
-private let __ea_rangePair_45: _T2 = (0x219a....0x21b7, .neutral)
-private let __ea_rangePair_46: _T2 = (0x21ba....0x21d1, .neutral)
-private let __ea_rangePair_47: _T2 = (0x21d5....0x21e6, .neutral)
-private let __ea_rangePair_48: _T2 = (0x21e8....0x21ff, .neutral)
-private let __ea_rangePair_49: _T2 = (0x223e....0x2247, .neutral)
-private let __ea_rangePair_4a: _T2 = (0x2253....0x225f, .neutral)
-private let __ea_rangePair_4b: _T2 = (0x2270....0x2281, .neutral)
-private let __ea_rangePair_4c: _T2 = (0x2288....0x2294, .neutral)
-private let __ea_rangePair_4d: _T2 = (0x229a....0x22a4, .neutral)
-private let __ea_rangePair_4e: _T2 = (0x22a6....0x22be, .neutral)
-private let __ea_rangePair_4f: _T2 = (0x22c0....0x2311, .neutral)
-private let __ea_rangePair_4g: _T2 = (0x231c....0x2328, .neutral)
-private let __ea_rangePair_4h: _T2 = (0x232b....0x23e8, .neutral)
-private let __ea_rangePair_4i: _T2 = (0x23f4....0x2426, .neutral)
-private let __ea_rangePair_4j: _T2 = (0x2440....0x244a, .neutral)
-private let __ea_rangePair_4k: _T2 = (0x2460....0x24e9, .ambiguous)
-private let __ea_rangePair_4l: _T2 = (0x24eb....0x254b, .ambiguous)
-private let __ea_rangePair_4m: _T2 = (0x2550....0x2573, .ambiguous)
-private let __ea_rangePair_4n: _T2 = (0x2574....0x257f, .neutral)
-private let __ea_rangePair_4o: _T2 = (0x2580....0x258f, .ambiguous)
-private let __ea_rangePair_4p: _T2 = (0x2596....0x259f, .neutral)
-private let __ea_rangePair_4q: _T2 = (0x25d2....0x25e1, .neutral)
-private let __ea_rangePair_4r: _T2 = (0x25e6....0x25ee, .neutral)
-private let __ea_rangePair_4s: _T2 = (0x25f0....0x25fc, .neutral)
-private let __ea_rangePair_4t: _T2 = (0x261f....0x263f, .neutral)
-private let __ea_rangePair_4u: _T2 = (0x2648....0x2653, .wide)
-private let __ea_rangePair_4v: _T2 = (0x2654....0x265f, .neutral)
-private let __ea_rangePair_4w: _T2 = (0x2670....0x267e, .neutral)
-private let __ea_rangePair_4x: _T2 = (0x2680....0x2692, .neutral)
-private let __ea_rangePair_4y: _T2 = (0x2694....0x269d, .neutral)
-private let __ea_rangePair_4z: _T2 = (0x26ac....0x26bc, .neutral)
-private let __ea_rangePair_50: _T2 = (0x26d5....0x26e1, .ambiguous)
-private let __ea_rangePair_51: _T2 = (0x270c....0x2727, .neutral)
-private let __ea_rangePair_52: _T2 = (0x2729....0x273c, .neutral)
-private let __ea_rangePair_53: _T2 = (0x273e....0x274b, .neutral)
-private let __ea_rangePair_54: _T2 = (0x2758....0x2775, .neutral)
-private let __ea_rangePair_55: _T2 = (0x2776....0x277f, .ambiguous)
-private let __ea_rangePair_56: _T2 = (0x2780....0x2794, .neutral)
-private let __ea_rangePair_57: _T2 = (0x2798....0x27af, .neutral)
-private let __ea_rangePair_58: _T2 = (0x27b1....0x27be, .neutral)
-private let __ea_rangePair_59: _T2 = (0x27c0....0x27e5, .neutral)
-private let __ea_rangePair_5a: _T2 = (0x27ee....0x2984, .neutral)
-private let __ea_rangePair_5b: _T2 = (0x2987....0x2b1a, .neutral)
-private let __ea_rangePair_5c: _T2 = (0x2b1d....0x2b4f, .neutral)
-private let __ea_rangePair_5d: _T2 = (0x2b5a....0x2b73, .neutral)
-private let __ea_rangePair_5e: _T2 = (0x2b76....0x2b95, .neutral)
-private let __ea_rangePair_5f: _T2 = (0x2b98....0x2c2e, .neutral)
-private let __ea_rangePair_5g: _T2 = (0x2c30....0x2c5e, .neutral)
-private let __ea_rangePair_5h: _T2 = (0x2c60....0x2cf3, .neutral)
-private let __ea_rangePair_5i: _T2 = (0x2cf9....0x2d25, .neutral)
-private let __ea_rangePair_5j: _T2 = (0x2d30....0x2d67, .neutral)
-private let __ea_rangePair_5k: _T2 = (0x2d7f....0x2d96, .neutral)
-private let __ea_rangePair_5l: _T2 = (0x2de0....0x2e4f, .neutral)
-private let __ea_rangePair_5m: _T2 = (0x2e80....0x2e99, .wide)
-private let __ea_rangePair_5n: _T2 = (0x2e9b....0x2ef3, .wide)
-private let __ea_rangePair_5o: _T2 = (0x2f00....0x2fd5, .wide)
-private let __ea_rangePair_5p: _T2 = (0x2ff0....0x2ffb, .wide)
-private let __ea_rangePair_5q: _T2 = (0x3001....0x303e, .wide)
-private let __ea_rangePair_5r: _T2 = (0x3041....0x3096, .wide)
-private let __ea_rangePair_5s: _T2 = (0x3099....0x30ff, .wide)
-private let __ea_rangePair_5t: _T2 = (0x3105....0x312f, .wide)
-private let __ea_rangePair_5u: _T2 = (0x3131....0x318e, .wide)
-private let __ea_rangePair_5v: _T2 = (0x3190....0x31ba, .wide)
-private let __ea_rangePair_5w: _T2 = (0x31c0....0x31e3, .wide)
-private let __ea_rangePair_5x: _T2 = (0x31f0....0x321e, .wide)
-private let __ea_rangePair_5y: _T2 = (0x3220....0x3247, .wide)
-private let __ea_rangePair_5z: _T2 = (0x3250....0x4dbf, .wide)
-private let __ea_rangePair_60: _T2 = (0x4dc0....0x4dff, .neutral)
-private let __ea_rangePair_61: _T2 = (0x4e00....0xa48c, .wide)
-private let __ea_rangePair_62: _T2 = (0xa490....0xa4c6, .wide)
-private let __ea_rangePair_63: _T2 = (0xa4d0....0xa62b, .neutral)
-private let __ea_rangePair_64: _T2 = (0xa640....0xa6f7, .neutral)
-private let __ea_rangePair_65: _T2 = (0xa700....0xa7bf, .neutral)
-private let __ea_rangePair_66: _T2 = (0xa7f7....0xa82b, .neutral)
-private let __ea_rangePair_67: _T2 = (0xa830....0xa839, .neutral)
-private let __ea_rangePair_68: _T2 = (0xa840....0xa877, .neutral)
-private let __ea_rangePair_69: _T2 = (0xa880....0xa8c5, .neutral)
-private let __ea_rangePair_6a: _T2 = (0xa8ce....0xa8d9, .neutral)
-private let __ea_rangePair_6b: _T2 = (0xa8e0....0xa953, .neutral)
-private let __ea_rangePair_6c: _T2 = (0xa960....0xa97c, .wide)
-private let __ea_rangePair_6d: _T2 = (0xa980....0xa9cd, .neutral)
-private let __ea_rangePair_6e: _T2 = (0xa9cf....0xa9d9, .neutral)
-private let __ea_rangePair_6f: _T2 = (0xa9de....0xa9fe, .neutral)
-private let __ea_rangePair_6g: _T2 = (0xaa00....0xaa36, .neutral)
-private let __ea_rangePair_6h: _T2 = (0xaa40....0xaa4d, .neutral)
-private let __ea_rangePair_6i: _T2 = (0xaa50....0xaa59, .neutral)
-private let __ea_rangePair_6j: _T2 = (0xaa5c....0xaac2, .neutral)
-private let __ea_rangePair_6k: _T2 = (0xaadb....0xaaf6, .neutral)
-private let __ea_rangePair_6l: _T2 = (0xab30....0xab67, .neutral)
-private let __ea_rangePair_6m: _T2 = (0xab70....0xabed, .neutral)
-private let __ea_rangePair_6n: _T2 = (0xabf0....0xabf9, .neutral)
-private let __ea_rangePair_6o: _T2 = (0xac00....0xd7a3, .wide)
-private let __ea_rangePair_6p: _T2 = (0xd7b0....0xd7c6, .neutral)
-private let __ea_rangePair_6q: _T2 = (0xd7cb....0xd7fb, .neutral)
-private let __ea_rangePair_6r: _T2 = (0xd800....0xdfff, .neutral)
-private let __ea_rangePair_6s: _T2 = (0xe000....0xf8ff, .ambiguous)
-private let __ea_rangePair_6t: _T2 = (0xf900....0xfaff, .wide)
-private let __ea_rangePair_6u: _T2 = (0xfb1d....0xfb36, .neutral)
-private let __ea_rangePair_6v: _T2 = (0xfb46....0xfbc1, .neutral)
-private let __ea_rangePair_6w: _T2 = (0xfbd3....0xfd3f, .neutral)
-private let __ea_rangePair_6x: _T2 = (0xfd50....0xfd8f, .neutral)
-private let __ea_rangePair_6y: _T2 = (0xfd92....0xfdc7, .neutral)
-private let __ea_rangePair_6z: _T2 = (0xfdf0....0xfdfd, .neutral)
-private let __ea_rangePair_70: _T2 = (0xfe00....0xfe0f, .ambiguous)
-private let __ea_rangePair_71: _T2 = (0xfe10....0xfe19, .wide)
-private let __ea_rangePair_72: _T2 = (0xfe20....0xfe2f, .neutral)
-private let __ea_rangePair_73: _T2 = (0xfe30....0xfe52, .wide)
-private let __ea_rangePair_74: _T2 = (0xfe54....0xfe66, .wide)
-private let __ea_rangePair_75: _T2 = (0xfe76....0xfefc, .neutral)
-private let __ea_rangePair_76: _T2 = (0xff01....0xff60, .fullwidth)
-private let __ea_rangePair_77: _T2 = (0xff61....0xffbe, .halfwidth)
-private let __ea_rangePair_78: _T2 = (0x10000....0x1000b, .neutral)
-private let __ea_rangePair_79: _T2 = (0x1000d....0x10026, .neutral)
-private let __ea_rangePair_7a: _T2 = (0x10028....0x1003a, .neutral)
-private let __ea_rangePair_7b: _T2 = (0x1003f....0x1004d, .neutral)
-private let __ea_rangePair_7c: _T2 = (0x10050....0x1005d, .neutral)
-private let __ea_rangePair_7d: _T2 = (0x10080....0x100fa, .neutral)
-private let __ea_rangePair_7e: _T2 = (0x10107....0x10133, .neutral)
-private let __ea_rangePair_7f: _T2 = (0x10137....0x1018e, .neutral)
-private let __ea_rangePair_7g: _T2 = (0x10190....0x1019b, .neutral)
-private let __ea_rangePair_7h: _T2 = (0x101d0....0x101fd, .neutral)
-private let __ea_rangePair_7i: _T2 = (0x10280....0x1029c, .neutral)
-private let __ea_rangePair_7j: _T2 = (0x102a0....0x102d0, .neutral)
-private let __ea_rangePair_7k: _T2 = (0x102e0....0x102fb, .neutral)
-private let __ea_rangePair_7l: _T2 = (0x10300....0x10323, .neutral)
-private let __ea_rangePair_7m: _T2 = (0x1032d....0x1034a, .neutral)
-private let __ea_rangePair_7n: _T2 = (0x10350....0x1037a, .neutral)
-private let __ea_rangePair_7o: _T2 = (0x10380....0x1039d, .neutral)
-private let __ea_rangePair_7p: _T2 = (0x1039f....0x103c3, .neutral)
-private let __ea_rangePair_7q: _T2 = (0x103c8....0x103d5, .neutral)
-private let __ea_rangePair_7r: _T2 = (0x10400....0x1049d, .neutral)
-private let __ea_rangePair_7s: _T2 = (0x104a0....0x104a9, .neutral)
-private let __ea_rangePair_7t: _T2 = (0x104b0....0x104d3, .neutral)
-private let __ea_rangePair_7u: _T2 = (0x104d8....0x104fb, .neutral)
-private let __ea_rangePair_7v: _T2 = (0x10500....0x10527, .neutral)
-private let __ea_rangePair_7w: _T2 = (0x10530....0x10563, .neutral)
-private let __ea_rangePair_7x: _T2 = (0x10600....0x10736, .neutral)
-private let __ea_rangePair_7y: _T2 = (0x10740....0x10755, .neutral)
-private let __ea_rangePair_7z: _T2 = (0x1080a....0x10835, .neutral)
-private let __ea_rangePair_80: _T2 = (0x1083f....0x10855, .neutral)
-private let __ea_rangePair_81: _T2 = (0x10857....0x1089e, .neutral)
-private let __ea_rangePair_82: _T2 = (0x108a7....0x108af, .neutral)
-private let __ea_rangePair_83: _T2 = (0x108e0....0x108f2, .neutral)
-private let __ea_rangePair_84: _T2 = (0x108fb....0x1091b, .neutral)
-private let __ea_rangePair_85: _T2 = (0x1091f....0x10939, .neutral)
-private let __ea_rangePair_86: _T2 = (0x10980....0x109b7, .neutral)
-private let __ea_rangePair_87: _T2 = (0x109bc....0x109cf, .neutral)
-private let __ea_rangePair_88: _T2 = (0x109d2....0x10a03, .neutral)
-private let __ea_rangePair_89: _T2 = (0x10a19....0x10a35, .neutral)
-private let __ea_rangePair_8a: _T2 = (0x10a3f....0x10a48, .neutral)
-private let __ea_rangePair_8b: _T2 = (0x10a50....0x10a58, .neutral)
-private let __ea_rangePair_8c: _T2 = (0x10a60....0x10a9f, .neutral)
-private let __ea_rangePair_8d: _T2 = (0x10ac0....0x10ae6, .neutral)
-private let __ea_rangePair_8e: _T2 = (0x10aeb....0x10af6, .neutral)
-private let __ea_rangePair_8f: _T2 = (0x10b00....0x10b35, .neutral)
-private let __ea_rangePair_8g: _T2 = (0x10b39....0x10b55, .neutral)
-private let __ea_rangePair_8h: _T2 = (0x10b58....0x10b72, .neutral)
-private let __ea_rangePair_8i: _T2 = (0x10b78....0x10b91, .neutral)
-private let __ea_rangePair_8j: _T2 = (0x10c00....0x10c48, .neutral)
-private let __ea_rangePair_8k: _T2 = (0x10c80....0x10cb2, .neutral)
-private let __ea_rangePair_8l: _T2 = (0x10cc0....0x10cf2, .neutral)
-private let __ea_rangePair_8m: _T2 = (0x10cfa....0x10d27, .neutral)
-private let __ea_rangePair_8n: _T2 = (0x10d30....0x10d39, .neutral)
-private let __ea_rangePair_8o: _T2 = (0x10e60....0x10e7e, .neutral)
-private let __ea_rangePair_8p: _T2 = (0x10f00....0x10f27, .neutral)
-private let __ea_rangePair_8q: _T2 = (0x10f30....0x10f59, .neutral)
-private let __ea_rangePair_8r: _T2 = (0x10fe0....0x10ff6, .neutral)
-private let __ea_rangePair_8s: _T2 = (0x11000....0x1104d, .neutral)
-private let __ea_rangePair_8t: _T2 = (0x11052....0x1106f, .neutral)
-private let __ea_rangePair_8u: _T2 = (0x1107f....0x110c1, .neutral)
-private let __ea_rangePair_8v: _T2 = (0x110d0....0x110e8, .neutral)
-private let __ea_rangePair_8w: _T2 = (0x110f0....0x110f9, .neutral)
-private let __ea_rangePair_8x: _T2 = (0x11100....0x11134, .neutral)
-private let __ea_rangePair_8y: _T2 = (0x11136....0x11146, .neutral)
-private let __ea_rangePair_8z: _T2 = (0x11150....0x11176, .neutral)
-private let __ea_rangePair_90: _T2 = (0x11180....0x111cd, .neutral)
-private let __ea_rangePair_91: _T2 = (0x111d0....0x111df, .neutral)
-private let __ea_rangePair_92: _T2 = (0x111e1....0x111f4, .neutral)
-private let __ea_rangePair_93: _T2 = (0x11200....0x11211, .neutral)
-private let __ea_rangePair_94: _T2 = (0x11213....0x1123e, .neutral)
-private let __ea_rangePair_95: _T2 = (0x1128f....0x1129d, .neutral)
-private let __ea_rangePair_96: _T2 = (0x1129f....0x112a9, .neutral)
-private let __ea_rangePair_97: _T2 = (0x112b0....0x112ea, .neutral)
-private let __ea_rangePair_98: _T2 = (0x112f0....0x112f9, .neutral)
-private let __ea_rangePair_99: _T2 = (0x11313....0x11328, .neutral)
-private let __ea_rangePair_9a: _T2 = (0x1133b....0x11344, .neutral)
-private let __ea_rangePair_9b: _T2 = (0x11400....0x11459, .neutral)
-private let __ea_rangePair_9c: _T2 = (0x11480....0x114c7, .neutral)
-private let __ea_rangePair_9d: _T2 = (0x114d0....0x114d9, .neutral)
-private let __ea_rangePair_9e: _T2 = (0x11580....0x115b5, .neutral)
-private let __ea_rangePair_9f: _T2 = (0x115b8....0x115dd, .neutral)
-private let __ea_rangePair_9g: _T2 = (0x11600....0x11644, .neutral)
-private let __ea_rangePair_9h: _T2 = (0x11650....0x11659, .neutral)
-private let __ea_rangePair_9i: _T2 = (0x11660....0x1166c, .neutral)
-private let __ea_rangePair_9j: _T2 = (0x11680....0x116b8, .neutral)
-private let __ea_rangePair_9k: _T2 = (0x116c0....0x116c9, .neutral)
-private let __ea_rangePair_9l: _T2 = (0x11700....0x1171a, .neutral)
-private let __ea_rangePair_9m: _T2 = (0x1171d....0x1172b, .neutral)
-private let __ea_rangePair_9n: _T2 = (0x11730....0x1173f, .neutral)
-private let __ea_rangePair_9o: _T2 = (0x11800....0x1183b, .neutral)
-private let __ea_rangePair_9p: _T2 = (0x118a0....0x118f2, .neutral)
-private let __ea_rangePair_9q: _T2 = (0x119aa....0x119d7, .neutral)
-private let __ea_rangePair_9r: _T2 = (0x119da....0x119e4, .neutral)
-private let __ea_rangePair_9s: _T2 = (0x11a00....0x11a47, .neutral)
-private let __ea_rangePair_9t: _T2 = (0x11a50....0x11aa2, .neutral)
-private let __ea_rangePair_9u: _T2 = (0x11ac0....0x11af8, .neutral)
-private let __ea_rangePair_9v: _T2 = (0x11c00....0x11c08, .neutral)
-private let __ea_rangePair_9w: _T2 = (0x11c0a....0x11c36, .neutral)
-private let __ea_rangePair_9x: _T2 = (0x11c38....0x11c45, .neutral)
-private let __ea_rangePair_9y: _T2 = (0x11c50....0x11c6c, .neutral)
-private let __ea_rangePair_9z: _T2 = (0x11c70....0x11c8f, .neutral)
-private let __ea_rangePair_a0: _T2 = (0x11c92....0x11ca7, .neutral)
-private let __ea_rangePair_a1: _T2 = (0x11ca9....0x11cb6, .neutral)
-private let __ea_rangePair_a2: _T2 = (0x11d0b....0x11d36, .neutral)
-private let __ea_rangePair_a3: _T2 = (0x11d3f....0x11d47, .neutral)
-private let __ea_rangePair_a4: _T2 = (0x11d50....0x11d59, .neutral)
-private let __ea_rangePair_a5: _T2 = (0x11d6a....0x11d8e, .neutral)
-private let __ea_rangePair_a6: _T2 = (0x11da0....0x11da9, .neutral)
-private let __ea_rangePair_a7: _T2 = (0x11ee0....0x11ef8, .neutral)
-private let __ea_rangePair_a8: _T2 = (0x11fc0....0x11ff1, .neutral)
-private let __ea_rangePair_a9: _T2 = (0x11fff....0x12399, .neutral)
-private let __ea_rangePair_aa: _T2 = (0x12400....0x1246e, .neutral)
-private let __ea_rangePair_ab: _T2 = (0x12480....0x12543, .neutral)
-private let __ea_rangePair_ac: _T2 = (0x13000....0x1342e, .neutral)
-private let __ea_rangePair_ad: _T2 = (0x13430....0x13438, .neutral)
-private let __ea_rangePair_ae: _T2 = (0x14400....0x14646, .neutral)
-private let __ea_rangePair_af: _T2 = (0x16800....0x16a38, .neutral)
-private let __ea_rangePair_ag: _T2 = (0x16a40....0x16a5e, .neutral)
-private let __ea_rangePair_ah: _T2 = (0x16a60....0x16a69, .neutral)
-private let __ea_rangePair_ai: _T2 = (0x16ad0....0x16aed, .neutral)
-private let __ea_rangePair_aj: _T2 = (0x16b00....0x16b45, .neutral)
-private let __ea_rangePair_ak: _T2 = (0x16b50....0x16b59, .neutral)
-private let __ea_rangePair_al: _T2 = (0x16b63....0x16b77, .neutral)
-private let __ea_rangePair_am: _T2 = (0x16b7d....0x16b8f, .neutral)
-private let __ea_rangePair_an: _T2 = (0x16e40....0x16e9a, .neutral)
-private let __ea_rangePair_ao: _T2 = (0x16f00....0x16f4a, .neutral)
-private let __ea_rangePair_ap: _T2 = (0x16f4f....0x16f87, .neutral)
-private let __ea_rangePair_aq: _T2 = (0x16f8f....0x16f9f, .neutral)
-private let __ea_rangePair_ar: _T2 = (0x17000....0x187f7, .wide)
-private let __ea_rangePair_as: _T2 = (0x18800....0x18af2, .wide)
-private let __ea_rangePair_at: _T2 = (0x1b000....0x1b11e, .wide)
-private let __ea_rangePair_au: _T2 = (0x1b170....0x1b2fb, .wide)
-private let __ea_rangePair_av: _T2 = (0x1bc00....0x1bc6a, .neutral)
-private let __ea_rangePair_aw: _T2 = (0x1bc70....0x1bc7c, .neutral)
-private let __ea_rangePair_ax: _T2 = (0x1bc80....0x1bc88, .neutral)
-private let __ea_rangePair_ay: _T2 = (0x1bc90....0x1bc99, .neutral)
-private let __ea_rangePair_az: _T2 = (0x1d000....0x1d0f5, .neutral)
-private let __ea_rangePair_b0: _T2 = (0x1d100....0x1d126, .neutral)
-private let __ea_rangePair_b1: _T2 = (0x1d129....0x1d1e8, .neutral)
-private let __ea_rangePair_b2: _T2 = (0x1d200....0x1d245, .neutral)
-private let __ea_rangePair_b3: _T2 = (0x1d2e0....0x1d2f3, .neutral)
-private let __ea_rangePair_b4: _T2 = (0x1d300....0x1d356, .neutral)
-private let __ea_rangePair_b5: _T2 = (0x1d360....0x1d378, .neutral)
-private let __ea_rangePair_b6: _T2 = (0x1d400....0x1d454, .neutral)
-private let __ea_rangePair_b7: _T2 = (0x1d456....0x1d49c, .neutral)
-private let __ea_rangePair_b8: _T2 = (0x1d4ae....0x1d4b9, .neutral)
-private let __ea_rangePair_b9: _T2 = (0x1d4c5....0x1d505, .neutral)
-private let __ea_rangePair_ba: _T2 = (0x1d51e....0x1d539, .neutral)
-private let __ea_rangePair_bb: _T2 = (0x1d552....0x1d6a5, .neutral)
-private let __ea_rangePair_bc: _T2 = (0x1d6a8....0x1d7cb, .neutral)
-private let __ea_rangePair_bd: _T2 = (0x1d7ce....0x1da8b, .neutral)
-private let __ea_rangePair_be: _T2 = (0x1daa1....0x1daaf, .neutral)
-private let __ea_rangePair_bf: _T2 = (0x1e008....0x1e018, .neutral)
-private let __ea_rangePair_bg: _T2 = (0x1e100....0x1e12c, .neutral)
-private let __ea_rangePair_bh: _T2 = (0x1e130....0x1e13d, .neutral)
-private let __ea_rangePair_bi: _T2 = (0x1e140....0x1e149, .neutral)
-private let __ea_rangePair_bj: _T2 = (0x1e2c0....0x1e2f9, .neutral)
-private let __ea_rangePair_bk: _T2 = (0x1e800....0x1e8c4, .neutral)
-private let __ea_rangePair_bl: _T2 = (0x1e8c7....0x1e8d6, .neutral)
-private let __ea_rangePair_bm: _T2 = (0x1e900....0x1e94b, .neutral)
-private let __ea_rangePair_bn: _T2 = (0x1e950....0x1e959, .neutral)
-private let __ea_rangePair_bo: _T2 = (0x1ec71....0x1ecb4, .neutral)
-private let __ea_rangePair_bp: _T2 = (0x1ed01....0x1ed3d, .neutral)
-private let __ea_rangePair_bq: _T2 = (0x1ee05....0x1ee1f, .neutral)
-private let __ea_rangePair_br: _T2 = (0x1ee29....0x1ee32, .neutral)
-private let __ea_rangePair_bs: _T2 = (0x1ee80....0x1ee89, .neutral)
-private let __ea_rangePair_bt: _T2 = (0x1ee8b....0x1ee9b, .neutral)
-private let __ea_rangePair_bu: _T2 = (0x1eeab....0x1eebb, .neutral)
-private let __ea_rangePair_bv: _T2 = (0x1f005....0x1f02b, .neutral)
-private let __ea_rangePair_bw: _T2 = (0x1f030....0x1f093, .neutral)
-private let __ea_rangePair_bx: _T2 = (0x1f0a0....0x1f0ae, .neutral)
-private let __ea_rangePair_by: _T2 = (0x1f0b1....0x1f0bf, .neutral)
-private let __ea_rangePair_bz: _T2 = (0x1f0c1....0x1f0ce, .neutral)
-private let __ea_rangePair_c0: _T2 = (0x1f0d1....0x1f0f5, .neutral)
-private let __ea_rangePair_c1: _T2 = (0x1f100....0x1f10a, .ambiguous)
-private let __ea_rangePair_c2: _T2 = (0x1f110....0x1f12d, .ambiguous)
-private let __ea_rangePair_c3: _T2 = (0x1f130....0x1f169, .ambiguous)
-private let __ea_rangePair_c4: _T2 = (0x1f170....0x1f18d, .ambiguous)
-private let __ea_rangePair_c5: _T2 = (0x1f191....0x1f19a, .wide)
-private let __ea_rangePair_c6: _T2 = (0x1f19b....0x1f1ac, .ambiguous)
-private let __ea_rangePair_c7: _T2 = (0x1f1e6....0x1f1ff, .neutral)
-private let __ea_rangePair_c8: _T2 = (0x1f210....0x1f23b, .wide)
-private let __ea_rangePair_c9: _T2 = (0x1f240....0x1f248, .wide)
-private let __ea_rangePair_ca: _T2 = (0x1f300....0x1f320, .wide)
-private let __ea_rangePair_cb: _T2 = (0x1f321....0x1f32c, .neutral)
-private let __ea_rangePair_cc: _T2 = (0x1f32d....0x1f335, .wide)
-private let __ea_rangePair_cd: _T2 = (0x1f337....0x1f37c, .wide)
-private let __ea_rangePair_ce: _T2 = (0x1f37e....0x1f393, .wide)
-private let __ea_rangePair_cf: _T2 = (0x1f394....0x1f39f, .neutral)
-private let __ea_rangePair_cg: _T2 = (0x1f3a0....0x1f3ca, .wide)
-private let __ea_rangePair_ch: _T2 = (0x1f3d4....0x1f3df, .neutral)
-private let __ea_rangePair_ci: _T2 = (0x1f3e0....0x1f3f0, .wide)
-private let __ea_rangePair_cj: _T2 = (0x1f3f8....0x1f43e, .wide)
-private let __ea_rangePair_ck: _T2 = (0x1f442....0x1f4fc, .wide)
-private let __ea_rangePair_cl: _T2 = (0x1f4ff....0x1f53d, .wide)
-private let __ea_rangePair_cm: _T2 = (0x1f53e....0x1f54a, .neutral)
-private let __ea_rangePair_cn: _T2 = (0x1f550....0x1f567, .wide)
-private let __ea_rangePair_co: _T2 = (0x1f568....0x1f579, .neutral)
-private let __ea_rangePair_cp: _T2 = (0x1f57b....0x1f594, .neutral)
-private let __ea_rangePair_cq: _T2 = (0x1f597....0x1f5a3, .neutral)
-private let __ea_rangePair_cr: _T2 = (0x1f5a5....0x1f5fa, .neutral)
-private let __ea_rangePair_cs: _T2 = (0x1f5fb....0x1f64f, .wide)
-private let __ea_rangePair_ct: _T2 = (0x1f650....0x1f67f, .neutral)
-private let __ea_rangePair_cu: _T2 = (0x1f680....0x1f6c5, .wide)
-private let __ea_rangePair_cv: _T2 = (0x1f6e0....0x1f6ea, .neutral)
-private let __ea_rangePair_cw: _T2 = (0x1f700....0x1f773, .neutral)
-private let __ea_rangePair_cx: _T2 = (0x1f780....0x1f7d8, .neutral)
-private let __ea_rangePair_cy: _T2 = (0x1f7e0....0x1f7eb, .wide)
-private let __ea_rangePair_cz: _T2 = (0x1f800....0x1f80b, .neutral)
-private let __ea_rangePair_d0: _T2 = (0x1f810....0x1f847, .neutral)
-private let __ea_rangePair_d1: _T2 = (0x1f850....0x1f859, .neutral)
-private let __ea_rangePair_d2: _T2 = (0x1f860....0x1f887, .neutral)
-private let __ea_rangePair_d3: _T2 = (0x1f890....0x1f8ad, .neutral)
-private let __ea_rangePair_d4: _T2 = (0x1f900....0x1f90b, .neutral)
-private let __ea_rangePair_d5: _T2 = (0x1f90d....0x1f971, .wide)
-private let __ea_rangePair_d6: _T2 = (0x1f97a....0x1f9a2, .wide)
-private let __ea_rangePair_d7: _T2 = (0x1f9ae....0x1f9ca, .wide)
-private let __ea_rangePair_d8: _T2 = (0x1f9cd....0x1f9ff, .wide)
-private let __ea_rangePair_d9: _T2 = (0x1fa00....0x1fa53, .neutral)
-private let __ea_rangePair_da: _T2 = (0x1fa60....0x1fa6d, .neutral)
-private let __ea_rangePair_db: _T2 = (0x20000....0x2fffd, .wide)
-private let __ea_rangePair_dc: _T2 = (0x30000....0x3fffd, .wide)
-private let __ea_rangePair_dd: _T2 = (0xe0020....0xe007f, .neutral)
-private let __ea_rangePair_de: _T2 = (0xe0100....0xe01ef, .ambiguous)
-private let __ea_rangePair_df: _T2 = (0xf0000....0xffffd, .ambiguous)
-private let __ea_rangePair_dg: _T2 = (0x100000....0x10fffd, .ambiguous)
+private let __ea_rangePair_d: _T2 = (0x370...<0x391, .neutral)
+private let __ea_rangePair_e: _T2 = (0x391....0x3a1, .ambiguous)
+private let __ea_rangePair_f: _T2 = (0x3b1....0x3c1, .ambiguous)
+private let __ea_rangePair_g: _T2 = (0x3ca...<0x401, .neutral)
+private let __ea_rangePair_h: _T2 = (0x402...<0x410, .neutral)
+private let __ea_rangePair_i: _T2 = (0x410....0x44f, .ambiguous)
+private let __ea_rangePair_j: _T2 = (0x452...<0x1100, .neutral)
+private let __ea_rangePair_k: _T2 = (0x1100....0x115f, .wide)
+private let __ea_rangePair_l: _T2 = (0x1160...<0x2010, .neutral)
+private let __ea_rangePair_m: _T2 = (0x2028...<0x2030, .neutral)
+private let __ea_rangePair_n: _T2 = (0x203f...<0x2074, .neutral)
+private let __ea_rangePair_o: _T2 = (0x2075...<0x207f, .neutral)
+private let __ea_rangePair_p: _T2 = (0x2085...<0x20a9, .neutral)
+private let __ea_rangePair_q: _T2 = (0x20ad...<0x2103, .neutral)
+private let __ea_rangePair_r: _T2 = (0x210a...<0x2113, .neutral)
+private let __ea_rangePair_s: _T2 = (0x2117...<0x2121, .neutral)
+private let __ea_rangePair_t: _T2 = (0x212c...<0x2153, .neutral)
+private let __ea_rangePair_u: _T2 = (0x2160....0x216b, .ambiguous)
+private let __ea_rangePair_v: _T2 = (0x2170....0x2179, .ambiguous)
+private let __ea_rangePair_w: _T2 = (0x217a...<0x2189, .neutral)
+private let __ea_rangePair_x: _T2 = (0x2190....0x2199, .ambiguous)
+private let __ea_rangePair_y: _T2 = (0x219a...<0x21b8, .neutral)
+private let __ea_rangePair_z: _T2 = (0x21ba...<0x21d2, .neutral)
+private let __ea_rangePair_10: _T2 = (0x21d5...<0x21e7, .neutral)
+private let __ea_rangePair_11: _T2 = (0x21e8...<0x2200, .neutral)
+private let __ea_rangePair_12: _T2 = (0x223e...<0x2248, .neutral)
+private let __ea_rangePair_13: _T2 = (0x2253...<0x2260, .neutral)
+private let __ea_rangePair_14: _T2 = (0x2270...<0x2282, .neutral)
+private let __ea_rangePair_15: _T2 = (0x2288...<0x2295, .neutral)
+private let __ea_rangePair_16: _T2 = (0x229a...<0x22a5, .neutral)
+private let __ea_rangePair_17: _T2 = (0x22a6...<0x22bf, .neutral)
+private let __ea_rangePair_18: _T2 = (0x22c0...<0x2312, .neutral)
+private let __ea_rangePair_19: _T2 = (0x231c...<0x2329, .neutral)
+private let __ea_rangePair_1a: _T2 = (0x232b...<0x23e9, .neutral)
+private let __ea_rangePair_1b: _T2 = (0x23f4...<0x2460, .neutral)
+private let __ea_rangePair_1c: _T2 = (0x2460....0x24e9, .ambiguous)
+private let __ea_rangePair_1d: _T2 = (0x24eb....0x254b, .ambiguous)
+private let __ea_rangePair_1e: _T2 = (0x2550....0x2573, .ambiguous)
+private let __ea_rangePair_1f: _T2 = (0x2574...<0x2580, .neutral)
+private let __ea_rangePair_1g: _T2 = (0x2580....0x258f, .ambiguous)
+private let __ea_rangePair_1h: _T2 = (0x2596...<0x25a0, .neutral)
+private let __ea_rangePair_1i: _T2 = (0x25aa...<0x25b2, .neutral)
+private let __ea_rangePair_1j: _T2 = (0x25d2...<0x25e2, .neutral)
+private let __ea_rangePair_1k: _T2 = (0x25e6...<0x25ef, .neutral)
+private let __ea_rangePair_1l: _T2 = (0x25f0...<0x25fd, .neutral)
+private let __ea_rangePair_1m: _T2 = (0x261f...<0x2640, .neutral)
+private let __ea_rangePair_1n: _T2 = (0x2648....0x2653, .wide)
+private let __ea_rangePair_1o: _T2 = (0x2654...<0x2660, .neutral)
+private let __ea_rangePair_1p: _T2 = (0x2670...<0x267f, .neutral)
+private let __ea_rangePair_1q: _T2 = (0x2680...<0x2693, .neutral)
+private let __ea_rangePair_1r: _T2 = (0x2694...<0x269e, .neutral)
+private let __ea_rangePair_1s: _T2 = (0x26a2...<0x26aa, .neutral)
+private let __ea_rangePair_1t: _T2 = (0x26ac...<0x26bd, .neutral)
+private let __ea_rangePair_1u: _T2 = (0x26d5....0x26e1, .ambiguous)
+private let __ea_rangePair_1v: _T2 = (0x270c...<0x2728, .neutral)
+private let __ea_rangePair_1w: _T2 = (0x2729...<0x273d, .neutral)
+private let __ea_rangePair_1x: _T2 = (0x273e...<0x274c, .neutral)
+private let __ea_rangePair_1y: _T2 = (0x2758...<0x2776, .neutral)
+private let __ea_rangePair_1z: _T2 = (0x2776....0x277f, .ambiguous)
+private let __ea_rangePair_20: _T2 = (0x2780...<0x2795, .neutral)
+private let __ea_rangePair_21: _T2 = (0x2798...<0x27b0, .neutral)
+private let __ea_rangePair_22: _T2 = (0x27b1...<0x27bf, .neutral)
+private let __ea_rangePair_23: _T2 = (0x27c0...<0x27e6, .neutral)
+private let __ea_rangePair_24: _T2 = (0x27ee...<0x2985, .neutral)
+private let __ea_rangePair_25: _T2 = (0x2987...<0x2b1b, .neutral)
+private let __ea_rangePair_26: _T2 = (0x2b1d...<0x2b50, .neutral)
+private let __ea_rangePair_27: _T2 = (0x2b5a...<0x2e80, .neutral)
+private let __ea_rangePair_28: _T2 = (0x2e80....0x2e99, .wide)
+private let __ea_rangePair_29: _T2 = (0x2e9b....0x2ef3, .wide)
+private let __ea_rangePair_2a: _T2 = (0x2ef3<...<0x2f00, .neutral)
+private let __ea_rangePair_2b: _T2 = (0x2f00....0x2fd5, .wide)
+private let __ea_rangePair_2c: _T2 = (0x2fd5<...<0x2ff0, .neutral)
+private let __ea_rangePair_2d: _T2 = (0x2ff0....0x2ffb, .wide)
+private let __ea_rangePair_2e: _T2 = (0x3001....0x303e, .wide)
+private let __ea_rangePair_2f: _T2 = (0x3041....0x3096, .wide)
+private let __ea_rangePair_2g: _T2 = (0x3099....0x30ff, .wide)
+private let __ea_rangePair_2h: _T2 = (0x3105....0x312f, .wide)
+private let __ea_rangePair_2i: _T2 = (0x3131....0x318e, .wide)
+private let __ea_rangePair_2j: _T2 = (0x3190....0x31ba, .wide)
+private let __ea_rangePair_2k: _T2 = (0x31c0....0x31e3, .wide)
+private let __ea_rangePair_2l: _T2 = (0x31e3<...<0x31f0, .neutral)
+private let __ea_rangePair_2m: _T2 = (0x31f0....0x321e, .wide)
+private let __ea_rangePair_2n: _T2 = (0x3220....0x3247, .wide)
+private let __ea_rangePair_2o: _T2 = (0x3250....0x4dbf, .wide)
+private let __ea_rangePair_2p: _T2 = (0x4dc0....0x4dff, .neutral)
+private let __ea_rangePair_2q: _T2 = (0x4e00....0xa48c, .wide)
+private let __ea_rangePair_2r: _T2 = (0xa490....0xa4c6, .wide)
+private let __ea_rangePair_2s: _T2 = (0xa4c6<...<0xa960, .neutral)
+private let __ea_rangePair_2t: _T2 = (0xa960....0xa97c, .wide)
+private let __ea_rangePair_2u: _T2 = (0xa97c<...<0xac00, .neutral)
+private let __ea_rangePair_2v: _T2 = (0xac00....0xd7a3, .wide)
+private let __ea_rangePair_2w: _T2 = (0xd7a3<...<0xe000, .neutral)
+private let __ea_rangePair_2x: _T2 = (0xe000....0xf8ff, .ambiguous)
+private let __ea_rangePair_2y: _T2 = (0xf900....0xfaff, .wide)
+private let __ea_rangePair_2z: _T2 = (0xfb00...<0xfe00, .neutral)
+private let __ea_rangePair_30: _T2 = (0xfe00....0xfe0f, .ambiguous)
+private let __ea_rangePair_31: _T2 = (0xfe10....0xfe19, .wide)
+private let __ea_rangePair_32: _T2 = (0xfe19<...<0xfe30, .neutral)
+private let __ea_rangePair_33: _T2 = (0xfe30....0xfe52, .wide)
+private let __ea_rangePair_34: _T2 = (0xfe54....0xfe66, .wide)
+private let __ea_rangePair_35: _T2 = (0xfe6b<...<0xff01, .neutral)
+private let __ea_rangePair_36: _T2 = (0xff01....0xff60, .fullwidth)
+private let __ea_rangePair_37: _T2 = (0xff61....0xffbe, .halfwidth)
+private let __ea_rangePair_38: _T2 = (0xffee<...<0xfffd, .neutral)
+private let __ea_rangePair_39: _T2 = (0xfffd<...<0x16fe0, .neutral)
+private let __ea_rangePair_3a: _T2 = (0x16fe3<...<0x17000, .neutral)
+private let __ea_rangePair_3b: _T2 = (0x17000....0x187f7, .wide)
+private let __ea_rangePair_3c: _T2 = (0x187f7<...<0x18800, .neutral)
+private let __ea_rangePair_3d: _T2 = (0x18800....0x18af2, .wide)
+private let __ea_rangePair_3e: _T2 = (0x18af2<...<0x1b000, .neutral)
+private let __ea_rangePair_3f: _T2 = (0x1b000....0x1b11e, .wide)
+private let __ea_rangePair_3g: _T2 = (0x1b11e<...<0x1b150, .neutral)
+private let __ea_rangePair_3h: _T2 = (0x1b152<...<0x1b164, .neutral)
+private let __ea_rangePair_3i: _T2 = (0x1b167<...<0x1b170, .neutral)
+private let __ea_rangePair_3j: _T2 = (0x1b170....0x1b2fb, .wide)
+private let __ea_rangePair_3k: _T2 = (0x1b2fb<...<0x1f004, .neutral)
+private let __ea_rangePair_3l: _T2 = (0x1f005...<0x1f0cf, .neutral)
+private let __ea_rangePair_3m: _T2 = (0x1f0cf<...<0x1f100, .neutral)
+private let __ea_rangePair_3n: _T2 = (0x1f100....0x1f10a, .ambiguous)
+private let __ea_rangePair_3o: _T2 = (0x1f110....0x1f12d, .ambiguous)
+private let __ea_rangePair_3p: _T2 = (0x1f130....0x1f169, .ambiguous)
+private let __ea_rangePair_3q: _T2 = (0x1f170....0x1f18d, .ambiguous)
+private let __ea_rangePair_3r: _T2 = (0x1f191....0x1f19a, .wide)
+private let __ea_rangePair_3s: _T2 = (0x1f19b....0x1f1ac, .ambiguous)
+private let __ea_rangePair_3t: _T2 = (0x1f1ac<...<0x1f200, .neutral)
+private let __ea_rangePair_3u: _T2 = (0x1f202<...<0x1f210, .neutral)
+private let __ea_rangePair_3v: _T2 = (0x1f210....0x1f23b, .wide)
+private let __ea_rangePair_3w: _T2 = (0x1f240....0x1f248, .wide)
+private let __ea_rangePair_3x: _T2 = (0x1f248<...<0x1f250, .neutral)
+private let __ea_rangePair_3y: _T2 = (0x1f251<...<0x1f260, .neutral)
+private let __ea_rangePair_3z: _T2 = (0x1f265<...<0x1f300, .neutral)
+private let __ea_rangePair_40: _T2 = (0x1f300....0x1f320, .wide)
+private let __ea_rangePair_41: _T2 = (0x1f321...<0x1f32d, .neutral)
+private let __ea_rangePair_42: _T2 = (0x1f32d....0x1f335, .wide)
+private let __ea_rangePair_43: _T2 = (0x1f337....0x1f37c, .wide)
+private let __ea_rangePair_44: _T2 = (0x1f37e....0x1f393, .wide)
+private let __ea_rangePair_45: _T2 = (0x1f394...<0x1f3a0, .neutral)
+private let __ea_rangePair_46: _T2 = (0x1f3a0....0x1f3ca, .wide)
+private let __ea_rangePair_47: _T2 = (0x1f3d4...<0x1f3e0, .neutral)
+private let __ea_rangePair_48: _T2 = (0x1f3e0....0x1f3f0, .wide)
+private let __ea_rangePair_49: _T2 = (0x1f3f8....0x1f43e, .wide)
+private let __ea_rangePair_4a: _T2 = (0x1f442....0x1f4fc, .wide)
+private let __ea_rangePair_4b: _T2 = (0x1f4ff....0x1f53d, .wide)
+private let __ea_rangePair_4c: _T2 = (0x1f53e...<0x1f54b, .neutral)
+private let __ea_rangePair_4d: _T2 = (0x1f550....0x1f567, .wide)
+private let __ea_rangePair_4e: _T2 = (0x1f568...<0x1f57a, .neutral)
+private let __ea_rangePair_4f: _T2 = (0x1f57b...<0x1f595, .neutral)
+private let __ea_rangePair_4g: _T2 = (0x1f597...<0x1f5a4, .neutral)
+private let __ea_rangePair_4h: _T2 = (0x1f5a5...<0x1f5fb, .neutral)
+private let __ea_rangePair_4i: _T2 = (0x1f5fb....0x1f64f, .wide)
+private let __ea_rangePair_4j: _T2 = (0x1f650...<0x1f680, .neutral)
+private let __ea_rangePair_4k: _T2 = (0x1f680....0x1f6c5, .wide)
+private let __ea_rangePair_4l: _T2 = (0x1f6d5<...<0x1f6eb, .neutral)
+private let __ea_rangePair_4m: _T2 = (0x1f6ec<...<0x1f6f4, .neutral)
+private let __ea_rangePair_4n: _T2 = (0x1f6fa<...<0x1f7e0, .neutral)
+private let __ea_rangePair_4o: _T2 = (0x1f7e0....0x1f7eb, .wide)
+private let __ea_rangePair_4p: _T2 = (0x1f7eb<...<0x1f90d, .neutral)
+private let __ea_rangePair_4q: _T2 = (0x1f90d....0x1f971, .wide)
+private let __ea_rangePair_4r: _T2 = (0x1f97a....0x1f9a2, .wide)
+private let __ea_rangePair_4s: _T2 = (0x1f9ae....0x1f9ca, .wide)
+private let __ea_rangePair_4t: _T2 = (0x1f9cd....0x1f9ff, .wide)
+private let __ea_rangePair_4u: _T2 = (0x1fa00...<0x1fa70, .neutral)
+private let __ea_rangePair_4v: _T2 = (0x1fa82<...<0x1fa90, .neutral)
+private let __ea_rangePair_4w: _T2 = (0x1fa95<...<0x20000, .neutral)
+private let __ea_rangePair_4x: _T2 = (0x20000....0x2fffd, .wide)
+private let __ea_rangePair_4y: _T2 = (0x30000....0x3fffd, .wide)
+private let __ea_rangePair_4z: _T2 = (0x3fffd<...<0xe0100, .neutral)
+private let __ea_rangePair_50: _T2 = (0xe0100....0xe01ef, .ambiguous)
+private let __ea_rangePair_51: _T2 = (0xe01ef<...<0xf0000, .neutral)
+private let __ea_rangePair_52: _T2 = (0xf0000....0xffffd, .ambiguous)
+private let __ea_rangePair_53: _T2 = (0x100000....0x10fffd, .ambiguous)
 private let __ea_rangePairArray: _T3 = [
   __ea_rangePair_0,
   __ea_rangePair_1,
@@ -4351,307 +2274,6 @@ private let __ea_rangePairArray: _T3 = [
   __ea_rangePair_51,
   __ea_rangePair_52,
   __ea_rangePair_53,
-  __ea_rangePair_54,
-  __ea_rangePair_55,
-  __ea_rangePair_56,
-  __ea_rangePair_57,
-  __ea_rangePair_58,
-  __ea_rangePair_59,
-  __ea_rangePair_5a,
-  __ea_rangePair_5b,
-  __ea_rangePair_5c,
-  __ea_rangePair_5d,
-  __ea_rangePair_5e,
-  __ea_rangePair_5f,
-  __ea_rangePair_5g,
-  __ea_rangePair_5h,
-  __ea_rangePair_5i,
-  __ea_rangePair_5j,
-  __ea_rangePair_5k,
-  __ea_rangePair_5l,
-  __ea_rangePair_5m,
-  __ea_rangePair_5n,
-  __ea_rangePair_5o,
-  __ea_rangePair_5p,
-  __ea_rangePair_5q,
-  __ea_rangePair_5r,
-  __ea_rangePair_5s,
-  __ea_rangePair_5t,
-  __ea_rangePair_5u,
-  __ea_rangePair_5v,
-  __ea_rangePair_5w,
-  __ea_rangePair_5x,
-  __ea_rangePair_5y,
-  __ea_rangePair_5z,
-  __ea_rangePair_60,
-  __ea_rangePair_61,
-  __ea_rangePair_62,
-  __ea_rangePair_63,
-  __ea_rangePair_64,
-  __ea_rangePair_65,
-  __ea_rangePair_66,
-  __ea_rangePair_67,
-  __ea_rangePair_68,
-  __ea_rangePair_69,
-  __ea_rangePair_6a,
-  __ea_rangePair_6b,
-  __ea_rangePair_6c,
-  __ea_rangePair_6d,
-  __ea_rangePair_6e,
-  __ea_rangePair_6f,
-  __ea_rangePair_6g,
-  __ea_rangePair_6h,
-  __ea_rangePair_6i,
-  __ea_rangePair_6j,
-  __ea_rangePair_6k,
-  __ea_rangePair_6l,
-  __ea_rangePair_6m,
-  __ea_rangePair_6n,
-  __ea_rangePair_6o,
-  __ea_rangePair_6p,
-  __ea_rangePair_6q,
-  __ea_rangePair_6r,
-  __ea_rangePair_6s,
-  __ea_rangePair_6t,
-  __ea_rangePair_6u,
-  __ea_rangePair_6v,
-  __ea_rangePair_6w,
-  __ea_rangePair_6x,
-  __ea_rangePair_6y,
-  __ea_rangePair_6z,
-  __ea_rangePair_70,
-  __ea_rangePair_71,
-  __ea_rangePair_72,
-  __ea_rangePair_73,
-  __ea_rangePair_74,
-  __ea_rangePair_75,
-  __ea_rangePair_76,
-  __ea_rangePair_77,
-  __ea_rangePair_78,
-  __ea_rangePair_79,
-  __ea_rangePair_7a,
-  __ea_rangePair_7b,
-  __ea_rangePair_7c,
-  __ea_rangePair_7d,
-  __ea_rangePair_7e,
-  __ea_rangePair_7f,
-  __ea_rangePair_7g,
-  __ea_rangePair_7h,
-  __ea_rangePair_7i,
-  __ea_rangePair_7j,
-  __ea_rangePair_7k,
-  __ea_rangePair_7l,
-  __ea_rangePair_7m,
-  __ea_rangePair_7n,
-  __ea_rangePair_7o,
-  __ea_rangePair_7p,
-  __ea_rangePair_7q,
-  __ea_rangePair_7r,
-  __ea_rangePair_7s,
-  __ea_rangePair_7t,
-  __ea_rangePair_7u,
-  __ea_rangePair_7v,
-  __ea_rangePair_7w,
-  __ea_rangePair_7x,
-  __ea_rangePair_7y,
-  __ea_rangePair_7z,
-  __ea_rangePair_80,
-  __ea_rangePair_81,
-  __ea_rangePair_82,
-  __ea_rangePair_83,
-  __ea_rangePair_84,
-  __ea_rangePair_85,
-  __ea_rangePair_86,
-  __ea_rangePair_87,
-  __ea_rangePair_88,
-  __ea_rangePair_89,
-  __ea_rangePair_8a,
-  __ea_rangePair_8b,
-  __ea_rangePair_8c,
-  __ea_rangePair_8d,
-  __ea_rangePair_8e,
-  __ea_rangePair_8f,
-  __ea_rangePair_8g,
-  __ea_rangePair_8h,
-  __ea_rangePair_8i,
-  __ea_rangePair_8j,
-  __ea_rangePair_8k,
-  __ea_rangePair_8l,
-  __ea_rangePair_8m,
-  __ea_rangePair_8n,
-  __ea_rangePair_8o,
-  __ea_rangePair_8p,
-  __ea_rangePair_8q,
-  __ea_rangePair_8r,
-  __ea_rangePair_8s,
-  __ea_rangePair_8t,
-  __ea_rangePair_8u,
-  __ea_rangePair_8v,
-  __ea_rangePair_8w,
-  __ea_rangePair_8x,
-  __ea_rangePair_8y,
-  __ea_rangePair_8z,
-  __ea_rangePair_90,
-  __ea_rangePair_91,
-  __ea_rangePair_92,
-  __ea_rangePair_93,
-  __ea_rangePair_94,
-  __ea_rangePair_95,
-  __ea_rangePair_96,
-  __ea_rangePair_97,
-  __ea_rangePair_98,
-  __ea_rangePair_99,
-  __ea_rangePair_9a,
-  __ea_rangePair_9b,
-  __ea_rangePair_9c,
-  __ea_rangePair_9d,
-  __ea_rangePair_9e,
-  __ea_rangePair_9f,
-  __ea_rangePair_9g,
-  __ea_rangePair_9h,
-  __ea_rangePair_9i,
-  __ea_rangePair_9j,
-  __ea_rangePair_9k,
-  __ea_rangePair_9l,
-  __ea_rangePair_9m,
-  __ea_rangePair_9n,
-  __ea_rangePair_9o,
-  __ea_rangePair_9p,
-  __ea_rangePair_9q,
-  __ea_rangePair_9r,
-  __ea_rangePair_9s,
-  __ea_rangePair_9t,
-  __ea_rangePair_9u,
-  __ea_rangePair_9v,
-  __ea_rangePair_9w,
-  __ea_rangePair_9x,
-  __ea_rangePair_9y,
-  __ea_rangePair_9z,
-  __ea_rangePair_a0,
-  __ea_rangePair_a1,
-  __ea_rangePair_a2,
-  __ea_rangePair_a3,
-  __ea_rangePair_a4,
-  __ea_rangePair_a5,
-  __ea_rangePair_a6,
-  __ea_rangePair_a7,
-  __ea_rangePair_a8,
-  __ea_rangePair_a9,
-  __ea_rangePair_aa,
-  __ea_rangePair_ab,
-  __ea_rangePair_ac,
-  __ea_rangePair_ad,
-  __ea_rangePair_ae,
-  __ea_rangePair_af,
-  __ea_rangePair_ag,
-  __ea_rangePair_ah,
-  __ea_rangePair_ai,
-  __ea_rangePair_aj,
-  __ea_rangePair_ak,
-  __ea_rangePair_al,
-  __ea_rangePair_am,
-  __ea_rangePair_an,
-  __ea_rangePair_ao,
-  __ea_rangePair_ap,
-  __ea_rangePair_aq,
-  __ea_rangePair_ar,
-  __ea_rangePair_as,
-  __ea_rangePair_at,
-  __ea_rangePair_au,
-  __ea_rangePair_av,
-  __ea_rangePair_aw,
-  __ea_rangePair_ax,
-  __ea_rangePair_ay,
-  __ea_rangePair_az,
-  __ea_rangePair_b0,
-  __ea_rangePair_b1,
-  __ea_rangePair_b2,
-  __ea_rangePair_b3,
-  __ea_rangePair_b4,
-  __ea_rangePair_b5,
-  __ea_rangePair_b6,
-  __ea_rangePair_b7,
-  __ea_rangePair_b8,
-  __ea_rangePair_b9,
-  __ea_rangePair_ba,
-  __ea_rangePair_bb,
-  __ea_rangePair_bc,
-  __ea_rangePair_bd,
-  __ea_rangePair_be,
-  __ea_rangePair_bf,
-  __ea_rangePair_bg,
-  __ea_rangePair_bh,
-  __ea_rangePair_bi,
-  __ea_rangePair_bj,
-  __ea_rangePair_bk,
-  __ea_rangePair_bl,
-  __ea_rangePair_bm,
-  __ea_rangePair_bn,
-  __ea_rangePair_bo,
-  __ea_rangePair_bp,
-  __ea_rangePair_bq,
-  __ea_rangePair_br,
-  __ea_rangePair_bs,
-  __ea_rangePair_bt,
-  __ea_rangePair_bu,
-  __ea_rangePair_bv,
-  __ea_rangePair_bw,
-  __ea_rangePair_bx,
-  __ea_rangePair_by,
-  __ea_rangePair_bz,
-  __ea_rangePair_c0,
-  __ea_rangePair_c1,
-  __ea_rangePair_c2,
-  __ea_rangePair_c3,
-  __ea_rangePair_c4,
-  __ea_rangePair_c5,
-  __ea_rangePair_c6,
-  __ea_rangePair_c7,
-  __ea_rangePair_c8,
-  __ea_rangePair_c9,
-  __ea_rangePair_ca,
-  __ea_rangePair_cb,
-  __ea_rangePair_cc,
-  __ea_rangePair_cd,
-  __ea_rangePair_ce,
-  __ea_rangePair_cf,
-  __ea_rangePair_cg,
-  __ea_rangePair_ch,
-  __ea_rangePair_ci,
-  __ea_rangePair_cj,
-  __ea_rangePair_ck,
-  __ea_rangePair_cl,
-  __ea_rangePair_cm,
-  __ea_rangePair_cn,
-  __ea_rangePair_co,
-  __ea_rangePair_cp,
-  __ea_rangePair_cq,
-  __ea_rangePair_cr,
-  __ea_rangePair_cs,
-  __ea_rangePair_ct,
-  __ea_rangePair_cu,
-  __ea_rangePair_cv,
-  __ea_rangePair_cw,
-  __ea_rangePair_cx,
-  __ea_rangePair_cy,
-  __ea_rangePair_cz,
-  __ea_rangePair_d0,
-  __ea_rangePair_d1,
-  __ea_rangePair_d2,
-  __ea_rangePair_d3,
-  __ea_rangePair_d4,
-  __ea_rangePair_d5,
-  __ea_rangePair_d6,
-  __ea_rangePair_d7,
-  __ea_rangePair_d8,
-  __ea_rangePair_d9,
-  __ea_rangePair_da,
-  __ea_rangePair_db,
-  __ea_rangePair_dc,
-  __ea_rangePair_dd,
-  __ea_rangePair_de,
-  __ea_rangePair_df,
-  __ea_rangePair_dg,
 ]
 private let __ea_rangeDictionary = RangeDictionary<Unicode.Scalar.Value, _T0>(carefullySortedRangesAndValues: __ea_rangePairArray)
 internal let _ea = UnicodeScalarValueDictionary<Unicode.EastAsianWidth>(dictionary: __ea_dictionary, rangeDictionary: __ea_rangeDictionary)
