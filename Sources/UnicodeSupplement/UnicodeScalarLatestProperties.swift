@@ -24,8 +24,6 @@ extension Unicode.Scalar.LatestProperties {
   public var bidiClass: Unicode.BidiClass {
     if let bidiClass = _bidiClass[self._value] {
       return bidiClass
-    } else if let bidiClass = _bidiClass_default_ranges[self._value] {
-      return bidiClass
     } else {
       for (keyPath, status, bidiClass) in _bidiClass_default_properties {
         if self[keyPath: keyPath] == status {

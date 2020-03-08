@@ -8,7 +8,7 @@
 import Foundation
 import UnicodeSupplement
 
-open class Scripts: UCDPropertiesCodeUpdaterDelegate<Unicode.Script> {
+open class Scripts: UCDDefaultablePropertiesCodeUpdaterDelegate<Unicode.Script> {
   open override var prefix: String { return "sc" }
 
   open override var sourceURLs: Array<URL> {
@@ -23,5 +23,9 @@ open class Scripts: UCDPropertiesCodeUpdaterDelegate<Unicode.Script> {
 
   open override func describe(value: Unicode.Script) -> String {
     return ".\(String(describing: value))"
+  }
+  
+  open override var defaultValue: Unicode.Script {
+    return .unknown
   }
 }

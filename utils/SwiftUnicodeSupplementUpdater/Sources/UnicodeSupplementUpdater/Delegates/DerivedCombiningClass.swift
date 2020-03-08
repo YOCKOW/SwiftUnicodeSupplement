@@ -6,9 +6,12 @@
  ************************************************************************************************ */
  
 import Foundation
+import Ranges
+import StringComposition
 import UnicodeSupplement
+import yCodeUpdater
 
-open class DerivedCombiningClass: UCDPropertiesCodeUpdaterDelegate<Unicode.CanonicalCombiningClass> {
+open class DerivedCombiningClass: UCDDefaultablePropertiesCodeUpdaterDelegate<Unicode.CanonicalCombiningClass> {
   open override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedCombiningClass.txt")!,
@@ -23,5 +26,9 @@ open class DerivedCombiningClass: UCDPropertiesCodeUpdaterDelegate<Unicode.Canon
   
   open override func describe(value: Unicode.CanonicalCombiningClass) -> String {
     return ".init(rawValue: \(String(value.rawValue)))"
+  }
+  
+  open override var defaultValue: Unicode.CanonicalCombiningClass {
+    return .notReordered
   }
 }

@@ -20,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -65,330 +65,2528 @@ private let __bidiClass_pair_1: _T1 = (0xa, .paragraphSeparator)
 private let __bidiClass_pair_2: _T1 = (0xb, .segmentSeparator)
 private let __bidiClass_pair_3: _T1 = (0xc, .whiteSpace)
 private let __bidiClass_pair_4: _T1 = (0xd, .paragraphSeparator)
-private let __bidiClass_pair_5: _T1 = (0x1f, .segmentSeparator)
-private let __bidiClass_pair_6: _T1 = (0x20, .whiteSpace)
-private let __bidiClass_pair_7: _T1 = (0x2b, .europeanSeparator)
-private let __bidiClass_pair_8: _T1 = (0x2c, .commonSeparator)
-private let __bidiClass_pair_9: _T1 = (0x2d, .europeanSeparator)
-private let __bidiClass_pair_a: _T1 = (0x3a, .commonSeparator)
-private let __bidiClass_pair_b: _T1 = (0x85, .paragraphSeparator)
-private let __bidiClass_pair_c: _T1 = (0xa0, .commonSeparator)
-private let __bidiClass_pair_d: _T1 = (0xa1, .otherNeutral)
-private let __bidiClass_pair_e: _T1 = (0xaa, .leftToRight)
-private let __bidiClass_pair_f: _T1 = (0xad, .boundaryNeutral)
-private let __bidiClass_pair_g: _T1 = (0xb4, .otherNeutral)
-private let __bidiClass_pair_h: _T1 = (0xb5, .leftToRight)
-private let __bidiClass_pair_i: _T1 = (0xb9, .europeanNumber)
-private let __bidiClass_pair_j: _T1 = (0xba, .leftToRight)
-private let __bidiClass_pair_k: _T1 = (0xd7, .otherNeutral)
-private let __bidiClass_pair_l: _T1 = (0xf7, .otherNeutral)
-private let __bidiClass_pair_m: _T1 = (0x2ee, .leftToRight)
-private let __bidiClass_pair_n: _T1 = (0x37e, .otherNeutral)
-private let __bidiClass_pair_o: _T1 = (0x37f, .leftToRight)
-private let __bidiClass_pair_p: _T1 = (0x386, .leftToRight)
-private let __bidiClass_pair_q: _T1 = (0x387, .otherNeutral)
-private let __bidiClass_pair_r: _T1 = (0x38c, .leftToRight)
-private let __bidiClass_pair_s: _T1 = (0x3f6, .otherNeutral)
-private let __bidiClass_pair_t: _T1 = (0x58a, .otherNeutral)
-private let __bidiClass_pair_u: _T1 = (0x58f, .europeanTerminator)
-private let __bidiClass_pair_v: _T1 = (0x590, .rightToLeft)
-private let __bidiClass_pair_w: _T1 = (0x5be, .rightToLeft)
-private let __bidiClass_pair_x: _T1 = (0x5bf, .nonspacingMark)
-private let __bidiClass_pair_y: _T1 = (0x5c0, .rightToLeft)
-private let __bidiClass_pair_z: _T1 = (0x5c3, .rightToLeft)
-private let __bidiClass_pair_10: _T1 = (0x5c6, .rightToLeft)
-private let __bidiClass_pair_11: _T1 = (0x5c7, .nonspacingMark)
-private let __bidiClass_pair_12: _T1 = (0x608, .arabicLetter)
-private let __bidiClass_pair_13: _T1 = (0x60b, .arabicLetter)
-private let __bidiClass_pair_14: _T1 = (0x60c, .commonSeparator)
-private let __bidiClass_pair_15: _T1 = (0x60d, .arabicLetter)
-private let __bidiClass_pair_16: _T1 = (0x66a, .europeanTerminator)
-private let __bidiClass_pair_17: _T1 = (0x670, .nonspacingMark)
-private let __bidiClass_pair_18: _T1 = (0x6dd, .arabicNumber)
-private let __bidiClass_pair_19: _T1 = (0x6de, .otherNeutral)
-private let __bidiClass_pair_1a: _T1 = (0x6e9, .otherNeutral)
-private let __bidiClass_pair_1b: _T1 = (0x711, .nonspacingMark)
-private let __bidiClass_pair_1c: _T1 = (0x7fd, .nonspacingMark)
-private let __bidiClass_pair_1d: _T1 = (0x81a, .rightToLeft)
-private let __bidiClass_pair_1e: _T1 = (0x824, .rightToLeft)
-private let __bidiClass_pair_1f: _T1 = (0x828, .rightToLeft)
-private let __bidiClass_pair_1g: _T1 = (0x8e2, .arabicNumber)
-private let __bidiClass_pair_1h: _T1 = (0x93a, .nonspacingMark)
-private let __bidiClass_pair_1i: _T1 = (0x93b, .leftToRight)
-private let __bidiClass_pair_1j: _T1 = (0x93c, .nonspacingMark)
-private let __bidiClass_pair_1k: _T1 = (0x94d, .nonspacingMark)
-private let __bidiClass_pair_1l: _T1 = (0x981, .nonspacingMark)
-private let __bidiClass_pair_1m: _T1 = (0x9b2, .leftToRight)
-private let __bidiClass_pair_1n: _T1 = (0x9bc, .nonspacingMark)
-private let __bidiClass_pair_1o: _T1 = (0x9cd, .nonspacingMark)
-private let __bidiClass_pair_1p: _T1 = (0x9ce, .leftToRight)
-private let __bidiClass_pair_1q: _T1 = (0x9d7, .leftToRight)
-private let __bidiClass_pair_1r: _T1 = (0x9fb, .europeanTerminator)
-private let __bidiClass_pair_1s: _T1 = (0x9fe, .nonspacingMark)
-private let __bidiClass_pair_1t: _T1 = (0xa03, .leftToRight)
-private let __bidiClass_pair_1u: _T1 = (0xa3c, .nonspacingMark)
-private let __bidiClass_pair_1v: _T1 = (0xa51, .nonspacingMark)
-private let __bidiClass_pair_1w: _T1 = (0xa5e, .leftToRight)
-private let __bidiClass_pair_1x: _T1 = (0xa75, .nonspacingMark)
-private let __bidiClass_pair_1y: _T1 = (0xa76, .leftToRight)
-private let __bidiClass_pair_1z: _T1 = (0xa83, .leftToRight)
-private let __bidiClass_pair_20: _T1 = (0xabc, .nonspacingMark)
-private let __bidiClass_pair_21: _T1 = (0xac9, .leftToRight)
-private let __bidiClass_pair_22: _T1 = (0xacd, .nonspacingMark)
-private let __bidiClass_pair_23: _T1 = (0xad0, .leftToRight)
-private let __bidiClass_pair_24: _T1 = (0xaf1, .europeanTerminator)
-private let __bidiClass_pair_25: _T1 = (0xaf9, .leftToRight)
-private let __bidiClass_pair_26: _T1 = (0xb01, .nonspacingMark)
-private let __bidiClass_pair_27: _T1 = (0xb3c, .nonspacingMark)
-private let __bidiClass_pair_28: _T1 = (0xb3f, .nonspacingMark)
-private let __bidiClass_pair_29: _T1 = (0xb40, .leftToRight)
-private let __bidiClass_pair_2a: _T1 = (0xb4d, .nonspacingMark)
-private let __bidiClass_pair_2b: _T1 = (0xb56, .nonspacingMark)
-private let __bidiClass_pair_2c: _T1 = (0xb57, .leftToRight)
-private let __bidiClass_pair_2d: _T1 = (0xb82, .nonspacingMark)
-private let __bidiClass_pair_2e: _T1 = (0xb83, .leftToRight)
-private let __bidiClass_pair_2f: _T1 = (0xb9c, .leftToRight)
-private let __bidiClass_pair_2g: _T1 = (0xbc0, .nonspacingMark)
-private let __bidiClass_pair_2h: _T1 = (0xbcd, .nonspacingMark)
-private let __bidiClass_pair_2i: _T1 = (0xbd0, .leftToRight)
-private let __bidiClass_pair_2j: _T1 = (0xbd7, .leftToRight)
-private let __bidiClass_pair_2k: _T1 = (0xbf9, .europeanTerminator)
-private let __bidiClass_pair_2l: _T1 = (0xbfa, .otherNeutral)
-private let __bidiClass_pair_2m: _T1 = (0xc00, .nonspacingMark)
-private let __bidiClass_pair_2n: _T1 = (0xc04, .nonspacingMark)
-private let __bidiClass_pair_2o: _T1 = (0xc3d, .leftToRight)
-private let __bidiClass_pair_2p: _T1 = (0xc77, .leftToRight)
-private let __bidiClass_pair_2q: _T1 = (0xc81, .nonspacingMark)
-private let __bidiClass_pair_2r: _T1 = (0xcbc, .nonspacingMark)
-private let __bidiClass_pair_2s: _T1 = (0xcde, .leftToRight)
-private let __bidiClass_pair_2t: _T1 = (0xd4d, .nonspacingMark)
-private let __bidiClass_pair_2u: _T1 = (0xdbd, .leftToRight)
-private let __bidiClass_pair_2v: _T1 = (0xdca, .nonspacingMark)
-private let __bidiClass_pair_2w: _T1 = (0xdd6, .nonspacingMark)
-private let __bidiClass_pair_2x: _T1 = (0xe31, .nonspacingMark)
-private let __bidiClass_pair_2y: _T1 = (0xe3f, .europeanTerminator)
-private let __bidiClass_pair_2z: _T1 = (0xe84, .leftToRight)
-private let __bidiClass_pair_30: _T1 = (0xea5, .leftToRight)
-private let __bidiClass_pair_31: _T1 = (0xeb1, .nonspacingMark)
-private let __bidiClass_pair_32: _T1 = (0xebd, .leftToRight)
-private let __bidiClass_pair_33: _T1 = (0xec6, .leftToRight)
-private let __bidiClass_pair_34: _T1 = (0xf35, .nonspacingMark)
-private let __bidiClass_pair_35: _T1 = (0xf36, .leftToRight)
-private let __bidiClass_pair_36: _T1 = (0xf37, .nonspacingMark)
-private let __bidiClass_pair_37: _T1 = (0xf38, .leftToRight)
-private let __bidiClass_pair_38: _T1 = (0xf39, .nonspacingMark)
-private let __bidiClass_pair_39: _T1 = (0xf7f, .leftToRight)
-private let __bidiClass_pair_3a: _T1 = (0xf85, .leftToRight)
-private let __bidiClass_pair_3b: _T1 = (0xfc6, .nonspacingMark)
-private let __bidiClass_pair_3c: _T1 = (0x1031, .leftToRight)
-private let __bidiClass_pair_3d: _T1 = (0x1038, .leftToRight)
-private let __bidiClass_pair_3e: _T1 = (0x1082, .nonspacingMark)
-private let __bidiClass_pair_3f: _T1 = (0x108d, .nonspacingMark)
-private let __bidiClass_pair_3g: _T1 = (0x109d, .nonspacingMark)
-private let __bidiClass_pair_3h: _T1 = (0x10c7, .leftToRight)
-private let __bidiClass_pair_3i: _T1 = (0x10cd, .leftToRight)
-private let __bidiClass_pair_3j: _T1 = (0x1258, .leftToRight)
-private let __bidiClass_pair_3k: _T1 = (0x12c0, .leftToRight)
-private let __bidiClass_pair_3l: _T1 = (0x1400, .otherNeutral)
-private let __bidiClass_pair_3m: _T1 = (0x1680, .whiteSpace)
-private let __bidiClass_pair_3n: _T1 = (0x17b6, .leftToRight)
-private let __bidiClass_pair_3o: _T1 = (0x17c6, .nonspacingMark)
-private let __bidiClass_pair_3p: _T1 = (0x17db, .europeanTerminator)
-private let __bidiClass_pair_3q: _T1 = (0x17dc, .leftToRight)
-private let __bidiClass_pair_3r: _T1 = (0x17dd, .nonspacingMark)
-private let __bidiClass_pair_3s: _T1 = (0x180e, .boundaryNeutral)
-private let __bidiClass_pair_3t: _T1 = (0x18a9, .nonspacingMark)
-private let __bidiClass_pair_3u: _T1 = (0x18aa, .leftToRight)
-private let __bidiClass_pair_3v: _T1 = (0x1932, .nonspacingMark)
-private let __bidiClass_pair_3w: _T1 = (0x1940, .otherNeutral)
-private let __bidiClass_pair_3x: _T1 = (0x1a1b, .nonspacingMark)
-private let __bidiClass_pair_3y: _T1 = (0x1a56, .nonspacingMark)
-private let __bidiClass_pair_3z: _T1 = (0x1a57, .leftToRight)
-private let __bidiClass_pair_40: _T1 = (0x1a60, .nonspacingMark)
-private let __bidiClass_pair_41: _T1 = (0x1a61, .leftToRight)
-private let __bidiClass_pair_42: _T1 = (0x1a62, .nonspacingMark)
-private let __bidiClass_pair_43: _T1 = (0x1a7f, .nonspacingMark)
-private let __bidiClass_pair_44: _T1 = (0x1b34, .nonspacingMark)
-private let __bidiClass_pair_45: _T1 = (0x1b35, .leftToRight)
-private let __bidiClass_pair_46: _T1 = (0x1b3b, .leftToRight)
-private let __bidiClass_pair_47: _T1 = (0x1b3c, .nonspacingMark)
-private let __bidiClass_pair_48: _T1 = (0x1b42, .nonspacingMark)
-private let __bidiClass_pair_49: _T1 = (0x1baa, .leftToRight)
-private let __bidiClass_pair_4a: _T1 = (0x1be6, .nonspacingMark)
-private let __bidiClass_pair_4b: _T1 = (0x1be7, .leftToRight)
-private let __bidiClass_pair_4c: _T1 = (0x1bed, .nonspacingMark)
-private let __bidiClass_pair_4d: _T1 = (0x1bee, .leftToRight)
-private let __bidiClass_pair_4e: _T1 = (0x1cd3, .leftToRight)
-private let __bidiClass_pair_4f: _T1 = (0x1ce1, .leftToRight)
-private let __bidiClass_pair_4g: _T1 = (0x1ced, .nonspacingMark)
-private let __bidiClass_pair_4h: _T1 = (0x1cf4, .nonspacingMark)
-private let __bidiClass_pair_4i: _T1 = (0x1cfa, .leftToRight)
-private let __bidiClass_pair_4j: _T1 = (0x1f59, .leftToRight)
-private let __bidiClass_pair_4k: _T1 = (0x1f5b, .leftToRight)
-private let __bidiClass_pair_4l: _T1 = (0x1f5d, .leftToRight)
-private let __bidiClass_pair_4m: _T1 = (0x1fbd, .otherNeutral)
-private let __bidiClass_pair_4n: _T1 = (0x1fbe, .leftToRight)
-private let __bidiClass_pair_4o: _T1 = (0x200e, .leftToRight)
-private let __bidiClass_pair_4p: _T1 = (0x200f, .rightToLeft)
-private let __bidiClass_pair_4q: _T1 = (0x2028, .whiteSpace)
-private let __bidiClass_pair_4r: _T1 = (0x2029, .paragraphSeparator)
-private let __bidiClass_pair_4s: _T1 = (0x202a, .leftToRightEmbedding)
-private let __bidiClass_pair_4t: _T1 = (0x202b, .rightToLeftEmbedding)
-private let __bidiClass_pair_4u: _T1 = (0x202c, .popDirectionalFormat)
-private let __bidiClass_pair_4v: _T1 = (0x202d, .leftToRightOverride)
-private let __bidiClass_pair_4w: _T1 = (0x202e, .rightToLeftOverride)
-private let __bidiClass_pair_4x: _T1 = (0x202f, .commonSeparator)
-private let __bidiClass_pair_4y: _T1 = (0x2044, .commonSeparator)
-private let __bidiClass_pair_4z: _T1 = (0x205f, .whiteSpace)
-private let __bidiClass_pair_50: _T1 = (0x2066, .leftToRightIsolate)
-private let __bidiClass_pair_51: _T1 = (0x2067, .rightToLeftIsolate)
-private let __bidiClass_pair_52: _T1 = (0x2068, .firstStrongIsolate)
-private let __bidiClass_pair_53: _T1 = (0x2069, .popDirectionalIsolate)
-private let __bidiClass_pair_54: _T1 = (0x2070, .europeanNumber)
-private let __bidiClass_pair_55: _T1 = (0x2071, .leftToRight)
-private let __bidiClass_pair_56: _T1 = (0x207f, .leftToRight)
-private let __bidiClass_pair_57: _T1 = (0x2102, .leftToRight)
-private let __bidiClass_pair_58: _T1 = (0x2107, .leftToRight)
-private let __bidiClass_pair_59: _T1 = (0x2114, .otherNeutral)
-private let __bidiClass_pair_5a: _T1 = (0x2115, .leftToRight)
-private let __bidiClass_pair_5b: _T1 = (0x2124, .leftToRight)
-private let __bidiClass_pair_5c: _T1 = (0x2125, .otherNeutral)
-private let __bidiClass_pair_5d: _T1 = (0x2126, .leftToRight)
-private let __bidiClass_pair_5e: _T1 = (0x2127, .otherNeutral)
-private let __bidiClass_pair_5f: _T1 = (0x2128, .leftToRight)
-private let __bidiClass_pair_5g: _T1 = (0x2129, .otherNeutral)
-private let __bidiClass_pair_5h: _T1 = (0x212e, .europeanTerminator)
-private let __bidiClass_pair_5i: _T1 = (0x2212, .europeanSeparator)
-private let __bidiClass_pair_5j: _T1 = (0x2213, .europeanTerminator)
-private let __bidiClass_pair_5k: _T1 = (0x2395, .leftToRight)
-private let __bidiClass_pair_5l: _T1 = (0x26ac, .leftToRight)
-private let __bidiClass_pair_5m: _T1 = (0x2d27, .leftToRight)
-private let __bidiClass_pair_5n: _T1 = (0x2d2d, .leftToRight)
-private let __bidiClass_pair_5o: _T1 = (0x2d7f, .nonspacingMark)
-private let __bidiClass_pair_5p: _T1 = (0x3000, .whiteSpace)
-private let __bidiClass_pair_5q: _T1 = (0x3030, .otherNeutral)
-private let __bidiClass_pair_5r: _T1 = (0x30a0, .otherNeutral)
-private let __bidiClass_pair_5s: _T1 = (0x30fb, .otherNeutral)
-private let __bidiClass_pair_5t: _T1 = (0x33ff, .otherNeutral)
-private let __bidiClass_pair_5u: _T1 = (0xa673, .otherNeutral)
-private let __bidiClass_pair_5v: _T1 = (0xa788, .otherNeutral)
-private let __bidiClass_pair_5w: _T1 = (0xa802, .nonspacingMark)
-private let __bidiClass_pair_5x: _T1 = (0xa806, .nonspacingMark)
-private let __bidiClass_pair_5y: _T1 = (0xa80b, .nonspacingMark)
-private let __bidiClass_pair_5z: _T1 = (0xa827, .leftToRight)
-private let __bidiClass_pair_60: _T1 = (0xa8ff, .nonspacingMark)
-private let __bidiClass_pair_61: _T1 = (0xa9b3, .nonspacingMark)
-private let __bidiClass_pair_62: _T1 = (0xa9e5, .nonspacingMark)
-private let __bidiClass_pair_63: _T1 = (0xaa43, .nonspacingMark)
-private let __bidiClass_pair_64: _T1 = (0xaa4c, .nonspacingMark)
-private let __bidiClass_pair_65: _T1 = (0xaa4d, .leftToRight)
-private let __bidiClass_pair_66: _T1 = (0xaa7c, .nonspacingMark)
-private let __bidiClass_pair_67: _T1 = (0xaab0, .nonspacingMark)
-private let __bidiClass_pair_68: _T1 = (0xaab1, .leftToRight)
-private let __bidiClass_pair_69: _T1 = (0xaac0, .leftToRight)
-private let __bidiClass_pair_6a: _T1 = (0xaac1, .nonspacingMark)
-private let __bidiClass_pair_6b: _T1 = (0xaac2, .leftToRight)
-private let __bidiClass_pair_6c: _T1 = (0xaaf6, .nonspacingMark)
-private let __bidiClass_pair_6d: _T1 = (0xabe5, .nonspacingMark)
-private let __bidiClass_pair_6e: _T1 = (0xabe8, .nonspacingMark)
-private let __bidiClass_pair_6f: _T1 = (0xabed, .nonspacingMark)
-private let __bidiClass_pair_6g: _T1 = (0xfb1d, .rightToLeft)
-private let __bidiClass_pair_6h: _T1 = (0xfb1e, .nonspacingMark)
-private let __bidiClass_pair_6i: _T1 = (0xfb29, .europeanSeparator)
-private let __bidiClass_pair_6j: _T1 = (0xfdfd, .otherNeutral)
-private let __bidiClass_pair_6k: _T1 = (0xfe50, .commonSeparator)
-private let __bidiClass_pair_6l: _T1 = (0xfe51, .otherNeutral)
-private let __bidiClass_pair_6m: _T1 = (0xfe52, .commonSeparator)
-private let __bidiClass_pair_6n: _T1 = (0xfe54, .otherNeutral)
-private let __bidiClass_pair_6o: _T1 = (0xfe55, .commonSeparator)
-private let __bidiClass_pair_6p: _T1 = (0xfe5f, .europeanTerminator)
-private let __bidiClass_pair_6q: _T1 = (0xfe68, .otherNeutral)
-private let __bidiClass_pair_6r: _T1 = (0xfe6b, .otherNeutral)
-private let __bidiClass_pair_6s: _T1 = (0xfeff, .boundaryNeutral)
-private let __bidiClass_pair_6t: _T1 = (0xff0b, .europeanSeparator)
-private let __bidiClass_pair_6u: _T1 = (0xff0c, .commonSeparator)
-private let __bidiClass_pair_6v: _T1 = (0xff0d, .europeanSeparator)
-private let __bidiClass_pair_6w: _T1 = (0xff1a, .commonSeparator)
-private let __bidiClass_pair_6x: _T1 = (0x10100, .leftToRight)
-private let __bidiClass_pair_6y: _T1 = (0x10101, .otherNeutral)
-private let __bidiClass_pair_6z: _T1 = (0x10102, .leftToRight)
-private let __bidiClass_pair_70: _T1 = (0x101a0, .otherNeutral)
-private let __bidiClass_pair_71: _T1 = (0x101fd, .nonspacingMark)
-private let __bidiClass_pair_72: _T1 = (0x102e0, .nonspacingMark)
-private let __bidiClass_pair_73: _T1 = (0x1056f, .leftToRight)
-private let __bidiClass_pair_74: _T1 = (0x1091f, .otherNeutral)
-private let __bidiClass_pair_75: _T1 = (0x10a04, .rightToLeft)
-private let __bidiClass_pair_76: _T1 = (0x10a3f, .nonspacingMark)
-private let __bidiClass_pair_77: _T1 = (0x11000, .leftToRight)
-private let __bidiClass_pair_78: _T1 = (0x11001, .nonspacingMark)
-private let __bidiClass_pair_79: _T1 = (0x110cd, .leftToRight)
-private let __bidiClass_pair_7a: _T1 = (0x1112c, .leftToRight)
-private let __bidiClass_pair_7b: _T1 = (0x11173, .nonspacingMark)
-private let __bidiClass_pair_7c: _T1 = (0x111cd, .leftToRight)
-private let __bidiClass_pair_7d: _T1 = (0x11234, .nonspacingMark)
-private let __bidiClass_pair_7e: _T1 = (0x11235, .leftToRight)
-private let __bidiClass_pair_7f: _T1 = (0x1123e, .nonspacingMark)
-private let __bidiClass_pair_7g: _T1 = (0x11288, .leftToRight)
-private let __bidiClass_pair_7h: _T1 = (0x112df, .nonspacingMark)
-private let __bidiClass_pair_7i: _T1 = (0x11340, .nonspacingMark)
-private let __bidiClass_pair_7j: _T1 = (0x11350, .leftToRight)
-private let __bidiClass_pair_7k: _T1 = (0x11357, .leftToRight)
-private let __bidiClass_pair_7l: _T1 = (0x11445, .leftToRight)
-private let __bidiClass_pair_7m: _T1 = (0x11446, .nonspacingMark)
-private let __bidiClass_pair_7n: _T1 = (0x1145b, .leftToRight)
-private let __bidiClass_pair_7o: _T1 = (0x1145d, .leftToRight)
-private let __bidiClass_pair_7p: _T1 = (0x1145e, .nonspacingMark)
-private let __bidiClass_pair_7q: _T1 = (0x1145f, .leftToRight)
-private let __bidiClass_pair_7r: _T1 = (0x114b9, .leftToRight)
-private let __bidiClass_pair_7s: _T1 = (0x114ba, .nonspacingMark)
-private let __bidiClass_pair_7t: _T1 = (0x114c1, .leftToRight)
-private let __bidiClass_pair_7u: _T1 = (0x115be, .leftToRight)
-private let __bidiClass_pair_7v: _T1 = (0x1163d, .nonspacingMark)
-private let __bidiClass_pair_7w: _T1 = (0x1163e, .leftToRight)
-private let __bidiClass_pair_7x: _T1 = (0x116ab, .nonspacingMark)
-private let __bidiClass_pair_7y: _T1 = (0x116ac, .leftToRight)
-private let __bidiClass_pair_7z: _T1 = (0x116ad, .nonspacingMark)
-private let __bidiClass_pair_80: _T1 = (0x116b6, .leftToRight)
-private let __bidiClass_pair_81: _T1 = (0x116b7, .nonspacingMark)
-private let __bidiClass_pair_82: _T1 = (0x116b8, .leftToRight)
-private let __bidiClass_pair_83: _T1 = (0x11726, .leftToRight)
-private let __bidiClass_pair_84: _T1 = (0x11838, .leftToRight)
-private let __bidiClass_pair_85: _T1 = (0x1183b, .leftToRight)
-private let __bidiClass_pair_86: _T1 = (0x118ff, .leftToRight)
-private let __bidiClass_pair_87: _T1 = (0x119e0, .nonspacingMark)
-private let __bidiClass_pair_88: _T1 = (0x11a00, .leftToRight)
-private let __bidiClass_pair_89: _T1 = (0x11a47, .nonspacingMark)
-private let __bidiClass_pair_8a: _T1 = (0x11a50, .leftToRight)
-private let __bidiClass_pair_8b: _T1 = (0x11a97, .leftToRight)
-private let __bidiClass_pair_8c: _T1 = (0x11ca9, .leftToRight)
-private let __bidiClass_pair_8d: _T1 = (0x11cb1, .leftToRight)
-private let __bidiClass_pair_8e: _T1 = (0x11cb4, .leftToRight)
-private let __bidiClass_pair_8f: _T1 = (0x11d3a, .nonspacingMark)
-private let __bidiClass_pair_8g: _T1 = (0x11d46, .leftToRight)
-private let __bidiClass_pair_8h: _T1 = (0x11d47, .nonspacingMark)
-private let __bidiClass_pair_8i: _T1 = (0x11d95, .nonspacingMark)
-private let __bidiClass_pair_8j: _T1 = (0x11d96, .leftToRight)
-private let __bidiClass_pair_8k: _T1 = (0x11d97, .nonspacingMark)
-private let __bidiClass_pair_8l: _T1 = (0x11d98, .leftToRight)
-private let __bidiClass_pair_8m: _T1 = (0x16af5, .leftToRight)
-private let __bidiClass_pair_8n: _T1 = (0x16f4f, .nonspacingMark)
-private let __bidiClass_pair_8o: _T1 = (0x16fe2, .otherNeutral)
-private let __bidiClass_pair_8p: _T1 = (0x16fe3, .leftToRight)
-private let __bidiClass_pair_8q: _T1 = (0x1bc9c, .leftToRight)
-private let __bidiClass_pair_8r: _T1 = (0x1bc9f, .leftToRight)
-private let __bidiClass_pair_8s: _T1 = (0x1d245, .otherNeutral)
-private let __bidiClass_pair_8t: _T1 = (0x1d4a2, .leftToRight)
-private let __bidiClass_pair_8u: _T1 = (0x1d4bb, .leftToRight)
-private let __bidiClass_pair_8v: _T1 = (0x1d546, .leftToRight)
-private let __bidiClass_pair_8w: _T1 = (0x1d6db, .otherNeutral)
-private let __bidiClass_pair_8x: _T1 = (0x1d715, .otherNeutral)
-private let __bidiClass_pair_8y: _T1 = (0x1d74f, .otherNeutral)
-private let __bidiClass_pair_8z: _T1 = (0x1d789, .otherNeutral)
-private let __bidiClass_pair_90: _T1 = (0x1d7c3, .otherNeutral)
-private let __bidiClass_pair_91: _T1 = (0x1da75, .nonspacingMark)
-private let __bidiClass_pair_92: _T1 = (0x1da84, .nonspacingMark)
-private let __bidiClass_pair_93: _T1 = (0x1e2ff, .europeanTerminator)
-private let __bidiClass_pair_94: _T1 = (0x1f12f, .otherNeutral)
+private let __bidiClass_pair_5: _T1 = (0x1c, .paragraphSeparator)
+private let __bidiClass_pair_6: _T1 = (0x1d, .paragraphSeparator)
+private let __bidiClass_pair_7: _T1 = (0x1e, .paragraphSeparator)
+private let __bidiClass_pair_8: _T1 = (0x1f, .segmentSeparator)
+private let __bidiClass_pair_9: _T1 = (0x20, .whiteSpace)
+private let __bidiClass_pair_a: _T1 = (0x21, .otherNeutral)
+private let __bidiClass_pair_b: _T1 = (0x22, .otherNeutral)
+private let __bidiClass_pair_c: _T1 = (0x23, .europeanTerminator)
+private let __bidiClass_pair_d: _T1 = (0x24, .europeanTerminator)
+private let __bidiClass_pair_e: _T1 = (0x25, .europeanTerminator)
+private let __bidiClass_pair_f: _T1 = (0x26, .otherNeutral)
+private let __bidiClass_pair_g: _T1 = (0x27, .otherNeutral)
+private let __bidiClass_pair_h: _T1 = (0x28, .otherNeutral)
+private let __bidiClass_pair_i: _T1 = (0x29, .otherNeutral)
+private let __bidiClass_pair_j: _T1 = (0x2a, .otherNeutral)
+private let __bidiClass_pair_k: _T1 = (0x2b, .europeanSeparator)
+private let __bidiClass_pair_l: _T1 = (0x2c, .commonSeparator)
+private let __bidiClass_pair_m: _T1 = (0x2d, .europeanSeparator)
+private let __bidiClass_pair_n: _T1 = (0x2e, .commonSeparator)
+private let __bidiClass_pair_o: _T1 = (0x2f, .commonSeparator)
+private let __bidiClass_pair_p: _T1 = (0x3a, .commonSeparator)
+private let __bidiClass_pair_q: _T1 = (0x3b, .otherNeutral)
+private let __bidiClass_pair_r: _T1 = (0x3c, .otherNeutral)
+private let __bidiClass_pair_s: _T1 = (0x3d, .otherNeutral)
+private let __bidiClass_pair_t: _T1 = (0x3e, .otherNeutral)
+private let __bidiClass_pair_u: _T1 = (0x3f, .otherNeutral)
+private let __bidiClass_pair_v: _T1 = (0x40, .otherNeutral)
+private let __bidiClass_pair_w: _T1 = (0x5b, .otherNeutral)
+private let __bidiClass_pair_x: _T1 = (0x5c, .otherNeutral)
+private let __bidiClass_pair_y: _T1 = (0x5d, .otherNeutral)
+private let __bidiClass_pair_z: _T1 = (0x5e, .otherNeutral)
+private let __bidiClass_pair_10: _T1 = (0x5f, .otherNeutral)
+private let __bidiClass_pair_11: _T1 = (0x60, .otherNeutral)
+private let __bidiClass_pair_12: _T1 = (0x7b, .otherNeutral)
+private let __bidiClass_pair_13: _T1 = (0x7c, .otherNeutral)
+private let __bidiClass_pair_14: _T1 = (0x7d, .otherNeutral)
+private let __bidiClass_pair_15: _T1 = (0x7e, .otherNeutral)
+private let __bidiClass_pair_16: _T1 = (0x7f, .boundaryNeutral)
+private let __bidiClass_pair_17: _T1 = (0x80, .boundaryNeutral)
+private let __bidiClass_pair_18: _T1 = (0x81, .boundaryNeutral)
+private let __bidiClass_pair_19: _T1 = (0x82, .boundaryNeutral)
+private let __bidiClass_pair_1a: _T1 = (0x83, .boundaryNeutral)
+private let __bidiClass_pair_1b: _T1 = (0x84, .boundaryNeutral)
+private let __bidiClass_pair_1c: _T1 = (0x85, .paragraphSeparator)
+private let __bidiClass_pair_1d: _T1 = (0xa0, .commonSeparator)
+private let __bidiClass_pair_1e: _T1 = (0xa1, .otherNeutral)
+private let __bidiClass_pair_1f: _T1 = (0xa2, .europeanTerminator)
+private let __bidiClass_pair_1g: _T1 = (0xa3, .europeanTerminator)
+private let __bidiClass_pair_1h: _T1 = (0xa4, .europeanTerminator)
+private let __bidiClass_pair_1i: _T1 = (0xa5, .europeanTerminator)
+private let __bidiClass_pair_1j: _T1 = (0xa6, .otherNeutral)
+private let __bidiClass_pair_1k: _T1 = (0xa7, .otherNeutral)
+private let __bidiClass_pair_1l: _T1 = (0xa8, .otherNeutral)
+private let __bidiClass_pair_1m: _T1 = (0xa9, .otherNeutral)
+private let __bidiClass_pair_1n: _T1 = (0xaa, .leftToRight)
+private let __bidiClass_pair_1o: _T1 = (0xab, .otherNeutral)
+private let __bidiClass_pair_1p: _T1 = (0xac, .otherNeutral)
+private let __bidiClass_pair_1q: _T1 = (0xad, .boundaryNeutral)
+private let __bidiClass_pair_1r: _T1 = (0xae, .otherNeutral)
+private let __bidiClass_pair_1s: _T1 = (0xaf, .otherNeutral)
+private let __bidiClass_pair_1t: _T1 = (0xb0, .europeanTerminator)
+private let __bidiClass_pair_1u: _T1 = (0xb1, .europeanTerminator)
+private let __bidiClass_pair_1v: _T1 = (0xb2, .europeanNumber)
+private let __bidiClass_pair_1w: _T1 = (0xb3, .europeanNumber)
+private let __bidiClass_pair_1x: _T1 = (0xb4, .otherNeutral)
+private let __bidiClass_pair_1y: _T1 = (0xb5, .leftToRight)
+private let __bidiClass_pair_1z: _T1 = (0xb6, .otherNeutral)
+private let __bidiClass_pair_20: _T1 = (0xb7, .otherNeutral)
+private let __bidiClass_pair_21: _T1 = (0xb8, .otherNeutral)
+private let __bidiClass_pair_22: _T1 = (0xb9, .europeanNumber)
+private let __bidiClass_pair_23: _T1 = (0xba, .leftToRight)
+private let __bidiClass_pair_24: _T1 = (0xbb, .otherNeutral)
+private let __bidiClass_pair_25: _T1 = (0xbc, .otherNeutral)
+private let __bidiClass_pair_26: _T1 = (0xbd, .otherNeutral)
+private let __bidiClass_pair_27: _T1 = (0xbe, .otherNeutral)
+private let __bidiClass_pair_28: _T1 = (0xbf, .otherNeutral)
+private let __bidiClass_pair_29: _T1 = (0xd7, .otherNeutral)
+private let __bidiClass_pair_2a: _T1 = (0xf7, .otherNeutral)
+private let __bidiClass_pair_2b: _T1 = (0x2b9, .otherNeutral)
+private let __bidiClass_pair_2c: _T1 = (0x2ba, .otherNeutral)
+private let __bidiClass_pair_2d: _T1 = (0x2bb, .leftToRight)
+private let __bidiClass_pair_2e: _T1 = (0x2bc, .leftToRight)
+private let __bidiClass_pair_2f: _T1 = (0x2bd, .leftToRight)
+private let __bidiClass_pair_2g: _T1 = (0x2be, .leftToRight)
+private let __bidiClass_pair_2h: _T1 = (0x2bf, .leftToRight)
+private let __bidiClass_pair_2i: _T1 = (0x2c0, .leftToRight)
+private let __bidiClass_pair_2j: _T1 = (0x2c1, .leftToRight)
+private let __bidiClass_pair_2k: _T1 = (0x2d0, .leftToRight)
+private let __bidiClass_pair_2l: _T1 = (0x2d1, .leftToRight)
+private let __bidiClass_pair_2m: _T1 = (0x2e0, .leftToRight)
+private let __bidiClass_pair_2n: _T1 = (0x2e1, .leftToRight)
+private let __bidiClass_pair_2o: _T1 = (0x2e2, .leftToRight)
+private let __bidiClass_pair_2p: _T1 = (0x2e3, .leftToRight)
+private let __bidiClass_pair_2q: _T1 = (0x2e4, .leftToRight)
+private let __bidiClass_pair_2r: _T1 = (0x2ee, .leftToRight)
+private let __bidiClass_pair_2s: _T1 = (0x370, .leftToRight)
+private let __bidiClass_pair_2t: _T1 = (0x371, .leftToRight)
+private let __bidiClass_pair_2u: _T1 = (0x372, .leftToRight)
+private let __bidiClass_pair_2v: _T1 = (0x373, .leftToRight)
+private let __bidiClass_pair_2w: _T1 = (0x374, .otherNeutral)
+private let __bidiClass_pair_2x: _T1 = (0x375, .otherNeutral)
+private let __bidiClass_pair_2y: _T1 = (0x376, .leftToRight)
+private let __bidiClass_pair_2z: _T1 = (0x377, .leftToRight)
+private let __bidiClass_pair_30: _T1 = (0x37a, .leftToRight)
+private let __bidiClass_pair_31: _T1 = (0x37b, .leftToRight)
+private let __bidiClass_pair_32: _T1 = (0x37c, .leftToRight)
+private let __bidiClass_pair_33: _T1 = (0x37d, .leftToRight)
+private let __bidiClass_pair_34: _T1 = (0x37e, .otherNeutral)
+private let __bidiClass_pair_35: _T1 = (0x37f, .leftToRight)
+private let __bidiClass_pair_36: _T1 = (0x384, .otherNeutral)
+private let __bidiClass_pair_37: _T1 = (0x385, .otherNeutral)
+private let __bidiClass_pair_38: _T1 = (0x386, .leftToRight)
+private let __bidiClass_pair_39: _T1 = (0x387, .otherNeutral)
+private let __bidiClass_pair_3a: _T1 = (0x388, .leftToRight)
+private let __bidiClass_pair_3b: _T1 = (0x389, .leftToRight)
+private let __bidiClass_pair_3c: _T1 = (0x38a, .leftToRight)
+private let __bidiClass_pair_3d: _T1 = (0x38c, .leftToRight)
+private let __bidiClass_pair_3e: _T1 = (0x3f6, .otherNeutral)
+private let __bidiClass_pair_3f: _T1 = (0x483, .nonspacingMark)
+private let __bidiClass_pair_3g: _T1 = (0x484, .nonspacingMark)
+private let __bidiClass_pair_3h: _T1 = (0x485, .nonspacingMark)
+private let __bidiClass_pair_3i: _T1 = (0x486, .nonspacingMark)
+private let __bidiClass_pair_3j: _T1 = (0x487, .nonspacingMark)
+private let __bidiClass_pair_3k: _T1 = (0x488, .nonspacingMark)
+private let __bidiClass_pair_3l: _T1 = (0x489, .nonspacingMark)
+private let __bidiClass_pair_3m: _T1 = (0x58a, .otherNeutral)
+private let __bidiClass_pair_3n: _T1 = (0x58d, .otherNeutral)
+private let __bidiClass_pair_3o: _T1 = (0x58e, .otherNeutral)
+private let __bidiClass_pair_3p: _T1 = (0x58f, .europeanTerminator)
+private let __bidiClass_pair_3q: _T1 = (0x590, .rightToLeft)
+private let __bidiClass_pair_3r: _T1 = (0x5be, .rightToLeft)
+private let __bidiClass_pair_3s: _T1 = (0x5bf, .nonspacingMark)
+private let __bidiClass_pair_3t: _T1 = (0x5c0, .rightToLeft)
+private let __bidiClass_pair_3u: _T1 = (0x5c1, .nonspacingMark)
+private let __bidiClass_pair_3v: _T1 = (0x5c2, .nonspacingMark)
+private let __bidiClass_pair_3w: _T1 = (0x5c3, .rightToLeft)
+private let __bidiClass_pair_3x: _T1 = (0x5c4, .nonspacingMark)
+private let __bidiClass_pair_3y: _T1 = (0x5c5, .nonspacingMark)
+private let __bidiClass_pair_3z: _T1 = (0x5c6, .rightToLeft)
+private let __bidiClass_pair_40: _T1 = (0x5c7, .nonspacingMark)
+private let __bidiClass_pair_41: _T1 = (0x600, .arabicNumber)
+private let __bidiClass_pair_42: _T1 = (0x601, .arabicNumber)
+private let __bidiClass_pair_43: _T1 = (0x602, .arabicNumber)
+private let __bidiClass_pair_44: _T1 = (0x603, .arabicNumber)
+private let __bidiClass_pair_45: _T1 = (0x604, .arabicNumber)
+private let __bidiClass_pair_46: _T1 = (0x605, .arabicNumber)
+private let __bidiClass_pair_47: _T1 = (0x606, .otherNeutral)
+private let __bidiClass_pair_48: _T1 = (0x607, .otherNeutral)
+private let __bidiClass_pair_49: _T1 = (0x608, .arabicLetter)
+private let __bidiClass_pair_4a: _T1 = (0x609, .europeanTerminator)
+private let __bidiClass_pair_4b: _T1 = (0x60a, .europeanTerminator)
+private let __bidiClass_pair_4c: _T1 = (0x60b, .arabicLetter)
+private let __bidiClass_pair_4d: _T1 = (0x60c, .commonSeparator)
+private let __bidiClass_pair_4e: _T1 = (0x60d, .arabicLetter)
+private let __bidiClass_pair_4f: _T1 = (0x60e, .otherNeutral)
+private let __bidiClass_pair_4g: _T1 = (0x60f, .otherNeutral)
+private let __bidiClass_pair_4h: _T1 = (0x66a, .europeanTerminator)
+private let __bidiClass_pair_4i: _T1 = (0x66b, .arabicNumber)
+private let __bidiClass_pair_4j: _T1 = (0x66c, .arabicNumber)
+private let __bidiClass_pair_4k: _T1 = (0x66d, .arabicLetter)
+private let __bidiClass_pair_4l: _T1 = (0x66e, .arabicLetter)
+private let __bidiClass_pair_4m: _T1 = (0x66f, .arabicLetter)
+private let __bidiClass_pair_4n: _T1 = (0x670, .nonspacingMark)
+private let __bidiClass_pair_4o: _T1 = (0x6d6, .nonspacingMark)
+private let __bidiClass_pair_4p: _T1 = (0x6d7, .nonspacingMark)
+private let __bidiClass_pair_4q: _T1 = (0x6d8, .nonspacingMark)
+private let __bidiClass_pair_4r: _T1 = (0x6d9, .nonspacingMark)
+private let __bidiClass_pair_4s: _T1 = (0x6da, .nonspacingMark)
+private let __bidiClass_pair_4t: _T1 = (0x6db, .nonspacingMark)
+private let __bidiClass_pair_4u: _T1 = (0x6dc, .nonspacingMark)
+private let __bidiClass_pair_4v: _T1 = (0x6dd, .arabicNumber)
+private let __bidiClass_pair_4w: _T1 = (0x6de, .otherNeutral)
+private let __bidiClass_pair_4x: _T1 = (0x6df, .nonspacingMark)
+private let __bidiClass_pair_4y: _T1 = (0x6e0, .nonspacingMark)
+private let __bidiClass_pair_4z: _T1 = (0x6e1, .nonspacingMark)
+private let __bidiClass_pair_50: _T1 = (0x6e2, .nonspacingMark)
+private let __bidiClass_pair_51: _T1 = (0x6e3, .nonspacingMark)
+private let __bidiClass_pair_52: _T1 = (0x6e4, .nonspacingMark)
+private let __bidiClass_pair_53: _T1 = (0x6e5, .arabicLetter)
+private let __bidiClass_pair_54: _T1 = (0x6e6, .arabicLetter)
+private let __bidiClass_pair_55: _T1 = (0x6e7, .nonspacingMark)
+private let __bidiClass_pair_56: _T1 = (0x6e8, .nonspacingMark)
+private let __bidiClass_pair_57: _T1 = (0x6e9, .otherNeutral)
+private let __bidiClass_pair_58: _T1 = (0x6ea, .nonspacingMark)
+private let __bidiClass_pair_59: _T1 = (0x6eb, .nonspacingMark)
+private let __bidiClass_pair_5a: _T1 = (0x6ec, .nonspacingMark)
+private let __bidiClass_pair_5b: _T1 = (0x6ed, .nonspacingMark)
+private let __bidiClass_pair_5c: _T1 = (0x6ee, .arabicLetter)
+private let __bidiClass_pair_5d: _T1 = (0x6ef, .arabicLetter)
+private let __bidiClass_pair_5e: _T1 = (0x711, .nonspacingMark)
+private let __bidiClass_pair_5f: _T1 = (0x7f4, .rightToLeft)
+private let __bidiClass_pair_5g: _T1 = (0x7f5, .rightToLeft)
+private let __bidiClass_pair_5h: _T1 = (0x7f6, .otherNeutral)
+private let __bidiClass_pair_5i: _T1 = (0x7f7, .otherNeutral)
+private let __bidiClass_pair_5j: _T1 = (0x7f8, .otherNeutral)
+private let __bidiClass_pair_5k: _T1 = (0x7f9, .otherNeutral)
+private let __bidiClass_pair_5l: _T1 = (0x7fa, .rightToLeft)
+private let __bidiClass_pair_5m: _T1 = (0x7fb, .rightToLeft)
+private let __bidiClass_pair_5n: _T1 = (0x7fc, .rightToLeft)
+private let __bidiClass_pair_5o: _T1 = (0x7fd, .nonspacingMark)
+private let __bidiClass_pair_5p: _T1 = (0x816, .nonspacingMark)
+private let __bidiClass_pair_5q: _T1 = (0x817, .nonspacingMark)
+private let __bidiClass_pair_5r: _T1 = (0x818, .nonspacingMark)
+private let __bidiClass_pair_5s: _T1 = (0x819, .nonspacingMark)
+private let __bidiClass_pair_5t: _T1 = (0x81a, .rightToLeft)
+private let __bidiClass_pair_5u: _T1 = (0x824, .rightToLeft)
+private let __bidiClass_pair_5v: _T1 = (0x825, .nonspacingMark)
+private let __bidiClass_pair_5w: _T1 = (0x826, .nonspacingMark)
+private let __bidiClass_pair_5x: _T1 = (0x827, .nonspacingMark)
+private let __bidiClass_pair_5y: _T1 = (0x828, .rightToLeft)
+private let __bidiClass_pair_5z: _T1 = (0x829, .nonspacingMark)
+private let __bidiClass_pair_60: _T1 = (0x82a, .nonspacingMark)
+private let __bidiClass_pair_61: _T1 = (0x82b, .nonspacingMark)
+private let __bidiClass_pair_62: _T1 = (0x82c, .nonspacingMark)
+private let __bidiClass_pair_63: _T1 = (0x82d, .nonspacingMark)
+private let __bidiClass_pair_64: _T1 = (0x859, .nonspacingMark)
+private let __bidiClass_pair_65: _T1 = (0x85a, .nonspacingMark)
+private let __bidiClass_pair_66: _T1 = (0x85b, .nonspacingMark)
+private let __bidiClass_pair_67: _T1 = (0x85c, .rightToLeft)
+private let __bidiClass_pair_68: _T1 = (0x85d, .rightToLeft)
+private let __bidiClass_pair_69: _T1 = (0x85e, .rightToLeft)
+private let __bidiClass_pair_6a: _T1 = (0x85f, .rightToLeft)
+private let __bidiClass_pair_6b: _T1 = (0x8e2, .arabicNumber)
+private let __bidiClass_pair_6c: _T1 = (0x93a, .nonspacingMark)
+private let __bidiClass_pair_6d: _T1 = (0x93b, .leftToRight)
+private let __bidiClass_pair_6e: _T1 = (0x93c, .nonspacingMark)
+private let __bidiClass_pair_6f: _T1 = (0x93d, .leftToRight)
+private let __bidiClass_pair_6g: _T1 = (0x93e, .leftToRight)
+private let __bidiClass_pair_6h: _T1 = (0x93f, .leftToRight)
+private let __bidiClass_pair_6i: _T1 = (0x940, .leftToRight)
+private let __bidiClass_pair_6j: _T1 = (0x941, .nonspacingMark)
+private let __bidiClass_pair_6k: _T1 = (0x942, .nonspacingMark)
+private let __bidiClass_pair_6l: _T1 = (0x943, .nonspacingMark)
+private let __bidiClass_pair_6m: _T1 = (0x944, .nonspacingMark)
+private let __bidiClass_pair_6n: _T1 = (0x945, .nonspacingMark)
+private let __bidiClass_pair_6o: _T1 = (0x946, .nonspacingMark)
+private let __bidiClass_pair_6p: _T1 = (0x947, .nonspacingMark)
+private let __bidiClass_pair_6q: _T1 = (0x948, .nonspacingMark)
+private let __bidiClass_pair_6r: _T1 = (0x949, .leftToRight)
+private let __bidiClass_pair_6s: _T1 = (0x94a, .leftToRight)
+private let __bidiClass_pair_6t: _T1 = (0x94b, .leftToRight)
+private let __bidiClass_pair_6u: _T1 = (0x94c, .leftToRight)
+private let __bidiClass_pair_6v: _T1 = (0x94d, .nonspacingMark)
+private let __bidiClass_pair_6w: _T1 = (0x94e, .leftToRight)
+private let __bidiClass_pair_6x: _T1 = (0x94f, .leftToRight)
+private let __bidiClass_pair_6y: _T1 = (0x950, .leftToRight)
+private let __bidiClass_pair_6z: _T1 = (0x951, .nonspacingMark)
+private let __bidiClass_pair_70: _T1 = (0x952, .nonspacingMark)
+private let __bidiClass_pair_71: _T1 = (0x953, .nonspacingMark)
+private let __bidiClass_pair_72: _T1 = (0x954, .nonspacingMark)
+private let __bidiClass_pair_73: _T1 = (0x955, .nonspacingMark)
+private let __bidiClass_pair_74: _T1 = (0x956, .nonspacingMark)
+private let __bidiClass_pair_75: _T1 = (0x957, .nonspacingMark)
+private let __bidiClass_pair_76: _T1 = (0x962, .nonspacingMark)
+private let __bidiClass_pair_77: _T1 = (0x963, .nonspacingMark)
+private let __bidiClass_pair_78: _T1 = (0x981, .nonspacingMark)
+private let __bidiClass_pair_79: _T1 = (0x982, .leftToRight)
+private let __bidiClass_pair_7a: _T1 = (0x983, .leftToRight)
+private let __bidiClass_pair_7b: _T1 = (0x985, .leftToRight)
+private let __bidiClass_pair_7c: _T1 = (0x986, .leftToRight)
+private let __bidiClass_pair_7d: _T1 = (0x987, .leftToRight)
+private let __bidiClass_pair_7e: _T1 = (0x988, .leftToRight)
+private let __bidiClass_pair_7f: _T1 = (0x989, .leftToRight)
+private let __bidiClass_pair_7g: _T1 = (0x98a, .leftToRight)
+private let __bidiClass_pair_7h: _T1 = (0x98b, .leftToRight)
+private let __bidiClass_pair_7i: _T1 = (0x98c, .leftToRight)
+private let __bidiClass_pair_7j: _T1 = (0x98f, .leftToRight)
+private let __bidiClass_pair_7k: _T1 = (0x990, .leftToRight)
+private let __bidiClass_pair_7l: _T1 = (0x9aa, .leftToRight)
+private let __bidiClass_pair_7m: _T1 = (0x9ab, .leftToRight)
+private let __bidiClass_pair_7n: _T1 = (0x9ac, .leftToRight)
+private let __bidiClass_pair_7o: _T1 = (0x9ad, .leftToRight)
+private let __bidiClass_pair_7p: _T1 = (0x9ae, .leftToRight)
+private let __bidiClass_pair_7q: _T1 = (0x9af, .leftToRight)
+private let __bidiClass_pair_7r: _T1 = (0x9b0, .leftToRight)
+private let __bidiClass_pair_7s: _T1 = (0x9b2, .leftToRight)
+private let __bidiClass_pair_7t: _T1 = (0x9b6, .leftToRight)
+private let __bidiClass_pair_7u: _T1 = (0x9b7, .leftToRight)
+private let __bidiClass_pair_7v: _T1 = (0x9b8, .leftToRight)
+private let __bidiClass_pair_7w: _T1 = (0x9b9, .leftToRight)
+private let __bidiClass_pair_7x: _T1 = (0x9bc, .nonspacingMark)
+private let __bidiClass_pair_7y: _T1 = (0x9bd, .leftToRight)
+private let __bidiClass_pair_7z: _T1 = (0x9be, .leftToRight)
+private let __bidiClass_pair_80: _T1 = (0x9bf, .leftToRight)
+private let __bidiClass_pair_81: _T1 = (0x9c0, .leftToRight)
+private let __bidiClass_pair_82: _T1 = (0x9c1, .nonspacingMark)
+private let __bidiClass_pair_83: _T1 = (0x9c2, .nonspacingMark)
+private let __bidiClass_pair_84: _T1 = (0x9c3, .nonspacingMark)
+private let __bidiClass_pair_85: _T1 = (0x9c4, .nonspacingMark)
+private let __bidiClass_pair_86: _T1 = (0x9c7, .leftToRight)
+private let __bidiClass_pair_87: _T1 = (0x9c8, .leftToRight)
+private let __bidiClass_pair_88: _T1 = (0x9cb, .leftToRight)
+private let __bidiClass_pair_89: _T1 = (0x9cc, .leftToRight)
+private let __bidiClass_pair_8a: _T1 = (0x9cd, .nonspacingMark)
+private let __bidiClass_pair_8b: _T1 = (0x9ce, .leftToRight)
+private let __bidiClass_pair_8c: _T1 = (0x9d7, .leftToRight)
+private let __bidiClass_pair_8d: _T1 = (0x9dc, .leftToRight)
+private let __bidiClass_pair_8e: _T1 = (0x9dd, .leftToRight)
+private let __bidiClass_pair_8f: _T1 = (0x9df, .leftToRight)
+private let __bidiClass_pair_8g: _T1 = (0x9e0, .leftToRight)
+private let __bidiClass_pair_8h: _T1 = (0x9e1, .leftToRight)
+private let __bidiClass_pair_8i: _T1 = (0x9e2, .nonspacingMark)
+private let __bidiClass_pair_8j: _T1 = (0x9e3, .nonspacingMark)
+private let __bidiClass_pair_8k: _T1 = (0x9f2, .europeanTerminator)
+private let __bidiClass_pair_8l: _T1 = (0x9f3, .europeanTerminator)
+private let __bidiClass_pair_8m: _T1 = (0x9f4, .leftToRight)
+private let __bidiClass_pair_8n: _T1 = (0x9f5, .leftToRight)
+private let __bidiClass_pair_8o: _T1 = (0x9f6, .leftToRight)
+private let __bidiClass_pair_8p: _T1 = (0x9f7, .leftToRight)
+private let __bidiClass_pair_8q: _T1 = (0x9f8, .leftToRight)
+private let __bidiClass_pair_8r: _T1 = (0x9f9, .leftToRight)
+private let __bidiClass_pair_8s: _T1 = (0x9fa, .leftToRight)
+private let __bidiClass_pair_8t: _T1 = (0x9fb, .europeanTerminator)
+private let __bidiClass_pair_8u: _T1 = (0x9fc, .leftToRight)
+private let __bidiClass_pair_8v: _T1 = (0x9fd, .leftToRight)
+private let __bidiClass_pair_8w: _T1 = (0x9fe, .nonspacingMark)
+private let __bidiClass_pair_8x: _T1 = (0xa01, .nonspacingMark)
+private let __bidiClass_pair_8y: _T1 = (0xa02, .nonspacingMark)
+private let __bidiClass_pair_8z: _T1 = (0xa03, .leftToRight)
+private let __bidiClass_pair_90: _T1 = (0xa05, .leftToRight)
+private let __bidiClass_pair_91: _T1 = (0xa06, .leftToRight)
+private let __bidiClass_pair_92: _T1 = (0xa07, .leftToRight)
+private let __bidiClass_pair_93: _T1 = (0xa08, .leftToRight)
+private let __bidiClass_pair_94: _T1 = (0xa09, .leftToRight)
+private let __bidiClass_pair_95: _T1 = (0xa0a, .leftToRight)
+private let __bidiClass_pair_96: _T1 = (0xa0f, .leftToRight)
+private let __bidiClass_pair_97: _T1 = (0xa10, .leftToRight)
+private let __bidiClass_pair_98: _T1 = (0xa2a, .leftToRight)
+private let __bidiClass_pair_99: _T1 = (0xa2b, .leftToRight)
+private let __bidiClass_pair_9a: _T1 = (0xa2c, .leftToRight)
+private let __bidiClass_pair_9b: _T1 = (0xa2d, .leftToRight)
+private let __bidiClass_pair_9c: _T1 = (0xa2e, .leftToRight)
+private let __bidiClass_pair_9d: _T1 = (0xa2f, .leftToRight)
+private let __bidiClass_pair_9e: _T1 = (0xa30, .leftToRight)
+private let __bidiClass_pair_9f: _T1 = (0xa32, .leftToRight)
+private let __bidiClass_pair_9g: _T1 = (0xa33, .leftToRight)
+private let __bidiClass_pair_9h: _T1 = (0xa35, .leftToRight)
+private let __bidiClass_pair_9i: _T1 = (0xa36, .leftToRight)
+private let __bidiClass_pair_9j: _T1 = (0xa38, .leftToRight)
+private let __bidiClass_pair_9k: _T1 = (0xa39, .leftToRight)
+private let __bidiClass_pair_9l: _T1 = (0xa3c, .nonspacingMark)
+private let __bidiClass_pair_9m: _T1 = (0xa3e, .leftToRight)
+private let __bidiClass_pair_9n: _T1 = (0xa3f, .leftToRight)
+private let __bidiClass_pair_9o: _T1 = (0xa40, .leftToRight)
+private let __bidiClass_pair_9p: _T1 = (0xa41, .nonspacingMark)
+private let __bidiClass_pair_9q: _T1 = (0xa42, .nonspacingMark)
+private let __bidiClass_pair_9r: _T1 = (0xa47, .nonspacingMark)
+private let __bidiClass_pair_9s: _T1 = (0xa48, .nonspacingMark)
+private let __bidiClass_pair_9t: _T1 = (0xa4b, .nonspacingMark)
+private let __bidiClass_pair_9u: _T1 = (0xa4c, .nonspacingMark)
+private let __bidiClass_pair_9v: _T1 = (0xa4d, .nonspacingMark)
+private let __bidiClass_pair_9w: _T1 = (0xa51, .nonspacingMark)
+private let __bidiClass_pair_9x: _T1 = (0xa59, .leftToRight)
+private let __bidiClass_pair_9y: _T1 = (0xa5a, .leftToRight)
+private let __bidiClass_pair_9z: _T1 = (0xa5b, .leftToRight)
+private let __bidiClass_pair_a0: _T1 = (0xa5c, .leftToRight)
+private let __bidiClass_pair_a1: _T1 = (0xa5e, .leftToRight)
+private let __bidiClass_pair_a2: _T1 = (0xa70, .nonspacingMark)
+private let __bidiClass_pair_a3: _T1 = (0xa71, .nonspacingMark)
+private let __bidiClass_pair_a4: _T1 = (0xa72, .leftToRight)
+private let __bidiClass_pair_a5: _T1 = (0xa73, .leftToRight)
+private let __bidiClass_pair_a6: _T1 = (0xa74, .leftToRight)
+private let __bidiClass_pair_a7: _T1 = (0xa75, .nonspacingMark)
+private let __bidiClass_pair_a8: _T1 = (0xa76, .leftToRight)
+private let __bidiClass_pair_a9: _T1 = (0xa81, .nonspacingMark)
+private let __bidiClass_pair_aa: _T1 = (0xa82, .nonspacingMark)
+private let __bidiClass_pair_ab: _T1 = (0xa83, .leftToRight)
+private let __bidiClass_pair_ac: _T1 = (0xa8f, .leftToRight)
+private let __bidiClass_pair_ad: _T1 = (0xa90, .leftToRight)
+private let __bidiClass_pair_ae: _T1 = (0xa91, .leftToRight)
+private let __bidiClass_pair_af: _T1 = (0xaaa, .leftToRight)
+private let __bidiClass_pair_ag: _T1 = (0xaab, .leftToRight)
+private let __bidiClass_pair_ah: _T1 = (0xaac, .leftToRight)
+private let __bidiClass_pair_ai: _T1 = (0xaad, .leftToRight)
+private let __bidiClass_pair_aj: _T1 = (0xaae, .leftToRight)
+private let __bidiClass_pair_ak: _T1 = (0xaaf, .leftToRight)
+private let __bidiClass_pair_al: _T1 = (0xab0, .leftToRight)
+private let __bidiClass_pair_am: _T1 = (0xab2, .leftToRight)
+private let __bidiClass_pair_an: _T1 = (0xab3, .leftToRight)
+private let __bidiClass_pair_ao: _T1 = (0xab5, .leftToRight)
+private let __bidiClass_pair_ap: _T1 = (0xab6, .leftToRight)
+private let __bidiClass_pair_aq: _T1 = (0xab7, .leftToRight)
+private let __bidiClass_pair_ar: _T1 = (0xab8, .leftToRight)
+private let __bidiClass_pair_as: _T1 = (0xab9, .leftToRight)
+private let __bidiClass_pair_at: _T1 = (0xabc, .nonspacingMark)
+private let __bidiClass_pair_au: _T1 = (0xabd, .leftToRight)
+private let __bidiClass_pair_av: _T1 = (0xabe, .leftToRight)
+private let __bidiClass_pair_aw: _T1 = (0xabf, .leftToRight)
+private let __bidiClass_pair_ax: _T1 = (0xac0, .leftToRight)
+private let __bidiClass_pair_ay: _T1 = (0xac1, .nonspacingMark)
+private let __bidiClass_pair_az: _T1 = (0xac2, .nonspacingMark)
+private let __bidiClass_pair_b0: _T1 = (0xac3, .nonspacingMark)
+private let __bidiClass_pair_b1: _T1 = (0xac4, .nonspacingMark)
+private let __bidiClass_pair_b2: _T1 = (0xac5, .nonspacingMark)
+private let __bidiClass_pair_b3: _T1 = (0xac7, .nonspacingMark)
+private let __bidiClass_pair_b4: _T1 = (0xac8, .nonspacingMark)
+private let __bidiClass_pair_b5: _T1 = (0xac9, .leftToRight)
+private let __bidiClass_pair_b6: _T1 = (0xacb, .leftToRight)
+private let __bidiClass_pair_b7: _T1 = (0xacc, .leftToRight)
+private let __bidiClass_pair_b8: _T1 = (0xacd, .nonspacingMark)
+private let __bidiClass_pair_b9: _T1 = (0xad0, .leftToRight)
+private let __bidiClass_pair_ba: _T1 = (0xae0, .leftToRight)
+private let __bidiClass_pair_bb: _T1 = (0xae1, .leftToRight)
+private let __bidiClass_pair_bc: _T1 = (0xae2, .nonspacingMark)
+private let __bidiClass_pair_bd: _T1 = (0xae3, .nonspacingMark)
+private let __bidiClass_pair_be: _T1 = (0xaf1, .europeanTerminator)
+private let __bidiClass_pair_bf: _T1 = (0xaf9, .leftToRight)
+private let __bidiClass_pair_bg: _T1 = (0xafa, .nonspacingMark)
+private let __bidiClass_pair_bh: _T1 = (0xafb, .nonspacingMark)
+private let __bidiClass_pair_bi: _T1 = (0xafc, .nonspacingMark)
+private let __bidiClass_pair_bj: _T1 = (0xafd, .nonspacingMark)
+private let __bidiClass_pair_bk: _T1 = (0xafe, .nonspacingMark)
+private let __bidiClass_pair_bl: _T1 = (0xaff, .nonspacingMark)
+private let __bidiClass_pair_bm: _T1 = (0xb01, .nonspacingMark)
+private let __bidiClass_pair_bn: _T1 = (0xb02, .leftToRight)
+private let __bidiClass_pair_bo: _T1 = (0xb03, .leftToRight)
+private let __bidiClass_pair_bp: _T1 = (0xb05, .leftToRight)
+private let __bidiClass_pair_bq: _T1 = (0xb06, .leftToRight)
+private let __bidiClass_pair_br: _T1 = (0xb07, .leftToRight)
+private let __bidiClass_pair_bs: _T1 = (0xb08, .leftToRight)
+private let __bidiClass_pair_bt: _T1 = (0xb09, .leftToRight)
+private let __bidiClass_pair_bu: _T1 = (0xb0a, .leftToRight)
+private let __bidiClass_pair_bv: _T1 = (0xb0b, .leftToRight)
+private let __bidiClass_pair_bw: _T1 = (0xb0c, .leftToRight)
+private let __bidiClass_pair_bx: _T1 = (0xb0f, .leftToRight)
+private let __bidiClass_pair_by: _T1 = (0xb10, .leftToRight)
+private let __bidiClass_pair_bz: _T1 = (0xb2a, .leftToRight)
+private let __bidiClass_pair_c0: _T1 = (0xb2b, .leftToRight)
+private let __bidiClass_pair_c1: _T1 = (0xb2c, .leftToRight)
+private let __bidiClass_pair_c2: _T1 = (0xb2d, .leftToRight)
+private let __bidiClass_pair_c3: _T1 = (0xb2e, .leftToRight)
+private let __bidiClass_pair_c4: _T1 = (0xb2f, .leftToRight)
+private let __bidiClass_pair_c5: _T1 = (0xb30, .leftToRight)
+private let __bidiClass_pair_c6: _T1 = (0xb32, .leftToRight)
+private let __bidiClass_pair_c7: _T1 = (0xb33, .leftToRight)
+private let __bidiClass_pair_c8: _T1 = (0xb35, .leftToRight)
+private let __bidiClass_pair_c9: _T1 = (0xb36, .leftToRight)
+private let __bidiClass_pair_ca: _T1 = (0xb37, .leftToRight)
+private let __bidiClass_pair_cb: _T1 = (0xb38, .leftToRight)
+private let __bidiClass_pair_cc: _T1 = (0xb39, .leftToRight)
+private let __bidiClass_pair_cd: _T1 = (0xb3c, .nonspacingMark)
+private let __bidiClass_pair_ce: _T1 = (0xb3d, .leftToRight)
+private let __bidiClass_pair_cf: _T1 = (0xb3e, .leftToRight)
+private let __bidiClass_pair_cg: _T1 = (0xb3f, .nonspacingMark)
+private let __bidiClass_pair_ch: _T1 = (0xb40, .leftToRight)
+private let __bidiClass_pair_ci: _T1 = (0xb41, .nonspacingMark)
+private let __bidiClass_pair_cj: _T1 = (0xb42, .nonspacingMark)
+private let __bidiClass_pair_ck: _T1 = (0xb43, .nonspacingMark)
+private let __bidiClass_pair_cl: _T1 = (0xb44, .nonspacingMark)
+private let __bidiClass_pair_cm: _T1 = (0xb47, .leftToRight)
+private let __bidiClass_pair_cn: _T1 = (0xb48, .leftToRight)
+private let __bidiClass_pair_co: _T1 = (0xb4b, .leftToRight)
+private let __bidiClass_pair_cp: _T1 = (0xb4c, .leftToRight)
+private let __bidiClass_pair_cq: _T1 = (0xb4d, .nonspacingMark)
+private let __bidiClass_pair_cr: _T1 = (0xb56, .nonspacingMark)
+private let __bidiClass_pair_cs: _T1 = (0xb57, .leftToRight)
+private let __bidiClass_pair_ct: _T1 = (0xb5c, .leftToRight)
+private let __bidiClass_pair_cu: _T1 = (0xb5d, .leftToRight)
+private let __bidiClass_pair_cv: _T1 = (0xb5f, .leftToRight)
+private let __bidiClass_pair_cw: _T1 = (0xb60, .leftToRight)
+private let __bidiClass_pair_cx: _T1 = (0xb61, .leftToRight)
+private let __bidiClass_pair_cy: _T1 = (0xb62, .nonspacingMark)
+private let __bidiClass_pair_cz: _T1 = (0xb63, .nonspacingMark)
+private let __bidiClass_pair_d0: _T1 = (0xb82, .nonspacingMark)
+private let __bidiClass_pair_d1: _T1 = (0xb83, .leftToRight)
+private let __bidiClass_pair_d2: _T1 = (0xb85, .leftToRight)
+private let __bidiClass_pair_d3: _T1 = (0xb86, .leftToRight)
+private let __bidiClass_pair_d4: _T1 = (0xb87, .leftToRight)
+private let __bidiClass_pair_d5: _T1 = (0xb88, .leftToRight)
+private let __bidiClass_pair_d6: _T1 = (0xb89, .leftToRight)
+private let __bidiClass_pair_d7: _T1 = (0xb8a, .leftToRight)
+private let __bidiClass_pair_d8: _T1 = (0xb8e, .leftToRight)
+private let __bidiClass_pair_d9: _T1 = (0xb8f, .leftToRight)
+private let __bidiClass_pair_da: _T1 = (0xb90, .leftToRight)
+private let __bidiClass_pair_db: _T1 = (0xb92, .leftToRight)
+private let __bidiClass_pair_dc: _T1 = (0xb93, .leftToRight)
+private let __bidiClass_pair_dd: _T1 = (0xb94, .leftToRight)
+private let __bidiClass_pair_de: _T1 = (0xb95, .leftToRight)
+private let __bidiClass_pair_df: _T1 = (0xb99, .leftToRight)
+private let __bidiClass_pair_dg: _T1 = (0xb9a, .leftToRight)
+private let __bidiClass_pair_dh: _T1 = (0xb9c, .leftToRight)
+private let __bidiClass_pair_di: _T1 = (0xb9e, .leftToRight)
+private let __bidiClass_pair_dj: _T1 = (0xb9f, .leftToRight)
+private let __bidiClass_pair_dk: _T1 = (0xba3, .leftToRight)
+private let __bidiClass_pair_dl: _T1 = (0xba4, .leftToRight)
+private let __bidiClass_pair_dm: _T1 = (0xba8, .leftToRight)
+private let __bidiClass_pair_dn: _T1 = (0xba9, .leftToRight)
+private let __bidiClass_pair_do: _T1 = (0xbaa, .leftToRight)
+private let __bidiClass_pair_dp: _T1 = (0xbbe, .leftToRight)
+private let __bidiClass_pair_dq: _T1 = (0xbbf, .leftToRight)
+private let __bidiClass_pair_dr: _T1 = (0xbc0, .nonspacingMark)
+private let __bidiClass_pair_ds: _T1 = (0xbc1, .leftToRight)
+private let __bidiClass_pair_dt: _T1 = (0xbc2, .leftToRight)
+private let __bidiClass_pair_du: _T1 = (0xbc6, .leftToRight)
+private let __bidiClass_pair_dv: _T1 = (0xbc7, .leftToRight)
+private let __bidiClass_pair_dw: _T1 = (0xbc8, .leftToRight)
+private let __bidiClass_pair_dx: _T1 = (0xbca, .leftToRight)
+private let __bidiClass_pair_dy: _T1 = (0xbcb, .leftToRight)
+private let __bidiClass_pair_dz: _T1 = (0xbcc, .leftToRight)
+private let __bidiClass_pair_e0: _T1 = (0xbcd, .nonspacingMark)
+private let __bidiClass_pair_e1: _T1 = (0xbd0, .leftToRight)
+private let __bidiClass_pair_e2: _T1 = (0xbd7, .leftToRight)
+private let __bidiClass_pair_e3: _T1 = (0xbf3, .otherNeutral)
+private let __bidiClass_pair_e4: _T1 = (0xbf4, .otherNeutral)
+private let __bidiClass_pair_e5: _T1 = (0xbf5, .otherNeutral)
+private let __bidiClass_pair_e6: _T1 = (0xbf6, .otherNeutral)
+private let __bidiClass_pair_e7: _T1 = (0xbf7, .otherNeutral)
+private let __bidiClass_pair_e8: _T1 = (0xbf8, .otherNeutral)
+private let __bidiClass_pair_e9: _T1 = (0xbf9, .europeanTerminator)
+private let __bidiClass_pair_ea: _T1 = (0xbfa, .otherNeutral)
+private let __bidiClass_pair_eb: _T1 = (0xc00, .nonspacingMark)
+private let __bidiClass_pair_ec: _T1 = (0xc01, .leftToRight)
+private let __bidiClass_pair_ed: _T1 = (0xc02, .leftToRight)
+private let __bidiClass_pair_ee: _T1 = (0xc03, .leftToRight)
+private let __bidiClass_pair_ef: _T1 = (0xc04, .nonspacingMark)
+private let __bidiClass_pair_eg: _T1 = (0xc05, .leftToRight)
+private let __bidiClass_pair_eh: _T1 = (0xc06, .leftToRight)
+private let __bidiClass_pair_ei: _T1 = (0xc07, .leftToRight)
+private let __bidiClass_pair_ej: _T1 = (0xc08, .leftToRight)
+private let __bidiClass_pair_ek: _T1 = (0xc09, .leftToRight)
+private let __bidiClass_pair_el: _T1 = (0xc0a, .leftToRight)
+private let __bidiClass_pair_em: _T1 = (0xc0b, .leftToRight)
+private let __bidiClass_pair_en: _T1 = (0xc0c, .leftToRight)
+private let __bidiClass_pair_eo: _T1 = (0xc0e, .leftToRight)
+private let __bidiClass_pair_ep: _T1 = (0xc0f, .leftToRight)
+private let __bidiClass_pair_eq: _T1 = (0xc10, .leftToRight)
+private let __bidiClass_pair_er: _T1 = (0xc3d, .leftToRight)
+private let __bidiClass_pair_es: _T1 = (0xc3e, .nonspacingMark)
+private let __bidiClass_pair_et: _T1 = (0xc3f, .nonspacingMark)
+private let __bidiClass_pair_eu: _T1 = (0xc40, .nonspacingMark)
+private let __bidiClass_pair_ev: _T1 = (0xc41, .leftToRight)
+private let __bidiClass_pair_ew: _T1 = (0xc42, .leftToRight)
+private let __bidiClass_pair_ex: _T1 = (0xc43, .leftToRight)
+private let __bidiClass_pair_ey: _T1 = (0xc44, .leftToRight)
+private let __bidiClass_pair_ez: _T1 = (0xc46, .nonspacingMark)
+private let __bidiClass_pair_f0: _T1 = (0xc47, .nonspacingMark)
+private let __bidiClass_pair_f1: _T1 = (0xc48, .nonspacingMark)
+private let __bidiClass_pair_f2: _T1 = (0xc4a, .nonspacingMark)
+private let __bidiClass_pair_f3: _T1 = (0xc4b, .nonspacingMark)
+private let __bidiClass_pair_f4: _T1 = (0xc4c, .nonspacingMark)
+private let __bidiClass_pair_f5: _T1 = (0xc4d, .nonspacingMark)
+private let __bidiClass_pair_f6: _T1 = (0xc55, .nonspacingMark)
+private let __bidiClass_pair_f7: _T1 = (0xc56, .nonspacingMark)
+private let __bidiClass_pair_f8: _T1 = (0xc58, .leftToRight)
+private let __bidiClass_pair_f9: _T1 = (0xc59, .leftToRight)
+private let __bidiClass_pair_fa: _T1 = (0xc5a, .leftToRight)
+private let __bidiClass_pair_fb: _T1 = (0xc60, .leftToRight)
+private let __bidiClass_pair_fc: _T1 = (0xc61, .leftToRight)
+private let __bidiClass_pair_fd: _T1 = (0xc62, .nonspacingMark)
+private let __bidiClass_pair_fe: _T1 = (0xc63, .nonspacingMark)
+private let __bidiClass_pair_ff: _T1 = (0xc77, .leftToRight)
+private let __bidiClass_pair_fg: _T1 = (0xc78, .otherNeutral)
+private let __bidiClass_pair_fh: _T1 = (0xc79, .otherNeutral)
+private let __bidiClass_pair_fi: _T1 = (0xc7a, .otherNeutral)
+private let __bidiClass_pair_fj: _T1 = (0xc7b, .otherNeutral)
+private let __bidiClass_pair_fk: _T1 = (0xc7c, .otherNeutral)
+private let __bidiClass_pair_fl: _T1 = (0xc7d, .otherNeutral)
+private let __bidiClass_pair_fm: _T1 = (0xc7e, .otherNeutral)
+private let __bidiClass_pair_fn: _T1 = (0xc7f, .leftToRight)
+private let __bidiClass_pair_fo: _T1 = (0xc80, .leftToRight)
+private let __bidiClass_pair_fp: _T1 = (0xc81, .nonspacingMark)
+private let __bidiClass_pair_fq: _T1 = (0xc8e, .leftToRight)
+private let __bidiClass_pair_fr: _T1 = (0xc8f, .leftToRight)
+private let __bidiClass_pair_fs: _T1 = (0xc90, .leftToRight)
+private let __bidiClass_pair_ft: _T1 = (0xcb5, .leftToRight)
+private let __bidiClass_pair_fu: _T1 = (0xcb6, .leftToRight)
+private let __bidiClass_pair_fv: _T1 = (0xcb7, .leftToRight)
+private let __bidiClass_pair_fw: _T1 = (0xcb8, .leftToRight)
+private let __bidiClass_pair_fx: _T1 = (0xcb9, .leftToRight)
+private let __bidiClass_pair_fy: _T1 = (0xcbc, .nonspacingMark)
+private let __bidiClass_pair_fz: _T1 = (0xcbd, .leftToRight)
+private let __bidiClass_pair_g0: _T1 = (0xcbe, .leftToRight)
+private let __bidiClass_pair_g1: _T1 = (0xcbf, .leftToRight)
+private let __bidiClass_pair_g2: _T1 = (0xcc0, .leftToRight)
+private let __bidiClass_pair_g3: _T1 = (0xcc1, .leftToRight)
+private let __bidiClass_pair_g4: _T1 = (0xcc2, .leftToRight)
+private let __bidiClass_pair_g5: _T1 = (0xcc3, .leftToRight)
+private let __bidiClass_pair_g6: _T1 = (0xcc4, .leftToRight)
+private let __bidiClass_pair_g7: _T1 = (0xcc6, .leftToRight)
+private let __bidiClass_pair_g8: _T1 = (0xcc7, .leftToRight)
+private let __bidiClass_pair_g9: _T1 = (0xcc8, .leftToRight)
+private let __bidiClass_pair_ga: _T1 = (0xcca, .leftToRight)
+private let __bidiClass_pair_gb: _T1 = (0xccb, .leftToRight)
+private let __bidiClass_pair_gc: _T1 = (0xccc, .nonspacingMark)
+private let __bidiClass_pair_gd: _T1 = (0xccd, .nonspacingMark)
+private let __bidiClass_pair_ge: _T1 = (0xcd5, .leftToRight)
+private let __bidiClass_pair_gf: _T1 = (0xcd6, .leftToRight)
+private let __bidiClass_pair_gg: _T1 = (0xcde, .leftToRight)
+private let __bidiClass_pair_gh: _T1 = (0xce0, .leftToRight)
+private let __bidiClass_pair_gi: _T1 = (0xce1, .leftToRight)
+private let __bidiClass_pair_gj: _T1 = (0xce2, .nonspacingMark)
+private let __bidiClass_pair_gk: _T1 = (0xce3, .nonspacingMark)
+private let __bidiClass_pair_gl: _T1 = (0xcf1, .leftToRight)
+private let __bidiClass_pair_gm: _T1 = (0xcf2, .leftToRight)
+private let __bidiClass_pair_gn: _T1 = (0xd00, .nonspacingMark)
+private let __bidiClass_pair_go: _T1 = (0xd01, .nonspacingMark)
+private let __bidiClass_pair_gp: _T1 = (0xd02, .leftToRight)
+private let __bidiClass_pair_gq: _T1 = (0xd03, .leftToRight)
+private let __bidiClass_pair_gr: _T1 = (0xd05, .leftToRight)
+private let __bidiClass_pair_gs: _T1 = (0xd06, .leftToRight)
+private let __bidiClass_pair_gt: _T1 = (0xd07, .leftToRight)
+private let __bidiClass_pair_gu: _T1 = (0xd08, .leftToRight)
+private let __bidiClass_pair_gv: _T1 = (0xd09, .leftToRight)
+private let __bidiClass_pair_gw: _T1 = (0xd0a, .leftToRight)
+private let __bidiClass_pair_gx: _T1 = (0xd0b, .leftToRight)
+private let __bidiClass_pair_gy: _T1 = (0xd0c, .leftToRight)
+private let __bidiClass_pair_gz: _T1 = (0xd0e, .leftToRight)
+private let __bidiClass_pair_h0: _T1 = (0xd0f, .leftToRight)
+private let __bidiClass_pair_h1: _T1 = (0xd10, .leftToRight)
+private let __bidiClass_pair_h2: _T1 = (0xd3b, .nonspacingMark)
+private let __bidiClass_pair_h3: _T1 = (0xd3c, .nonspacingMark)
+private let __bidiClass_pair_h4: _T1 = (0xd3d, .leftToRight)
+private let __bidiClass_pair_h5: _T1 = (0xd3e, .leftToRight)
+private let __bidiClass_pair_h6: _T1 = (0xd3f, .leftToRight)
+private let __bidiClass_pair_h7: _T1 = (0xd40, .leftToRight)
+private let __bidiClass_pair_h8: _T1 = (0xd41, .nonspacingMark)
+private let __bidiClass_pair_h9: _T1 = (0xd42, .nonspacingMark)
+private let __bidiClass_pair_ha: _T1 = (0xd43, .nonspacingMark)
+private let __bidiClass_pair_hb: _T1 = (0xd44, .nonspacingMark)
+private let __bidiClass_pair_hc: _T1 = (0xd46, .leftToRight)
+private let __bidiClass_pair_hd: _T1 = (0xd47, .leftToRight)
+private let __bidiClass_pair_he: _T1 = (0xd48, .leftToRight)
+private let __bidiClass_pair_hf: _T1 = (0xd4a, .leftToRight)
+private let __bidiClass_pair_hg: _T1 = (0xd4b, .leftToRight)
+private let __bidiClass_pair_hh: _T1 = (0xd4c, .leftToRight)
+private let __bidiClass_pair_hi: _T1 = (0xd4d, .nonspacingMark)
+private let __bidiClass_pair_hj: _T1 = (0xd4e, .leftToRight)
+private let __bidiClass_pair_hk: _T1 = (0xd4f, .leftToRight)
+private let __bidiClass_pair_hl: _T1 = (0xd62, .nonspacingMark)
+private let __bidiClass_pair_hm: _T1 = (0xd63, .nonspacingMark)
+private let __bidiClass_pair_hn: _T1 = (0xd82, .leftToRight)
+private let __bidiClass_pair_ho: _T1 = (0xd83, .leftToRight)
+private let __bidiClass_pair_hp: _T1 = (0xdbd, .leftToRight)
+private let __bidiClass_pair_hq: _T1 = (0xdc0, .leftToRight)
+private let __bidiClass_pair_hr: _T1 = (0xdc1, .leftToRight)
+private let __bidiClass_pair_hs: _T1 = (0xdc2, .leftToRight)
+private let __bidiClass_pair_ht: _T1 = (0xdc3, .leftToRight)
+private let __bidiClass_pair_hu: _T1 = (0xdc4, .leftToRight)
+private let __bidiClass_pair_hv: _T1 = (0xdc5, .leftToRight)
+private let __bidiClass_pair_hw: _T1 = (0xdc6, .leftToRight)
+private let __bidiClass_pair_hx: _T1 = (0xdca, .nonspacingMark)
+private let __bidiClass_pair_hy: _T1 = (0xdcf, .leftToRight)
+private let __bidiClass_pair_hz: _T1 = (0xdd0, .leftToRight)
+private let __bidiClass_pair_i0: _T1 = (0xdd1, .leftToRight)
+private let __bidiClass_pair_i1: _T1 = (0xdd2, .nonspacingMark)
+private let __bidiClass_pair_i2: _T1 = (0xdd3, .nonspacingMark)
+private let __bidiClass_pair_i3: _T1 = (0xdd4, .nonspacingMark)
+private let __bidiClass_pair_i4: _T1 = (0xdd6, .nonspacingMark)
+private let __bidiClass_pair_i5: _T1 = (0xdd8, .leftToRight)
+private let __bidiClass_pair_i6: _T1 = (0xdd9, .leftToRight)
+private let __bidiClass_pair_i7: _T1 = (0xdda, .leftToRight)
+private let __bidiClass_pair_i8: _T1 = (0xddb, .leftToRight)
+private let __bidiClass_pair_i9: _T1 = (0xddc, .leftToRight)
+private let __bidiClass_pair_ia: _T1 = (0xddd, .leftToRight)
+private let __bidiClass_pair_ib: _T1 = (0xdde, .leftToRight)
+private let __bidiClass_pair_ic: _T1 = (0xddf, .leftToRight)
+private let __bidiClass_pair_id: _T1 = (0xdf2, .leftToRight)
+private let __bidiClass_pair_ie: _T1 = (0xdf3, .leftToRight)
+private let __bidiClass_pair_if: _T1 = (0xdf4, .leftToRight)
+private let __bidiClass_pair_ig: _T1 = (0xe31, .nonspacingMark)
+private let __bidiClass_pair_ih: _T1 = (0xe32, .leftToRight)
+private let __bidiClass_pair_ii: _T1 = (0xe33, .leftToRight)
+private let __bidiClass_pair_ij: _T1 = (0xe34, .nonspacingMark)
+private let __bidiClass_pair_ik: _T1 = (0xe35, .nonspacingMark)
+private let __bidiClass_pair_il: _T1 = (0xe36, .nonspacingMark)
+private let __bidiClass_pair_im: _T1 = (0xe37, .nonspacingMark)
+private let __bidiClass_pair_in: _T1 = (0xe38, .nonspacingMark)
+private let __bidiClass_pair_io: _T1 = (0xe39, .nonspacingMark)
+private let __bidiClass_pair_ip: _T1 = (0xe3a, .nonspacingMark)
+private let __bidiClass_pair_iq: _T1 = (0xe3f, .europeanTerminator)
+private let __bidiClass_pair_ir: _T1 = (0xe40, .leftToRight)
+private let __bidiClass_pair_is: _T1 = (0xe41, .leftToRight)
+private let __bidiClass_pair_it: _T1 = (0xe42, .leftToRight)
+private let __bidiClass_pair_iu: _T1 = (0xe43, .leftToRight)
+private let __bidiClass_pair_iv: _T1 = (0xe44, .leftToRight)
+private let __bidiClass_pair_iw: _T1 = (0xe45, .leftToRight)
+private let __bidiClass_pair_ix: _T1 = (0xe46, .leftToRight)
+private let __bidiClass_pair_iy: _T1 = (0xe47, .nonspacingMark)
+private let __bidiClass_pair_iz: _T1 = (0xe48, .nonspacingMark)
+private let __bidiClass_pair_j0: _T1 = (0xe49, .nonspacingMark)
+private let __bidiClass_pair_j1: _T1 = (0xe4a, .nonspacingMark)
+private let __bidiClass_pair_j2: _T1 = (0xe4b, .nonspacingMark)
+private let __bidiClass_pair_j3: _T1 = (0xe4c, .nonspacingMark)
+private let __bidiClass_pair_j4: _T1 = (0xe4d, .nonspacingMark)
+private let __bidiClass_pair_j5: _T1 = (0xe4e, .nonspacingMark)
+private let __bidiClass_pair_j6: _T1 = (0xe81, .leftToRight)
+private let __bidiClass_pair_j7: _T1 = (0xe82, .leftToRight)
+private let __bidiClass_pair_j8: _T1 = (0xe84, .leftToRight)
+private let __bidiClass_pair_j9: _T1 = (0xe86, .leftToRight)
+private let __bidiClass_pair_ja: _T1 = (0xe87, .leftToRight)
+private let __bidiClass_pair_jb: _T1 = (0xe88, .leftToRight)
+private let __bidiClass_pair_jc: _T1 = (0xe89, .leftToRight)
+private let __bidiClass_pair_jd: _T1 = (0xe8a, .leftToRight)
+private let __bidiClass_pair_je: _T1 = (0xea5, .leftToRight)
+private let __bidiClass_pair_jf: _T1 = (0xeb1, .nonspacingMark)
+private let __bidiClass_pair_jg: _T1 = (0xeb2, .leftToRight)
+private let __bidiClass_pair_jh: _T1 = (0xeb3, .leftToRight)
+private let __bidiClass_pair_ji: _T1 = (0xebd, .leftToRight)
+private let __bidiClass_pair_jj: _T1 = (0xec0, .leftToRight)
+private let __bidiClass_pair_jk: _T1 = (0xec1, .leftToRight)
+private let __bidiClass_pair_jl: _T1 = (0xec2, .leftToRight)
+private let __bidiClass_pair_jm: _T1 = (0xec3, .leftToRight)
+private let __bidiClass_pair_jn: _T1 = (0xec4, .leftToRight)
+private let __bidiClass_pair_jo: _T1 = (0xec6, .leftToRight)
+private let __bidiClass_pair_jp: _T1 = (0xec8, .nonspacingMark)
+private let __bidiClass_pair_jq: _T1 = (0xec9, .nonspacingMark)
+private let __bidiClass_pair_jr: _T1 = (0xeca, .nonspacingMark)
+private let __bidiClass_pair_js: _T1 = (0xecb, .nonspacingMark)
+private let __bidiClass_pair_jt: _T1 = (0xecc, .nonspacingMark)
+private let __bidiClass_pair_ju: _T1 = (0xecd, .nonspacingMark)
+private let __bidiClass_pair_jv: _T1 = (0xedc, .leftToRight)
+private let __bidiClass_pair_jw: _T1 = (0xedd, .leftToRight)
+private let __bidiClass_pair_jx: _T1 = (0xede, .leftToRight)
+private let __bidiClass_pair_jy: _T1 = (0xedf, .leftToRight)
+private let __bidiClass_pair_jz: _T1 = (0xf18, .nonspacingMark)
+private let __bidiClass_pair_k0: _T1 = (0xf19, .nonspacingMark)
+private let __bidiClass_pair_k1: _T1 = (0xf35, .nonspacingMark)
+private let __bidiClass_pair_k2: _T1 = (0xf36, .leftToRight)
+private let __bidiClass_pair_k3: _T1 = (0xf37, .nonspacingMark)
+private let __bidiClass_pair_k4: _T1 = (0xf38, .leftToRight)
+private let __bidiClass_pair_k5: _T1 = (0xf39, .nonspacingMark)
+private let __bidiClass_pair_k6: _T1 = (0xf3a, .otherNeutral)
+private let __bidiClass_pair_k7: _T1 = (0xf3b, .otherNeutral)
+private let __bidiClass_pair_k8: _T1 = (0xf3c, .otherNeutral)
+private let __bidiClass_pair_k9: _T1 = (0xf3d, .otherNeutral)
+private let __bidiClass_pair_ka: _T1 = (0xf7f, .leftToRight)
+private let __bidiClass_pair_kb: _T1 = (0xf80, .nonspacingMark)
+private let __bidiClass_pair_kc: _T1 = (0xf81, .nonspacingMark)
+private let __bidiClass_pair_kd: _T1 = (0xf82, .nonspacingMark)
+private let __bidiClass_pair_ke: _T1 = (0xf83, .nonspacingMark)
+private let __bidiClass_pair_kf: _T1 = (0xf84, .nonspacingMark)
+private let __bidiClass_pair_kg: _T1 = (0xf85, .leftToRight)
+private let __bidiClass_pair_kh: _T1 = (0xf86, .nonspacingMark)
+private let __bidiClass_pair_ki: _T1 = (0xf87, .nonspacingMark)
+private let __bidiClass_pair_kj: _T1 = (0xf88, .leftToRight)
+private let __bidiClass_pair_kk: _T1 = (0xf89, .leftToRight)
+private let __bidiClass_pair_kl: _T1 = (0xf8a, .leftToRight)
+private let __bidiClass_pair_km: _T1 = (0xf8b, .leftToRight)
+private let __bidiClass_pair_kn: _T1 = (0xf8c, .leftToRight)
+private let __bidiClass_pair_ko: _T1 = (0xfbe, .leftToRight)
+private let __bidiClass_pair_kp: _T1 = (0xfbf, .leftToRight)
+private let __bidiClass_pair_kq: _T1 = (0xfc0, .leftToRight)
+private let __bidiClass_pair_kr: _T1 = (0xfc1, .leftToRight)
+private let __bidiClass_pair_ks: _T1 = (0xfc2, .leftToRight)
+private let __bidiClass_pair_kt: _T1 = (0xfc3, .leftToRight)
+private let __bidiClass_pair_ku: _T1 = (0xfc4, .leftToRight)
+private let __bidiClass_pair_kv: _T1 = (0xfc5, .leftToRight)
+private let __bidiClass_pair_kw: _T1 = (0xfc6, .nonspacingMark)
+private let __bidiClass_pair_kx: _T1 = (0xfc7, .leftToRight)
+private let __bidiClass_pair_ky: _T1 = (0xfc8, .leftToRight)
+private let __bidiClass_pair_kz: _T1 = (0xfc9, .leftToRight)
+private let __bidiClass_pair_l0: _T1 = (0xfca, .leftToRight)
+private let __bidiClass_pair_l1: _T1 = (0xfcb, .leftToRight)
+private let __bidiClass_pair_l2: _T1 = (0xfcc, .leftToRight)
+private let __bidiClass_pair_l3: _T1 = (0x102d, .nonspacingMark)
+private let __bidiClass_pair_l4: _T1 = (0x102e, .nonspacingMark)
+private let __bidiClass_pair_l5: _T1 = (0x102f, .nonspacingMark)
+private let __bidiClass_pair_l6: _T1 = (0x1030, .nonspacingMark)
+private let __bidiClass_pair_l7: _T1 = (0x1031, .leftToRight)
+private let __bidiClass_pair_l8: _T1 = (0x1032, .nonspacingMark)
+private let __bidiClass_pair_l9: _T1 = (0x1033, .nonspacingMark)
+private let __bidiClass_pair_la: _T1 = (0x1034, .nonspacingMark)
+private let __bidiClass_pair_lb: _T1 = (0x1035, .nonspacingMark)
+private let __bidiClass_pair_lc: _T1 = (0x1036, .nonspacingMark)
+private let __bidiClass_pair_ld: _T1 = (0x1037, .nonspacingMark)
+private let __bidiClass_pair_le: _T1 = (0x1038, .leftToRight)
+private let __bidiClass_pair_lf: _T1 = (0x1039, .nonspacingMark)
+private let __bidiClass_pair_lg: _T1 = (0x103a, .nonspacingMark)
+private let __bidiClass_pair_lh: _T1 = (0x103b, .leftToRight)
+private let __bidiClass_pair_li: _T1 = (0x103c, .leftToRight)
+private let __bidiClass_pair_lj: _T1 = (0x103d, .nonspacingMark)
+private let __bidiClass_pair_lk: _T1 = (0x103e, .nonspacingMark)
+private let __bidiClass_pair_ll: _T1 = (0x1058, .nonspacingMark)
+private let __bidiClass_pair_lm: _T1 = (0x1059, .nonspacingMark)
+private let __bidiClass_pair_ln: _T1 = (0x105a, .leftToRight)
+private let __bidiClass_pair_lo: _T1 = (0x105b, .leftToRight)
+private let __bidiClass_pair_lp: _T1 = (0x105c, .leftToRight)
+private let __bidiClass_pair_lq: _T1 = (0x105d, .leftToRight)
+private let __bidiClass_pair_lr: _T1 = (0x105e, .nonspacingMark)
+private let __bidiClass_pair_ls: _T1 = (0x105f, .nonspacingMark)
+private let __bidiClass_pair_lt: _T1 = (0x1060, .nonspacingMark)
+private let __bidiClass_pair_lu: _T1 = (0x1071, .nonspacingMark)
+private let __bidiClass_pair_lv: _T1 = (0x1072, .nonspacingMark)
+private let __bidiClass_pair_lw: _T1 = (0x1073, .nonspacingMark)
+private let __bidiClass_pair_lx: _T1 = (0x1074, .nonspacingMark)
+private let __bidiClass_pair_ly: _T1 = (0x1082, .nonspacingMark)
+private let __bidiClass_pair_lz: _T1 = (0x1083, .leftToRight)
+private let __bidiClass_pair_m0: _T1 = (0x1084, .leftToRight)
+private let __bidiClass_pair_m1: _T1 = (0x1085, .nonspacingMark)
+private let __bidiClass_pair_m2: _T1 = (0x1086, .nonspacingMark)
+private let __bidiClass_pair_m3: _T1 = (0x1087, .leftToRight)
+private let __bidiClass_pair_m4: _T1 = (0x1088, .leftToRight)
+private let __bidiClass_pair_m5: _T1 = (0x1089, .leftToRight)
+private let __bidiClass_pair_m6: _T1 = (0x108a, .leftToRight)
+private let __bidiClass_pair_m7: _T1 = (0x108b, .leftToRight)
+private let __bidiClass_pair_m8: _T1 = (0x108c, .leftToRight)
+private let __bidiClass_pair_m9: _T1 = (0x108d, .nonspacingMark)
+private let __bidiClass_pair_ma: _T1 = (0x109d, .nonspacingMark)
+private let __bidiClass_pair_mb: _T1 = (0x10c7, .leftToRight)
+private let __bidiClass_pair_mc: _T1 = (0x10cd, .leftToRight)
+private let __bidiClass_pair_md: _T1 = (0x124a, .leftToRight)
+private let __bidiClass_pair_me: _T1 = (0x124b, .leftToRight)
+private let __bidiClass_pair_mf: _T1 = (0x124c, .leftToRight)
+private let __bidiClass_pair_mg: _T1 = (0x124d, .leftToRight)
+private let __bidiClass_pair_mh: _T1 = (0x1250, .leftToRight)
+private let __bidiClass_pair_mi: _T1 = (0x1251, .leftToRight)
+private let __bidiClass_pair_mj: _T1 = (0x1252, .leftToRight)
+private let __bidiClass_pair_mk: _T1 = (0x1253, .leftToRight)
+private let __bidiClass_pair_ml: _T1 = (0x1254, .leftToRight)
+private let __bidiClass_pair_mm: _T1 = (0x1255, .leftToRight)
+private let __bidiClass_pair_mn: _T1 = (0x1256, .leftToRight)
+private let __bidiClass_pair_mo: _T1 = (0x1258, .leftToRight)
+private let __bidiClass_pair_mp: _T1 = (0x125a, .leftToRight)
+private let __bidiClass_pair_mq: _T1 = (0x125b, .leftToRight)
+private let __bidiClass_pair_mr: _T1 = (0x125c, .leftToRight)
+private let __bidiClass_pair_ms: _T1 = (0x125d, .leftToRight)
+private let __bidiClass_pair_mt: _T1 = (0x128a, .leftToRight)
+private let __bidiClass_pair_mu: _T1 = (0x128b, .leftToRight)
+private let __bidiClass_pair_mv: _T1 = (0x128c, .leftToRight)
+private let __bidiClass_pair_mw: _T1 = (0x128d, .leftToRight)
+private let __bidiClass_pair_mx: _T1 = (0x12b2, .leftToRight)
+private let __bidiClass_pair_my: _T1 = (0x12b3, .leftToRight)
+private let __bidiClass_pair_mz: _T1 = (0x12b4, .leftToRight)
+private let __bidiClass_pair_n0: _T1 = (0x12b5, .leftToRight)
+private let __bidiClass_pair_n1: _T1 = (0x12b8, .leftToRight)
+private let __bidiClass_pair_n2: _T1 = (0x12b9, .leftToRight)
+private let __bidiClass_pair_n3: _T1 = (0x12ba, .leftToRight)
+private let __bidiClass_pair_n4: _T1 = (0x12bb, .leftToRight)
+private let __bidiClass_pair_n5: _T1 = (0x12bc, .leftToRight)
+private let __bidiClass_pair_n6: _T1 = (0x12bd, .leftToRight)
+private let __bidiClass_pair_n7: _T1 = (0x12be, .leftToRight)
+private let __bidiClass_pair_n8: _T1 = (0x12c0, .leftToRight)
+private let __bidiClass_pair_n9: _T1 = (0x12c2, .leftToRight)
+private let __bidiClass_pair_na: _T1 = (0x12c3, .leftToRight)
+private let __bidiClass_pair_nb: _T1 = (0x12c4, .leftToRight)
+private let __bidiClass_pair_nc: _T1 = (0x12c5, .leftToRight)
+private let __bidiClass_pair_nd: _T1 = (0x1312, .leftToRight)
+private let __bidiClass_pair_ne: _T1 = (0x1313, .leftToRight)
+private let __bidiClass_pair_nf: _T1 = (0x1314, .leftToRight)
+private let __bidiClass_pair_ng: _T1 = (0x1315, .leftToRight)
+private let __bidiClass_pair_nh: _T1 = (0x135d, .nonspacingMark)
+private let __bidiClass_pair_ni: _T1 = (0x135e, .nonspacingMark)
+private let __bidiClass_pair_nj: _T1 = (0x135f, .nonspacingMark)
+private let __bidiClass_pair_nk: _T1 = (0x13f8, .leftToRight)
+private let __bidiClass_pair_nl: _T1 = (0x13f9, .leftToRight)
+private let __bidiClass_pair_nm: _T1 = (0x13fa, .leftToRight)
+private let __bidiClass_pair_nn: _T1 = (0x13fb, .leftToRight)
+private let __bidiClass_pair_no: _T1 = (0x13fc, .leftToRight)
+private let __bidiClass_pair_np: _T1 = (0x13fd, .leftToRight)
+private let __bidiClass_pair_nq: _T1 = (0x1400, .otherNeutral)
+private let __bidiClass_pair_nr: _T1 = (0x1680, .whiteSpace)
+private let __bidiClass_pair_ns: _T1 = (0x169b, .otherNeutral)
+private let __bidiClass_pair_nt: _T1 = (0x169c, .otherNeutral)
+private let __bidiClass_pair_nu: _T1 = (0x170e, .leftToRight)
+private let __bidiClass_pair_nv: _T1 = (0x170f, .leftToRight)
+private let __bidiClass_pair_nw: _T1 = (0x1710, .leftToRight)
+private let __bidiClass_pair_nx: _T1 = (0x1711, .leftToRight)
+private let __bidiClass_pair_ny: _T1 = (0x1712, .nonspacingMark)
+private let __bidiClass_pair_nz: _T1 = (0x1713, .nonspacingMark)
+private let __bidiClass_pair_o0: _T1 = (0x1714, .nonspacingMark)
+private let __bidiClass_pair_o1: _T1 = (0x1732, .nonspacingMark)
+private let __bidiClass_pair_o2: _T1 = (0x1733, .nonspacingMark)
+private let __bidiClass_pair_o3: _T1 = (0x1734, .nonspacingMark)
+private let __bidiClass_pair_o4: _T1 = (0x1735, .leftToRight)
+private let __bidiClass_pair_o5: _T1 = (0x1736, .leftToRight)
+private let __bidiClass_pair_o6: _T1 = (0x1752, .nonspacingMark)
+private let __bidiClass_pair_o7: _T1 = (0x1753, .nonspacingMark)
+private let __bidiClass_pair_o8: _T1 = (0x176e, .leftToRight)
+private let __bidiClass_pair_o9: _T1 = (0x176f, .leftToRight)
+private let __bidiClass_pair_oa: _T1 = (0x1770, .leftToRight)
+private let __bidiClass_pair_ob: _T1 = (0x1772, .nonspacingMark)
+private let __bidiClass_pair_oc: _T1 = (0x1773, .nonspacingMark)
+private let __bidiClass_pair_od: _T1 = (0x17b4, .nonspacingMark)
+private let __bidiClass_pair_oe: _T1 = (0x17b5, .nonspacingMark)
+private let __bidiClass_pair_of: _T1 = (0x17b6, .leftToRight)
+private let __bidiClass_pair_og: _T1 = (0x17b7, .nonspacingMark)
+private let __bidiClass_pair_oh: _T1 = (0x17b8, .nonspacingMark)
+private let __bidiClass_pair_oi: _T1 = (0x17b9, .nonspacingMark)
+private let __bidiClass_pair_oj: _T1 = (0x17ba, .nonspacingMark)
+private let __bidiClass_pair_ok: _T1 = (0x17bb, .nonspacingMark)
+private let __bidiClass_pair_ol: _T1 = (0x17bc, .nonspacingMark)
+private let __bidiClass_pair_om: _T1 = (0x17bd, .nonspacingMark)
+private let __bidiClass_pair_on: _T1 = (0x17be, .leftToRight)
+private let __bidiClass_pair_oo: _T1 = (0x17bf, .leftToRight)
+private let __bidiClass_pair_op: _T1 = (0x17c0, .leftToRight)
+private let __bidiClass_pair_oq: _T1 = (0x17c1, .leftToRight)
+private let __bidiClass_pair_or: _T1 = (0x17c2, .leftToRight)
+private let __bidiClass_pair_os: _T1 = (0x17c3, .leftToRight)
+private let __bidiClass_pair_ot: _T1 = (0x17c4, .leftToRight)
+private let __bidiClass_pair_ou: _T1 = (0x17c5, .leftToRight)
+private let __bidiClass_pair_ov: _T1 = (0x17c6, .nonspacingMark)
+private let __bidiClass_pair_ow: _T1 = (0x17c7, .leftToRight)
+private let __bidiClass_pair_ox: _T1 = (0x17c8, .leftToRight)
+private let __bidiClass_pair_oy: _T1 = (0x17d4, .leftToRight)
+private let __bidiClass_pair_oz: _T1 = (0x17d5, .leftToRight)
+private let __bidiClass_pair_p0: _T1 = (0x17d6, .leftToRight)
+private let __bidiClass_pair_p1: _T1 = (0x17d7, .leftToRight)
+private let __bidiClass_pair_p2: _T1 = (0x17d8, .leftToRight)
+private let __bidiClass_pair_p3: _T1 = (0x17d9, .leftToRight)
+private let __bidiClass_pair_p4: _T1 = (0x17da, .leftToRight)
+private let __bidiClass_pair_p5: _T1 = (0x17db, .europeanTerminator)
+private let __bidiClass_pair_p6: _T1 = (0x17dc, .leftToRight)
+private let __bidiClass_pair_p7: _T1 = (0x17dd, .nonspacingMark)
+private let __bidiClass_pair_p8: _T1 = (0x180b, .nonspacingMark)
+private let __bidiClass_pair_p9: _T1 = (0x180c, .nonspacingMark)
+private let __bidiClass_pair_pa: _T1 = (0x180d, .nonspacingMark)
+private let __bidiClass_pair_pb: _T1 = (0x180e, .boundaryNeutral)
+private let __bidiClass_pair_pc: _T1 = (0x1880, .leftToRight)
+private let __bidiClass_pair_pd: _T1 = (0x1881, .leftToRight)
+private let __bidiClass_pair_pe: _T1 = (0x1882, .leftToRight)
+private let __bidiClass_pair_pf: _T1 = (0x1883, .leftToRight)
+private let __bidiClass_pair_pg: _T1 = (0x1884, .leftToRight)
+private let __bidiClass_pair_ph: _T1 = (0x1885, .nonspacingMark)
+private let __bidiClass_pair_pi: _T1 = (0x1886, .nonspacingMark)
+private let __bidiClass_pair_pj: _T1 = (0x18a9, .nonspacingMark)
+private let __bidiClass_pair_pk: _T1 = (0x18aa, .leftToRight)
+private let __bidiClass_pair_pl: _T1 = (0x1920, .nonspacingMark)
+private let __bidiClass_pair_pm: _T1 = (0x1921, .nonspacingMark)
+private let __bidiClass_pair_pn: _T1 = (0x1922, .nonspacingMark)
+private let __bidiClass_pair_po: _T1 = (0x1923, .leftToRight)
+private let __bidiClass_pair_pp: _T1 = (0x1924, .leftToRight)
+private let __bidiClass_pair_pq: _T1 = (0x1925, .leftToRight)
+private let __bidiClass_pair_pr: _T1 = (0x1926, .leftToRight)
+private let __bidiClass_pair_ps: _T1 = (0x1927, .nonspacingMark)
+private let __bidiClass_pair_pt: _T1 = (0x1928, .nonspacingMark)
+private let __bidiClass_pair_pu: _T1 = (0x1929, .leftToRight)
+private let __bidiClass_pair_pv: _T1 = (0x192a, .leftToRight)
+private let __bidiClass_pair_pw: _T1 = (0x192b, .leftToRight)
+private let __bidiClass_pair_px: _T1 = (0x1930, .leftToRight)
+private let __bidiClass_pair_py: _T1 = (0x1931, .leftToRight)
+private let __bidiClass_pair_pz: _T1 = (0x1932, .nonspacingMark)
+private let __bidiClass_pair_q0: _T1 = (0x1933, .leftToRight)
+private let __bidiClass_pair_q1: _T1 = (0x1934, .leftToRight)
+private let __bidiClass_pair_q2: _T1 = (0x1935, .leftToRight)
+private let __bidiClass_pair_q3: _T1 = (0x1936, .leftToRight)
+private let __bidiClass_pair_q4: _T1 = (0x1937, .leftToRight)
+private let __bidiClass_pair_q5: _T1 = (0x1938, .leftToRight)
+private let __bidiClass_pair_q6: _T1 = (0x1939, .nonspacingMark)
+private let __bidiClass_pair_q7: _T1 = (0x193a, .nonspacingMark)
+private let __bidiClass_pair_q8: _T1 = (0x193b, .nonspacingMark)
+private let __bidiClass_pair_q9: _T1 = (0x1940, .otherNeutral)
+private let __bidiClass_pair_qa: _T1 = (0x1944, .otherNeutral)
+private let __bidiClass_pair_qb: _T1 = (0x1945, .otherNeutral)
+private let __bidiClass_pair_qc: _T1 = (0x1970, .leftToRight)
+private let __bidiClass_pair_qd: _T1 = (0x1971, .leftToRight)
+private let __bidiClass_pair_qe: _T1 = (0x1972, .leftToRight)
+private let __bidiClass_pair_qf: _T1 = (0x1973, .leftToRight)
+private let __bidiClass_pair_qg: _T1 = (0x1974, .leftToRight)
+private let __bidiClass_pair_qh: _T1 = (0x1a17, .nonspacingMark)
+private let __bidiClass_pair_qi: _T1 = (0x1a18, .nonspacingMark)
+private let __bidiClass_pair_qj: _T1 = (0x1a19, .leftToRight)
+private let __bidiClass_pair_qk: _T1 = (0x1a1a, .leftToRight)
+private let __bidiClass_pair_ql: _T1 = (0x1a1b, .nonspacingMark)
+private let __bidiClass_pair_qm: _T1 = (0x1a56, .nonspacingMark)
+private let __bidiClass_pair_qn: _T1 = (0x1a57, .leftToRight)
+private let __bidiClass_pair_qo: _T1 = (0x1a58, .nonspacingMark)
+private let __bidiClass_pair_qp: _T1 = (0x1a59, .nonspacingMark)
+private let __bidiClass_pair_qq: _T1 = (0x1a5a, .nonspacingMark)
+private let __bidiClass_pair_qr: _T1 = (0x1a5b, .nonspacingMark)
+private let __bidiClass_pair_qs: _T1 = (0x1a5c, .nonspacingMark)
+private let __bidiClass_pair_qt: _T1 = (0x1a5d, .nonspacingMark)
+private let __bidiClass_pair_qu: _T1 = (0x1a5e, .nonspacingMark)
+private let __bidiClass_pair_qv: _T1 = (0x1a60, .nonspacingMark)
+private let __bidiClass_pair_qw: _T1 = (0x1a61, .leftToRight)
+private let __bidiClass_pair_qx: _T1 = (0x1a62, .nonspacingMark)
+private let __bidiClass_pair_qy: _T1 = (0x1a63, .leftToRight)
+private let __bidiClass_pair_qz: _T1 = (0x1a64, .leftToRight)
+private let __bidiClass_pair_r0: _T1 = (0x1a65, .nonspacingMark)
+private let __bidiClass_pair_r1: _T1 = (0x1a66, .nonspacingMark)
+private let __bidiClass_pair_r2: _T1 = (0x1a67, .nonspacingMark)
+private let __bidiClass_pair_r3: _T1 = (0x1a68, .nonspacingMark)
+private let __bidiClass_pair_r4: _T1 = (0x1a69, .nonspacingMark)
+private let __bidiClass_pair_r5: _T1 = (0x1a6a, .nonspacingMark)
+private let __bidiClass_pair_r6: _T1 = (0x1a6b, .nonspacingMark)
+private let __bidiClass_pair_r7: _T1 = (0x1a6c, .nonspacingMark)
+private let __bidiClass_pair_r8: _T1 = (0x1a6d, .leftToRight)
+private let __bidiClass_pair_r9: _T1 = (0x1a6e, .leftToRight)
+private let __bidiClass_pair_ra: _T1 = (0x1a6f, .leftToRight)
+private let __bidiClass_pair_rb: _T1 = (0x1a70, .leftToRight)
+private let __bidiClass_pair_rc: _T1 = (0x1a71, .leftToRight)
+private let __bidiClass_pair_rd: _T1 = (0x1a72, .leftToRight)
+private let __bidiClass_pair_re: _T1 = (0x1a7f, .nonspacingMark)
+private let __bidiClass_pair_rf: _T1 = (0x1b00, .nonspacingMark)
+private let __bidiClass_pair_rg: _T1 = (0x1b01, .nonspacingMark)
+private let __bidiClass_pair_rh: _T1 = (0x1b02, .nonspacingMark)
+private let __bidiClass_pair_ri: _T1 = (0x1b03, .nonspacingMark)
+private let __bidiClass_pair_rj: _T1 = (0x1b34, .nonspacingMark)
+private let __bidiClass_pair_rk: _T1 = (0x1b35, .leftToRight)
+private let __bidiClass_pair_rl: _T1 = (0x1b36, .nonspacingMark)
+private let __bidiClass_pair_rm: _T1 = (0x1b37, .nonspacingMark)
+private let __bidiClass_pair_rn: _T1 = (0x1b38, .nonspacingMark)
+private let __bidiClass_pair_ro: _T1 = (0x1b39, .nonspacingMark)
+private let __bidiClass_pair_rp: _T1 = (0x1b3a, .nonspacingMark)
+private let __bidiClass_pair_rq: _T1 = (0x1b3b, .leftToRight)
+private let __bidiClass_pair_rr: _T1 = (0x1b3c, .nonspacingMark)
+private let __bidiClass_pair_rs: _T1 = (0x1b3d, .leftToRight)
+private let __bidiClass_pair_rt: _T1 = (0x1b3e, .leftToRight)
+private let __bidiClass_pair_ru: _T1 = (0x1b3f, .leftToRight)
+private let __bidiClass_pair_rv: _T1 = (0x1b40, .leftToRight)
+private let __bidiClass_pair_rw: _T1 = (0x1b41, .leftToRight)
+private let __bidiClass_pair_rx: _T1 = (0x1b42, .nonspacingMark)
+private let __bidiClass_pair_ry: _T1 = (0x1b80, .nonspacingMark)
+private let __bidiClass_pair_rz: _T1 = (0x1b81, .nonspacingMark)
+private let __bidiClass_pair_s0: _T1 = (0x1ba2, .nonspacingMark)
+private let __bidiClass_pair_s1: _T1 = (0x1ba3, .nonspacingMark)
+private let __bidiClass_pair_s2: _T1 = (0x1ba4, .nonspacingMark)
+private let __bidiClass_pair_s3: _T1 = (0x1ba5, .nonspacingMark)
+private let __bidiClass_pair_s4: _T1 = (0x1ba6, .leftToRight)
+private let __bidiClass_pair_s5: _T1 = (0x1ba7, .leftToRight)
+private let __bidiClass_pair_s6: _T1 = (0x1ba8, .nonspacingMark)
+private let __bidiClass_pair_s7: _T1 = (0x1ba9, .nonspacingMark)
+private let __bidiClass_pair_s8: _T1 = (0x1baa, .leftToRight)
+private let __bidiClass_pair_s9: _T1 = (0x1bab, .nonspacingMark)
+private let __bidiClass_pair_sa: _T1 = (0x1bac, .nonspacingMark)
+private let __bidiClass_pair_sb: _T1 = (0x1bad, .nonspacingMark)
+private let __bidiClass_pair_sc: _T1 = (0x1be6, .nonspacingMark)
+private let __bidiClass_pair_sd: _T1 = (0x1be7, .leftToRight)
+private let __bidiClass_pair_se: _T1 = (0x1be8, .nonspacingMark)
+private let __bidiClass_pair_sf: _T1 = (0x1be9, .nonspacingMark)
+private let __bidiClass_pair_sg: _T1 = (0x1bea, .leftToRight)
+private let __bidiClass_pair_sh: _T1 = (0x1beb, .leftToRight)
+private let __bidiClass_pair_si: _T1 = (0x1bec, .leftToRight)
+private let __bidiClass_pair_sj: _T1 = (0x1bed, .nonspacingMark)
+private let __bidiClass_pair_sk: _T1 = (0x1bee, .leftToRight)
+private let __bidiClass_pair_sl: _T1 = (0x1bef, .nonspacingMark)
+private let __bidiClass_pair_sm: _T1 = (0x1bf0, .nonspacingMark)
+private let __bidiClass_pair_sn: _T1 = (0x1bf1, .nonspacingMark)
+private let __bidiClass_pair_so: _T1 = (0x1bf2, .leftToRight)
+private let __bidiClass_pair_sp: _T1 = (0x1bf3, .leftToRight)
+private let __bidiClass_pair_sq: _T1 = (0x1c2c, .nonspacingMark)
+private let __bidiClass_pair_sr: _T1 = (0x1c2d, .nonspacingMark)
+private let __bidiClass_pair_ss: _T1 = (0x1c2e, .nonspacingMark)
+private let __bidiClass_pair_st: _T1 = (0x1c2f, .nonspacingMark)
+private let __bidiClass_pair_su: _T1 = (0x1c30, .nonspacingMark)
+private let __bidiClass_pair_sv: _T1 = (0x1c31, .nonspacingMark)
+private let __bidiClass_pair_sw: _T1 = (0x1c32, .nonspacingMark)
+private let __bidiClass_pair_sx: _T1 = (0x1c33, .nonspacingMark)
+private let __bidiClass_pair_sy: _T1 = (0x1c34, .leftToRight)
+private let __bidiClass_pair_sz: _T1 = (0x1c35, .leftToRight)
+private let __bidiClass_pair_t0: _T1 = (0x1c36, .nonspacingMark)
+private let __bidiClass_pair_t1: _T1 = (0x1c37, .nonspacingMark)
+private let __bidiClass_pair_t2: _T1 = (0x1cd0, .nonspacingMark)
+private let __bidiClass_pair_t3: _T1 = (0x1cd1, .nonspacingMark)
+private let __bidiClass_pair_t4: _T1 = (0x1cd2, .nonspacingMark)
+private let __bidiClass_pair_t5: _T1 = (0x1cd3, .leftToRight)
+private let __bidiClass_pair_t6: _T1 = (0x1ce1, .leftToRight)
+private let __bidiClass_pair_t7: _T1 = (0x1ce2, .nonspacingMark)
+private let __bidiClass_pair_t8: _T1 = (0x1ce3, .nonspacingMark)
+private let __bidiClass_pair_t9: _T1 = (0x1ce4, .nonspacingMark)
+private let __bidiClass_pair_ta: _T1 = (0x1ce5, .nonspacingMark)
+private let __bidiClass_pair_tb: _T1 = (0x1ce6, .nonspacingMark)
+private let __bidiClass_pair_tc: _T1 = (0x1ce7, .nonspacingMark)
+private let __bidiClass_pair_td: _T1 = (0x1ce8, .nonspacingMark)
+private let __bidiClass_pair_te: _T1 = (0x1ce9, .leftToRight)
+private let __bidiClass_pair_tf: _T1 = (0x1cea, .leftToRight)
+private let __bidiClass_pair_tg: _T1 = (0x1ceb, .leftToRight)
+private let __bidiClass_pair_th: _T1 = (0x1cec, .leftToRight)
+private let __bidiClass_pair_ti: _T1 = (0x1ced, .nonspacingMark)
+private let __bidiClass_pair_tj: _T1 = (0x1cee, .leftToRight)
+private let __bidiClass_pair_tk: _T1 = (0x1cef, .leftToRight)
+private let __bidiClass_pair_tl: _T1 = (0x1cf0, .leftToRight)
+private let __bidiClass_pair_tm: _T1 = (0x1cf1, .leftToRight)
+private let __bidiClass_pair_tn: _T1 = (0x1cf2, .leftToRight)
+private let __bidiClass_pair_to: _T1 = (0x1cf3, .leftToRight)
+private let __bidiClass_pair_tp: _T1 = (0x1cf4, .nonspacingMark)
+private let __bidiClass_pair_tq: _T1 = (0x1cf5, .leftToRight)
+private let __bidiClass_pair_tr: _T1 = (0x1cf6, .leftToRight)
+private let __bidiClass_pair_ts: _T1 = (0x1cf7, .leftToRight)
+private let __bidiClass_pair_tt: _T1 = (0x1cf8, .nonspacingMark)
+private let __bidiClass_pair_tu: _T1 = (0x1cf9, .nonspacingMark)
+private let __bidiClass_pair_tv: _T1 = (0x1cfa, .leftToRight)
+private let __bidiClass_pair_tw: _T1 = (0x1dfb, .nonspacingMark)
+private let __bidiClass_pair_tx: _T1 = (0x1dfc, .nonspacingMark)
+private let __bidiClass_pair_ty: _T1 = (0x1dfd, .nonspacingMark)
+private let __bidiClass_pair_tz: _T1 = (0x1dfe, .nonspacingMark)
+private let __bidiClass_pair_u0: _T1 = (0x1dff, .nonspacingMark)
+private let __bidiClass_pair_u1: _T1 = (0x1f18, .leftToRight)
+private let __bidiClass_pair_u2: _T1 = (0x1f19, .leftToRight)
+private let __bidiClass_pair_u3: _T1 = (0x1f1a, .leftToRight)
+private let __bidiClass_pair_u4: _T1 = (0x1f1b, .leftToRight)
+private let __bidiClass_pair_u5: _T1 = (0x1f1c, .leftToRight)
+private let __bidiClass_pair_u6: _T1 = (0x1f1d, .leftToRight)
+private let __bidiClass_pair_u7: _T1 = (0x1f48, .leftToRight)
+private let __bidiClass_pair_u8: _T1 = (0x1f49, .leftToRight)
+private let __bidiClass_pair_u9: _T1 = (0x1f4a, .leftToRight)
+private let __bidiClass_pair_ua: _T1 = (0x1f4b, .leftToRight)
+private let __bidiClass_pair_ub: _T1 = (0x1f4c, .leftToRight)
+private let __bidiClass_pair_uc: _T1 = (0x1f4d, .leftToRight)
+private let __bidiClass_pair_ud: _T1 = (0x1f50, .leftToRight)
+private let __bidiClass_pair_ue: _T1 = (0x1f51, .leftToRight)
+private let __bidiClass_pair_uf: _T1 = (0x1f52, .leftToRight)
+private let __bidiClass_pair_ug: _T1 = (0x1f53, .leftToRight)
+private let __bidiClass_pair_uh: _T1 = (0x1f54, .leftToRight)
+private let __bidiClass_pair_ui: _T1 = (0x1f55, .leftToRight)
+private let __bidiClass_pair_uj: _T1 = (0x1f56, .leftToRight)
+private let __bidiClass_pair_uk: _T1 = (0x1f57, .leftToRight)
+private let __bidiClass_pair_ul: _T1 = (0x1f59, .leftToRight)
+private let __bidiClass_pair_um: _T1 = (0x1f5b, .leftToRight)
+private let __bidiClass_pair_un: _T1 = (0x1f5d, .leftToRight)
+private let __bidiClass_pair_uo: _T1 = (0x1fb6, .leftToRight)
+private let __bidiClass_pair_up: _T1 = (0x1fb7, .leftToRight)
+private let __bidiClass_pair_uq: _T1 = (0x1fb8, .leftToRight)
+private let __bidiClass_pair_ur: _T1 = (0x1fb9, .leftToRight)
+private let __bidiClass_pair_us: _T1 = (0x1fba, .leftToRight)
+private let __bidiClass_pair_ut: _T1 = (0x1fbb, .leftToRight)
+private let __bidiClass_pair_uu: _T1 = (0x1fbc, .leftToRight)
+private let __bidiClass_pair_uv: _T1 = (0x1fbd, .otherNeutral)
+private let __bidiClass_pair_uw: _T1 = (0x1fbe, .leftToRight)
+private let __bidiClass_pair_ux: _T1 = (0x1fbf, .otherNeutral)
+private let __bidiClass_pair_uy: _T1 = (0x1fc0, .otherNeutral)
+private let __bidiClass_pair_uz: _T1 = (0x1fc1, .otherNeutral)
+private let __bidiClass_pair_v0: _T1 = (0x1fc2, .leftToRight)
+private let __bidiClass_pair_v1: _T1 = (0x1fc3, .leftToRight)
+private let __bidiClass_pair_v2: _T1 = (0x1fc4, .leftToRight)
+private let __bidiClass_pair_v3: _T1 = (0x1fc6, .leftToRight)
+private let __bidiClass_pair_v4: _T1 = (0x1fc7, .leftToRight)
+private let __bidiClass_pair_v5: _T1 = (0x1fc8, .leftToRight)
+private let __bidiClass_pair_v6: _T1 = (0x1fc9, .leftToRight)
+private let __bidiClass_pair_v7: _T1 = (0x1fca, .leftToRight)
+private let __bidiClass_pair_v8: _T1 = (0x1fcb, .leftToRight)
+private let __bidiClass_pair_v9: _T1 = (0x1fcc, .leftToRight)
+private let __bidiClass_pair_va: _T1 = (0x1fcd, .otherNeutral)
+private let __bidiClass_pair_vb: _T1 = (0x1fce, .otherNeutral)
+private let __bidiClass_pair_vc: _T1 = (0x1fcf, .otherNeutral)
+private let __bidiClass_pair_vd: _T1 = (0x1fd0, .leftToRight)
+private let __bidiClass_pair_ve: _T1 = (0x1fd1, .leftToRight)
+private let __bidiClass_pair_vf: _T1 = (0x1fd2, .leftToRight)
+private let __bidiClass_pair_vg: _T1 = (0x1fd3, .leftToRight)
+private let __bidiClass_pair_vh: _T1 = (0x1fd6, .leftToRight)
+private let __bidiClass_pair_vi: _T1 = (0x1fd7, .leftToRight)
+private let __bidiClass_pair_vj: _T1 = (0x1fd8, .leftToRight)
+private let __bidiClass_pair_vk: _T1 = (0x1fd9, .leftToRight)
+private let __bidiClass_pair_vl: _T1 = (0x1fda, .leftToRight)
+private let __bidiClass_pair_vm: _T1 = (0x1fdb, .leftToRight)
+private let __bidiClass_pair_vn: _T1 = (0x1fdd, .otherNeutral)
+private let __bidiClass_pair_vo: _T1 = (0x1fde, .otherNeutral)
+private let __bidiClass_pair_vp: _T1 = (0x1fdf, .otherNeutral)
+private let __bidiClass_pair_vq: _T1 = (0x1fed, .otherNeutral)
+private let __bidiClass_pair_vr: _T1 = (0x1fee, .otherNeutral)
+private let __bidiClass_pair_vs: _T1 = (0x1fef, .otherNeutral)
+private let __bidiClass_pair_vt: _T1 = (0x1ff2, .leftToRight)
+private let __bidiClass_pair_vu: _T1 = (0x1ff3, .leftToRight)
+private let __bidiClass_pair_vv: _T1 = (0x1ff4, .leftToRight)
+private let __bidiClass_pair_vw: _T1 = (0x1ff6, .leftToRight)
+private let __bidiClass_pair_vx: _T1 = (0x1ff7, .leftToRight)
+private let __bidiClass_pair_vy: _T1 = (0x1ff8, .leftToRight)
+private let __bidiClass_pair_vz: _T1 = (0x1ff9, .leftToRight)
+private let __bidiClass_pair_w0: _T1 = (0x1ffa, .leftToRight)
+private let __bidiClass_pair_w1: _T1 = (0x1ffb, .leftToRight)
+private let __bidiClass_pair_w2: _T1 = (0x1ffc, .leftToRight)
+private let __bidiClass_pair_w3: _T1 = (0x1ffd, .otherNeutral)
+private let __bidiClass_pair_w4: _T1 = (0x1ffe, .otherNeutral)
+private let __bidiClass_pair_w5: _T1 = (0x200b, .boundaryNeutral)
+private let __bidiClass_pair_w6: _T1 = (0x200c, .boundaryNeutral)
+private let __bidiClass_pair_w7: _T1 = (0x200d, .boundaryNeutral)
+private let __bidiClass_pair_w8: _T1 = (0x200e, .leftToRight)
+private let __bidiClass_pair_w9: _T1 = (0x200f, .rightToLeft)
+private let __bidiClass_pair_wa: _T1 = (0x2028, .whiteSpace)
+private let __bidiClass_pair_wb: _T1 = (0x2029, .paragraphSeparator)
+private let __bidiClass_pair_wc: _T1 = (0x202a, .leftToRightEmbedding)
+private let __bidiClass_pair_wd: _T1 = (0x202b, .rightToLeftEmbedding)
+private let __bidiClass_pair_we: _T1 = (0x202c, .popDirectionalFormat)
+private let __bidiClass_pair_wf: _T1 = (0x202d, .leftToRightOverride)
+private let __bidiClass_pair_wg: _T1 = (0x202e, .rightToLeftOverride)
+private let __bidiClass_pair_wh: _T1 = (0x202f, .commonSeparator)
+private let __bidiClass_pair_wi: _T1 = (0x2030, .europeanTerminator)
+private let __bidiClass_pair_wj: _T1 = (0x2031, .europeanTerminator)
+private let __bidiClass_pair_wk: _T1 = (0x2032, .europeanTerminator)
+private let __bidiClass_pair_wl: _T1 = (0x2033, .europeanTerminator)
+private let __bidiClass_pair_wm: _T1 = (0x2034, .europeanTerminator)
+private let __bidiClass_pair_wn: _T1 = (0x2044, .commonSeparator)
+private let __bidiClass_pair_wo: _T1 = (0x205f, .whiteSpace)
+private let __bidiClass_pair_wp: _T1 = (0x2060, .boundaryNeutral)
+private let __bidiClass_pair_wq: _T1 = (0x2061, .boundaryNeutral)
+private let __bidiClass_pair_wr: _T1 = (0x2062, .boundaryNeutral)
+private let __bidiClass_pair_ws: _T1 = (0x2063, .boundaryNeutral)
+private let __bidiClass_pair_wt: _T1 = (0x2064, .boundaryNeutral)
+private let __bidiClass_pair_wu: _T1 = (0x2065, .boundaryNeutral)
+private let __bidiClass_pair_wv: _T1 = (0x2066, .leftToRightIsolate)
+private let __bidiClass_pair_ww: _T1 = (0x2067, .rightToLeftIsolate)
+private let __bidiClass_pair_wx: _T1 = (0x2068, .firstStrongIsolate)
+private let __bidiClass_pair_wy: _T1 = (0x2069, .popDirectionalIsolate)
+private let __bidiClass_pair_wz: _T1 = (0x206a, .boundaryNeutral)
+private let __bidiClass_pair_x0: _T1 = (0x206b, .boundaryNeutral)
+private let __bidiClass_pair_x1: _T1 = (0x206c, .boundaryNeutral)
+private let __bidiClass_pair_x2: _T1 = (0x206d, .boundaryNeutral)
+private let __bidiClass_pair_x3: _T1 = (0x206e, .boundaryNeutral)
+private let __bidiClass_pair_x4: _T1 = (0x206f, .boundaryNeutral)
+private let __bidiClass_pair_x5: _T1 = (0x2070, .europeanNumber)
+private let __bidiClass_pair_x6: _T1 = (0x2071, .leftToRight)
+private let __bidiClass_pair_x7: _T1 = (0x2074, .europeanNumber)
+private let __bidiClass_pair_x8: _T1 = (0x2075, .europeanNumber)
+private let __bidiClass_pair_x9: _T1 = (0x2076, .europeanNumber)
+private let __bidiClass_pair_xa: _T1 = (0x2077, .europeanNumber)
+private let __bidiClass_pair_xb: _T1 = (0x2078, .europeanNumber)
+private let __bidiClass_pair_xc: _T1 = (0x2079, .europeanNumber)
+private let __bidiClass_pair_xd: _T1 = (0x207a, .europeanSeparator)
+private let __bidiClass_pair_xe: _T1 = (0x207b, .europeanSeparator)
+private let __bidiClass_pair_xf: _T1 = (0x207c, .otherNeutral)
+private let __bidiClass_pair_xg: _T1 = (0x207d, .otherNeutral)
+private let __bidiClass_pair_xh: _T1 = (0x207e, .otherNeutral)
+private let __bidiClass_pair_xi: _T1 = (0x207f, .leftToRight)
+private let __bidiClass_pair_xj: _T1 = (0x208a, .europeanSeparator)
+private let __bidiClass_pair_xk: _T1 = (0x208b, .europeanSeparator)
+private let __bidiClass_pair_xl: _T1 = (0x208c, .otherNeutral)
+private let __bidiClass_pair_xm: _T1 = (0x208d, .otherNeutral)
+private let __bidiClass_pair_xn: _T1 = (0x208e, .otherNeutral)
+private let __bidiClass_pair_xo: _T1 = (0x2100, .otherNeutral)
+private let __bidiClass_pair_xp: _T1 = (0x2101, .otherNeutral)
+private let __bidiClass_pair_xq: _T1 = (0x2102, .leftToRight)
+private let __bidiClass_pair_xr: _T1 = (0x2103, .otherNeutral)
+private let __bidiClass_pair_xs: _T1 = (0x2104, .otherNeutral)
+private let __bidiClass_pair_xt: _T1 = (0x2105, .otherNeutral)
+private let __bidiClass_pair_xu: _T1 = (0x2106, .otherNeutral)
+private let __bidiClass_pair_xv: _T1 = (0x2107, .leftToRight)
+private let __bidiClass_pair_xw: _T1 = (0x2108, .otherNeutral)
+private let __bidiClass_pair_xx: _T1 = (0x2109, .otherNeutral)
+private let __bidiClass_pair_xy: _T1 = (0x2114, .otherNeutral)
+private let __bidiClass_pair_xz: _T1 = (0x2115, .leftToRight)
+private let __bidiClass_pair_y0: _T1 = (0x2116, .otherNeutral)
+private let __bidiClass_pair_y1: _T1 = (0x2117, .otherNeutral)
+private let __bidiClass_pair_y2: _T1 = (0x2118, .otherNeutral)
+private let __bidiClass_pair_y3: _T1 = (0x2119, .leftToRight)
+private let __bidiClass_pair_y4: _T1 = (0x211a, .leftToRight)
+private let __bidiClass_pair_y5: _T1 = (0x211b, .leftToRight)
+private let __bidiClass_pair_y6: _T1 = (0x211c, .leftToRight)
+private let __bidiClass_pair_y7: _T1 = (0x211d, .leftToRight)
+private let __bidiClass_pair_y8: _T1 = (0x211e, .otherNeutral)
+private let __bidiClass_pair_y9: _T1 = (0x211f, .otherNeutral)
+private let __bidiClass_pair_ya: _T1 = (0x2120, .otherNeutral)
+private let __bidiClass_pair_yb: _T1 = (0x2121, .otherNeutral)
+private let __bidiClass_pair_yc: _T1 = (0x2122, .otherNeutral)
+private let __bidiClass_pair_yd: _T1 = (0x2123, .otherNeutral)
+private let __bidiClass_pair_ye: _T1 = (0x2124, .leftToRight)
+private let __bidiClass_pair_yf: _T1 = (0x2125, .otherNeutral)
+private let __bidiClass_pair_yg: _T1 = (0x2126, .leftToRight)
+private let __bidiClass_pair_yh: _T1 = (0x2127, .otherNeutral)
+private let __bidiClass_pair_yi: _T1 = (0x2128, .leftToRight)
+private let __bidiClass_pair_yj: _T1 = (0x2129, .otherNeutral)
+private let __bidiClass_pair_yk: _T1 = (0x212a, .leftToRight)
+private let __bidiClass_pair_yl: _T1 = (0x212b, .leftToRight)
+private let __bidiClass_pair_ym: _T1 = (0x212c, .leftToRight)
+private let __bidiClass_pair_yn: _T1 = (0x212d, .leftToRight)
+private let __bidiClass_pair_yo: _T1 = (0x212e, .europeanTerminator)
+private let __bidiClass_pair_yp: _T1 = (0x213a, .otherNeutral)
+private let __bidiClass_pair_yq: _T1 = (0x213b, .otherNeutral)
+private let __bidiClass_pair_yr: _T1 = (0x213c, .leftToRight)
+private let __bidiClass_pair_ys: _T1 = (0x213d, .leftToRight)
+private let __bidiClass_pair_yt: _T1 = (0x213e, .leftToRight)
+private let __bidiClass_pair_yu: _T1 = (0x213f, .leftToRight)
+private let __bidiClass_pair_yv: _T1 = (0x2140, .otherNeutral)
+private let __bidiClass_pair_yw: _T1 = (0x2141, .otherNeutral)
+private let __bidiClass_pair_yx: _T1 = (0x2142, .otherNeutral)
+private let __bidiClass_pair_yy: _T1 = (0x2143, .otherNeutral)
+private let __bidiClass_pair_yz: _T1 = (0x2144, .otherNeutral)
+private let __bidiClass_pair_z0: _T1 = (0x2145, .leftToRight)
+private let __bidiClass_pair_z1: _T1 = (0x2146, .leftToRight)
+private let __bidiClass_pair_z2: _T1 = (0x2147, .leftToRight)
+private let __bidiClass_pair_z3: _T1 = (0x2148, .leftToRight)
+private let __bidiClass_pair_z4: _T1 = (0x2149, .leftToRight)
+private let __bidiClass_pair_z5: _T1 = (0x214a, .otherNeutral)
+private let __bidiClass_pair_z6: _T1 = (0x214b, .otherNeutral)
+private let __bidiClass_pair_z7: _T1 = (0x214c, .otherNeutral)
+private let __bidiClass_pair_z8: _T1 = (0x214d, .otherNeutral)
+private let __bidiClass_pair_z9: _T1 = (0x214e, .leftToRight)
+private let __bidiClass_pair_za: _T1 = (0x214f, .leftToRight)
+private let __bidiClass_pair_zb: _T1 = (0x2189, .otherNeutral)
+private let __bidiClass_pair_zc: _T1 = (0x218a, .otherNeutral)
+private let __bidiClass_pair_zd: _T1 = (0x218b, .otherNeutral)
+private let __bidiClass_pair_ze: _T1 = (0x2212, .europeanSeparator)
+private let __bidiClass_pair_zf: _T1 = (0x2213, .europeanTerminator)
+private let __bidiClass_pair_zg: _T1 = (0x2395, .leftToRight)
+private let __bidiClass_pair_zh: _T1 = (0x26ac, .leftToRight)
+private let __bidiClass_pair_zi: _T1 = (0x2ce5, .otherNeutral)
+private let __bidiClass_pair_zj: _T1 = (0x2ce6, .otherNeutral)
+private let __bidiClass_pair_zk: _T1 = (0x2ce7, .otherNeutral)
+private let __bidiClass_pair_zl: _T1 = (0x2ce8, .otherNeutral)
+private let __bidiClass_pair_zm: _T1 = (0x2ce9, .otherNeutral)
+private let __bidiClass_pair_zn: _T1 = (0x2cea, .otherNeutral)
+private let __bidiClass_pair_zo: _T1 = (0x2ceb, .leftToRight)
+private let __bidiClass_pair_zp: _T1 = (0x2cec, .leftToRight)
+private let __bidiClass_pair_zq: _T1 = (0x2ced, .leftToRight)
+private let __bidiClass_pair_zr: _T1 = (0x2cee, .leftToRight)
+private let __bidiClass_pair_zs: _T1 = (0x2cef, .nonspacingMark)
+private let __bidiClass_pair_zt: _T1 = (0x2cf0, .nonspacingMark)
+private let __bidiClass_pair_zu: _T1 = (0x2cf1, .nonspacingMark)
+private let __bidiClass_pair_zv: _T1 = (0x2cf2, .leftToRight)
+private let __bidiClass_pair_zw: _T1 = (0x2cf3, .leftToRight)
+private let __bidiClass_pair_zx: _T1 = (0x2cf9, .otherNeutral)
+private let __bidiClass_pair_zy: _T1 = (0x2cfa, .otherNeutral)
+private let __bidiClass_pair_zz: _T1 = (0x2cfb, .otherNeutral)
+private let __bidiClass_pair_100: _T1 = (0x2cfc, .otherNeutral)
+private let __bidiClass_pair_101: _T1 = (0x2cfd, .otherNeutral)
+private let __bidiClass_pair_102: _T1 = (0x2cfe, .otherNeutral)
+private let __bidiClass_pair_103: _T1 = (0x2cff, .otherNeutral)
+private let __bidiClass_pair_104: _T1 = (0x2d27, .leftToRight)
+private let __bidiClass_pair_105: _T1 = (0x2d2d, .leftToRight)
+private let __bidiClass_pair_106: _T1 = (0x2d6f, .leftToRight)
+private let __bidiClass_pair_107: _T1 = (0x2d70, .leftToRight)
+private let __bidiClass_pair_108: _T1 = (0x2d7f, .nonspacingMark)
+private let __bidiClass_pair_109: _T1 = (0x2da0, .leftToRight)
+private let __bidiClass_pair_10a: _T1 = (0x2da1, .leftToRight)
+private let __bidiClass_pair_10b: _T1 = (0x2da2, .leftToRight)
+private let __bidiClass_pair_10c: _T1 = (0x2da3, .leftToRight)
+private let __bidiClass_pair_10d: _T1 = (0x2da4, .leftToRight)
+private let __bidiClass_pair_10e: _T1 = (0x2da5, .leftToRight)
+private let __bidiClass_pair_10f: _T1 = (0x2da6, .leftToRight)
+private let __bidiClass_pair_10g: _T1 = (0x2da8, .leftToRight)
+private let __bidiClass_pair_10h: _T1 = (0x2da9, .leftToRight)
+private let __bidiClass_pair_10i: _T1 = (0x2daa, .leftToRight)
+private let __bidiClass_pair_10j: _T1 = (0x2dab, .leftToRight)
+private let __bidiClass_pair_10k: _T1 = (0x2dac, .leftToRight)
+private let __bidiClass_pair_10l: _T1 = (0x2dad, .leftToRight)
+private let __bidiClass_pair_10m: _T1 = (0x2dae, .leftToRight)
+private let __bidiClass_pair_10n: _T1 = (0x2db0, .leftToRight)
+private let __bidiClass_pair_10o: _T1 = (0x2db1, .leftToRight)
+private let __bidiClass_pair_10p: _T1 = (0x2db2, .leftToRight)
+private let __bidiClass_pair_10q: _T1 = (0x2db3, .leftToRight)
+private let __bidiClass_pair_10r: _T1 = (0x2db4, .leftToRight)
+private let __bidiClass_pair_10s: _T1 = (0x2db5, .leftToRight)
+private let __bidiClass_pair_10t: _T1 = (0x2db6, .leftToRight)
+private let __bidiClass_pair_10u: _T1 = (0x2db8, .leftToRight)
+private let __bidiClass_pair_10v: _T1 = (0x2db9, .leftToRight)
+private let __bidiClass_pair_10w: _T1 = (0x2dba, .leftToRight)
+private let __bidiClass_pair_10x: _T1 = (0x2dbb, .leftToRight)
+private let __bidiClass_pair_10y: _T1 = (0x2dbc, .leftToRight)
+private let __bidiClass_pair_10z: _T1 = (0x2dbd, .leftToRight)
+private let __bidiClass_pair_110: _T1 = (0x2dbe, .leftToRight)
+private let __bidiClass_pair_111: _T1 = (0x2dc0, .leftToRight)
+private let __bidiClass_pair_112: _T1 = (0x2dc1, .leftToRight)
+private let __bidiClass_pair_113: _T1 = (0x2dc2, .leftToRight)
+private let __bidiClass_pair_114: _T1 = (0x2dc3, .leftToRight)
+private let __bidiClass_pair_115: _T1 = (0x2dc4, .leftToRight)
+private let __bidiClass_pair_116: _T1 = (0x2dc5, .leftToRight)
+private let __bidiClass_pair_117: _T1 = (0x2dc6, .leftToRight)
+private let __bidiClass_pair_118: _T1 = (0x2dc8, .leftToRight)
+private let __bidiClass_pair_119: _T1 = (0x2dc9, .leftToRight)
+private let __bidiClass_pair_11a: _T1 = (0x2dca, .leftToRight)
+private let __bidiClass_pair_11b: _T1 = (0x2dcb, .leftToRight)
+private let __bidiClass_pair_11c: _T1 = (0x2dcc, .leftToRight)
+private let __bidiClass_pair_11d: _T1 = (0x2dcd, .leftToRight)
+private let __bidiClass_pair_11e: _T1 = (0x2dce, .leftToRight)
+private let __bidiClass_pair_11f: _T1 = (0x2dd0, .leftToRight)
+private let __bidiClass_pair_11g: _T1 = (0x2dd1, .leftToRight)
+private let __bidiClass_pair_11h: _T1 = (0x2dd2, .leftToRight)
+private let __bidiClass_pair_11i: _T1 = (0x2dd3, .leftToRight)
+private let __bidiClass_pair_11j: _T1 = (0x2dd4, .leftToRight)
+private let __bidiClass_pair_11k: _T1 = (0x2dd5, .leftToRight)
+private let __bidiClass_pair_11l: _T1 = (0x2dd6, .leftToRight)
+private let __bidiClass_pair_11m: _T1 = (0x2dd8, .leftToRight)
+private let __bidiClass_pair_11n: _T1 = (0x2dd9, .leftToRight)
+private let __bidiClass_pair_11o: _T1 = (0x2dda, .leftToRight)
+private let __bidiClass_pair_11p: _T1 = (0x2ddb, .leftToRight)
+private let __bidiClass_pair_11q: _T1 = (0x2ddc, .leftToRight)
+private let __bidiClass_pair_11r: _T1 = (0x2ddd, .leftToRight)
+private let __bidiClass_pair_11s: _T1 = (0x2dde, .leftToRight)
+private let __bidiClass_pair_11t: _T1 = (0x3000, .whiteSpace)
+private let __bidiClass_pair_11u: _T1 = (0x3001, .otherNeutral)
+private let __bidiClass_pair_11v: _T1 = (0x3002, .otherNeutral)
+private let __bidiClass_pair_11w: _T1 = (0x3003, .otherNeutral)
+private let __bidiClass_pair_11x: _T1 = (0x3004, .otherNeutral)
+private let __bidiClass_pair_11y: _T1 = (0x3005, .leftToRight)
+private let __bidiClass_pair_11z: _T1 = (0x3006, .leftToRight)
+private let __bidiClass_pair_120: _T1 = (0x3007, .leftToRight)
+private let __bidiClass_pair_121: _T1 = (0x302a, .nonspacingMark)
+private let __bidiClass_pair_122: _T1 = (0x302b, .nonspacingMark)
+private let __bidiClass_pair_123: _T1 = (0x302c, .nonspacingMark)
+private let __bidiClass_pair_124: _T1 = (0x302d, .nonspacingMark)
+private let __bidiClass_pair_125: _T1 = (0x302e, .leftToRight)
+private let __bidiClass_pair_126: _T1 = (0x302f, .leftToRight)
+private let __bidiClass_pair_127: _T1 = (0x3030, .otherNeutral)
+private let __bidiClass_pair_128: _T1 = (0x3031, .leftToRight)
+private let __bidiClass_pair_129: _T1 = (0x3032, .leftToRight)
+private let __bidiClass_pair_12a: _T1 = (0x3033, .leftToRight)
+private let __bidiClass_pair_12b: _T1 = (0x3034, .leftToRight)
+private let __bidiClass_pair_12c: _T1 = (0x3035, .leftToRight)
+private let __bidiClass_pair_12d: _T1 = (0x3036, .otherNeutral)
+private let __bidiClass_pair_12e: _T1 = (0x3037, .otherNeutral)
+private let __bidiClass_pair_12f: _T1 = (0x3038, .leftToRight)
+private let __bidiClass_pair_12g: _T1 = (0x3039, .leftToRight)
+private let __bidiClass_pair_12h: _T1 = (0x303a, .leftToRight)
+private let __bidiClass_pair_12i: _T1 = (0x303b, .leftToRight)
+private let __bidiClass_pair_12j: _T1 = (0x303c, .leftToRight)
+private let __bidiClass_pair_12k: _T1 = (0x303d, .otherNeutral)
+private let __bidiClass_pair_12l: _T1 = (0x303e, .otherNeutral)
+private let __bidiClass_pair_12m: _T1 = (0x303f, .otherNeutral)
+private let __bidiClass_pair_12n: _T1 = (0x3099, .nonspacingMark)
+private let __bidiClass_pair_12o: _T1 = (0x309a, .nonspacingMark)
+private let __bidiClass_pair_12p: _T1 = (0x309b, .otherNeutral)
+private let __bidiClass_pair_12q: _T1 = (0x309c, .otherNeutral)
+private let __bidiClass_pair_12r: _T1 = (0x309d, .leftToRight)
+private let __bidiClass_pair_12s: _T1 = (0x309e, .leftToRight)
+private let __bidiClass_pair_12t: _T1 = (0x309f, .leftToRight)
+private let __bidiClass_pair_12u: _T1 = (0x30a0, .otherNeutral)
+private let __bidiClass_pair_12v: _T1 = (0x30fb, .otherNeutral)
+private let __bidiClass_pair_12w: _T1 = (0x30fc, .leftToRight)
+private let __bidiClass_pair_12x: _T1 = (0x30fd, .leftToRight)
+private let __bidiClass_pair_12y: _T1 = (0x30fe, .leftToRight)
+private let __bidiClass_pair_12z: _T1 = (0x30ff, .leftToRight)
+private let __bidiClass_pair_130: _T1 = (0x321d, .otherNeutral)
+private let __bidiClass_pair_131: _T1 = (0x321e, .otherNeutral)
+private let __bidiClass_pair_132: _T1 = (0x327c, .otherNeutral)
+private let __bidiClass_pair_133: _T1 = (0x327d, .otherNeutral)
+private let __bidiClass_pair_134: _T1 = (0x327e, .otherNeutral)
+private let __bidiClass_pair_135: _T1 = (0x32cc, .otherNeutral)
+private let __bidiClass_pair_136: _T1 = (0x32cd, .otherNeutral)
+private let __bidiClass_pair_137: _T1 = (0x32ce, .otherNeutral)
+private let __bidiClass_pair_138: _T1 = (0x32cf, .otherNeutral)
+private let __bidiClass_pair_139: _T1 = (0x3377, .otherNeutral)
+private let __bidiClass_pair_13a: _T1 = (0x3378, .otherNeutral)
+private let __bidiClass_pair_13b: _T1 = (0x3379, .otherNeutral)
+private let __bidiClass_pair_13c: _T1 = (0x337a, .otherNeutral)
+private let __bidiClass_pair_13d: _T1 = (0x33de, .otherNeutral)
+private let __bidiClass_pair_13e: _T1 = (0x33df, .otherNeutral)
+private let __bidiClass_pair_13f: _T1 = (0x33ff, .otherNeutral)
+private let __bidiClass_pair_13g: _T1 = (0xa60d, .otherNeutral)
+private let __bidiClass_pair_13h: _T1 = (0xa60e, .otherNeutral)
+private let __bidiClass_pair_13i: _T1 = (0xa60f, .otherNeutral)
+private let __bidiClass_pair_13j: _T1 = (0xa66f, .nonspacingMark)
+private let __bidiClass_pair_13k: _T1 = (0xa670, .nonspacingMark)
+private let __bidiClass_pair_13l: _T1 = (0xa671, .nonspacingMark)
+private let __bidiClass_pair_13m: _T1 = (0xa672, .nonspacingMark)
+private let __bidiClass_pair_13n: _T1 = (0xa673, .otherNeutral)
+private let __bidiClass_pair_13o: _T1 = (0xa67e, .otherNeutral)
+private let __bidiClass_pair_13p: _T1 = (0xa67f, .otherNeutral)
+private let __bidiClass_pair_13q: _T1 = (0xa69e, .nonspacingMark)
+private let __bidiClass_pair_13r: _T1 = (0xa69f, .nonspacingMark)
+private let __bidiClass_pair_13s: _T1 = (0xa6f0, .nonspacingMark)
+private let __bidiClass_pair_13t: _T1 = (0xa6f1, .nonspacingMark)
+private let __bidiClass_pair_13u: _T1 = (0xa6f2, .leftToRight)
+private let __bidiClass_pair_13v: _T1 = (0xa6f3, .leftToRight)
+private let __bidiClass_pair_13w: _T1 = (0xa6f4, .leftToRight)
+private let __bidiClass_pair_13x: _T1 = (0xa6f5, .leftToRight)
+private let __bidiClass_pair_13y: _T1 = (0xa6f6, .leftToRight)
+private let __bidiClass_pair_13z: _T1 = (0xa6f7, .leftToRight)
+private let __bidiClass_pair_140: _T1 = (0xa788, .otherNeutral)
+private let __bidiClass_pair_141: _T1 = (0xa7c2, .leftToRight)
+private let __bidiClass_pair_142: _T1 = (0xa7c3, .leftToRight)
+private let __bidiClass_pair_143: _T1 = (0xa7c4, .leftToRight)
+private let __bidiClass_pair_144: _T1 = (0xa7c5, .leftToRight)
+private let __bidiClass_pair_145: _T1 = (0xa7c6, .leftToRight)
+private let __bidiClass_pair_146: _T1 = (0xa802, .nonspacingMark)
+private let __bidiClass_pair_147: _T1 = (0xa803, .leftToRight)
+private let __bidiClass_pair_148: _T1 = (0xa804, .leftToRight)
+private let __bidiClass_pair_149: _T1 = (0xa805, .leftToRight)
+private let __bidiClass_pair_14a: _T1 = (0xa806, .nonspacingMark)
+private let __bidiClass_pair_14b: _T1 = (0xa807, .leftToRight)
+private let __bidiClass_pair_14c: _T1 = (0xa808, .leftToRight)
+private let __bidiClass_pair_14d: _T1 = (0xa809, .leftToRight)
+private let __bidiClass_pair_14e: _T1 = (0xa80a, .leftToRight)
+private let __bidiClass_pair_14f: _T1 = (0xa80b, .nonspacingMark)
+private let __bidiClass_pair_14g: _T1 = (0xa825, .nonspacingMark)
+private let __bidiClass_pair_14h: _T1 = (0xa826, .nonspacingMark)
+private let __bidiClass_pair_14i: _T1 = (0xa827, .leftToRight)
+private let __bidiClass_pair_14j: _T1 = (0xa828, .otherNeutral)
+private let __bidiClass_pair_14k: _T1 = (0xa829, .otherNeutral)
+private let __bidiClass_pair_14l: _T1 = (0xa82a, .otherNeutral)
+private let __bidiClass_pair_14m: _T1 = (0xa82b, .otherNeutral)
+private let __bidiClass_pair_14n: _T1 = (0xa830, .leftToRight)
+private let __bidiClass_pair_14o: _T1 = (0xa831, .leftToRight)
+private let __bidiClass_pair_14p: _T1 = (0xa832, .leftToRight)
+private let __bidiClass_pair_14q: _T1 = (0xa833, .leftToRight)
+private let __bidiClass_pair_14r: _T1 = (0xa834, .leftToRight)
+private let __bidiClass_pair_14s: _T1 = (0xa835, .leftToRight)
+private let __bidiClass_pair_14t: _T1 = (0xa836, .leftToRight)
+private let __bidiClass_pair_14u: _T1 = (0xa837, .leftToRight)
+private let __bidiClass_pair_14v: _T1 = (0xa838, .europeanTerminator)
+private let __bidiClass_pair_14w: _T1 = (0xa839, .europeanTerminator)
+private let __bidiClass_pair_14x: _T1 = (0xa874, .otherNeutral)
+private let __bidiClass_pair_14y: _T1 = (0xa875, .otherNeutral)
+private let __bidiClass_pair_14z: _T1 = (0xa876, .otherNeutral)
+private let __bidiClass_pair_150: _T1 = (0xa877, .otherNeutral)
+private let __bidiClass_pair_151: _T1 = (0xa8c4, .nonspacingMark)
+private let __bidiClass_pair_152: _T1 = (0xa8c5, .nonspacingMark)
+private let __bidiClass_pair_153: _T1 = (0xa8ff, .nonspacingMark)
+private let __bidiClass_pair_154: _T1 = (0xa926, .nonspacingMark)
+private let __bidiClass_pair_155: _T1 = (0xa927, .nonspacingMark)
+private let __bidiClass_pair_156: _T1 = (0xa928, .nonspacingMark)
+private let __bidiClass_pair_157: _T1 = (0xa929, .nonspacingMark)
+private let __bidiClass_pair_158: _T1 = (0xa92a, .nonspacingMark)
+private let __bidiClass_pair_159: _T1 = (0xa92b, .nonspacingMark)
+private let __bidiClass_pair_15a: _T1 = (0xa92c, .nonspacingMark)
+private let __bidiClass_pair_15b: _T1 = (0xa92d, .nonspacingMark)
+private let __bidiClass_pair_15c: _T1 = (0xa952, .leftToRight)
+private let __bidiClass_pair_15d: _T1 = (0xa953, .leftToRight)
+private let __bidiClass_pair_15e: _T1 = (0xa980, .nonspacingMark)
+private let __bidiClass_pair_15f: _T1 = (0xa981, .nonspacingMark)
+private let __bidiClass_pair_15g: _T1 = (0xa982, .nonspacingMark)
+private let __bidiClass_pair_15h: _T1 = (0xa9b3, .nonspacingMark)
+private let __bidiClass_pair_15i: _T1 = (0xa9b4, .leftToRight)
+private let __bidiClass_pair_15j: _T1 = (0xa9b5, .leftToRight)
+private let __bidiClass_pair_15k: _T1 = (0xa9b6, .nonspacingMark)
+private let __bidiClass_pair_15l: _T1 = (0xa9b7, .nonspacingMark)
+private let __bidiClass_pair_15m: _T1 = (0xa9b8, .nonspacingMark)
+private let __bidiClass_pair_15n: _T1 = (0xa9b9, .nonspacingMark)
+private let __bidiClass_pair_15o: _T1 = (0xa9ba, .leftToRight)
+private let __bidiClass_pair_15p: _T1 = (0xa9bb, .leftToRight)
+private let __bidiClass_pair_15q: _T1 = (0xa9bc, .nonspacingMark)
+private let __bidiClass_pair_15r: _T1 = (0xa9bd, .nonspacingMark)
+private let __bidiClass_pair_15s: _T1 = (0xa9de, .leftToRight)
+private let __bidiClass_pair_15t: _T1 = (0xa9df, .leftToRight)
+private let __bidiClass_pair_15u: _T1 = (0xa9e0, .leftToRight)
+private let __bidiClass_pair_15v: _T1 = (0xa9e1, .leftToRight)
+private let __bidiClass_pair_15w: _T1 = (0xa9e2, .leftToRight)
+private let __bidiClass_pair_15x: _T1 = (0xa9e3, .leftToRight)
+private let __bidiClass_pair_15y: _T1 = (0xa9e4, .leftToRight)
+private let __bidiClass_pair_15z: _T1 = (0xa9e5, .nonspacingMark)
+private let __bidiClass_pair_160: _T1 = (0xaa29, .nonspacingMark)
+private let __bidiClass_pair_161: _T1 = (0xaa2a, .nonspacingMark)
+private let __bidiClass_pair_162: _T1 = (0xaa2b, .nonspacingMark)
+private let __bidiClass_pair_163: _T1 = (0xaa2c, .nonspacingMark)
+private let __bidiClass_pair_164: _T1 = (0xaa2d, .nonspacingMark)
+private let __bidiClass_pair_165: _T1 = (0xaa2e, .nonspacingMark)
+private let __bidiClass_pair_166: _T1 = (0xaa2f, .leftToRight)
+private let __bidiClass_pair_167: _T1 = (0xaa30, .leftToRight)
+private let __bidiClass_pair_168: _T1 = (0xaa31, .nonspacingMark)
+private let __bidiClass_pair_169: _T1 = (0xaa32, .nonspacingMark)
+private let __bidiClass_pair_16a: _T1 = (0xaa33, .leftToRight)
+private let __bidiClass_pair_16b: _T1 = (0xaa34, .leftToRight)
+private let __bidiClass_pair_16c: _T1 = (0xaa35, .nonspacingMark)
+private let __bidiClass_pair_16d: _T1 = (0xaa36, .nonspacingMark)
+private let __bidiClass_pair_16e: _T1 = (0xaa40, .leftToRight)
+private let __bidiClass_pair_16f: _T1 = (0xaa41, .leftToRight)
+private let __bidiClass_pair_16g: _T1 = (0xaa42, .leftToRight)
+private let __bidiClass_pair_16h: _T1 = (0xaa43, .nonspacingMark)
+private let __bidiClass_pair_16i: _T1 = (0xaa44, .leftToRight)
+private let __bidiClass_pair_16j: _T1 = (0xaa45, .leftToRight)
+private let __bidiClass_pair_16k: _T1 = (0xaa46, .leftToRight)
+private let __bidiClass_pair_16l: _T1 = (0xaa47, .leftToRight)
+private let __bidiClass_pair_16m: _T1 = (0xaa48, .leftToRight)
+private let __bidiClass_pair_16n: _T1 = (0xaa49, .leftToRight)
+private let __bidiClass_pair_16o: _T1 = (0xaa4a, .leftToRight)
+private let __bidiClass_pair_16p: _T1 = (0xaa4b, .leftToRight)
+private let __bidiClass_pair_16q: _T1 = (0xaa4c, .nonspacingMark)
+private let __bidiClass_pair_16r: _T1 = (0xaa4d, .leftToRight)
+private let __bidiClass_pair_16s: _T1 = (0xaa7c, .nonspacingMark)
+private let __bidiClass_pair_16t: _T1 = (0xaab0, .nonspacingMark)
+private let __bidiClass_pair_16u: _T1 = (0xaab1, .leftToRight)
+private let __bidiClass_pair_16v: _T1 = (0xaab2, .nonspacingMark)
+private let __bidiClass_pair_16w: _T1 = (0xaab3, .nonspacingMark)
+private let __bidiClass_pair_16x: _T1 = (0xaab4, .nonspacingMark)
+private let __bidiClass_pair_16y: _T1 = (0xaab5, .leftToRight)
+private let __bidiClass_pair_16z: _T1 = (0xaab6, .leftToRight)
+private let __bidiClass_pair_170: _T1 = (0xaab7, .nonspacingMark)
+private let __bidiClass_pair_171: _T1 = (0xaab8, .nonspacingMark)
+private let __bidiClass_pair_172: _T1 = (0xaab9, .leftToRight)
+private let __bidiClass_pair_173: _T1 = (0xaaba, .leftToRight)
+private let __bidiClass_pair_174: _T1 = (0xaabb, .leftToRight)
+private let __bidiClass_pair_175: _T1 = (0xaabc, .leftToRight)
+private let __bidiClass_pair_176: _T1 = (0xaabd, .leftToRight)
+private let __bidiClass_pair_177: _T1 = (0xaabe, .nonspacingMark)
+private let __bidiClass_pair_178: _T1 = (0xaabf, .nonspacingMark)
+private let __bidiClass_pair_179: _T1 = (0xaac0, .leftToRight)
+private let __bidiClass_pair_17a: _T1 = (0xaac1, .nonspacingMark)
+private let __bidiClass_pair_17b: _T1 = (0xaac2, .leftToRight)
+private let __bidiClass_pair_17c: _T1 = (0xaaec, .nonspacingMark)
+private let __bidiClass_pair_17d: _T1 = (0xaaed, .nonspacingMark)
+private let __bidiClass_pair_17e: _T1 = (0xaaee, .leftToRight)
+private let __bidiClass_pair_17f: _T1 = (0xaaef, .leftToRight)
+private let __bidiClass_pair_17g: _T1 = (0xaaf0, .leftToRight)
+private let __bidiClass_pair_17h: _T1 = (0xaaf1, .leftToRight)
+private let __bidiClass_pair_17i: _T1 = (0xaaf2, .leftToRight)
+private let __bidiClass_pair_17j: _T1 = (0xaaf3, .leftToRight)
+private let __bidiClass_pair_17k: _T1 = (0xaaf4, .leftToRight)
+private let __bidiClass_pair_17l: _T1 = (0xaaf5, .leftToRight)
+private let __bidiClass_pair_17m: _T1 = (0xaaf6, .nonspacingMark)
+private let __bidiClass_pair_17n: _T1 = (0xab01, .leftToRight)
+private let __bidiClass_pair_17o: _T1 = (0xab02, .leftToRight)
+private let __bidiClass_pair_17p: _T1 = (0xab03, .leftToRight)
+private let __bidiClass_pair_17q: _T1 = (0xab04, .leftToRight)
+private let __bidiClass_pair_17r: _T1 = (0xab05, .leftToRight)
+private let __bidiClass_pair_17s: _T1 = (0xab06, .leftToRight)
+private let __bidiClass_pair_17t: _T1 = (0xab09, .leftToRight)
+private let __bidiClass_pair_17u: _T1 = (0xab0a, .leftToRight)
+private let __bidiClass_pair_17v: _T1 = (0xab0b, .leftToRight)
+private let __bidiClass_pair_17w: _T1 = (0xab0c, .leftToRight)
+private let __bidiClass_pair_17x: _T1 = (0xab0d, .leftToRight)
+private let __bidiClass_pair_17y: _T1 = (0xab0e, .leftToRight)
+private let __bidiClass_pair_17z: _T1 = (0xab11, .leftToRight)
+private let __bidiClass_pair_180: _T1 = (0xab12, .leftToRight)
+private let __bidiClass_pair_181: _T1 = (0xab13, .leftToRight)
+private let __bidiClass_pair_182: _T1 = (0xab14, .leftToRight)
+private let __bidiClass_pair_183: _T1 = (0xab15, .leftToRight)
+private let __bidiClass_pair_184: _T1 = (0xab16, .leftToRight)
+private let __bidiClass_pair_185: _T1 = (0xab20, .leftToRight)
+private let __bidiClass_pair_186: _T1 = (0xab21, .leftToRight)
+private let __bidiClass_pair_187: _T1 = (0xab22, .leftToRight)
+private let __bidiClass_pair_188: _T1 = (0xab23, .leftToRight)
+private let __bidiClass_pair_189: _T1 = (0xab24, .leftToRight)
+private let __bidiClass_pair_18a: _T1 = (0xab25, .leftToRight)
+private let __bidiClass_pair_18b: _T1 = (0xab26, .leftToRight)
+private let __bidiClass_pair_18c: _T1 = (0xab28, .leftToRight)
+private let __bidiClass_pair_18d: _T1 = (0xab29, .leftToRight)
+private let __bidiClass_pair_18e: _T1 = (0xab2a, .leftToRight)
+private let __bidiClass_pair_18f: _T1 = (0xab2b, .leftToRight)
+private let __bidiClass_pair_18g: _T1 = (0xab2c, .leftToRight)
+private let __bidiClass_pair_18h: _T1 = (0xab2d, .leftToRight)
+private let __bidiClass_pair_18i: _T1 = (0xab2e, .leftToRight)
+private let __bidiClass_pair_18j: _T1 = (0xabe5, .nonspacingMark)
+private let __bidiClass_pair_18k: _T1 = (0xabe6, .leftToRight)
+private let __bidiClass_pair_18l: _T1 = (0xabe7, .leftToRight)
+private let __bidiClass_pair_18m: _T1 = (0xabe8, .nonspacingMark)
+private let __bidiClass_pair_18n: _T1 = (0xabe9, .leftToRight)
+private let __bidiClass_pair_18o: _T1 = (0xabea, .leftToRight)
+private let __bidiClass_pair_18p: _T1 = (0xabeb, .leftToRight)
+private let __bidiClass_pair_18q: _T1 = (0xabec, .leftToRight)
+private let __bidiClass_pair_18r: _T1 = (0xabed, .nonspacingMark)
+private let __bidiClass_pair_18s: _T1 = (0xfb00, .leftToRight)
+private let __bidiClass_pair_18t: _T1 = (0xfb01, .leftToRight)
+private let __bidiClass_pair_18u: _T1 = (0xfb02, .leftToRight)
+private let __bidiClass_pair_18v: _T1 = (0xfb03, .leftToRight)
+private let __bidiClass_pair_18w: _T1 = (0xfb04, .leftToRight)
+private let __bidiClass_pair_18x: _T1 = (0xfb05, .leftToRight)
+private let __bidiClass_pair_18y: _T1 = (0xfb06, .leftToRight)
+private let __bidiClass_pair_18z: _T1 = (0xfb13, .leftToRight)
+private let __bidiClass_pair_190: _T1 = (0xfb14, .leftToRight)
+private let __bidiClass_pair_191: _T1 = (0xfb15, .leftToRight)
+private let __bidiClass_pair_192: _T1 = (0xfb16, .leftToRight)
+private let __bidiClass_pair_193: _T1 = (0xfb17, .leftToRight)
+private let __bidiClass_pair_194: _T1 = (0xfb1d, .rightToLeft)
+private let __bidiClass_pair_195: _T1 = (0xfb1e, .nonspacingMark)
+private let __bidiClass_pair_196: _T1 = (0xfb29, .europeanSeparator)
+private let __bidiClass_pair_197: _T1 = (0xfd3e, .otherNeutral)
+private let __bidiClass_pair_198: _T1 = (0xfd3f, .otherNeutral)
+private let __bidiClass_pair_199: _T1 = (0xfdfd, .otherNeutral)
+private let __bidiClass_pair_19a: _T1 = (0xfdfe, .arabicLetter)
+private let __bidiClass_pair_19b: _T1 = (0xfdff, .arabicLetter)
+private let __bidiClass_pair_19c: _T1 = (0xfe50, .commonSeparator)
+private let __bidiClass_pair_19d: _T1 = (0xfe51, .otherNeutral)
+private let __bidiClass_pair_19e: _T1 = (0xfe52, .commonSeparator)
+private let __bidiClass_pair_19f: _T1 = (0xfe54, .otherNeutral)
+private let __bidiClass_pair_19g: _T1 = (0xfe55, .commonSeparator)
+private let __bidiClass_pair_19h: _T1 = (0xfe5f, .europeanTerminator)
+private let __bidiClass_pair_19i: _T1 = (0xfe60, .otherNeutral)
+private let __bidiClass_pair_19j: _T1 = (0xfe61, .otherNeutral)
+private let __bidiClass_pair_19k: _T1 = (0xfe62, .europeanSeparator)
+private let __bidiClass_pair_19l: _T1 = (0xfe63, .europeanSeparator)
+private let __bidiClass_pair_19m: _T1 = (0xfe64, .otherNeutral)
+private let __bidiClass_pair_19n: _T1 = (0xfe65, .otherNeutral)
+private let __bidiClass_pair_19o: _T1 = (0xfe66, .otherNeutral)
+private let __bidiClass_pair_19p: _T1 = (0xfe68, .otherNeutral)
+private let __bidiClass_pair_19q: _T1 = (0xfe69, .europeanTerminator)
+private let __bidiClass_pair_19r: _T1 = (0xfe6a, .europeanTerminator)
+private let __bidiClass_pair_19s: _T1 = (0xfe6b, .otherNeutral)
+private let __bidiClass_pair_19t: _T1 = (0xfeff, .boundaryNeutral)
+private let __bidiClass_pair_19u: _T1 = (0xff01, .otherNeutral)
+private let __bidiClass_pair_19v: _T1 = (0xff02, .otherNeutral)
+private let __bidiClass_pair_19w: _T1 = (0xff03, .europeanTerminator)
+private let __bidiClass_pair_19x: _T1 = (0xff04, .europeanTerminator)
+private let __bidiClass_pair_19y: _T1 = (0xff05, .europeanTerminator)
+private let __bidiClass_pair_19z: _T1 = (0xff06, .otherNeutral)
+private let __bidiClass_pair_1a0: _T1 = (0xff07, .otherNeutral)
+private let __bidiClass_pair_1a1: _T1 = (0xff08, .otherNeutral)
+private let __bidiClass_pair_1a2: _T1 = (0xff09, .otherNeutral)
+private let __bidiClass_pair_1a3: _T1 = (0xff0a, .otherNeutral)
+private let __bidiClass_pair_1a4: _T1 = (0xff0b, .europeanSeparator)
+private let __bidiClass_pair_1a5: _T1 = (0xff0c, .commonSeparator)
+private let __bidiClass_pair_1a6: _T1 = (0xff0d, .europeanSeparator)
+private let __bidiClass_pair_1a7: _T1 = (0xff0e, .commonSeparator)
+private let __bidiClass_pair_1a8: _T1 = (0xff0f, .commonSeparator)
+private let __bidiClass_pair_1a9: _T1 = (0xff1a, .commonSeparator)
+private let __bidiClass_pair_1aa: _T1 = (0xff1b, .otherNeutral)
+private let __bidiClass_pair_1ab: _T1 = (0xff1c, .otherNeutral)
+private let __bidiClass_pair_1ac: _T1 = (0xff1d, .otherNeutral)
+private let __bidiClass_pair_1ad: _T1 = (0xff1e, .otherNeutral)
+private let __bidiClass_pair_1ae: _T1 = (0xff1f, .otherNeutral)
+private let __bidiClass_pair_1af: _T1 = (0xff20, .otherNeutral)
+private let __bidiClass_pair_1ag: _T1 = (0xff3b, .otherNeutral)
+private let __bidiClass_pair_1ah: _T1 = (0xff3c, .otherNeutral)
+private let __bidiClass_pair_1ai: _T1 = (0xff3d, .otherNeutral)
+private let __bidiClass_pair_1aj: _T1 = (0xff3e, .otherNeutral)
+private let __bidiClass_pair_1ak: _T1 = (0xff3f, .otherNeutral)
+private let __bidiClass_pair_1al: _T1 = (0xff40, .otherNeutral)
+private let __bidiClass_pair_1am: _T1 = (0xffc2, .leftToRight)
+private let __bidiClass_pair_1an: _T1 = (0xffc3, .leftToRight)
+private let __bidiClass_pair_1ao: _T1 = (0xffc4, .leftToRight)
+private let __bidiClass_pair_1ap: _T1 = (0xffc5, .leftToRight)
+private let __bidiClass_pair_1aq: _T1 = (0xffc6, .leftToRight)
+private let __bidiClass_pair_1ar: _T1 = (0xffc7, .leftToRight)
+private let __bidiClass_pair_1as: _T1 = (0xffca, .leftToRight)
+private let __bidiClass_pair_1at: _T1 = (0xffcb, .leftToRight)
+private let __bidiClass_pair_1au: _T1 = (0xffcc, .leftToRight)
+private let __bidiClass_pair_1av: _T1 = (0xffcd, .leftToRight)
+private let __bidiClass_pair_1aw: _T1 = (0xffce, .leftToRight)
+private let __bidiClass_pair_1ax: _T1 = (0xffcf, .leftToRight)
+private let __bidiClass_pair_1ay: _T1 = (0xffd2, .leftToRight)
+private let __bidiClass_pair_1az: _T1 = (0xffd3, .leftToRight)
+private let __bidiClass_pair_1b0: _T1 = (0xffd4, .leftToRight)
+private let __bidiClass_pair_1b1: _T1 = (0xffd5, .leftToRight)
+private let __bidiClass_pair_1b2: _T1 = (0xffd6, .leftToRight)
+private let __bidiClass_pair_1b3: _T1 = (0xffd7, .leftToRight)
+private let __bidiClass_pair_1b4: _T1 = (0xffda, .leftToRight)
+private let __bidiClass_pair_1b5: _T1 = (0xffdb, .leftToRight)
+private let __bidiClass_pair_1b6: _T1 = (0xffdc, .leftToRight)
+private let __bidiClass_pair_1b7: _T1 = (0xffe0, .europeanTerminator)
+private let __bidiClass_pair_1b8: _T1 = (0xffe1, .europeanTerminator)
+private let __bidiClass_pair_1b9: _T1 = (0xffe2, .otherNeutral)
+private let __bidiClass_pair_1ba: _T1 = (0xffe3, .otherNeutral)
+private let __bidiClass_pair_1bb: _T1 = (0xffe4, .otherNeutral)
+private let __bidiClass_pair_1bc: _T1 = (0xffe5, .europeanTerminator)
+private let __bidiClass_pair_1bd: _T1 = (0xffe6, .europeanTerminator)
+private let __bidiClass_pair_1be: _T1 = (0xffe8, .otherNeutral)
+private let __bidiClass_pair_1bf: _T1 = (0xffe9, .otherNeutral)
+private let __bidiClass_pair_1bg: _T1 = (0xffea, .otherNeutral)
+private let __bidiClass_pair_1bh: _T1 = (0xffeb, .otherNeutral)
+private let __bidiClass_pair_1bi: _T1 = (0xffec, .otherNeutral)
+private let __bidiClass_pair_1bj: _T1 = (0xffed, .otherNeutral)
+private let __bidiClass_pair_1bk: _T1 = (0xffee, .otherNeutral)
+private let __bidiClass_pair_1bl: _T1 = (0xfff9, .otherNeutral)
+private let __bidiClass_pair_1bm: _T1 = (0xfffa, .otherNeutral)
+private let __bidiClass_pair_1bn: _T1 = (0xfffb, .otherNeutral)
+private let __bidiClass_pair_1bo: _T1 = (0xfffc, .otherNeutral)
+private let __bidiClass_pair_1bp: _T1 = (0xfffd, .otherNeutral)
+private let __bidiClass_pair_1bq: _T1 = (0xfffe, .boundaryNeutral)
+private let __bidiClass_pair_1br: _T1 = (0xffff, .boundaryNeutral)
+private let __bidiClass_pair_1bs: _T1 = (0x1003c, .leftToRight)
+private let __bidiClass_pair_1bt: _T1 = (0x1003d, .leftToRight)
+private let __bidiClass_pair_1bu: _T1 = (0x10100, .leftToRight)
+private let __bidiClass_pair_1bv: _T1 = (0x10101, .otherNeutral)
+private let __bidiClass_pair_1bw: _T1 = (0x10102, .leftToRight)
+private let __bidiClass_pair_1bx: _T1 = (0x1018d, .leftToRight)
+private let __bidiClass_pair_1by: _T1 = (0x1018e, .leftToRight)
+private let __bidiClass_pair_1bz: _T1 = (0x101a0, .otherNeutral)
+private let __bidiClass_pair_1c0: _T1 = (0x101fd, .nonspacingMark)
+private let __bidiClass_pair_1c1: _T1 = (0x102e0, .nonspacingMark)
+private let __bidiClass_pair_1c2: _T1 = (0x10376, .nonspacingMark)
+private let __bidiClass_pair_1c3: _T1 = (0x10377, .nonspacingMark)
+private let __bidiClass_pair_1c4: _T1 = (0x10378, .nonspacingMark)
+private let __bidiClass_pair_1c5: _T1 = (0x10379, .nonspacingMark)
+private let __bidiClass_pair_1c6: _T1 = (0x1037a, .nonspacingMark)
+private let __bidiClass_pair_1c7: _T1 = (0x1056f, .leftToRight)
+private let __bidiClass_pair_1c8: _T1 = (0x10760, .leftToRight)
+private let __bidiClass_pair_1c9: _T1 = (0x10761, .leftToRight)
+private let __bidiClass_pair_1ca: _T1 = (0x10762, .leftToRight)
+private let __bidiClass_pair_1cb: _T1 = (0x10763, .leftToRight)
+private let __bidiClass_pair_1cc: _T1 = (0x10764, .leftToRight)
+private let __bidiClass_pair_1cd: _T1 = (0x10765, .leftToRight)
+private let __bidiClass_pair_1ce: _T1 = (0x10766, .leftToRight)
+private let __bidiClass_pair_1cf: _T1 = (0x10767, .leftToRight)
+private let __bidiClass_pair_1cg: _T1 = (0x1091f, .otherNeutral)
+private let __bidiClass_pair_1ch: _T1 = (0x10a01, .nonspacingMark)
+private let __bidiClass_pair_1ci: _T1 = (0x10a02, .nonspacingMark)
+private let __bidiClass_pair_1cj: _T1 = (0x10a03, .nonspacingMark)
+private let __bidiClass_pair_1ck: _T1 = (0x10a04, .rightToLeft)
+private let __bidiClass_pair_1cl: _T1 = (0x10a05, .nonspacingMark)
+private let __bidiClass_pair_1cm: _T1 = (0x10a06, .nonspacingMark)
+private let __bidiClass_pair_1cn: _T1 = (0x10a07, .rightToLeft)
+private let __bidiClass_pair_1co: _T1 = (0x10a08, .rightToLeft)
+private let __bidiClass_pair_1cp: _T1 = (0x10a09, .rightToLeft)
+private let __bidiClass_pair_1cq: _T1 = (0x10a0a, .rightToLeft)
+private let __bidiClass_pair_1cr: _T1 = (0x10a0b, .rightToLeft)
+private let __bidiClass_pair_1cs: _T1 = (0x10a0c, .nonspacingMark)
+private let __bidiClass_pair_1ct: _T1 = (0x10a0d, .nonspacingMark)
+private let __bidiClass_pair_1cu: _T1 = (0x10a0e, .nonspacingMark)
+private let __bidiClass_pair_1cv: _T1 = (0x10a0f, .nonspacingMark)
+private let __bidiClass_pair_1cw: _T1 = (0x10a38, .nonspacingMark)
+private let __bidiClass_pair_1cx: _T1 = (0x10a39, .nonspacingMark)
+private let __bidiClass_pair_1cy: _T1 = (0x10a3a, .nonspacingMark)
+private let __bidiClass_pair_1cz: _T1 = (0x10a3b, .rightToLeft)
+private let __bidiClass_pair_1d0: _T1 = (0x10a3c, .rightToLeft)
+private let __bidiClass_pair_1d1: _T1 = (0x10a3d, .rightToLeft)
+private let __bidiClass_pair_1d2: _T1 = (0x10a3e, .rightToLeft)
+private let __bidiClass_pair_1d3: _T1 = (0x10a3f, .nonspacingMark)
+private let __bidiClass_pair_1d4: _T1 = (0x10ae5, .nonspacingMark)
+private let __bidiClass_pair_1d5: _T1 = (0x10ae6, .nonspacingMark)
+private let __bidiClass_pair_1d6: _T1 = (0x10b39, .otherNeutral)
+private let __bidiClass_pair_1d7: _T1 = (0x10b3a, .otherNeutral)
+private let __bidiClass_pair_1d8: _T1 = (0x10b3b, .otherNeutral)
+private let __bidiClass_pair_1d9: _T1 = (0x10b3c, .otherNeutral)
+private let __bidiClass_pair_1da: _T1 = (0x10b3d, .otherNeutral)
+private let __bidiClass_pair_1db: _T1 = (0x10b3e, .otherNeutral)
+private let __bidiClass_pair_1dc: _T1 = (0x10b3f, .otherNeutral)
+private let __bidiClass_pair_1dd: _T1 = (0x10d24, .nonspacingMark)
+private let __bidiClass_pair_1de: _T1 = (0x10d25, .nonspacingMark)
+private let __bidiClass_pair_1df: _T1 = (0x10d26, .nonspacingMark)
+private let __bidiClass_pair_1dg: _T1 = (0x10d27, .nonspacingMark)
+private let __bidiClass_pair_1dh: _T1 = (0x10d3a, .arabicLetter)
+private let __bidiClass_pair_1di: _T1 = (0x10d3b, .arabicLetter)
+private let __bidiClass_pair_1dj: _T1 = (0x10d3c, .arabicLetter)
+private let __bidiClass_pair_1dk: _T1 = (0x10d3d, .arabicLetter)
+private let __bidiClass_pair_1dl: _T1 = (0x10d3e, .arabicLetter)
+private let __bidiClass_pair_1dm: _T1 = (0x10d3f, .arabicLetter)
+private let __bidiClass_pair_1dn: _T1 = (0x11000, .leftToRight)
+private let __bidiClass_pair_1do: _T1 = (0x11001, .nonspacingMark)
+private let __bidiClass_pair_1dp: _T1 = (0x11047, .leftToRight)
+private let __bidiClass_pair_1dq: _T1 = (0x11048, .leftToRight)
+private let __bidiClass_pair_1dr: _T1 = (0x11049, .leftToRight)
+private let __bidiClass_pair_1ds: _T1 = (0x1104a, .leftToRight)
+private let __bidiClass_pair_1dt: _T1 = (0x1104b, .leftToRight)
+private let __bidiClass_pair_1du: _T1 = (0x1104c, .leftToRight)
+private let __bidiClass_pair_1dv: _T1 = (0x1104d, .leftToRight)
+private let __bidiClass_pair_1dw: _T1 = (0x1107f, .nonspacingMark)
+private let __bidiClass_pair_1dx: _T1 = (0x11080, .nonspacingMark)
+private let __bidiClass_pair_1dy: _T1 = (0x11081, .nonspacingMark)
+private let __bidiClass_pair_1dz: _T1 = (0x110b3, .nonspacingMark)
+private let __bidiClass_pair_1e0: _T1 = (0x110b4, .nonspacingMark)
+private let __bidiClass_pair_1e1: _T1 = (0x110b5, .nonspacingMark)
+private let __bidiClass_pair_1e2: _T1 = (0x110b6, .nonspacingMark)
+private let __bidiClass_pair_1e3: _T1 = (0x110b7, .leftToRight)
+private let __bidiClass_pair_1e4: _T1 = (0x110b8, .leftToRight)
+private let __bidiClass_pair_1e5: _T1 = (0x110b9, .nonspacingMark)
+private let __bidiClass_pair_1e6: _T1 = (0x110ba, .nonspacingMark)
+private let __bidiClass_pair_1e7: _T1 = (0x110bb, .leftToRight)
+private let __bidiClass_pair_1e8: _T1 = (0x110bc, .leftToRight)
+private let __bidiClass_pair_1e9: _T1 = (0x110bd, .leftToRight)
+private let __bidiClass_pair_1ea: _T1 = (0x110be, .leftToRight)
+private let __bidiClass_pair_1eb: _T1 = (0x110bf, .leftToRight)
+private let __bidiClass_pair_1ec: _T1 = (0x110c0, .leftToRight)
+private let __bidiClass_pair_1ed: _T1 = (0x110c1, .leftToRight)
+private let __bidiClass_pair_1ee: _T1 = (0x110cd, .leftToRight)
+private let __bidiClass_pair_1ef: _T1 = (0x11100, .nonspacingMark)
+private let __bidiClass_pair_1eg: _T1 = (0x11101, .nonspacingMark)
+private let __bidiClass_pair_1eh: _T1 = (0x11102, .nonspacingMark)
+private let __bidiClass_pair_1ei: _T1 = (0x11127, .nonspacingMark)
+private let __bidiClass_pair_1ej: _T1 = (0x11128, .nonspacingMark)
+private let __bidiClass_pair_1ek: _T1 = (0x11129, .nonspacingMark)
+private let __bidiClass_pair_1el: _T1 = (0x1112a, .nonspacingMark)
+private let __bidiClass_pair_1em: _T1 = (0x1112b, .nonspacingMark)
+private let __bidiClass_pair_1en: _T1 = (0x1112c, .leftToRight)
+private let __bidiClass_pair_1eo: _T1 = (0x1112d, .nonspacingMark)
+private let __bidiClass_pair_1ep: _T1 = (0x1112e, .nonspacingMark)
+private let __bidiClass_pair_1eq: _T1 = (0x1112f, .nonspacingMark)
+private let __bidiClass_pair_1er: _T1 = (0x11130, .nonspacingMark)
+private let __bidiClass_pair_1es: _T1 = (0x11131, .nonspacingMark)
+private let __bidiClass_pair_1et: _T1 = (0x11132, .nonspacingMark)
+private let __bidiClass_pair_1eu: _T1 = (0x11133, .nonspacingMark)
+private let __bidiClass_pair_1ev: _T1 = (0x11134, .nonspacingMark)
+private let __bidiClass_pair_1ew: _T1 = (0x11173, .nonspacingMark)
+private let __bidiClass_pair_1ex: _T1 = (0x11174, .leftToRight)
+private let __bidiClass_pair_1ey: _T1 = (0x11175, .leftToRight)
+private let __bidiClass_pair_1ez: _T1 = (0x11176, .leftToRight)
+private let __bidiClass_pair_1f0: _T1 = (0x11180, .nonspacingMark)
+private let __bidiClass_pair_1f1: _T1 = (0x11181, .nonspacingMark)
+private let __bidiClass_pair_1f2: _T1 = (0x111c9, .nonspacingMark)
+private let __bidiClass_pair_1f3: _T1 = (0x111ca, .nonspacingMark)
+private let __bidiClass_pair_1f4: _T1 = (0x111cb, .nonspacingMark)
+private let __bidiClass_pair_1f5: _T1 = (0x111cc, .nonspacingMark)
+private let __bidiClass_pair_1f6: _T1 = (0x111cd, .leftToRight)
+private let __bidiClass_pair_1f7: _T1 = (0x1122f, .nonspacingMark)
+private let __bidiClass_pair_1f8: _T1 = (0x11230, .nonspacingMark)
+private let __bidiClass_pair_1f9: _T1 = (0x11231, .nonspacingMark)
+private let __bidiClass_pair_1fa: _T1 = (0x11232, .leftToRight)
+private let __bidiClass_pair_1fb: _T1 = (0x11233, .leftToRight)
+private let __bidiClass_pair_1fc: _T1 = (0x11234, .nonspacingMark)
+private let __bidiClass_pair_1fd: _T1 = (0x11235, .leftToRight)
+private let __bidiClass_pair_1fe: _T1 = (0x11236, .nonspacingMark)
+private let __bidiClass_pair_1ff: _T1 = (0x11237, .nonspacingMark)
+private let __bidiClass_pair_1fg: _T1 = (0x11238, .leftToRight)
+private let __bidiClass_pair_1fh: _T1 = (0x11239, .leftToRight)
+private let __bidiClass_pair_1fi: _T1 = (0x1123a, .leftToRight)
+private let __bidiClass_pair_1fj: _T1 = (0x1123b, .leftToRight)
+private let __bidiClass_pair_1fk: _T1 = (0x1123c, .leftToRight)
+private let __bidiClass_pair_1fl: _T1 = (0x1123d, .leftToRight)
+private let __bidiClass_pair_1fm: _T1 = (0x1123e, .nonspacingMark)
+private let __bidiClass_pair_1fn: _T1 = (0x11280, .leftToRight)
+private let __bidiClass_pair_1fo: _T1 = (0x11281, .leftToRight)
+private let __bidiClass_pair_1fp: _T1 = (0x11282, .leftToRight)
+private let __bidiClass_pair_1fq: _T1 = (0x11283, .leftToRight)
+private let __bidiClass_pair_1fr: _T1 = (0x11284, .leftToRight)
+private let __bidiClass_pair_1fs: _T1 = (0x11285, .leftToRight)
+private let __bidiClass_pair_1ft: _T1 = (0x11286, .leftToRight)
+private let __bidiClass_pair_1fu: _T1 = (0x11288, .leftToRight)
+private let __bidiClass_pair_1fv: _T1 = (0x1128a, .leftToRight)
+private let __bidiClass_pair_1fw: _T1 = (0x1128b, .leftToRight)
+private let __bidiClass_pair_1fx: _T1 = (0x1128c, .leftToRight)
+private let __bidiClass_pair_1fy: _T1 = (0x1128d, .leftToRight)
+private let __bidiClass_pair_1fz: _T1 = (0x112df, .nonspacingMark)
+private let __bidiClass_pair_1g0: _T1 = (0x112e0, .leftToRight)
+private let __bidiClass_pair_1g1: _T1 = (0x112e1, .leftToRight)
+private let __bidiClass_pair_1g2: _T1 = (0x112e2, .leftToRight)
+private let __bidiClass_pair_1g3: _T1 = (0x112e3, .nonspacingMark)
+private let __bidiClass_pair_1g4: _T1 = (0x112e4, .nonspacingMark)
+private let __bidiClass_pair_1g5: _T1 = (0x112e5, .nonspacingMark)
+private let __bidiClass_pair_1g6: _T1 = (0x112e6, .nonspacingMark)
+private let __bidiClass_pair_1g7: _T1 = (0x112e7, .nonspacingMark)
+private let __bidiClass_pair_1g8: _T1 = (0x112e8, .nonspacingMark)
+private let __bidiClass_pair_1g9: _T1 = (0x112e9, .nonspacingMark)
+private let __bidiClass_pair_1ga: _T1 = (0x112ea, .nonspacingMark)
+private let __bidiClass_pair_1gb: _T1 = (0x11300, .nonspacingMark)
+private let __bidiClass_pair_1gc: _T1 = (0x11301, .nonspacingMark)
+private let __bidiClass_pair_1gd: _T1 = (0x11302, .leftToRight)
+private let __bidiClass_pair_1ge: _T1 = (0x11303, .leftToRight)
+private let __bidiClass_pair_1gf: _T1 = (0x11305, .leftToRight)
+private let __bidiClass_pair_1gg: _T1 = (0x11306, .leftToRight)
+private let __bidiClass_pair_1gh: _T1 = (0x11307, .leftToRight)
+private let __bidiClass_pair_1gi: _T1 = (0x11308, .leftToRight)
+private let __bidiClass_pair_1gj: _T1 = (0x11309, .leftToRight)
+private let __bidiClass_pair_1gk: _T1 = (0x1130a, .leftToRight)
+private let __bidiClass_pair_1gl: _T1 = (0x1130b, .leftToRight)
+private let __bidiClass_pair_1gm: _T1 = (0x1130c, .leftToRight)
+private let __bidiClass_pair_1gn: _T1 = (0x1130f, .leftToRight)
+private let __bidiClass_pair_1go: _T1 = (0x11310, .leftToRight)
+private let __bidiClass_pair_1gp: _T1 = (0x1132a, .leftToRight)
+private let __bidiClass_pair_1gq: _T1 = (0x1132b, .leftToRight)
+private let __bidiClass_pair_1gr: _T1 = (0x1132c, .leftToRight)
+private let __bidiClass_pair_1gs: _T1 = (0x1132d, .leftToRight)
+private let __bidiClass_pair_1gt: _T1 = (0x1132e, .leftToRight)
+private let __bidiClass_pair_1gu: _T1 = (0x1132f, .leftToRight)
+private let __bidiClass_pair_1gv: _T1 = (0x11330, .leftToRight)
+private let __bidiClass_pair_1gw: _T1 = (0x11332, .leftToRight)
+private let __bidiClass_pair_1gx: _T1 = (0x11333, .leftToRight)
+private let __bidiClass_pair_1gy: _T1 = (0x11335, .leftToRight)
+private let __bidiClass_pair_1gz: _T1 = (0x11336, .leftToRight)
+private let __bidiClass_pair_1h0: _T1 = (0x11337, .leftToRight)
+private let __bidiClass_pair_1h1: _T1 = (0x11338, .leftToRight)
+private let __bidiClass_pair_1h2: _T1 = (0x11339, .leftToRight)
+private let __bidiClass_pair_1h3: _T1 = (0x1133b, .nonspacingMark)
+private let __bidiClass_pair_1h4: _T1 = (0x1133c, .nonspacingMark)
+private let __bidiClass_pair_1h5: _T1 = (0x1133d, .leftToRight)
+private let __bidiClass_pair_1h6: _T1 = (0x1133e, .leftToRight)
+private let __bidiClass_pair_1h7: _T1 = (0x1133f, .leftToRight)
+private let __bidiClass_pair_1h8: _T1 = (0x11340, .nonspacingMark)
+private let __bidiClass_pair_1h9: _T1 = (0x11341, .leftToRight)
+private let __bidiClass_pair_1ha: _T1 = (0x11342, .leftToRight)
+private let __bidiClass_pair_1hb: _T1 = (0x11343, .leftToRight)
+private let __bidiClass_pair_1hc: _T1 = (0x11344, .leftToRight)
+private let __bidiClass_pair_1hd: _T1 = (0x11347, .leftToRight)
+private let __bidiClass_pair_1he: _T1 = (0x11348, .leftToRight)
+private let __bidiClass_pair_1hf: _T1 = (0x1134b, .leftToRight)
+private let __bidiClass_pair_1hg: _T1 = (0x1134c, .leftToRight)
+private let __bidiClass_pair_1hh: _T1 = (0x1134d, .leftToRight)
+private let __bidiClass_pair_1hi: _T1 = (0x11350, .leftToRight)
+private let __bidiClass_pair_1hj: _T1 = (0x11357, .leftToRight)
+private let __bidiClass_pair_1hk: _T1 = (0x1135d, .leftToRight)
+private let __bidiClass_pair_1hl: _T1 = (0x1135e, .leftToRight)
+private let __bidiClass_pair_1hm: _T1 = (0x1135f, .leftToRight)
+private let __bidiClass_pair_1hn: _T1 = (0x11360, .leftToRight)
+private let __bidiClass_pair_1ho: _T1 = (0x11361, .leftToRight)
+private let __bidiClass_pair_1hp: _T1 = (0x11362, .leftToRight)
+private let __bidiClass_pair_1hq: _T1 = (0x11363, .leftToRight)
+private let __bidiClass_pair_1hr: _T1 = (0x11366, .nonspacingMark)
+private let __bidiClass_pair_1hs: _T1 = (0x11367, .nonspacingMark)
+private let __bidiClass_pair_1ht: _T1 = (0x11368, .nonspacingMark)
+private let __bidiClass_pair_1hu: _T1 = (0x11369, .nonspacingMark)
+private let __bidiClass_pair_1hv: _T1 = (0x1136a, .nonspacingMark)
+private let __bidiClass_pair_1hw: _T1 = (0x1136b, .nonspacingMark)
+private let __bidiClass_pair_1hx: _T1 = (0x1136c, .nonspacingMark)
+private let __bidiClass_pair_1hy: _T1 = (0x11370, .nonspacingMark)
+private let __bidiClass_pair_1hz: _T1 = (0x11371, .nonspacingMark)
+private let __bidiClass_pair_1i0: _T1 = (0x11372, .nonspacingMark)
+private let __bidiClass_pair_1i1: _T1 = (0x11373, .nonspacingMark)
+private let __bidiClass_pair_1i2: _T1 = (0x11374, .nonspacingMark)
+private let __bidiClass_pair_1i3: _T1 = (0x11438, .nonspacingMark)
+private let __bidiClass_pair_1i4: _T1 = (0x11439, .nonspacingMark)
+private let __bidiClass_pair_1i5: _T1 = (0x1143a, .nonspacingMark)
+private let __bidiClass_pair_1i6: _T1 = (0x1143b, .nonspacingMark)
+private let __bidiClass_pair_1i7: _T1 = (0x1143c, .nonspacingMark)
+private let __bidiClass_pair_1i8: _T1 = (0x1143d, .nonspacingMark)
+private let __bidiClass_pair_1i9: _T1 = (0x1143e, .nonspacingMark)
+private let __bidiClass_pair_1ia: _T1 = (0x1143f, .nonspacingMark)
+private let __bidiClass_pair_1ib: _T1 = (0x11440, .leftToRight)
+private let __bidiClass_pair_1ic: _T1 = (0x11441, .leftToRight)
+private let __bidiClass_pair_1id: _T1 = (0x11442, .nonspacingMark)
+private let __bidiClass_pair_1ie: _T1 = (0x11443, .nonspacingMark)
+private let __bidiClass_pair_1if: _T1 = (0x11444, .nonspacingMark)
+private let __bidiClass_pair_1ig: _T1 = (0x11445, .leftToRight)
+private let __bidiClass_pair_1ih: _T1 = (0x11446, .nonspacingMark)
+private let __bidiClass_pair_1ii: _T1 = (0x1145b, .leftToRight)
+private let __bidiClass_pair_1ij: _T1 = (0x1145d, .leftToRight)
+private let __bidiClass_pair_1ik: _T1 = (0x1145e, .nonspacingMark)
+private let __bidiClass_pair_1il: _T1 = (0x1145f, .leftToRight)
+private let __bidiClass_pair_1im: _T1 = (0x114b3, .nonspacingMark)
+private let __bidiClass_pair_1in: _T1 = (0x114b4, .nonspacingMark)
+private let __bidiClass_pair_1io: _T1 = (0x114b5, .nonspacingMark)
+private let __bidiClass_pair_1ip: _T1 = (0x114b6, .nonspacingMark)
+private let __bidiClass_pair_1iq: _T1 = (0x114b7, .nonspacingMark)
+private let __bidiClass_pair_1ir: _T1 = (0x114b8, .nonspacingMark)
+private let __bidiClass_pair_1is: _T1 = (0x114b9, .leftToRight)
+private let __bidiClass_pair_1it: _T1 = (0x114ba, .nonspacingMark)
+private let __bidiClass_pair_1iu: _T1 = (0x114bb, .leftToRight)
+private let __bidiClass_pair_1iv: _T1 = (0x114bc, .leftToRight)
+private let __bidiClass_pair_1iw: _T1 = (0x114bd, .leftToRight)
+private let __bidiClass_pair_1ix: _T1 = (0x114be, .leftToRight)
+private let __bidiClass_pair_1iy: _T1 = (0x114bf, .nonspacingMark)
+private let __bidiClass_pair_1iz: _T1 = (0x114c0, .nonspacingMark)
+private let __bidiClass_pair_1j0: _T1 = (0x114c1, .leftToRight)
+private let __bidiClass_pair_1j1: _T1 = (0x114c2, .nonspacingMark)
+private let __bidiClass_pair_1j2: _T1 = (0x114c3, .nonspacingMark)
+private let __bidiClass_pair_1j3: _T1 = (0x114c4, .leftToRight)
+private let __bidiClass_pair_1j4: _T1 = (0x114c5, .leftToRight)
+private let __bidiClass_pair_1j5: _T1 = (0x114c6, .leftToRight)
+private let __bidiClass_pair_1j6: _T1 = (0x114c7, .leftToRight)
+private let __bidiClass_pair_1j7: _T1 = (0x115b2, .nonspacingMark)
+private let __bidiClass_pair_1j8: _T1 = (0x115b3, .nonspacingMark)
+private let __bidiClass_pair_1j9: _T1 = (0x115b4, .nonspacingMark)
+private let __bidiClass_pair_1ja: _T1 = (0x115b5, .nonspacingMark)
+private let __bidiClass_pair_1jb: _T1 = (0x115b8, .leftToRight)
+private let __bidiClass_pair_1jc: _T1 = (0x115b9, .leftToRight)
+private let __bidiClass_pair_1jd: _T1 = (0x115ba, .leftToRight)
+private let __bidiClass_pair_1je: _T1 = (0x115bb, .leftToRight)
+private let __bidiClass_pair_1jf: _T1 = (0x115bc, .nonspacingMark)
+private let __bidiClass_pair_1jg: _T1 = (0x115bd, .nonspacingMark)
+private let __bidiClass_pair_1jh: _T1 = (0x115be, .leftToRight)
+private let __bidiClass_pair_1ji: _T1 = (0x115bf, .nonspacingMark)
+private let __bidiClass_pair_1jj: _T1 = (0x115c0, .nonspacingMark)
+private let __bidiClass_pair_1jk: _T1 = (0x115dc, .nonspacingMark)
+private let __bidiClass_pair_1jl: _T1 = (0x115dd, .nonspacingMark)
+private let __bidiClass_pair_1jm: _T1 = (0x11633, .nonspacingMark)
+private let __bidiClass_pair_1jn: _T1 = (0x11634, .nonspacingMark)
+private let __bidiClass_pair_1jo: _T1 = (0x11635, .nonspacingMark)
+private let __bidiClass_pair_1jp: _T1 = (0x11636, .nonspacingMark)
+private let __bidiClass_pair_1jq: _T1 = (0x11637, .nonspacingMark)
+private let __bidiClass_pair_1jr: _T1 = (0x11638, .nonspacingMark)
+private let __bidiClass_pair_1js: _T1 = (0x11639, .nonspacingMark)
+private let __bidiClass_pair_1jt: _T1 = (0x1163a, .nonspacingMark)
+private let __bidiClass_pair_1ju: _T1 = (0x1163b, .leftToRight)
+private let __bidiClass_pair_1jv: _T1 = (0x1163c, .leftToRight)
+private let __bidiClass_pair_1jw: _T1 = (0x1163d, .nonspacingMark)
+private let __bidiClass_pair_1jx: _T1 = (0x1163e, .leftToRight)
+private let __bidiClass_pair_1jy: _T1 = (0x1163f, .nonspacingMark)
+private let __bidiClass_pair_1jz: _T1 = (0x11640, .nonspacingMark)
+private let __bidiClass_pair_1k0: _T1 = (0x11641, .leftToRight)
+private let __bidiClass_pair_1k1: _T1 = (0x11642, .leftToRight)
+private let __bidiClass_pair_1k2: _T1 = (0x11643, .leftToRight)
+private let __bidiClass_pair_1k3: _T1 = (0x11644, .leftToRight)
+private let __bidiClass_pair_1k4: _T1 = (0x116ab, .nonspacingMark)
+private let __bidiClass_pair_1k5: _T1 = (0x116ac, .leftToRight)
+private let __bidiClass_pair_1k6: _T1 = (0x116ad, .nonspacingMark)
+private let __bidiClass_pair_1k7: _T1 = (0x116ae, .leftToRight)
+private let __bidiClass_pair_1k8: _T1 = (0x116af, .leftToRight)
+private let __bidiClass_pair_1k9: _T1 = (0x116b0, .nonspacingMark)
+private let __bidiClass_pair_1ka: _T1 = (0x116b1, .nonspacingMark)
+private let __bidiClass_pair_1kb: _T1 = (0x116b2, .nonspacingMark)
+private let __bidiClass_pair_1kc: _T1 = (0x116b3, .nonspacingMark)
+private let __bidiClass_pair_1kd: _T1 = (0x116b4, .nonspacingMark)
+private let __bidiClass_pair_1ke: _T1 = (0x116b5, .nonspacingMark)
+private let __bidiClass_pair_1kf: _T1 = (0x116b6, .leftToRight)
+private let __bidiClass_pair_1kg: _T1 = (0x116b7, .nonspacingMark)
+private let __bidiClass_pair_1kh: _T1 = (0x116b8, .leftToRight)
+private let __bidiClass_pair_1ki: _T1 = (0x1171d, .nonspacingMark)
+private let __bidiClass_pair_1kj: _T1 = (0x1171e, .nonspacingMark)
+private let __bidiClass_pair_1kk: _T1 = (0x1171f, .nonspacingMark)
+private let __bidiClass_pair_1kl: _T1 = (0x11720, .leftToRight)
+private let __bidiClass_pair_1km: _T1 = (0x11721, .leftToRight)
+private let __bidiClass_pair_1kn: _T1 = (0x11722, .nonspacingMark)
+private let __bidiClass_pair_1ko: _T1 = (0x11723, .nonspacingMark)
+private let __bidiClass_pair_1kp: _T1 = (0x11724, .nonspacingMark)
+private let __bidiClass_pair_1kq: _T1 = (0x11725, .nonspacingMark)
+private let __bidiClass_pair_1kr: _T1 = (0x11726, .leftToRight)
+private let __bidiClass_pair_1ks: _T1 = (0x11727, .nonspacingMark)
+private let __bidiClass_pair_1kt: _T1 = (0x11728, .nonspacingMark)
+private let __bidiClass_pair_1ku: _T1 = (0x11729, .nonspacingMark)
+private let __bidiClass_pair_1kv: _T1 = (0x1172a, .nonspacingMark)
+private let __bidiClass_pair_1kw: _T1 = (0x1172b, .nonspacingMark)
+private let __bidiClass_pair_1kx: _T1 = (0x11838, .leftToRight)
+private let __bidiClass_pair_1ky: _T1 = (0x11839, .nonspacingMark)
+private let __bidiClass_pair_1kz: _T1 = (0x1183a, .nonspacingMark)
+private let __bidiClass_pair_1l0: _T1 = (0x1183b, .leftToRight)
+private let __bidiClass_pair_1l1: _T1 = (0x118ff, .leftToRight)
+private let __bidiClass_pair_1l2: _T1 = (0x119a0, .leftToRight)
+private let __bidiClass_pair_1l3: _T1 = (0x119a1, .leftToRight)
+private let __bidiClass_pair_1l4: _T1 = (0x119a2, .leftToRight)
+private let __bidiClass_pair_1l5: _T1 = (0x119a3, .leftToRight)
+private let __bidiClass_pair_1l6: _T1 = (0x119a4, .leftToRight)
+private let __bidiClass_pair_1l7: _T1 = (0x119a5, .leftToRight)
+private let __bidiClass_pair_1l8: _T1 = (0x119a6, .leftToRight)
+private let __bidiClass_pair_1l9: _T1 = (0x119a7, .leftToRight)
+private let __bidiClass_pair_1la: _T1 = (0x119d4, .nonspacingMark)
+private let __bidiClass_pair_1lb: _T1 = (0x119d5, .nonspacingMark)
+private let __bidiClass_pair_1lc: _T1 = (0x119d6, .nonspacingMark)
+private let __bidiClass_pair_1ld: _T1 = (0x119d7, .nonspacingMark)
+private let __bidiClass_pair_1le: _T1 = (0x119da, .nonspacingMark)
+private let __bidiClass_pair_1lf: _T1 = (0x119db, .nonspacingMark)
+private let __bidiClass_pair_1lg: _T1 = (0x119dc, .leftToRight)
+private let __bidiClass_pair_1lh: _T1 = (0x119dd, .leftToRight)
+private let __bidiClass_pair_1li: _T1 = (0x119de, .leftToRight)
+private let __bidiClass_pair_1lj: _T1 = (0x119df, .leftToRight)
+private let __bidiClass_pair_1lk: _T1 = (0x119e0, .nonspacingMark)
+private let __bidiClass_pair_1ll: _T1 = (0x119e1, .leftToRight)
+private let __bidiClass_pair_1lm: _T1 = (0x119e2, .leftToRight)
+private let __bidiClass_pair_1ln: _T1 = (0x119e3, .leftToRight)
+private let __bidiClass_pair_1lo: _T1 = (0x119e4, .leftToRight)
+private let __bidiClass_pair_1lp: _T1 = (0x11a00, .leftToRight)
+private let __bidiClass_pair_1lq: _T1 = (0x11a01, .nonspacingMark)
+private let __bidiClass_pair_1lr: _T1 = (0x11a02, .nonspacingMark)
+private let __bidiClass_pair_1ls: _T1 = (0x11a03, .nonspacingMark)
+private let __bidiClass_pair_1lt: _T1 = (0x11a04, .nonspacingMark)
+private let __bidiClass_pair_1lu: _T1 = (0x11a05, .nonspacingMark)
+private let __bidiClass_pair_1lv: _T1 = (0x11a06, .nonspacingMark)
+private let __bidiClass_pair_1lw: _T1 = (0x11a07, .leftToRight)
+private let __bidiClass_pair_1lx: _T1 = (0x11a08, .leftToRight)
+private let __bidiClass_pair_1ly: _T1 = (0x11a09, .nonspacingMark)
+private let __bidiClass_pair_1lz: _T1 = (0x11a0a, .nonspacingMark)
+private let __bidiClass_pair_1m0: _T1 = (0x11a33, .nonspacingMark)
+private let __bidiClass_pair_1m1: _T1 = (0x11a34, .nonspacingMark)
+private let __bidiClass_pair_1m2: _T1 = (0x11a35, .nonspacingMark)
+private let __bidiClass_pair_1m3: _T1 = (0x11a36, .nonspacingMark)
+private let __bidiClass_pair_1m4: _T1 = (0x11a37, .nonspacingMark)
+private let __bidiClass_pair_1m5: _T1 = (0x11a38, .nonspacingMark)
+private let __bidiClass_pair_1m6: _T1 = (0x11a39, .leftToRight)
+private let __bidiClass_pair_1m7: _T1 = (0x11a3a, .leftToRight)
+private let __bidiClass_pair_1m8: _T1 = (0x11a3b, .nonspacingMark)
+private let __bidiClass_pair_1m9: _T1 = (0x11a3c, .nonspacingMark)
+private let __bidiClass_pair_1ma: _T1 = (0x11a3d, .nonspacingMark)
+private let __bidiClass_pair_1mb: _T1 = (0x11a3e, .nonspacingMark)
+private let __bidiClass_pair_1mc: _T1 = (0x11a3f, .leftToRight)
+private let __bidiClass_pair_1md: _T1 = (0x11a40, .leftToRight)
+private let __bidiClass_pair_1me: _T1 = (0x11a41, .leftToRight)
+private let __bidiClass_pair_1mf: _T1 = (0x11a42, .leftToRight)
+private let __bidiClass_pair_1mg: _T1 = (0x11a43, .leftToRight)
+private let __bidiClass_pair_1mh: _T1 = (0x11a44, .leftToRight)
+private let __bidiClass_pair_1mi: _T1 = (0x11a45, .leftToRight)
+private let __bidiClass_pair_1mj: _T1 = (0x11a46, .leftToRight)
+private let __bidiClass_pair_1mk: _T1 = (0x11a47, .nonspacingMark)
+private let __bidiClass_pair_1ml: _T1 = (0x11a50, .leftToRight)
+private let __bidiClass_pair_1mm: _T1 = (0x11a51, .nonspacingMark)
+private let __bidiClass_pair_1mn: _T1 = (0x11a52, .nonspacingMark)
+private let __bidiClass_pair_1mo: _T1 = (0x11a53, .nonspacingMark)
+private let __bidiClass_pair_1mp: _T1 = (0x11a54, .nonspacingMark)
+private let __bidiClass_pair_1mq: _T1 = (0x11a55, .nonspacingMark)
+private let __bidiClass_pair_1mr: _T1 = (0x11a56, .nonspacingMark)
+private let __bidiClass_pair_1ms: _T1 = (0x11a57, .leftToRight)
+private let __bidiClass_pair_1mt: _T1 = (0x11a58, .leftToRight)
+private let __bidiClass_pair_1mu: _T1 = (0x11a59, .nonspacingMark)
+private let __bidiClass_pair_1mv: _T1 = (0x11a5a, .nonspacingMark)
+private let __bidiClass_pair_1mw: _T1 = (0x11a5b, .nonspacingMark)
+private let __bidiClass_pair_1mx: _T1 = (0x11a97, .leftToRight)
+private let __bidiClass_pair_1my: _T1 = (0x11a98, .nonspacingMark)
+private let __bidiClass_pair_1mz: _T1 = (0x11a99, .nonspacingMark)
+private let __bidiClass_pair_1n0: _T1 = (0x11c30, .nonspacingMark)
+private let __bidiClass_pair_1n1: _T1 = (0x11c31, .nonspacingMark)
+private let __bidiClass_pair_1n2: _T1 = (0x11c32, .nonspacingMark)
+private let __bidiClass_pair_1n3: _T1 = (0x11c33, .nonspacingMark)
+private let __bidiClass_pair_1n4: _T1 = (0x11c34, .nonspacingMark)
+private let __bidiClass_pair_1n5: _T1 = (0x11c35, .nonspacingMark)
+private let __bidiClass_pair_1n6: _T1 = (0x11c36, .nonspacingMark)
+private let __bidiClass_pair_1n7: _T1 = (0x11c38, .nonspacingMark)
+private let __bidiClass_pair_1n8: _T1 = (0x11c39, .nonspacingMark)
+private let __bidiClass_pair_1n9: _T1 = (0x11c3a, .nonspacingMark)
+private let __bidiClass_pair_1na: _T1 = (0x11c3b, .nonspacingMark)
+private let __bidiClass_pair_1nb: _T1 = (0x11c3c, .nonspacingMark)
+private let __bidiClass_pair_1nc: _T1 = (0x11c3d, .nonspacingMark)
+private let __bidiClass_pair_1nd: _T1 = (0x11c3e, .leftToRight)
+private let __bidiClass_pair_1ne: _T1 = (0x11c3f, .leftToRight)
+private let __bidiClass_pair_1nf: _T1 = (0x11c40, .leftToRight)
+private let __bidiClass_pair_1ng: _T1 = (0x11c41, .leftToRight)
+private let __bidiClass_pair_1nh: _T1 = (0x11c42, .leftToRight)
+private let __bidiClass_pair_1ni: _T1 = (0x11c43, .leftToRight)
+private let __bidiClass_pair_1nj: _T1 = (0x11c44, .leftToRight)
+private let __bidiClass_pair_1nk: _T1 = (0x11c45, .leftToRight)
+private let __bidiClass_pair_1nl: _T1 = (0x11ca9, .leftToRight)
+private let __bidiClass_pair_1nm: _T1 = (0x11caa, .nonspacingMark)
+private let __bidiClass_pair_1nn: _T1 = (0x11cab, .nonspacingMark)
+private let __bidiClass_pair_1no: _T1 = (0x11cac, .nonspacingMark)
+private let __bidiClass_pair_1np: _T1 = (0x11cad, .nonspacingMark)
+private let __bidiClass_pair_1nq: _T1 = (0x11cae, .nonspacingMark)
+private let __bidiClass_pair_1nr: _T1 = (0x11caf, .nonspacingMark)
+private let __bidiClass_pair_1ns: _T1 = (0x11cb0, .nonspacingMark)
+private let __bidiClass_pair_1nt: _T1 = (0x11cb1, .leftToRight)
+private let __bidiClass_pair_1nu: _T1 = (0x11cb2, .nonspacingMark)
+private let __bidiClass_pair_1nv: _T1 = (0x11cb3, .nonspacingMark)
+private let __bidiClass_pair_1nw: _T1 = (0x11cb4, .leftToRight)
+private let __bidiClass_pair_1nx: _T1 = (0x11cb5, .nonspacingMark)
+private let __bidiClass_pair_1ny: _T1 = (0x11cb6, .nonspacingMark)
+private let __bidiClass_pair_1nz: _T1 = (0x11d00, .leftToRight)
+private let __bidiClass_pair_1o0: _T1 = (0x11d01, .leftToRight)
+private let __bidiClass_pair_1o1: _T1 = (0x11d02, .leftToRight)
+private let __bidiClass_pair_1o2: _T1 = (0x11d03, .leftToRight)
+private let __bidiClass_pair_1o3: _T1 = (0x11d04, .leftToRight)
+private let __bidiClass_pair_1o4: _T1 = (0x11d05, .leftToRight)
+private let __bidiClass_pair_1o5: _T1 = (0x11d06, .leftToRight)
+private let __bidiClass_pair_1o6: _T1 = (0x11d08, .leftToRight)
+private let __bidiClass_pair_1o7: _T1 = (0x11d09, .leftToRight)
+private let __bidiClass_pair_1o8: _T1 = (0x11d31, .nonspacingMark)
+private let __bidiClass_pair_1o9: _T1 = (0x11d32, .nonspacingMark)
+private let __bidiClass_pair_1oa: _T1 = (0x11d33, .nonspacingMark)
+private let __bidiClass_pair_1ob: _T1 = (0x11d34, .nonspacingMark)
+private let __bidiClass_pair_1oc: _T1 = (0x11d35, .nonspacingMark)
+private let __bidiClass_pair_1od: _T1 = (0x11d36, .nonspacingMark)
+private let __bidiClass_pair_1oe: _T1 = (0x11d3a, .nonspacingMark)
+private let __bidiClass_pair_1of: _T1 = (0x11d3c, .nonspacingMark)
+private let __bidiClass_pair_1og: _T1 = (0x11d3d, .nonspacingMark)
+private let __bidiClass_pair_1oh: _T1 = (0x11d3f, .nonspacingMark)
+private let __bidiClass_pair_1oi: _T1 = (0x11d40, .nonspacingMark)
+private let __bidiClass_pair_1oj: _T1 = (0x11d41, .nonspacingMark)
+private let __bidiClass_pair_1ok: _T1 = (0x11d42, .nonspacingMark)
+private let __bidiClass_pair_1ol: _T1 = (0x11d43, .nonspacingMark)
+private let __bidiClass_pair_1om: _T1 = (0x11d44, .nonspacingMark)
+private let __bidiClass_pair_1on: _T1 = (0x11d45, .nonspacingMark)
+private let __bidiClass_pair_1oo: _T1 = (0x11d46, .leftToRight)
+private let __bidiClass_pair_1op: _T1 = (0x11d47, .nonspacingMark)
+private let __bidiClass_pair_1oq: _T1 = (0x11d60, .leftToRight)
+private let __bidiClass_pair_1or: _T1 = (0x11d61, .leftToRight)
+private let __bidiClass_pair_1os: _T1 = (0x11d62, .leftToRight)
+private let __bidiClass_pair_1ot: _T1 = (0x11d63, .leftToRight)
+private let __bidiClass_pair_1ou: _T1 = (0x11d64, .leftToRight)
+private let __bidiClass_pair_1ov: _T1 = (0x11d65, .leftToRight)
+private let __bidiClass_pair_1ow: _T1 = (0x11d67, .leftToRight)
+private let __bidiClass_pair_1ox: _T1 = (0x11d68, .leftToRight)
+private let __bidiClass_pair_1oy: _T1 = (0x11d90, .nonspacingMark)
+private let __bidiClass_pair_1oz: _T1 = (0x11d91, .nonspacingMark)
+private let __bidiClass_pair_1p0: _T1 = (0x11d93, .leftToRight)
+private let __bidiClass_pair_1p1: _T1 = (0x11d94, .leftToRight)
+private let __bidiClass_pair_1p2: _T1 = (0x11d95, .nonspacingMark)
+private let __bidiClass_pair_1p3: _T1 = (0x11d96, .leftToRight)
+private let __bidiClass_pair_1p4: _T1 = (0x11d97, .nonspacingMark)
+private let __bidiClass_pair_1p5: _T1 = (0x11d98, .leftToRight)
+private let __bidiClass_pair_1p6: _T1 = (0x11ef3, .nonspacingMark)
+private let __bidiClass_pair_1p7: _T1 = (0x11ef4, .nonspacingMark)
+private let __bidiClass_pair_1p8: _T1 = (0x11ef5, .leftToRight)
+private let __bidiClass_pair_1p9: _T1 = (0x11ef6, .leftToRight)
+private let __bidiClass_pair_1pa: _T1 = (0x11ef7, .leftToRight)
+private let __bidiClass_pair_1pb: _T1 = (0x11ef8, .leftToRight)
+private let __bidiClass_pair_1pc: _T1 = (0x11fd5, .otherNeutral)
+private let __bidiClass_pair_1pd: _T1 = (0x11fd6, .otherNeutral)
+private let __bidiClass_pair_1pe: _T1 = (0x11fd7, .otherNeutral)
+private let __bidiClass_pair_1pf: _T1 = (0x11fd8, .otherNeutral)
+private let __bidiClass_pair_1pg: _T1 = (0x11fd9, .otherNeutral)
+private let __bidiClass_pair_1ph: _T1 = (0x11fda, .otherNeutral)
+private let __bidiClass_pair_1pi: _T1 = (0x11fdb, .otherNeutral)
+private let __bidiClass_pair_1pj: _T1 = (0x11fdc, .otherNeutral)
+private let __bidiClass_pair_1pk: _T1 = (0x11fdd, .europeanTerminator)
+private let __bidiClass_pair_1pl: _T1 = (0x11fde, .europeanTerminator)
+private let __bidiClass_pair_1pm: _T1 = (0x11fdf, .europeanTerminator)
+private let __bidiClass_pair_1pn: _T1 = (0x11fe0, .europeanTerminator)
+private let __bidiClass_pair_1po: _T1 = (0x12470, .leftToRight)
+private let __bidiClass_pair_1pp: _T1 = (0x12471, .leftToRight)
+private let __bidiClass_pair_1pq: _T1 = (0x12472, .leftToRight)
+private let __bidiClass_pair_1pr: _T1 = (0x12473, .leftToRight)
+private let __bidiClass_pair_1ps: _T1 = (0x12474, .leftToRight)
+private let __bidiClass_pair_1pt: _T1 = (0x16a6e, .leftToRight)
+private let __bidiClass_pair_1pu: _T1 = (0x16a6f, .leftToRight)
+private let __bidiClass_pair_1pv: _T1 = (0x16af0, .nonspacingMark)
+private let __bidiClass_pair_1pw: _T1 = (0x16af1, .nonspacingMark)
+private let __bidiClass_pair_1px: _T1 = (0x16af2, .nonspacingMark)
+private let __bidiClass_pair_1py: _T1 = (0x16af3, .nonspacingMark)
+private let __bidiClass_pair_1pz: _T1 = (0x16af4, .nonspacingMark)
+private let __bidiClass_pair_1q0: _T1 = (0x16af5, .leftToRight)
+private let __bidiClass_pair_1q1: _T1 = (0x16b30, .nonspacingMark)
+private let __bidiClass_pair_1q2: _T1 = (0x16b31, .nonspacingMark)
+private let __bidiClass_pair_1q3: _T1 = (0x16b32, .nonspacingMark)
+private let __bidiClass_pair_1q4: _T1 = (0x16b33, .nonspacingMark)
+private let __bidiClass_pair_1q5: _T1 = (0x16b34, .nonspacingMark)
+private let __bidiClass_pair_1q6: _T1 = (0x16b35, .nonspacingMark)
+private let __bidiClass_pair_1q7: _T1 = (0x16b36, .nonspacingMark)
+private let __bidiClass_pair_1q8: _T1 = (0x16b5b, .leftToRight)
+private let __bidiClass_pair_1q9: _T1 = (0x16b5c, .leftToRight)
+private let __bidiClass_pair_1qa: _T1 = (0x16b5d, .leftToRight)
+private let __bidiClass_pair_1qb: _T1 = (0x16b5e, .leftToRight)
+private let __bidiClass_pair_1qc: _T1 = (0x16b5f, .leftToRight)
+private let __bidiClass_pair_1qd: _T1 = (0x16b60, .leftToRight)
+private let __bidiClass_pair_1qe: _T1 = (0x16b61, .leftToRight)
+private let __bidiClass_pair_1qf: _T1 = (0x16f4f, .nonspacingMark)
+private let __bidiClass_pair_1qg: _T1 = (0x16f8f, .nonspacingMark)
+private let __bidiClass_pair_1qh: _T1 = (0x16f90, .nonspacingMark)
+private let __bidiClass_pair_1qi: _T1 = (0x16f91, .nonspacingMark)
+private let __bidiClass_pair_1qj: _T1 = (0x16f92, .nonspacingMark)
+private let __bidiClass_pair_1qk: _T1 = (0x16fe0, .leftToRight)
+private let __bidiClass_pair_1ql: _T1 = (0x16fe1, .leftToRight)
+private let __bidiClass_pair_1qm: _T1 = (0x16fe2, .otherNeutral)
+private let __bidiClass_pair_1qn: _T1 = (0x16fe3, .leftToRight)
+private let __bidiClass_pair_1qo: _T1 = (0x1b150, .leftToRight)
+private let __bidiClass_pair_1qp: _T1 = (0x1b151, .leftToRight)
+private let __bidiClass_pair_1qq: _T1 = (0x1b152, .leftToRight)
+private let __bidiClass_pair_1qr: _T1 = (0x1b164, .leftToRight)
+private let __bidiClass_pair_1qs: _T1 = (0x1b165, .leftToRight)
+private let __bidiClass_pair_1qt: _T1 = (0x1b166, .leftToRight)
+private let __bidiClass_pair_1qu: _T1 = (0x1b167, .leftToRight)
+private let __bidiClass_pair_1qv: _T1 = (0x1bc9c, .leftToRight)
+private let __bidiClass_pair_1qw: _T1 = (0x1bc9d, .nonspacingMark)
+private let __bidiClass_pair_1qx: _T1 = (0x1bc9e, .nonspacingMark)
+private let __bidiClass_pair_1qy: _T1 = (0x1bc9f, .leftToRight)
+private let __bidiClass_pair_1qz: _T1 = (0x1bca0, .boundaryNeutral)
+private let __bidiClass_pair_1r0: _T1 = (0x1bca1, .boundaryNeutral)
+private let __bidiClass_pair_1r1: _T1 = (0x1bca2, .boundaryNeutral)
+private let __bidiClass_pair_1r2: _T1 = (0x1bca3, .boundaryNeutral)
+private let __bidiClass_pair_1r3: _T1 = (0x1d167, .nonspacingMark)
+private let __bidiClass_pair_1r4: _T1 = (0x1d168, .nonspacingMark)
+private let __bidiClass_pair_1r5: _T1 = (0x1d169, .nonspacingMark)
+private let __bidiClass_pair_1r6: _T1 = (0x1d173, .boundaryNeutral)
+private let __bidiClass_pair_1r7: _T1 = (0x1d174, .boundaryNeutral)
+private let __bidiClass_pair_1r8: _T1 = (0x1d175, .boundaryNeutral)
+private let __bidiClass_pair_1r9: _T1 = (0x1d176, .boundaryNeutral)
+private let __bidiClass_pair_1ra: _T1 = (0x1d177, .boundaryNeutral)
+private let __bidiClass_pair_1rb: _T1 = (0x1d178, .boundaryNeutral)
+private let __bidiClass_pair_1rc: _T1 = (0x1d179, .boundaryNeutral)
+private let __bidiClass_pair_1rd: _T1 = (0x1d17a, .boundaryNeutral)
+private let __bidiClass_pair_1re: _T1 = (0x1d17b, .nonspacingMark)
+private let __bidiClass_pair_1rf: _T1 = (0x1d17c, .nonspacingMark)
+private let __bidiClass_pair_1rg: _T1 = (0x1d17d, .nonspacingMark)
+private let __bidiClass_pair_1rh: _T1 = (0x1d17e, .nonspacingMark)
+private let __bidiClass_pair_1ri: _T1 = (0x1d17f, .nonspacingMark)
+private let __bidiClass_pair_1rj: _T1 = (0x1d180, .nonspacingMark)
+private let __bidiClass_pair_1rk: _T1 = (0x1d181, .nonspacingMark)
+private let __bidiClass_pair_1rl: _T1 = (0x1d182, .nonspacingMark)
+private let __bidiClass_pair_1rm: _T1 = (0x1d183, .leftToRight)
+private let __bidiClass_pair_1rn: _T1 = (0x1d184, .leftToRight)
+private let __bidiClass_pair_1ro: _T1 = (0x1d185, .nonspacingMark)
+private let __bidiClass_pair_1rp: _T1 = (0x1d186, .nonspacingMark)
+private let __bidiClass_pair_1rq: _T1 = (0x1d187, .nonspacingMark)
+private let __bidiClass_pair_1rr: _T1 = (0x1d188, .nonspacingMark)
+private let __bidiClass_pair_1rs: _T1 = (0x1d189, .nonspacingMark)
+private let __bidiClass_pair_1rt: _T1 = (0x1d18a, .nonspacingMark)
+private let __bidiClass_pair_1ru: _T1 = (0x1d18b, .nonspacingMark)
+private let __bidiClass_pair_1rv: _T1 = (0x1d1aa, .nonspacingMark)
+private let __bidiClass_pair_1rw: _T1 = (0x1d1ab, .nonspacingMark)
+private let __bidiClass_pair_1rx: _T1 = (0x1d1ac, .nonspacingMark)
+private let __bidiClass_pair_1ry: _T1 = (0x1d1ad, .nonspacingMark)
+private let __bidiClass_pair_1rz: _T1 = (0x1d242, .nonspacingMark)
+private let __bidiClass_pair_1s0: _T1 = (0x1d243, .nonspacingMark)
+private let __bidiClass_pair_1s1: _T1 = (0x1d244, .nonspacingMark)
+private let __bidiClass_pair_1s2: _T1 = (0x1d245, .otherNeutral)
+private let __bidiClass_pair_1s3: _T1 = (0x1d49e, .leftToRight)
+private let __bidiClass_pair_1s4: _T1 = (0x1d49f, .leftToRight)
+private let __bidiClass_pair_1s5: _T1 = (0x1d4a2, .leftToRight)
+private let __bidiClass_pair_1s6: _T1 = (0x1d4a5, .leftToRight)
+private let __bidiClass_pair_1s7: _T1 = (0x1d4a6, .leftToRight)
+private let __bidiClass_pair_1s8: _T1 = (0x1d4a9, .leftToRight)
+private let __bidiClass_pair_1s9: _T1 = (0x1d4aa, .leftToRight)
+private let __bidiClass_pair_1sa: _T1 = (0x1d4ab, .leftToRight)
+private let __bidiClass_pair_1sb: _T1 = (0x1d4ac, .leftToRight)
+private let __bidiClass_pair_1sc: _T1 = (0x1d4bb, .leftToRight)
+private let __bidiClass_pair_1sd: _T1 = (0x1d4bd, .leftToRight)
+private let __bidiClass_pair_1se: _T1 = (0x1d4be, .leftToRight)
+private let __bidiClass_pair_1sf: _T1 = (0x1d4bf, .leftToRight)
+private let __bidiClass_pair_1sg: _T1 = (0x1d4c0, .leftToRight)
+private let __bidiClass_pair_1sh: _T1 = (0x1d4c1, .leftToRight)
+private let __bidiClass_pair_1si: _T1 = (0x1d4c2, .leftToRight)
+private let __bidiClass_pair_1sj: _T1 = (0x1d4c3, .leftToRight)
+private let __bidiClass_pair_1sk: _T1 = (0x1d507, .leftToRight)
+private let __bidiClass_pair_1sl: _T1 = (0x1d508, .leftToRight)
+private let __bidiClass_pair_1sm: _T1 = (0x1d509, .leftToRight)
+private let __bidiClass_pair_1sn: _T1 = (0x1d50a, .leftToRight)
+private let __bidiClass_pair_1so: _T1 = (0x1d50d, .leftToRight)
+private let __bidiClass_pair_1sp: _T1 = (0x1d50e, .leftToRight)
+private let __bidiClass_pair_1sq: _T1 = (0x1d50f, .leftToRight)
+private let __bidiClass_pair_1sr: _T1 = (0x1d510, .leftToRight)
+private let __bidiClass_pair_1ss: _T1 = (0x1d511, .leftToRight)
+private let __bidiClass_pair_1st: _T1 = (0x1d512, .leftToRight)
+private let __bidiClass_pair_1su: _T1 = (0x1d513, .leftToRight)
+private let __bidiClass_pair_1sv: _T1 = (0x1d514, .leftToRight)
+private let __bidiClass_pair_1sw: _T1 = (0x1d516, .leftToRight)
+private let __bidiClass_pair_1sx: _T1 = (0x1d517, .leftToRight)
+private let __bidiClass_pair_1sy: _T1 = (0x1d518, .leftToRight)
+private let __bidiClass_pair_1sz: _T1 = (0x1d519, .leftToRight)
+private let __bidiClass_pair_1t0: _T1 = (0x1d51a, .leftToRight)
+private let __bidiClass_pair_1t1: _T1 = (0x1d51b, .leftToRight)
+private let __bidiClass_pair_1t2: _T1 = (0x1d51c, .leftToRight)
+private let __bidiClass_pair_1t3: _T1 = (0x1d53b, .leftToRight)
+private let __bidiClass_pair_1t4: _T1 = (0x1d53c, .leftToRight)
+private let __bidiClass_pair_1t5: _T1 = (0x1d53d, .leftToRight)
+private let __bidiClass_pair_1t6: _T1 = (0x1d53e, .leftToRight)
+private let __bidiClass_pair_1t7: _T1 = (0x1d540, .leftToRight)
+private let __bidiClass_pair_1t8: _T1 = (0x1d541, .leftToRight)
+private let __bidiClass_pair_1t9: _T1 = (0x1d542, .leftToRight)
+private let __bidiClass_pair_1ta: _T1 = (0x1d543, .leftToRight)
+private let __bidiClass_pair_1tb: _T1 = (0x1d544, .leftToRight)
+private let __bidiClass_pair_1tc: _T1 = (0x1d546, .leftToRight)
+private let __bidiClass_pair_1td: _T1 = (0x1d54a, .leftToRight)
+private let __bidiClass_pair_1te: _T1 = (0x1d54b, .leftToRight)
+private let __bidiClass_pair_1tf: _T1 = (0x1d54c, .leftToRight)
+private let __bidiClass_pair_1tg: _T1 = (0x1d54d, .leftToRight)
+private let __bidiClass_pair_1th: _T1 = (0x1d54e, .leftToRight)
+private let __bidiClass_pair_1ti: _T1 = (0x1d54f, .leftToRight)
+private let __bidiClass_pair_1tj: _T1 = (0x1d550, .leftToRight)
+private let __bidiClass_pair_1tk: _T1 = (0x1d6db, .otherNeutral)
+private let __bidiClass_pair_1tl: _T1 = (0x1d715, .otherNeutral)
+private let __bidiClass_pair_1tm: _T1 = (0x1d74f, .otherNeutral)
+private let __bidiClass_pair_1tn: _T1 = (0x1d789, .otherNeutral)
+private let __bidiClass_pair_1to: _T1 = (0x1d7c3, .otherNeutral)
+private let __bidiClass_pair_1tp: _T1 = (0x1d7c4, .leftToRight)
+private let __bidiClass_pair_1tq: _T1 = (0x1d7c5, .leftToRight)
+private let __bidiClass_pair_1tr: _T1 = (0x1d7c6, .leftToRight)
+private let __bidiClass_pair_1ts: _T1 = (0x1d7c7, .leftToRight)
+private let __bidiClass_pair_1tt: _T1 = (0x1d7c8, .leftToRight)
+private let __bidiClass_pair_1tu: _T1 = (0x1d7c9, .leftToRight)
+private let __bidiClass_pair_1tv: _T1 = (0x1d7ca, .leftToRight)
+private let __bidiClass_pair_1tw: _T1 = (0x1d7cb, .leftToRight)
+private let __bidiClass_pair_1tx: _T1 = (0x1da37, .leftToRight)
+private let __bidiClass_pair_1ty: _T1 = (0x1da38, .leftToRight)
+private let __bidiClass_pair_1tz: _T1 = (0x1da39, .leftToRight)
+private let __bidiClass_pair_1u0: _T1 = (0x1da3a, .leftToRight)
+private let __bidiClass_pair_1u1: _T1 = (0x1da6d, .leftToRight)
+private let __bidiClass_pair_1u2: _T1 = (0x1da6e, .leftToRight)
+private let __bidiClass_pair_1u3: _T1 = (0x1da6f, .leftToRight)
+private let __bidiClass_pair_1u4: _T1 = (0x1da70, .leftToRight)
+private let __bidiClass_pair_1u5: _T1 = (0x1da71, .leftToRight)
+private let __bidiClass_pair_1u6: _T1 = (0x1da72, .leftToRight)
+private let __bidiClass_pair_1u7: _T1 = (0x1da73, .leftToRight)
+private let __bidiClass_pair_1u8: _T1 = (0x1da74, .leftToRight)
+private let __bidiClass_pair_1u9: _T1 = (0x1da75, .nonspacingMark)
+private let __bidiClass_pair_1ua: _T1 = (0x1da84, .nonspacingMark)
+private let __bidiClass_pair_1ub: _T1 = (0x1da85, .leftToRight)
+private let __bidiClass_pair_1uc: _T1 = (0x1da86, .leftToRight)
+private let __bidiClass_pair_1ud: _T1 = (0x1da87, .leftToRight)
+private let __bidiClass_pair_1ue: _T1 = (0x1da88, .leftToRight)
+private let __bidiClass_pair_1uf: _T1 = (0x1da89, .leftToRight)
+private let __bidiClass_pair_1ug: _T1 = (0x1da8a, .leftToRight)
+private let __bidiClass_pair_1uh: _T1 = (0x1da8b, .leftToRight)
+private let __bidiClass_pair_1ui: _T1 = (0x1da9b, .nonspacingMark)
+private let __bidiClass_pair_1uj: _T1 = (0x1da9c, .nonspacingMark)
+private let __bidiClass_pair_1uk: _T1 = (0x1da9d, .nonspacingMark)
+private let __bidiClass_pair_1ul: _T1 = (0x1da9e, .nonspacingMark)
+private let __bidiClass_pair_1um: _T1 = (0x1da9f, .nonspacingMark)
+private let __bidiClass_pair_1un: _T1 = (0x1e000, .nonspacingMark)
+private let __bidiClass_pair_1uo: _T1 = (0x1e001, .nonspacingMark)
+private let __bidiClass_pair_1up: _T1 = (0x1e002, .nonspacingMark)
+private let __bidiClass_pair_1uq: _T1 = (0x1e003, .nonspacingMark)
+private let __bidiClass_pair_1ur: _T1 = (0x1e004, .nonspacingMark)
+private let __bidiClass_pair_1us: _T1 = (0x1e005, .nonspacingMark)
+private let __bidiClass_pair_1ut: _T1 = (0x1e006, .nonspacingMark)
+private let __bidiClass_pair_1uu: _T1 = (0x1e01b, .nonspacingMark)
+private let __bidiClass_pair_1uv: _T1 = (0x1e01c, .nonspacingMark)
+private let __bidiClass_pair_1uw: _T1 = (0x1e01d, .nonspacingMark)
+private let __bidiClass_pair_1ux: _T1 = (0x1e01e, .nonspacingMark)
+private let __bidiClass_pair_1uy: _T1 = (0x1e01f, .nonspacingMark)
+private let __bidiClass_pair_1uz: _T1 = (0x1e020, .nonspacingMark)
+private let __bidiClass_pair_1v0: _T1 = (0x1e021, .nonspacingMark)
+private let __bidiClass_pair_1v1: _T1 = (0x1e023, .nonspacingMark)
+private let __bidiClass_pair_1v2: _T1 = (0x1e024, .nonspacingMark)
+private let __bidiClass_pair_1v3: _T1 = (0x1e026, .nonspacingMark)
+private let __bidiClass_pair_1v4: _T1 = (0x1e027, .nonspacingMark)
+private let __bidiClass_pair_1v5: _T1 = (0x1e028, .nonspacingMark)
+private let __bidiClass_pair_1v6: _T1 = (0x1e029, .nonspacingMark)
+private let __bidiClass_pair_1v7: _T1 = (0x1e02a, .nonspacingMark)
+private let __bidiClass_pair_1v8: _T1 = (0x1e130, .nonspacingMark)
+private let __bidiClass_pair_1v9: _T1 = (0x1e131, .nonspacingMark)
+private let __bidiClass_pair_1va: _T1 = (0x1e132, .nonspacingMark)
+private let __bidiClass_pair_1vb: _T1 = (0x1e133, .nonspacingMark)
+private let __bidiClass_pair_1vc: _T1 = (0x1e134, .nonspacingMark)
+private let __bidiClass_pair_1vd: _T1 = (0x1e135, .nonspacingMark)
+private let __bidiClass_pair_1ve: _T1 = (0x1e136, .nonspacingMark)
+private let __bidiClass_pair_1vf: _T1 = (0x1e137, .leftToRight)
+private let __bidiClass_pair_1vg: _T1 = (0x1e138, .leftToRight)
+private let __bidiClass_pair_1vh: _T1 = (0x1e139, .leftToRight)
+private let __bidiClass_pair_1vi: _T1 = (0x1e13a, .leftToRight)
+private let __bidiClass_pair_1vj: _T1 = (0x1e13b, .leftToRight)
+private let __bidiClass_pair_1vk: _T1 = (0x1e13c, .leftToRight)
+private let __bidiClass_pair_1vl: _T1 = (0x1e13d, .leftToRight)
+private let __bidiClass_pair_1vm: _T1 = (0x1e14e, .leftToRight)
+private let __bidiClass_pair_1vn: _T1 = (0x1e14f, .leftToRight)
+private let __bidiClass_pair_1vo: _T1 = (0x1e2ec, .nonspacingMark)
+private let __bidiClass_pair_1vp: _T1 = (0x1e2ed, .nonspacingMark)
+private let __bidiClass_pair_1vq: _T1 = (0x1e2ee, .nonspacingMark)
+private let __bidiClass_pair_1vr: _T1 = (0x1e2ef, .nonspacingMark)
+private let __bidiClass_pair_1vs: _T1 = (0x1e2ff, .europeanTerminator)
+private let __bidiClass_pair_1vt: _T1 = (0x1e8d0, .nonspacingMark)
+private let __bidiClass_pair_1vu: _T1 = (0x1e8d1, .nonspacingMark)
+private let __bidiClass_pair_1vv: _T1 = (0x1e8d2, .nonspacingMark)
+private let __bidiClass_pair_1vw: _T1 = (0x1e8d3, .nonspacingMark)
+private let __bidiClass_pair_1vx: _T1 = (0x1e8d4, .nonspacingMark)
+private let __bidiClass_pair_1vy: _T1 = (0x1e8d5, .nonspacingMark)
+private let __bidiClass_pair_1vz: _T1 = (0x1e8d6, .nonspacingMark)
+private let __bidiClass_pair_1w0: _T1 = (0x1e944, .nonspacingMark)
+private let __bidiClass_pair_1w1: _T1 = (0x1e945, .nonspacingMark)
+private let __bidiClass_pair_1w2: _T1 = (0x1e946, .nonspacingMark)
+private let __bidiClass_pair_1w3: _T1 = (0x1e947, .nonspacingMark)
+private let __bidiClass_pair_1w4: _T1 = (0x1e948, .nonspacingMark)
+private let __bidiClass_pair_1w5: _T1 = (0x1e949, .nonspacingMark)
+private let __bidiClass_pair_1w6: _T1 = (0x1e94a, .nonspacingMark)
+private let __bidiClass_pair_1w7: _T1 = (0x1eef0, .otherNeutral)
+private let __bidiClass_pair_1w8: _T1 = (0x1eef1, .otherNeutral)
+private let __bidiClass_pair_1w9: _T1 = (0x1f10b, .otherNeutral)
+private let __bidiClass_pair_1wa: _T1 = (0x1f10c, .otherNeutral)
+private let __bidiClass_pair_1wb: _T1 = (0x1f12f, .otherNeutral)
+private let __bidiClass_pair_1wc: _T1 = (0x1f16a, .otherNeutral)
+private let __bidiClass_pair_1wd: _T1 = (0x1f16b, .otherNeutral)
+private let __bidiClass_pair_1we: _T1 = (0x1f16c, .otherNeutral)
+private let __bidiClass_pair_1wf: _T1 = (0x1f250, .leftToRight)
+private let __bidiClass_pair_1wg: _T1 = (0x1f251, .leftToRight)
+private let __bidiClass_pair_1wh: _T1 = (0x1f260, .otherNeutral)
+private let __bidiClass_pair_1wi: _T1 = (0x1f261, .otherNeutral)
+private let __bidiClass_pair_1wj: _T1 = (0x1f262, .otherNeutral)
+private let __bidiClass_pair_1wk: _T1 = (0x1f263, .otherNeutral)
+private let __bidiClass_pair_1wl: _T1 = (0x1f264, .otherNeutral)
+private let __bidiClass_pair_1wm: _T1 = (0x1f265, .otherNeutral)
+private let __bidiClass_pair_1wn: _T1 = (0x1f973, .otherNeutral)
+private let __bidiClass_pair_1wo: _T1 = (0x1f974, .otherNeutral)
+private let __bidiClass_pair_1wp: _T1 = (0x1f975, .otherNeutral)
+private let __bidiClass_pair_1wq: _T1 = (0x1f976, .otherNeutral)
+private let __bidiClass_pair_1wr: _T1 = (0x1f9a5, .otherNeutral)
+private let __bidiClass_pair_1ws: _T1 = (0x1f9a6, .otherNeutral)
+private let __bidiClass_pair_1wt: _T1 = (0x1f9a7, .otherNeutral)
+private let __bidiClass_pair_1wu: _T1 = (0x1f9a8, .otherNeutral)
+private let __bidiClass_pair_1wv: _T1 = (0x1f9a9, .otherNeutral)
+private let __bidiClass_pair_1ww: _T1 = (0x1f9aa, .otherNeutral)
+private let __bidiClass_pair_1wx: _T1 = (0x1fa70, .otherNeutral)
+private let __bidiClass_pair_1wy: _T1 = (0x1fa71, .otherNeutral)
+private let __bidiClass_pair_1wz: _T1 = (0x1fa72, .otherNeutral)
+private let __bidiClass_pair_1x0: _T1 = (0x1fa73, .otherNeutral)
+private let __bidiClass_pair_1x1: _T1 = (0x1fa78, .otherNeutral)
+private let __bidiClass_pair_1x2: _T1 = (0x1fa79, .otherNeutral)
+private let __bidiClass_pair_1x3: _T1 = (0x1fa7a, .otherNeutral)
+private let __bidiClass_pair_1x4: _T1 = (0x1fa80, .otherNeutral)
+private let __bidiClass_pair_1x5: _T1 = (0x1fa81, .otherNeutral)
+private let __bidiClass_pair_1x6: _T1 = (0x1fa82, .otherNeutral)
+private let __bidiClass_pair_1x7: _T1 = (0x1fa90, .otherNeutral)
+private let __bidiClass_pair_1x8: _T1 = (0x1fa91, .otherNeutral)
+private let __bidiClass_pair_1x9: _T1 = (0x1fa92, .otherNeutral)
+private let __bidiClass_pair_1xa: _T1 = (0x1fa93, .otherNeutral)
+private let __bidiClass_pair_1xb: _T1 = (0x1fa94, .otherNeutral)
+private let __bidiClass_pair_1xc: _T1 = (0x1fa95, .otherNeutral)
+private let __bidiClass_pair_1xd: _T1 = (0x1fffe, .boundaryNeutral)
+private let __bidiClass_pair_1xe: _T1 = (0x1ffff, .boundaryNeutral)
+private let __bidiClass_pair_1xf: _T1 = (0x2fffe, .boundaryNeutral)
+private let __bidiClass_pair_1xg: _T1 = (0x2ffff, .boundaryNeutral)
+private let __bidiClass_pair_1xh: _T1 = (0x3fffe, .boundaryNeutral)
+private let __bidiClass_pair_1xi: _T1 = (0x3ffff, .boundaryNeutral)
+private let __bidiClass_pair_1xj: _T1 = (0x4fffe, .boundaryNeutral)
+private let __bidiClass_pair_1xk: _T1 = (0x4ffff, .boundaryNeutral)
+private let __bidiClass_pair_1xl: _T1 = (0x5fffe, .boundaryNeutral)
+private let __bidiClass_pair_1xm: _T1 = (0x5ffff, .boundaryNeutral)
+private let __bidiClass_pair_1xn: _T1 = (0x6fffe, .boundaryNeutral)
+private let __bidiClass_pair_1xo: _T1 = (0x6ffff, .boundaryNeutral)
+private let __bidiClass_pair_1xp: _T1 = (0x7fffe, .boundaryNeutral)
+private let __bidiClass_pair_1xq: _T1 = (0x7ffff, .boundaryNeutral)
+private let __bidiClass_pair_1xr: _T1 = (0x8fffe, .boundaryNeutral)
+private let __bidiClass_pair_1xs: _T1 = (0x8ffff, .boundaryNeutral)
+private let __bidiClass_pair_1xt: _T1 = (0x9fffe, .boundaryNeutral)
+private let __bidiClass_pair_1xu: _T1 = (0x9ffff, .boundaryNeutral)
+private let __bidiClass_pair_1xv: _T1 = (0xafffe, .boundaryNeutral)
+private let __bidiClass_pair_1xw: _T1 = (0xaffff, .boundaryNeutral)
+private let __bidiClass_pair_1xx: _T1 = (0xbfffe, .boundaryNeutral)
+private let __bidiClass_pair_1xy: _T1 = (0xbffff, .boundaryNeutral)
+private let __bidiClass_pair_1xz: _T1 = (0xcfffe, .boundaryNeutral)
+private let __bidiClass_pair_1y0: _T1 = (0xcffff, .boundaryNeutral)
+private let __bidiClass_pair_1y1: _T1 = (0xefffe, .boundaryNeutral)
+private let __bidiClass_pair_1y2: _T1 = (0xeffff, .boundaryNeutral)
+private let __bidiClass_pair_1y3: _T1 = (0xffffe, .boundaryNeutral)
+private let __bidiClass_pair_1y4: _T1 = (0xfffff, .boundaryNeutral)
+private let __bidiClass_pair_1y5: _T1 = (0x10fffe, .boundaryNeutral)
+private let __bidiClass_pair_1y6: _T1 = (0x10ffff, .boundaryNeutral)
 private let __bidiClass_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWithValues: [
   __bidiClass_pair_0,
   __bidiClass_pair_1,
@@ -719,1054 +2917,2682 @@ private let __bidiClass_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqu
   __bidiClass_pair_92,
   __bidiClass_pair_93,
   __bidiClass_pair_94,
+  __bidiClass_pair_95,
+  __bidiClass_pair_96,
+  __bidiClass_pair_97,
+  __bidiClass_pair_98,
+  __bidiClass_pair_99,
+  __bidiClass_pair_9a,
+  __bidiClass_pair_9b,
+  __bidiClass_pair_9c,
+  __bidiClass_pair_9d,
+  __bidiClass_pair_9e,
+  __bidiClass_pair_9f,
+  __bidiClass_pair_9g,
+  __bidiClass_pair_9h,
+  __bidiClass_pair_9i,
+  __bidiClass_pair_9j,
+  __bidiClass_pair_9k,
+  __bidiClass_pair_9l,
+  __bidiClass_pair_9m,
+  __bidiClass_pair_9n,
+  __bidiClass_pair_9o,
+  __bidiClass_pair_9p,
+  __bidiClass_pair_9q,
+  __bidiClass_pair_9r,
+  __bidiClass_pair_9s,
+  __bidiClass_pair_9t,
+  __bidiClass_pair_9u,
+  __bidiClass_pair_9v,
+  __bidiClass_pair_9w,
+  __bidiClass_pair_9x,
+  __bidiClass_pair_9y,
+  __bidiClass_pair_9z,
+  __bidiClass_pair_a0,
+  __bidiClass_pair_a1,
+  __bidiClass_pair_a2,
+  __bidiClass_pair_a3,
+  __bidiClass_pair_a4,
+  __bidiClass_pair_a5,
+  __bidiClass_pair_a6,
+  __bidiClass_pair_a7,
+  __bidiClass_pair_a8,
+  __bidiClass_pair_a9,
+  __bidiClass_pair_aa,
+  __bidiClass_pair_ab,
+  __bidiClass_pair_ac,
+  __bidiClass_pair_ad,
+  __bidiClass_pair_ae,
+  __bidiClass_pair_af,
+  __bidiClass_pair_ag,
+  __bidiClass_pair_ah,
+  __bidiClass_pair_ai,
+  __bidiClass_pair_aj,
+  __bidiClass_pair_ak,
+  __bidiClass_pair_al,
+  __bidiClass_pair_am,
+  __bidiClass_pair_an,
+  __bidiClass_pair_ao,
+  __bidiClass_pair_ap,
+  __bidiClass_pair_aq,
+  __bidiClass_pair_ar,
+  __bidiClass_pair_as,
+  __bidiClass_pair_at,
+  __bidiClass_pair_au,
+  __bidiClass_pair_av,
+  __bidiClass_pair_aw,
+  __bidiClass_pair_ax,
+  __bidiClass_pair_ay,
+  __bidiClass_pair_az,
+  __bidiClass_pair_b0,
+  __bidiClass_pair_b1,
+  __bidiClass_pair_b2,
+  __bidiClass_pair_b3,
+  __bidiClass_pair_b4,
+  __bidiClass_pair_b5,
+  __bidiClass_pair_b6,
+  __bidiClass_pair_b7,
+  __bidiClass_pair_b8,
+  __bidiClass_pair_b9,
+  __bidiClass_pair_ba,
+  __bidiClass_pair_bb,
+  __bidiClass_pair_bc,
+  __bidiClass_pair_bd,
+  __bidiClass_pair_be,
+  __bidiClass_pair_bf,
+  __bidiClass_pair_bg,
+  __bidiClass_pair_bh,
+  __bidiClass_pair_bi,
+  __bidiClass_pair_bj,
+  __bidiClass_pair_bk,
+  __bidiClass_pair_bl,
+  __bidiClass_pair_bm,
+  __bidiClass_pair_bn,
+  __bidiClass_pair_bo,
+  __bidiClass_pair_bp,
+  __bidiClass_pair_bq,
+  __bidiClass_pair_br,
+  __bidiClass_pair_bs,
+  __bidiClass_pair_bt,
+  __bidiClass_pair_bu,
+  __bidiClass_pair_bv,
+  __bidiClass_pair_bw,
+  __bidiClass_pair_bx,
+  __bidiClass_pair_by,
+  __bidiClass_pair_bz,
+  __bidiClass_pair_c0,
+  __bidiClass_pair_c1,
+  __bidiClass_pair_c2,
+  __bidiClass_pair_c3,
+  __bidiClass_pair_c4,
+  __bidiClass_pair_c5,
+  __bidiClass_pair_c6,
+  __bidiClass_pair_c7,
+  __bidiClass_pair_c8,
+  __bidiClass_pair_c9,
+  __bidiClass_pair_ca,
+  __bidiClass_pair_cb,
+  __bidiClass_pair_cc,
+  __bidiClass_pair_cd,
+  __bidiClass_pair_ce,
+  __bidiClass_pair_cf,
+  __bidiClass_pair_cg,
+  __bidiClass_pair_ch,
+  __bidiClass_pair_ci,
+  __bidiClass_pair_cj,
+  __bidiClass_pair_ck,
+  __bidiClass_pair_cl,
+  __bidiClass_pair_cm,
+  __bidiClass_pair_cn,
+  __bidiClass_pair_co,
+  __bidiClass_pair_cp,
+  __bidiClass_pair_cq,
+  __bidiClass_pair_cr,
+  __bidiClass_pair_cs,
+  __bidiClass_pair_ct,
+  __bidiClass_pair_cu,
+  __bidiClass_pair_cv,
+  __bidiClass_pair_cw,
+  __bidiClass_pair_cx,
+  __bidiClass_pair_cy,
+  __bidiClass_pair_cz,
+  __bidiClass_pair_d0,
+  __bidiClass_pair_d1,
+  __bidiClass_pair_d2,
+  __bidiClass_pair_d3,
+  __bidiClass_pair_d4,
+  __bidiClass_pair_d5,
+  __bidiClass_pair_d6,
+  __bidiClass_pair_d7,
+  __bidiClass_pair_d8,
+  __bidiClass_pair_d9,
+  __bidiClass_pair_da,
+  __bidiClass_pair_db,
+  __bidiClass_pair_dc,
+  __bidiClass_pair_dd,
+  __bidiClass_pair_de,
+  __bidiClass_pair_df,
+  __bidiClass_pair_dg,
+  __bidiClass_pair_dh,
+  __bidiClass_pair_di,
+  __bidiClass_pair_dj,
+  __bidiClass_pair_dk,
+  __bidiClass_pair_dl,
+  __bidiClass_pair_dm,
+  __bidiClass_pair_dn,
+  __bidiClass_pair_do,
+  __bidiClass_pair_dp,
+  __bidiClass_pair_dq,
+  __bidiClass_pair_dr,
+  __bidiClass_pair_ds,
+  __bidiClass_pair_dt,
+  __bidiClass_pair_du,
+  __bidiClass_pair_dv,
+  __bidiClass_pair_dw,
+  __bidiClass_pair_dx,
+  __bidiClass_pair_dy,
+  __bidiClass_pair_dz,
+  __bidiClass_pair_e0,
+  __bidiClass_pair_e1,
+  __bidiClass_pair_e2,
+  __bidiClass_pair_e3,
+  __bidiClass_pair_e4,
+  __bidiClass_pair_e5,
+  __bidiClass_pair_e6,
+  __bidiClass_pair_e7,
+  __bidiClass_pair_e8,
+  __bidiClass_pair_e9,
+  __bidiClass_pair_ea,
+  __bidiClass_pair_eb,
+  __bidiClass_pair_ec,
+  __bidiClass_pair_ed,
+  __bidiClass_pair_ee,
+  __bidiClass_pair_ef,
+  __bidiClass_pair_eg,
+  __bidiClass_pair_eh,
+  __bidiClass_pair_ei,
+  __bidiClass_pair_ej,
+  __bidiClass_pair_ek,
+  __bidiClass_pair_el,
+  __bidiClass_pair_em,
+  __bidiClass_pair_en,
+  __bidiClass_pair_eo,
+  __bidiClass_pair_ep,
+  __bidiClass_pair_eq,
+  __bidiClass_pair_er,
+  __bidiClass_pair_es,
+  __bidiClass_pair_et,
+  __bidiClass_pair_eu,
+  __bidiClass_pair_ev,
+  __bidiClass_pair_ew,
+  __bidiClass_pair_ex,
+  __bidiClass_pair_ey,
+  __bidiClass_pair_ez,
+  __bidiClass_pair_f0,
+  __bidiClass_pair_f1,
+  __bidiClass_pair_f2,
+  __bidiClass_pair_f3,
+  __bidiClass_pair_f4,
+  __bidiClass_pair_f5,
+  __bidiClass_pair_f6,
+  __bidiClass_pair_f7,
+  __bidiClass_pair_f8,
+  __bidiClass_pair_f9,
+  __bidiClass_pair_fa,
+  __bidiClass_pair_fb,
+  __bidiClass_pair_fc,
+  __bidiClass_pair_fd,
+  __bidiClass_pair_fe,
+  __bidiClass_pair_ff,
+  __bidiClass_pair_fg,
+  __bidiClass_pair_fh,
+  __bidiClass_pair_fi,
+  __bidiClass_pair_fj,
+  __bidiClass_pair_fk,
+  __bidiClass_pair_fl,
+  __bidiClass_pair_fm,
+  __bidiClass_pair_fn,
+  __bidiClass_pair_fo,
+  __bidiClass_pair_fp,
+  __bidiClass_pair_fq,
+  __bidiClass_pair_fr,
+  __bidiClass_pair_fs,
+  __bidiClass_pair_ft,
+  __bidiClass_pair_fu,
+  __bidiClass_pair_fv,
+  __bidiClass_pair_fw,
+  __bidiClass_pair_fx,
+  __bidiClass_pair_fy,
+  __bidiClass_pair_fz,
+  __bidiClass_pair_g0,
+  __bidiClass_pair_g1,
+  __bidiClass_pair_g2,
+  __bidiClass_pair_g3,
+  __bidiClass_pair_g4,
+  __bidiClass_pair_g5,
+  __bidiClass_pair_g6,
+  __bidiClass_pair_g7,
+  __bidiClass_pair_g8,
+  __bidiClass_pair_g9,
+  __bidiClass_pair_ga,
+  __bidiClass_pair_gb,
+  __bidiClass_pair_gc,
+  __bidiClass_pair_gd,
+  __bidiClass_pair_ge,
+  __bidiClass_pair_gf,
+  __bidiClass_pair_gg,
+  __bidiClass_pair_gh,
+  __bidiClass_pair_gi,
+  __bidiClass_pair_gj,
+  __bidiClass_pair_gk,
+  __bidiClass_pair_gl,
+  __bidiClass_pair_gm,
+  __bidiClass_pair_gn,
+  __bidiClass_pair_go,
+  __bidiClass_pair_gp,
+  __bidiClass_pair_gq,
+  __bidiClass_pair_gr,
+  __bidiClass_pair_gs,
+  __bidiClass_pair_gt,
+  __bidiClass_pair_gu,
+  __bidiClass_pair_gv,
+  __bidiClass_pair_gw,
+  __bidiClass_pair_gx,
+  __bidiClass_pair_gy,
+  __bidiClass_pair_gz,
+  __bidiClass_pair_h0,
+  __bidiClass_pair_h1,
+  __bidiClass_pair_h2,
+  __bidiClass_pair_h3,
+  __bidiClass_pair_h4,
+  __bidiClass_pair_h5,
+  __bidiClass_pair_h6,
+  __bidiClass_pair_h7,
+  __bidiClass_pair_h8,
+  __bidiClass_pair_h9,
+  __bidiClass_pair_ha,
+  __bidiClass_pair_hb,
+  __bidiClass_pair_hc,
+  __bidiClass_pair_hd,
+  __bidiClass_pair_he,
+  __bidiClass_pair_hf,
+  __bidiClass_pair_hg,
+  __bidiClass_pair_hh,
+  __bidiClass_pair_hi,
+  __bidiClass_pair_hj,
+  __bidiClass_pair_hk,
+  __bidiClass_pair_hl,
+  __bidiClass_pair_hm,
+  __bidiClass_pair_hn,
+  __bidiClass_pair_ho,
+  __bidiClass_pair_hp,
+  __bidiClass_pair_hq,
+  __bidiClass_pair_hr,
+  __bidiClass_pair_hs,
+  __bidiClass_pair_ht,
+  __bidiClass_pair_hu,
+  __bidiClass_pair_hv,
+  __bidiClass_pair_hw,
+  __bidiClass_pair_hx,
+  __bidiClass_pair_hy,
+  __bidiClass_pair_hz,
+  __bidiClass_pair_i0,
+  __bidiClass_pair_i1,
+  __bidiClass_pair_i2,
+  __bidiClass_pair_i3,
+  __bidiClass_pair_i4,
+  __bidiClass_pair_i5,
+  __bidiClass_pair_i6,
+  __bidiClass_pair_i7,
+  __bidiClass_pair_i8,
+  __bidiClass_pair_i9,
+  __bidiClass_pair_ia,
+  __bidiClass_pair_ib,
+  __bidiClass_pair_ic,
+  __bidiClass_pair_id,
+  __bidiClass_pair_ie,
+  __bidiClass_pair_if,
+  __bidiClass_pair_ig,
+  __bidiClass_pair_ih,
+  __bidiClass_pair_ii,
+  __bidiClass_pair_ij,
+  __bidiClass_pair_ik,
+  __bidiClass_pair_il,
+  __bidiClass_pair_im,
+  __bidiClass_pair_in,
+  __bidiClass_pair_io,
+  __bidiClass_pair_ip,
+  __bidiClass_pair_iq,
+  __bidiClass_pair_ir,
+  __bidiClass_pair_is,
+  __bidiClass_pair_it,
+  __bidiClass_pair_iu,
+  __bidiClass_pair_iv,
+  __bidiClass_pair_iw,
+  __bidiClass_pair_ix,
+  __bidiClass_pair_iy,
+  __bidiClass_pair_iz,
+  __bidiClass_pair_j0,
+  __bidiClass_pair_j1,
+  __bidiClass_pair_j2,
+  __bidiClass_pair_j3,
+  __bidiClass_pair_j4,
+  __bidiClass_pair_j5,
+  __bidiClass_pair_j6,
+  __bidiClass_pair_j7,
+  __bidiClass_pair_j8,
+  __bidiClass_pair_j9,
+  __bidiClass_pair_ja,
+  __bidiClass_pair_jb,
+  __bidiClass_pair_jc,
+  __bidiClass_pair_jd,
+  __bidiClass_pair_je,
+  __bidiClass_pair_jf,
+  __bidiClass_pair_jg,
+  __bidiClass_pair_jh,
+  __bidiClass_pair_ji,
+  __bidiClass_pair_jj,
+  __bidiClass_pair_jk,
+  __bidiClass_pair_jl,
+  __bidiClass_pair_jm,
+  __bidiClass_pair_jn,
+  __bidiClass_pair_jo,
+  __bidiClass_pair_jp,
+  __bidiClass_pair_jq,
+  __bidiClass_pair_jr,
+  __bidiClass_pair_js,
+  __bidiClass_pair_jt,
+  __bidiClass_pair_ju,
+  __bidiClass_pair_jv,
+  __bidiClass_pair_jw,
+  __bidiClass_pair_jx,
+  __bidiClass_pair_jy,
+  __bidiClass_pair_jz,
+  __bidiClass_pair_k0,
+  __bidiClass_pair_k1,
+  __bidiClass_pair_k2,
+  __bidiClass_pair_k3,
+  __bidiClass_pair_k4,
+  __bidiClass_pair_k5,
+  __bidiClass_pair_k6,
+  __bidiClass_pair_k7,
+  __bidiClass_pair_k8,
+  __bidiClass_pair_k9,
+  __bidiClass_pair_ka,
+  __bidiClass_pair_kb,
+  __bidiClass_pair_kc,
+  __bidiClass_pair_kd,
+  __bidiClass_pair_ke,
+  __bidiClass_pair_kf,
+  __bidiClass_pair_kg,
+  __bidiClass_pair_kh,
+  __bidiClass_pair_ki,
+  __bidiClass_pair_kj,
+  __bidiClass_pair_kk,
+  __bidiClass_pair_kl,
+  __bidiClass_pair_km,
+  __bidiClass_pair_kn,
+  __bidiClass_pair_ko,
+  __bidiClass_pair_kp,
+  __bidiClass_pair_kq,
+  __bidiClass_pair_kr,
+  __bidiClass_pair_ks,
+  __bidiClass_pair_kt,
+  __bidiClass_pair_ku,
+  __bidiClass_pair_kv,
+  __bidiClass_pair_kw,
+  __bidiClass_pair_kx,
+  __bidiClass_pair_ky,
+  __bidiClass_pair_kz,
+  __bidiClass_pair_l0,
+  __bidiClass_pair_l1,
+  __bidiClass_pair_l2,
+  __bidiClass_pair_l3,
+  __bidiClass_pair_l4,
+  __bidiClass_pair_l5,
+  __bidiClass_pair_l6,
+  __bidiClass_pair_l7,
+  __bidiClass_pair_l8,
+  __bidiClass_pair_l9,
+  __bidiClass_pair_la,
+  __bidiClass_pair_lb,
+  __bidiClass_pair_lc,
+  __bidiClass_pair_ld,
+  __bidiClass_pair_le,
+  __bidiClass_pair_lf,
+  __bidiClass_pair_lg,
+  __bidiClass_pair_lh,
+  __bidiClass_pair_li,
+  __bidiClass_pair_lj,
+  __bidiClass_pair_lk,
+  __bidiClass_pair_ll,
+  __bidiClass_pair_lm,
+  __bidiClass_pair_ln,
+  __bidiClass_pair_lo,
+  __bidiClass_pair_lp,
+  __bidiClass_pair_lq,
+  __bidiClass_pair_lr,
+  __bidiClass_pair_ls,
+  __bidiClass_pair_lt,
+  __bidiClass_pair_lu,
+  __bidiClass_pair_lv,
+  __bidiClass_pair_lw,
+  __bidiClass_pair_lx,
+  __bidiClass_pair_ly,
+  __bidiClass_pair_lz,
+  __bidiClass_pair_m0,
+  __bidiClass_pair_m1,
+  __bidiClass_pair_m2,
+  __bidiClass_pair_m3,
+  __bidiClass_pair_m4,
+  __bidiClass_pair_m5,
+  __bidiClass_pair_m6,
+  __bidiClass_pair_m7,
+  __bidiClass_pair_m8,
+  __bidiClass_pair_m9,
+  __bidiClass_pair_ma,
+  __bidiClass_pair_mb,
+  __bidiClass_pair_mc,
+  __bidiClass_pair_md,
+  __bidiClass_pair_me,
+  __bidiClass_pair_mf,
+  __bidiClass_pair_mg,
+  __bidiClass_pair_mh,
+  __bidiClass_pair_mi,
+  __bidiClass_pair_mj,
+  __bidiClass_pair_mk,
+  __bidiClass_pair_ml,
+  __bidiClass_pair_mm,
+  __bidiClass_pair_mn,
+  __bidiClass_pair_mo,
+  __bidiClass_pair_mp,
+  __bidiClass_pair_mq,
+  __bidiClass_pair_mr,
+  __bidiClass_pair_ms,
+  __bidiClass_pair_mt,
+  __bidiClass_pair_mu,
+  __bidiClass_pair_mv,
+  __bidiClass_pair_mw,
+  __bidiClass_pair_mx,
+  __bidiClass_pair_my,
+  __bidiClass_pair_mz,
+  __bidiClass_pair_n0,
+  __bidiClass_pair_n1,
+  __bidiClass_pair_n2,
+  __bidiClass_pair_n3,
+  __bidiClass_pair_n4,
+  __bidiClass_pair_n5,
+  __bidiClass_pair_n6,
+  __bidiClass_pair_n7,
+  __bidiClass_pair_n8,
+  __bidiClass_pair_n9,
+  __bidiClass_pair_na,
+  __bidiClass_pair_nb,
+  __bidiClass_pair_nc,
+  __bidiClass_pair_nd,
+  __bidiClass_pair_ne,
+  __bidiClass_pair_nf,
+  __bidiClass_pair_ng,
+  __bidiClass_pair_nh,
+  __bidiClass_pair_ni,
+  __bidiClass_pair_nj,
+  __bidiClass_pair_nk,
+  __bidiClass_pair_nl,
+  __bidiClass_pair_nm,
+  __bidiClass_pair_nn,
+  __bidiClass_pair_no,
+  __bidiClass_pair_np,
+  __bidiClass_pair_nq,
+  __bidiClass_pair_nr,
+  __bidiClass_pair_ns,
+  __bidiClass_pair_nt,
+  __bidiClass_pair_nu,
+  __bidiClass_pair_nv,
+  __bidiClass_pair_nw,
+  __bidiClass_pair_nx,
+  __bidiClass_pair_ny,
+  __bidiClass_pair_nz,
+  __bidiClass_pair_o0,
+  __bidiClass_pair_o1,
+  __bidiClass_pair_o2,
+  __bidiClass_pair_o3,
+  __bidiClass_pair_o4,
+  __bidiClass_pair_o5,
+  __bidiClass_pair_o6,
+  __bidiClass_pair_o7,
+  __bidiClass_pair_o8,
+  __bidiClass_pair_o9,
+  __bidiClass_pair_oa,
+  __bidiClass_pair_ob,
+  __bidiClass_pair_oc,
+  __bidiClass_pair_od,
+  __bidiClass_pair_oe,
+  __bidiClass_pair_of,
+  __bidiClass_pair_og,
+  __bidiClass_pair_oh,
+  __bidiClass_pair_oi,
+  __bidiClass_pair_oj,
+  __bidiClass_pair_ok,
+  __bidiClass_pair_ol,
+  __bidiClass_pair_om,
+  __bidiClass_pair_on,
+  __bidiClass_pair_oo,
+  __bidiClass_pair_op,
+  __bidiClass_pair_oq,
+  __bidiClass_pair_or,
+  __bidiClass_pair_os,
+  __bidiClass_pair_ot,
+  __bidiClass_pair_ou,
+  __bidiClass_pair_ov,
+  __bidiClass_pair_ow,
+  __bidiClass_pair_ox,
+  __bidiClass_pair_oy,
+  __bidiClass_pair_oz,
+  __bidiClass_pair_p0,
+  __bidiClass_pair_p1,
+  __bidiClass_pair_p2,
+  __bidiClass_pair_p3,
+  __bidiClass_pair_p4,
+  __bidiClass_pair_p5,
+  __bidiClass_pair_p6,
+  __bidiClass_pair_p7,
+  __bidiClass_pair_p8,
+  __bidiClass_pair_p9,
+  __bidiClass_pair_pa,
+  __bidiClass_pair_pb,
+  __bidiClass_pair_pc,
+  __bidiClass_pair_pd,
+  __bidiClass_pair_pe,
+  __bidiClass_pair_pf,
+  __bidiClass_pair_pg,
+  __bidiClass_pair_ph,
+  __bidiClass_pair_pi,
+  __bidiClass_pair_pj,
+  __bidiClass_pair_pk,
+  __bidiClass_pair_pl,
+  __bidiClass_pair_pm,
+  __bidiClass_pair_pn,
+  __bidiClass_pair_po,
+  __bidiClass_pair_pp,
+  __bidiClass_pair_pq,
+  __bidiClass_pair_pr,
+  __bidiClass_pair_ps,
+  __bidiClass_pair_pt,
+  __bidiClass_pair_pu,
+  __bidiClass_pair_pv,
+  __bidiClass_pair_pw,
+  __bidiClass_pair_px,
+  __bidiClass_pair_py,
+  __bidiClass_pair_pz,
+  __bidiClass_pair_q0,
+  __bidiClass_pair_q1,
+  __bidiClass_pair_q2,
+  __bidiClass_pair_q3,
+  __bidiClass_pair_q4,
+  __bidiClass_pair_q5,
+  __bidiClass_pair_q6,
+  __bidiClass_pair_q7,
+  __bidiClass_pair_q8,
+  __bidiClass_pair_q9,
+  __bidiClass_pair_qa,
+  __bidiClass_pair_qb,
+  __bidiClass_pair_qc,
+  __bidiClass_pair_qd,
+  __bidiClass_pair_qe,
+  __bidiClass_pair_qf,
+  __bidiClass_pair_qg,
+  __bidiClass_pair_qh,
+  __bidiClass_pair_qi,
+  __bidiClass_pair_qj,
+  __bidiClass_pair_qk,
+  __bidiClass_pair_ql,
+  __bidiClass_pair_qm,
+  __bidiClass_pair_qn,
+  __bidiClass_pair_qo,
+  __bidiClass_pair_qp,
+  __bidiClass_pair_qq,
+  __bidiClass_pair_qr,
+  __bidiClass_pair_qs,
+  __bidiClass_pair_qt,
+  __bidiClass_pair_qu,
+  __bidiClass_pair_qv,
+  __bidiClass_pair_qw,
+  __bidiClass_pair_qx,
+  __bidiClass_pair_qy,
+  __bidiClass_pair_qz,
+  __bidiClass_pair_r0,
+  __bidiClass_pair_r1,
+  __bidiClass_pair_r2,
+  __bidiClass_pair_r3,
+  __bidiClass_pair_r4,
+  __bidiClass_pair_r5,
+  __bidiClass_pair_r6,
+  __bidiClass_pair_r7,
+  __bidiClass_pair_r8,
+  __bidiClass_pair_r9,
+  __bidiClass_pair_ra,
+  __bidiClass_pair_rb,
+  __bidiClass_pair_rc,
+  __bidiClass_pair_rd,
+  __bidiClass_pair_re,
+  __bidiClass_pair_rf,
+  __bidiClass_pair_rg,
+  __bidiClass_pair_rh,
+  __bidiClass_pair_ri,
+  __bidiClass_pair_rj,
+  __bidiClass_pair_rk,
+  __bidiClass_pair_rl,
+  __bidiClass_pair_rm,
+  __bidiClass_pair_rn,
+  __bidiClass_pair_ro,
+  __bidiClass_pair_rp,
+  __bidiClass_pair_rq,
+  __bidiClass_pair_rr,
+  __bidiClass_pair_rs,
+  __bidiClass_pair_rt,
+  __bidiClass_pair_ru,
+  __bidiClass_pair_rv,
+  __bidiClass_pair_rw,
+  __bidiClass_pair_rx,
+  __bidiClass_pair_ry,
+  __bidiClass_pair_rz,
+  __bidiClass_pair_s0,
+  __bidiClass_pair_s1,
+  __bidiClass_pair_s2,
+  __bidiClass_pair_s3,
+  __bidiClass_pair_s4,
+  __bidiClass_pair_s5,
+  __bidiClass_pair_s6,
+  __bidiClass_pair_s7,
+  __bidiClass_pair_s8,
+  __bidiClass_pair_s9,
+  __bidiClass_pair_sa,
+  __bidiClass_pair_sb,
+  __bidiClass_pair_sc,
+  __bidiClass_pair_sd,
+  __bidiClass_pair_se,
+  __bidiClass_pair_sf,
+  __bidiClass_pair_sg,
+  __bidiClass_pair_sh,
+  __bidiClass_pair_si,
+  __bidiClass_pair_sj,
+  __bidiClass_pair_sk,
+  __bidiClass_pair_sl,
+  __bidiClass_pair_sm,
+  __bidiClass_pair_sn,
+  __bidiClass_pair_so,
+  __bidiClass_pair_sp,
+  __bidiClass_pair_sq,
+  __bidiClass_pair_sr,
+  __bidiClass_pair_ss,
+  __bidiClass_pair_st,
+  __bidiClass_pair_su,
+  __bidiClass_pair_sv,
+  __bidiClass_pair_sw,
+  __bidiClass_pair_sx,
+  __bidiClass_pair_sy,
+  __bidiClass_pair_sz,
+  __bidiClass_pair_t0,
+  __bidiClass_pair_t1,
+  __bidiClass_pair_t2,
+  __bidiClass_pair_t3,
+  __bidiClass_pair_t4,
+  __bidiClass_pair_t5,
+  __bidiClass_pair_t6,
+  __bidiClass_pair_t7,
+  __bidiClass_pair_t8,
+  __bidiClass_pair_t9,
+  __bidiClass_pair_ta,
+  __bidiClass_pair_tb,
+  __bidiClass_pair_tc,
+  __bidiClass_pair_td,
+  __bidiClass_pair_te,
+  __bidiClass_pair_tf,
+  __bidiClass_pair_tg,
+  __bidiClass_pair_th,
+  __bidiClass_pair_ti,
+  __bidiClass_pair_tj,
+  __bidiClass_pair_tk,
+  __bidiClass_pair_tl,
+  __bidiClass_pair_tm,
+  __bidiClass_pair_tn,
+  __bidiClass_pair_to,
+  __bidiClass_pair_tp,
+  __bidiClass_pair_tq,
+  __bidiClass_pair_tr,
+  __bidiClass_pair_ts,
+  __bidiClass_pair_tt,
+  __bidiClass_pair_tu,
+  __bidiClass_pair_tv,
+  __bidiClass_pair_tw,
+  __bidiClass_pair_tx,
+  __bidiClass_pair_ty,
+  __bidiClass_pair_tz,
+  __bidiClass_pair_u0,
+  __bidiClass_pair_u1,
+  __bidiClass_pair_u2,
+  __bidiClass_pair_u3,
+  __bidiClass_pair_u4,
+  __bidiClass_pair_u5,
+  __bidiClass_pair_u6,
+  __bidiClass_pair_u7,
+  __bidiClass_pair_u8,
+  __bidiClass_pair_u9,
+  __bidiClass_pair_ua,
+  __bidiClass_pair_ub,
+  __bidiClass_pair_uc,
+  __bidiClass_pair_ud,
+  __bidiClass_pair_ue,
+  __bidiClass_pair_uf,
+  __bidiClass_pair_ug,
+  __bidiClass_pair_uh,
+  __bidiClass_pair_ui,
+  __bidiClass_pair_uj,
+  __bidiClass_pair_uk,
+  __bidiClass_pair_ul,
+  __bidiClass_pair_um,
+  __bidiClass_pair_un,
+  __bidiClass_pair_uo,
+  __bidiClass_pair_up,
+  __bidiClass_pair_uq,
+  __bidiClass_pair_ur,
+  __bidiClass_pair_us,
+  __bidiClass_pair_ut,
+  __bidiClass_pair_uu,
+  __bidiClass_pair_uv,
+  __bidiClass_pair_uw,
+  __bidiClass_pair_ux,
+  __bidiClass_pair_uy,
+  __bidiClass_pair_uz,
+  __bidiClass_pair_v0,
+  __bidiClass_pair_v1,
+  __bidiClass_pair_v2,
+  __bidiClass_pair_v3,
+  __bidiClass_pair_v4,
+  __bidiClass_pair_v5,
+  __bidiClass_pair_v6,
+  __bidiClass_pair_v7,
+  __bidiClass_pair_v8,
+  __bidiClass_pair_v9,
+  __bidiClass_pair_va,
+  __bidiClass_pair_vb,
+  __bidiClass_pair_vc,
+  __bidiClass_pair_vd,
+  __bidiClass_pair_ve,
+  __bidiClass_pair_vf,
+  __bidiClass_pair_vg,
+  __bidiClass_pair_vh,
+  __bidiClass_pair_vi,
+  __bidiClass_pair_vj,
+  __bidiClass_pair_vk,
+  __bidiClass_pair_vl,
+  __bidiClass_pair_vm,
+  __bidiClass_pair_vn,
+  __bidiClass_pair_vo,
+  __bidiClass_pair_vp,
+  __bidiClass_pair_vq,
+  __bidiClass_pair_vr,
+  __bidiClass_pair_vs,
+  __bidiClass_pair_vt,
+  __bidiClass_pair_vu,
+  __bidiClass_pair_vv,
+  __bidiClass_pair_vw,
+  __bidiClass_pair_vx,
+  __bidiClass_pair_vy,
+  __bidiClass_pair_vz,
+  __bidiClass_pair_w0,
+  __bidiClass_pair_w1,
+  __bidiClass_pair_w2,
+  __bidiClass_pair_w3,
+  __bidiClass_pair_w4,
+  __bidiClass_pair_w5,
+  __bidiClass_pair_w6,
+  __bidiClass_pair_w7,
+  __bidiClass_pair_w8,
+  __bidiClass_pair_w9,
+  __bidiClass_pair_wa,
+  __bidiClass_pair_wb,
+  __bidiClass_pair_wc,
+  __bidiClass_pair_wd,
+  __bidiClass_pair_we,
+  __bidiClass_pair_wf,
+  __bidiClass_pair_wg,
+  __bidiClass_pair_wh,
+  __bidiClass_pair_wi,
+  __bidiClass_pair_wj,
+  __bidiClass_pair_wk,
+  __bidiClass_pair_wl,
+  __bidiClass_pair_wm,
+  __bidiClass_pair_wn,
+  __bidiClass_pair_wo,
+  __bidiClass_pair_wp,
+  __bidiClass_pair_wq,
+  __bidiClass_pair_wr,
+  __bidiClass_pair_ws,
+  __bidiClass_pair_wt,
+  __bidiClass_pair_wu,
+  __bidiClass_pair_wv,
+  __bidiClass_pair_ww,
+  __bidiClass_pair_wx,
+  __bidiClass_pair_wy,
+  __bidiClass_pair_wz,
+  __bidiClass_pair_x0,
+  __bidiClass_pair_x1,
+  __bidiClass_pair_x2,
+  __bidiClass_pair_x3,
+  __bidiClass_pair_x4,
+  __bidiClass_pair_x5,
+  __bidiClass_pair_x6,
+  __bidiClass_pair_x7,
+  __bidiClass_pair_x8,
+  __bidiClass_pair_x9,
+  __bidiClass_pair_xa,
+  __bidiClass_pair_xb,
+  __bidiClass_pair_xc,
+  __bidiClass_pair_xd,
+  __bidiClass_pair_xe,
+  __bidiClass_pair_xf,
+  __bidiClass_pair_xg,
+  __bidiClass_pair_xh,
+  __bidiClass_pair_xi,
+  __bidiClass_pair_xj,
+  __bidiClass_pair_xk,
+  __bidiClass_pair_xl,
+  __bidiClass_pair_xm,
+  __bidiClass_pair_xn,
+  __bidiClass_pair_xo,
+  __bidiClass_pair_xp,
+  __bidiClass_pair_xq,
+  __bidiClass_pair_xr,
+  __bidiClass_pair_xs,
+  __bidiClass_pair_xt,
+  __bidiClass_pair_xu,
+  __bidiClass_pair_xv,
+  __bidiClass_pair_xw,
+  __bidiClass_pair_xx,
+  __bidiClass_pair_xy,
+  __bidiClass_pair_xz,
+  __bidiClass_pair_y0,
+  __bidiClass_pair_y1,
+  __bidiClass_pair_y2,
+  __bidiClass_pair_y3,
+  __bidiClass_pair_y4,
+  __bidiClass_pair_y5,
+  __bidiClass_pair_y6,
+  __bidiClass_pair_y7,
+  __bidiClass_pair_y8,
+  __bidiClass_pair_y9,
+  __bidiClass_pair_ya,
+  __bidiClass_pair_yb,
+  __bidiClass_pair_yc,
+  __bidiClass_pair_yd,
+  __bidiClass_pair_ye,
+  __bidiClass_pair_yf,
+  __bidiClass_pair_yg,
+  __bidiClass_pair_yh,
+  __bidiClass_pair_yi,
+  __bidiClass_pair_yj,
+  __bidiClass_pair_yk,
+  __bidiClass_pair_yl,
+  __bidiClass_pair_ym,
+  __bidiClass_pair_yn,
+  __bidiClass_pair_yo,
+  __bidiClass_pair_yp,
+  __bidiClass_pair_yq,
+  __bidiClass_pair_yr,
+  __bidiClass_pair_ys,
+  __bidiClass_pair_yt,
+  __bidiClass_pair_yu,
+  __bidiClass_pair_yv,
+  __bidiClass_pair_yw,
+  __bidiClass_pair_yx,
+  __bidiClass_pair_yy,
+  __bidiClass_pair_yz,
+  __bidiClass_pair_z0,
+  __bidiClass_pair_z1,
+  __bidiClass_pair_z2,
+  __bidiClass_pair_z3,
+  __bidiClass_pair_z4,
+  __bidiClass_pair_z5,
+  __bidiClass_pair_z6,
+  __bidiClass_pair_z7,
+  __bidiClass_pair_z8,
+  __bidiClass_pair_z9,
+  __bidiClass_pair_za,
+  __bidiClass_pair_zb,
+  __bidiClass_pair_zc,
+  __bidiClass_pair_zd,
+  __bidiClass_pair_ze,
+  __bidiClass_pair_zf,
+  __bidiClass_pair_zg,
+  __bidiClass_pair_zh,
+  __bidiClass_pair_zi,
+  __bidiClass_pair_zj,
+  __bidiClass_pair_zk,
+  __bidiClass_pair_zl,
+  __bidiClass_pair_zm,
+  __bidiClass_pair_zn,
+  __bidiClass_pair_zo,
+  __bidiClass_pair_zp,
+  __bidiClass_pair_zq,
+  __bidiClass_pair_zr,
+  __bidiClass_pair_zs,
+  __bidiClass_pair_zt,
+  __bidiClass_pair_zu,
+  __bidiClass_pair_zv,
+  __bidiClass_pair_zw,
+  __bidiClass_pair_zx,
+  __bidiClass_pair_zy,
+  __bidiClass_pair_zz,
+  __bidiClass_pair_100,
+  __bidiClass_pair_101,
+  __bidiClass_pair_102,
+  __bidiClass_pair_103,
+  __bidiClass_pair_104,
+  __bidiClass_pair_105,
+  __bidiClass_pair_106,
+  __bidiClass_pair_107,
+  __bidiClass_pair_108,
+  __bidiClass_pair_109,
+  __bidiClass_pair_10a,
+  __bidiClass_pair_10b,
+  __bidiClass_pair_10c,
+  __bidiClass_pair_10d,
+  __bidiClass_pair_10e,
+  __bidiClass_pair_10f,
+  __bidiClass_pair_10g,
+  __bidiClass_pair_10h,
+  __bidiClass_pair_10i,
+  __bidiClass_pair_10j,
+  __bidiClass_pair_10k,
+  __bidiClass_pair_10l,
+  __bidiClass_pair_10m,
+  __bidiClass_pair_10n,
+  __bidiClass_pair_10o,
+  __bidiClass_pair_10p,
+  __bidiClass_pair_10q,
+  __bidiClass_pair_10r,
+  __bidiClass_pair_10s,
+  __bidiClass_pair_10t,
+  __bidiClass_pair_10u,
+  __bidiClass_pair_10v,
+  __bidiClass_pair_10w,
+  __bidiClass_pair_10x,
+  __bidiClass_pair_10y,
+  __bidiClass_pair_10z,
+  __bidiClass_pair_110,
+  __bidiClass_pair_111,
+  __bidiClass_pair_112,
+  __bidiClass_pair_113,
+  __bidiClass_pair_114,
+  __bidiClass_pair_115,
+  __bidiClass_pair_116,
+  __bidiClass_pair_117,
+  __bidiClass_pair_118,
+  __bidiClass_pair_119,
+  __bidiClass_pair_11a,
+  __bidiClass_pair_11b,
+  __bidiClass_pair_11c,
+  __bidiClass_pair_11d,
+  __bidiClass_pair_11e,
+  __bidiClass_pair_11f,
+  __bidiClass_pair_11g,
+  __bidiClass_pair_11h,
+  __bidiClass_pair_11i,
+  __bidiClass_pair_11j,
+  __bidiClass_pair_11k,
+  __bidiClass_pair_11l,
+  __bidiClass_pair_11m,
+  __bidiClass_pair_11n,
+  __bidiClass_pair_11o,
+  __bidiClass_pair_11p,
+  __bidiClass_pair_11q,
+  __bidiClass_pair_11r,
+  __bidiClass_pair_11s,
+  __bidiClass_pair_11t,
+  __bidiClass_pair_11u,
+  __bidiClass_pair_11v,
+  __bidiClass_pair_11w,
+  __bidiClass_pair_11x,
+  __bidiClass_pair_11y,
+  __bidiClass_pair_11z,
+  __bidiClass_pair_120,
+  __bidiClass_pair_121,
+  __bidiClass_pair_122,
+  __bidiClass_pair_123,
+  __bidiClass_pair_124,
+  __bidiClass_pair_125,
+  __bidiClass_pair_126,
+  __bidiClass_pair_127,
+  __bidiClass_pair_128,
+  __bidiClass_pair_129,
+  __bidiClass_pair_12a,
+  __bidiClass_pair_12b,
+  __bidiClass_pair_12c,
+  __bidiClass_pair_12d,
+  __bidiClass_pair_12e,
+  __bidiClass_pair_12f,
+  __bidiClass_pair_12g,
+  __bidiClass_pair_12h,
+  __bidiClass_pair_12i,
+  __bidiClass_pair_12j,
+  __bidiClass_pair_12k,
+  __bidiClass_pair_12l,
+  __bidiClass_pair_12m,
+  __bidiClass_pair_12n,
+  __bidiClass_pair_12o,
+  __bidiClass_pair_12p,
+  __bidiClass_pair_12q,
+  __bidiClass_pair_12r,
+  __bidiClass_pair_12s,
+  __bidiClass_pair_12t,
+  __bidiClass_pair_12u,
+  __bidiClass_pair_12v,
+  __bidiClass_pair_12w,
+  __bidiClass_pair_12x,
+  __bidiClass_pair_12y,
+  __bidiClass_pair_12z,
+  __bidiClass_pair_130,
+  __bidiClass_pair_131,
+  __bidiClass_pair_132,
+  __bidiClass_pair_133,
+  __bidiClass_pair_134,
+  __bidiClass_pair_135,
+  __bidiClass_pair_136,
+  __bidiClass_pair_137,
+  __bidiClass_pair_138,
+  __bidiClass_pair_139,
+  __bidiClass_pair_13a,
+  __bidiClass_pair_13b,
+  __bidiClass_pair_13c,
+  __bidiClass_pair_13d,
+  __bidiClass_pair_13e,
+  __bidiClass_pair_13f,
+  __bidiClass_pair_13g,
+  __bidiClass_pair_13h,
+  __bidiClass_pair_13i,
+  __bidiClass_pair_13j,
+  __bidiClass_pair_13k,
+  __bidiClass_pair_13l,
+  __bidiClass_pair_13m,
+  __bidiClass_pair_13n,
+  __bidiClass_pair_13o,
+  __bidiClass_pair_13p,
+  __bidiClass_pair_13q,
+  __bidiClass_pair_13r,
+  __bidiClass_pair_13s,
+  __bidiClass_pair_13t,
+  __bidiClass_pair_13u,
+  __bidiClass_pair_13v,
+  __bidiClass_pair_13w,
+  __bidiClass_pair_13x,
+  __bidiClass_pair_13y,
+  __bidiClass_pair_13z,
+  __bidiClass_pair_140,
+  __bidiClass_pair_141,
+  __bidiClass_pair_142,
+  __bidiClass_pair_143,
+  __bidiClass_pair_144,
+  __bidiClass_pair_145,
+  __bidiClass_pair_146,
+  __bidiClass_pair_147,
+  __bidiClass_pair_148,
+  __bidiClass_pair_149,
+  __bidiClass_pair_14a,
+  __bidiClass_pair_14b,
+  __bidiClass_pair_14c,
+  __bidiClass_pair_14d,
+  __bidiClass_pair_14e,
+  __bidiClass_pair_14f,
+  __bidiClass_pair_14g,
+  __bidiClass_pair_14h,
+  __bidiClass_pair_14i,
+  __bidiClass_pair_14j,
+  __bidiClass_pair_14k,
+  __bidiClass_pair_14l,
+  __bidiClass_pair_14m,
+  __bidiClass_pair_14n,
+  __bidiClass_pair_14o,
+  __bidiClass_pair_14p,
+  __bidiClass_pair_14q,
+  __bidiClass_pair_14r,
+  __bidiClass_pair_14s,
+  __bidiClass_pair_14t,
+  __bidiClass_pair_14u,
+  __bidiClass_pair_14v,
+  __bidiClass_pair_14w,
+  __bidiClass_pair_14x,
+  __bidiClass_pair_14y,
+  __bidiClass_pair_14z,
+  __bidiClass_pair_150,
+  __bidiClass_pair_151,
+  __bidiClass_pair_152,
+  __bidiClass_pair_153,
+  __bidiClass_pair_154,
+  __bidiClass_pair_155,
+  __bidiClass_pair_156,
+  __bidiClass_pair_157,
+  __bidiClass_pair_158,
+  __bidiClass_pair_159,
+  __bidiClass_pair_15a,
+  __bidiClass_pair_15b,
+  __bidiClass_pair_15c,
+  __bidiClass_pair_15d,
+  __bidiClass_pair_15e,
+  __bidiClass_pair_15f,
+  __bidiClass_pair_15g,
+  __bidiClass_pair_15h,
+  __bidiClass_pair_15i,
+  __bidiClass_pair_15j,
+  __bidiClass_pair_15k,
+  __bidiClass_pair_15l,
+  __bidiClass_pair_15m,
+  __bidiClass_pair_15n,
+  __bidiClass_pair_15o,
+  __bidiClass_pair_15p,
+  __bidiClass_pair_15q,
+  __bidiClass_pair_15r,
+  __bidiClass_pair_15s,
+  __bidiClass_pair_15t,
+  __bidiClass_pair_15u,
+  __bidiClass_pair_15v,
+  __bidiClass_pair_15w,
+  __bidiClass_pair_15x,
+  __bidiClass_pair_15y,
+  __bidiClass_pair_15z,
+  __bidiClass_pair_160,
+  __bidiClass_pair_161,
+  __bidiClass_pair_162,
+  __bidiClass_pair_163,
+  __bidiClass_pair_164,
+  __bidiClass_pair_165,
+  __bidiClass_pair_166,
+  __bidiClass_pair_167,
+  __bidiClass_pair_168,
+  __bidiClass_pair_169,
+  __bidiClass_pair_16a,
+  __bidiClass_pair_16b,
+  __bidiClass_pair_16c,
+  __bidiClass_pair_16d,
+  __bidiClass_pair_16e,
+  __bidiClass_pair_16f,
+  __bidiClass_pair_16g,
+  __bidiClass_pair_16h,
+  __bidiClass_pair_16i,
+  __bidiClass_pair_16j,
+  __bidiClass_pair_16k,
+  __bidiClass_pair_16l,
+  __bidiClass_pair_16m,
+  __bidiClass_pair_16n,
+  __bidiClass_pair_16o,
+  __bidiClass_pair_16p,
+  __bidiClass_pair_16q,
+  __bidiClass_pair_16r,
+  __bidiClass_pair_16s,
+  __bidiClass_pair_16t,
+  __bidiClass_pair_16u,
+  __bidiClass_pair_16v,
+  __bidiClass_pair_16w,
+  __bidiClass_pair_16x,
+  __bidiClass_pair_16y,
+  __bidiClass_pair_16z,
+  __bidiClass_pair_170,
+  __bidiClass_pair_171,
+  __bidiClass_pair_172,
+  __bidiClass_pair_173,
+  __bidiClass_pair_174,
+  __bidiClass_pair_175,
+  __bidiClass_pair_176,
+  __bidiClass_pair_177,
+  __bidiClass_pair_178,
+  __bidiClass_pair_179,
+  __bidiClass_pair_17a,
+  __bidiClass_pair_17b,
+  __bidiClass_pair_17c,
+  __bidiClass_pair_17d,
+  __bidiClass_pair_17e,
+  __bidiClass_pair_17f,
+  __bidiClass_pair_17g,
+  __bidiClass_pair_17h,
+  __bidiClass_pair_17i,
+  __bidiClass_pair_17j,
+  __bidiClass_pair_17k,
+  __bidiClass_pair_17l,
+  __bidiClass_pair_17m,
+  __bidiClass_pair_17n,
+  __bidiClass_pair_17o,
+  __bidiClass_pair_17p,
+  __bidiClass_pair_17q,
+  __bidiClass_pair_17r,
+  __bidiClass_pair_17s,
+  __bidiClass_pair_17t,
+  __bidiClass_pair_17u,
+  __bidiClass_pair_17v,
+  __bidiClass_pair_17w,
+  __bidiClass_pair_17x,
+  __bidiClass_pair_17y,
+  __bidiClass_pair_17z,
+  __bidiClass_pair_180,
+  __bidiClass_pair_181,
+  __bidiClass_pair_182,
+  __bidiClass_pair_183,
+  __bidiClass_pair_184,
+  __bidiClass_pair_185,
+  __bidiClass_pair_186,
+  __bidiClass_pair_187,
+  __bidiClass_pair_188,
+  __bidiClass_pair_189,
+  __bidiClass_pair_18a,
+  __bidiClass_pair_18b,
+  __bidiClass_pair_18c,
+  __bidiClass_pair_18d,
+  __bidiClass_pair_18e,
+  __bidiClass_pair_18f,
+  __bidiClass_pair_18g,
+  __bidiClass_pair_18h,
+  __bidiClass_pair_18i,
+  __bidiClass_pair_18j,
+  __bidiClass_pair_18k,
+  __bidiClass_pair_18l,
+  __bidiClass_pair_18m,
+  __bidiClass_pair_18n,
+  __bidiClass_pair_18o,
+  __bidiClass_pair_18p,
+  __bidiClass_pair_18q,
+  __bidiClass_pair_18r,
+  __bidiClass_pair_18s,
+  __bidiClass_pair_18t,
+  __bidiClass_pair_18u,
+  __bidiClass_pair_18v,
+  __bidiClass_pair_18w,
+  __bidiClass_pair_18x,
+  __bidiClass_pair_18y,
+  __bidiClass_pair_18z,
+  __bidiClass_pair_190,
+  __bidiClass_pair_191,
+  __bidiClass_pair_192,
+  __bidiClass_pair_193,
+  __bidiClass_pair_194,
+  __bidiClass_pair_195,
+  __bidiClass_pair_196,
+  __bidiClass_pair_197,
+  __bidiClass_pair_198,
+  __bidiClass_pair_199,
+  __bidiClass_pair_19a,
+  __bidiClass_pair_19b,
+  __bidiClass_pair_19c,
+  __bidiClass_pair_19d,
+  __bidiClass_pair_19e,
+  __bidiClass_pair_19f,
+  __bidiClass_pair_19g,
+  __bidiClass_pair_19h,
+  __bidiClass_pair_19i,
+  __bidiClass_pair_19j,
+  __bidiClass_pair_19k,
+  __bidiClass_pair_19l,
+  __bidiClass_pair_19m,
+  __bidiClass_pair_19n,
+  __bidiClass_pair_19o,
+  __bidiClass_pair_19p,
+  __bidiClass_pair_19q,
+  __bidiClass_pair_19r,
+  __bidiClass_pair_19s,
+  __bidiClass_pair_19t,
+  __bidiClass_pair_19u,
+  __bidiClass_pair_19v,
+  __bidiClass_pair_19w,
+  __bidiClass_pair_19x,
+  __bidiClass_pair_19y,
+  __bidiClass_pair_19z,
+  __bidiClass_pair_1a0,
+  __bidiClass_pair_1a1,
+  __bidiClass_pair_1a2,
+  __bidiClass_pair_1a3,
+  __bidiClass_pair_1a4,
+  __bidiClass_pair_1a5,
+  __bidiClass_pair_1a6,
+  __bidiClass_pair_1a7,
+  __bidiClass_pair_1a8,
+  __bidiClass_pair_1a9,
+  __bidiClass_pair_1aa,
+  __bidiClass_pair_1ab,
+  __bidiClass_pair_1ac,
+  __bidiClass_pair_1ad,
+  __bidiClass_pair_1ae,
+  __bidiClass_pair_1af,
+  __bidiClass_pair_1ag,
+  __bidiClass_pair_1ah,
+  __bidiClass_pair_1ai,
+  __bidiClass_pair_1aj,
+  __bidiClass_pair_1ak,
+  __bidiClass_pair_1al,
+  __bidiClass_pair_1am,
+  __bidiClass_pair_1an,
+  __bidiClass_pair_1ao,
+  __bidiClass_pair_1ap,
+  __bidiClass_pair_1aq,
+  __bidiClass_pair_1ar,
+  __bidiClass_pair_1as,
+  __bidiClass_pair_1at,
+  __bidiClass_pair_1au,
+  __bidiClass_pair_1av,
+  __bidiClass_pair_1aw,
+  __bidiClass_pair_1ax,
+  __bidiClass_pair_1ay,
+  __bidiClass_pair_1az,
+  __bidiClass_pair_1b0,
+  __bidiClass_pair_1b1,
+  __bidiClass_pair_1b2,
+  __bidiClass_pair_1b3,
+  __bidiClass_pair_1b4,
+  __bidiClass_pair_1b5,
+  __bidiClass_pair_1b6,
+  __bidiClass_pair_1b7,
+  __bidiClass_pair_1b8,
+  __bidiClass_pair_1b9,
+  __bidiClass_pair_1ba,
+  __bidiClass_pair_1bb,
+  __bidiClass_pair_1bc,
+  __bidiClass_pair_1bd,
+  __bidiClass_pair_1be,
+  __bidiClass_pair_1bf,
+  __bidiClass_pair_1bg,
+  __bidiClass_pair_1bh,
+  __bidiClass_pair_1bi,
+  __bidiClass_pair_1bj,
+  __bidiClass_pair_1bk,
+  __bidiClass_pair_1bl,
+  __bidiClass_pair_1bm,
+  __bidiClass_pair_1bn,
+  __bidiClass_pair_1bo,
+  __bidiClass_pair_1bp,
+  __bidiClass_pair_1bq,
+  __bidiClass_pair_1br,
+  __bidiClass_pair_1bs,
+  __bidiClass_pair_1bt,
+  __bidiClass_pair_1bu,
+  __bidiClass_pair_1bv,
+  __bidiClass_pair_1bw,
+  __bidiClass_pair_1bx,
+  __bidiClass_pair_1by,
+  __bidiClass_pair_1bz,
+  __bidiClass_pair_1c0,
+  __bidiClass_pair_1c1,
+  __bidiClass_pair_1c2,
+  __bidiClass_pair_1c3,
+  __bidiClass_pair_1c4,
+  __bidiClass_pair_1c5,
+  __bidiClass_pair_1c6,
+  __bidiClass_pair_1c7,
+  __bidiClass_pair_1c8,
+  __bidiClass_pair_1c9,
+  __bidiClass_pair_1ca,
+  __bidiClass_pair_1cb,
+  __bidiClass_pair_1cc,
+  __bidiClass_pair_1cd,
+  __bidiClass_pair_1ce,
+  __bidiClass_pair_1cf,
+  __bidiClass_pair_1cg,
+  __bidiClass_pair_1ch,
+  __bidiClass_pair_1ci,
+  __bidiClass_pair_1cj,
+  __bidiClass_pair_1ck,
+  __bidiClass_pair_1cl,
+  __bidiClass_pair_1cm,
+  __bidiClass_pair_1cn,
+  __bidiClass_pair_1co,
+  __bidiClass_pair_1cp,
+  __bidiClass_pair_1cq,
+  __bidiClass_pair_1cr,
+  __bidiClass_pair_1cs,
+  __bidiClass_pair_1ct,
+  __bidiClass_pair_1cu,
+  __bidiClass_pair_1cv,
+  __bidiClass_pair_1cw,
+  __bidiClass_pair_1cx,
+  __bidiClass_pair_1cy,
+  __bidiClass_pair_1cz,
+  __bidiClass_pair_1d0,
+  __bidiClass_pair_1d1,
+  __bidiClass_pair_1d2,
+  __bidiClass_pair_1d3,
+  __bidiClass_pair_1d4,
+  __bidiClass_pair_1d5,
+  __bidiClass_pair_1d6,
+  __bidiClass_pair_1d7,
+  __bidiClass_pair_1d8,
+  __bidiClass_pair_1d9,
+  __bidiClass_pair_1da,
+  __bidiClass_pair_1db,
+  __bidiClass_pair_1dc,
+  __bidiClass_pair_1dd,
+  __bidiClass_pair_1de,
+  __bidiClass_pair_1df,
+  __bidiClass_pair_1dg,
+  __bidiClass_pair_1dh,
+  __bidiClass_pair_1di,
+  __bidiClass_pair_1dj,
+  __bidiClass_pair_1dk,
+  __bidiClass_pair_1dl,
+  __bidiClass_pair_1dm,
+  __bidiClass_pair_1dn,
+  __bidiClass_pair_1do,
+  __bidiClass_pair_1dp,
+  __bidiClass_pair_1dq,
+  __bidiClass_pair_1dr,
+  __bidiClass_pair_1ds,
+  __bidiClass_pair_1dt,
+  __bidiClass_pair_1du,
+  __bidiClass_pair_1dv,
+  __bidiClass_pair_1dw,
+  __bidiClass_pair_1dx,
+  __bidiClass_pair_1dy,
+  __bidiClass_pair_1dz,
+  __bidiClass_pair_1e0,
+  __bidiClass_pair_1e1,
+  __bidiClass_pair_1e2,
+  __bidiClass_pair_1e3,
+  __bidiClass_pair_1e4,
+  __bidiClass_pair_1e5,
+  __bidiClass_pair_1e6,
+  __bidiClass_pair_1e7,
+  __bidiClass_pair_1e8,
+  __bidiClass_pair_1e9,
+  __bidiClass_pair_1ea,
+  __bidiClass_pair_1eb,
+  __bidiClass_pair_1ec,
+  __bidiClass_pair_1ed,
+  __bidiClass_pair_1ee,
+  __bidiClass_pair_1ef,
+  __bidiClass_pair_1eg,
+  __bidiClass_pair_1eh,
+  __bidiClass_pair_1ei,
+  __bidiClass_pair_1ej,
+  __bidiClass_pair_1ek,
+  __bidiClass_pair_1el,
+  __bidiClass_pair_1em,
+  __bidiClass_pair_1en,
+  __bidiClass_pair_1eo,
+  __bidiClass_pair_1ep,
+  __bidiClass_pair_1eq,
+  __bidiClass_pair_1er,
+  __bidiClass_pair_1es,
+  __bidiClass_pair_1et,
+  __bidiClass_pair_1eu,
+  __bidiClass_pair_1ev,
+  __bidiClass_pair_1ew,
+  __bidiClass_pair_1ex,
+  __bidiClass_pair_1ey,
+  __bidiClass_pair_1ez,
+  __bidiClass_pair_1f0,
+  __bidiClass_pair_1f1,
+  __bidiClass_pair_1f2,
+  __bidiClass_pair_1f3,
+  __bidiClass_pair_1f4,
+  __bidiClass_pair_1f5,
+  __bidiClass_pair_1f6,
+  __bidiClass_pair_1f7,
+  __bidiClass_pair_1f8,
+  __bidiClass_pair_1f9,
+  __bidiClass_pair_1fa,
+  __bidiClass_pair_1fb,
+  __bidiClass_pair_1fc,
+  __bidiClass_pair_1fd,
+  __bidiClass_pair_1fe,
+  __bidiClass_pair_1ff,
+  __bidiClass_pair_1fg,
+  __bidiClass_pair_1fh,
+  __bidiClass_pair_1fi,
+  __bidiClass_pair_1fj,
+  __bidiClass_pair_1fk,
+  __bidiClass_pair_1fl,
+  __bidiClass_pair_1fm,
+  __bidiClass_pair_1fn,
+  __bidiClass_pair_1fo,
+  __bidiClass_pair_1fp,
+  __bidiClass_pair_1fq,
+  __bidiClass_pair_1fr,
+  __bidiClass_pair_1fs,
+  __bidiClass_pair_1ft,
+  __bidiClass_pair_1fu,
+  __bidiClass_pair_1fv,
+  __bidiClass_pair_1fw,
+  __bidiClass_pair_1fx,
+  __bidiClass_pair_1fy,
+  __bidiClass_pair_1fz,
+  __bidiClass_pair_1g0,
+  __bidiClass_pair_1g1,
+  __bidiClass_pair_1g2,
+  __bidiClass_pair_1g3,
+  __bidiClass_pair_1g4,
+  __bidiClass_pair_1g5,
+  __bidiClass_pair_1g6,
+  __bidiClass_pair_1g7,
+  __bidiClass_pair_1g8,
+  __bidiClass_pair_1g9,
+  __bidiClass_pair_1ga,
+  __bidiClass_pair_1gb,
+  __bidiClass_pair_1gc,
+  __bidiClass_pair_1gd,
+  __bidiClass_pair_1ge,
+  __bidiClass_pair_1gf,
+  __bidiClass_pair_1gg,
+  __bidiClass_pair_1gh,
+  __bidiClass_pair_1gi,
+  __bidiClass_pair_1gj,
+  __bidiClass_pair_1gk,
+  __bidiClass_pair_1gl,
+  __bidiClass_pair_1gm,
+  __bidiClass_pair_1gn,
+  __bidiClass_pair_1go,
+  __bidiClass_pair_1gp,
+  __bidiClass_pair_1gq,
+  __bidiClass_pair_1gr,
+  __bidiClass_pair_1gs,
+  __bidiClass_pair_1gt,
+  __bidiClass_pair_1gu,
+  __bidiClass_pair_1gv,
+  __bidiClass_pair_1gw,
+  __bidiClass_pair_1gx,
+  __bidiClass_pair_1gy,
+  __bidiClass_pair_1gz,
+  __bidiClass_pair_1h0,
+  __bidiClass_pair_1h1,
+  __bidiClass_pair_1h2,
+  __bidiClass_pair_1h3,
+  __bidiClass_pair_1h4,
+  __bidiClass_pair_1h5,
+  __bidiClass_pair_1h6,
+  __bidiClass_pair_1h7,
+  __bidiClass_pair_1h8,
+  __bidiClass_pair_1h9,
+  __bidiClass_pair_1ha,
+  __bidiClass_pair_1hb,
+  __bidiClass_pair_1hc,
+  __bidiClass_pair_1hd,
+  __bidiClass_pair_1he,
+  __bidiClass_pair_1hf,
+  __bidiClass_pair_1hg,
+  __bidiClass_pair_1hh,
+  __bidiClass_pair_1hi,
+  __bidiClass_pair_1hj,
+  __bidiClass_pair_1hk,
+  __bidiClass_pair_1hl,
+  __bidiClass_pair_1hm,
+  __bidiClass_pair_1hn,
+  __bidiClass_pair_1ho,
+  __bidiClass_pair_1hp,
+  __bidiClass_pair_1hq,
+  __bidiClass_pair_1hr,
+  __bidiClass_pair_1hs,
+  __bidiClass_pair_1ht,
+  __bidiClass_pair_1hu,
+  __bidiClass_pair_1hv,
+  __bidiClass_pair_1hw,
+  __bidiClass_pair_1hx,
+  __bidiClass_pair_1hy,
+  __bidiClass_pair_1hz,
+  __bidiClass_pair_1i0,
+  __bidiClass_pair_1i1,
+  __bidiClass_pair_1i2,
+  __bidiClass_pair_1i3,
+  __bidiClass_pair_1i4,
+  __bidiClass_pair_1i5,
+  __bidiClass_pair_1i6,
+  __bidiClass_pair_1i7,
+  __bidiClass_pair_1i8,
+  __bidiClass_pair_1i9,
+  __bidiClass_pair_1ia,
+  __bidiClass_pair_1ib,
+  __bidiClass_pair_1ic,
+  __bidiClass_pair_1id,
+  __bidiClass_pair_1ie,
+  __bidiClass_pair_1if,
+  __bidiClass_pair_1ig,
+  __bidiClass_pair_1ih,
+  __bidiClass_pair_1ii,
+  __bidiClass_pair_1ij,
+  __bidiClass_pair_1ik,
+  __bidiClass_pair_1il,
+  __bidiClass_pair_1im,
+  __bidiClass_pair_1in,
+  __bidiClass_pair_1io,
+  __bidiClass_pair_1ip,
+  __bidiClass_pair_1iq,
+  __bidiClass_pair_1ir,
+  __bidiClass_pair_1is,
+  __bidiClass_pair_1it,
+  __bidiClass_pair_1iu,
+  __bidiClass_pair_1iv,
+  __bidiClass_pair_1iw,
+  __bidiClass_pair_1ix,
+  __bidiClass_pair_1iy,
+  __bidiClass_pair_1iz,
+  __bidiClass_pair_1j0,
+  __bidiClass_pair_1j1,
+  __bidiClass_pair_1j2,
+  __bidiClass_pair_1j3,
+  __bidiClass_pair_1j4,
+  __bidiClass_pair_1j5,
+  __bidiClass_pair_1j6,
+  __bidiClass_pair_1j7,
+  __bidiClass_pair_1j8,
+  __bidiClass_pair_1j9,
+  __bidiClass_pair_1ja,
+  __bidiClass_pair_1jb,
+  __bidiClass_pair_1jc,
+  __bidiClass_pair_1jd,
+  __bidiClass_pair_1je,
+  __bidiClass_pair_1jf,
+  __bidiClass_pair_1jg,
+  __bidiClass_pair_1jh,
+  __bidiClass_pair_1ji,
+  __bidiClass_pair_1jj,
+  __bidiClass_pair_1jk,
+  __bidiClass_pair_1jl,
+  __bidiClass_pair_1jm,
+  __bidiClass_pair_1jn,
+  __bidiClass_pair_1jo,
+  __bidiClass_pair_1jp,
+  __bidiClass_pair_1jq,
+  __bidiClass_pair_1jr,
+  __bidiClass_pair_1js,
+  __bidiClass_pair_1jt,
+  __bidiClass_pair_1ju,
+  __bidiClass_pair_1jv,
+  __bidiClass_pair_1jw,
+  __bidiClass_pair_1jx,
+  __bidiClass_pair_1jy,
+  __bidiClass_pair_1jz,
+  __bidiClass_pair_1k0,
+  __bidiClass_pair_1k1,
+  __bidiClass_pair_1k2,
+  __bidiClass_pair_1k3,
+  __bidiClass_pair_1k4,
+  __bidiClass_pair_1k5,
+  __bidiClass_pair_1k6,
+  __bidiClass_pair_1k7,
+  __bidiClass_pair_1k8,
+  __bidiClass_pair_1k9,
+  __bidiClass_pair_1ka,
+  __bidiClass_pair_1kb,
+  __bidiClass_pair_1kc,
+  __bidiClass_pair_1kd,
+  __bidiClass_pair_1ke,
+  __bidiClass_pair_1kf,
+  __bidiClass_pair_1kg,
+  __bidiClass_pair_1kh,
+  __bidiClass_pair_1ki,
+  __bidiClass_pair_1kj,
+  __bidiClass_pair_1kk,
+  __bidiClass_pair_1kl,
+  __bidiClass_pair_1km,
+  __bidiClass_pair_1kn,
+  __bidiClass_pair_1ko,
+  __bidiClass_pair_1kp,
+  __bidiClass_pair_1kq,
+  __bidiClass_pair_1kr,
+  __bidiClass_pair_1ks,
+  __bidiClass_pair_1kt,
+  __bidiClass_pair_1ku,
+  __bidiClass_pair_1kv,
+  __bidiClass_pair_1kw,
+  __bidiClass_pair_1kx,
+  __bidiClass_pair_1ky,
+  __bidiClass_pair_1kz,
+  __bidiClass_pair_1l0,
+  __bidiClass_pair_1l1,
+  __bidiClass_pair_1l2,
+  __bidiClass_pair_1l3,
+  __bidiClass_pair_1l4,
+  __bidiClass_pair_1l5,
+  __bidiClass_pair_1l6,
+  __bidiClass_pair_1l7,
+  __bidiClass_pair_1l8,
+  __bidiClass_pair_1l9,
+  __bidiClass_pair_1la,
+  __bidiClass_pair_1lb,
+  __bidiClass_pair_1lc,
+  __bidiClass_pair_1ld,
+  __bidiClass_pair_1le,
+  __bidiClass_pair_1lf,
+  __bidiClass_pair_1lg,
+  __bidiClass_pair_1lh,
+  __bidiClass_pair_1li,
+  __bidiClass_pair_1lj,
+  __bidiClass_pair_1lk,
+  __bidiClass_pair_1ll,
+  __bidiClass_pair_1lm,
+  __bidiClass_pair_1ln,
+  __bidiClass_pair_1lo,
+  __bidiClass_pair_1lp,
+  __bidiClass_pair_1lq,
+  __bidiClass_pair_1lr,
+  __bidiClass_pair_1ls,
+  __bidiClass_pair_1lt,
+  __bidiClass_pair_1lu,
+  __bidiClass_pair_1lv,
+  __bidiClass_pair_1lw,
+  __bidiClass_pair_1lx,
+  __bidiClass_pair_1ly,
+  __bidiClass_pair_1lz,
+  __bidiClass_pair_1m0,
+  __bidiClass_pair_1m1,
+  __bidiClass_pair_1m2,
+  __bidiClass_pair_1m3,
+  __bidiClass_pair_1m4,
+  __bidiClass_pair_1m5,
+  __bidiClass_pair_1m6,
+  __bidiClass_pair_1m7,
+  __bidiClass_pair_1m8,
+  __bidiClass_pair_1m9,
+  __bidiClass_pair_1ma,
+  __bidiClass_pair_1mb,
+  __bidiClass_pair_1mc,
+  __bidiClass_pair_1md,
+  __bidiClass_pair_1me,
+  __bidiClass_pair_1mf,
+  __bidiClass_pair_1mg,
+  __bidiClass_pair_1mh,
+  __bidiClass_pair_1mi,
+  __bidiClass_pair_1mj,
+  __bidiClass_pair_1mk,
+  __bidiClass_pair_1ml,
+  __bidiClass_pair_1mm,
+  __bidiClass_pair_1mn,
+  __bidiClass_pair_1mo,
+  __bidiClass_pair_1mp,
+  __bidiClass_pair_1mq,
+  __bidiClass_pair_1mr,
+  __bidiClass_pair_1ms,
+  __bidiClass_pair_1mt,
+  __bidiClass_pair_1mu,
+  __bidiClass_pair_1mv,
+  __bidiClass_pair_1mw,
+  __bidiClass_pair_1mx,
+  __bidiClass_pair_1my,
+  __bidiClass_pair_1mz,
+  __bidiClass_pair_1n0,
+  __bidiClass_pair_1n1,
+  __bidiClass_pair_1n2,
+  __bidiClass_pair_1n3,
+  __bidiClass_pair_1n4,
+  __bidiClass_pair_1n5,
+  __bidiClass_pair_1n6,
+  __bidiClass_pair_1n7,
+  __bidiClass_pair_1n8,
+  __bidiClass_pair_1n9,
+  __bidiClass_pair_1na,
+  __bidiClass_pair_1nb,
+  __bidiClass_pair_1nc,
+  __bidiClass_pair_1nd,
+  __bidiClass_pair_1ne,
+  __bidiClass_pair_1nf,
+  __bidiClass_pair_1ng,
+  __bidiClass_pair_1nh,
+  __bidiClass_pair_1ni,
+  __bidiClass_pair_1nj,
+  __bidiClass_pair_1nk,
+  __bidiClass_pair_1nl,
+  __bidiClass_pair_1nm,
+  __bidiClass_pair_1nn,
+  __bidiClass_pair_1no,
+  __bidiClass_pair_1np,
+  __bidiClass_pair_1nq,
+  __bidiClass_pair_1nr,
+  __bidiClass_pair_1ns,
+  __bidiClass_pair_1nt,
+  __bidiClass_pair_1nu,
+  __bidiClass_pair_1nv,
+  __bidiClass_pair_1nw,
+  __bidiClass_pair_1nx,
+  __bidiClass_pair_1ny,
+  __bidiClass_pair_1nz,
+  __bidiClass_pair_1o0,
+  __bidiClass_pair_1o1,
+  __bidiClass_pair_1o2,
+  __bidiClass_pair_1o3,
+  __bidiClass_pair_1o4,
+  __bidiClass_pair_1o5,
+  __bidiClass_pair_1o6,
+  __bidiClass_pair_1o7,
+  __bidiClass_pair_1o8,
+  __bidiClass_pair_1o9,
+  __bidiClass_pair_1oa,
+  __bidiClass_pair_1ob,
+  __bidiClass_pair_1oc,
+  __bidiClass_pair_1od,
+  __bidiClass_pair_1oe,
+  __bidiClass_pair_1of,
+  __bidiClass_pair_1og,
+  __bidiClass_pair_1oh,
+  __bidiClass_pair_1oi,
+  __bidiClass_pair_1oj,
+  __bidiClass_pair_1ok,
+  __bidiClass_pair_1ol,
+  __bidiClass_pair_1om,
+  __bidiClass_pair_1on,
+  __bidiClass_pair_1oo,
+  __bidiClass_pair_1op,
+  __bidiClass_pair_1oq,
+  __bidiClass_pair_1or,
+  __bidiClass_pair_1os,
+  __bidiClass_pair_1ot,
+  __bidiClass_pair_1ou,
+  __bidiClass_pair_1ov,
+  __bidiClass_pair_1ow,
+  __bidiClass_pair_1ox,
+  __bidiClass_pair_1oy,
+  __bidiClass_pair_1oz,
+  __bidiClass_pair_1p0,
+  __bidiClass_pair_1p1,
+  __bidiClass_pair_1p2,
+  __bidiClass_pair_1p3,
+  __bidiClass_pair_1p4,
+  __bidiClass_pair_1p5,
+  __bidiClass_pair_1p6,
+  __bidiClass_pair_1p7,
+  __bidiClass_pair_1p8,
+  __bidiClass_pair_1p9,
+  __bidiClass_pair_1pa,
+  __bidiClass_pair_1pb,
+  __bidiClass_pair_1pc,
+  __bidiClass_pair_1pd,
+  __bidiClass_pair_1pe,
+  __bidiClass_pair_1pf,
+  __bidiClass_pair_1pg,
+  __bidiClass_pair_1ph,
+  __bidiClass_pair_1pi,
+  __bidiClass_pair_1pj,
+  __bidiClass_pair_1pk,
+  __bidiClass_pair_1pl,
+  __bidiClass_pair_1pm,
+  __bidiClass_pair_1pn,
+  __bidiClass_pair_1po,
+  __bidiClass_pair_1pp,
+  __bidiClass_pair_1pq,
+  __bidiClass_pair_1pr,
+  __bidiClass_pair_1ps,
+  __bidiClass_pair_1pt,
+  __bidiClass_pair_1pu,
+  __bidiClass_pair_1pv,
+  __bidiClass_pair_1pw,
+  __bidiClass_pair_1px,
+  __bidiClass_pair_1py,
+  __bidiClass_pair_1pz,
+  __bidiClass_pair_1q0,
+  __bidiClass_pair_1q1,
+  __bidiClass_pair_1q2,
+  __bidiClass_pair_1q3,
+  __bidiClass_pair_1q4,
+  __bidiClass_pair_1q5,
+  __bidiClass_pair_1q6,
+  __bidiClass_pair_1q7,
+  __bidiClass_pair_1q8,
+  __bidiClass_pair_1q9,
+  __bidiClass_pair_1qa,
+  __bidiClass_pair_1qb,
+  __bidiClass_pair_1qc,
+  __bidiClass_pair_1qd,
+  __bidiClass_pair_1qe,
+  __bidiClass_pair_1qf,
+  __bidiClass_pair_1qg,
+  __bidiClass_pair_1qh,
+  __bidiClass_pair_1qi,
+  __bidiClass_pair_1qj,
+  __bidiClass_pair_1qk,
+  __bidiClass_pair_1ql,
+  __bidiClass_pair_1qm,
+  __bidiClass_pair_1qn,
+  __bidiClass_pair_1qo,
+  __bidiClass_pair_1qp,
+  __bidiClass_pair_1qq,
+  __bidiClass_pair_1qr,
+  __bidiClass_pair_1qs,
+  __bidiClass_pair_1qt,
+  __bidiClass_pair_1qu,
+  __bidiClass_pair_1qv,
+  __bidiClass_pair_1qw,
+  __bidiClass_pair_1qx,
+  __bidiClass_pair_1qy,
+  __bidiClass_pair_1qz,
+  __bidiClass_pair_1r0,
+  __bidiClass_pair_1r1,
+  __bidiClass_pair_1r2,
+  __bidiClass_pair_1r3,
+  __bidiClass_pair_1r4,
+  __bidiClass_pair_1r5,
+  __bidiClass_pair_1r6,
+  __bidiClass_pair_1r7,
+  __bidiClass_pair_1r8,
+  __bidiClass_pair_1r9,
+  __bidiClass_pair_1ra,
+  __bidiClass_pair_1rb,
+  __bidiClass_pair_1rc,
+  __bidiClass_pair_1rd,
+  __bidiClass_pair_1re,
+  __bidiClass_pair_1rf,
+  __bidiClass_pair_1rg,
+  __bidiClass_pair_1rh,
+  __bidiClass_pair_1ri,
+  __bidiClass_pair_1rj,
+  __bidiClass_pair_1rk,
+  __bidiClass_pair_1rl,
+  __bidiClass_pair_1rm,
+  __bidiClass_pair_1rn,
+  __bidiClass_pair_1ro,
+  __bidiClass_pair_1rp,
+  __bidiClass_pair_1rq,
+  __bidiClass_pair_1rr,
+  __bidiClass_pair_1rs,
+  __bidiClass_pair_1rt,
+  __bidiClass_pair_1ru,
+  __bidiClass_pair_1rv,
+  __bidiClass_pair_1rw,
+  __bidiClass_pair_1rx,
+  __bidiClass_pair_1ry,
+  __bidiClass_pair_1rz,
+  __bidiClass_pair_1s0,
+  __bidiClass_pair_1s1,
+  __bidiClass_pair_1s2,
+  __bidiClass_pair_1s3,
+  __bidiClass_pair_1s4,
+  __bidiClass_pair_1s5,
+  __bidiClass_pair_1s6,
+  __bidiClass_pair_1s7,
+  __bidiClass_pair_1s8,
+  __bidiClass_pair_1s9,
+  __bidiClass_pair_1sa,
+  __bidiClass_pair_1sb,
+  __bidiClass_pair_1sc,
+  __bidiClass_pair_1sd,
+  __bidiClass_pair_1se,
+  __bidiClass_pair_1sf,
+  __bidiClass_pair_1sg,
+  __bidiClass_pair_1sh,
+  __bidiClass_pair_1si,
+  __bidiClass_pair_1sj,
+  __bidiClass_pair_1sk,
+  __bidiClass_pair_1sl,
+  __bidiClass_pair_1sm,
+  __bidiClass_pair_1sn,
+  __bidiClass_pair_1so,
+  __bidiClass_pair_1sp,
+  __bidiClass_pair_1sq,
+  __bidiClass_pair_1sr,
+  __bidiClass_pair_1ss,
+  __bidiClass_pair_1st,
+  __bidiClass_pair_1su,
+  __bidiClass_pair_1sv,
+  __bidiClass_pair_1sw,
+  __bidiClass_pair_1sx,
+  __bidiClass_pair_1sy,
+  __bidiClass_pair_1sz,
+  __bidiClass_pair_1t0,
+  __bidiClass_pair_1t1,
+  __bidiClass_pair_1t2,
+  __bidiClass_pair_1t3,
+  __bidiClass_pair_1t4,
+  __bidiClass_pair_1t5,
+  __bidiClass_pair_1t6,
+  __bidiClass_pair_1t7,
+  __bidiClass_pair_1t8,
+  __bidiClass_pair_1t9,
+  __bidiClass_pair_1ta,
+  __bidiClass_pair_1tb,
+  __bidiClass_pair_1tc,
+  __bidiClass_pair_1td,
+  __bidiClass_pair_1te,
+  __bidiClass_pair_1tf,
+  __bidiClass_pair_1tg,
+  __bidiClass_pair_1th,
+  __bidiClass_pair_1ti,
+  __bidiClass_pair_1tj,
+  __bidiClass_pair_1tk,
+  __bidiClass_pair_1tl,
+  __bidiClass_pair_1tm,
+  __bidiClass_pair_1tn,
+  __bidiClass_pair_1to,
+  __bidiClass_pair_1tp,
+  __bidiClass_pair_1tq,
+  __bidiClass_pair_1tr,
+  __bidiClass_pair_1ts,
+  __bidiClass_pair_1tt,
+  __bidiClass_pair_1tu,
+  __bidiClass_pair_1tv,
+  __bidiClass_pair_1tw,
+  __bidiClass_pair_1tx,
+  __bidiClass_pair_1ty,
+  __bidiClass_pair_1tz,
+  __bidiClass_pair_1u0,
+  __bidiClass_pair_1u1,
+  __bidiClass_pair_1u2,
+  __bidiClass_pair_1u3,
+  __bidiClass_pair_1u4,
+  __bidiClass_pair_1u5,
+  __bidiClass_pair_1u6,
+  __bidiClass_pair_1u7,
+  __bidiClass_pair_1u8,
+  __bidiClass_pair_1u9,
+  __bidiClass_pair_1ua,
+  __bidiClass_pair_1ub,
+  __bidiClass_pair_1uc,
+  __bidiClass_pair_1ud,
+  __bidiClass_pair_1ue,
+  __bidiClass_pair_1uf,
+  __bidiClass_pair_1ug,
+  __bidiClass_pair_1uh,
+  __bidiClass_pair_1ui,
+  __bidiClass_pair_1uj,
+  __bidiClass_pair_1uk,
+  __bidiClass_pair_1ul,
+  __bidiClass_pair_1um,
+  __bidiClass_pair_1un,
+  __bidiClass_pair_1uo,
+  __bidiClass_pair_1up,
+  __bidiClass_pair_1uq,
+  __bidiClass_pair_1ur,
+  __bidiClass_pair_1us,
+  __bidiClass_pair_1ut,
+  __bidiClass_pair_1uu,
+  __bidiClass_pair_1uv,
+  __bidiClass_pair_1uw,
+  __bidiClass_pair_1ux,
+  __bidiClass_pair_1uy,
+  __bidiClass_pair_1uz,
+  __bidiClass_pair_1v0,
+  __bidiClass_pair_1v1,
+  __bidiClass_pair_1v2,
+  __bidiClass_pair_1v3,
+  __bidiClass_pair_1v4,
+  __bidiClass_pair_1v5,
+  __bidiClass_pair_1v6,
+  __bidiClass_pair_1v7,
+  __bidiClass_pair_1v8,
+  __bidiClass_pair_1v9,
+  __bidiClass_pair_1va,
+  __bidiClass_pair_1vb,
+  __bidiClass_pair_1vc,
+  __bidiClass_pair_1vd,
+  __bidiClass_pair_1ve,
+  __bidiClass_pair_1vf,
+  __bidiClass_pair_1vg,
+  __bidiClass_pair_1vh,
+  __bidiClass_pair_1vi,
+  __bidiClass_pair_1vj,
+  __bidiClass_pair_1vk,
+  __bidiClass_pair_1vl,
+  __bidiClass_pair_1vm,
+  __bidiClass_pair_1vn,
+  __bidiClass_pair_1vo,
+  __bidiClass_pair_1vp,
+  __bidiClass_pair_1vq,
+  __bidiClass_pair_1vr,
+  __bidiClass_pair_1vs,
+  __bidiClass_pair_1vt,
+  __bidiClass_pair_1vu,
+  __bidiClass_pair_1vv,
+  __bidiClass_pair_1vw,
+  __bidiClass_pair_1vx,
+  __bidiClass_pair_1vy,
+  __bidiClass_pair_1vz,
+  __bidiClass_pair_1w0,
+  __bidiClass_pair_1w1,
+  __bidiClass_pair_1w2,
+  __bidiClass_pair_1w3,
+  __bidiClass_pair_1w4,
+  __bidiClass_pair_1w5,
+  __bidiClass_pair_1w6,
+  __bidiClass_pair_1w7,
+  __bidiClass_pair_1w8,
+  __bidiClass_pair_1w9,
+  __bidiClass_pair_1wa,
+  __bidiClass_pair_1wb,
+  __bidiClass_pair_1wc,
+  __bidiClass_pair_1wd,
+  __bidiClass_pair_1we,
+  __bidiClass_pair_1wf,
+  __bidiClass_pair_1wg,
+  __bidiClass_pair_1wh,
+  __bidiClass_pair_1wi,
+  __bidiClass_pair_1wj,
+  __bidiClass_pair_1wk,
+  __bidiClass_pair_1wl,
+  __bidiClass_pair_1wm,
+  __bidiClass_pair_1wn,
+  __bidiClass_pair_1wo,
+  __bidiClass_pair_1wp,
+  __bidiClass_pair_1wq,
+  __bidiClass_pair_1wr,
+  __bidiClass_pair_1ws,
+  __bidiClass_pair_1wt,
+  __bidiClass_pair_1wu,
+  __bidiClass_pair_1wv,
+  __bidiClass_pair_1ww,
+  __bidiClass_pair_1wx,
+  __bidiClass_pair_1wy,
+  __bidiClass_pair_1wz,
+  __bidiClass_pair_1x0,
+  __bidiClass_pair_1x1,
+  __bidiClass_pair_1x2,
+  __bidiClass_pair_1x3,
+  __bidiClass_pair_1x4,
+  __bidiClass_pair_1x5,
+  __bidiClass_pair_1x6,
+  __bidiClass_pair_1x7,
+  __bidiClass_pair_1x8,
+  __bidiClass_pair_1x9,
+  __bidiClass_pair_1xa,
+  __bidiClass_pair_1xb,
+  __bidiClass_pair_1xc,
+  __bidiClass_pair_1xd,
+  __bidiClass_pair_1xe,
+  __bidiClass_pair_1xf,
+  __bidiClass_pair_1xg,
+  __bidiClass_pair_1xh,
+  __bidiClass_pair_1xi,
+  __bidiClass_pair_1xj,
+  __bidiClass_pair_1xk,
+  __bidiClass_pair_1xl,
+  __bidiClass_pair_1xm,
+  __bidiClass_pair_1xn,
+  __bidiClass_pair_1xo,
+  __bidiClass_pair_1xp,
+  __bidiClass_pair_1xq,
+  __bidiClass_pair_1xr,
+  __bidiClass_pair_1xs,
+  __bidiClass_pair_1xt,
+  __bidiClass_pair_1xu,
+  __bidiClass_pair_1xv,
+  __bidiClass_pair_1xw,
+  __bidiClass_pair_1xx,
+  __bidiClass_pair_1xy,
+  __bidiClass_pair_1xz,
+  __bidiClass_pair_1y0,
+  __bidiClass_pair_1y1,
+  __bidiClass_pair_1y2,
+  __bidiClass_pair_1y3,
+  __bidiClass_pair_1y4,
+  __bidiClass_pair_1y5,
+  __bidiClass_pair_1y6,
 ])
 private let __bidiClass_rangePair_0: _T2 = (0x0....0x8, .boundaryNeutral)
 private let __bidiClass_rangePair_1: _T2 = (0xe....0x1b, .boundaryNeutral)
-private let __bidiClass_rangePair_2: _T2 = (0x1c....0x1e, .paragraphSeparator)
-private let __bidiClass_rangePair_3: _T2 = (0x21....0x22, .otherNeutral)
-private let __bidiClass_rangePair_4: _T2 = (0x23....0x25, .europeanTerminator)
-private let __bidiClass_rangePair_5: _T2 = (0x26....0x2a, .otherNeutral)
-private let __bidiClass_rangePair_6: _T2 = (0x2e....0x2f, .commonSeparator)
-private let __bidiClass_rangePair_7: _T2 = (0x30....0x39, .europeanNumber)
-private let __bidiClass_rangePair_8: _T2 = (0x3b....0x40, .otherNeutral)
-private let __bidiClass_rangePair_9: _T2 = (0x41....0x5a, .leftToRight)
-private let __bidiClass_rangePair_a: _T2 = (0x5b....0x60, .otherNeutral)
-private let __bidiClass_rangePair_b: _T2 = (0x61....0x7a, .leftToRight)
-private let __bidiClass_rangePair_c: _T2 = (0x7b....0x7e, .otherNeutral)
-private let __bidiClass_rangePair_d: _T2 = (0x7f....0x84, .boundaryNeutral)
-private let __bidiClass_rangePair_e: _T2 = (0x86....0x9f, .boundaryNeutral)
-private let __bidiClass_rangePair_f: _T2 = (0xa2....0xa5, .europeanTerminator)
-private let __bidiClass_rangePair_g: _T2 = (0xa6....0xa9, .otherNeutral)
-private let __bidiClass_rangePair_h: _T2 = (0xab....0xac, .otherNeutral)
-private let __bidiClass_rangePair_i: _T2 = (0xae....0xaf, .otherNeutral)
-private let __bidiClass_rangePair_j: _T2 = (0xb0....0xb1, .europeanTerminator)
-private let __bidiClass_rangePair_k: _T2 = (0xb2....0xb3, .europeanNumber)
-private let __bidiClass_rangePair_l: _T2 = (0xb6....0xb8, .otherNeutral)
-private let __bidiClass_rangePair_m: _T2 = (0xbb....0xbf, .otherNeutral)
-private let __bidiClass_rangePair_n: _T2 = (0xc0....0xd6, .leftToRight)
-private let __bidiClass_rangePair_o: _T2 = (0xd8....0xf6, .leftToRight)
-private let __bidiClass_rangePair_p: _T2 = (0xf8....0x2b8, .leftToRight)
-private let __bidiClass_rangePair_q: _T2 = (0x2b9....0x2ba, .otherNeutral)
-private let __bidiClass_rangePair_r: _T2 = (0x2bb....0x2c1, .leftToRight)
-private let __bidiClass_rangePair_s: _T2 = (0x2c2....0x2cf, .otherNeutral)
-private let __bidiClass_rangePair_t: _T2 = (0x2d0....0x2d1, .leftToRight)
-private let __bidiClass_rangePair_u: _T2 = (0x2d2....0x2df, .otherNeutral)
-private let __bidiClass_rangePair_v: _T2 = (0x2e0....0x2e4, .leftToRight)
-private let __bidiClass_rangePair_w: _T2 = (0x2e5....0x2ed, .otherNeutral)
-private let __bidiClass_rangePair_x: _T2 = (0x2ef....0x2ff, .otherNeutral)
-private let __bidiClass_rangePair_y: _T2 = (0x300....0x36f, .nonspacingMark)
-private let __bidiClass_rangePair_z: _T2 = (0x370....0x373, .leftToRight)
-private let __bidiClass_rangePair_10: _T2 = (0x374....0x375, .otherNeutral)
-private let __bidiClass_rangePair_11: _T2 = (0x376....0x377, .leftToRight)
-private let __bidiClass_rangePair_12: _T2 = (0x37a....0x37d, .leftToRight)
-private let __bidiClass_rangePair_13: _T2 = (0x384....0x385, .otherNeutral)
-private let __bidiClass_rangePair_14: _T2 = (0x388....0x38a, .leftToRight)
-private let __bidiClass_rangePair_15: _T2 = (0x38e....0x3a1, .leftToRight)
-private let __bidiClass_rangePair_16: _T2 = (0x3a3....0x3f5, .leftToRight)
-private let __bidiClass_rangePair_17: _T2 = (0x3f7....0x482, .leftToRight)
-private let __bidiClass_rangePair_18: _T2 = (0x483....0x489, .nonspacingMark)
-private let __bidiClass_rangePair_19: _T2 = (0x48a....0x52f, .leftToRight)
-private let __bidiClass_rangePair_1a: _T2 = (0x531....0x556, .leftToRight)
-private let __bidiClass_rangePair_1b: _T2 = (0x559....0x589, .leftToRight)
-private let __bidiClass_rangePair_1c: _T2 = (0x58d....0x58e, .otherNeutral)
-private let __bidiClass_rangePair_1d: _T2 = (0x591....0x5bd, .nonspacingMark)
-private let __bidiClass_rangePair_1e: _T2 = (0x5c1....0x5c2, .nonspacingMark)
-private let __bidiClass_rangePair_1f: _T2 = (0x5c4....0x5c5, .nonspacingMark)
-private let __bidiClass_rangePair_1g: _T2 = (0x5c8....0x5ff, .rightToLeft)
-private let __bidiClass_rangePair_1h: _T2 = (0x600....0x605, .arabicNumber)
-private let __bidiClass_rangePair_1i: _T2 = (0x606....0x607, .otherNeutral)
-private let __bidiClass_rangePair_1j: _T2 = (0x609....0x60a, .europeanTerminator)
-private let __bidiClass_rangePair_1k: _T2 = (0x60e....0x60f, .otherNeutral)
-private let __bidiClass_rangePair_1l: _T2 = (0x610....0x61a, .nonspacingMark)
-private let __bidiClass_rangePair_1m: _T2 = (0x61b....0x64a, .arabicLetter)
-private let __bidiClass_rangePair_1n: _T2 = (0x64b....0x65f, .nonspacingMark)
-private let __bidiClass_rangePair_1o: _T2 = (0x660....0x669, .arabicNumber)
-private let __bidiClass_rangePair_1p: _T2 = (0x66b....0x66c, .arabicNumber)
-private let __bidiClass_rangePair_1q: _T2 = (0x66d....0x66f, .arabicLetter)
-private let __bidiClass_rangePair_1r: _T2 = (0x671....0x6d5, .arabicLetter)
-private let __bidiClass_rangePair_1s: _T2 = (0x6d6....0x6dc, .nonspacingMark)
-private let __bidiClass_rangePair_1t: _T2 = (0x6df....0x6e4, .nonspacingMark)
-private let __bidiClass_rangePair_1u: _T2 = (0x6e5....0x6e6, .arabicLetter)
-private let __bidiClass_rangePair_1v: _T2 = (0x6e7....0x6e8, .nonspacingMark)
-private let __bidiClass_rangePair_1w: _T2 = (0x6ea....0x6ed, .nonspacingMark)
-private let __bidiClass_rangePair_1x: _T2 = (0x6ee....0x6ef, .arabicLetter)
-private let __bidiClass_rangePair_1y: _T2 = (0x6f0....0x6f9, .europeanNumber)
-private let __bidiClass_rangePair_1z: _T2 = (0x6fa....0x710, .arabicLetter)
-private let __bidiClass_rangePair_20: _T2 = (0x712....0x72f, .arabicLetter)
-private let __bidiClass_rangePair_21: _T2 = (0x730....0x74a, .nonspacingMark)
-private let __bidiClass_rangePair_22: _T2 = (0x74b....0x7a5, .arabicLetter)
-private let __bidiClass_rangePair_23: _T2 = (0x7a6....0x7b0, .nonspacingMark)
-private let __bidiClass_rangePair_24: _T2 = (0x7b1....0x7bf, .arabicLetter)
-private let __bidiClass_rangePair_25: _T2 = (0x7c0....0x7ea, .rightToLeft)
-private let __bidiClass_rangePair_26: _T2 = (0x7eb....0x7f3, .nonspacingMark)
-private let __bidiClass_rangePair_27: _T2 = (0x7f4....0x7f5, .rightToLeft)
-private let __bidiClass_rangePair_28: _T2 = (0x7f6....0x7f9, .otherNeutral)
-private let __bidiClass_rangePair_29: _T2 = (0x7fa....0x7fc, .rightToLeft)
-private let __bidiClass_rangePair_2a: _T2 = (0x7fe....0x815, .rightToLeft)
-private let __bidiClass_rangePair_2b: _T2 = (0x816....0x819, .nonspacingMark)
-private let __bidiClass_rangePair_2c: _T2 = (0x81b....0x823, .nonspacingMark)
-private let __bidiClass_rangePair_2d: _T2 = (0x825....0x827, .nonspacingMark)
-private let __bidiClass_rangePair_2e: _T2 = (0x829....0x82d, .nonspacingMark)
-private let __bidiClass_rangePair_2f: _T2 = (0x82e....0x858, .rightToLeft)
-private let __bidiClass_rangePair_2g: _T2 = (0x859....0x85b, .nonspacingMark)
-private let __bidiClass_rangePair_2h: _T2 = (0x85c....0x85f, .rightToLeft)
-private let __bidiClass_rangePair_2i: _T2 = (0x860....0x86f, .arabicLetter)
-private let __bidiClass_rangePair_2j: _T2 = (0x870....0x89f, .rightToLeft)
-private let __bidiClass_rangePair_2k: _T2 = (0x8a0....0x8d2, .arabicLetter)
-private let __bidiClass_rangePair_2l: _T2 = (0x8d3....0x8e1, .nonspacingMark)
-private let __bidiClass_rangePair_2m: _T2 = (0x8e3....0x902, .nonspacingMark)
-private let __bidiClass_rangePair_2n: _T2 = (0x903....0x939, .leftToRight)
-private let __bidiClass_rangePair_2o: _T2 = (0x93d....0x940, .leftToRight)
-private let __bidiClass_rangePair_2p: _T2 = (0x941....0x948, .nonspacingMark)
-private let __bidiClass_rangePair_2q: _T2 = (0x949....0x94c, .leftToRight)
-private let __bidiClass_rangePair_2r: _T2 = (0x94e....0x950, .leftToRight)
-private let __bidiClass_rangePair_2s: _T2 = (0x951....0x957, .nonspacingMark)
-private let __bidiClass_rangePair_2t: _T2 = (0x958....0x961, .leftToRight)
-private let __bidiClass_rangePair_2u: _T2 = (0x962....0x963, .nonspacingMark)
-private let __bidiClass_rangePair_2v: _T2 = (0x964....0x980, .leftToRight)
-private let __bidiClass_rangePair_2w: _T2 = (0x982....0x983, .leftToRight)
-private let __bidiClass_rangePair_2x: _T2 = (0x985....0x98c, .leftToRight)
-private let __bidiClass_rangePair_2y: _T2 = (0x98f....0x990, .leftToRight)
-private let __bidiClass_rangePair_2z: _T2 = (0x993....0x9a8, .leftToRight)
-private let __bidiClass_rangePair_30: _T2 = (0x9aa....0x9b0, .leftToRight)
-private let __bidiClass_rangePair_31: _T2 = (0x9b6....0x9b9, .leftToRight)
-private let __bidiClass_rangePair_32: _T2 = (0x9bd....0x9c0, .leftToRight)
-private let __bidiClass_rangePair_33: _T2 = (0x9c1....0x9c4, .nonspacingMark)
-private let __bidiClass_rangePair_34: _T2 = (0x9c7....0x9c8, .leftToRight)
-private let __bidiClass_rangePair_35: _T2 = (0x9cb....0x9cc, .leftToRight)
-private let __bidiClass_rangePair_36: _T2 = (0x9dc....0x9dd, .leftToRight)
-private let __bidiClass_rangePair_37: _T2 = (0x9df....0x9e1, .leftToRight)
-private let __bidiClass_rangePair_38: _T2 = (0x9e2....0x9e3, .nonspacingMark)
-private let __bidiClass_rangePair_39: _T2 = (0x9e6....0x9f1, .leftToRight)
-private let __bidiClass_rangePair_3a: _T2 = (0x9f2....0x9f3, .europeanTerminator)
-private let __bidiClass_rangePair_3b: _T2 = (0x9f4....0x9fa, .leftToRight)
-private let __bidiClass_rangePair_3c: _T2 = (0x9fc....0x9fd, .leftToRight)
-private let __bidiClass_rangePair_3d: _T2 = (0xa01....0xa02, .nonspacingMark)
-private let __bidiClass_rangePair_3e: _T2 = (0xa05....0xa0a, .leftToRight)
-private let __bidiClass_rangePair_3f: _T2 = (0xa0f....0xa10, .leftToRight)
-private let __bidiClass_rangePair_3g: _T2 = (0xa13....0xa28, .leftToRight)
-private let __bidiClass_rangePair_3h: _T2 = (0xa2a....0xa30, .leftToRight)
-private let __bidiClass_rangePair_3i: _T2 = (0xa32....0xa33, .leftToRight)
-private let __bidiClass_rangePair_3j: _T2 = (0xa35....0xa36, .leftToRight)
-private let __bidiClass_rangePair_3k: _T2 = (0xa38....0xa39, .leftToRight)
-private let __bidiClass_rangePair_3l: _T2 = (0xa3e....0xa40, .leftToRight)
-private let __bidiClass_rangePair_3m: _T2 = (0xa41....0xa42, .nonspacingMark)
-private let __bidiClass_rangePair_3n: _T2 = (0xa47....0xa48, .nonspacingMark)
-private let __bidiClass_rangePair_3o: _T2 = (0xa4b....0xa4d, .nonspacingMark)
-private let __bidiClass_rangePair_3p: _T2 = (0xa59....0xa5c, .leftToRight)
-private let __bidiClass_rangePair_3q: _T2 = (0xa66....0xa6f, .leftToRight)
-private let __bidiClass_rangePair_3r: _T2 = (0xa70....0xa71, .nonspacingMark)
-private let __bidiClass_rangePair_3s: _T2 = (0xa72....0xa74, .leftToRight)
-private let __bidiClass_rangePair_3t: _T2 = (0xa81....0xa82, .nonspacingMark)
-private let __bidiClass_rangePair_3u: _T2 = (0xa85....0xa8d, .leftToRight)
-private let __bidiClass_rangePair_3v: _T2 = (0xa8f....0xa91, .leftToRight)
-private let __bidiClass_rangePair_3w: _T2 = (0xa93....0xaa8, .leftToRight)
-private let __bidiClass_rangePair_3x: _T2 = (0xaaa....0xab0, .leftToRight)
-private let __bidiClass_rangePair_3y: _T2 = (0xab2....0xab3, .leftToRight)
-private let __bidiClass_rangePair_3z: _T2 = (0xab5....0xab9, .leftToRight)
-private let __bidiClass_rangePair_40: _T2 = (0xabd....0xac0, .leftToRight)
-private let __bidiClass_rangePair_41: _T2 = (0xac1....0xac5, .nonspacingMark)
-private let __bidiClass_rangePair_42: _T2 = (0xac7....0xac8, .nonspacingMark)
-private let __bidiClass_rangePair_43: _T2 = (0xacb....0xacc, .leftToRight)
-private let __bidiClass_rangePair_44: _T2 = (0xae0....0xae1, .leftToRight)
-private let __bidiClass_rangePair_45: _T2 = (0xae2....0xae3, .nonspacingMark)
-private let __bidiClass_rangePair_46: _T2 = (0xae6....0xaf0, .leftToRight)
-private let __bidiClass_rangePair_47: _T2 = (0xafa....0xaff, .nonspacingMark)
-private let __bidiClass_rangePair_48: _T2 = (0xb02....0xb03, .leftToRight)
-private let __bidiClass_rangePair_49: _T2 = (0xb05....0xb0c, .leftToRight)
-private let __bidiClass_rangePair_4a: _T2 = (0xb0f....0xb10, .leftToRight)
-private let __bidiClass_rangePair_4b: _T2 = (0xb13....0xb28, .leftToRight)
-private let __bidiClass_rangePair_4c: _T2 = (0xb2a....0xb30, .leftToRight)
-private let __bidiClass_rangePair_4d: _T2 = (0xb32....0xb33, .leftToRight)
-private let __bidiClass_rangePair_4e: _T2 = (0xb35....0xb39, .leftToRight)
-private let __bidiClass_rangePair_4f: _T2 = (0xb3d....0xb3e, .leftToRight)
-private let __bidiClass_rangePair_4g: _T2 = (0xb41....0xb44, .nonspacingMark)
-private let __bidiClass_rangePair_4h: _T2 = (0xb47....0xb48, .leftToRight)
-private let __bidiClass_rangePair_4i: _T2 = (0xb4b....0xb4c, .leftToRight)
-private let __bidiClass_rangePair_4j: _T2 = (0xb5c....0xb5d, .leftToRight)
-private let __bidiClass_rangePair_4k: _T2 = (0xb5f....0xb61, .leftToRight)
-private let __bidiClass_rangePair_4l: _T2 = (0xb62....0xb63, .nonspacingMark)
-private let __bidiClass_rangePair_4m: _T2 = (0xb66....0xb77, .leftToRight)
-private let __bidiClass_rangePair_4n: _T2 = (0xb85....0xb8a, .leftToRight)
-private let __bidiClass_rangePair_4o: _T2 = (0xb8e....0xb90, .leftToRight)
-private let __bidiClass_rangePair_4p: _T2 = (0xb92....0xb95, .leftToRight)
-private let __bidiClass_rangePair_4q: _T2 = (0xb99....0xb9a, .leftToRight)
-private let __bidiClass_rangePair_4r: _T2 = (0xb9e....0xb9f, .leftToRight)
-private let __bidiClass_rangePair_4s: _T2 = (0xba3....0xba4, .leftToRight)
-private let __bidiClass_rangePair_4t: _T2 = (0xba8....0xbaa, .leftToRight)
-private let __bidiClass_rangePair_4u: _T2 = (0xbae....0xbb9, .leftToRight)
-private let __bidiClass_rangePair_4v: _T2 = (0xbbe....0xbbf, .leftToRight)
-private let __bidiClass_rangePair_4w: _T2 = (0xbc1....0xbc2, .leftToRight)
-private let __bidiClass_rangePair_4x: _T2 = (0xbc6....0xbc8, .leftToRight)
-private let __bidiClass_rangePair_4y: _T2 = (0xbca....0xbcc, .leftToRight)
-private let __bidiClass_rangePair_4z: _T2 = (0xbe6....0xbf2, .leftToRight)
-private let __bidiClass_rangePair_50: _T2 = (0xbf3....0xbf8, .otherNeutral)
-private let __bidiClass_rangePair_51: _T2 = (0xc01....0xc03, .leftToRight)
-private let __bidiClass_rangePair_52: _T2 = (0xc05....0xc0c, .leftToRight)
-private let __bidiClass_rangePair_53: _T2 = (0xc0e....0xc10, .leftToRight)
-private let __bidiClass_rangePair_54: _T2 = (0xc12....0xc28, .leftToRight)
-private let __bidiClass_rangePair_55: _T2 = (0xc2a....0xc39, .leftToRight)
-private let __bidiClass_rangePair_56: _T2 = (0xc3e....0xc40, .nonspacingMark)
-private let __bidiClass_rangePair_57: _T2 = (0xc41....0xc44, .leftToRight)
-private let __bidiClass_rangePair_58: _T2 = (0xc46....0xc48, .nonspacingMark)
-private let __bidiClass_rangePair_59: _T2 = (0xc4a....0xc4d, .nonspacingMark)
-private let __bidiClass_rangePair_5a: _T2 = (0xc55....0xc56, .nonspacingMark)
-private let __bidiClass_rangePair_5b: _T2 = (0xc58....0xc5a, .leftToRight)
-private let __bidiClass_rangePair_5c: _T2 = (0xc60....0xc61, .leftToRight)
-private let __bidiClass_rangePair_5d: _T2 = (0xc62....0xc63, .nonspacingMark)
-private let __bidiClass_rangePair_5e: _T2 = (0xc66....0xc6f, .leftToRight)
-private let __bidiClass_rangePair_5f: _T2 = (0xc78....0xc7e, .otherNeutral)
-private let __bidiClass_rangePair_5g: _T2 = (0xc7f....0xc80, .leftToRight)
-private let __bidiClass_rangePair_5h: _T2 = (0xc82....0xc8c, .leftToRight)
-private let __bidiClass_rangePair_5i: _T2 = (0xc8e....0xc90, .leftToRight)
-private let __bidiClass_rangePair_5j: _T2 = (0xc92....0xca8, .leftToRight)
-private let __bidiClass_rangePair_5k: _T2 = (0xcaa....0xcb3, .leftToRight)
-private let __bidiClass_rangePair_5l: _T2 = (0xcb5....0xcb9, .leftToRight)
-private let __bidiClass_rangePair_5m: _T2 = (0xcbd....0xcc4, .leftToRight)
-private let __bidiClass_rangePair_5n: _T2 = (0xcc6....0xcc8, .leftToRight)
-private let __bidiClass_rangePair_5o: _T2 = (0xcca....0xccb, .leftToRight)
-private let __bidiClass_rangePair_5p: _T2 = (0xccc....0xccd, .nonspacingMark)
-private let __bidiClass_rangePair_5q: _T2 = (0xcd5....0xcd6, .leftToRight)
-private let __bidiClass_rangePair_5r: _T2 = (0xce0....0xce1, .leftToRight)
-private let __bidiClass_rangePair_5s: _T2 = (0xce2....0xce3, .nonspacingMark)
-private let __bidiClass_rangePair_5t: _T2 = (0xce6....0xcef, .leftToRight)
-private let __bidiClass_rangePair_5u: _T2 = (0xcf1....0xcf2, .leftToRight)
-private let __bidiClass_rangePair_5v: _T2 = (0xd00....0xd01, .nonspacingMark)
-private let __bidiClass_rangePair_5w: _T2 = (0xd02....0xd03, .leftToRight)
-private let __bidiClass_rangePair_5x: _T2 = (0xd05....0xd0c, .leftToRight)
-private let __bidiClass_rangePair_5y: _T2 = (0xd0e....0xd10, .leftToRight)
-private let __bidiClass_rangePair_5z: _T2 = (0xd12....0xd3a, .leftToRight)
-private let __bidiClass_rangePair_60: _T2 = (0xd3b....0xd3c, .nonspacingMark)
-private let __bidiClass_rangePair_61: _T2 = (0xd3d....0xd40, .leftToRight)
-private let __bidiClass_rangePair_62: _T2 = (0xd41....0xd44, .nonspacingMark)
-private let __bidiClass_rangePair_63: _T2 = (0xd46....0xd48, .leftToRight)
-private let __bidiClass_rangePair_64: _T2 = (0xd4a....0xd4c, .leftToRight)
-private let __bidiClass_rangePair_65: _T2 = (0xd4e....0xd4f, .leftToRight)
-private let __bidiClass_rangePair_66: _T2 = (0xd54....0xd61, .leftToRight)
-private let __bidiClass_rangePair_67: _T2 = (0xd62....0xd63, .nonspacingMark)
-private let __bidiClass_rangePair_68: _T2 = (0xd66....0xd7f, .leftToRight)
-private let __bidiClass_rangePair_69: _T2 = (0xd82....0xd83, .leftToRight)
-private let __bidiClass_rangePair_6a: _T2 = (0xd85....0xd96, .leftToRight)
-private let __bidiClass_rangePair_6b: _T2 = (0xd9a....0xdb1, .leftToRight)
-private let __bidiClass_rangePair_6c: _T2 = (0xdb3....0xdbb, .leftToRight)
-private let __bidiClass_rangePair_6d: _T2 = (0xdc0....0xdc6, .leftToRight)
-private let __bidiClass_rangePair_6e: _T2 = (0xdcf....0xdd1, .leftToRight)
-private let __bidiClass_rangePair_6f: _T2 = (0xdd2....0xdd4, .nonspacingMark)
-private let __bidiClass_rangePair_6g: _T2 = (0xdd8....0xddf, .leftToRight)
-private let __bidiClass_rangePair_6h: _T2 = (0xde6....0xdef, .leftToRight)
-private let __bidiClass_rangePair_6i: _T2 = (0xdf2....0xdf4, .leftToRight)
-private let __bidiClass_rangePair_6j: _T2 = (0xe01....0xe30, .leftToRight)
-private let __bidiClass_rangePair_6k: _T2 = (0xe32....0xe33, .leftToRight)
-private let __bidiClass_rangePair_6l: _T2 = (0xe34....0xe3a, .nonspacingMark)
-private let __bidiClass_rangePair_6m: _T2 = (0xe40....0xe46, .leftToRight)
-private let __bidiClass_rangePair_6n: _T2 = (0xe47....0xe4e, .nonspacingMark)
-private let __bidiClass_rangePair_6o: _T2 = (0xe4f....0xe5b, .leftToRight)
-private let __bidiClass_rangePair_6p: _T2 = (0xe81....0xe82, .leftToRight)
-private let __bidiClass_rangePair_6q: _T2 = (0xe86....0xe8a, .leftToRight)
-private let __bidiClass_rangePair_6r: _T2 = (0xe8c....0xea3, .leftToRight)
-private let __bidiClass_rangePair_6s: _T2 = (0xea7....0xeb0, .leftToRight)
-private let __bidiClass_rangePair_6t: _T2 = (0xeb2....0xeb3, .leftToRight)
-private let __bidiClass_rangePair_6u: _T2 = (0xeb4....0xebc, .nonspacingMark)
-private let __bidiClass_rangePair_6v: _T2 = (0xec0....0xec4, .leftToRight)
-private let __bidiClass_rangePair_6w: _T2 = (0xec8....0xecd, .nonspacingMark)
-private let __bidiClass_rangePair_6x: _T2 = (0xed0....0xed9, .leftToRight)
-private let __bidiClass_rangePair_6y: _T2 = (0xedc....0xedf, .leftToRight)
-private let __bidiClass_rangePair_6z: _T2 = (0xf00....0xf17, .leftToRight)
-private let __bidiClass_rangePair_70: _T2 = (0xf18....0xf19, .nonspacingMark)
-private let __bidiClass_rangePair_71: _T2 = (0xf1a....0xf34, .leftToRight)
-private let __bidiClass_rangePair_72: _T2 = (0xf3a....0xf3d, .otherNeutral)
-private let __bidiClass_rangePair_73: _T2 = (0xf3e....0xf47, .leftToRight)
-private let __bidiClass_rangePair_74: _T2 = (0xf49....0xf6c, .leftToRight)
-private let __bidiClass_rangePair_75: _T2 = (0xf71....0xf7e, .nonspacingMark)
-private let __bidiClass_rangePair_76: _T2 = (0xf80....0xf84, .nonspacingMark)
-private let __bidiClass_rangePair_77: _T2 = (0xf86....0xf87, .nonspacingMark)
-private let __bidiClass_rangePair_78: _T2 = (0xf88....0xf8c, .leftToRight)
-private let __bidiClass_rangePair_79: _T2 = (0xf8d....0xf97, .nonspacingMark)
-private let __bidiClass_rangePair_7a: _T2 = (0xf99....0xfbc, .nonspacingMark)
-private let __bidiClass_rangePair_7b: _T2 = (0xfbe....0xfc5, .leftToRight)
-private let __bidiClass_rangePair_7c: _T2 = (0xfc7....0xfcc, .leftToRight)
-private let __bidiClass_rangePair_7d: _T2 = (0xfce....0xfda, .leftToRight)
-private let __bidiClass_rangePair_7e: _T2 = (0x1000....0x102c, .leftToRight)
-private let __bidiClass_rangePair_7f: _T2 = (0x102d....0x1030, .nonspacingMark)
-private let __bidiClass_rangePair_7g: _T2 = (0x1032....0x1037, .nonspacingMark)
-private let __bidiClass_rangePair_7h: _T2 = (0x1039....0x103a, .nonspacingMark)
-private let __bidiClass_rangePair_7i: _T2 = (0x103b....0x103c, .leftToRight)
-private let __bidiClass_rangePair_7j: _T2 = (0x103d....0x103e, .nonspacingMark)
-private let __bidiClass_rangePair_7k: _T2 = (0x103f....0x1057, .leftToRight)
-private let __bidiClass_rangePair_7l: _T2 = (0x1058....0x1059, .nonspacingMark)
-private let __bidiClass_rangePair_7m: _T2 = (0x105a....0x105d, .leftToRight)
-private let __bidiClass_rangePair_7n: _T2 = (0x105e....0x1060, .nonspacingMark)
-private let __bidiClass_rangePair_7o: _T2 = (0x1061....0x1070, .leftToRight)
-private let __bidiClass_rangePair_7p: _T2 = (0x1071....0x1074, .nonspacingMark)
-private let __bidiClass_rangePair_7q: _T2 = (0x1075....0x1081, .leftToRight)
-private let __bidiClass_rangePair_7r: _T2 = (0x1083....0x1084, .leftToRight)
-private let __bidiClass_rangePair_7s: _T2 = (0x1085....0x1086, .nonspacingMark)
-private let __bidiClass_rangePair_7t: _T2 = (0x1087....0x108c, .leftToRight)
-private let __bidiClass_rangePair_7u: _T2 = (0x108e....0x109c, .leftToRight)
-private let __bidiClass_rangePair_7v: _T2 = (0x109e....0x10c5, .leftToRight)
-private let __bidiClass_rangePair_7w: _T2 = (0x10d0....0x1248, .leftToRight)
-private let __bidiClass_rangePair_7x: _T2 = (0x124a....0x124d, .leftToRight)
-private let __bidiClass_rangePair_7y: _T2 = (0x1250....0x1256, .leftToRight)
-private let __bidiClass_rangePair_7z: _T2 = (0x125a....0x125d, .leftToRight)
-private let __bidiClass_rangePair_80: _T2 = (0x1260....0x1288, .leftToRight)
-private let __bidiClass_rangePair_81: _T2 = (0x128a....0x128d, .leftToRight)
-private let __bidiClass_rangePair_82: _T2 = (0x1290....0x12b0, .leftToRight)
-private let __bidiClass_rangePair_83: _T2 = (0x12b2....0x12b5, .leftToRight)
-private let __bidiClass_rangePair_84: _T2 = (0x12b8....0x12be, .leftToRight)
-private let __bidiClass_rangePair_85: _T2 = (0x12c2....0x12c5, .leftToRight)
-private let __bidiClass_rangePair_86: _T2 = (0x12c8....0x12d6, .leftToRight)
-private let __bidiClass_rangePair_87: _T2 = (0x12d8....0x1310, .leftToRight)
-private let __bidiClass_rangePair_88: _T2 = (0x1312....0x1315, .leftToRight)
-private let __bidiClass_rangePair_89: _T2 = (0x1318....0x135a, .leftToRight)
-private let __bidiClass_rangePair_8a: _T2 = (0x135d....0x135f, .nonspacingMark)
-private let __bidiClass_rangePair_8b: _T2 = (0x1360....0x137c, .leftToRight)
-private let __bidiClass_rangePair_8c: _T2 = (0x1380....0x138f, .leftToRight)
-private let __bidiClass_rangePair_8d: _T2 = (0x1390....0x1399, .otherNeutral)
-private let __bidiClass_rangePair_8e: _T2 = (0x13a0....0x13f5, .leftToRight)
-private let __bidiClass_rangePair_8f: _T2 = (0x13f8....0x13fd, .leftToRight)
-private let __bidiClass_rangePair_8g: _T2 = (0x1401....0x167f, .leftToRight)
-private let __bidiClass_rangePair_8h: _T2 = (0x1681....0x169a, .leftToRight)
-private let __bidiClass_rangePair_8i: _T2 = (0x169b....0x169c, .otherNeutral)
-private let __bidiClass_rangePair_8j: _T2 = (0x16a0....0x16f8, .leftToRight)
-private let __bidiClass_rangePair_8k: _T2 = (0x1700....0x170c, .leftToRight)
-private let __bidiClass_rangePair_8l: _T2 = (0x170e....0x1711, .leftToRight)
-private let __bidiClass_rangePair_8m: _T2 = (0x1712....0x1714, .nonspacingMark)
-private let __bidiClass_rangePair_8n: _T2 = (0x1720....0x1731, .leftToRight)
-private let __bidiClass_rangePair_8o: _T2 = (0x1732....0x1734, .nonspacingMark)
-private let __bidiClass_rangePair_8p: _T2 = (0x1735....0x1736, .leftToRight)
-private let __bidiClass_rangePair_8q: _T2 = (0x1740....0x1751, .leftToRight)
-private let __bidiClass_rangePair_8r: _T2 = (0x1752....0x1753, .nonspacingMark)
-private let __bidiClass_rangePair_8s: _T2 = (0x1760....0x176c, .leftToRight)
-private let __bidiClass_rangePair_8t: _T2 = (0x176e....0x1770, .leftToRight)
-private let __bidiClass_rangePair_8u: _T2 = (0x1772....0x1773, .nonspacingMark)
-private let __bidiClass_rangePair_8v: _T2 = (0x1780....0x17b3, .leftToRight)
-private let __bidiClass_rangePair_8w: _T2 = (0x17b4....0x17b5, .nonspacingMark)
-private let __bidiClass_rangePair_8x: _T2 = (0x17b7....0x17bd, .nonspacingMark)
-private let __bidiClass_rangePair_8y: _T2 = (0x17be....0x17c5, .leftToRight)
-private let __bidiClass_rangePair_8z: _T2 = (0x17c7....0x17c8, .leftToRight)
-private let __bidiClass_rangePair_90: _T2 = (0x17c9....0x17d3, .nonspacingMark)
-private let __bidiClass_rangePair_91: _T2 = (0x17d4....0x17da, .leftToRight)
-private let __bidiClass_rangePair_92: _T2 = (0x17e0....0x17e9, .leftToRight)
-private let __bidiClass_rangePair_93: _T2 = (0x17f0....0x17f9, .otherNeutral)
-private let __bidiClass_rangePair_94: _T2 = (0x1800....0x180a, .otherNeutral)
-private let __bidiClass_rangePair_95: _T2 = (0x180b....0x180d, .nonspacingMark)
-private let __bidiClass_rangePair_96: _T2 = (0x1810....0x1819, .leftToRight)
-private let __bidiClass_rangePair_97: _T2 = (0x1820....0x1878, .leftToRight)
-private let __bidiClass_rangePair_98: _T2 = (0x1880....0x1884, .leftToRight)
-private let __bidiClass_rangePair_99: _T2 = (0x1885....0x1886, .nonspacingMark)
-private let __bidiClass_rangePair_9a: _T2 = (0x1887....0x18a8, .leftToRight)
-private let __bidiClass_rangePair_9b: _T2 = (0x18b0....0x18f5, .leftToRight)
-private let __bidiClass_rangePair_9c: _T2 = (0x1900....0x191e, .leftToRight)
-private let __bidiClass_rangePair_9d: _T2 = (0x1920....0x1922, .nonspacingMark)
-private let __bidiClass_rangePair_9e: _T2 = (0x1923....0x1926, .leftToRight)
-private let __bidiClass_rangePair_9f: _T2 = (0x1927....0x1928, .nonspacingMark)
-private let __bidiClass_rangePair_9g: _T2 = (0x1929....0x192b, .leftToRight)
-private let __bidiClass_rangePair_9h: _T2 = (0x1930....0x1931, .leftToRight)
-private let __bidiClass_rangePair_9i: _T2 = (0x1933....0x1938, .leftToRight)
-private let __bidiClass_rangePair_9j: _T2 = (0x1939....0x193b, .nonspacingMark)
-private let __bidiClass_rangePair_9k: _T2 = (0x1944....0x1945, .otherNeutral)
-private let __bidiClass_rangePair_9l: _T2 = (0x1946....0x196d, .leftToRight)
-private let __bidiClass_rangePair_9m: _T2 = (0x1970....0x1974, .leftToRight)
-private let __bidiClass_rangePair_9n: _T2 = (0x1980....0x19ab, .leftToRight)
-private let __bidiClass_rangePair_9o: _T2 = (0x19b0....0x19c9, .leftToRight)
-private let __bidiClass_rangePair_9p: _T2 = (0x19d0....0x19da, .leftToRight)
-private let __bidiClass_rangePair_9q: _T2 = (0x19de....0x19ff, .otherNeutral)
-private let __bidiClass_rangePair_9r: _T2 = (0x1a00....0x1a16, .leftToRight)
-private let __bidiClass_rangePair_9s: _T2 = (0x1a17....0x1a18, .nonspacingMark)
-private let __bidiClass_rangePair_9t: _T2 = (0x1a19....0x1a1a, .leftToRight)
-private let __bidiClass_rangePair_9u: _T2 = (0x1a1e....0x1a55, .leftToRight)
-private let __bidiClass_rangePair_9v: _T2 = (0x1a58....0x1a5e, .nonspacingMark)
-private let __bidiClass_rangePair_9w: _T2 = (0x1a63....0x1a64, .leftToRight)
-private let __bidiClass_rangePair_9x: _T2 = (0x1a65....0x1a6c, .nonspacingMark)
-private let __bidiClass_rangePair_9y: _T2 = (0x1a6d....0x1a72, .leftToRight)
-private let __bidiClass_rangePair_9z: _T2 = (0x1a73....0x1a7c, .nonspacingMark)
-private let __bidiClass_rangePair_a0: _T2 = (0x1a80....0x1a89, .leftToRight)
-private let __bidiClass_rangePair_a1: _T2 = (0x1a90....0x1a99, .leftToRight)
-private let __bidiClass_rangePair_a2: _T2 = (0x1aa0....0x1aad, .leftToRight)
-private let __bidiClass_rangePair_a3: _T2 = (0x1ab0....0x1abe, .nonspacingMark)
-private let __bidiClass_rangePair_a4: _T2 = (0x1b00....0x1b03, .nonspacingMark)
-private let __bidiClass_rangePair_a5: _T2 = (0x1b04....0x1b33, .leftToRight)
-private let __bidiClass_rangePair_a6: _T2 = (0x1b36....0x1b3a, .nonspacingMark)
-private let __bidiClass_rangePair_a7: _T2 = (0x1b3d....0x1b41, .leftToRight)
-private let __bidiClass_rangePair_a8: _T2 = (0x1b43....0x1b4b, .leftToRight)
-private let __bidiClass_rangePair_a9: _T2 = (0x1b50....0x1b6a, .leftToRight)
-private let __bidiClass_rangePair_aa: _T2 = (0x1b6b....0x1b73, .nonspacingMark)
-private let __bidiClass_rangePair_ab: _T2 = (0x1b74....0x1b7c, .leftToRight)
-private let __bidiClass_rangePair_ac: _T2 = (0x1b80....0x1b81, .nonspacingMark)
-private let __bidiClass_rangePair_ad: _T2 = (0x1b82....0x1ba1, .leftToRight)
-private let __bidiClass_rangePair_ae: _T2 = (0x1ba2....0x1ba5, .nonspacingMark)
-private let __bidiClass_rangePair_af: _T2 = (0x1ba6....0x1ba7, .leftToRight)
-private let __bidiClass_rangePair_ag: _T2 = (0x1ba8....0x1ba9, .nonspacingMark)
-private let __bidiClass_rangePair_ah: _T2 = (0x1bab....0x1bad, .nonspacingMark)
-private let __bidiClass_rangePair_ai: _T2 = (0x1bae....0x1be5, .leftToRight)
-private let __bidiClass_rangePair_aj: _T2 = (0x1be8....0x1be9, .nonspacingMark)
-private let __bidiClass_rangePair_ak: _T2 = (0x1bea....0x1bec, .leftToRight)
-private let __bidiClass_rangePair_al: _T2 = (0x1bef....0x1bf1, .nonspacingMark)
-private let __bidiClass_rangePair_am: _T2 = (0x1bf2....0x1bf3, .leftToRight)
-private let __bidiClass_rangePair_an: _T2 = (0x1bfc....0x1c2b, .leftToRight)
-private let __bidiClass_rangePair_ao: _T2 = (0x1c2c....0x1c33, .nonspacingMark)
-private let __bidiClass_rangePair_ap: _T2 = (0x1c34....0x1c35, .leftToRight)
-private let __bidiClass_rangePair_aq: _T2 = (0x1c36....0x1c37, .nonspacingMark)
-private let __bidiClass_rangePair_ar: _T2 = (0x1c3b....0x1c49, .leftToRight)
-private let __bidiClass_rangePair_as: _T2 = (0x1c4d....0x1c88, .leftToRight)
-private let __bidiClass_rangePair_at: _T2 = (0x1c90....0x1cba, .leftToRight)
-private let __bidiClass_rangePair_au: _T2 = (0x1cbd....0x1cc7, .leftToRight)
-private let __bidiClass_rangePair_av: _T2 = (0x1cd0....0x1cd2, .nonspacingMark)
-private let __bidiClass_rangePair_aw: _T2 = (0x1cd4....0x1ce0, .nonspacingMark)
-private let __bidiClass_rangePair_ax: _T2 = (0x1ce2....0x1ce8, .nonspacingMark)
-private let __bidiClass_rangePair_ay: _T2 = (0x1ce9....0x1cec, .leftToRight)
-private let __bidiClass_rangePair_az: _T2 = (0x1cee....0x1cf3, .leftToRight)
-private let __bidiClass_rangePair_b0: _T2 = (0x1cf5....0x1cf7, .leftToRight)
-private let __bidiClass_rangePair_b1: _T2 = (0x1cf8....0x1cf9, .nonspacingMark)
-private let __bidiClass_rangePair_b2: _T2 = (0x1d00....0x1dbf, .leftToRight)
-private let __bidiClass_rangePair_b3: _T2 = (0x1dc0....0x1df9, .nonspacingMark)
-private let __bidiClass_rangePair_b4: _T2 = (0x1dfb....0x1dff, .nonspacingMark)
-private let __bidiClass_rangePair_b5: _T2 = (0x1e00....0x1f15, .leftToRight)
-private let __bidiClass_rangePair_b6: _T2 = (0x1f18....0x1f1d, .leftToRight)
-private let __bidiClass_rangePair_b7: _T2 = (0x1f20....0x1f45, .leftToRight)
-private let __bidiClass_rangePair_b8: _T2 = (0x1f48....0x1f4d, .leftToRight)
-private let __bidiClass_rangePair_b9: _T2 = (0x1f50....0x1f57, .leftToRight)
-private let __bidiClass_rangePair_ba: _T2 = (0x1f5f....0x1f7d, .leftToRight)
-private let __bidiClass_rangePair_bb: _T2 = (0x1f80....0x1fb4, .leftToRight)
-private let __bidiClass_rangePair_bc: _T2 = (0x1fb6....0x1fbc, .leftToRight)
-private let __bidiClass_rangePair_bd: _T2 = (0x1fbf....0x1fc1, .otherNeutral)
-private let __bidiClass_rangePair_be: _T2 = (0x1fc2....0x1fc4, .leftToRight)
-private let __bidiClass_rangePair_bf: _T2 = (0x1fc6....0x1fcc, .leftToRight)
-private let __bidiClass_rangePair_bg: _T2 = (0x1fcd....0x1fcf, .otherNeutral)
-private let __bidiClass_rangePair_bh: _T2 = (0x1fd0....0x1fd3, .leftToRight)
-private let __bidiClass_rangePair_bi: _T2 = (0x1fd6....0x1fdb, .leftToRight)
-private let __bidiClass_rangePair_bj: _T2 = (0x1fdd....0x1fdf, .otherNeutral)
-private let __bidiClass_rangePair_bk: _T2 = (0x1fe0....0x1fec, .leftToRight)
-private let __bidiClass_rangePair_bl: _T2 = (0x1fed....0x1fef, .otherNeutral)
-private let __bidiClass_rangePair_bm: _T2 = (0x1ff2....0x1ff4, .leftToRight)
-private let __bidiClass_rangePair_bn: _T2 = (0x1ff6....0x1ffc, .leftToRight)
-private let __bidiClass_rangePair_bo: _T2 = (0x1ffd....0x1ffe, .otherNeutral)
-private let __bidiClass_rangePair_bp: _T2 = (0x2000....0x200a, .whiteSpace)
-private let __bidiClass_rangePair_bq: _T2 = (0x200b....0x200d, .boundaryNeutral)
-private let __bidiClass_rangePair_br: _T2 = (0x2010....0x2027, .otherNeutral)
-private let __bidiClass_rangePair_bs: _T2 = (0x2030....0x2034, .europeanTerminator)
-private let __bidiClass_rangePair_bt: _T2 = (0x2035....0x2043, .otherNeutral)
-private let __bidiClass_rangePair_bu: _T2 = (0x2045....0x205e, .otherNeutral)
-private let __bidiClass_rangePair_bv: _T2 = (0x2060....0x2065, .boundaryNeutral)
-private let __bidiClass_rangePair_bw: _T2 = (0x206a....0x206f, .boundaryNeutral)
-private let __bidiClass_rangePair_bx: _T2 = (0x2074....0x2079, .europeanNumber)
-private let __bidiClass_rangePair_by: _T2 = (0x207a....0x207b, .europeanSeparator)
-private let __bidiClass_rangePair_bz: _T2 = (0x207c....0x207e, .otherNeutral)
-private let __bidiClass_rangePair_c0: _T2 = (0x2080....0x2089, .europeanNumber)
-private let __bidiClass_rangePair_c1: _T2 = (0x208a....0x208b, .europeanSeparator)
-private let __bidiClass_rangePair_c2: _T2 = (0x208c....0x208e, .otherNeutral)
-private let __bidiClass_rangePair_c3: _T2 = (0x2090....0x209c, .leftToRight)
-private let __bidiClass_rangePair_c4: _T2 = (0x20a0....0x20cf, .europeanTerminator)
-private let __bidiClass_rangePair_c5: _T2 = (0x20d0....0x20f0, .nonspacingMark)
-private let __bidiClass_rangePair_c6: _T2 = (0x2100....0x2101, .otherNeutral)
-private let __bidiClass_rangePair_c7: _T2 = (0x2103....0x2106, .otherNeutral)
-private let __bidiClass_rangePair_c8: _T2 = (0x2108....0x2109, .otherNeutral)
-private let __bidiClass_rangePair_c9: _T2 = (0x210a....0x2113, .leftToRight)
-private let __bidiClass_rangePair_ca: _T2 = (0x2116....0x2118, .otherNeutral)
-private let __bidiClass_rangePair_cb: _T2 = (0x2119....0x211d, .leftToRight)
-private let __bidiClass_rangePair_cc: _T2 = (0x211e....0x2123, .otherNeutral)
-private let __bidiClass_rangePair_cd: _T2 = (0x212a....0x212d, .leftToRight)
-private let __bidiClass_rangePair_ce: _T2 = (0x212f....0x2139, .leftToRight)
-private let __bidiClass_rangePair_cf: _T2 = (0x213a....0x213b, .otherNeutral)
-private let __bidiClass_rangePair_cg: _T2 = (0x213c....0x213f, .leftToRight)
-private let __bidiClass_rangePair_ch: _T2 = (0x2140....0x2144, .otherNeutral)
-private let __bidiClass_rangePair_ci: _T2 = (0x2145....0x2149, .leftToRight)
-private let __bidiClass_rangePair_cj: _T2 = (0x214a....0x214d, .otherNeutral)
-private let __bidiClass_rangePair_ck: _T2 = (0x214e....0x214f, .leftToRight)
-private let __bidiClass_rangePair_cl: _T2 = (0x2150....0x215f, .otherNeutral)
-private let __bidiClass_rangePair_cm: _T2 = (0x2160....0x2188, .leftToRight)
-private let __bidiClass_rangePair_cn: _T2 = (0x2189....0x218b, .otherNeutral)
-private let __bidiClass_rangePair_co: _T2 = (0x2190....0x2211, .otherNeutral)
-private let __bidiClass_rangePair_cp: _T2 = (0x2214....0x2335, .otherNeutral)
-private let __bidiClass_rangePair_cq: _T2 = (0x2336....0x237a, .leftToRight)
-private let __bidiClass_rangePair_cr: _T2 = (0x237b....0x2394, .otherNeutral)
-private let __bidiClass_rangePair_cs: _T2 = (0x2396....0x2426, .otherNeutral)
-private let __bidiClass_rangePair_ct: _T2 = (0x2440....0x244a, .otherNeutral)
-private let __bidiClass_rangePair_cu: _T2 = (0x2460....0x2487, .otherNeutral)
-private let __bidiClass_rangePair_cv: _T2 = (0x2488....0x249b, .europeanNumber)
-private let __bidiClass_rangePair_cw: _T2 = (0x249c....0x24e9, .leftToRight)
-private let __bidiClass_rangePair_cx: _T2 = (0x24ea....0x26ab, .otherNeutral)
-private let __bidiClass_rangePair_cy: _T2 = (0x26ad....0x27ff, .otherNeutral)
-private let __bidiClass_rangePair_cz: _T2 = (0x2800....0x28ff, .leftToRight)
-private let __bidiClass_rangePair_d0: _T2 = (0x2900....0x2b73, .otherNeutral)
-private let __bidiClass_rangePair_d1: _T2 = (0x2b76....0x2b95, .otherNeutral)
-private let __bidiClass_rangePair_d2: _T2 = (0x2b98....0x2bff, .otherNeutral)
-private let __bidiClass_rangePair_d3: _T2 = (0x2c00....0x2c2e, .leftToRight)
-private let __bidiClass_rangePair_d4: _T2 = (0x2c30....0x2c5e, .leftToRight)
-private let __bidiClass_rangePair_d5: _T2 = (0x2c60....0x2ce4, .leftToRight)
-private let __bidiClass_rangePair_d6: _T2 = (0x2ce5....0x2cea, .otherNeutral)
-private let __bidiClass_rangePair_d7: _T2 = (0x2ceb....0x2cee, .leftToRight)
-private let __bidiClass_rangePair_d8: _T2 = (0x2cef....0x2cf1, .nonspacingMark)
-private let __bidiClass_rangePair_d9: _T2 = (0x2cf2....0x2cf3, .leftToRight)
-private let __bidiClass_rangePair_da: _T2 = (0x2cf9....0x2cff, .otherNeutral)
-private let __bidiClass_rangePair_db: _T2 = (0x2d00....0x2d25, .leftToRight)
-private let __bidiClass_rangePair_dc: _T2 = (0x2d30....0x2d67, .leftToRight)
-private let __bidiClass_rangePair_dd: _T2 = (0x2d6f....0x2d70, .leftToRight)
-private let __bidiClass_rangePair_de: _T2 = (0x2d80....0x2d96, .leftToRight)
-private let __bidiClass_rangePair_df: _T2 = (0x2da0....0x2da6, .leftToRight)
-private let __bidiClass_rangePair_dg: _T2 = (0x2da8....0x2dae, .leftToRight)
-private let __bidiClass_rangePair_dh: _T2 = (0x2db0....0x2db6, .leftToRight)
-private let __bidiClass_rangePair_di: _T2 = (0x2db8....0x2dbe, .leftToRight)
-private let __bidiClass_rangePair_dj: _T2 = (0x2dc0....0x2dc6, .leftToRight)
-private let __bidiClass_rangePair_dk: _T2 = (0x2dc8....0x2dce, .leftToRight)
-private let __bidiClass_rangePair_dl: _T2 = (0x2dd0....0x2dd6, .leftToRight)
-private let __bidiClass_rangePair_dm: _T2 = (0x2dd8....0x2dde, .leftToRight)
-private let __bidiClass_rangePair_dn: _T2 = (0x2de0....0x2dff, .nonspacingMark)
-private let __bidiClass_rangePair_do: _T2 = (0x2e00....0x2e4f, .otherNeutral)
-private let __bidiClass_rangePair_dp: _T2 = (0x2e80....0x2e99, .otherNeutral)
-private let __bidiClass_rangePair_dq: _T2 = (0x2e9b....0x2ef3, .otherNeutral)
-private let __bidiClass_rangePair_dr: _T2 = (0x2f00....0x2fd5, .otherNeutral)
-private let __bidiClass_rangePair_ds: _T2 = (0x2ff0....0x2ffb, .otherNeutral)
-private let __bidiClass_rangePair_dt: _T2 = (0x3001....0x3004, .otherNeutral)
-private let __bidiClass_rangePair_du: _T2 = (0x3005....0x3007, .leftToRight)
-private let __bidiClass_rangePair_dv: _T2 = (0x3008....0x3020, .otherNeutral)
-private let __bidiClass_rangePair_dw: _T2 = (0x3021....0x3029, .leftToRight)
-private let __bidiClass_rangePair_dx: _T2 = (0x302a....0x302d, .nonspacingMark)
-private let __bidiClass_rangePair_dy: _T2 = (0x302e....0x302f, .leftToRight)
-private let __bidiClass_rangePair_dz: _T2 = (0x3031....0x3035, .leftToRight)
-private let __bidiClass_rangePair_e0: _T2 = (0x3036....0x3037, .otherNeutral)
-private let __bidiClass_rangePair_e1: _T2 = (0x3038....0x303c, .leftToRight)
-private let __bidiClass_rangePair_e2: _T2 = (0x303d....0x303f, .otherNeutral)
-private let __bidiClass_rangePair_e3: _T2 = (0x3041....0x3096, .leftToRight)
-private let __bidiClass_rangePair_e4: _T2 = (0x3099....0x309a, .nonspacingMark)
-private let __bidiClass_rangePair_e5: _T2 = (0x309b....0x309c, .otherNeutral)
-private let __bidiClass_rangePair_e6: _T2 = (0x309d....0x309f, .leftToRight)
-private let __bidiClass_rangePair_e7: _T2 = (0x30a1....0x30fa, .leftToRight)
-private let __bidiClass_rangePair_e8: _T2 = (0x30fc....0x30ff, .leftToRight)
-private let __bidiClass_rangePair_e9: _T2 = (0x3105....0x312f, .leftToRight)
-private let __bidiClass_rangePair_ea: _T2 = (0x3131....0x318e, .leftToRight)
-private let __bidiClass_rangePair_eb: _T2 = (0x3190....0x31ba, .leftToRight)
-private let __bidiClass_rangePair_ec: _T2 = (0x31c0....0x31e3, .otherNeutral)
-private let __bidiClass_rangePair_ed: _T2 = (0x31f0....0x321c, .leftToRight)
-private let __bidiClass_rangePair_ee: _T2 = (0x321d....0x321e, .otherNeutral)
-private let __bidiClass_rangePair_ef: _T2 = (0x3220....0x324f, .leftToRight)
-private let __bidiClass_rangePair_eg: _T2 = (0x3250....0x325f, .otherNeutral)
-private let __bidiClass_rangePair_eh: _T2 = (0x3260....0x327b, .leftToRight)
-private let __bidiClass_rangePair_ei: _T2 = (0x327c....0x327e, .otherNeutral)
-private let __bidiClass_rangePair_ej: _T2 = (0x327f....0x32b0, .leftToRight)
-private let __bidiClass_rangePair_ek: _T2 = (0x32b1....0x32bf, .otherNeutral)
-private let __bidiClass_rangePair_el: _T2 = (0x32c0....0x32cb, .leftToRight)
-private let __bidiClass_rangePair_em: _T2 = (0x32cc....0x32cf, .otherNeutral)
-private let __bidiClass_rangePair_en: _T2 = (0x32d0....0x3376, .leftToRight)
-private let __bidiClass_rangePair_eo: _T2 = (0x3377....0x337a, .otherNeutral)
-private let __bidiClass_rangePair_ep: _T2 = (0x337b....0x33dd, .leftToRight)
-private let __bidiClass_rangePair_eq: _T2 = (0x33de....0x33df, .otherNeutral)
-private let __bidiClass_rangePair_er: _T2 = (0x33e0....0x33fe, .leftToRight)
-private let __bidiClass_rangePair_es: _T2 = (0x3400....0x4db5, .leftToRight)
-private let __bidiClass_rangePair_et: _T2 = (0x4dc0....0x4dff, .otherNeutral)
-private let __bidiClass_rangePair_eu: _T2 = (0x4e00....0x9fef, .leftToRight)
-private let __bidiClass_rangePair_ev: _T2 = (0xa000....0xa48c, .leftToRight)
-private let __bidiClass_rangePair_ew: _T2 = (0xa490....0xa4c6, .otherNeutral)
-private let __bidiClass_rangePair_ex: _T2 = (0xa4d0....0xa60c, .leftToRight)
-private let __bidiClass_rangePair_ey: _T2 = (0xa60d....0xa60f, .otherNeutral)
-private let __bidiClass_rangePair_ez: _T2 = (0xa610....0xa62b, .leftToRight)
-private let __bidiClass_rangePair_f0: _T2 = (0xa640....0xa66e, .leftToRight)
-private let __bidiClass_rangePair_f1: _T2 = (0xa66f....0xa672, .nonspacingMark)
-private let __bidiClass_rangePair_f2: _T2 = (0xa674....0xa67d, .nonspacingMark)
-private let __bidiClass_rangePair_f3: _T2 = (0xa67e....0xa67f, .otherNeutral)
-private let __bidiClass_rangePair_f4: _T2 = (0xa680....0xa69d, .leftToRight)
-private let __bidiClass_rangePair_f5: _T2 = (0xa69e....0xa69f, .nonspacingMark)
-private let __bidiClass_rangePair_f6: _T2 = (0xa6a0....0xa6ef, .leftToRight)
-private let __bidiClass_rangePair_f7: _T2 = (0xa6f0....0xa6f1, .nonspacingMark)
-private let __bidiClass_rangePair_f8: _T2 = (0xa6f2....0xa6f7, .leftToRight)
-private let __bidiClass_rangePair_f9: _T2 = (0xa700....0xa721, .otherNeutral)
-private let __bidiClass_rangePair_fa: _T2 = (0xa722....0xa787, .leftToRight)
-private let __bidiClass_rangePair_fb: _T2 = (0xa789....0xa7bf, .leftToRight)
-private let __bidiClass_rangePair_fc: _T2 = (0xa7c2....0xa7c6, .leftToRight)
-private let __bidiClass_rangePair_fd: _T2 = (0xa7f7....0xa801, .leftToRight)
-private let __bidiClass_rangePair_fe: _T2 = (0xa803....0xa805, .leftToRight)
-private let __bidiClass_rangePair_ff: _T2 = (0xa807....0xa80a, .leftToRight)
-private let __bidiClass_rangePair_fg: _T2 = (0xa80c....0xa824, .leftToRight)
-private let __bidiClass_rangePair_fh: _T2 = (0xa825....0xa826, .nonspacingMark)
-private let __bidiClass_rangePair_fi: _T2 = (0xa828....0xa82b, .otherNeutral)
-private let __bidiClass_rangePair_fj: _T2 = (0xa830....0xa837, .leftToRight)
-private let __bidiClass_rangePair_fk: _T2 = (0xa838....0xa839, .europeanTerminator)
-private let __bidiClass_rangePair_fl: _T2 = (0xa840....0xa873, .leftToRight)
-private let __bidiClass_rangePair_fm: _T2 = (0xa874....0xa877, .otherNeutral)
-private let __bidiClass_rangePair_fn: _T2 = (0xa880....0xa8c3, .leftToRight)
-private let __bidiClass_rangePair_fo: _T2 = (0xa8c4....0xa8c5, .nonspacingMark)
-private let __bidiClass_rangePair_fp: _T2 = (0xa8ce....0xa8d9, .leftToRight)
-private let __bidiClass_rangePair_fq: _T2 = (0xa8e0....0xa8f1, .nonspacingMark)
-private let __bidiClass_rangePair_fr: _T2 = (0xa8f2....0xa8fe, .leftToRight)
-private let __bidiClass_rangePair_fs: _T2 = (0xa900....0xa925, .leftToRight)
-private let __bidiClass_rangePair_ft: _T2 = (0xa926....0xa92d, .nonspacingMark)
-private let __bidiClass_rangePair_fu: _T2 = (0xa92e....0xa946, .leftToRight)
-private let __bidiClass_rangePair_fv: _T2 = (0xa947....0xa951, .nonspacingMark)
-private let __bidiClass_rangePair_fw: _T2 = (0xa952....0xa953, .leftToRight)
-private let __bidiClass_rangePair_fx: _T2 = (0xa95f....0xa97c, .leftToRight)
-private let __bidiClass_rangePair_fy: _T2 = (0xa980....0xa982, .nonspacingMark)
-private let __bidiClass_rangePair_fz: _T2 = (0xa983....0xa9b2, .leftToRight)
-private let __bidiClass_rangePair_g0: _T2 = (0xa9b4....0xa9b5, .leftToRight)
-private let __bidiClass_rangePair_g1: _T2 = (0xa9b6....0xa9b9, .nonspacingMark)
-private let __bidiClass_rangePair_g2: _T2 = (0xa9ba....0xa9bb, .leftToRight)
-private let __bidiClass_rangePair_g3: _T2 = (0xa9bc....0xa9bd, .nonspacingMark)
-private let __bidiClass_rangePair_g4: _T2 = (0xa9be....0xa9cd, .leftToRight)
-private let __bidiClass_rangePair_g5: _T2 = (0xa9cf....0xa9d9, .leftToRight)
-private let __bidiClass_rangePair_g6: _T2 = (0xa9de....0xa9e4, .leftToRight)
-private let __bidiClass_rangePair_g7: _T2 = (0xa9e6....0xa9fe, .leftToRight)
-private let __bidiClass_rangePair_g8: _T2 = (0xaa00....0xaa28, .leftToRight)
-private let __bidiClass_rangePair_g9: _T2 = (0xaa29....0xaa2e, .nonspacingMark)
-private let __bidiClass_rangePair_ga: _T2 = (0xaa2f....0xaa30, .leftToRight)
-private let __bidiClass_rangePair_gb: _T2 = (0xaa31....0xaa32, .nonspacingMark)
-private let __bidiClass_rangePair_gc: _T2 = (0xaa33....0xaa34, .leftToRight)
-private let __bidiClass_rangePair_gd: _T2 = (0xaa35....0xaa36, .nonspacingMark)
-private let __bidiClass_rangePair_ge: _T2 = (0xaa40....0xaa42, .leftToRight)
-private let __bidiClass_rangePair_gf: _T2 = (0xaa44....0xaa4b, .leftToRight)
-private let __bidiClass_rangePair_gg: _T2 = (0xaa50....0xaa59, .leftToRight)
-private let __bidiClass_rangePair_gh: _T2 = (0xaa5c....0xaa7b, .leftToRight)
-private let __bidiClass_rangePair_gi: _T2 = (0xaa7d....0xaaaf, .leftToRight)
-private let __bidiClass_rangePair_gj: _T2 = (0xaab2....0xaab4, .nonspacingMark)
-private let __bidiClass_rangePair_gk: _T2 = (0xaab5....0xaab6, .leftToRight)
-private let __bidiClass_rangePair_gl: _T2 = (0xaab7....0xaab8, .nonspacingMark)
-private let __bidiClass_rangePair_gm: _T2 = (0xaab9....0xaabd, .leftToRight)
-private let __bidiClass_rangePair_gn: _T2 = (0xaabe....0xaabf, .nonspacingMark)
-private let __bidiClass_rangePair_go: _T2 = (0xaadb....0xaaeb, .leftToRight)
-private let __bidiClass_rangePair_gp: _T2 = (0xaaec....0xaaed, .nonspacingMark)
-private let __bidiClass_rangePair_gq: _T2 = (0xaaee....0xaaf5, .leftToRight)
-private let __bidiClass_rangePair_gr: _T2 = (0xab01....0xab06, .leftToRight)
-private let __bidiClass_rangePair_gs: _T2 = (0xab09....0xab0e, .leftToRight)
-private let __bidiClass_rangePair_gt: _T2 = (0xab11....0xab16, .leftToRight)
-private let __bidiClass_rangePair_gu: _T2 = (0xab20....0xab26, .leftToRight)
-private let __bidiClass_rangePair_gv: _T2 = (0xab28....0xab2e, .leftToRight)
-private let __bidiClass_rangePair_gw: _T2 = (0xab30....0xab67, .leftToRight)
-private let __bidiClass_rangePair_gx: _T2 = (0xab70....0xabe4, .leftToRight)
-private let __bidiClass_rangePair_gy: _T2 = (0xabe6....0xabe7, .leftToRight)
-private let __bidiClass_rangePair_gz: _T2 = (0xabe9....0xabec, .leftToRight)
-private let __bidiClass_rangePair_h0: _T2 = (0xabf0....0xabf9, .leftToRight)
-private let __bidiClass_rangePair_h1: _T2 = (0xac00....0xd7a3, .leftToRight)
-private let __bidiClass_rangePair_h2: _T2 = (0xd7b0....0xd7c6, .leftToRight)
-private let __bidiClass_rangePair_h3: _T2 = (0xd7cb....0xd7fb, .leftToRight)
-private let __bidiClass_rangePair_h4: _T2 = (0xe000....0xfa6d, .leftToRight)
-private let __bidiClass_rangePair_h5: _T2 = (0xfa70....0xfad9, .leftToRight)
-private let __bidiClass_rangePair_h6: _T2 = (0xfb00....0xfb06, .leftToRight)
-private let __bidiClass_rangePair_h7: _T2 = (0xfb13....0xfb17, .leftToRight)
-private let __bidiClass_rangePair_h8: _T2 = (0xfb1f....0xfb28, .rightToLeft)
-private let __bidiClass_rangePair_h9: _T2 = (0xfb2a....0xfb4f, .rightToLeft)
-private let __bidiClass_rangePair_ha: _T2 = (0xfb50....0xfd3d, .arabicLetter)
-private let __bidiClass_rangePair_hb: _T2 = (0xfd3e....0xfd3f, .otherNeutral)
-private let __bidiClass_rangePair_hc: _T2 = (0xfd40....0xfdcf, .arabicLetter)
-private let __bidiClass_rangePair_hd: _T2 = (0xfdd0....0xfdef, .boundaryNeutral)
-private let __bidiClass_rangePair_he: _T2 = (0xfdf0....0xfdfc, .arabicLetter)
-private let __bidiClass_rangePair_hf: _T2 = (0xfdfe....0xfdff, .arabicLetter)
-private let __bidiClass_rangePair_hg: _T2 = (0xfe00....0xfe0f, .nonspacingMark)
-private let __bidiClass_rangePair_hh: _T2 = (0xfe10....0xfe19, .otherNeutral)
-private let __bidiClass_rangePair_hi: _T2 = (0xfe20....0xfe2f, .nonspacingMark)
-private let __bidiClass_rangePair_hj: _T2 = (0xfe30....0xfe4f, .otherNeutral)
-private let __bidiClass_rangePair_hk: _T2 = (0xfe56....0xfe5e, .otherNeutral)
-private let __bidiClass_rangePair_hl: _T2 = (0xfe60....0xfe61, .otherNeutral)
-private let __bidiClass_rangePair_hm: _T2 = (0xfe62....0xfe63, .europeanSeparator)
-private let __bidiClass_rangePair_hn: _T2 = (0xfe64....0xfe66, .otherNeutral)
-private let __bidiClass_rangePair_ho: _T2 = (0xfe69....0xfe6a, .europeanTerminator)
-private let __bidiClass_rangePair_hp: _T2 = (0xfe70....0xfefe, .arabicLetter)
-private let __bidiClass_rangePair_hq: _T2 = (0xff01....0xff02, .otherNeutral)
-private let __bidiClass_rangePair_hr: _T2 = (0xff03....0xff05, .europeanTerminator)
-private let __bidiClass_rangePair_hs: _T2 = (0xff06....0xff0a, .otherNeutral)
-private let __bidiClass_rangePair_ht: _T2 = (0xff0e....0xff0f, .commonSeparator)
-private let __bidiClass_rangePair_hu: _T2 = (0xff10....0xff19, .europeanNumber)
-private let __bidiClass_rangePair_hv: _T2 = (0xff1b....0xff20, .otherNeutral)
-private let __bidiClass_rangePair_hw: _T2 = (0xff21....0xff3a, .leftToRight)
-private let __bidiClass_rangePair_hx: _T2 = (0xff3b....0xff40, .otherNeutral)
-private let __bidiClass_rangePair_hy: _T2 = (0xff41....0xff5a, .leftToRight)
-private let __bidiClass_rangePair_hz: _T2 = (0xff5b....0xff65, .otherNeutral)
-private let __bidiClass_rangePair_i0: _T2 = (0xff66....0xffbe, .leftToRight)
-private let __bidiClass_rangePair_i1: _T2 = (0xffc2....0xffc7, .leftToRight)
-private let __bidiClass_rangePair_i2: _T2 = (0xffca....0xffcf, .leftToRight)
-private let __bidiClass_rangePair_i3: _T2 = (0xffd2....0xffd7, .leftToRight)
-private let __bidiClass_rangePair_i4: _T2 = (0xffda....0xffdc, .leftToRight)
-private let __bidiClass_rangePair_i5: _T2 = (0xffe0....0xffe1, .europeanTerminator)
-private let __bidiClass_rangePair_i6: _T2 = (0xffe2....0xffe4, .otherNeutral)
-private let __bidiClass_rangePair_i7: _T2 = (0xffe5....0xffe6, .europeanTerminator)
-private let __bidiClass_rangePair_i8: _T2 = (0xffe8....0xffee, .otherNeutral)
-private let __bidiClass_rangePair_i9: _T2 = (0xfff0....0xfff8, .boundaryNeutral)
-private let __bidiClass_rangePair_ia: _T2 = (0xfff9....0xfffd, .otherNeutral)
-private let __bidiClass_rangePair_ib: _T2 = (0xfffe....0xffff, .boundaryNeutral)
-private let __bidiClass_rangePair_ic: _T2 = (0x10000....0x1000b, .leftToRight)
-private let __bidiClass_rangePair_id: _T2 = (0x1000d....0x10026, .leftToRight)
-private let __bidiClass_rangePair_ie: _T2 = (0x10028....0x1003a, .leftToRight)
-private let __bidiClass_rangePair_if: _T2 = (0x1003c....0x1003d, .leftToRight)
-private let __bidiClass_rangePair_ig: _T2 = (0x1003f....0x1004d, .leftToRight)
-private let __bidiClass_rangePair_ih: _T2 = (0x10050....0x1005d, .leftToRight)
-private let __bidiClass_rangePair_ii: _T2 = (0x10080....0x100fa, .leftToRight)
-private let __bidiClass_rangePair_ij: _T2 = (0x10107....0x10133, .leftToRight)
-private let __bidiClass_rangePair_ik: _T2 = (0x10137....0x1013f, .leftToRight)
-private let __bidiClass_rangePair_il: _T2 = (0x10140....0x1018c, .otherNeutral)
-private let __bidiClass_rangePair_im: _T2 = (0x1018d....0x1018e, .leftToRight)
-private let __bidiClass_rangePair_in: _T2 = (0x10190....0x1019b, .otherNeutral)
-private let __bidiClass_rangePair_io: _T2 = (0x101d0....0x101fc, .leftToRight)
-private let __bidiClass_rangePair_ip: _T2 = (0x10280....0x1029c, .leftToRight)
-private let __bidiClass_rangePair_iq: _T2 = (0x102a0....0x102d0, .leftToRight)
-private let __bidiClass_rangePair_ir: _T2 = (0x102e1....0x102fb, .europeanNumber)
-private let __bidiClass_rangePair_is: _T2 = (0x10300....0x10323, .leftToRight)
-private let __bidiClass_rangePair_it: _T2 = (0x1032d....0x1034a, .leftToRight)
-private let __bidiClass_rangePair_iu: _T2 = (0x10350....0x10375, .leftToRight)
-private let __bidiClass_rangePair_iv: _T2 = (0x10376....0x1037a, .nonspacingMark)
-private let __bidiClass_rangePair_iw: _T2 = (0x10380....0x1039d, .leftToRight)
-private let __bidiClass_rangePair_ix: _T2 = (0x1039f....0x103c3, .leftToRight)
-private let __bidiClass_rangePair_iy: _T2 = (0x103c8....0x103d5, .leftToRight)
-private let __bidiClass_rangePair_iz: _T2 = (0x10400....0x1049d, .leftToRight)
-private let __bidiClass_rangePair_j0: _T2 = (0x104a0....0x104a9, .leftToRight)
-private let __bidiClass_rangePair_j1: _T2 = (0x104b0....0x104d3, .leftToRight)
-private let __bidiClass_rangePair_j2: _T2 = (0x104d8....0x104fb, .leftToRight)
-private let __bidiClass_rangePair_j3: _T2 = (0x10500....0x10527, .leftToRight)
-private let __bidiClass_rangePair_j4: _T2 = (0x10530....0x10563, .leftToRight)
-private let __bidiClass_rangePair_j5: _T2 = (0x10600....0x10736, .leftToRight)
-private let __bidiClass_rangePair_j6: _T2 = (0x10740....0x10755, .leftToRight)
-private let __bidiClass_rangePair_j7: _T2 = (0x10760....0x10767, .leftToRight)
-private let __bidiClass_rangePair_j8: _T2 = (0x10800....0x1091e, .rightToLeft)
-private let __bidiClass_rangePair_j9: _T2 = (0x10920....0x10a00, .rightToLeft)
-private let __bidiClass_rangePair_ja: _T2 = (0x10a01....0x10a03, .nonspacingMark)
-private let __bidiClass_rangePair_jb: _T2 = (0x10a05....0x10a06, .nonspacingMark)
-private let __bidiClass_rangePair_jc: _T2 = (0x10a07....0x10a0b, .rightToLeft)
-private let __bidiClass_rangePair_jd: _T2 = (0x10a0c....0x10a0f, .nonspacingMark)
-private let __bidiClass_rangePair_je: _T2 = (0x10a10....0x10a37, .rightToLeft)
-private let __bidiClass_rangePair_jf: _T2 = (0x10a38....0x10a3a, .nonspacingMark)
-private let __bidiClass_rangePair_jg: _T2 = (0x10a3b....0x10a3e, .rightToLeft)
-private let __bidiClass_rangePair_jh: _T2 = (0x10a40....0x10ae4, .rightToLeft)
-private let __bidiClass_rangePair_ji: _T2 = (0x10ae5....0x10ae6, .nonspacingMark)
-private let __bidiClass_rangePair_jj: _T2 = (0x10ae7....0x10b38, .rightToLeft)
-private let __bidiClass_rangePair_jk: _T2 = (0x10b39....0x10b3f, .otherNeutral)
-private let __bidiClass_rangePair_jl: _T2 = (0x10b40....0x10cff, .rightToLeft)
-private let __bidiClass_rangePair_jm: _T2 = (0x10d00....0x10d23, .arabicLetter)
-private let __bidiClass_rangePair_jn: _T2 = (0x10d24....0x10d27, .nonspacingMark)
-private let __bidiClass_rangePair_jo: _T2 = (0x10d28....0x10d2f, .arabicLetter)
-private let __bidiClass_rangePair_jp: _T2 = (0x10d30....0x10d39, .arabicNumber)
-private let __bidiClass_rangePair_jq: _T2 = (0x10d3a....0x10d3f, .arabicLetter)
-private let __bidiClass_rangePair_jr: _T2 = (0x10d40....0x10e5f, .rightToLeft)
-private let __bidiClass_rangePair_js: _T2 = (0x10e60....0x10e7e, .arabicNumber)
-private let __bidiClass_rangePair_jt: _T2 = (0x10e7f....0x10f2f, .rightToLeft)
-private let __bidiClass_rangePair_ju: _T2 = (0x10f30....0x10f45, .arabicLetter)
-private let __bidiClass_rangePair_jv: _T2 = (0x10f46....0x10f50, .nonspacingMark)
-private let __bidiClass_rangePair_jw: _T2 = (0x10f51....0x10f6f, .arabicLetter)
-private let __bidiClass_rangePair_jx: _T2 = (0x10f70....0x10fff, .rightToLeft)
-private let __bidiClass_rangePair_jy: _T2 = (0x11002....0x11037, .leftToRight)
-private let __bidiClass_rangePair_jz: _T2 = (0x11038....0x11046, .nonspacingMark)
-private let __bidiClass_rangePair_k0: _T2 = (0x11047....0x1104d, .leftToRight)
-private let __bidiClass_rangePair_k1: _T2 = (0x11052....0x11065, .otherNeutral)
-private let __bidiClass_rangePair_k2: _T2 = (0x11066....0x1106f, .leftToRight)
-private let __bidiClass_rangePair_k3: _T2 = (0x1107f....0x11081, .nonspacingMark)
-private let __bidiClass_rangePair_k4: _T2 = (0x11082....0x110b2, .leftToRight)
-private let __bidiClass_rangePair_k5: _T2 = (0x110b3....0x110b6, .nonspacingMark)
-private let __bidiClass_rangePair_k6: _T2 = (0x110b7....0x110b8, .leftToRight)
-private let __bidiClass_rangePair_k7: _T2 = (0x110b9....0x110ba, .nonspacingMark)
-private let __bidiClass_rangePair_k8: _T2 = (0x110bb....0x110c1, .leftToRight)
-private let __bidiClass_rangePair_k9: _T2 = (0x110d0....0x110e8, .leftToRight)
-private let __bidiClass_rangePair_ka: _T2 = (0x110f0....0x110f9, .leftToRight)
-private let __bidiClass_rangePair_kb: _T2 = (0x11100....0x11102, .nonspacingMark)
-private let __bidiClass_rangePair_kc: _T2 = (0x11103....0x11126, .leftToRight)
-private let __bidiClass_rangePair_kd: _T2 = (0x11127....0x1112b, .nonspacingMark)
-private let __bidiClass_rangePair_ke: _T2 = (0x1112d....0x11134, .nonspacingMark)
-private let __bidiClass_rangePair_kf: _T2 = (0x11136....0x11146, .leftToRight)
-private let __bidiClass_rangePair_kg: _T2 = (0x11150....0x11172, .leftToRight)
-private let __bidiClass_rangePair_kh: _T2 = (0x11174....0x11176, .leftToRight)
-private let __bidiClass_rangePair_ki: _T2 = (0x11180....0x11181, .nonspacingMark)
-private let __bidiClass_rangePair_kj: _T2 = (0x11182....0x111b5, .leftToRight)
-private let __bidiClass_rangePair_kk: _T2 = (0x111b6....0x111be, .nonspacingMark)
-private let __bidiClass_rangePair_kl: _T2 = (0x111bf....0x111c8, .leftToRight)
-private let __bidiClass_rangePair_km: _T2 = (0x111c9....0x111cc, .nonspacingMark)
-private let __bidiClass_rangePair_kn: _T2 = (0x111d0....0x111df, .leftToRight)
-private let __bidiClass_rangePair_ko: _T2 = (0x111e1....0x111f4, .leftToRight)
-private let __bidiClass_rangePair_kp: _T2 = (0x11200....0x11211, .leftToRight)
-private let __bidiClass_rangePair_kq: _T2 = (0x11213....0x1122e, .leftToRight)
-private let __bidiClass_rangePair_kr: _T2 = (0x1122f....0x11231, .nonspacingMark)
-private let __bidiClass_rangePair_ks: _T2 = (0x11232....0x11233, .leftToRight)
-private let __bidiClass_rangePair_kt: _T2 = (0x11236....0x11237, .nonspacingMark)
-private let __bidiClass_rangePair_ku: _T2 = (0x11238....0x1123d, .leftToRight)
-private let __bidiClass_rangePair_kv: _T2 = (0x11280....0x11286, .leftToRight)
-private let __bidiClass_rangePair_kw: _T2 = (0x1128a....0x1128d, .leftToRight)
-private let __bidiClass_rangePair_kx: _T2 = (0x1128f....0x1129d, .leftToRight)
-private let __bidiClass_rangePair_ky: _T2 = (0x1129f....0x112a9, .leftToRight)
-private let __bidiClass_rangePair_kz: _T2 = (0x112b0....0x112de, .leftToRight)
-private let __bidiClass_rangePair_l0: _T2 = (0x112e0....0x112e2, .leftToRight)
-private let __bidiClass_rangePair_l1: _T2 = (0x112e3....0x112ea, .nonspacingMark)
-private let __bidiClass_rangePair_l2: _T2 = (0x112f0....0x112f9, .leftToRight)
-private let __bidiClass_rangePair_l3: _T2 = (0x11300....0x11301, .nonspacingMark)
-private let __bidiClass_rangePair_l4: _T2 = (0x11302....0x11303, .leftToRight)
-private let __bidiClass_rangePair_l5: _T2 = (0x11305....0x1130c, .leftToRight)
-private let __bidiClass_rangePair_l6: _T2 = (0x1130f....0x11310, .leftToRight)
-private let __bidiClass_rangePair_l7: _T2 = (0x11313....0x11328, .leftToRight)
-private let __bidiClass_rangePair_l8: _T2 = (0x1132a....0x11330, .leftToRight)
-private let __bidiClass_rangePair_l9: _T2 = (0x11332....0x11333, .leftToRight)
-private let __bidiClass_rangePair_la: _T2 = (0x11335....0x11339, .leftToRight)
-private let __bidiClass_rangePair_lb: _T2 = (0x1133b....0x1133c, .nonspacingMark)
-private let __bidiClass_rangePair_lc: _T2 = (0x1133d....0x1133f, .leftToRight)
-private let __bidiClass_rangePair_ld: _T2 = (0x11341....0x11344, .leftToRight)
-private let __bidiClass_rangePair_le: _T2 = (0x11347....0x11348, .leftToRight)
-private let __bidiClass_rangePair_lf: _T2 = (0x1134b....0x1134d, .leftToRight)
-private let __bidiClass_rangePair_lg: _T2 = (0x1135d....0x11363, .leftToRight)
-private let __bidiClass_rangePair_lh: _T2 = (0x11366....0x1136c, .nonspacingMark)
-private let __bidiClass_rangePair_li: _T2 = (0x11370....0x11374, .nonspacingMark)
-private let __bidiClass_rangePair_lj: _T2 = (0x11400....0x11437, .leftToRight)
-private let __bidiClass_rangePair_lk: _T2 = (0x11438....0x1143f, .nonspacingMark)
-private let __bidiClass_rangePair_ll: _T2 = (0x11440....0x11441, .leftToRight)
-private let __bidiClass_rangePair_lm: _T2 = (0x11442....0x11444, .nonspacingMark)
-private let __bidiClass_rangePair_ln: _T2 = (0x11447....0x11459, .leftToRight)
-private let __bidiClass_rangePair_lo: _T2 = (0x11480....0x114b2, .leftToRight)
-private let __bidiClass_rangePair_lp: _T2 = (0x114b3....0x114b8, .nonspacingMark)
-private let __bidiClass_rangePair_lq: _T2 = (0x114bb....0x114be, .leftToRight)
-private let __bidiClass_rangePair_lr: _T2 = (0x114bf....0x114c0, .nonspacingMark)
-private let __bidiClass_rangePair_ls: _T2 = (0x114c2....0x114c3, .nonspacingMark)
-private let __bidiClass_rangePair_lt: _T2 = (0x114c4....0x114c7, .leftToRight)
-private let __bidiClass_rangePair_lu: _T2 = (0x114d0....0x114d9, .leftToRight)
-private let __bidiClass_rangePair_lv: _T2 = (0x11580....0x115b1, .leftToRight)
-private let __bidiClass_rangePair_lw: _T2 = (0x115b2....0x115b5, .nonspacingMark)
-private let __bidiClass_rangePair_lx: _T2 = (0x115b8....0x115bb, .leftToRight)
-private let __bidiClass_rangePair_ly: _T2 = (0x115bc....0x115bd, .nonspacingMark)
-private let __bidiClass_rangePair_lz: _T2 = (0x115bf....0x115c0, .nonspacingMark)
-private let __bidiClass_rangePair_m0: _T2 = (0x115c1....0x115db, .leftToRight)
-private let __bidiClass_rangePair_m1: _T2 = (0x115dc....0x115dd, .nonspacingMark)
-private let __bidiClass_rangePair_m2: _T2 = (0x11600....0x11632, .leftToRight)
-private let __bidiClass_rangePair_m3: _T2 = (0x11633....0x1163a, .nonspacingMark)
-private let __bidiClass_rangePair_m4: _T2 = (0x1163b....0x1163c, .leftToRight)
-private let __bidiClass_rangePair_m5: _T2 = (0x1163f....0x11640, .nonspacingMark)
-private let __bidiClass_rangePair_m6: _T2 = (0x11641....0x11644, .leftToRight)
-private let __bidiClass_rangePair_m7: _T2 = (0x11650....0x11659, .leftToRight)
-private let __bidiClass_rangePair_m8: _T2 = (0x11660....0x1166c, .otherNeutral)
-private let __bidiClass_rangePair_m9: _T2 = (0x11680....0x116aa, .leftToRight)
-private let __bidiClass_rangePair_ma: _T2 = (0x116ae....0x116af, .leftToRight)
-private let __bidiClass_rangePair_mb: _T2 = (0x116b0....0x116b5, .nonspacingMark)
-private let __bidiClass_rangePair_mc: _T2 = (0x116c0....0x116c9, .leftToRight)
-private let __bidiClass_rangePair_md: _T2 = (0x11700....0x1171a, .leftToRight)
-private let __bidiClass_rangePair_me: _T2 = (0x1171d....0x1171f, .nonspacingMark)
-private let __bidiClass_rangePair_mf: _T2 = (0x11720....0x11721, .leftToRight)
-private let __bidiClass_rangePair_mg: _T2 = (0x11722....0x11725, .nonspacingMark)
-private let __bidiClass_rangePair_mh: _T2 = (0x11727....0x1172b, .nonspacingMark)
-private let __bidiClass_rangePair_mi: _T2 = (0x11730....0x1173f, .leftToRight)
-private let __bidiClass_rangePair_mj: _T2 = (0x11800....0x1182e, .leftToRight)
-private let __bidiClass_rangePair_mk: _T2 = (0x1182f....0x11837, .nonspacingMark)
-private let __bidiClass_rangePair_ml: _T2 = (0x11839....0x1183a, .nonspacingMark)
-private let __bidiClass_rangePair_mm: _T2 = (0x118a0....0x118f2, .leftToRight)
-private let __bidiClass_rangePair_mn: _T2 = (0x119a0....0x119a7, .leftToRight)
-private let __bidiClass_rangePair_mo: _T2 = (0x119aa....0x119d3, .leftToRight)
-private let __bidiClass_rangePair_mp: _T2 = (0x119d4....0x119d7, .nonspacingMark)
-private let __bidiClass_rangePair_mq: _T2 = (0x119da....0x119db, .nonspacingMark)
-private let __bidiClass_rangePair_mr: _T2 = (0x119dc....0x119df, .leftToRight)
-private let __bidiClass_rangePair_ms: _T2 = (0x119e1....0x119e4, .leftToRight)
-private let __bidiClass_rangePair_mt: _T2 = (0x11a01....0x11a06, .nonspacingMark)
-private let __bidiClass_rangePair_mu: _T2 = (0x11a07....0x11a08, .leftToRight)
-private let __bidiClass_rangePair_mv: _T2 = (0x11a09....0x11a0a, .nonspacingMark)
-private let __bidiClass_rangePair_mw: _T2 = (0x11a0b....0x11a32, .leftToRight)
-private let __bidiClass_rangePair_mx: _T2 = (0x11a33....0x11a38, .nonspacingMark)
-private let __bidiClass_rangePair_my: _T2 = (0x11a39....0x11a3a, .leftToRight)
-private let __bidiClass_rangePair_mz: _T2 = (0x11a3b....0x11a3e, .nonspacingMark)
-private let __bidiClass_rangePair_n0: _T2 = (0x11a3f....0x11a46, .leftToRight)
-private let __bidiClass_rangePair_n1: _T2 = (0x11a51....0x11a56, .nonspacingMark)
-private let __bidiClass_rangePair_n2: _T2 = (0x11a57....0x11a58, .leftToRight)
-private let __bidiClass_rangePair_n3: _T2 = (0x11a59....0x11a5b, .nonspacingMark)
-private let __bidiClass_rangePair_n4: _T2 = (0x11a5c....0x11a89, .leftToRight)
-private let __bidiClass_rangePair_n5: _T2 = (0x11a8a....0x11a96, .nonspacingMark)
-private let __bidiClass_rangePair_n6: _T2 = (0x11a98....0x11a99, .nonspacingMark)
-private let __bidiClass_rangePair_n7: _T2 = (0x11a9a....0x11aa2, .leftToRight)
-private let __bidiClass_rangePair_n8: _T2 = (0x11ac0....0x11af8, .leftToRight)
-private let __bidiClass_rangePair_n9: _T2 = (0x11c00....0x11c08, .leftToRight)
-private let __bidiClass_rangePair_na: _T2 = (0x11c0a....0x11c2f, .leftToRight)
-private let __bidiClass_rangePair_nb: _T2 = (0x11c30....0x11c36, .nonspacingMark)
-private let __bidiClass_rangePair_nc: _T2 = (0x11c38....0x11c3d, .nonspacingMark)
-private let __bidiClass_rangePair_nd: _T2 = (0x11c3e....0x11c45, .leftToRight)
-private let __bidiClass_rangePair_ne: _T2 = (0x11c50....0x11c6c, .leftToRight)
-private let __bidiClass_rangePair_nf: _T2 = (0x11c70....0x11c8f, .leftToRight)
-private let __bidiClass_rangePair_ng: _T2 = (0x11c92....0x11ca7, .nonspacingMark)
-private let __bidiClass_rangePair_nh: _T2 = (0x11caa....0x11cb0, .nonspacingMark)
-private let __bidiClass_rangePair_ni: _T2 = (0x11cb2....0x11cb3, .nonspacingMark)
-private let __bidiClass_rangePair_nj: _T2 = (0x11cb5....0x11cb6, .nonspacingMark)
-private let __bidiClass_rangePair_nk: _T2 = (0x11d00....0x11d06, .leftToRight)
-private let __bidiClass_rangePair_nl: _T2 = (0x11d08....0x11d09, .leftToRight)
-private let __bidiClass_rangePair_nm: _T2 = (0x11d0b....0x11d30, .leftToRight)
-private let __bidiClass_rangePair_nn: _T2 = (0x11d31....0x11d36, .nonspacingMark)
-private let __bidiClass_rangePair_no: _T2 = (0x11d3c....0x11d3d, .nonspacingMark)
-private let __bidiClass_rangePair_np: _T2 = (0x11d3f....0x11d45, .nonspacingMark)
-private let __bidiClass_rangePair_nq: _T2 = (0x11d50....0x11d59, .leftToRight)
-private let __bidiClass_rangePair_nr: _T2 = (0x11d60....0x11d65, .leftToRight)
-private let __bidiClass_rangePair_ns: _T2 = (0x11d67....0x11d68, .leftToRight)
-private let __bidiClass_rangePair_nt: _T2 = (0x11d6a....0x11d8e, .leftToRight)
-private let __bidiClass_rangePair_nu: _T2 = (0x11d90....0x11d91, .nonspacingMark)
-private let __bidiClass_rangePair_nv: _T2 = (0x11d93....0x11d94, .leftToRight)
-private let __bidiClass_rangePair_nw: _T2 = (0x11da0....0x11da9, .leftToRight)
-private let __bidiClass_rangePair_nx: _T2 = (0x11ee0....0x11ef2, .leftToRight)
-private let __bidiClass_rangePair_ny: _T2 = (0x11ef3....0x11ef4, .nonspacingMark)
-private let __bidiClass_rangePair_nz: _T2 = (0x11ef5....0x11ef8, .leftToRight)
-private let __bidiClass_rangePair_o0: _T2 = (0x11fc0....0x11fd4, .leftToRight)
-private let __bidiClass_rangePair_o1: _T2 = (0x11fd5....0x11fdc, .otherNeutral)
-private let __bidiClass_rangePair_o2: _T2 = (0x11fdd....0x11fe0, .europeanTerminator)
-private let __bidiClass_rangePair_o3: _T2 = (0x11fe1....0x11ff1, .otherNeutral)
-private let __bidiClass_rangePair_o4: _T2 = (0x11fff....0x12399, .leftToRight)
-private let __bidiClass_rangePair_o5: _T2 = (0x12400....0x1246e, .leftToRight)
-private let __bidiClass_rangePair_o6: _T2 = (0x12470....0x12474, .leftToRight)
-private let __bidiClass_rangePair_o7: _T2 = (0x12480....0x12543, .leftToRight)
-private let __bidiClass_rangePair_o8: _T2 = (0x13000....0x1342e, .leftToRight)
-private let __bidiClass_rangePair_o9: _T2 = (0x13430....0x13438, .leftToRight)
-private let __bidiClass_rangePair_oa: _T2 = (0x14400....0x14646, .leftToRight)
-private let __bidiClass_rangePair_ob: _T2 = (0x16800....0x16a38, .leftToRight)
-private let __bidiClass_rangePair_oc: _T2 = (0x16a40....0x16a5e, .leftToRight)
-private let __bidiClass_rangePair_od: _T2 = (0x16a60....0x16a69, .leftToRight)
-private let __bidiClass_rangePair_oe: _T2 = (0x16a6e....0x16a6f, .leftToRight)
-private let __bidiClass_rangePair_of: _T2 = (0x16ad0....0x16aed, .leftToRight)
-private let __bidiClass_rangePair_og: _T2 = (0x16af0....0x16af4, .nonspacingMark)
-private let __bidiClass_rangePair_oh: _T2 = (0x16b00....0x16b2f, .leftToRight)
-private let __bidiClass_rangePair_oi: _T2 = (0x16b30....0x16b36, .nonspacingMark)
-private let __bidiClass_rangePair_oj: _T2 = (0x16b37....0x16b45, .leftToRight)
-private let __bidiClass_rangePair_ok: _T2 = (0x16b50....0x16b59, .leftToRight)
-private let __bidiClass_rangePair_ol: _T2 = (0x16b5b....0x16b61, .leftToRight)
-private let __bidiClass_rangePair_om: _T2 = (0x16b63....0x16b77, .leftToRight)
-private let __bidiClass_rangePair_on: _T2 = (0x16b7d....0x16b8f, .leftToRight)
-private let __bidiClass_rangePair_oo: _T2 = (0x16e40....0x16e9a, .leftToRight)
-private let __bidiClass_rangePair_op: _T2 = (0x16f00....0x16f4a, .leftToRight)
-private let __bidiClass_rangePair_oq: _T2 = (0x16f50....0x16f87, .leftToRight)
-private let __bidiClass_rangePair_or: _T2 = (0x16f8f....0x16f92, .nonspacingMark)
-private let __bidiClass_rangePair_os: _T2 = (0x16f93....0x16f9f, .leftToRight)
-private let __bidiClass_rangePair_ot: _T2 = (0x16fe0....0x16fe1, .leftToRight)
-private let __bidiClass_rangePair_ou: _T2 = (0x17000....0x187f7, .leftToRight)
-private let __bidiClass_rangePair_ov: _T2 = (0x18800....0x18af2, .leftToRight)
-private let __bidiClass_rangePair_ow: _T2 = (0x1b000....0x1b11e, .leftToRight)
-private let __bidiClass_rangePair_ox: _T2 = (0x1b150....0x1b152, .leftToRight)
-private let __bidiClass_rangePair_oy: _T2 = (0x1b164....0x1b167, .leftToRight)
-private let __bidiClass_rangePair_oz: _T2 = (0x1b170....0x1b2fb, .leftToRight)
-private let __bidiClass_rangePair_p0: _T2 = (0x1bc00....0x1bc6a, .leftToRight)
-private let __bidiClass_rangePair_p1: _T2 = (0x1bc70....0x1bc7c, .leftToRight)
-private let __bidiClass_rangePair_p2: _T2 = (0x1bc80....0x1bc88, .leftToRight)
-private let __bidiClass_rangePair_p3: _T2 = (0x1bc90....0x1bc99, .leftToRight)
-private let __bidiClass_rangePair_p4: _T2 = (0x1bc9d....0x1bc9e, .nonspacingMark)
-private let __bidiClass_rangePair_p5: _T2 = (0x1bca0....0x1bca3, .boundaryNeutral)
-private let __bidiClass_rangePair_p6: _T2 = (0x1d000....0x1d0f5, .leftToRight)
-private let __bidiClass_rangePair_p7: _T2 = (0x1d100....0x1d126, .leftToRight)
-private let __bidiClass_rangePair_p8: _T2 = (0x1d129....0x1d166, .leftToRight)
-private let __bidiClass_rangePair_p9: _T2 = (0x1d167....0x1d169, .nonspacingMark)
-private let __bidiClass_rangePair_pa: _T2 = (0x1d16a....0x1d172, .leftToRight)
-private let __bidiClass_rangePair_pb: _T2 = (0x1d173....0x1d17a, .boundaryNeutral)
-private let __bidiClass_rangePair_pc: _T2 = (0x1d17b....0x1d182, .nonspacingMark)
-private let __bidiClass_rangePair_pd: _T2 = (0x1d183....0x1d184, .leftToRight)
-private let __bidiClass_rangePair_pe: _T2 = (0x1d185....0x1d18b, .nonspacingMark)
-private let __bidiClass_rangePair_pf: _T2 = (0x1d18c....0x1d1a9, .leftToRight)
-private let __bidiClass_rangePair_pg: _T2 = (0x1d1aa....0x1d1ad, .nonspacingMark)
-private let __bidiClass_rangePair_ph: _T2 = (0x1d1ae....0x1d1e8, .leftToRight)
-private let __bidiClass_rangePair_pi: _T2 = (0x1d200....0x1d241, .otherNeutral)
-private let __bidiClass_rangePair_pj: _T2 = (0x1d242....0x1d244, .nonspacingMark)
-private let __bidiClass_rangePair_pk: _T2 = (0x1d2e0....0x1d2f3, .leftToRight)
-private let __bidiClass_rangePair_pl: _T2 = (0x1d300....0x1d356, .otherNeutral)
-private let __bidiClass_rangePair_pm: _T2 = (0x1d360....0x1d378, .leftToRight)
-private let __bidiClass_rangePair_pn: _T2 = (0x1d400....0x1d454, .leftToRight)
-private let __bidiClass_rangePair_po: _T2 = (0x1d456....0x1d49c, .leftToRight)
-private let __bidiClass_rangePair_pp: _T2 = (0x1d49e....0x1d49f, .leftToRight)
-private let __bidiClass_rangePair_pq: _T2 = (0x1d4a5....0x1d4a6, .leftToRight)
-private let __bidiClass_rangePair_pr: _T2 = (0x1d4a9....0x1d4ac, .leftToRight)
-private let __bidiClass_rangePair_ps: _T2 = (0x1d4ae....0x1d4b9, .leftToRight)
-private let __bidiClass_rangePair_pt: _T2 = (0x1d4bd....0x1d4c3, .leftToRight)
-private let __bidiClass_rangePair_pu: _T2 = (0x1d4c5....0x1d505, .leftToRight)
-private let __bidiClass_rangePair_pv: _T2 = (0x1d507....0x1d50a, .leftToRight)
-private let __bidiClass_rangePair_pw: _T2 = (0x1d50d....0x1d514, .leftToRight)
-private let __bidiClass_rangePair_px: _T2 = (0x1d516....0x1d51c, .leftToRight)
-private let __bidiClass_rangePair_py: _T2 = (0x1d51e....0x1d539, .leftToRight)
-private let __bidiClass_rangePair_pz: _T2 = (0x1d53b....0x1d53e, .leftToRight)
-private let __bidiClass_rangePair_q0: _T2 = (0x1d540....0x1d544, .leftToRight)
-private let __bidiClass_rangePair_q1: _T2 = (0x1d54a....0x1d550, .leftToRight)
-private let __bidiClass_rangePair_q2: _T2 = (0x1d552....0x1d6a5, .leftToRight)
-private let __bidiClass_rangePair_q3: _T2 = (0x1d6a8....0x1d6da, .leftToRight)
-private let __bidiClass_rangePair_q4: _T2 = (0x1d6dc....0x1d714, .leftToRight)
-private let __bidiClass_rangePair_q5: _T2 = (0x1d716....0x1d74e, .leftToRight)
-private let __bidiClass_rangePair_q6: _T2 = (0x1d750....0x1d788, .leftToRight)
-private let __bidiClass_rangePair_q7: _T2 = (0x1d78a....0x1d7c2, .leftToRight)
-private let __bidiClass_rangePair_q8: _T2 = (0x1d7c4....0x1d7cb, .leftToRight)
-private let __bidiClass_rangePair_q9: _T2 = (0x1d7ce....0x1d7ff, .europeanNumber)
-private let __bidiClass_rangePair_qa: _T2 = (0x1d800....0x1d9ff, .leftToRight)
-private let __bidiClass_rangePair_qb: _T2 = (0x1da00....0x1da36, .nonspacingMark)
-private let __bidiClass_rangePair_qc: _T2 = (0x1da37....0x1da3a, .leftToRight)
-private let __bidiClass_rangePair_qd: _T2 = (0x1da3b....0x1da6c, .nonspacingMark)
-private let __bidiClass_rangePair_qe: _T2 = (0x1da6d....0x1da74, .leftToRight)
-private let __bidiClass_rangePair_qf: _T2 = (0x1da76....0x1da83, .leftToRight)
-private let __bidiClass_rangePair_qg: _T2 = (0x1da85....0x1da8b, .leftToRight)
-private let __bidiClass_rangePair_qh: _T2 = (0x1da9b....0x1da9f, .nonspacingMark)
-private let __bidiClass_rangePair_qi: _T2 = (0x1daa1....0x1daaf, .nonspacingMark)
-private let __bidiClass_rangePair_qj: _T2 = (0x1e000....0x1e006, .nonspacingMark)
-private let __bidiClass_rangePair_qk: _T2 = (0x1e008....0x1e018, .nonspacingMark)
-private let __bidiClass_rangePair_ql: _T2 = (0x1e01b....0x1e021, .nonspacingMark)
-private let __bidiClass_rangePair_qm: _T2 = (0x1e023....0x1e024, .nonspacingMark)
-private let __bidiClass_rangePair_qn: _T2 = (0x1e026....0x1e02a, .nonspacingMark)
-private let __bidiClass_rangePair_qo: _T2 = (0x1e100....0x1e12c, .leftToRight)
-private let __bidiClass_rangePair_qp: _T2 = (0x1e130....0x1e136, .nonspacingMark)
-private let __bidiClass_rangePair_qq: _T2 = (0x1e137....0x1e13d, .leftToRight)
-private let __bidiClass_rangePair_qr: _T2 = (0x1e140....0x1e149, .leftToRight)
-private let __bidiClass_rangePair_qs: _T2 = (0x1e14e....0x1e14f, .leftToRight)
-private let __bidiClass_rangePair_qt: _T2 = (0x1e2c0....0x1e2eb, .leftToRight)
-private let __bidiClass_rangePair_qu: _T2 = (0x1e2ec....0x1e2ef, .nonspacingMark)
-private let __bidiClass_rangePair_qv: _T2 = (0x1e2f0....0x1e2f9, .leftToRight)
-private let __bidiClass_rangePair_qw: _T2 = (0x1e800....0x1e8cf, .rightToLeft)
-private let __bidiClass_rangePair_qx: _T2 = (0x1e8d0....0x1e8d6, .nonspacingMark)
-private let __bidiClass_rangePair_qy: _T2 = (0x1e8d7....0x1e943, .rightToLeft)
-private let __bidiClass_rangePair_qz: _T2 = (0x1e944....0x1e94a, .nonspacingMark)
-private let __bidiClass_rangePair_r0: _T2 = (0x1e94b....0x1ec6f, .rightToLeft)
-private let __bidiClass_rangePair_r1: _T2 = (0x1ec70....0x1ecbf, .arabicLetter)
-private let __bidiClass_rangePair_r2: _T2 = (0x1ecc0....0x1ecff, .rightToLeft)
-private let __bidiClass_rangePair_r3: _T2 = (0x1ed00....0x1ed4f, .arabicLetter)
-private let __bidiClass_rangePair_r4: _T2 = (0x1ed50....0x1edff, .rightToLeft)
-private let __bidiClass_rangePair_r5: _T2 = (0x1ee00....0x1eeef, .arabicLetter)
-private let __bidiClass_rangePair_r6: _T2 = (0x1eef0....0x1eef1, .otherNeutral)
-private let __bidiClass_rangePair_r7: _T2 = (0x1eef2....0x1eeff, .arabicLetter)
-private let __bidiClass_rangePair_r8: _T2 = (0x1ef00....0x1efff, .rightToLeft)
-private let __bidiClass_rangePair_r9: _T2 = (0x1f000....0x1f02b, .otherNeutral)
-private let __bidiClass_rangePair_ra: _T2 = (0x1f030....0x1f093, .otherNeutral)
-private let __bidiClass_rangePair_rb: _T2 = (0x1f0a0....0x1f0ae, .otherNeutral)
-private let __bidiClass_rangePair_rc: _T2 = (0x1f0b1....0x1f0bf, .otherNeutral)
-private let __bidiClass_rangePair_rd: _T2 = (0x1f0c1....0x1f0cf, .otherNeutral)
-private let __bidiClass_rangePair_re: _T2 = (0x1f0d1....0x1f0f5, .otherNeutral)
-private let __bidiClass_rangePair_rf: _T2 = (0x1f100....0x1f10a, .europeanNumber)
-private let __bidiClass_rangePair_rg: _T2 = (0x1f10b....0x1f10c, .otherNeutral)
-private let __bidiClass_rangePair_rh: _T2 = (0x1f110....0x1f12e, .leftToRight)
-private let __bidiClass_rangePair_ri: _T2 = (0x1f130....0x1f169, .leftToRight)
-private let __bidiClass_rangePair_rj: _T2 = (0x1f16a....0x1f16c, .otherNeutral)
-private let __bidiClass_rangePair_rk: _T2 = (0x1f170....0x1f1ac, .leftToRight)
-private let __bidiClass_rangePair_rl: _T2 = (0x1f1e6....0x1f202, .leftToRight)
-private let __bidiClass_rangePair_rm: _T2 = (0x1f210....0x1f23b, .leftToRight)
-private let __bidiClass_rangePair_rn: _T2 = (0x1f240....0x1f248, .leftToRight)
-private let __bidiClass_rangePair_ro: _T2 = (0x1f250....0x1f251, .leftToRight)
-private let __bidiClass_rangePair_rp: _T2 = (0x1f260....0x1f265, .otherNeutral)
-private let __bidiClass_rangePair_rq: _T2 = (0x1f300....0x1f6d5, .otherNeutral)
-private let __bidiClass_rangePair_rr: _T2 = (0x1f6e0....0x1f6ec, .otherNeutral)
-private let __bidiClass_rangePair_rs: _T2 = (0x1f6f0....0x1f6fa, .otherNeutral)
-private let __bidiClass_rangePair_rt: _T2 = (0x1f700....0x1f773, .otherNeutral)
-private let __bidiClass_rangePair_ru: _T2 = (0x1f780....0x1f7d8, .otherNeutral)
-private let __bidiClass_rangePair_rv: _T2 = (0x1f7e0....0x1f7eb, .otherNeutral)
-private let __bidiClass_rangePair_rw: _T2 = (0x1f800....0x1f80b, .otherNeutral)
-private let __bidiClass_rangePair_rx: _T2 = (0x1f810....0x1f847, .otherNeutral)
-private let __bidiClass_rangePair_ry: _T2 = (0x1f850....0x1f859, .otherNeutral)
-private let __bidiClass_rangePair_rz: _T2 = (0x1f860....0x1f887, .otherNeutral)
-private let __bidiClass_rangePair_s0: _T2 = (0x1f890....0x1f8ad, .otherNeutral)
-private let __bidiClass_rangePair_s1: _T2 = (0x1f900....0x1f90b, .otherNeutral)
-private let __bidiClass_rangePair_s2: _T2 = (0x1f90d....0x1f971, .otherNeutral)
-private let __bidiClass_rangePair_s3: _T2 = (0x1f973....0x1f976, .otherNeutral)
-private let __bidiClass_rangePair_s4: _T2 = (0x1f97a....0x1f9a2, .otherNeutral)
-private let __bidiClass_rangePair_s5: _T2 = (0x1f9a5....0x1f9aa, .otherNeutral)
-private let __bidiClass_rangePair_s6: _T2 = (0x1f9ae....0x1f9ca, .otherNeutral)
-private let __bidiClass_rangePair_s7: _T2 = (0x1f9cd....0x1fa53, .otherNeutral)
-private let __bidiClass_rangePair_s8: _T2 = (0x1fa60....0x1fa6d, .otherNeutral)
-private let __bidiClass_rangePair_s9: _T2 = (0x1fa70....0x1fa73, .otherNeutral)
-private let __bidiClass_rangePair_sa: _T2 = (0x1fa78....0x1fa7a, .otherNeutral)
-private let __bidiClass_rangePair_sb: _T2 = (0x1fa80....0x1fa82, .otherNeutral)
-private let __bidiClass_rangePair_sc: _T2 = (0x1fa90....0x1fa95, .otherNeutral)
-private let __bidiClass_rangePair_sd: _T2 = (0x1fffe....0x1ffff, .boundaryNeutral)
-private let __bidiClass_rangePair_se: _T2 = (0x20000....0x2a6d6, .leftToRight)
-private let __bidiClass_rangePair_sf: _T2 = (0x2a700....0x2b734, .leftToRight)
-private let __bidiClass_rangePair_sg: _T2 = (0x2b740....0x2b81d, .leftToRight)
-private let __bidiClass_rangePair_sh: _T2 = (0x2b820....0x2cea1, .leftToRight)
-private let __bidiClass_rangePair_si: _T2 = (0x2ceb0....0x2ebe0, .leftToRight)
-private let __bidiClass_rangePair_sj: _T2 = (0x2f800....0x2fa1d, .leftToRight)
-private let __bidiClass_rangePair_sk: _T2 = (0x2fffe....0x2ffff, .boundaryNeutral)
-private let __bidiClass_rangePair_sl: _T2 = (0x3fffe....0x3ffff, .boundaryNeutral)
-private let __bidiClass_rangePair_sm: _T2 = (0x4fffe....0x4ffff, .boundaryNeutral)
-private let __bidiClass_rangePair_sn: _T2 = (0x5fffe....0x5ffff, .boundaryNeutral)
-private let __bidiClass_rangePair_so: _T2 = (0x6fffe....0x6ffff, .boundaryNeutral)
-private let __bidiClass_rangePair_sp: _T2 = (0x7fffe....0x7ffff, .boundaryNeutral)
-private let __bidiClass_rangePair_sq: _T2 = (0x8fffe....0x8ffff, .boundaryNeutral)
-private let __bidiClass_rangePair_sr: _T2 = (0x9fffe....0x9ffff, .boundaryNeutral)
-private let __bidiClass_rangePair_ss: _T2 = (0xafffe....0xaffff, .boundaryNeutral)
-private let __bidiClass_rangePair_st: _T2 = (0xbfffe....0xbffff, .boundaryNeutral)
-private let __bidiClass_rangePair_su: _T2 = (0xcfffe....0xcffff, .boundaryNeutral)
-private let __bidiClass_rangePair_sv: _T2 = (0xdfffe....0xe00ff, .boundaryNeutral)
-private let __bidiClass_rangePair_sw: _T2 = (0xe0100....0xe01ef, .nonspacingMark)
-private let __bidiClass_rangePair_sx: _T2 = (0xe01f0....0xe0fff, .boundaryNeutral)
-private let __bidiClass_rangePair_sy: _T2 = (0xefffe....0xeffff, .boundaryNeutral)
-private let __bidiClass_rangePair_sz: _T2 = (0xf0000....0xffffd, .leftToRight)
-private let __bidiClass_rangePair_t0: _T2 = (0xffffe....0xfffff, .boundaryNeutral)
-private let __bidiClass_rangePair_t1: _T2 = (0x100000....0x10fffd, .leftToRight)
-private let __bidiClass_rangePair_t2: _T2 = (0x10fffe....0x10ffff, .boundaryNeutral)
+private let __bidiClass_rangePair_2: _T2 = (0x30....0x39, .europeanNumber)
+private let __bidiClass_rangePair_3: _T2 = (0x41....0x5a, .leftToRight)
+private let __bidiClass_rangePair_4: _T2 = (0x61....0x7a, .leftToRight)
+private let __bidiClass_rangePair_5: _T2 = (0x86....0x9f, .boundaryNeutral)
+private let __bidiClass_rangePair_6: _T2 = (0xc0....0xd6, .leftToRight)
+private let __bidiClass_rangePair_7: _T2 = (0xd8....0xf6, .leftToRight)
+private let __bidiClass_rangePair_8: _T2 = (0xf8....0x2b8, .leftToRight)
+private let __bidiClass_rangePair_9: _T2 = (0x2c2....0x2cf, .otherNeutral)
+private let __bidiClass_rangePair_a: _T2 = (0x2d2....0x2df, .otherNeutral)
+private let __bidiClass_rangePair_b: _T2 = (0x2e5....0x2ed, .otherNeutral)
+private let __bidiClass_rangePair_c: _T2 = (0x2ef....0x2ff, .otherNeutral)
+private let __bidiClass_rangePair_d: _T2 = (0x300....0x36f, .nonspacingMark)
+private let __bidiClass_rangePair_e: _T2 = (0x38e....0x3a1, .leftToRight)
+private let __bidiClass_rangePair_f: _T2 = (0x3a3....0x3f5, .leftToRight)
+private let __bidiClass_rangePair_g: _T2 = (0x3f7....0x482, .leftToRight)
+private let __bidiClass_rangePair_h: _T2 = (0x48a....0x52f, .leftToRight)
+private let __bidiClass_rangePair_i: _T2 = (0x531....0x556, .leftToRight)
+private let __bidiClass_rangePair_j: _T2 = (0x559....0x589, .leftToRight)
+private let __bidiClass_rangePair_k: _T2 = (0x591....0x5bd, .nonspacingMark)
+private let __bidiClass_rangePair_l: _T2 = (0x5c8....0x5ff, .rightToLeft)
+private let __bidiClass_rangePair_m: _T2 = (0x610....0x61a, .nonspacingMark)
+private let __bidiClass_rangePair_n: _T2 = (0x61b...<0x64b, .arabicLetter)
+private let __bidiClass_rangePair_o: _T2 = (0x64b....0x65f, .nonspacingMark)
+private let __bidiClass_rangePair_p: _T2 = (0x660....0x669, .arabicNumber)
+private let __bidiClass_rangePair_q: _T2 = (0x671...<0x6d6, .arabicLetter)
+private let __bidiClass_rangePair_r: _T2 = (0x6f0....0x6f9, .europeanNumber)
+private let __bidiClass_rangePair_s: _T2 = (0x6fa...<0x711, .arabicLetter)
+private let __bidiClass_rangePair_t: _T2 = (0x712...<0x730, .arabicLetter)
+private let __bidiClass_rangePair_u: _T2 = (0x730....0x74a, .nonspacingMark)
+private let __bidiClass_rangePair_v: _T2 = (0x74b...<0x7a6, .arabicLetter)
+private let __bidiClass_rangePair_w: _T2 = (0x7a6....0x7b0, .nonspacingMark)
+private let __bidiClass_rangePair_x: _T2 = (0x7b1....0x7bf, .arabicLetter)
+private let __bidiClass_rangePair_y: _T2 = (0x7c0...<0x7eb, .rightToLeft)
+private let __bidiClass_rangePair_z: _T2 = (0x7eb....0x7f3, .nonspacingMark)
+private let __bidiClass_rangePair_10: _T2 = (0x7fe...<0x816, .rightToLeft)
+private let __bidiClass_rangePair_11: _T2 = (0x81b....0x823, .nonspacingMark)
+private let __bidiClass_rangePair_12: _T2 = (0x82e...<0x859, .rightToLeft)
+private let __bidiClass_rangePair_13: _T2 = (0x860....0x86f, .arabicLetter)
+private let __bidiClass_rangePair_14: _T2 = (0x870....0x89f, .rightToLeft)
+private let __bidiClass_rangePair_15: _T2 = (0x8a0...<0x8d3, .arabicLetter)
+private let __bidiClass_rangePair_16: _T2 = (0x8d3....0x8e1, .nonspacingMark)
+private let __bidiClass_rangePair_17: _T2 = (0x8e3....0x902, .nonspacingMark)
+private let __bidiClass_rangePair_18: _T2 = (0x903....0x939, .leftToRight)
+private let __bidiClass_rangePair_19: _T2 = (0x958....0x961, .leftToRight)
+private let __bidiClass_rangePair_1a: _T2 = (0x964....0x980, .leftToRight)
+private let __bidiClass_rangePair_1b: _T2 = (0x993....0x9a8, .leftToRight)
+private let __bidiClass_rangePair_1c: _T2 = (0x9e6....0x9f1, .leftToRight)
+private let __bidiClass_rangePair_1d: _T2 = (0xa13....0xa28, .leftToRight)
+private let __bidiClass_rangePair_1e: _T2 = (0xa66....0xa6f, .leftToRight)
+private let __bidiClass_rangePair_1f: _T2 = (0xa85....0xa8d, .leftToRight)
+private let __bidiClass_rangePair_1g: _T2 = (0xa93....0xaa8, .leftToRight)
+private let __bidiClass_rangePair_1h: _T2 = (0xae6....0xaf0, .leftToRight)
+private let __bidiClass_rangePair_1i: _T2 = (0xb13....0xb28, .leftToRight)
+private let __bidiClass_rangePair_1j: _T2 = (0xb66....0xb77, .leftToRight)
+private let __bidiClass_rangePair_1k: _T2 = (0xbae....0xbb9, .leftToRight)
+private let __bidiClass_rangePair_1l: _T2 = (0xbe6....0xbf2, .leftToRight)
+private let __bidiClass_rangePair_1m: _T2 = (0xc12....0xc28, .leftToRight)
+private let __bidiClass_rangePair_1n: _T2 = (0xc2a....0xc39, .leftToRight)
+private let __bidiClass_rangePair_1o: _T2 = (0xc66....0xc6f, .leftToRight)
+private let __bidiClass_rangePair_1p: _T2 = (0xc82....0xc8c, .leftToRight)
+private let __bidiClass_rangePair_1q: _T2 = (0xc92....0xca8, .leftToRight)
+private let __bidiClass_rangePair_1r: _T2 = (0xcaa....0xcb3, .leftToRight)
+private let __bidiClass_rangePair_1s: _T2 = (0xce6....0xcef, .leftToRight)
+private let __bidiClass_rangePair_1t: _T2 = (0xd12....0xd3a, .leftToRight)
+private let __bidiClass_rangePair_1u: _T2 = (0xd54....0xd61, .leftToRight)
+private let __bidiClass_rangePair_1v: _T2 = (0xd66....0xd7f, .leftToRight)
+private let __bidiClass_rangePair_1w: _T2 = (0xd85....0xd96, .leftToRight)
+private let __bidiClass_rangePair_1x: _T2 = (0xd9a....0xdb1, .leftToRight)
+private let __bidiClass_rangePair_1y: _T2 = (0xdb3....0xdbb, .leftToRight)
+private let __bidiClass_rangePair_1z: _T2 = (0xde6....0xdef, .leftToRight)
+private let __bidiClass_rangePair_20: _T2 = (0xe01....0xe30, .leftToRight)
+private let __bidiClass_rangePair_21: _T2 = (0xe4f....0xe5b, .leftToRight)
+private let __bidiClass_rangePair_22: _T2 = (0xe8c....0xea3, .leftToRight)
+private let __bidiClass_rangePair_23: _T2 = (0xea7....0xeb0, .leftToRight)
+private let __bidiClass_rangePair_24: _T2 = (0xeb4....0xebc, .nonspacingMark)
+private let __bidiClass_rangePair_25: _T2 = (0xed0....0xed9, .leftToRight)
+private let __bidiClass_rangePair_26: _T2 = (0xf00....0xf17, .leftToRight)
+private let __bidiClass_rangePair_27: _T2 = (0xf1a....0xf34, .leftToRight)
+private let __bidiClass_rangePair_28: _T2 = (0xf3e....0xf47, .leftToRight)
+private let __bidiClass_rangePair_29: _T2 = (0xf49....0xf6c, .leftToRight)
+private let __bidiClass_rangePair_2a: _T2 = (0xf71....0xf7e, .nonspacingMark)
+private let __bidiClass_rangePair_2b: _T2 = (0xf8d....0xf97, .nonspacingMark)
+private let __bidiClass_rangePair_2c: _T2 = (0xf99....0xfbc, .nonspacingMark)
+private let __bidiClass_rangePair_2d: _T2 = (0xfce....0xfda, .leftToRight)
+private let __bidiClass_rangePair_2e: _T2 = (0x1000....0x102c, .leftToRight)
+private let __bidiClass_rangePair_2f: _T2 = (0x103f....0x1057, .leftToRight)
+private let __bidiClass_rangePair_2g: _T2 = (0x1061....0x1070, .leftToRight)
+private let __bidiClass_rangePair_2h: _T2 = (0x1075....0x1081, .leftToRight)
+private let __bidiClass_rangePair_2i: _T2 = (0x108e....0x109c, .leftToRight)
+private let __bidiClass_rangePair_2j: _T2 = (0x109e....0x10c5, .leftToRight)
+private let __bidiClass_rangePair_2k: _T2 = (0x10d0....0x1248, .leftToRight)
+private let __bidiClass_rangePair_2l: _T2 = (0x1260....0x1288, .leftToRight)
+private let __bidiClass_rangePair_2m: _T2 = (0x1290....0x12b0, .leftToRight)
+private let __bidiClass_rangePair_2n: _T2 = (0x12c8....0x12d6, .leftToRight)
+private let __bidiClass_rangePair_2o: _T2 = (0x12d8....0x1310, .leftToRight)
+private let __bidiClass_rangePair_2p: _T2 = (0x1318....0x135a, .leftToRight)
+private let __bidiClass_rangePair_2q: _T2 = (0x1360....0x137c, .leftToRight)
+private let __bidiClass_rangePair_2r: _T2 = (0x1380....0x138f, .leftToRight)
+private let __bidiClass_rangePair_2s: _T2 = (0x1390....0x1399, .otherNeutral)
+private let __bidiClass_rangePair_2t: _T2 = (0x13a0....0x13f5, .leftToRight)
+private let __bidiClass_rangePair_2u: _T2 = (0x1401....0x167f, .leftToRight)
+private let __bidiClass_rangePair_2v: _T2 = (0x1681....0x169a, .leftToRight)
+private let __bidiClass_rangePair_2w: _T2 = (0x16a0....0x16f8, .leftToRight)
+private let __bidiClass_rangePair_2x: _T2 = (0x1700....0x170c, .leftToRight)
+private let __bidiClass_rangePair_2y: _T2 = (0x1720....0x1731, .leftToRight)
+private let __bidiClass_rangePair_2z: _T2 = (0x1740....0x1751, .leftToRight)
+private let __bidiClass_rangePair_30: _T2 = (0x1760....0x176c, .leftToRight)
+private let __bidiClass_rangePair_31: _T2 = (0x1780....0x17b3, .leftToRight)
+private let __bidiClass_rangePair_32: _T2 = (0x17c9....0x17d3, .nonspacingMark)
+private let __bidiClass_rangePair_33: _T2 = (0x17e0....0x17e9, .leftToRight)
+private let __bidiClass_rangePair_34: _T2 = (0x17f0....0x17f9, .otherNeutral)
+private let __bidiClass_rangePair_35: _T2 = (0x1800....0x180a, .otherNeutral)
+private let __bidiClass_rangePair_36: _T2 = (0x1810....0x1819, .leftToRight)
+private let __bidiClass_rangePair_37: _T2 = (0x1820....0x1878, .leftToRight)
+private let __bidiClass_rangePair_38: _T2 = (0x1887....0x18a8, .leftToRight)
+private let __bidiClass_rangePair_39: _T2 = (0x18b0....0x18f5, .leftToRight)
+private let __bidiClass_rangePair_3a: _T2 = (0x1900....0x191e, .leftToRight)
+private let __bidiClass_rangePair_3b: _T2 = (0x1946....0x196d, .leftToRight)
+private let __bidiClass_rangePair_3c: _T2 = (0x1980....0x19ab, .leftToRight)
+private let __bidiClass_rangePair_3d: _T2 = (0x19b0....0x19c9, .leftToRight)
+private let __bidiClass_rangePair_3e: _T2 = (0x19d0....0x19da, .leftToRight)
+private let __bidiClass_rangePair_3f: _T2 = (0x19de....0x19ff, .otherNeutral)
+private let __bidiClass_rangePair_3g: _T2 = (0x1a00....0x1a16, .leftToRight)
+private let __bidiClass_rangePair_3h: _T2 = (0x1a1e....0x1a55, .leftToRight)
+private let __bidiClass_rangePair_3i: _T2 = (0x1a73....0x1a7c, .nonspacingMark)
+private let __bidiClass_rangePair_3j: _T2 = (0x1a80....0x1a89, .leftToRight)
+private let __bidiClass_rangePair_3k: _T2 = (0x1a90....0x1a99, .leftToRight)
+private let __bidiClass_rangePair_3l: _T2 = (0x1aa0....0x1aad, .leftToRight)
+private let __bidiClass_rangePair_3m: _T2 = (0x1ab0....0x1abe, .nonspacingMark)
+private let __bidiClass_rangePair_3n: _T2 = (0x1b04....0x1b33, .leftToRight)
+private let __bidiClass_rangePair_3o: _T2 = (0x1b43....0x1b4b, .leftToRight)
+private let __bidiClass_rangePair_3p: _T2 = (0x1b50....0x1b6a, .leftToRight)
+private let __bidiClass_rangePair_3q: _T2 = (0x1b6b....0x1b73, .nonspacingMark)
+private let __bidiClass_rangePair_3r: _T2 = (0x1b74....0x1b7c, .leftToRight)
+private let __bidiClass_rangePair_3s: _T2 = (0x1b82....0x1ba1, .leftToRight)
+private let __bidiClass_rangePair_3t: _T2 = (0x1bae....0x1be5, .leftToRight)
+private let __bidiClass_rangePair_3u: _T2 = (0x1bfc....0x1c2b, .leftToRight)
+private let __bidiClass_rangePair_3v: _T2 = (0x1c3b....0x1c49, .leftToRight)
+private let __bidiClass_rangePair_3w: _T2 = (0x1c4d....0x1c88, .leftToRight)
+private let __bidiClass_rangePair_3x: _T2 = (0x1c90....0x1cba, .leftToRight)
+private let __bidiClass_rangePair_3y: _T2 = (0x1cbd....0x1cc7, .leftToRight)
+private let __bidiClass_rangePair_3z: _T2 = (0x1cd4....0x1ce0, .nonspacingMark)
+private let __bidiClass_rangePair_40: _T2 = (0x1d00....0x1dbf, .leftToRight)
+private let __bidiClass_rangePair_41: _T2 = (0x1dc0....0x1df9, .nonspacingMark)
+private let __bidiClass_rangePair_42: _T2 = (0x1e00....0x1f15, .leftToRight)
+private let __bidiClass_rangePair_43: _T2 = (0x1f20....0x1f45, .leftToRight)
+private let __bidiClass_rangePair_44: _T2 = (0x1f5f....0x1f7d, .leftToRight)
+private let __bidiClass_rangePair_45: _T2 = (0x1f80....0x1fb4, .leftToRight)
+private let __bidiClass_rangePair_46: _T2 = (0x1fe0....0x1fec, .leftToRight)
+private let __bidiClass_rangePair_47: _T2 = (0x2000....0x200a, .whiteSpace)
+private let __bidiClass_rangePair_48: _T2 = (0x2010....0x2027, .otherNeutral)
+private let __bidiClass_rangePair_49: _T2 = (0x2035....0x2043, .otherNeutral)
+private let __bidiClass_rangePair_4a: _T2 = (0x2045....0x205e, .otherNeutral)
+private let __bidiClass_rangePair_4b: _T2 = (0x2080....0x2089, .europeanNumber)
+private let __bidiClass_rangePair_4c: _T2 = (0x2090....0x209c, .leftToRight)
+private let __bidiClass_rangePair_4d: _T2 = (0x20a0....0x20cf, .europeanTerminator)
+private let __bidiClass_rangePair_4e: _T2 = (0x20d0....0x20f0, .nonspacingMark)
+private let __bidiClass_rangePair_4f: _T2 = (0x210a....0x2113, .leftToRight)
+private let __bidiClass_rangePair_4g: _T2 = (0x212f....0x2139, .leftToRight)
+private let __bidiClass_rangePair_4h: _T2 = (0x2150....0x215f, .otherNeutral)
+private let __bidiClass_rangePair_4i: _T2 = (0x2160....0x2188, .leftToRight)
+private let __bidiClass_rangePair_4j: _T2 = (0x2190....0x2211, .otherNeutral)
+private let __bidiClass_rangePair_4k: _T2 = (0x2214....0x2335, .otherNeutral)
+private let __bidiClass_rangePair_4l: _T2 = (0x2336....0x237a, .leftToRight)
+private let __bidiClass_rangePair_4m: _T2 = (0x237b....0x2394, .otherNeutral)
+private let __bidiClass_rangePair_4n: _T2 = (0x2396....0x2426, .otherNeutral)
+private let __bidiClass_rangePair_4o: _T2 = (0x2440....0x244a, .otherNeutral)
+private let __bidiClass_rangePair_4p: _T2 = (0x2460....0x2487, .otherNeutral)
+private let __bidiClass_rangePair_4q: _T2 = (0x2488....0x249b, .europeanNumber)
+private let __bidiClass_rangePair_4r: _T2 = (0x249c....0x24e9, .leftToRight)
+private let __bidiClass_rangePair_4s: _T2 = (0x24ea....0x26ab, .otherNeutral)
+private let __bidiClass_rangePair_4t: _T2 = (0x26ad....0x27ff, .otherNeutral)
+private let __bidiClass_rangePair_4u: _T2 = (0x2800....0x28ff, .leftToRight)
+private let __bidiClass_rangePair_4v: _T2 = (0x2900....0x2b73, .otherNeutral)
+private let __bidiClass_rangePair_4w: _T2 = (0x2b76....0x2b95, .otherNeutral)
+private let __bidiClass_rangePair_4x: _T2 = (0x2b98....0x2bff, .otherNeutral)
+private let __bidiClass_rangePair_4y: _T2 = (0x2c00....0x2c2e, .leftToRight)
+private let __bidiClass_rangePair_4z: _T2 = (0x2c30....0x2c5e, .leftToRight)
+private let __bidiClass_rangePair_50: _T2 = (0x2c60....0x2ce4, .leftToRight)
+private let __bidiClass_rangePair_51: _T2 = (0x2d00....0x2d25, .leftToRight)
+private let __bidiClass_rangePair_52: _T2 = (0x2d30....0x2d67, .leftToRight)
+private let __bidiClass_rangePair_53: _T2 = (0x2d80....0x2d96, .leftToRight)
+private let __bidiClass_rangePair_54: _T2 = (0x2de0....0x2dff, .nonspacingMark)
+private let __bidiClass_rangePair_55: _T2 = (0x2e00....0x2e4f, .otherNeutral)
+private let __bidiClass_rangePair_56: _T2 = (0x2e80....0x2e99, .otherNeutral)
+private let __bidiClass_rangePair_57: _T2 = (0x2e9b....0x2ef3, .otherNeutral)
+private let __bidiClass_rangePair_58: _T2 = (0x2f00....0x2fd5, .otherNeutral)
+private let __bidiClass_rangePair_59: _T2 = (0x2ff0....0x2ffb, .otherNeutral)
+private let __bidiClass_rangePair_5a: _T2 = (0x3008....0x3020, .otherNeutral)
+private let __bidiClass_rangePair_5b: _T2 = (0x3021....0x3029, .leftToRight)
+private let __bidiClass_rangePair_5c: _T2 = (0x3041....0x3096, .leftToRight)
+private let __bidiClass_rangePair_5d: _T2 = (0x30a1....0x30fa, .leftToRight)
+private let __bidiClass_rangePair_5e: _T2 = (0x3105....0x312f, .leftToRight)
+private let __bidiClass_rangePair_5f: _T2 = (0x3131....0x318e, .leftToRight)
+private let __bidiClass_rangePair_5g: _T2 = (0x3190....0x31ba, .leftToRight)
+private let __bidiClass_rangePair_5h: _T2 = (0x31c0....0x31e3, .otherNeutral)
+private let __bidiClass_rangePair_5i: _T2 = (0x31f0....0x321c, .leftToRight)
+private let __bidiClass_rangePair_5j: _T2 = (0x3220....0x324f, .leftToRight)
+private let __bidiClass_rangePair_5k: _T2 = (0x3250....0x325f, .otherNeutral)
+private let __bidiClass_rangePair_5l: _T2 = (0x3260....0x327b, .leftToRight)
+private let __bidiClass_rangePair_5m: _T2 = (0x327f....0x32b0, .leftToRight)
+private let __bidiClass_rangePair_5n: _T2 = (0x32b1....0x32bf, .otherNeutral)
+private let __bidiClass_rangePair_5o: _T2 = (0x32c0....0x32cb, .leftToRight)
+private let __bidiClass_rangePair_5p: _T2 = (0x32d0....0x3376, .leftToRight)
+private let __bidiClass_rangePair_5q: _T2 = (0x337b....0x33dd, .leftToRight)
+private let __bidiClass_rangePair_5r: _T2 = (0x33e0....0x33fe, .leftToRight)
+private let __bidiClass_rangePair_5s: _T2 = (0x3400....0x4db5, .leftToRight)
+private let __bidiClass_rangePair_5t: _T2 = (0x4dc0....0x4dff, .otherNeutral)
+private let __bidiClass_rangePair_5u: _T2 = (0x4e00....0x9fef, .leftToRight)
+private let __bidiClass_rangePair_5v: _T2 = (0xa000....0xa48c, .leftToRight)
+private let __bidiClass_rangePair_5w: _T2 = (0xa490....0xa4c6, .otherNeutral)
+private let __bidiClass_rangePair_5x: _T2 = (0xa4d0....0xa60c, .leftToRight)
+private let __bidiClass_rangePair_5y: _T2 = (0xa610....0xa62b, .leftToRight)
+private let __bidiClass_rangePair_5z: _T2 = (0xa640....0xa66e, .leftToRight)
+private let __bidiClass_rangePair_60: _T2 = (0xa674....0xa67d, .nonspacingMark)
+private let __bidiClass_rangePair_61: _T2 = (0xa680....0xa69d, .leftToRight)
+private let __bidiClass_rangePair_62: _T2 = (0xa6a0....0xa6ef, .leftToRight)
+private let __bidiClass_rangePair_63: _T2 = (0xa700....0xa721, .otherNeutral)
+private let __bidiClass_rangePair_64: _T2 = (0xa722....0xa787, .leftToRight)
+private let __bidiClass_rangePair_65: _T2 = (0xa789....0xa7bf, .leftToRight)
+private let __bidiClass_rangePair_66: _T2 = (0xa7f7....0xa801, .leftToRight)
+private let __bidiClass_rangePair_67: _T2 = (0xa80c....0xa824, .leftToRight)
+private let __bidiClass_rangePair_68: _T2 = (0xa840....0xa873, .leftToRight)
+private let __bidiClass_rangePair_69: _T2 = (0xa880....0xa8c3, .leftToRight)
+private let __bidiClass_rangePair_6a: _T2 = (0xa8ce....0xa8d9, .leftToRight)
+private let __bidiClass_rangePair_6b: _T2 = (0xa8e0....0xa8f1, .nonspacingMark)
+private let __bidiClass_rangePair_6c: _T2 = (0xa8f2....0xa8fe, .leftToRight)
+private let __bidiClass_rangePair_6d: _T2 = (0xa900....0xa925, .leftToRight)
+private let __bidiClass_rangePair_6e: _T2 = (0xa92e....0xa946, .leftToRight)
+private let __bidiClass_rangePair_6f: _T2 = (0xa947....0xa951, .nonspacingMark)
+private let __bidiClass_rangePair_6g: _T2 = (0xa95f....0xa97c, .leftToRight)
+private let __bidiClass_rangePair_6h: _T2 = (0xa983....0xa9b2, .leftToRight)
+private let __bidiClass_rangePair_6i: _T2 = (0xa9be....0xa9cd, .leftToRight)
+private let __bidiClass_rangePair_6j: _T2 = (0xa9cf....0xa9d9, .leftToRight)
+private let __bidiClass_rangePair_6k: _T2 = (0xa9e6....0xa9fe, .leftToRight)
+private let __bidiClass_rangePair_6l: _T2 = (0xaa00....0xaa28, .leftToRight)
+private let __bidiClass_rangePair_6m: _T2 = (0xaa50....0xaa59, .leftToRight)
+private let __bidiClass_rangePair_6n: _T2 = (0xaa5c....0xaa7b, .leftToRight)
+private let __bidiClass_rangePair_6o: _T2 = (0xaa7d....0xaaaf, .leftToRight)
+private let __bidiClass_rangePair_6p: _T2 = (0xaadb....0xaaeb, .leftToRight)
+private let __bidiClass_rangePair_6q: _T2 = (0xab30....0xab67, .leftToRight)
+private let __bidiClass_rangePair_6r: _T2 = (0xab70....0xabe4, .leftToRight)
+private let __bidiClass_rangePair_6s: _T2 = (0xabf0....0xabf9, .leftToRight)
+private let __bidiClass_rangePair_6t: _T2 = (0xac00....0xd7a3, .leftToRight)
+private let __bidiClass_rangePair_6u: _T2 = (0xd7b0....0xd7c6, .leftToRight)
+private let __bidiClass_rangePair_6v: _T2 = (0xd7cb....0xd7fb, .leftToRight)
+private let __bidiClass_rangePair_6w: _T2 = (0xe000....0xfa6d, .leftToRight)
+private let __bidiClass_rangePair_6x: _T2 = (0xfa70....0xfad9, .leftToRight)
+private let __bidiClass_rangePair_6y: _T2 = (0xfb1d....0xfb4f, .rightToLeft)
+private let __bidiClass_rangePair_6z: _T2 = (0xfb50...<0xfd3e, .arabicLetter)
+private let __bidiClass_rangePair_70: _T2 = (0xfd40....0xfdcf, .arabicLetter)
+private let __bidiClass_rangePair_71: _T2 = (0xfdd0....0xfdef, .boundaryNeutral)
+private let __bidiClass_rangePair_72: _T2 = (0xfdf0...<0xfdfd, .arabicLetter)
+private let __bidiClass_rangePair_73: _T2 = (0xfe00....0xfe0f, .nonspacingMark)
+private let __bidiClass_rangePair_74: _T2 = (0xfe10....0xfe19, .otherNeutral)
+private let __bidiClass_rangePair_75: _T2 = (0xfe20....0xfe2f, .nonspacingMark)
+private let __bidiClass_rangePair_76: _T2 = (0xfe30....0xfe4f, .otherNeutral)
+private let __bidiClass_rangePair_77: _T2 = (0xfe56....0xfe5e, .otherNeutral)
+private let __bidiClass_rangePair_78: _T2 = (0xfe70...<0xfeff, .arabicLetter)
+private let __bidiClass_rangePair_79: _T2 = (0xff10....0xff19, .europeanNumber)
+private let __bidiClass_rangePair_7a: _T2 = (0xff21....0xff3a, .leftToRight)
+private let __bidiClass_rangePair_7b: _T2 = (0xff41....0xff5a, .leftToRight)
+private let __bidiClass_rangePair_7c: _T2 = (0xff5b....0xff65, .otherNeutral)
+private let __bidiClass_rangePair_7d: _T2 = (0xff66....0xffbe, .leftToRight)
+private let __bidiClass_rangePair_7e: _T2 = (0xfff0....0xfff8, .boundaryNeutral)
+private let __bidiClass_rangePair_7f: _T2 = (0x10000....0x1000b, .leftToRight)
+private let __bidiClass_rangePair_7g: _T2 = (0x1000d....0x10026, .leftToRight)
+private let __bidiClass_rangePair_7h: _T2 = (0x10028....0x1003a, .leftToRight)
+private let __bidiClass_rangePair_7i: _T2 = (0x1003f....0x1004d, .leftToRight)
+private let __bidiClass_rangePair_7j: _T2 = (0x10050....0x1005d, .leftToRight)
+private let __bidiClass_rangePair_7k: _T2 = (0x10080....0x100fa, .leftToRight)
+private let __bidiClass_rangePair_7l: _T2 = (0x10107....0x10133, .leftToRight)
+private let __bidiClass_rangePair_7m: _T2 = (0x10137....0x1013f, .leftToRight)
+private let __bidiClass_rangePair_7n: _T2 = (0x10140....0x1018c, .otherNeutral)
+private let __bidiClass_rangePair_7o: _T2 = (0x10190....0x1019b, .otherNeutral)
+private let __bidiClass_rangePair_7p: _T2 = (0x101d0....0x101fc, .leftToRight)
+private let __bidiClass_rangePair_7q: _T2 = (0x10280....0x1029c, .leftToRight)
+private let __bidiClass_rangePair_7r: _T2 = (0x102a0....0x102d0, .leftToRight)
+private let __bidiClass_rangePair_7s: _T2 = (0x102e1....0x102fb, .europeanNumber)
+private let __bidiClass_rangePair_7t: _T2 = (0x10300....0x10323, .leftToRight)
+private let __bidiClass_rangePair_7u: _T2 = (0x1032d....0x1034a, .leftToRight)
+private let __bidiClass_rangePair_7v: _T2 = (0x10350....0x10375, .leftToRight)
+private let __bidiClass_rangePair_7w: _T2 = (0x10380....0x1039d, .leftToRight)
+private let __bidiClass_rangePair_7x: _T2 = (0x1039f....0x103c3, .leftToRight)
+private let __bidiClass_rangePair_7y: _T2 = (0x103c8....0x103d5, .leftToRight)
+private let __bidiClass_rangePair_7z: _T2 = (0x10400....0x1049d, .leftToRight)
+private let __bidiClass_rangePair_80: _T2 = (0x104a0....0x104a9, .leftToRight)
+private let __bidiClass_rangePair_81: _T2 = (0x104b0....0x104d3, .leftToRight)
+private let __bidiClass_rangePair_82: _T2 = (0x104d8....0x104fb, .leftToRight)
+private let __bidiClass_rangePair_83: _T2 = (0x10500....0x10527, .leftToRight)
+private let __bidiClass_rangePair_84: _T2 = (0x10530....0x10563, .leftToRight)
+private let __bidiClass_rangePair_85: _T2 = (0x10600....0x10736, .leftToRight)
+private let __bidiClass_rangePair_86: _T2 = (0x10740....0x10755, .leftToRight)
+private let __bidiClass_rangePair_87: _T2 = (0x10800...<0x1091f, .rightToLeft)
+private let __bidiClass_rangePair_88: _T2 = (0x10920...<0x10a01, .rightToLeft)
+private let __bidiClass_rangePair_89: _T2 = (0x10a10...<0x10a38, .rightToLeft)
+private let __bidiClass_rangePair_8a: _T2 = (0x10a40...<0x10ae5, .rightToLeft)
+private let __bidiClass_rangePair_8b: _T2 = (0x10ae7...<0x10b39, .rightToLeft)
+private let __bidiClass_rangePair_8c: _T2 = (0x10b40....0x10cff, .rightToLeft)
+private let __bidiClass_rangePair_8d: _T2 = (0x10d00...<0x10d24, .arabicLetter)
+private let __bidiClass_rangePair_8e: _T2 = (0x10d28...<0x10d30, .arabicLetter)
+private let __bidiClass_rangePair_8f: _T2 = (0x10d30....0x10d39, .arabicNumber)
+private let __bidiClass_rangePair_8g: _T2 = (0x10d40...<0x10e60, .rightToLeft)
+private let __bidiClass_rangePair_8h: _T2 = (0x10e60....0x10e7e, .arabicNumber)
+private let __bidiClass_rangePair_8i: _T2 = (0x10e7f....0x10f2f, .rightToLeft)
+private let __bidiClass_rangePair_8j: _T2 = (0x10f30...<0x10f46, .arabicLetter)
+private let __bidiClass_rangePair_8k: _T2 = (0x10f46....0x10f50, .nonspacingMark)
+private let __bidiClass_rangePair_8l: _T2 = (0x10f51....0x10f6f, .arabicLetter)
+private let __bidiClass_rangePair_8m: _T2 = (0x10f70....0x10fff, .rightToLeft)
+private let __bidiClass_rangePair_8n: _T2 = (0x11002....0x11037, .leftToRight)
+private let __bidiClass_rangePair_8o: _T2 = (0x11038....0x11046, .nonspacingMark)
+private let __bidiClass_rangePair_8p: _T2 = (0x11052....0x11065, .otherNeutral)
+private let __bidiClass_rangePair_8q: _T2 = (0x11066....0x1106f, .leftToRight)
+private let __bidiClass_rangePair_8r: _T2 = (0x11082....0x110b2, .leftToRight)
+private let __bidiClass_rangePair_8s: _T2 = (0x110d0....0x110e8, .leftToRight)
+private let __bidiClass_rangePair_8t: _T2 = (0x110f0....0x110f9, .leftToRight)
+private let __bidiClass_rangePair_8u: _T2 = (0x11103....0x11126, .leftToRight)
+private let __bidiClass_rangePair_8v: _T2 = (0x11136....0x11146, .leftToRight)
+private let __bidiClass_rangePair_8w: _T2 = (0x11150....0x11172, .leftToRight)
+private let __bidiClass_rangePair_8x: _T2 = (0x11182....0x111b5, .leftToRight)
+private let __bidiClass_rangePair_8y: _T2 = (0x111b6....0x111be, .nonspacingMark)
+private let __bidiClass_rangePair_8z: _T2 = (0x111bf....0x111c8, .leftToRight)
+private let __bidiClass_rangePair_90: _T2 = (0x111d0....0x111df, .leftToRight)
+private let __bidiClass_rangePair_91: _T2 = (0x111e1....0x111f4, .leftToRight)
+private let __bidiClass_rangePair_92: _T2 = (0x11200....0x11211, .leftToRight)
+private let __bidiClass_rangePair_93: _T2 = (0x11213....0x1122e, .leftToRight)
+private let __bidiClass_rangePair_94: _T2 = (0x1128f....0x1129d, .leftToRight)
+private let __bidiClass_rangePair_95: _T2 = (0x1129f....0x112a9, .leftToRight)
+private let __bidiClass_rangePair_96: _T2 = (0x112b0....0x112de, .leftToRight)
+private let __bidiClass_rangePair_97: _T2 = (0x112f0....0x112f9, .leftToRight)
+private let __bidiClass_rangePair_98: _T2 = (0x11313....0x11328, .leftToRight)
+private let __bidiClass_rangePair_99: _T2 = (0x11400....0x11437, .leftToRight)
+private let __bidiClass_rangePair_9a: _T2 = (0x11447....0x11459, .leftToRight)
+private let __bidiClass_rangePair_9b: _T2 = (0x11480....0x114b2, .leftToRight)
+private let __bidiClass_rangePair_9c: _T2 = (0x114d0....0x114d9, .leftToRight)
+private let __bidiClass_rangePair_9d: _T2 = (0x11580....0x115b1, .leftToRight)
+private let __bidiClass_rangePair_9e: _T2 = (0x115c1....0x115db, .leftToRight)
+private let __bidiClass_rangePair_9f: _T2 = (0x11600....0x11632, .leftToRight)
+private let __bidiClass_rangePair_9g: _T2 = (0x11650....0x11659, .leftToRight)
+private let __bidiClass_rangePair_9h: _T2 = (0x11660....0x1166c, .otherNeutral)
+private let __bidiClass_rangePair_9i: _T2 = (0x11680....0x116aa, .leftToRight)
+private let __bidiClass_rangePair_9j: _T2 = (0x116c0....0x116c9, .leftToRight)
+private let __bidiClass_rangePair_9k: _T2 = (0x11700....0x1171a, .leftToRight)
+private let __bidiClass_rangePair_9l: _T2 = (0x11730....0x1173f, .leftToRight)
+private let __bidiClass_rangePair_9m: _T2 = (0x11800....0x1182e, .leftToRight)
+private let __bidiClass_rangePair_9n: _T2 = (0x1182f....0x11837, .nonspacingMark)
+private let __bidiClass_rangePair_9o: _T2 = (0x118a0....0x118f2, .leftToRight)
+private let __bidiClass_rangePair_9p: _T2 = (0x119aa....0x119d3, .leftToRight)
+private let __bidiClass_rangePair_9q: _T2 = (0x11a0b....0x11a32, .leftToRight)
+private let __bidiClass_rangePair_9r: _T2 = (0x11a5c....0x11a89, .leftToRight)
+private let __bidiClass_rangePair_9s: _T2 = (0x11a8a....0x11a96, .nonspacingMark)
+private let __bidiClass_rangePair_9t: _T2 = (0x11a9a....0x11aa2, .leftToRight)
+private let __bidiClass_rangePair_9u: _T2 = (0x11ac0....0x11af8, .leftToRight)
+private let __bidiClass_rangePair_9v: _T2 = (0x11c00....0x11c08, .leftToRight)
+private let __bidiClass_rangePair_9w: _T2 = (0x11c0a....0x11c2f, .leftToRight)
+private let __bidiClass_rangePair_9x: _T2 = (0x11c50....0x11c6c, .leftToRight)
+private let __bidiClass_rangePair_9y: _T2 = (0x11c70....0x11c8f, .leftToRight)
+private let __bidiClass_rangePair_9z: _T2 = (0x11c92....0x11ca7, .nonspacingMark)
+private let __bidiClass_rangePair_a0: _T2 = (0x11d0b....0x11d30, .leftToRight)
+private let __bidiClass_rangePair_a1: _T2 = (0x11d50....0x11d59, .leftToRight)
+private let __bidiClass_rangePair_a2: _T2 = (0x11d6a....0x11d8e, .leftToRight)
+private let __bidiClass_rangePair_a3: _T2 = (0x11da0....0x11da9, .leftToRight)
+private let __bidiClass_rangePair_a4: _T2 = (0x11ee0....0x11ef2, .leftToRight)
+private let __bidiClass_rangePair_a5: _T2 = (0x11fc0....0x11fd4, .leftToRight)
+private let __bidiClass_rangePair_a6: _T2 = (0x11fe1....0x11ff1, .otherNeutral)
+private let __bidiClass_rangePair_a7: _T2 = (0x11fff....0x12399, .leftToRight)
+private let __bidiClass_rangePair_a8: _T2 = (0x12400....0x1246e, .leftToRight)
+private let __bidiClass_rangePair_a9: _T2 = (0x12480....0x12543, .leftToRight)
+private let __bidiClass_rangePair_aa: _T2 = (0x13000....0x1342e, .leftToRight)
+private let __bidiClass_rangePair_ab: _T2 = (0x13430....0x13438, .leftToRight)
+private let __bidiClass_rangePair_ac: _T2 = (0x14400....0x14646, .leftToRight)
+private let __bidiClass_rangePair_ad: _T2 = (0x16800....0x16a38, .leftToRight)
+private let __bidiClass_rangePair_ae: _T2 = (0x16a40....0x16a5e, .leftToRight)
+private let __bidiClass_rangePair_af: _T2 = (0x16a60....0x16a69, .leftToRight)
+private let __bidiClass_rangePair_ag: _T2 = (0x16ad0....0x16aed, .leftToRight)
+private let __bidiClass_rangePair_ah: _T2 = (0x16b00....0x16b2f, .leftToRight)
+private let __bidiClass_rangePair_ai: _T2 = (0x16b37....0x16b45, .leftToRight)
+private let __bidiClass_rangePair_aj: _T2 = (0x16b50....0x16b59, .leftToRight)
+private let __bidiClass_rangePair_ak: _T2 = (0x16b63....0x16b77, .leftToRight)
+private let __bidiClass_rangePair_al: _T2 = (0x16b7d....0x16b8f, .leftToRight)
+private let __bidiClass_rangePair_am: _T2 = (0x16e40....0x16e9a, .leftToRight)
+private let __bidiClass_rangePair_an: _T2 = (0x16f00....0x16f4a, .leftToRight)
+private let __bidiClass_rangePair_ao: _T2 = (0x16f50....0x16f87, .leftToRight)
+private let __bidiClass_rangePair_ap: _T2 = (0x16f93....0x16f9f, .leftToRight)
+private let __bidiClass_rangePair_aq: _T2 = (0x17000....0x187f7, .leftToRight)
+private let __bidiClass_rangePair_ar: _T2 = (0x18800....0x18af2, .leftToRight)
+private let __bidiClass_rangePair_as: _T2 = (0x1b000....0x1b11e, .leftToRight)
+private let __bidiClass_rangePair_at: _T2 = (0x1b170....0x1b2fb, .leftToRight)
+private let __bidiClass_rangePair_au: _T2 = (0x1bc00....0x1bc6a, .leftToRight)
+private let __bidiClass_rangePair_av: _T2 = (0x1bc70....0x1bc7c, .leftToRight)
+private let __bidiClass_rangePair_aw: _T2 = (0x1bc80....0x1bc88, .leftToRight)
+private let __bidiClass_rangePair_ax: _T2 = (0x1bc90....0x1bc99, .leftToRight)
+private let __bidiClass_rangePair_ay: _T2 = (0x1d000....0x1d0f5, .leftToRight)
+private let __bidiClass_rangePair_az: _T2 = (0x1d100....0x1d126, .leftToRight)
+private let __bidiClass_rangePair_b0: _T2 = (0x1d129....0x1d166, .leftToRight)
+private let __bidiClass_rangePair_b1: _T2 = (0x1d16a....0x1d172, .leftToRight)
+private let __bidiClass_rangePair_b2: _T2 = (0x1d18c....0x1d1a9, .leftToRight)
+private let __bidiClass_rangePair_b3: _T2 = (0x1d1ae....0x1d1e8, .leftToRight)
+private let __bidiClass_rangePair_b4: _T2 = (0x1d200....0x1d241, .otherNeutral)
+private let __bidiClass_rangePair_b5: _T2 = (0x1d2e0....0x1d2f3, .leftToRight)
+private let __bidiClass_rangePair_b6: _T2 = (0x1d300....0x1d356, .otherNeutral)
+private let __bidiClass_rangePair_b7: _T2 = (0x1d360....0x1d378, .leftToRight)
+private let __bidiClass_rangePair_b8: _T2 = (0x1d400....0x1d454, .leftToRight)
+private let __bidiClass_rangePair_b9: _T2 = (0x1d456....0x1d49c, .leftToRight)
+private let __bidiClass_rangePair_ba: _T2 = (0x1d4ae....0x1d4b9, .leftToRight)
+private let __bidiClass_rangePair_bb: _T2 = (0x1d4c5....0x1d505, .leftToRight)
+private let __bidiClass_rangePair_bc: _T2 = (0x1d51e....0x1d539, .leftToRight)
+private let __bidiClass_rangePair_bd: _T2 = (0x1d552....0x1d6a5, .leftToRight)
+private let __bidiClass_rangePair_be: _T2 = (0x1d6a8....0x1d6da, .leftToRight)
+private let __bidiClass_rangePair_bf: _T2 = (0x1d6dc....0x1d714, .leftToRight)
+private let __bidiClass_rangePair_bg: _T2 = (0x1d716....0x1d74e, .leftToRight)
+private let __bidiClass_rangePair_bh: _T2 = (0x1d750....0x1d788, .leftToRight)
+private let __bidiClass_rangePair_bi: _T2 = (0x1d78a....0x1d7c2, .leftToRight)
+private let __bidiClass_rangePair_bj: _T2 = (0x1d7ce....0x1d7ff, .europeanNumber)
+private let __bidiClass_rangePair_bk: _T2 = (0x1d800....0x1d9ff, .leftToRight)
+private let __bidiClass_rangePair_bl: _T2 = (0x1da00....0x1da36, .nonspacingMark)
+private let __bidiClass_rangePair_bm: _T2 = (0x1da3b....0x1da6c, .nonspacingMark)
+private let __bidiClass_rangePair_bn: _T2 = (0x1da76....0x1da83, .leftToRight)
+private let __bidiClass_rangePair_bo: _T2 = (0x1daa1....0x1daaf, .nonspacingMark)
+private let __bidiClass_rangePair_bp: _T2 = (0x1e008....0x1e018, .nonspacingMark)
+private let __bidiClass_rangePair_bq: _T2 = (0x1e100....0x1e12c, .leftToRight)
+private let __bidiClass_rangePair_br: _T2 = (0x1e140....0x1e149, .leftToRight)
+private let __bidiClass_rangePair_bs: _T2 = (0x1e2c0....0x1e2eb, .leftToRight)
+private let __bidiClass_rangePair_bt: _T2 = (0x1e2f0....0x1e2f9, .leftToRight)
+private let __bidiClass_rangePair_bu: _T2 = (0x1e800...<0x1e8d0, .rightToLeft)
+private let __bidiClass_rangePair_bv: _T2 = (0x1e8d7...<0x1e944, .rightToLeft)
+private let __bidiClass_rangePair_bw: _T2 = (0x1e94b....0x1ec6f, .rightToLeft)
+private let __bidiClass_rangePair_bx: _T2 = (0x1ec70....0x1ecbf, .arabicLetter)
+private let __bidiClass_rangePair_by: _T2 = (0x1ecc0....0x1ecff, .rightToLeft)
+private let __bidiClass_rangePair_bz: _T2 = (0x1ed00....0x1ed4f, .arabicLetter)
+private let __bidiClass_rangePair_c0: _T2 = (0x1ed50....0x1edff, .rightToLeft)
+private let __bidiClass_rangePair_c1: _T2 = (0x1ee00...<0x1eef0, .arabicLetter)
+private let __bidiClass_rangePair_c2: _T2 = (0x1eef2....0x1eeff, .arabicLetter)
+private let __bidiClass_rangePair_c3: _T2 = (0x1ef00....0x1efff, .rightToLeft)
+private let __bidiClass_rangePair_c4: _T2 = (0x1f000....0x1f02b, .otherNeutral)
+private let __bidiClass_rangePair_c5: _T2 = (0x1f030....0x1f093, .otherNeutral)
+private let __bidiClass_rangePair_c6: _T2 = (0x1f0a0....0x1f0ae, .otherNeutral)
+private let __bidiClass_rangePair_c7: _T2 = (0x1f0b1....0x1f0bf, .otherNeutral)
+private let __bidiClass_rangePair_c8: _T2 = (0x1f0c1....0x1f0cf, .otherNeutral)
+private let __bidiClass_rangePair_c9: _T2 = (0x1f0d1....0x1f0f5, .otherNeutral)
+private let __bidiClass_rangePair_ca: _T2 = (0x1f100....0x1f10a, .europeanNumber)
+private let __bidiClass_rangePair_cb: _T2 = (0x1f110....0x1f12e, .leftToRight)
+private let __bidiClass_rangePair_cc: _T2 = (0x1f130....0x1f169, .leftToRight)
+private let __bidiClass_rangePair_cd: _T2 = (0x1f170....0x1f1ac, .leftToRight)
+private let __bidiClass_rangePair_ce: _T2 = (0x1f1e6....0x1f202, .leftToRight)
+private let __bidiClass_rangePair_cf: _T2 = (0x1f210....0x1f23b, .leftToRight)
+private let __bidiClass_rangePair_cg: _T2 = (0x1f240....0x1f248, .leftToRight)
+private let __bidiClass_rangePair_ch: _T2 = (0x1f300....0x1f6d5, .otherNeutral)
+private let __bidiClass_rangePair_ci: _T2 = (0x1f6e0....0x1f6ec, .otherNeutral)
+private let __bidiClass_rangePair_cj: _T2 = (0x1f6f0....0x1f6fa, .otherNeutral)
+private let __bidiClass_rangePair_ck: _T2 = (0x1f700....0x1f773, .otherNeutral)
+private let __bidiClass_rangePair_cl: _T2 = (0x1f780....0x1f7d8, .otherNeutral)
+private let __bidiClass_rangePair_cm: _T2 = (0x1f7e0....0x1f7eb, .otherNeutral)
+private let __bidiClass_rangePair_cn: _T2 = (0x1f800....0x1f80b, .otherNeutral)
+private let __bidiClass_rangePair_co: _T2 = (0x1f810....0x1f847, .otherNeutral)
+private let __bidiClass_rangePair_cp: _T2 = (0x1f850....0x1f859, .otherNeutral)
+private let __bidiClass_rangePair_cq: _T2 = (0x1f860....0x1f887, .otherNeutral)
+private let __bidiClass_rangePair_cr: _T2 = (0x1f890....0x1f8ad, .otherNeutral)
+private let __bidiClass_rangePair_cs: _T2 = (0x1f900....0x1f90b, .otherNeutral)
+private let __bidiClass_rangePair_ct: _T2 = (0x1f90d....0x1f971, .otherNeutral)
+private let __bidiClass_rangePair_cu: _T2 = (0x1f97a....0x1f9a2, .otherNeutral)
+private let __bidiClass_rangePair_cv: _T2 = (0x1f9ae....0x1f9ca, .otherNeutral)
+private let __bidiClass_rangePair_cw: _T2 = (0x1f9cd....0x1fa53, .otherNeutral)
+private let __bidiClass_rangePair_cx: _T2 = (0x1fa60....0x1fa6d, .otherNeutral)
+private let __bidiClass_rangePair_cy: _T2 = (0x20000....0x2a6d6, .leftToRight)
+private let __bidiClass_rangePair_cz: _T2 = (0x2a700....0x2b734, .leftToRight)
+private let __bidiClass_rangePair_d0: _T2 = (0x2b740....0x2b81d, .leftToRight)
+private let __bidiClass_rangePair_d1: _T2 = (0x2b820....0x2cea1, .leftToRight)
+private let __bidiClass_rangePair_d2: _T2 = (0x2ceb0....0x2ebe0, .leftToRight)
+private let __bidiClass_rangePair_d3: _T2 = (0x2f800....0x2fa1d, .leftToRight)
+private let __bidiClass_rangePair_d4: _T2 = (0xdfffe....0xe00ff, .boundaryNeutral)
+private let __bidiClass_rangePair_d5: _T2 = (0xe0100....0xe01ef, .nonspacingMark)
+private let __bidiClass_rangePair_d6: _T2 = (0xe01f0....0xe0fff, .boundaryNeutral)
+private let __bidiClass_rangePair_d7: _T2 = (0xf0000....0xffffd, .leftToRight)
+private let __bidiClass_rangePair_d8: _T2 = (0x100000....0x10fffd, .leftToRight)
 private let __bidiClass_rangePairArray: _T3 = [
   __bidiClass_rangePair_0,
   __bidiClass_rangePair_1,
@@ -2245,632 +6071,9 @@ private let __bidiClass_rangePairArray: _T3 = [
   __bidiClass_rangePair_d6,
   __bidiClass_rangePair_d7,
   __bidiClass_rangePair_d8,
-  __bidiClass_rangePair_d9,
-  __bidiClass_rangePair_da,
-  __bidiClass_rangePair_db,
-  __bidiClass_rangePair_dc,
-  __bidiClass_rangePair_dd,
-  __bidiClass_rangePair_de,
-  __bidiClass_rangePair_df,
-  __bidiClass_rangePair_dg,
-  __bidiClass_rangePair_dh,
-  __bidiClass_rangePair_di,
-  __bidiClass_rangePair_dj,
-  __bidiClass_rangePair_dk,
-  __bidiClass_rangePair_dl,
-  __bidiClass_rangePair_dm,
-  __bidiClass_rangePair_dn,
-  __bidiClass_rangePair_do,
-  __bidiClass_rangePair_dp,
-  __bidiClass_rangePair_dq,
-  __bidiClass_rangePair_dr,
-  __bidiClass_rangePair_ds,
-  __bidiClass_rangePair_dt,
-  __bidiClass_rangePair_du,
-  __bidiClass_rangePair_dv,
-  __bidiClass_rangePair_dw,
-  __bidiClass_rangePair_dx,
-  __bidiClass_rangePair_dy,
-  __bidiClass_rangePair_dz,
-  __bidiClass_rangePair_e0,
-  __bidiClass_rangePair_e1,
-  __bidiClass_rangePair_e2,
-  __bidiClass_rangePair_e3,
-  __bidiClass_rangePair_e4,
-  __bidiClass_rangePair_e5,
-  __bidiClass_rangePair_e6,
-  __bidiClass_rangePair_e7,
-  __bidiClass_rangePair_e8,
-  __bidiClass_rangePair_e9,
-  __bidiClass_rangePair_ea,
-  __bidiClass_rangePair_eb,
-  __bidiClass_rangePair_ec,
-  __bidiClass_rangePair_ed,
-  __bidiClass_rangePair_ee,
-  __bidiClass_rangePair_ef,
-  __bidiClass_rangePair_eg,
-  __bidiClass_rangePair_eh,
-  __bidiClass_rangePair_ei,
-  __bidiClass_rangePair_ej,
-  __bidiClass_rangePair_ek,
-  __bidiClass_rangePair_el,
-  __bidiClass_rangePair_em,
-  __bidiClass_rangePair_en,
-  __bidiClass_rangePair_eo,
-  __bidiClass_rangePair_ep,
-  __bidiClass_rangePair_eq,
-  __bidiClass_rangePair_er,
-  __bidiClass_rangePair_es,
-  __bidiClass_rangePair_et,
-  __bidiClass_rangePair_eu,
-  __bidiClass_rangePair_ev,
-  __bidiClass_rangePair_ew,
-  __bidiClass_rangePair_ex,
-  __bidiClass_rangePair_ey,
-  __bidiClass_rangePair_ez,
-  __bidiClass_rangePair_f0,
-  __bidiClass_rangePair_f1,
-  __bidiClass_rangePair_f2,
-  __bidiClass_rangePair_f3,
-  __bidiClass_rangePair_f4,
-  __bidiClass_rangePair_f5,
-  __bidiClass_rangePair_f6,
-  __bidiClass_rangePair_f7,
-  __bidiClass_rangePair_f8,
-  __bidiClass_rangePair_f9,
-  __bidiClass_rangePair_fa,
-  __bidiClass_rangePair_fb,
-  __bidiClass_rangePair_fc,
-  __bidiClass_rangePair_fd,
-  __bidiClass_rangePair_fe,
-  __bidiClass_rangePair_ff,
-  __bidiClass_rangePair_fg,
-  __bidiClass_rangePair_fh,
-  __bidiClass_rangePair_fi,
-  __bidiClass_rangePair_fj,
-  __bidiClass_rangePair_fk,
-  __bidiClass_rangePair_fl,
-  __bidiClass_rangePair_fm,
-  __bidiClass_rangePair_fn,
-  __bidiClass_rangePair_fo,
-  __bidiClass_rangePair_fp,
-  __bidiClass_rangePair_fq,
-  __bidiClass_rangePair_fr,
-  __bidiClass_rangePair_fs,
-  __bidiClass_rangePair_ft,
-  __bidiClass_rangePair_fu,
-  __bidiClass_rangePair_fv,
-  __bidiClass_rangePair_fw,
-  __bidiClass_rangePair_fx,
-  __bidiClass_rangePair_fy,
-  __bidiClass_rangePair_fz,
-  __bidiClass_rangePair_g0,
-  __bidiClass_rangePair_g1,
-  __bidiClass_rangePair_g2,
-  __bidiClass_rangePair_g3,
-  __bidiClass_rangePair_g4,
-  __bidiClass_rangePair_g5,
-  __bidiClass_rangePair_g6,
-  __bidiClass_rangePair_g7,
-  __bidiClass_rangePair_g8,
-  __bidiClass_rangePair_g9,
-  __bidiClass_rangePair_ga,
-  __bidiClass_rangePair_gb,
-  __bidiClass_rangePair_gc,
-  __bidiClass_rangePair_gd,
-  __bidiClass_rangePair_ge,
-  __bidiClass_rangePair_gf,
-  __bidiClass_rangePair_gg,
-  __bidiClass_rangePair_gh,
-  __bidiClass_rangePair_gi,
-  __bidiClass_rangePair_gj,
-  __bidiClass_rangePair_gk,
-  __bidiClass_rangePair_gl,
-  __bidiClass_rangePair_gm,
-  __bidiClass_rangePair_gn,
-  __bidiClass_rangePair_go,
-  __bidiClass_rangePair_gp,
-  __bidiClass_rangePair_gq,
-  __bidiClass_rangePair_gr,
-  __bidiClass_rangePair_gs,
-  __bidiClass_rangePair_gt,
-  __bidiClass_rangePair_gu,
-  __bidiClass_rangePair_gv,
-  __bidiClass_rangePair_gw,
-  __bidiClass_rangePair_gx,
-  __bidiClass_rangePair_gy,
-  __bidiClass_rangePair_gz,
-  __bidiClass_rangePair_h0,
-  __bidiClass_rangePair_h1,
-  __bidiClass_rangePair_h2,
-  __bidiClass_rangePair_h3,
-  __bidiClass_rangePair_h4,
-  __bidiClass_rangePair_h5,
-  __bidiClass_rangePair_h6,
-  __bidiClass_rangePair_h7,
-  __bidiClass_rangePair_h8,
-  __bidiClass_rangePair_h9,
-  __bidiClass_rangePair_ha,
-  __bidiClass_rangePair_hb,
-  __bidiClass_rangePair_hc,
-  __bidiClass_rangePair_hd,
-  __bidiClass_rangePair_he,
-  __bidiClass_rangePair_hf,
-  __bidiClass_rangePair_hg,
-  __bidiClass_rangePair_hh,
-  __bidiClass_rangePair_hi,
-  __bidiClass_rangePair_hj,
-  __bidiClass_rangePair_hk,
-  __bidiClass_rangePair_hl,
-  __bidiClass_rangePair_hm,
-  __bidiClass_rangePair_hn,
-  __bidiClass_rangePair_ho,
-  __bidiClass_rangePair_hp,
-  __bidiClass_rangePair_hq,
-  __bidiClass_rangePair_hr,
-  __bidiClass_rangePair_hs,
-  __bidiClass_rangePair_ht,
-  __bidiClass_rangePair_hu,
-  __bidiClass_rangePair_hv,
-  __bidiClass_rangePair_hw,
-  __bidiClass_rangePair_hx,
-  __bidiClass_rangePair_hy,
-  __bidiClass_rangePair_hz,
-  __bidiClass_rangePair_i0,
-  __bidiClass_rangePair_i1,
-  __bidiClass_rangePair_i2,
-  __bidiClass_rangePair_i3,
-  __bidiClass_rangePair_i4,
-  __bidiClass_rangePair_i5,
-  __bidiClass_rangePair_i6,
-  __bidiClass_rangePair_i7,
-  __bidiClass_rangePair_i8,
-  __bidiClass_rangePair_i9,
-  __bidiClass_rangePair_ia,
-  __bidiClass_rangePair_ib,
-  __bidiClass_rangePair_ic,
-  __bidiClass_rangePair_id,
-  __bidiClass_rangePair_ie,
-  __bidiClass_rangePair_if,
-  __bidiClass_rangePair_ig,
-  __bidiClass_rangePair_ih,
-  __bidiClass_rangePair_ii,
-  __bidiClass_rangePair_ij,
-  __bidiClass_rangePair_ik,
-  __bidiClass_rangePair_il,
-  __bidiClass_rangePair_im,
-  __bidiClass_rangePair_in,
-  __bidiClass_rangePair_io,
-  __bidiClass_rangePair_ip,
-  __bidiClass_rangePair_iq,
-  __bidiClass_rangePair_ir,
-  __bidiClass_rangePair_is,
-  __bidiClass_rangePair_it,
-  __bidiClass_rangePair_iu,
-  __bidiClass_rangePair_iv,
-  __bidiClass_rangePair_iw,
-  __bidiClass_rangePair_ix,
-  __bidiClass_rangePair_iy,
-  __bidiClass_rangePair_iz,
-  __bidiClass_rangePair_j0,
-  __bidiClass_rangePair_j1,
-  __bidiClass_rangePair_j2,
-  __bidiClass_rangePair_j3,
-  __bidiClass_rangePair_j4,
-  __bidiClass_rangePair_j5,
-  __bidiClass_rangePair_j6,
-  __bidiClass_rangePair_j7,
-  __bidiClass_rangePair_j8,
-  __bidiClass_rangePair_j9,
-  __bidiClass_rangePair_ja,
-  __bidiClass_rangePair_jb,
-  __bidiClass_rangePair_jc,
-  __bidiClass_rangePair_jd,
-  __bidiClass_rangePair_je,
-  __bidiClass_rangePair_jf,
-  __bidiClass_rangePair_jg,
-  __bidiClass_rangePair_jh,
-  __bidiClass_rangePair_ji,
-  __bidiClass_rangePair_jj,
-  __bidiClass_rangePair_jk,
-  __bidiClass_rangePair_jl,
-  __bidiClass_rangePair_jm,
-  __bidiClass_rangePair_jn,
-  __bidiClass_rangePair_jo,
-  __bidiClass_rangePair_jp,
-  __bidiClass_rangePair_jq,
-  __bidiClass_rangePair_jr,
-  __bidiClass_rangePair_js,
-  __bidiClass_rangePair_jt,
-  __bidiClass_rangePair_ju,
-  __bidiClass_rangePair_jv,
-  __bidiClass_rangePair_jw,
-  __bidiClass_rangePair_jx,
-  __bidiClass_rangePair_jy,
-  __bidiClass_rangePair_jz,
-  __bidiClass_rangePair_k0,
-  __bidiClass_rangePair_k1,
-  __bidiClass_rangePair_k2,
-  __bidiClass_rangePair_k3,
-  __bidiClass_rangePair_k4,
-  __bidiClass_rangePair_k5,
-  __bidiClass_rangePair_k6,
-  __bidiClass_rangePair_k7,
-  __bidiClass_rangePair_k8,
-  __bidiClass_rangePair_k9,
-  __bidiClass_rangePair_ka,
-  __bidiClass_rangePair_kb,
-  __bidiClass_rangePair_kc,
-  __bidiClass_rangePair_kd,
-  __bidiClass_rangePair_ke,
-  __bidiClass_rangePair_kf,
-  __bidiClass_rangePair_kg,
-  __bidiClass_rangePair_kh,
-  __bidiClass_rangePair_ki,
-  __bidiClass_rangePair_kj,
-  __bidiClass_rangePair_kk,
-  __bidiClass_rangePair_kl,
-  __bidiClass_rangePair_km,
-  __bidiClass_rangePair_kn,
-  __bidiClass_rangePair_ko,
-  __bidiClass_rangePair_kp,
-  __bidiClass_rangePair_kq,
-  __bidiClass_rangePair_kr,
-  __bidiClass_rangePair_ks,
-  __bidiClass_rangePair_kt,
-  __bidiClass_rangePair_ku,
-  __bidiClass_rangePair_kv,
-  __bidiClass_rangePair_kw,
-  __bidiClass_rangePair_kx,
-  __bidiClass_rangePair_ky,
-  __bidiClass_rangePair_kz,
-  __bidiClass_rangePair_l0,
-  __bidiClass_rangePair_l1,
-  __bidiClass_rangePair_l2,
-  __bidiClass_rangePair_l3,
-  __bidiClass_rangePair_l4,
-  __bidiClass_rangePair_l5,
-  __bidiClass_rangePair_l6,
-  __bidiClass_rangePair_l7,
-  __bidiClass_rangePair_l8,
-  __bidiClass_rangePair_l9,
-  __bidiClass_rangePair_la,
-  __bidiClass_rangePair_lb,
-  __bidiClass_rangePair_lc,
-  __bidiClass_rangePair_ld,
-  __bidiClass_rangePair_le,
-  __bidiClass_rangePair_lf,
-  __bidiClass_rangePair_lg,
-  __bidiClass_rangePair_lh,
-  __bidiClass_rangePair_li,
-  __bidiClass_rangePair_lj,
-  __bidiClass_rangePair_lk,
-  __bidiClass_rangePair_ll,
-  __bidiClass_rangePair_lm,
-  __bidiClass_rangePair_ln,
-  __bidiClass_rangePair_lo,
-  __bidiClass_rangePair_lp,
-  __bidiClass_rangePair_lq,
-  __bidiClass_rangePair_lr,
-  __bidiClass_rangePair_ls,
-  __bidiClass_rangePair_lt,
-  __bidiClass_rangePair_lu,
-  __bidiClass_rangePair_lv,
-  __bidiClass_rangePair_lw,
-  __bidiClass_rangePair_lx,
-  __bidiClass_rangePair_ly,
-  __bidiClass_rangePair_lz,
-  __bidiClass_rangePair_m0,
-  __bidiClass_rangePair_m1,
-  __bidiClass_rangePair_m2,
-  __bidiClass_rangePair_m3,
-  __bidiClass_rangePair_m4,
-  __bidiClass_rangePair_m5,
-  __bidiClass_rangePair_m6,
-  __bidiClass_rangePair_m7,
-  __bidiClass_rangePair_m8,
-  __bidiClass_rangePair_m9,
-  __bidiClass_rangePair_ma,
-  __bidiClass_rangePair_mb,
-  __bidiClass_rangePair_mc,
-  __bidiClass_rangePair_md,
-  __bidiClass_rangePair_me,
-  __bidiClass_rangePair_mf,
-  __bidiClass_rangePair_mg,
-  __bidiClass_rangePair_mh,
-  __bidiClass_rangePair_mi,
-  __bidiClass_rangePair_mj,
-  __bidiClass_rangePair_mk,
-  __bidiClass_rangePair_ml,
-  __bidiClass_rangePair_mm,
-  __bidiClass_rangePair_mn,
-  __bidiClass_rangePair_mo,
-  __bidiClass_rangePair_mp,
-  __bidiClass_rangePair_mq,
-  __bidiClass_rangePair_mr,
-  __bidiClass_rangePair_ms,
-  __bidiClass_rangePair_mt,
-  __bidiClass_rangePair_mu,
-  __bidiClass_rangePair_mv,
-  __bidiClass_rangePair_mw,
-  __bidiClass_rangePair_mx,
-  __bidiClass_rangePair_my,
-  __bidiClass_rangePair_mz,
-  __bidiClass_rangePair_n0,
-  __bidiClass_rangePair_n1,
-  __bidiClass_rangePair_n2,
-  __bidiClass_rangePair_n3,
-  __bidiClass_rangePair_n4,
-  __bidiClass_rangePair_n5,
-  __bidiClass_rangePair_n6,
-  __bidiClass_rangePair_n7,
-  __bidiClass_rangePair_n8,
-  __bidiClass_rangePair_n9,
-  __bidiClass_rangePair_na,
-  __bidiClass_rangePair_nb,
-  __bidiClass_rangePair_nc,
-  __bidiClass_rangePair_nd,
-  __bidiClass_rangePair_ne,
-  __bidiClass_rangePair_nf,
-  __bidiClass_rangePair_ng,
-  __bidiClass_rangePair_nh,
-  __bidiClass_rangePair_ni,
-  __bidiClass_rangePair_nj,
-  __bidiClass_rangePair_nk,
-  __bidiClass_rangePair_nl,
-  __bidiClass_rangePair_nm,
-  __bidiClass_rangePair_nn,
-  __bidiClass_rangePair_no,
-  __bidiClass_rangePair_np,
-  __bidiClass_rangePair_nq,
-  __bidiClass_rangePair_nr,
-  __bidiClass_rangePair_ns,
-  __bidiClass_rangePair_nt,
-  __bidiClass_rangePair_nu,
-  __bidiClass_rangePair_nv,
-  __bidiClass_rangePair_nw,
-  __bidiClass_rangePair_nx,
-  __bidiClass_rangePair_ny,
-  __bidiClass_rangePair_nz,
-  __bidiClass_rangePair_o0,
-  __bidiClass_rangePair_o1,
-  __bidiClass_rangePair_o2,
-  __bidiClass_rangePair_o3,
-  __bidiClass_rangePair_o4,
-  __bidiClass_rangePair_o5,
-  __bidiClass_rangePair_o6,
-  __bidiClass_rangePair_o7,
-  __bidiClass_rangePair_o8,
-  __bidiClass_rangePair_o9,
-  __bidiClass_rangePair_oa,
-  __bidiClass_rangePair_ob,
-  __bidiClass_rangePair_oc,
-  __bidiClass_rangePair_od,
-  __bidiClass_rangePair_oe,
-  __bidiClass_rangePair_of,
-  __bidiClass_rangePair_og,
-  __bidiClass_rangePair_oh,
-  __bidiClass_rangePair_oi,
-  __bidiClass_rangePair_oj,
-  __bidiClass_rangePair_ok,
-  __bidiClass_rangePair_ol,
-  __bidiClass_rangePair_om,
-  __bidiClass_rangePair_on,
-  __bidiClass_rangePair_oo,
-  __bidiClass_rangePair_op,
-  __bidiClass_rangePair_oq,
-  __bidiClass_rangePair_or,
-  __bidiClass_rangePair_os,
-  __bidiClass_rangePair_ot,
-  __bidiClass_rangePair_ou,
-  __bidiClass_rangePair_ov,
-  __bidiClass_rangePair_ow,
-  __bidiClass_rangePair_ox,
-  __bidiClass_rangePair_oy,
-  __bidiClass_rangePair_oz,
-  __bidiClass_rangePair_p0,
-  __bidiClass_rangePair_p1,
-  __bidiClass_rangePair_p2,
-  __bidiClass_rangePair_p3,
-  __bidiClass_rangePair_p4,
-  __bidiClass_rangePair_p5,
-  __bidiClass_rangePair_p6,
-  __bidiClass_rangePair_p7,
-  __bidiClass_rangePair_p8,
-  __bidiClass_rangePair_p9,
-  __bidiClass_rangePair_pa,
-  __bidiClass_rangePair_pb,
-  __bidiClass_rangePair_pc,
-  __bidiClass_rangePair_pd,
-  __bidiClass_rangePair_pe,
-  __bidiClass_rangePair_pf,
-  __bidiClass_rangePair_pg,
-  __bidiClass_rangePair_ph,
-  __bidiClass_rangePair_pi,
-  __bidiClass_rangePair_pj,
-  __bidiClass_rangePair_pk,
-  __bidiClass_rangePair_pl,
-  __bidiClass_rangePair_pm,
-  __bidiClass_rangePair_pn,
-  __bidiClass_rangePair_po,
-  __bidiClass_rangePair_pp,
-  __bidiClass_rangePair_pq,
-  __bidiClass_rangePair_pr,
-  __bidiClass_rangePair_ps,
-  __bidiClass_rangePair_pt,
-  __bidiClass_rangePair_pu,
-  __bidiClass_rangePair_pv,
-  __bidiClass_rangePair_pw,
-  __bidiClass_rangePair_px,
-  __bidiClass_rangePair_py,
-  __bidiClass_rangePair_pz,
-  __bidiClass_rangePair_q0,
-  __bidiClass_rangePair_q1,
-  __bidiClass_rangePair_q2,
-  __bidiClass_rangePair_q3,
-  __bidiClass_rangePair_q4,
-  __bidiClass_rangePair_q5,
-  __bidiClass_rangePair_q6,
-  __bidiClass_rangePair_q7,
-  __bidiClass_rangePair_q8,
-  __bidiClass_rangePair_q9,
-  __bidiClass_rangePair_qa,
-  __bidiClass_rangePair_qb,
-  __bidiClass_rangePair_qc,
-  __bidiClass_rangePair_qd,
-  __bidiClass_rangePair_qe,
-  __bidiClass_rangePair_qf,
-  __bidiClass_rangePair_qg,
-  __bidiClass_rangePair_qh,
-  __bidiClass_rangePair_qi,
-  __bidiClass_rangePair_qj,
-  __bidiClass_rangePair_qk,
-  __bidiClass_rangePair_ql,
-  __bidiClass_rangePair_qm,
-  __bidiClass_rangePair_qn,
-  __bidiClass_rangePair_qo,
-  __bidiClass_rangePair_qp,
-  __bidiClass_rangePair_qq,
-  __bidiClass_rangePair_qr,
-  __bidiClass_rangePair_qs,
-  __bidiClass_rangePair_qt,
-  __bidiClass_rangePair_qu,
-  __bidiClass_rangePair_qv,
-  __bidiClass_rangePair_qw,
-  __bidiClass_rangePair_qx,
-  __bidiClass_rangePair_qy,
-  __bidiClass_rangePair_qz,
-  __bidiClass_rangePair_r0,
-  __bidiClass_rangePair_r1,
-  __bidiClass_rangePair_r2,
-  __bidiClass_rangePair_r3,
-  __bidiClass_rangePair_r4,
-  __bidiClass_rangePair_r5,
-  __bidiClass_rangePair_r6,
-  __bidiClass_rangePair_r7,
-  __bidiClass_rangePair_r8,
-  __bidiClass_rangePair_r9,
-  __bidiClass_rangePair_ra,
-  __bidiClass_rangePair_rb,
-  __bidiClass_rangePair_rc,
-  __bidiClass_rangePair_rd,
-  __bidiClass_rangePair_re,
-  __bidiClass_rangePair_rf,
-  __bidiClass_rangePair_rg,
-  __bidiClass_rangePair_rh,
-  __bidiClass_rangePair_ri,
-  __bidiClass_rangePair_rj,
-  __bidiClass_rangePair_rk,
-  __bidiClass_rangePair_rl,
-  __bidiClass_rangePair_rm,
-  __bidiClass_rangePair_rn,
-  __bidiClass_rangePair_ro,
-  __bidiClass_rangePair_rp,
-  __bidiClass_rangePair_rq,
-  __bidiClass_rangePair_rr,
-  __bidiClass_rangePair_rs,
-  __bidiClass_rangePair_rt,
-  __bidiClass_rangePair_ru,
-  __bidiClass_rangePair_rv,
-  __bidiClass_rangePair_rw,
-  __bidiClass_rangePair_rx,
-  __bidiClass_rangePair_ry,
-  __bidiClass_rangePair_rz,
-  __bidiClass_rangePair_s0,
-  __bidiClass_rangePair_s1,
-  __bidiClass_rangePair_s2,
-  __bidiClass_rangePair_s3,
-  __bidiClass_rangePair_s4,
-  __bidiClass_rangePair_s5,
-  __bidiClass_rangePair_s6,
-  __bidiClass_rangePair_s7,
-  __bidiClass_rangePair_s8,
-  __bidiClass_rangePair_s9,
-  __bidiClass_rangePair_sa,
-  __bidiClass_rangePair_sb,
-  __bidiClass_rangePair_sc,
-  __bidiClass_rangePair_sd,
-  __bidiClass_rangePair_se,
-  __bidiClass_rangePair_sf,
-  __bidiClass_rangePair_sg,
-  __bidiClass_rangePair_sh,
-  __bidiClass_rangePair_si,
-  __bidiClass_rangePair_sj,
-  __bidiClass_rangePair_sk,
-  __bidiClass_rangePair_sl,
-  __bidiClass_rangePair_sm,
-  __bidiClass_rangePair_sn,
-  __bidiClass_rangePair_so,
-  __bidiClass_rangePair_sp,
-  __bidiClass_rangePair_sq,
-  __bidiClass_rangePair_sr,
-  __bidiClass_rangePair_ss,
-  __bidiClass_rangePair_st,
-  __bidiClass_rangePair_su,
-  __bidiClass_rangePair_sv,
-  __bidiClass_rangePair_sw,
-  __bidiClass_rangePair_sx,
-  __bidiClass_rangePair_sy,
-  __bidiClass_rangePair_sz,
-  __bidiClass_rangePair_t0,
-  __bidiClass_rangePair_t1,
-  __bidiClass_rangePair_t2,
 ]
 private let __bidiClass_rangeDictionary = RangeDictionary<Unicode.Scalar.Value, _T0>(carefullySortedRangesAndValues: __bidiClass_rangePairArray)
 internal let _bidiClass = UnicodeScalarValueDictionary<Unicode.BidiClass>(dictionary: __bidiClass_dictionary, rangeDictionary: __bidiClass_rangeDictionary)
-// Default Values defined by ranges
-private let __bidiClass_default_ranges_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWithValues: [
-])
-private let __bidiClass_default_ranges_rangePair_0: _T2 = (0x590....0x5ff, .rightToLeft)
-private let __bidiClass_default_ranges_rangePair_1: _T2 = (0x600....0x7bf, .arabicLetter)
-private let __bidiClass_default_ranges_rangePair_2: _T2 = (0x7c0....0x85f, .rightToLeft)
-private let __bidiClass_default_ranges_rangePair_3: _T2 = (0x860....0x86f, .arabicLetter)
-private let __bidiClass_default_ranges_rangePair_4: _T2 = (0x870....0x89f, .rightToLeft)
-private let __bidiClass_default_ranges_rangePair_5: _T2 = (0x8a0....0x8ff, .arabicLetter)
-private let __bidiClass_default_ranges_rangePair_6: _T2 = (0x20a0....0x20cf, .europeanTerminator)
-private let __bidiClass_default_ranges_rangePair_7: _T2 = (0xfb1d....0xfb4f, .rightToLeft)
-private let __bidiClass_default_ranges_rangePair_8: _T2 = (0xfb50....0xfdcf, .arabicLetter)
-private let __bidiClass_default_ranges_rangePair_9: _T2 = (0xfdf0....0xfdff, .arabicLetter)
-private let __bidiClass_default_ranges_rangePair_a: _T2 = (0xfe70....0xfeff, .arabicLetter)
-private let __bidiClass_default_ranges_rangePair_b: _T2 = (0x10800....0x10cff, .rightToLeft)
-private let __bidiClass_default_ranges_rangePair_c: _T2 = (0x10d00....0x10d3f, .arabicLetter)
-private let __bidiClass_default_ranges_rangePair_d: _T2 = (0x10d40....0x10f2f, .rightToLeft)
-private let __bidiClass_default_ranges_rangePair_e: _T2 = (0x10f30....0x10f6f, .arabicLetter)
-private let __bidiClass_default_ranges_rangePair_f: _T2 = (0x10f70....0x10fff, .rightToLeft)
-private let __bidiClass_default_ranges_rangePair_g: _T2 = (0x1e800....0x1ec6f, .rightToLeft)
-private let __bidiClass_default_ranges_rangePair_h: _T2 = (0x1ec70....0x1ecbf, .arabicLetter)
-private let __bidiClass_default_ranges_rangePair_i: _T2 = (0x1ecc0....0x1ecff, .rightToLeft)
-private let __bidiClass_default_ranges_rangePair_j: _T2 = (0x1ed00....0x1ed4f, .arabicLetter)
-private let __bidiClass_default_ranges_rangePair_k: _T2 = (0x1ed50....0x1edff, .rightToLeft)
-private let __bidiClass_default_ranges_rangePair_l: _T2 = (0x1ee00....0x1eeff, .arabicLetter)
-private let __bidiClass_default_ranges_rangePair_m: _T2 = (0x1ef00....0x1efff, .rightToLeft)
-private let __bidiClass_default_ranges_rangePairArray: _T3 = [
-  __bidiClass_default_ranges_rangePair_0,
-  __bidiClass_default_ranges_rangePair_1,
-  __bidiClass_default_ranges_rangePair_2,
-  __bidiClass_default_ranges_rangePair_3,
-  __bidiClass_default_ranges_rangePair_4,
-  __bidiClass_default_ranges_rangePair_5,
-  __bidiClass_default_ranges_rangePair_6,
-  __bidiClass_default_ranges_rangePair_7,
-  __bidiClass_default_ranges_rangePair_8,
-  __bidiClass_default_ranges_rangePair_9,
-  __bidiClass_default_ranges_rangePair_a,
-  __bidiClass_default_ranges_rangePair_b,
-  __bidiClass_default_ranges_rangePair_c,
-  __bidiClass_default_ranges_rangePair_d,
-  __bidiClass_default_ranges_rangePair_e,
-  __bidiClass_default_ranges_rangePair_f,
-  __bidiClass_default_ranges_rangePair_g,
-  __bidiClass_default_ranges_rangePair_h,
-  __bidiClass_default_ranges_rangePair_i,
-  __bidiClass_default_ranges_rangePair_j,
-  __bidiClass_default_ranges_rangePair_k,
-  __bidiClass_default_ranges_rangePair_l,
-  __bidiClass_default_ranges_rangePair_m,
-]
-private let __bidiClass_default_ranges_rangeDictionary = RangeDictionary<Unicode.Scalar.Value, _T0>(carefullySortedRangesAndValues: __bidiClass_default_ranges_rangePairArray)
-internal let _bidiClass_default_ranges = UnicodeScalarValueDictionary<Unicode.BidiClass>(dictionary: __bidiClass_default_ranges_dictionary, rangeDictionary: __bidiClass_default_ranges_rangeDictionary)
 // Default Values defined by core properties
 private let __bidiClass_default_properties_triple_0: _T4 = (\.isDefaultIgnorableCodePoint, true, .boundaryNeutral)
 private let __bidiClass_default_properties_triple_1: _T4 = (\.isNoncharacterCodePoint, true, .boundaryNeutral)

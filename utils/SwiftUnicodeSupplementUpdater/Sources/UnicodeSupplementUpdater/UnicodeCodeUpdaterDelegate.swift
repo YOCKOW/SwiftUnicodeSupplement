@@ -109,6 +109,8 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     }
   }
   
+  internal var _expandingLimit: UInt32 = 8
+  
   private var _setConversionCount: [String: Int] = [:]
   internal func _convert(_ ranges: MultipleRanges<Unicode.Scalar.Value>, key: String) -> StringLines {
     let nn = _setConversionCount[key] ?? 0
@@ -121,6 +123,10 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
       let bounds = range.bounds!
       if bounds.lower == bounds.upper {
         singleValues.append(bounds.lower.value!)
+      } else if bounds.upper.value! - bounds.lower.value! < _expandingLimit {
+        for sv in range._values {
+          singleValues.append(sv)
+        }
       } else {
         anyRanges.append(range)
       }
@@ -177,6 +183,10 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
       let bounds = range.bounds!
       if bounds.lower == bounds.upper {
         dictionary[bounds.lower.value!] = value
+      } else if bounds.upper.value! - bounds.lower.value! < _expandingLimit {
+        for sv in range._values {
+          dictionary[sv] = value
+        }
       } else {
         extractedRangeDictionary.insert(value, forRange: range)
       }
@@ -267,12 +277,34 @@ open class UCDPropertiesCodeUpdaterDelegate<T>: UCDCodeUpdaterDelegate where T: 
     _mustBeOverridden()
   }
   
-  open override func convert<S>(_ intermidiates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    let reduced: RangeDictionary<Unicode.Scalar.Value, T> = try intermidiates.reduce(into: [:]) { [unowned self] in
+  internal func _convert<S>(_ intermediates: S) throws -> RangeDictionary<Unicode.Scalar.Value, T>
+    where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    return try intermediates.reduce(into: [:]) { [unowned self] in
       for (range, value) in  try $1.content.rangeDictionary(converter: { try self.reduce(columns: $0) }) {
         $0.insert(value, forRange: range)
       }
     }
-    return self._convert(reduced, describer: self.describe(value:))
+  }
+  
+  open override func convert<S>(_ intermediates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    return self._convert(try self._convert(intermediates), describer: self.describe(value:))
+  }
+}
+
+open class UCDDefaultablePropertiesCodeUpdaterDelegate<T>: UCDPropertiesCodeUpdaterDelegate<T> where T: Equatable {
+  open var defaultValue: T {
+    _mustBeOverridden()
+  }
+  
+  open override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    var rangeDictionary = RangeDictionary<Unicode.Scalar.Value, T>([
+      (0x0000....0x10FFFF, self.defaultValue),
+    ])
+    
+    for (range, value) in try self._convert(intermediates) {
+      rangeDictionary.insert(value, forRange: range)
+    }
+    
+    return self._convert(rangeDictionary, describer: self.describe(value: ))
   }
 }

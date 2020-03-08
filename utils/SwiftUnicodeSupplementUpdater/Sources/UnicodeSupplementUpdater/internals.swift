@@ -39,9 +39,41 @@ extension Unicode.Scalar.Value {
 
 extension AnyRange where Bound == Unicode.Scalar.Value {
   internal var _description: String {
-    let lower = self.bounds!.lower.value!
-    let upper = self.bounds!.upper.value!
-    return "\(lower._description)....\(upper._description)"
+    let bounds = self.bounds!
+    
+    switch (bounds.lower, bounds.upper) {
+    case (.excluded(let lv), .excluded(let uv)):
+      return "\(lv._description)<...<\(uv._description)"
+    case (.excluded(let lv), .included(let uv)):
+      return "\(lv._description)<...\(uv._description)"
+    case (.included(let lv), .excluded(let uv)):
+      return "\(lv._description)...<\(uv._description)"
+    case (.included(let lv), .included(let uv)):
+      return "\(lv._description)....\(uv._description)"
+    default:
+      fatalError("Unexpected Range.")
+    }
+  }
+  
+  internal var _values: ClosedRange<Unicode.Scalar.Value>.Iterator {
+    let lower: Unicode.Scalar.Value
+    let upper: Unicode.Scalar.Value
+    
+    let bounds = self.bounds!
+    
+    switch bounds.lower {
+    case .excluded(let value): lower = value + 1
+    case .included(let value): lower = value
+    default: fatalError("Unexpected Lower Bound.")
+    }
+    
+    switch bounds.upper {
+    case .excluded(let value): upper = value - 1
+    case .included(let value): upper = value
+    default: fatalError("Unexpected Upper Bound.")
+    }
+    
+    return (lower...upper).makeIterator()
   }
 }
 
