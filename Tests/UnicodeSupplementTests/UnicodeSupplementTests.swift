@@ -2,6 +2,30 @@ import XCTest
 @testable import UnicodeSupplement
 
 final class UnicodeSupplementTests: XCTestCase {
+  func test_CaseMapping() {
+    func lc(_ scalar: Unicode.Scalar) -> String {
+      return scalar.latestProperties.lowercaseMapping
+    }
+    func tc(_ scalar: Unicode.Scalar) -> String {
+      return scalar.latestProperties.titlecaseMapping
+    }
+    func uc(_ scalar: Unicode.Scalar) -> String {
+      return scalar.latestProperties.uppercaseMapping
+    }
+    
+    XCTAssertEqual(lc("A"), "a")
+    XCTAssertEqual(tc("a"), "A")
+    XCTAssertEqual(uc("a"), "A")
+    
+    XCTAssertEqual(lc("\u{0130}"), "\u{0069}\u{0307}")
+    XCTAssertEqual(tc("\u{FB01}"), "Fi")
+    XCTAssertEqual(uc("\u{00DF}"), "SS")
+    
+    XCTAssertEqual(lc("あ"), "あ")
+    XCTAssertEqual(tc("あ"), "あ")
+    XCTAssertEqual(uc("あ"), "あ")
+  }
+  
   func test_BidiClass() {
     func bc(_ scalar:Unicode.Scalar) -> Unicode.BidiClass {
       return scalar.latestProperties.bidiClass

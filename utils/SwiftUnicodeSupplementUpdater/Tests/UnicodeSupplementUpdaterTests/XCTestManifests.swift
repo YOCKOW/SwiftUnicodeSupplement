@@ -8,6 +8,7 @@ extension UnicodeSupplementUpdaterTests {
     static let __allTests__UnicodeSupplementUpdaterTests = [
         ("test_bidiClass", test_bidiClass),
         ("test_binProp", test_binProp),
+        ("test_caseMapping", test_caseMapping),
         ("test_ccc", test_ccc),
         ("test_coreProp", test_coreProp),
         ("test_ea", test_ea),

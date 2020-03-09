@@ -45,7 +45,7 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     return .init(content: try IntermediateDataType(url: sourceURL))
   }
   
-  open func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  open func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     _mustBeOverridden()
   }
   

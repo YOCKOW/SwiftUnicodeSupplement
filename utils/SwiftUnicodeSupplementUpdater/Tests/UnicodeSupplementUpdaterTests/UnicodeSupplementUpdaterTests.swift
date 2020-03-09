@@ -22,7 +22,7 @@ private extension String.Composition {
 
 final class UnicodeSupplementUpdaterTests: XCTestCase {
   private func _converted(with delegate: UnicodeCodeUpdaterDelegate) throws -> StringLines {
-    if delegate is PropertyValueAliases {
+    if delegate is CaseMapping || delegate is PropertyValueAliases {
       return .init(String(data: CodeUpdater(delegate: delegate).convertedData(), encoding: .utf8)!)
     } else {
       return try delegate.convert(try delegate.sourceURLs.map({ try delegate.prepare(sourceURL: $0) }))
@@ -36,6 +36,13 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
       XCTAssertTrue(lines._contains(expected),
                     "Expected line was not found: \(expected)", file: file, line: line)
     }
+  }
+  
+  func test_caseMapping() throws {
+    try _assert(delegate: CaseMapping(), expectedLines: [
+      "internal let _caseMapping_simpleUppercaseMapping: [Unicode.Scalar.Value: String] = [",
+      "internal let _caseMapping_specialCasing: [Unicode.Scalar.Value: (lower: String, title: String, upper: String)] = [",
+    ])
   }
   
   func test_bidiClass() throws {

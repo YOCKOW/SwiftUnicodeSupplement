@@ -402,16 +402,24 @@ extension Unicode.Scalar.LatestProperties {
 
 
 extension Unicode.Scalar.LatestProperties {
+  private var _selfString: String { return String(Unicode.Scalar(self._value)!) }
+  
   public var lowercaseMapping: String {
-    _unimplemented()
+    return _caseMapping_specialCasing[self._value]?.lower ??
+      _caseMapping_simpleLowercaseMapping[self._value] ??
+      _selfString
   }
   
   public var titlecaseMapping: String {
-    _unimplemented()
+    return _caseMapping_specialCasing[self._value]?.title ??
+      _caseMapping_simpleTitlecaseMapping[self._value] ??
+      self.uppercaseMapping
   }
   
   public var uppercaseMapping: String {
-    _unimplemented()
+    return _caseMapping_specialCasing[self._value]?.upper ??
+      _caseMapping_simpleUppercaseMapping[self._value] ??
+      _selfString
   }
 }
 
