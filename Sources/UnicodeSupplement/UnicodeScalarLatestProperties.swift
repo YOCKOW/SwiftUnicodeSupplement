@@ -437,7 +437,15 @@ extension Unicode.Scalar.LatestProperties {
 
 extension Unicode.Scalar.LatestProperties {
   public var name: String? {
-    _unimplemented()
+    guard let name = _name[self._value] else { return nil }
+    
+    // Values containing a * character are patterns which
+    // use the placeholder * in place of the code point in hex.
+    let splittedByPlaceholder = name.split(separator: "*", omittingEmptySubsequences: false)
+    if splittedByPlaceholder.count < 2 {
+      return name
+    }
+    return splittedByPlaceholder.joined(separator: String(self._value, radix: 0x10, uppercase: true))
   }
   
   public var nameAlias: String? {

@@ -24,6 +24,7 @@ extension UnicodeSupplementTests {
         ("test_IDNAStatus", test_IDNAStatus),
         ("test_JoiningGroup", test_JoiningGroup),
         ("test_JoiningType", test_JoiningType),
+        ("test_Name", test_Name),
         ("test_properties", test_properties),
         ("test_script", test_script),
     ]

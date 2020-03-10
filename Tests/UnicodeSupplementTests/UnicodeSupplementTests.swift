@@ -124,6 +124,16 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(jt("\u{1DA75}"), .transparent)
   }
   
+  func test_Name() {
+    func name(_ scalar: Unicode.Scalar) -> String? {
+      return scalar.latestProperties.name
+    }
+    
+    XCTAssertEqual(name("\u{0000}"), nil)
+    XCTAssertEqual(name("A"), "LATIN CAPITAL LETTER A")
+    XCTAssertEqual(name("\u{3456}"), "CJK UNIFIED IDEOGRAPH-3456")
+  }
+  
   func test_script() {
     func sc(_ scalar:Unicode.Scalar) -> Unicode.Script {
       return scalar.latestProperties.script

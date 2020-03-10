@@ -17,6 +17,7 @@ extension UnicodeSupplementUpdaterTests {
         ("test_idnaMappingTable", test_idnaMappingTable),
         ("test_jg", test_jg),
         ("test_jt", test_jt),
+        ("test_name", test_name),
         ("test_normProp", test_normProp),
         ("test_prop", test_prop),
         ("test_propertyValueAliases", test_propertyValueAliases),
