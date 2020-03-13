@@ -15,9 +15,9 @@ let package = Package(
     .package(url: "https://github.com/YOCKOW/SwiftBonaFideCharacterSet.git", from: "1.6.1"),
     .package(url: "https://github.com/YOCKOW/SwiftRanges.git", from: "3.0.2"),
     .package(url: "https://github.com/YOCKOW/SwiftStringComposition.git", from: "1.1.0-beta.002"),
-    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", from: "0.7.0"),
-    .package(url: "https://github.com/YOCKOW/ySwiftCodeUpdater.git", from: "1.1.0"),
-    .package(url: "https://github.com/YOCKOW/ySwiftExtensions.git", from: "0.8.1"),
+    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", "1.0.0-alpha.001"..<"2.0.0"),
+    .package(url: "https://github.com/YOCKOW/ySwiftCodeUpdater.git", "1.2.0-alpha.001"..<"2.0.0"),
+    .package(url: "https://github.com/YOCKOW/ySwiftExtensions.git", "0.9.0-alpha.001"..<"1.0.0"),
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
