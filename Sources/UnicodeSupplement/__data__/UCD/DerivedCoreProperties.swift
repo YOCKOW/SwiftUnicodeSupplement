@@ -4,8 +4,8 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt
-// Last-Modified: 2019-03-11T16:43:13Z
-// ETag: "77404d-f29f6-583d444bb8a40"
+// Last-Modified: 2020-01-22T16:59:03Z
+// ETag: "964098-f6b1a-59cbd710d43c0"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

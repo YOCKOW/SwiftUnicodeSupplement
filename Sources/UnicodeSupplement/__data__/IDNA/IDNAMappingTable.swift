@@ -4,8 +4,8 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/idna/latest/IdnaMappingTable.txt
-// Last-Modified: 2019-04-01T15:57:03Z
-// ETag: "95a298-cc38c-5857a124b91c0"
+// Last-Modified: 2019-11-07T19:59:22Z
+// ETag: "6eea53-ce522-596c719f99a80"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

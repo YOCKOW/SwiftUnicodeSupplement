@@ -4,8 +4,8 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/EastAsianWidth.txt
-// Last-Modified: 2019-04-01T05:07:43Z
-// ETag: "774024-2ad1a-58571001925c0"
+// Last-Modified: 2020-01-21T18:20:28Z
+// ETag: "9f4004-2bb66-59caa76611300"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

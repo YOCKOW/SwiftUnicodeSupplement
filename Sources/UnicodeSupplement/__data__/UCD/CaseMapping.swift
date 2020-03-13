@@ -4,12 +4,12 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
-// Last-Modified: 2019-04-01T05:08:37Z
-// ETag: "774025-1b6e92-5857103511f40"
+// Last-Modified: 2019-10-03T23:06:13Z
+// ETag: "96401e-1c4177-59409a1c1c340"
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/SpecialCasing.txt
-// Last-Modified: 2019-03-11T16:40:56Z
-// ETag: "774046-41be-583d43c911600"
+// Last-Modified: 2019-09-10T18:35:31Z
+// ETag: "9f4016-41be-592372b4ee2c0"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
@@ -1132,6 +1132,9 @@ internal let _caseMapping_simpleUppercaseMapping: [Unicode.Scalar.Value: String]
   0xa7bd: "\u{A7BC}",
   0xa7bf: "\u{A7BE}",
   0xa7c3: "\u{A7C2}",
+  0xa7c8: "\u{A7C7}",
+  0xa7ca: "\u{A7C9}",
+  0xa7f6: "\u{A7F5}",
   0xab53: "\u{A7B3}",
   0xab70: "\u{13A0}",
   0xab71: "\u{13A1}",
@@ -2605,6 +2608,9 @@ internal let _caseMapping_simpleLowercaseMapping: [Unicode.Scalar.Value: String]
   0xa7c4: "\u{A794}",
   0xa7c5: "\u{0282}",
   0xa7c6: "\u{1D8E}",
+  0xa7c7: "\u{A7C8}",
+  0xa7c9: "\u{A7CA}",
+  0xa7f5: "\u{A7F6}",
   0xff21: "\u{FF41}",
   0xff22: "\u{FF42}",
   0xff23: "\u{FF43}",
@@ -3937,6 +3943,9 @@ internal let _caseMapping_simpleTitlecaseMapping: [Unicode.Scalar.Value: String]
   0xa7bd: "\u{A7BC}",
   0xa7bf: "\u{A7BE}",
   0xa7c3: "\u{A7C2}",
+  0xa7c8: "\u{A7C7}",
+  0xa7ca: "\u{A7C9}",
+  0xa7f6: "\u{A7F5}",
   0xab53: "\u{A7B3}",
   0xab70: "\u{13A0}",
   0xab71: "\u{13A1}",

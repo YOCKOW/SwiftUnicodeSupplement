@@ -4,8 +4,8 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedCombiningClass.txt
-// Last-Modified: 2019-03-11T17:21:32Z
-// ETag: "77405e-2824b-583d4cdc37f00"
+// Last-Modified: 2019-11-13T23:04:40Z
+// ETag: "9f802c-28e8b-5974263b51200"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

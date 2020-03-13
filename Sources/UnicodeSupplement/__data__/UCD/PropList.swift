@@ -4,8 +4,8 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt
-// Last-Modified: 2019-03-11T16:41:19Z
-// ETag: "774022-1e2a2-583d43df009c0"
+// Last-Modified: 2019-11-28T00:16:05Z
+// ETag: "9645cf-1ec6f-5985d04e43b40"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
