@@ -172,7 +172,9 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
   }
   
   private var _dicConversionCount: [String?: Int] = [:]
-  internal func _convert<T>(_ rangeDictionary: RangeDictionary<Unicode.Scalar.Value, T>, key: String? = nil, describer: (T) -> String) -> StringLines where T: Equatable {
+  internal func _convert<T>(_ rangeDictionary: RangeDictionary<Unicode.Scalar.Value, T>,
+                            key: String? = nil, typeName: String? = nil,
+                            describer: (T) -> String) -> StringLines where T: Equatable {
     let nn = _dicConversionCount[key] ?? 0
     defer { _dicConversionCount[key] = nn + 1 }
     
@@ -195,7 +197,7 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     var result = StringLines()
     
     self.requires(module: "Ranges")
-    let assocTypeOriginalName = _typeName(of: T.self)
+    let assocTypeOriginalName = typeName ?? _typeName(of: T.self)
     let idPrefix = self._identifierPrefix(for: nn) + (key != nil ? "_\(key!)" : "")
     let assocTypeName = self.typeAliasName(for: assocTypeOriginalName)
     let pairTypeName = self.typeAliasName(for: "(Unicode.Scalar.Value, \(assocTypeName))")

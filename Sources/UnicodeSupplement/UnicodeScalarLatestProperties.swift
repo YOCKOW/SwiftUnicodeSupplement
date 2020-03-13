@@ -437,7 +437,9 @@ extension Unicode.Scalar.LatestProperties {
 
 extension Unicode.Scalar.LatestProperties {
   public var name: String? {
-    guard let name = _name[self._value] else { return nil }
+    guard let prefix = _name_prefix[self._value] else { return nil }
+    let suffix = _name_suffix[prefix]?[self._value] ?? ""
+    let name = "\(prefix)\(suffix)"
     
     // Values containing a * character are patterns which
     // use the placeholder * in place of the code point in hex.
