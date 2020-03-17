@@ -19,7 +19,7 @@ open class EmojiData: UnicodeCodeUpdaterDelegate {
   
   open override var sourceURLs: Array<URL> {
     return [
-      URL(string: "https://unicode.org/Public/emoji/latest/emoji-data.txt")!
+      URL(string: "https://unicode.org/Public/UCD/latest/ucd/emoji/emoji-data.txt")!
     ]
   }
   
