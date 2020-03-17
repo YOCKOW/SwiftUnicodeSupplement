@@ -95,8 +95,12 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
   }
   
   func test_name() throws {
-    try _assert(delegate: DerivedName(), expectedLines: [
-      "internal let _name_prefix = UnicodeScalarValueDictionary<String>(dictionary: __name_prefix_dictionary, rangeDictionary: __name_prefix_rangeDictionary)",
+    try _assert(delegate: _DerivedNameCSource(), expectedLines: [
+      ##"#include "DerivedName.h""##,
+    ])
+    
+    try _assert(delegate: DerivedNameSwiftSource(), expectedLines: [
+      "internal let _na_prefixSuffixListIndices = UnicodeScalarValueDictionary<(Int32, Int32?)>(dictionary: __na_prefixSuffixListIndices_dictionary, rangeDictionary: __na_prefixSuffixListIndices_rangeDictionary)",
     ])
   }
   

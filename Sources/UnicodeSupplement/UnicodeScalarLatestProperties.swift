@@ -5,6 +5,8 @@
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
 
+import _cUnicodeSupplement
+
 extension Unicode.Scalar {
   public struct LatestProperties {
     private let _value: UInt32
@@ -437,8 +439,22 @@ extension Unicode.Scalar.LatestProperties {
 
 extension Unicode.Scalar.LatestProperties {
   public var name: String? {
-    guard let prefix = _name_prefix[self._value] else { return nil }
-    let suffix = _name_suffix[prefix]?[self._value] ?? ""
+    guard let (prefixIndex, suffixesListIndex) = _na_prefixSuffixListIndices[self._value] else {
+      return nil
+    }
+    
+    let prefix = String(cString: _cUniSupp_prefix_at(prefixIndex), encoding: .utf8)!
+    
+    let suffix: String
+    if let sufListIndex = suffixesListIndex {
+      guard let suffixIndex = _na_suffixesLists[Int(sufListIndex)][self._value] else {
+        fatalError("Unexpected index of suffixes-list.")
+      }
+      suffix = String(cString: _cUniSupp_suffix_at(sufListIndex, suffixIndex), encoding: .utf8)!
+    } else {
+      suffix = ""
+    }
+    
     let name = "\(prefix)\(suffix)"
     
     // Values containing a * character are patterns which
