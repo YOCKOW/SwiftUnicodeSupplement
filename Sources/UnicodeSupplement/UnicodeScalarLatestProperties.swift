@@ -457,9 +457,11 @@ extension Unicode.Scalar.LatestProperties {
     var offset = nameCString
     func _copyName(_ cString: UnsafePointer<CChar>) {
       func _copyHex() {
-        let length = snprintf(ptr: offset, 7, "%X", self._value)
-        precondition(length > 0)
-        offset = offset.advanced(by: Int(length))
+        withVaList([self._value]) {
+          let length = vsnprintf(offset, 7, "%X", $0)
+          precondition(length > 0)
+          offset = offset.advanced(by: Int(length))
+        }
       }
       for ii in 0... {
         let cchar = cString[ii]
