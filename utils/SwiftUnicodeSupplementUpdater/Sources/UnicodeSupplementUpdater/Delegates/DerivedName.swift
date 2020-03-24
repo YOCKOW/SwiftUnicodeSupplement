@@ -99,7 +99,7 @@ private final class _DataStore: __DataStore {
   }
   
   final class PrefixSuffixIndices {
-    private let _gapLimit: UInt32 = 128
+    private let _gapLimit: UInt32 = 8
     
     let prefixIndices: [Substring: Int]
     let suffixLists: [[Unicode.Scalar.Value: Substring]]
