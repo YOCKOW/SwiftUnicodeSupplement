@@ -7,11 +7,16 @@ DerivedName_functions.c
 
 #include "DerivedName.h"
 
-const char * _Nonnull _cUniSupp_prefix_at(int32_t index) {
+const char * _Nonnull _cUniSupp_na_prefix_at(int32_t index) {
   return __cUniSupp_na_prefixes[index];
 }
 
-const char * _Nonnull _cUniSupp_suffix_at(int32_t suffixesListIndex,
-                                          int32_t suffixIndex) {
-  return __cUniSupp_na_suffixesLists[suffixesListIndex][suffixIndex];
+_cUniSupp_na_suffixes_ptr __cUniSupp_na_suffixList_at(int32_t index) {
+  return __cUniSupp_na_suffixLists[index];
+}
+
+const char * _Nullable _cUniSupp_na_suffix_at(int32_t suffixListIndex,
+                                             uint32_t scalarValue) {
+  _cUniSupp_na_suffixes_ptr suffixesInfo = __cUniSupp_na_suffixList_at(suffixListIndex);
+  return suffixesInfo->suffixes[scalarValue - suffixesInfo->startScalarValue];
 }

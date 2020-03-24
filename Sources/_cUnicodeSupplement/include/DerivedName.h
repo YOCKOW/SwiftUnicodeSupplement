@@ -10,11 +10,17 @@ DerivedName.h
 
 #include <stdint.h>
 
-extern const char * _Nonnull const __cUniSupp_na_prefixes[];
-extern const char * _Nonnull const * _Nonnull const __cUniSupp_na_suffixesLists[];
+typedef struct {
+  uint32_t startScalarValue;
+  const char * _Nullable suffixes[];
+} _cUniSupp_na_suffixes;
+typedef _cUniSupp_na_suffixes * _cUniSupp_na_suffixes_ptr;
 
-extern const char * _Nonnull _cUniSupp_prefix_at(int32_t index);
-extern const char * _Nonnull _cUniSupp_suffix_at(int32_t suffixesListIndex,
-                                                 int32_t suffixIndex);
+extern const char * _Nonnull const __cUniSupp_na_prefixes[];
+extern const _cUniSupp_na_suffixes_ptr _Nonnull __cUniSupp_na_suffixLists[];
+
+extern const char * _Nonnull _cUniSupp_na_prefix_at(int32_t index);
+extern const char * _Nullable _cUniSupp_na_suffix_at(int32_t suffixListIndex,
+                                                     uint32_t scalarValue);
 
 #endif

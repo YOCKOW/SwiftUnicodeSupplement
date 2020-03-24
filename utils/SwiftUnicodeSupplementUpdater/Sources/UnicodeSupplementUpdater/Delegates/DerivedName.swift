@@ -11,328 +11,329 @@ import StringComposition
 import yCodeUpdater
 import yExtensions
 
-private struct _PrefixesWrapper {
-  private var __set: Set<Substring> = []
-  private(set) var _prefixes: [Substring] = [] // Always Sorted!
-  
-  var count: Int { return self._prefixes.count }
-  var isEmpty: Bool { return self._prefixes.isEmpty }
-  
-  mutating func insert(_ newPrefix: Substring) {
-    if self.__set.contains(newPrefix) { return }
-    self.__set.insert(newPrefix)
-    
-    func _insertionIndex(of prefix: Substring) -> Int {
-      var startIndex = _prefixes.startIndex
-      var endIndex = _prefixes.endIndex
-
-      while startIndex < endIndex {
-        let midIndex = startIndex + ((endIndex - startIndex) / 2)
-        let midValue = _prefixes[midIndex]
-        precondition(midValue != prefix)
-        if midValue < prefix {
-            startIndex = midIndex + 1
-        } else {
-          endIndex = midIndex
-        }
-      }
-      return startIndex
-    }
-    self._prefixes.insert(newPrefix, at: _insertionIndex(of: newPrefix))
-  }
-  
-  func prefix<S>(for string: S) -> Substring? where S: StringProtocol {
-    return self._prefixes.last(where: { string.hasPrefix($0) })
-  }
-}
-
-private final class _NameData {
-  static var shared: _NameData! = nil
-  
-  let prefixes: [Substring] // Sorted
-  let prefixList: RangeDictionary<Unicode.Scalar.Value, Substring>
-  let suffixList: [Substring: [Unicode.Scalar.Value: Substring]]
-  
-  init(prefixes: _PrefixesWrapper,
-       prefixList: RangeDictionary<Unicode.Scalar.Value, Substring>,
-       suffixList: [Substring: [Unicode.Scalar.Value: Substring]]) {
-    precondition(!prefixes.isEmpty && !prefixList.isEmpty && !suffixList.isEmpty)
-    self.prefixes = prefixes._prefixes
-    self.prefixList = prefixList
-    self.suffixList = suffixList
-  }
-  
-  convenience init(_ tupple: (prefixes: _PrefixesWrapper, prefixList: RangeDictionary<Unicode.Scalar.Value, Substring>, suffixList: [Substring: [Unicode.Scalar.Value: Substring]])) {
-    self.init(prefixes: tupple.prefixes,
-              prefixList: tupple.prefixList,
-              suffixList: tupple.suffixList)
-  }
-  
-  private var _prefixIndices: [Substring: Int] = [:]
-  func prefixIndex(of prefix: Substring) -> Int {
-    if let index = self._prefixIndices[prefix] {
-      return index
-    }
-    guard let index = self.prefixes.firstIndex(of: prefix) else { fatalError("Unexpected Prefix: \(prefix)") }
-    self._prefixIndices[prefix] = index
-    return index
-  }
-  
-  lazy var prefixesHavingSuffixes: [Substring] = suffixList.keys.sorted(by: <)
-  private var _prefixesHavingSuffixesIndices: [Substring: Int?] = [:]
-  func suffixListIndex(of prefix: Substring) -> Int? {
-    if !_prefixesHavingSuffixesIndices.keys.contains(prefix) {
-      _prefixesHavingSuffixesIndices[prefix] = prefixesHavingSuffixes.firstIndex(of: prefix)
-    }
-    return _prefixesHavingSuffixesIndices[prefix]!
-  }
-}
-
 private extension Substring {
   var _description: String {
     return self.debugDescription
   }
-  
-  var _id: String {
-    var result = ""
-    for chr in self {
-      if chr.isASCII && (chr.isLetter || chr.isNumber) {
-        result.append(chr)
-      } else if chr.isWhitespace {
-        result.append("_")
-      } else {
-        result.append("x")
-      }
+}
+
+
+private protocol __DataStore {
+  init<S>(__intermediates: S) where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData>
+}
+extension __DataStore {
+  init<S>(_intermediates: S) where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    if _DataStore.shared != nil {
+      self = _DataStore.shared as! Self
+    } else {
+      self.init(__intermediates: _intermediates)
+      _DataStore.shared = (self as! _DataStore)
     }
-    return result
   }
 }
-
-private extension Int32 {
-  var _description: String {
-    return "0x" + String(self, radix: 0x10)
-  }
-}
-
-open class DerivedName: UCDCodeUpdaterDelegate {
-  open override var prefix: String { return "na" }
+private final class _DataStore: __DataStore {
+  static var shared: _DataStore!
   
-  open override var sourceURLs: Array<URL> {
+  final class NameParts {
+    let prefixes: [Substring]
+    let prefixList: RangeDictionary<Unicode.Scalar.Value, Substring>
+    let suffixList: [Unicode.Scalar.Value: Substring]
+    
+    init(_ payloads: [UnicodeData.Row.Payload]) {
+      func _isSeparator(_ character: Character) -> Bool {
+        return character.isWhitespace || character == "-"
+      }
+      
+      var prefixes: Set<Substring> = []
+      var prefixList: RangeDictionary<Unicode.Scalar.Value, Substring> = [:]
+      var suffixList: [Unicode.Scalar.Value: Substring] = [:]
+
+      for (ii, payload) in payloads.enumerated() {
+        let name = payload.columns[0]
+        let sepIndices = name.indices.lazy.filter({ _isSeparator(name[$0]) }).prefix(5).reversed()
+        
+        func _add(prefix: Substring) {
+          prefixes.insert(prefix)
+          prefixList.insert(prefix, forRange: AnyRange(payload.range))
+          
+          let suffix = name.dropFirst(prefix.count)
+          if suffix.isEmpty { return }
+          suffixList[payload.range.lowerBound] = suffix
+        }
+        
+        func _registeredPrefix() -> Substring? {
+          for sepIndex in sepIndices {
+            let maybePrefix = name[...sepIndex]
+            if prefixes.contains(name[...sepIndex]) { return maybePrefix }
+          }
+          return nil
+        }
+        
+        func _detectPrefix() -> Substring? {
+          guard ii < payloads.endIndex - 1 else { return nil }
+          for sepIndex in sepIndices {
+            let considered = name[...sepIndex]
+            for jj in (ii + 1)..<payloads.endIndex {
+              if payloads[jj].columns[0].hasPrefix(considered) { return considered }
+            }
+          }
+          return nil
+        }
+        
+        
+        if payload.range.lowerBound != payload.range.upperBound {
+          _add(prefix: name[...])
+        } else if let prefix = _registeredPrefix() {
+          _add(prefix: prefix)
+        } else if let prefix = _detectPrefix() {
+          _add(prefix: prefix)
+        } else {
+          _add(prefix: name[...])
+        }
+      }
+      
+      self.prefixes = prefixes.sorted()
+      self.prefixList = prefixList
+      self.suffixList = suffixList
+    }
+  }
+  
+  final class PrefixSuffixIndices {
+    private let _gapLimit: UInt32 = 128
+    
+    let prefixIndices: [Substring: Int]
+    let suffixLists: [[Unicode.Scalar.Value: Substring]]
+    let suffixListIndices: [Unicode.Scalar.Value: Int]
+    
+    init(_ nameParts: NameParts) {
+      var prefixIndices: [Substring: Int] = [:]
+      var suffixLists: [[Unicode.Scalar.Value: Substring]] = []
+      var suffixListIndices: [Unicode.Scalar.Value: Int] = [:]
+      
+      for (ii, prefix) in nameParts.prefixes.enumerated() {
+        prefixIndices[prefix] = ii
+      }
+      
+      let scalarValues = nameParts.suffixList.keys.sorted(by: <)
+      let firstScalarValue = scalarValues.first!
+      suffixLists.append([firstScalarValue: nameParts.suffixList[firstScalarValue]!])
+      suffixListIndices[firstScalarValue] = 0
+      
+      var lastScalarValue = firstScalarValue
+      for scalarValue in scalarValues.dropFirst() {
+        defer { lastScalarValue = scalarValue }
+        
+        let suffix = nameParts.suffixList[scalarValue]!
+        if lastScalarValue + _gapLimit < scalarValue {
+          suffixLists.append([scalarValue: suffix])
+        } else {
+          suffixLists[suffixLists.endIndex - 1][scalarValue] = suffix
+        }
+        suffixListIndices[scalarValue] = suffixLists.count - 1
+      }
+      
+      self.prefixIndices = prefixIndices
+      self.suffixLists = suffixLists
+      self.suffixListIndices = suffixListIndices
+    }
+  }
+  
+  
+  let payloads: [UnicodeData.Row.Payload]
+  let nameParts: NameParts
+  let prefixSuffixIndices: PrefixSuffixIndices
+  
+  var prefixes: [Substring] { return nameParts.prefixes }
+  var prefixList: RangeDictionary<Unicode.Scalar.Value, Substring> { return nameParts.prefixList }
+  var suffixList: [Unicode.Scalar.Value: Substring] { return nameParts.suffixList }
+  var prefixIndices: [Substring: Int] { return prefixSuffixIndices.prefixIndices }
+  var suffixLists: [[Unicode.Scalar.Value: Substring]] { return prefixSuffixIndices.suffixLists }
+  var suffixListIndices: [Unicode.Scalar.Value: Int] { return prefixSuffixIndices.suffixListIndices }
+  
+  func prefixIndex(of unicodeScalarValue: Unicode.Scalar.Value) -> Int {
+    guard let prefix = self.prefixList[unicodeScalarValue] else { fatalError("Prefix not found.") }
+    guard let prefixIndex = self.prefixIndices[prefix] else { fatalError("Prefix Index not found.") }
+    return prefixIndex
+  }
+  
+  /// Actual initializer.
+  /// Don't call this initializer directly
+  init<S>(__intermediates: S) where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    view(message: "Extract Significant Lines from the data file.")
+    self.payloads = __intermediates.flatMap({ $0.content.rows.compactMap({ $0.payload }) })
+    view(message: "  - Number of significant lines: \(self.payloads.count)")
+    
+    view(message: "Determine prefixes and suffixes of Unicode names.")
+    self.nameParts = NameParts(self.payloads)
+    view(message: "  - Number of prefixes: \(self.nameParts.prefixes.count)")
+    view(message: "  - Number of suffixes: \(self.nameParts.suffixList.count)")
+    
+    view(message: "Organize prefixes and suffixes.")
+    self.prefixSuffixIndices = PrefixSuffixIndices(self.nameParts)
+    view(message: "  - Number of suffixes' lists: \(prefixSuffixIndices.suffixLists.count)")
+  }
+  
+  convenience init<S>(_ intermediates: S) where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+    self.init(_intermediates: intermediates)
+  }
+}
+
+private protocol _DerivedName {}
+extension _DerivedName {
+  init(_initialDelegate: DerivedName) {
+    self = _initialDelegate as! Self
+  }
+}
+public class DerivedName: UCDCodeUpdaterDelegate, _DerivedName {
+  public override var identifier: String { return "DerivedName" }
+  
+  public override var prefix: String { return "na" }
+
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedName.txt")!
     ]
   }
   
-  open override func prepare(sourceURL: URL) throws -> IntermediateDataContainer<UnicodeData> {
-    if _NameData.shared != nil {
+  private init(_dummy: Bool) {
+    super.init()
+  }
+  
+  public override convenience init() {
+    self.init(_initialDelegate: _SwiftSource())
+  }
+  
+  public override func prepare(sourceURL: URL) throws -> IntermediateDataContainer<UnicodeData> {
+    if _DataStore.shared != nil {
       return .init(content: .init("")) // dummy
     } else {
       return try super.prepare(sourceURL: sourceURL)
     }
   }
   
-  private func __convert<S>(_ intermediates: S) -> (
-    prefixes: _PrefixesWrapper,
-    prefixList: RangeDictionary<Unicode.Scalar.Value, Substring>,
-    suffixList: [Substring: [Unicode.Scalar.Value: Substring]]
-    ) where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    var prefixes = _PrefixesWrapper()
-    // The prefix may be whole string for the name.
-    var prefixList = RangeDictionary<Unicode.Scalar.Value, Substring>()
-    var suffixList: [Substring: [Unicode.Scalar.Value: Substring]] = [:]
+  //- MARK: Classes for Class Cluster
+  
+  internal class __Cluster: DerivedName {
+    init() {
+      super.init(_dummy: true)
+    }
     
-    let payloads: [UnicodeData.Row.Payload] = intermediates.flatMap({ $0.content.rows.compactMap({ $0.payload }) })
+    fileprivate func _convert(_ dataStore: _DataStore) -> StringLines {
+      fatalError("Must be overridden.")
+    }
     
-    for (ii, payload) in payloads.enumerated() {
-      let name = payload.columns[0]
+    override func convert<S>(_ intermediates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+      return self._convert(_DataStore(intermediates))
+    }
+  }
+  
+  // testable
+  internal final class _CSource: __Cluster {
+    override var destinationURL: URL {
+      return _cModuleDirectory.appendingPathComponent(self.identifier).appendingPathExtension("c")
+    }
+    
+    var cSuffixListTypeName: String { return "_\(_cIdentifierPrefix)_\(self.prefix)_suffixes" }
+    var cSuffixListPointerTypeName: String { return "\(self.cSuffixListTypeName)_ptr" }
+    
+    fileprivate override func _convert(_ dataStore: _DataStore) -> StringLines {
+      var result = StringLines()
       
-      func _register(prefix: Substring) {
-        prefixes.insert(prefix)
-        prefixList.insert(prefix, forRange: AnyRange(payload.range))
-        
-        let suffix = name.dropFirst(prefix.count)
-        if suffix.isEmpty { return }
-        if suffixList.keys.contains(prefix) {
-          suffixList[prefix]![payload.range.lowerBound] = suffix
-        } else {
-          suffixList[prefix] = [payload.range.lowerBound: suffix]
+      result.append(contentsOf: StringLines("""
+      #include "DerivedName.h"
+      #include "stddef.h"
+      """))
+      result.appendEmptyLine()
+      
+      do { // prefixes
+        let prefixesID = "__\(_cIdentifierPrefix)_\(self.prefix)_prefixes"
+        result.append("const char * _Nonnull const \(prefixesID)[\(dataStore.prefixes.count)] = {")
+        for prefix in dataStore.prefixes {
+          result.append(String.Line("\(prefix._description),", indentLevel: 1)!)
         }
+        result.append("};")
+        result.appendEmptyLine()
       }
       
-      func _detectPrefix() -> Substring? {
-        guard ii < payloads.endIndex - 1 else { return nil }
+      do { // suffixes
+        func _suffixListID(_ index: Int) -> String {
+          return "__\(_cIdentifierPrefix)_\(self.prefix)_suffixes_\(index._base36)"
+        }
         
-        func __hit(_ prefix: Substring) -> Bool {
-          if prefix.isEmpty { return false }
-          for jj in (ii + 1)..<payloads.endIndex {
-            if payloads[jj].columns[0].hasPrefix(prefix) { return true }
+        for (ii, suffixList) in dataStore.suffixLists.enumerated() {
+          let startScalarValue = suffixList.keys.min()!
+          let endScalarValue = suffixList.keys.max()!
+          
+          result.append("\(cSuffixListTypeName) \(_suffixListID(ii)) = {")
+          result.append(String.Line("\(startScalarValue._description),", indentLevel: 1)!)
+          result.append(String.Line("{", indentLevel: 1)!)
+          for scalarValue in startScalarValue...endScalarValue {
+            if let suffix = suffixList[scalarValue] {
+              result.append(String.Line("\(suffix._description), // \(scalarValue._unicodeDescription)", indentLevel: 2)!)
+            } else {
+              result.append(String.Line("NULL,", indentLevel: 2)!)
+            }
           }
-          return false
+          result.append(String.Line("}", indentLevel: 1)!)
+          result.append("};")
         }
+        result.appendEmptyLine()
         
-        var considered: Substring = name[...]
-        while true {
-          guard let sepIndex = considered.lastIndex(where: { $0.isWhitespace || $0 == "-" }) else { break }
-          considered = considered[...sepIndex]
-          if __hit(considered) { return considered }
-          considered = considered[..<sepIndex]
+        let suffixListsID = "__\(_cIdentifierPrefix)_\(self.prefix)_suffixLists"
+        result.append("const \(cSuffixListPointerTypeName) _Nonnull \(suffixListsID)[\(dataStore.suffixLists.count)] = {")
+        for ii in 0..<dataStore.suffixLists.count {
+          result.append(String.Line("&\(_suffixListID(ii)),", indentLevel: 1)!)
         }
-        return nil
+        result.append("};")
       }
       
-      if payload.range.lowerBound != payload.range.upperBound {
-        _register(prefix: name[...])
-      } else if let registered = prefixes.prefix(for: name) {
-        _register(prefix: registered)
-      } else if let detected = _detectPrefix() {
-        _register(prefix: detected)
-      } else {
-        _register(prefix: name[...])
+      return result
+    }
+  }
+  
+  // testable
+  internal final class _SwiftSource: __Cluster {
+    override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+      let intermediates = Array(intermediates)
+      
+      if intermediates.first?.sourceURL != nil {
+        // Not under XCTest
+        let delegates = [
+          _CSource(),
+        ]
+        let manager = CodeUpdaterManager(arguments: delegates.flatMap({ ["--force", $0.identifier] }))
+        manager.updaters = delegates.map { CodeUpdater(delegate: $0) }
+        manager.run()
       }
+      
+      return try super.convert(intermediates)
     }
     
-    return (prefixes: prefixes, prefixList: prefixList, suffixList: suffixList)
-  }
-  
-  fileprivate func _convert<S>(_ intermediates: S) -> _NameData where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    if _NameData.shared == nil {
-      _NameData.shared = _NameData(self.__convert(intermediates))
-    }
-    return _NameData.shared
-  }
-  
-  fileprivate var nameData: _NameData {
-    return _NameData.shared
-  }
-  
-  open var cPrefixesIdentifier: String {
-    return "__\(_cIdentifierPrefix)_\(self.prefix)_prefixes"
-  }
-  
-  open func cSuffixesIdentifier(for index: Int) -> String {
-    return "__\(_cIdentifierPrefix)_\(self.prefix)_suffixes_\(index._base36)"
-  }
-}
-
-// testable
-internal class _DerivedNameCSource: DerivedName {
-  override var identifier: String {
-    return "_DerivedNameCSource"
-  }
-  
-  override var destinationURL: URL {
-    return _cModuleDirectory.appendingPathComponent("DerivedName.c")
-  }
-  
-  override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    let nameData: _NameData = self._convert(intermediates)
-    
-    var result = StringLines()
-    
-    // Includes
-    result.append(##"#include "DerivedName.h""##)
-    result.appendEmptyLine()
-    
-    // Prefixes
-    let prefixes = nameData.prefixes
-    result.append("const char * _Nonnull const \(self.cPrefixesIdentifier)[] = {")
-    for prefix in prefixes {
-      result.append(String.Line("\(prefix._description),", indentLevel: 1)!)
-    }
-    result.append("};")
-    result.appendEmptyLine()
-    
-    // Suffixes
-    let numberOfSuffixLists = nameData.suffixList.count
-    for ii in 0..<numberOfSuffixLists {
-      let prefix = nameData.prefixesHavingSuffixes[ii]
-      let suffixDic = nameData.suffixList[prefix]!
-      result.append("// Prefix: \(prefix)")
-      result.append("const char * _Nonnull const \(self.cSuffixesIdentifier(for: ii))[\(suffixDic.count)] = {")
-      for (scalarValue, suffix) in suffixDic.sorted(by: { $0.key < $1.key }) {
-        result.append(String.Line("\(suffix._description), // \(scalarValue._unicodeDescription)", indentLevel: 1)!)
+    fileprivate override func _convert(_ dataStore: _DataStore) -> StringLines {
+      struct __Indices: Equatable {
+        let prefixIndex: Int
+        let suffixListIndex: Int?
+        init(_ prefixIndex: Int, _ suffixListIndex: Int?) {
+          self.prefixIndex = prefixIndex
+          self.suffixListIndex = suffixListIndex
+        }
       }
-      result.append("};")
-      result.appendEmptyLine()
-    }
-    
-    // Suffix Lists
-    result.append("const char * _Nonnull const * _Nonnull const __\(_cIdentifierPrefix)_\(self.prefix)_suffixesLists[] = {")
-    for ii in 0..<numberOfSuffixLists {
-      result.append(String.Line("\(self.cSuffixesIdentifier(for: ii)),", indentLevel: 1)!)
-    }
-    result.append("};")
-    
-    return result
-  }
-}
-
-open class DerivedNameSwiftSource: DerivedName {
-  open override var identifier: String {
-    return "DerivedName"
-  }
-  
-  open func swiftSuffixesIdentifier(for index: Int) -> String {
-    return "__\(self.prefix)_suffixes_\(index._base36)"
-  }
-  
-  private func _convert(_ nameData: _NameData) -> StringLines {
-    let suffixIndexTableOriginalTypeName = "[Unicode.Scalar.Value: Int32]"
-    let suffixIndexTableTypeName = self.typeAliasName(for: suffixIndexTableOriginalTypeName)
-    
-    var result = StringLines()
-    
-    // First, Suffix Index Tables
-    for ii in 0..<nameData.suffixList.count {
-      let prefix = nameData.prefixesHavingSuffixes[ii]
-      let suffixDic = nameData.suffixList[prefix]!
-      result.append("// Prefix: \(prefix)")
-      result.append("private let \(self.swiftSuffixesIdentifier(for: ii)): \(suffixIndexTableTypeName) = [")
-      for (ii, scalarValue) in suffixDic.keys.sorted(by: <).enumerated() {
-        result.append(String.Line("\(scalarValue._description): \(ii),", indentLevel: 1)!)
+      
+      var indices: RangeDictionary<Unicode.Scalar.Value, __Indices> = [:]
+      
+      for payload in dataStore.payloads {
+        let scalarValue = payload.range.lowerBound
+        let prefixIndex = dataStore.prefixIndex(of: scalarValue)
+        let suffixListIndex = dataStore.suffixListIndices[scalarValue]
+        indices.insert(.init(prefixIndex, suffixListIndex), forRange: .init(payload.range))
       }
-      result.append("]")
-      result.appendEmptyLine()
-    }
-    
-    // Suffix Tables' Array
-    result.append("internal let _\(self.prefix)_suffixesLists: [\(suffixIndexTableOriginalTypeName)] = [")
-    for ii in 0..<nameData.suffixList.count {
-      result.append(String.Line("\(self.swiftSuffixesIdentifier(for: ii)),", indentLevel: 1)!)
-    }
-    result.append("]")
-    result.appendEmptyLine()
-    
-    // Prefix and Suffix List Table
-    self._expandingLimit = 0
-    result.append(contentsOf: self._convert(
-      nameData.prefixList,
-      key: "prefixSuffixListIndices",
-      typeName: "(Int32, Int32?)",
-      describer: { prefix in
-        let prefixIndexString = String(nameData.prefixIndex(of: prefix))
-        let suffixListIndexString = nameData.suffixListIndex(of: prefix).map(String.init) ?? "nil"
+      
+      self._expandingLimit = 0
+      return self._convert(indices, key: "prefixSuffixListIndices", typeName: "(Int32, Int32?)") { (indices) -> String in
+        let prefixIndexString = String(indices.prefixIndex)
+        let suffixListIndexString = indices.suffixListIndex.map({ String($0) }) ?? "nil"
         return "(\(prefixIndexString), \(suffixListIndexString))"
       }
-    ))
-    
-    return result
-  }
-
-  open override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    let intermediates = Array(intermediates)
-
-    precondition(intermediates.count > 0)
-    if intermediates.first!.sourceURL != nil { // Update C Source if it doesn't run under XCTest
-      let cSourceUpdater = CodeUpdater(delegate: _DerivedNameCSource())
-      let cUpdaterManager = CodeUpdaterManager(arguments: [
-        "--force", cSourceUpdater.identifier,
-      ])
-      cUpdaterManager.updaters = [cSourceUpdater]
-      cUpdaterManager.run()
     }
-
-    let nameData: _NameData = self._convert(intermediates)
-    return self._convert(nameData)
   }
 }
