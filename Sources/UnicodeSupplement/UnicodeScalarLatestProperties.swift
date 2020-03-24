@@ -5,6 +5,12 @@
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
 
+#if canImport(Darwin)
+import Darwin
+#elseif canImport(Glibc)
+import Glibc
+#endif
+
 import _cUnicodeSupplement
 
 extension Unicode.Scalar {
@@ -443,17 +449,40 @@ extension Unicode.Scalar.LatestProperties {
       return nil
     }
     
-    let prefix = String(cString: _cUniSupp_na_prefix_at(prefixIndex), encoding: .utf8)!
-    let suffix = suffixListIndex.flatMap({ _cUniSupp_na_suffix_at($0, self._value) }).map({ String(cString: $0, encoding: .utf8)! }) ?? ""
-    let name = "\(prefix)\(suffix)"
+    let nameLength = 256
+    let nameCString = UnsafeMutablePointer<CChar>.allocate(capacity: nameLength)
+    nameCString.initialize(repeating: 0, count: nameLength)
+    defer { nameCString.deallocate() }
     
-    // Values containing a * character are patterns which
-    // use the placeholder * in place of the code point in hex.
-    let splittedByPlaceholder = name.split(separator: "*", omittingEmptySubsequences: false)
-    if splittedByPlaceholder.count < 2 {
-      return name
+    var offset = nameCString
+    func _copyName(_ cString: UnsafePointer<CChar>) {
+      func _copyHex() {
+        let length = snprintf(ptr: offset, 7, "%X", self._value)
+        precondition(length > 0)
+        offset = offset.advanced(by: Int(length))
+      }
+      for ii in 0... {
+        let cchar = cString[ii]
+        switch cchar {
+        case 0:
+          return
+        case 0x2A: // '*'
+          // Values containing a * character are patterns which
+          // use the placeholder * in place of the code point in hex.
+          _copyHex()
+        default:
+          offset.pointee = cchar
+          offset = offset.successor()
+        }
+      }
     }
-    return splittedByPlaceholder.joined(separator: String(self._value, radix: 0x10, uppercase: true))
+    
+    _copyName(_cUniSupp_na_prefix_at(prefixIndex))
+    if let suffixListIndex = suffixListIndex {
+      _copyName(_cUniSupp_na_suffix_at(suffixListIndex, self._value)!)
+    }
+    
+    return String(cString: nameCString, encoding: .utf8)
   }
   
   public var nameAlias: String? {
