@@ -24,7 +24,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
