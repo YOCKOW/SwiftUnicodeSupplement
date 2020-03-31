@@ -69,25 +69,34 @@ extension AnyRange where Bound == Unicode.Scalar.Value {
     }
   }
   
+  internal var _actualLowerValue: Unicode.Scalar.Value {
+    switch self.bounds!.lower {
+    case .unbounded:
+      return 0
+    case .excluded(let value):
+      return value + 1
+    case .included(let value):
+      return value
+    }
+  }
+  
+  internal var _actualUpperValue: Unicode.Scalar.Value {
+    switch self.bounds!.upper {
+    case .unbounded:
+      return 0x10FFFF
+    case .excluded(let value):
+      return value - 1
+    case .included(let value):
+      return value
+    }
+  }
+  
+  internal var _numberOfValues: UInt32 {
+    return self._actualUpperValue - self._actualLowerValue + 1
+  }
+  
   internal var _values: ClosedRange<Unicode.Scalar.Value>.Iterator {
-    let lower: Unicode.Scalar.Value
-    let upper: Unicode.Scalar.Value
-    
-    let bounds = self.bounds!
-    
-    switch bounds.lower {
-    case .excluded(let value): lower = value + 1
-    case .included(let value): lower = value
-    default: fatalError("Unexpected Lower Bound.")
-    }
-    
-    switch bounds.upper {
-    case .excluded(let value): upper = value - 1
-    case .included(let value): upper = value
-    default: fatalError("Unexpected Upper Bound.")
-    }
-    
-    return (lower...upper).makeIterator()
+    return (self._actualLowerValue...self._actualUpperValue).makeIterator()
   }
 }
 

@@ -109,7 +109,7 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     }
   }
   
-  internal var _expandingLimit: UInt32 = 8
+  internal var _expandingLimit: UInt32 = 4
   
   private var _setConversionCount: [String: Int] = [:]
   internal func _convert(_ ranges: MultipleRanges<Unicode.Scalar.Value>, key: String) -> StringLines {
@@ -120,12 +120,9 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     var anyRanges: [AnyRange<Unicode.Scalar.Value>] = []
     
     for range in ranges {
-      let bounds = range.bounds!
-      if bounds.lower == bounds.upper {
-        singleValues.append(bounds.lower.value!)
-      } else if bounds.upper.value! - bounds.lower.value! < _expandingLimit {
-        for sv in range._values {
-          singleValues.append(sv)
+      if range._numberOfValues <= _expandingLimit {
+        for scalarValue in range._values {
+          singleValues.append(scalarValue)
         }
       } else {
         anyRanges.append(range)
@@ -182,12 +179,9 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     var extractedRangeDictionary: RangeDictionary<Unicode.Scalar.Value, T> = [:]
     
     for (range, value) in rangeDictionary {
-      let bounds = range.bounds!
-      if bounds.lower == bounds.upper {
-        dictionary[bounds.lower.value!] = value
-      } else if bounds.upper.value! - bounds.lower.value! < _expandingLimit {
-        for sv in range._values {
-          dictionary[sv] = value
+      if range._numberOfValues <= _expandingLimit {
+        for scalarValue in range._values {
+          dictionary[scalarValue] = value
         }
       } else {
         extractedRangeDictionary.insert(value, forRange: range)
