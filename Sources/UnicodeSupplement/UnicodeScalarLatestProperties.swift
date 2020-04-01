@@ -487,8 +487,13 @@ extension Unicode.Scalar.LatestProperties {
     return String(cString: nameCString, encoding: .utf8)
   }
   
+  /// The normative formal alias of the scalar.
+  ///
+  /// Although the formal name aliases are divided into five types,
+  /// this property returns the alias where the type is "correction".
+  /// This behaviour is the same as [Unicode.Scalar.Properties](https://developer.apple.com/documentation/swift/unicode/scalar/properties).
   public var nameAlias: String? {
-    _unimplemented()
+    return _nameAliases[self._value]
   }
 }
 

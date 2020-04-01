@@ -23,6 +23,7 @@ manager.updaters = [
   .init(delegate: EastAsianWidth()),
   .init(delegate: EmojiData()),
   .init(delegate: IDNAMappingTable()),
+  .init(delegate: NameAliases()),
   .init(delegate: PropertyValueAliases()),
   .init(delegate: PropList()),
   .init(delegate: Scripts()),

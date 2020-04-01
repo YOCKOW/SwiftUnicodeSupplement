@@ -105,6 +105,12 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
     ])
   }
   
+  func test_nameAliases() throws {
+    try _assert(delegate: NameAliases(), expectedLines: [
+      "internal let _nameAliases = UnicodeScalarValueDictionary<String>(dictionary: __nameAliases_dictionary, rangeDictionary: __nameAliases_rangeDictionary)"
+    ])
+  }
+  
   func test_normProp() throws {
     try _assert(delegate: DerivedNormalizationProps(), expectedLines: [
       "internal let _normProp_Changes_When_NFKC_Casefolded = UnicodeScalarValueSet(singleValues: __normProp_Changes_When_NFKC_Casefolded_set, ranges: __normProp_Changes_When_NFKC_Casefolded_ranges)",

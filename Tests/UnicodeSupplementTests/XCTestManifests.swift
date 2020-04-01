@@ -25,6 +25,7 @@ extension UnicodeSupplementTests {
         ("test_JoiningGroup", test_JoiningGroup),
         ("test_JoiningType", test_JoiningType),
         ("test_Name", test_Name),
+        ("test_nameAlias", test_nameAlias),
         ("test_properties", test_properties),
         ("test_script", test_script),
     ]

@@ -134,6 +134,18 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(name("\u{3456}"), "CJK UNIFIED IDEOGRAPH-3456")
   }
   
+  func test_nameAlias() {
+    func alias(_ scalar: Unicode.Scalar) -> String? {
+      return scalar.latestProperties.nameAlias
+    }
+    
+    XCTAssertEqual(alias("\u{0000}"), nil)
+    XCTAssertEqual(alias("\u{0080}"), nil)
+    XCTAssertEqual(alias("\u{180B}"), nil)
+    XCTAssertEqual(alias("\u{FE18}"), "PRESENTATION FORM FOR VERTICAL RIGHT WHITE LENTICULAR BRACKET")
+    XCTAssertEqual(alias("\u{FEFF}"), nil)
+  }
+  
   func test_script() {
     func sc(_ scalar:Unicode.Scalar) -> Unicode.Script {
       return scalar.latestProperties.script
