@@ -146,6 +146,11 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
       // Joining Group
       "public static let hamzaOnHehGoal: JoiningGroup = .tehMarbutaGoal",
       
+      // Numeric Type
+      "case \"Digit\": self = .digit",
+      "case \"Nu\": self = .numeric",
+      "case \"None\": return nil",
+      
       // Script
       "case \"Qaai\": self = .inherited // alias",
       "case \"Zinh\": self = .inherited",

@@ -774,7 +774,29 @@ extension Unicode.JoiningType {
 
 /* ********************************************************************************************** */
 // Property: nt
-// * No converted code for nt.
+extension Unicode.NumericType {
+  /// Initialize with a long name.
+  public init?<S>(_ name: S) where S: StringProtocol {
+    switch name {
+    case "Decimal": self = .decimal
+    case "Digit": self = .digit
+    case "None": return nil
+    case "Numeric": self = .numeric
+    default: return nil
+    }
+  }
+
+  /// Initialize with a short name.
+  public init?<S>(abbreviated name: S) where S: StringProtocol {
+    switch name {
+    case "De": self = .decimal
+    case "Di": self = .digit
+    case "None": return nil
+    case "Nu": self = .numeric
+    default: return nil
+    }
+  }
+}
 
 /* ********************************************************************************************** */
 // Property: OAlpha
