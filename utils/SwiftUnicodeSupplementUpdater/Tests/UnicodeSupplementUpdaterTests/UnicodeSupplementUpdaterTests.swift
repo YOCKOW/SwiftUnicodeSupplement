@@ -22,7 +22,7 @@ private extension String.Composition {
 
 final class UnicodeSupplementUpdaterTests: XCTestCase {
   private func _converted(with delegate: UnicodeCodeUpdaterDelegate) throws -> StringLines {
-    if delegate is PropertyValueAliases {
+    if delegate is CaseMapping || delegate is PropertyValueAliases {
       return .init(String(data: CodeUpdater(delegate: delegate).convertedData(), encoding: .utf8)!)
     } else {
       return try delegate.convert(try delegate.sourceURLs.map({ try delegate.prepare(sourceURL: $0) }))
@@ -36,6 +36,19 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
       XCTAssertTrue(lines._contains(expected),
                     "Expected line was not found: \(expected)", file: file, line: line)
     }
+  }
+  
+  func test_caseMapping() throws {
+    try _assert(delegate: CaseMapping(), expectedLines: [
+      "internal let _caseMapping_simpleUppercaseMapping: [Unicode.Scalar.Value: String] = [",
+      "internal let _caseMapping_specialCasing: [Unicode.Scalar.Value: (lower: String, title: String, upper: String)] = [",
+    ])
+  }
+  
+  func test_age() throws {
+    try _assert(delegate: DerivedAge(), expectedLines: [
+      "internal let _age = UnicodeScalarValueDictionary<Unicode.Version>(dictionary: __age_dictionary, rangeDictionary: __age_rangeDictionary)"
+    ])
   }
   
   func test_bidiClass() throws {
@@ -87,9 +100,38 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
     ])
   }
   
+  func test_name() throws {
+    try _assert(delegate: DerivedName._CSource(), expectedLines: [
+      ##"#include "DerivedName.h""##,
+      "_cUniSupp_na_suffixes __cUniSupp_na_suffixes_0 = {",
+    ])
+    
+    try _assert(delegate: DerivedName._SwiftSource(), expectedLines: [
+      "internal let _na_prefixSuffixListIndices = UnicodeScalarValueDictionary<(Int32, Int32?)>(dictionary: __na_prefixSuffixListIndices_dictionary, rangeDictionary: __na_prefixSuffixListIndices_rangeDictionary)",
+    ])
+  }
+  
+  func test_nameAliases() throws {
+    try _assert(delegate: NameAliases(), expectedLines: [
+      "internal let _nameAliases = UnicodeScalarValueDictionary<String>(dictionary: __nameAliases_dictionary, rangeDictionary: __nameAliases_rangeDictionary)"
+    ])
+  }
+  
   func test_normProp() throws {
     try _assert(delegate: DerivedNormalizationProps(), expectedLines: [
       "internal let _normProp_Changes_When_NFKC_Casefolded = UnicodeScalarValueSet(singleValues: __normProp_Changes_When_NFKC_Casefolded_set, ranges: __normProp_Changes_When_NFKC_Casefolded_ranges)",
+    ])
+  }
+  
+  func test_numericType() throws {
+    try _assert(delegate: DerivedNumericType(), expectedLines: [
+      "internal let _nt = UnicodeScalarValueDictionary<Unicode.NumericType>(dictionary: __nt_dictionary, rangeDictionary: __nt_rangeDictionary)",
+    ])
+  }
+  
+  func test_numericValues() throws {
+    try _assert(delegate: DerivedNumericValues(), expectedLines: [
+      "internal let _nv = UnicodeScalarValueDictionary<Double>(dictionary: __nv_dictionary, rangeDictionary: __nv_rangeDictionary)",
     ])
   }
   
@@ -115,6 +157,11 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
       
       // Joining Group
       "public static let hamzaOnHehGoal: JoiningGroup = .tehMarbutaGoal",
+      
+      // Numeric Type
+      "case \"Digit\": self = .digit",
+      "case \"Nu\": self = .numeric",
+      "case \"None\": return nil",
       
       // Script
       "case \"Qaai\": self = .inherited // alias",

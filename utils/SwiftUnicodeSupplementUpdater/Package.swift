@@ -12,12 +12,12 @@ let package = Package(
   ],
   dependencies: [
     // Dependencies declare other packages that this package depends on.
-    .package(url: "https://github.com/YOCKOW/SwiftBonaFideCharacterSet.git", from: "1.6.1"),
-    .package(url: "https://github.com/YOCKOW/SwiftRanges.git", from: "3.0.2"),
-    .package(url: "https://github.com/YOCKOW/SwiftStringComposition.git", from: "1.1.0-beta.002"),
-    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", from: "0.7.0"),
-    .package(url: "https://github.com/YOCKOW/ySwiftCodeUpdater.git", from: "1.1.0"),
-    .package(url: "https://github.com/YOCKOW/ySwiftExtensions.git", from: "0.8.1"),
+    .package(url: "https://github.com/YOCKOW/SwiftBonaFideCharacterSet.git", from: "1.6.2"),
+    .package(url: "https://github.com/YOCKOW/SwiftRanges.git", from: "3.1.0"),
+    .package(url: "https://github.com/YOCKOW/SwiftStringComposition.git", from: "1.1.0"),
+    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", "0.7.1"..<"2.0.0"),
+    .package(url: "https://github.com/YOCKOW/ySwiftCodeUpdater.git", "1.2.0"..<"2.0.0"),
+    .package(url: "https://github.com/YOCKOW/ySwiftExtensions.git", "0.9.0"..<"2.0.0"),
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -42,3 +42,12 @@ let package = Package(
 )
 
 
+import Foundation
+if ProcessInfo.processInfo.environment["YOCKOW_USE_LOCAL_PACKAGES"] != nil {
+  func localPath(with url: String) -> String {
+    guard let url = URL(string: url) else { fatalError("Unexpected URL.") }
+    let dirName = url.deletingPathExtension().lastPathComponent
+    return "../../../\(dirName)"
+  }
+  package.dependencies = package.dependencies.map { .package(path: localPath(with: $0.url)) }
+}

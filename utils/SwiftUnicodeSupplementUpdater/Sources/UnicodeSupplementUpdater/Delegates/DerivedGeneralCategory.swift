@@ -8,20 +8,20 @@
 import Foundation
 import UnicodeSupplement
 
-open class DerivedGeneralCategory: UCDPropertiesCodeUpdaterDelegate<Unicode.GeneralCategory> {
-  open override var prefix: String { return "gc" }
+public class DerivedGeneralCategory: UCDPropertiesCodeUpdaterDelegate<Unicode.GeneralCategory> {
+  public override var prefix: String { return "gc" }
   
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedGeneralCategory.txt")!
     ]
   }
   
-  open override func reduce(columns: [String]) throws -> Unicode.GeneralCategory {
+  public override func reduce(columns: [String]) throws -> Unicode.GeneralCategory {
      return Unicode.GeneralCategory(abbreviated: columns.first!)!
    }
    
-   open override func describe(value: Unicode.GeneralCategory) -> String {
+   public override func describe(value: Unicode.GeneralCategory) -> String {
      return ".\(String(describing: value))"
    }
 }

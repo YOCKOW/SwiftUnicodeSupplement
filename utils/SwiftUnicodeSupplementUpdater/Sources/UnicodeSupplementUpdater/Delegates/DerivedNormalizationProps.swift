@@ -10,10 +10,10 @@ import Ranges
 import StringComposition
 import yCodeUpdater
 
-open class DerivedNormalizationProps: UCDCodeUpdaterDelegate {
-  open override var prefix: String { "normProp" }
+public class DerivedNormalizationProps: UCDCodeUpdaterDelegate {
+  public override var prefix: String { "normProp" }
   
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/DerivedNormalizationProps.txt")!,
     ]
@@ -24,7 +24,7 @@ open class DerivedNormalizationProps: UCDCodeUpdaterDelegate {
     return self._convert(MultipleRanges<Unicode.Scalar.Value>(ranges), key: key)
   }
   
-  open override func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public override func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     var dictionaries: [String: RangeDictionary<Unicode.Scalar.Value, ArraySlice<String>>] = [:]
     for interm in intermidiates {
       for row in interm.content.rows {

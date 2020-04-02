@@ -11,24 +11,24 @@ import StringComposition
 import UnicodeSupplement
 import yCodeUpdater
 
-open class EastAsianWidth: UCDPropertiesCodeUpdaterDelegate<Unicode.EastAsianWidth> {
-  open override var prefix: String { return "ea" }
+public class EastAsianWidth: UCDPropertiesCodeUpdaterDelegate<Unicode.EastAsianWidth> {
+  public override var prefix: String { return "ea" }
 
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/EastAsianWidth.txt")!
     ]
   }
 
-  open override func reduce(columns: [String]) throws -> Unicode.EastAsianWidth {
+  public override func reduce(columns: [String]) throws -> Unicode.EastAsianWidth {
     return Unicode.EastAsianWidth(abbreviated: columns.first!)!
   }
 
-  open override func describe(value: Unicode.EastAsianWidth) -> String {
+  public override func describe(value: Unicode.EastAsianWidth) -> String {
     return ".\(String(describing: value))"
   }
   
-  open override func convert<S>(_ intermediates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public override func convert<S>(_ intermediates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     var rangeDictionary = RangeDictionary<Unicode.Scalar.Value, Unicode.EastAsianWidth>([
       (0x0000....0x10FFFF, .neutral),
     ])

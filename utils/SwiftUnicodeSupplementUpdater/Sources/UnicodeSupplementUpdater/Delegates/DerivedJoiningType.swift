@@ -8,24 +8,24 @@
 import Foundation
 import UnicodeSupplement
 
-open class DerivedJoiningType: UCDDefaultablePropertiesCodeUpdaterDelegate<Unicode.JoiningType> {
-  open override var prefix: String { return "jt" }
+public class DerivedJoiningType: UCDDefaultablePropertiesCodeUpdaterDelegate<Unicode.JoiningType> {
+  public override var prefix: String { return "jt" }
 
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningType.txt")!
     ]
   }
 
-  open override func reduce(columns: [String]) throws -> Unicode.JoiningType {
+  public override func reduce(columns: [String]) throws -> Unicode.JoiningType {
     return Unicode.JoiningType(abbreviated: columns.first!)!
   }
 
-  open override func describe(value: Unicode.JoiningType) -> String {
+  public override func describe(value: Unicode.JoiningType) -> String {
     return ".\(String(describing: value))"
   }
   
-  open override var defaultValue: Unicode.JoiningType {
+  public override var defaultValue: Unicode.JoiningType {
     return .nonJoining
   }
 }

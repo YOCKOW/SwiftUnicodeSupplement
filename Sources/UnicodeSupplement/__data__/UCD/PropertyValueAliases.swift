@@ -4,8 +4,8 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt
-// Last-Modified: 2019-03-11T16:41:22Z
-// ETag: "774049-11d94-583d43e1dd080"
+// Last-Modified: 2019-11-13T23:04:13Z
+// ETag: "9f4002-1279d-5974262191540"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
@@ -20,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2019 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -148,6 +148,7 @@ extension Unicode.BidiClass {
 // Property: ccc
 extension Unicode.CanonicalCombiningClass {
   // Static Constants
+  public static let hanReading = Unicode.CanonicalCombiningClass(rawValue: 6)
   public static let ccc10 = Unicode.CanonicalCombiningClass(rawValue: 10)
   public static let ccc11 = Unicode.CanonicalCombiningClass(rawValue: 11)
   public static let ccc12 = Unicode.CanonicalCombiningClass(rawValue: 12)
@@ -192,6 +193,7 @@ extension Unicode.CanonicalCombiningClass {
     switch name {
     case "NR": self.init(rawValue: 0)
     case "OV": self.init(rawValue: 1)
+    case "HANR": self.init(rawValue: 6)
     case "NK": self.init(rawValue: 7)
     case "KV": self.init(rawValue: 8)
     case "VR": self.init(rawValue: 9)
@@ -349,8 +351,32 @@ extension Unicode.EastAsianWidth {
 }
 
 /* ********************************************************************************************** */
+// Property: EBase
+// * No converted code for EBase.
+
+/* ********************************************************************************************** */
+// Property: EComp
+// * No converted code for EComp.
+
+/* ********************************************************************************************** */
+// Property: EMod
+// * No converted code for EMod.
+
+/* ********************************************************************************************** */
+// Property: Emoji
+// * No converted code for Emoji.
+
+/* ********************************************************************************************** */
+// Property: EPres
+// * No converted code for EPres.
+
+/* ********************************************************************************************** */
 // Property: Ext
 // * No converted code for Ext.
+
+/* ********************************************************************************************** */
+// Property: ExtPict
+// * No converted code for ExtPict.
 
 /* ********************************************************************************************** */
 // Property: gc
@@ -748,7 +774,29 @@ extension Unicode.JoiningType {
 
 /* ********************************************************************************************** */
 // Property: nt
-// * No converted code for nt.
+extension Unicode.NumericType {
+  /// Initialize with a long name.
+  public init?<S>(_ name: S) where S: StringProtocol {
+    switch name {
+    case "Decimal": self = .decimal
+    case "Digit": self = .digit
+    case "None": return nil
+    case "Numeric": self = .numeric
+    default: return nil
+    }
+  }
+
+  /// Initialize with a short name.
+  public init?<S>(abbreviated name: S) where S: StringProtocol {
+    switch name {
+    case "De": self = .decimal
+    case "Di": self = .digit
+    case "None": return nil
+    case "Nu": self = .numeric
+    default: return nil
+    }
+  }
+}
 
 /* ********************************************************************************************** */
 // Property: OAlpha
@@ -837,10 +885,12 @@ extension Unicode {
     case carian
     case cham
     case cherokee
+    case chorasmian
     case coptic
     case cypriot
     case cyrillic
     case devanagari
+    case divesAkuru
     case dogra
     case deseret
     case duployan
@@ -875,6 +925,7 @@ extension Unicode {
     case kharoshthi
     case khmer
     case khojki
+    case khitanSmallScript
     case kannada
     case kaithi
     case taiTham
@@ -963,6 +1014,7 @@ extension Unicode {
     case wancho
     case oldPersian
     case cuneiform
+    case yezidi
     case yi
     case zanabazarSquare
     case inherited
@@ -997,10 +1049,12 @@ extension Unicode.Script {
     case "Carian": self = .carian
     case "Cham": self = .cham
     case "Cherokee": self = .cherokee
+    case "Chorasmian": self = .chorasmian
     case "Coptic": self = .coptic
     case "Cypriot": self = .cypriot
     case "Cyrillic": self = .cyrillic
     case "Devanagari": self = .devanagari
+    case "Dives_Akuru": self = .divesAkuru
     case "Dogra": self = .dogra
     case "Deseret": self = .deseret
     case "Duployan": self = .duployan
@@ -1035,6 +1089,7 @@ extension Unicode.Script {
     case "Kharoshthi": self = .kharoshthi
     case "Khmer": self = .khmer
     case "Khojki": self = .khojki
+    case "Khitan_Small_Script": self = .khitanSmallScript
     case "Kannada": self = .kannada
     case "Kaithi": self = .kaithi
     case "Tai_Tham": self = .taiTham
@@ -1123,6 +1178,7 @@ extension Unicode.Script {
     case "Wancho": self = .wancho
     case "Old_Persian": self = .oldPersian
     case "Cuneiform": self = .cuneiform
+    case "Yezidi": self = .yezidi
     case "Yi": self = .yi
     case "Zanabazar_Square": self = .zanabazarSquare
     case "Inherited": self = .inherited
@@ -1158,11 +1214,13 @@ extension Unicode.Script {
     case "Cari": self = .carian
     case "Cham": self = .cham
     case "Cher": self = .cherokee
+    case "Chrs": self = .chorasmian
     case "Qaac": self = .coptic // alias
     case "Copt": self = .coptic
     case "Cprt": self = .cypriot
     case "Cyrl": self = .cyrillic
     case "Deva": self = .devanagari
+    case "Diak": self = .divesAkuru
     case "Dogr": self = .dogra
     case "Dsrt": self = .deseret
     case "Dupl": self = .duployan
@@ -1197,6 +1255,7 @@ extension Unicode.Script {
     case "Khar": self = .kharoshthi
     case "Khmr": self = .khmer
     case "Khoj": self = .khojki
+    case "Kits": self = .khitanSmallScript
     case "Knda": self = .kannada
     case "Kthi": self = .kaithi
     case "Lana": self = .taiTham
@@ -1285,6 +1344,7 @@ extension Unicode.Script {
     case "Wcho": self = .wancho
     case "Xpeo": self = .oldPersian
     case "Xsux": self = .cuneiform
+    case "Yezi": self = .yezidi
     case "Yiii": self = .yi
     case "Zanb": self = .zanabazarSquare
     case "Qaai": self = .inherited // alias

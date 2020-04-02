@@ -47,14 +47,14 @@ extension StringLines {
   }
 }
 
-open class PropertyValueAliases: UCDCodeUpdaterDelegate {
-  open override var sourceURLs: Array<URL> {
+public class PropertyValueAliases: UCDCodeUpdaterDelegate {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt")!,
     ]
   }
   
-  open override func prepare(sourceURL: URL) throws -> IntermediateDataContainer<UnicodeData> {
+  public override func prepare(sourceURL: URL) throws -> IntermediateDataContainer<UnicodeData> {
     // This is dummy, because PropertyValueAliases.txt is unusual Unicode Data.
     return .init(content: .init(""))
   }
@@ -292,6 +292,60 @@ open class PropertyValueAliases: UCDCodeUpdaterDelegate {
     ])
   }
   
+  private func _convertNumericType(_ columns: [ArraySlice<String>]) throws -> StringLines {
+    let format = StringLines("""
+    extension Unicode.NumericType {
+      /// Initialize with a long name.
+      public init?<S>(_ name: S) where S: StringProtocol {
+        switch name {
+        %%long_names%%
+        default: return nil
+        }
+      }
+    
+      /// Initialize with a short name.
+      public init?<S>(abbreviated name: S) where S: StringProtocol {
+        switch name {
+        %%short_names%%
+        default: return nil
+        }
+      }
+    }
+    """)
+    
+    return try format._formatted([
+      "long_names": {
+        var result = StringLines()
+        for longName in columns.map({ $0[_relativeIndex: 1] }) {
+          var line = "case \"\(longName)\": "
+          if longName == "None" {
+            line += "return nil"
+          } else {
+            line += "self = .\(longName.lowerCamelCase)"
+          }
+          result.append(String.Line(line)!)
+        }
+        return result
+      },
+      "short_names": {
+        var result = StringLines()
+        for column in columns {
+          let shortName = column[_relativeIndex: 0]
+          let longName = column[_relativeIndex: 1]
+          
+          var line = "case \"\(shortName)\": "
+          if shortName == "None" {
+            line += "return nil"
+          } else {
+            line += "self = .\(longName.lowerCamelCase)"
+          }
+          result.append(String.Line(line)!)
+        }
+        return result
+      }
+    ])
+  }
+  
   private enum _ScriptError: Error {
     case unexpectedNumberOfColumns
   }
@@ -349,7 +403,7 @@ open class PropertyValueAliases: UCDCodeUpdaterDelegate {
   private enum _Error: Error {
     case failedToFetchContent
   }
-  open override func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public override func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     let interm = intermidiates.first(where: { _ in true })
     guard let string = interm?.sourceURL.content.flatMap({ String(data: $0, encoding: .utf8) }) else {
       throw _Error.failedToFetchContent
@@ -377,6 +431,7 @@ open class PropertyValueAliases: UCDCodeUpdaterDelegate {
       "gc": _convertGeneralCategory,
       "jg": _convertJoiningGroup,
       "jt": _convertJoiningType,
+      "nt": _convertNumericType,
       "sc": _convertScript,
     ]
     

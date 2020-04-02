@@ -5,6 +5,14 @@
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
 
+#if canImport(Darwin)
+import Darwin
+#elseif canImport(Glibc)
+import Glibc
+#endif
+
+import _cUnicodeSupplement
+
 extension Unicode.Scalar {
   public struct LatestProperties {
     private let _value: UInt32
@@ -68,12 +76,6 @@ extension Unicode.Scalar.LatestProperties {
       return std3 ? .mapped(scalars) : .disallowed
     }
   }
-}
-
-private func _unimplemented(_ functionName:String = #function,
-                            file:StaticString = #file, line:UInt = #line) -> Never
-{
-  fatalError("\(functionName) is not implemented yet.", file:file, line:line)
 }
 
 extension Unicode.Scalar.LatestProperties {
@@ -402,24 +404,32 @@ extension Unicode.Scalar.LatestProperties {
 
 
 extension Unicode.Scalar.LatestProperties {
+  private var _selfString: String { return String(Unicode.Scalar(self._value)!) }
+  
   public var lowercaseMapping: String {
-    _unimplemented()
+    return _caseMapping_specialCasing[self._value]?.lower ??
+      _caseMapping_simpleLowercaseMapping[self._value] ??
+      _selfString
   }
   
   public var titlecaseMapping: String {
-    _unimplemented()
+    return _caseMapping_specialCasing[self._value]?.title ??
+      _caseMapping_simpleTitlecaseMapping[self._value] ??
+      self.uppercaseMapping
   }
   
   public var uppercaseMapping: String {
-    _unimplemented()
+    return _caseMapping_specialCasing[self._value]?.upper ??
+      _caseMapping_simpleUppercaseMapping[self._value] ??
+      _selfString
   }
 }
 
- extension Unicode.Scalar.LatestProperties {
-   public var age: Unicode.Version? {
-     _unimplemented()
-   }
- }
+extension Unicode.Scalar.LatestProperties {
+  public var age: Unicode.Version? {
+    return _age[self._value]
+  }
+}
 
 extension Unicode.Scalar.LatestProperties {
   public var generalCategory: Unicode.GeneralCategory {
@@ -429,11 +439,55 @@ extension Unicode.Scalar.LatestProperties {
 
 extension Unicode.Scalar.LatestProperties {
   public var name: String? {
-    _unimplemented()
+    guard let (prefixIndex, suffixListIndex) = _na_prefixSuffixListIndices[self._value] else {
+      return nil
+    }
+    
+    let nameLength = 256
+    let nameCString = UnsafeMutablePointer<CChar>.allocate(capacity: nameLength)
+    nameCString.initialize(repeating: 0, count: nameLength)
+    defer { nameCString.deallocate() }
+    
+    var offset = nameCString
+    func _copyName(_ cString: UnsafePointer<CChar>) {
+      func _copyHex() {
+        withVaList([self._value]) {
+          let length = vsnprintf(offset, 7, "%X", $0)
+          precondition(length > 0)
+          offset = offset.advanced(by: Int(length))
+        }
+      }
+      for ii in 0... {
+        let cchar = cString[ii]
+        switch cchar {
+        case 0:
+          return
+        case 0x2A: // '*'
+          // Values containing a * character are patterns which
+          // use the placeholder * in place of the code point in hex.
+          _copyHex()
+        default:
+          offset.pointee = cchar
+          offset = offset.successor()
+        }
+      }
+    }
+    
+    _copyName(_cUniSupp_na_prefix_at(prefixIndex))
+    if let suffixListIndex = suffixListIndex {
+      _copyName(_cUniSupp_na_suffix_at(suffixListIndex, self._value)!)
+    }
+    
+    return String(cString: nameCString, encoding: .utf8)
   }
   
+  /// The normative formal alias of the scalar.
+  ///
+  /// Although the formal name aliases are divided into five types,
+  /// this property returns the alias where the type is "correction".
+  /// This behaviour is the same as [Unicode.Scalar.Properties](https://developer.apple.com/documentation/swift/unicode/scalar/properties).
   public var nameAlias: String? {
-    _unimplemented()
+    return _nameAliases[self._value]
   }
 }
 
@@ -445,10 +499,10 @@ extension Unicode.Scalar.LatestProperties {
 
 extension Unicode.Scalar.LatestProperties {
   public var numericType: Unicode.NumericType? {
-    _unimplemented()
+    return _nt[self._value]
   }
   
   public var numericValue: Double? {
-    _unimplemented()
+    return _nv[self._value]
   }
 }

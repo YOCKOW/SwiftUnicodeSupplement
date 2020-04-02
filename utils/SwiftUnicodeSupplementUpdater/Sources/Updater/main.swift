@@ -10,6 +10,8 @@ import UnicodeSupplementUpdater
 
 let manager = CodeUpdaterManager()
 manager.updaters = [
+  .init(delegate: CaseMapping()),
+  .init(delegate: DerivedAge()),
   .init(delegate: DerivedBidiClass()),
   .init(delegate: DerivedBinaryProperties()),
   .init(delegate: DerivedCombiningClass()),
@@ -17,10 +19,14 @@ manager.updaters = [
   .init(delegate: DerivedGeneralCategory()),
   .init(delegate: DerivedJoiningGroup()),
   .init(delegate: DerivedJoiningType()),
+  .init(delegate: DerivedName()),
   .init(delegate: DerivedNormalizationProps()),
+  .init(delegate: DerivedNumericType()),
+  .init(delegate: DerivedNumericValues()),
   .init(delegate: EastAsianWidth()),
   .init(delegate: EmojiData()),
   .init(delegate: IDNAMappingTable()),
+  .init(delegate: NameAliases()),
   .init(delegate: PropertyValueAliases()),
   .init(delegate: PropList()),
   .init(delegate: Scripts()),

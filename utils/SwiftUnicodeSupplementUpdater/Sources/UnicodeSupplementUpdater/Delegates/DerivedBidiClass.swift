@@ -37,22 +37,22 @@ extension StringProtocol {
   }
 }
 
-open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass> {
-  open override var prefix: String {
+public class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass> {
+  public override var prefix: String {
     return "bidiClass"
   }
   
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBidiClass.txt")!
     ]
   }
   
-  open override func reduce(columns: [String]) throws -> Unicode.BidiClass {
+  public override func reduce(columns: [String]) throws -> Unicode.BidiClass {
     return Unicode.BidiClass(abbreviated: columns.first!)!
   }
   
-  open override func describe(value: Unicode.BidiClass) -> String {
+  public override func describe(value: Unicode.BidiClass) -> String {
     return ".\(String(describing: value))"
   }
   
@@ -71,7 +71,7 @@ open class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass>
       }
     }
   }
-  open override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     let intermediates = Array(intermediates)
     
     assert(intermediates.count == 1)

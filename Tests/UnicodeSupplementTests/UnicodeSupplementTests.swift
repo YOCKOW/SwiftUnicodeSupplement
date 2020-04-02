@@ -2,6 +2,55 @@ import XCTest
 @testable import UnicodeSupplement
 
 final class UnicodeSupplementTests: XCTestCase {
+  func test_CaseMapping() {
+    func lc(_ scalar: Unicode.Scalar) -> String {
+      return scalar.latestProperties.lowercaseMapping
+    }
+    func tc(_ scalar: Unicode.Scalar) -> String {
+      return scalar.latestProperties.titlecaseMapping
+    }
+    func uc(_ scalar: Unicode.Scalar) -> String {
+      return scalar.latestProperties.uppercaseMapping
+    }
+    
+    XCTAssertEqual(lc("A"), "a")
+    XCTAssertEqual(tc("a"), "A")
+    XCTAssertEqual(uc("a"), "A")
+    
+    XCTAssertEqual(lc("\u{0130}"), "\u{0069}\u{0307}")
+    XCTAssertEqual(tc("\u{FB01}"), "Fi")
+    XCTAssertEqual(uc("\u{00DF}"), "SS")
+    
+    XCTAssertEqual(lc("あ"), "あ")
+    XCTAssertEqual(tc("あ"), "あ")
+    XCTAssertEqual(uc("あ"), "あ")
+  }
+  
+  func test_age() {
+    struct _EquatableAge: Equatable {
+      let major: Int
+      let minor: Int
+      init(_ age: Unicode.Version) {
+        self.major = age.major
+        self.minor = age.minor
+      }
+    }
+    func age(_ scalar: Unicode.Scalar) -> _EquatableAge? {
+      return scalar.latestProperties.age.flatMap { _EquatableAge($0) }
+    }
+    func assert(_ scalar: Unicode.Scalar, _ expected: Unicode.Version?,
+                file: StaticString = #file, line: UInt = #line) {
+      let actualAge = age(scalar)
+      let expectedEquatableAge = expected.flatMap { _EquatableAge($0) }
+      XCTAssertEqual(actualAge, expectedEquatableAge, file: file, line: line)
+    }
+    
+    assert("あ", (1, 1))
+    assert("\u{2060}", (3, 2))
+    assert("\u{061C}", (6, 3))
+    assert("\u{2B97}", (13, 0))
+  }
+  
   func test_BidiClass() {
     func bc(_ scalar:Unicode.Scalar) -> Unicode.BidiClass {
       return scalar.latestProperties.bidiClass
@@ -98,6 +147,28 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(jt("\u{0771}"), .rightJoining)
     XCTAssertEqual(jt("\u{10AD7}"), .leftJoining)
     XCTAssertEqual(jt("\u{1DA75}"), .transparent)
+  }
+  
+  func test_Name() {
+    func name(_ scalar: Unicode.Scalar) -> String? {
+      return scalar.latestProperties.name
+    }
+    
+    XCTAssertEqual(name("\u{0000}"), nil)
+    XCTAssertEqual(name("A"), "LATIN CAPITAL LETTER A")
+    XCTAssertEqual(name("\u{3456}"), "CJK UNIFIED IDEOGRAPH-3456")
+  }
+  
+  func test_nameAlias() {
+    func alias(_ scalar: Unicode.Scalar) -> String? {
+      return scalar.latestProperties.nameAlias
+    }
+    
+    XCTAssertEqual(alias("\u{0000}"), nil)
+    XCTAssertEqual(alias("\u{0080}"), nil)
+    XCTAssertEqual(alias("\u{180B}"), nil)
+    XCTAssertEqual(alias("\u{FE18}"), "PRESENTATION FORM FOR VERTICAL RIGHT WHITE LENTICULAR BRACKET")
+    XCTAssertEqual(alias("\u{FEFF}"), nil)
   }
   
   func test_script() {
@@ -469,6 +540,29 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(ccc(integer:0x1DFC), .doubleBelow)
     XCTAssertEqual(ccc(integer:0x035E), .doubleAbove)
     XCTAssertEqual(ccc(integer:0x0345), .iotaSubscript)
+  }
+  
+  func test_NumericType() {
+    func nt(_ scalar: Unicode.Scalar) -> Unicode.NumericType? {
+      return scalar.latestProperties.numericType
+    }
+    
+    XCTAssertEqual(nt("0"), .decimal)
+    XCTAssertEqual(nt("⁰"), .digit) // U+2070
+    XCTAssertEqual(nt("〇"), .numeric) // U+3007
+    XCTAssertEqual(nt("零"), .numeric) // U+96F6
+    XCTAssertEqual(nt("０"), .decimal) // U+FF10
+    XCTAssertEqual(nt("○"), nil)
+  }
+  
+  func test_NumericValues() {
+    func nv(_ scalar: Unicode.Scalar) -> Double? {
+      return scalar.latestProperties.numericValue
+    }
+    
+    XCTAssertEqual(nv("0"), 0)
+    XCTAssertEqual(nv("½"), 1 / 2)
+    XCTAssertEqual(nv("④"), 4)
   }
 }
 

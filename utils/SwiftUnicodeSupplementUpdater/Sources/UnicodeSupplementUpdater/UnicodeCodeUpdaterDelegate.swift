@@ -45,7 +45,7 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     return .init(content: try IntermediateDataType(url: sourceURL))
   }
   
-  open func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  open func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     _mustBeOverridden()
   }
   
@@ -109,7 +109,7 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     }
   }
   
-  internal var _expandingLimit: UInt32 = 8
+  internal var _expandingLimit: UInt32 = 4
   
   private var _setConversionCount: [String: Int] = [:]
   internal func _convert(_ ranges: MultipleRanges<Unicode.Scalar.Value>, key: String) -> StringLines {
@@ -120,12 +120,9 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     var anyRanges: [AnyRange<Unicode.Scalar.Value>] = []
     
     for range in ranges {
-      let bounds = range.bounds!
-      if bounds.lower == bounds.upper {
-        singleValues.append(bounds.lower.value!)
-      } else if bounds.upper.value! - bounds.lower.value! < _expandingLimit {
-        for sv in range._values {
-          singleValues.append(sv)
+      if range._numberOfValues <= _expandingLimit {
+        for scalarValue in range._values {
+          singleValues.append(scalarValue)
         }
       } else {
         anyRanges.append(range)
@@ -172,7 +169,9 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
   }
   
   private var _dicConversionCount: [String?: Int] = [:]
-  internal func _convert<T>(_ rangeDictionary: RangeDictionary<Unicode.Scalar.Value, T>, key: String? = nil, describer: (T) -> String) -> StringLines where T: Equatable {
+  internal func _convert<T>(_ rangeDictionary: RangeDictionary<Unicode.Scalar.Value, T>,
+                            key: String? = nil, typeName: String? = nil,
+                            describer: (T) -> String) -> StringLines where T: Equatable {
     let nn = _dicConversionCount[key] ?? 0
     defer { _dicConversionCount[key] = nn + 1 }
     
@@ -180,12 +179,9 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     var extractedRangeDictionary: RangeDictionary<Unicode.Scalar.Value, T> = [:]
     
     for (range, value) in rangeDictionary {
-      let bounds = range.bounds!
-      if bounds.lower == bounds.upper {
-        dictionary[bounds.lower.value!] = value
-      } else if bounds.upper.value! - bounds.lower.value! < _expandingLimit {
-        for sv in range._values {
-          dictionary[sv] = value
+      if range._numberOfValues <= _expandingLimit {
+        for scalarValue in range._values {
+          dictionary[scalarValue] = value
         }
       } else {
         extractedRangeDictionary.insert(value, forRange: range)
@@ -195,7 +191,7 @@ open class UnicodeCodeUpdaterDelegate: CodeUpdaterDelegate {
     var result = StringLines()
     
     self.requires(module: "Ranges")
-    let assocTypeOriginalName = _typeName(of: T.self)
+    let assocTypeOriginalName = typeName ?? _typeName(of: T.self)
     let idPrefix = self._identifierPrefix(for: nn) + (key != nil ? "_\(key!)" : "")
     let assocTypeName = self.typeAliasName(for: assocTypeOriginalName)
     let pairTypeName = self.typeAliasName(for: "(Unicode.Scalar.Value, \(assocTypeName))")

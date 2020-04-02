@@ -97,22 +97,22 @@ extension Unicode.IDNAStatus._ImmatureStatus {
   }
 }
 
-open class IDNAMappingTable: UCDPropertiesCodeUpdaterDelegate<Unicode.IDNAStatus._ImmatureStatus> {
-  open override var prefix: String { return "idna" }
+public class IDNAMappingTable: UCDPropertiesCodeUpdaterDelegate<Unicode.IDNAStatus._ImmatureStatus> {
+  public override var prefix: String { return "idna" }
   
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/idna/latest/IdnaMappingTable.txt")!,
     ]
   }
   
-  open override var subdirectory: String { return "IDNA" }
+  public override var subdirectory: String { return "IDNA" }
   
-  open override func reduce(columns: [String]) throws -> Unicode.IDNAStatus._ImmatureStatus {
+  public override func reduce(columns: [String]) throws -> Unicode.IDNAStatus._ImmatureStatus {
     return try .init(columns)
   }
   
-  open override func describe(value: Unicode.IDNAStatus._ImmatureStatus) -> String {
+  public override func describe(value: Unicode.IDNAStatus._ImmatureStatus) -> String {
     return value._description
   }
 }
