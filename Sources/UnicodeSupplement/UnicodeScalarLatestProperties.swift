@@ -505,7 +505,7 @@ extension Unicode.Scalar.LatestProperties {
 
 extension Unicode.Scalar.LatestProperties {
   public var numericType: Unicode.NumericType? {
-    _unimplemented()
+    return _nt[self._value]
   }
   
   public var numericValue: Double? {

@@ -541,5 +541,18 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(ccc(integer:0x035E), .doubleAbove)
     XCTAssertEqual(ccc(integer:0x0345), .iotaSubscript)
   }
+  
+  func test_NumericType() {
+    func nt(_ scalar: Unicode.Scalar) -> Unicode.NumericType? {
+      return scalar.latestProperties.numericType
+    }
+    
+    XCTAssertEqual(nt("0"), .decimal)
+    XCTAssertEqual(nt("⁰"), .digit) // U+2070
+    XCTAssertEqual(nt("〇"), .numeric) // U+3007
+    XCTAssertEqual(nt("零"), .numeric) // U+96F6
+    XCTAssertEqual(nt("０"), .decimal) // U+FF10
+    XCTAssertEqual(nt("○"), nil)
+  }
 }
 
