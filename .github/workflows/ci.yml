@@ -56,29 +56,28 @@ jobs:
     - name: Test with release mode.
       run: swift test --configuration release -Xswiftc -enable-testing -Xswiftc -swift-version -Xswiftc ${{ matrix.swift-compat-ver }}
 
-# Disable tests of updater until releasing v1.0.0
-#  test-updater:
-#    runs-on: macOS-latest
-#    steps:
-#    - uses: actions/checkout@v2
-#    - name: Use a cache for ".build" directory.
-#      uses: actions/cache@v1
-#      with:
-#        path: .build
-#        key: build-${{ github.workspace }}-${{ runner.os }}-${{ hashFiles('utils/**/*.swift') }}
-#        restore-keys: |
-#          build-${{ github.workspace }}-${{ runner.os }}-
-#          build-${{ github.workspace }}-
-#    - uses: YOCKOW/Action-setup-swift@master
-#      with:
-#        swift-version: '5.2'
-#    - name: Try to build products with debug mode.
-#      run: |
-#        ./utils/update --build
-#        if [ $? != 0 ]; then
-#          echo "Failed to build products with debug mode."
-#          rm -rf $(cd .build/debug && pwd -P)
-#        fi
-#      continue-on-error: true
-#    - name: Test with debug mode.
-#      run: ./utils/update --test
+  test-updater:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use a cache for ".build" directory.
+      uses: actions/cache@v1
+      with:
+        path: .build
+        key: build-${{ github.workspace }}-${{ runner.os }}-${{ hashFiles('utils/**/*.swift') }}
+        restore-keys: |
+          build-${{ github.workspace }}-${{ runner.os }}-
+          build-${{ github.workspace }}-
+    - uses: YOCKOW/Action-setup-swift@master
+      with:
+        swift-version: '5.2'
+    - name: Try to build products with debug mode.
+      run: |
+        ./utils/update --build
+        if [ $? != 0 ]; then
+          echo "Failed to build products with debug mode."
+          rm -rf $(cd .build/debug && pwd -P)
+        fi
+      continue-on-error: true
+    - name: Test with debug mode.
+      run: ./utils/update --test
