@@ -22,6 +22,7 @@ manager.updaters = [
   .init(delegate: DerivedName()),
   .init(delegate: DerivedNormalizationProps()),
   .init(delegate: DerivedNumericType()),
+  .init(delegate: DerivedNumericValues()),
   .init(delegate: EastAsianWidth()),
   .init(delegate: EmojiData()),
   .init(delegate: IDNAMappingTable()),

@@ -554,5 +554,15 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(nt("０"), .decimal) // U+FF10
     XCTAssertEqual(nt("○"), nil)
   }
+  
+  func test_NumericValues() {
+    func nv(_ scalar: Unicode.Scalar) -> Double? {
+      return scalar.latestProperties.numericValue
+    }
+    
+    XCTAssertEqual(nv("0"), 0)
+    XCTAssertEqual(nv("½"), 1 / 2)
+    XCTAssertEqual(nv("④"), 4)
+  }
 }
 

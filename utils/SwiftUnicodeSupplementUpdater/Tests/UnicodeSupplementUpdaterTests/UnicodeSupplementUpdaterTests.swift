@@ -129,6 +129,12 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
     ])
   }
   
+  func test_numericValues() throws {
+    try _assert(delegate: DerivedNumericValues(), expectedLines: [
+      "internal let _nv = UnicodeScalarValueDictionary<Double>(dictionary: __nv_dictionary, rangeDictionary: __nv_rangeDictionary)",
+    ])
+  }
+  
   func test_emojiData() throws {
     try _assert(delegate: EmojiData(), expectedLines: [
       "internal let _emoji_Emoji = UnicodeScalarValueSet(singleValues: __emoji_Emoji_set, ranges: __emoji_Emoji_ranges)",

@@ -6,6 +6,7 @@ extension UnicodeSupplementUpdaterTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__UnicodeSupplementUpdaterTests = [
+        ("test_age", test_age),
         ("test_bidiClass", test_bidiClass),
         ("test_binProp", test_binProp),
         ("test_caseMapping", test_caseMapping),
@@ -17,8 +18,11 @@ extension UnicodeSupplementUpdaterTests {
         ("test_idnaMappingTable", test_idnaMappingTable),
         ("test_jg", test_jg),
         ("test_jt", test_jt),
+        ("test_nameAliases", test_nameAliases),
         ("test_name", test_name),
         ("test_normProp", test_normProp),
+        ("test_numericType", test_numericType),
+        ("test_numericValues", test_numericValues),
         ("test_prop", test_prop),
         ("test_propertyValueAliases", test_propertyValueAliases),
         ("test_scripts", test_scripts),

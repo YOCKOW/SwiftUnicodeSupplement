@@ -78,12 +78,6 @@ extension Unicode.Scalar.LatestProperties {
   }
 }
 
-private func _unimplemented(_ functionName:String = #function,
-                            file:StaticString = #file, line:UInt = #line) -> Never
-{
-  fatalError("\(functionName) is not implemented yet.", file:file, line:line)
-}
-
 extension Unicode.Scalar.LatestProperties {
   /// Joining_Group for the scalar.
   public var joiningGroup: Unicode.JoiningGroup {
@@ -509,6 +503,6 @@ extension Unicode.Scalar.LatestProperties {
   }
   
   public var numericValue: Double? {
-    _unimplemented()
+    return _nv[self._value]
   }
 }
