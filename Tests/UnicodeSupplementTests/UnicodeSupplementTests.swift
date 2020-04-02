@@ -26,6 +26,31 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(uc("あ"), "あ")
   }
   
+  func test_age() {
+    struct _EquatableAge: Equatable {
+      let major: Int
+      let minor: Int
+      init(_ age: Unicode.Version) {
+        self.major = age.major
+        self.minor = age.minor
+      }
+    }
+    func age(_ scalar: Unicode.Scalar) -> _EquatableAge? {
+      return scalar.latestProperties.age.flatMap { _EquatableAge($0) }
+    }
+    func assert(_ scalar: Unicode.Scalar, _ expected: Unicode.Version?,
+                file: StaticString = #file, line: UInt = #line) {
+      let actualAge = age(scalar)
+      let expectedEquatableAge = expected.flatMap { _EquatableAge($0) }
+      XCTAssertEqual(actualAge, expectedEquatableAge, file: file, line: line)
+    }
+    
+    assert("あ", (1, 1))
+    assert("\u{2060}", (3, 2))
+    assert("\u{061C}", (6, 3))
+    assert("\u{2B97}", (13, 0))
+  }
+  
   func test_BidiClass() {
     func bc(_ scalar:Unicode.Scalar) -> Unicode.BidiClass {
       return scalar.latestProperties.bidiClass

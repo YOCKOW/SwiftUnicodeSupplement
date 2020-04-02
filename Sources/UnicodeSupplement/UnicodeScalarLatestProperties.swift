@@ -431,11 +431,11 @@ extension Unicode.Scalar.LatestProperties {
   }
 }
 
- extension Unicode.Scalar.LatestProperties {
-   public var age: Unicode.Version? {
-     _unimplemented()
-   }
- }
+extension Unicode.Scalar.LatestProperties {
+  public var age: Unicode.Version? {
+    return _age[self._value]
+  }
+}
 
 extension Unicode.Scalar.LatestProperties {
   public var generalCategory: Unicode.GeneralCategory {

@@ -16,6 +16,7 @@ extension UnicodeSupplementTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__UnicodeSupplementTests = [
+        ("test_age", test_age),
         ("test_BidiClass", test_BidiClass),
         ("test_CanonicalCombiningClass", test_CanonicalCombiningClass),
         ("test_CaseMapping", test_CaseMapping),

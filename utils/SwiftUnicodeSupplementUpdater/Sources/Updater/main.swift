@@ -11,6 +11,7 @@ import UnicodeSupplementUpdater
 let manager = CodeUpdaterManager()
 manager.updaters = [
   .init(delegate: CaseMapping()),
+  .init(delegate: DerivedAge()),
   .init(delegate: DerivedBidiClass()),
   .init(delegate: DerivedBinaryProperties()),
   .init(delegate: DerivedCombiningClass()),

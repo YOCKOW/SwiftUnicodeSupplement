@@ -45,6 +45,12 @@ final class UnicodeSupplementUpdaterTests: XCTestCase {
     ])
   }
   
+  func test_age() throws {
+    try _assert(delegate: DerivedAge(), expectedLines: [
+      "internal let _age = UnicodeScalarValueDictionary<Unicode.Version>(dictionary: __age_dictionary, rangeDictionary: __age_rangeDictionary)"
+    ])
+  }
+  
   func test_bidiClass() throws {
     try _assert(delegate: DerivedBidiClass(), expectedLines: [
       "internal let _bidiClass = UnicodeScalarValueDictionary<Unicode.BidiClass>(dictionary: __bidiClass_dictionary, rangeDictionary: __bidiClass_rangeDictionary)",
