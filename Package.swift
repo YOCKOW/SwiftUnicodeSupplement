@@ -35,3 +35,14 @@ let package = Package(
   ],
   swiftLanguageVersions: [.v4, .v4_2, .v5]
 )
+
+
+import Foundation
+if ProcessInfo.processInfo.environment["YOCKOW_USE_LOCAL_PACKAGES"] != nil {
+  func localPath(with url: String) -> String {
+    guard let url = URL(string: url) else { fatalError("Unexpected URL.") }
+    let dirName = url.deletingPathExtension().lastPathComponent
+    return "../\(dirName)"
+  }
+  package.dependencies = package.dependencies.map { .package(path: localPath(with: $0.url)) }
+}
