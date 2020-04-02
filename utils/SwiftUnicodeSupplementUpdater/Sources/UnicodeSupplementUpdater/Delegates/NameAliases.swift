@@ -10,24 +10,24 @@ import Ranges
 import StringComposition
 import yCodeUpdater
 
-open class NameAliases: UCDPropertiesCodeUpdaterDelegate<String> {
-  open override var prefix: String { return "nameAliases" }
+public class NameAliases: UCDPropertiesCodeUpdaterDelegate<String> {
+  public override var prefix: String { return "nameAliases" }
   
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/NameAliases.txt")!
     ]
   }
   
-  open override func reduce(columns: [String]) throws -> String {
+  public override func reduce(columns: [String]) throws -> String {
     return columns.first!
   }
    
-  open override func describe(value: String) -> String {
+  public override func describe(value: String) -> String {
     return value.debugDescription
   }
   
-  open override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     // Pick out only corrections.
     let corrections: RangeDictionary<Unicode.Scalar.Value, String> = intermediates.flatMap {
       $0.content.rows.filter { $0.payload?.columns[1] == "correction" }

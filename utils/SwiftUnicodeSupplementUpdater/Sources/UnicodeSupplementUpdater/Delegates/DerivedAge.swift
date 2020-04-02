@@ -28,16 +28,16 @@ private struct _UnicodeVersion: Equatable {
   }
 }
 
-open class DerivedAge: UCDCodeUpdaterDelegate {
-  open override var prefix: String { return "age" }
+public class DerivedAge: UCDCodeUpdaterDelegate {
+  public override var prefix: String { return "age" }
   
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/DerivedAge.txt")!
     ]
   }
   
-  open override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     let rangeDic: RangeDictionary<Unicode.Scalar.Value, _UnicodeVersion> =
       intermediates.flatMap({ $0.content.rows.compactMap({ $0.payload }) }).reduce(into: [:]) {
         $0.insert(.init($1.columns[0]), forRange: .init($1.range))

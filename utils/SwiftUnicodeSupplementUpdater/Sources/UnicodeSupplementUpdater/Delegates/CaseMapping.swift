@@ -23,12 +23,12 @@ private extension Unicode.Scalar {
   }
 }
 
-open class CaseMapping: UCDCodeUpdaterDelegate {
-  open override var prefix: String {
+public class CaseMapping: UCDCodeUpdaterDelegate {
+  public override var prefix: String {
     return "caseMapping"
   }
   
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       _unicodeDataURL,
       _specialCasingURL,
@@ -112,7 +112,7 @@ open class CaseMapping: UCDCodeUpdaterDelegate {
     return result
   }
   
-  open override func convert<S>(_ intermediates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public override func convert<S>(_ intermediates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     var result = StringLines()
     
     for interm in intermediates {

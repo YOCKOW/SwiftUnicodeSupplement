@@ -12,20 +12,20 @@ import yExtensions
 
 public typealias DoubleRepresentation = String
 
-open class DerivedNumericValues: UCDPropertiesCodeUpdaterDelegate<DoubleRepresentation> {
-  open override var prefix: String { return "nv" }
+public class DerivedNumericValues: UCDPropertiesCodeUpdaterDelegate<DoubleRepresentation> {
+  public override var prefix: String { return "nv" }
   
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericValues.txt")!
     ]
   }
   
-  open override func reduce(columns: [String]) throws -> DoubleRepresentation {
+  public override func reduce(columns: [String]) throws -> DoubleRepresentation {
     return columns[2]
   }
    
-  open override func describe(value: DoubleRepresentation) -> String {
+  public override func describe(value: DoubleRepresentation) -> String {
     switch value.splitOnce(separator: "/") {
     case (let integer, nil):
       return "\(integer)"
@@ -34,7 +34,7 @@ open class DerivedNumericValues: UCDPropertiesCodeUpdaterDelegate<DoubleRepresen
     }
   }
   
-  open override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     return self._convert(try self._convert(intermediates),
                          typeName: "Double",
                          describer: self.describe(value:))

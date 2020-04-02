@@ -8,24 +8,24 @@
 import Foundation
 import UnicodeSupplement
 
-open class DerivedJoiningGroup: UCDDefaultablePropertiesCodeUpdaterDelegate<Unicode.JoiningGroup> {
-  open override var prefix: String { return "jg" }
+public class DerivedJoiningGroup: UCDDefaultablePropertiesCodeUpdaterDelegate<Unicode.JoiningGroup> {
+  public override var prefix: String { return "jg" }
 
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningGroup.txt")!
     ]
   }
 
-  open override func reduce(columns: [String]) throws -> Unicode.JoiningGroup {
+  public override func reduce(columns: [String]) throws -> Unicode.JoiningGroup {
     return Unicode.JoiningGroup(columns.first!)!
   }
 
-  open override func describe(value: Unicode.JoiningGroup) -> String {
+  public override func describe(value: Unicode.JoiningGroup) -> String {
     return ".\(String(describing: value))"
   }
   
-  open override var defaultValue: Unicode.JoiningGroup {
+  public override var defaultValue: Unicode.JoiningGroup {
     return .noJoiningGroup
   }
 }

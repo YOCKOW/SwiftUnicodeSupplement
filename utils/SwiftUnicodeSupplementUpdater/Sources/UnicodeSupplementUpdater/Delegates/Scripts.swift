@@ -8,24 +8,24 @@
 import Foundation
 import UnicodeSupplement
 
-open class Scripts: UCDDefaultablePropertiesCodeUpdaterDelegate<Unicode.Script> {
-  open override var prefix: String { return "sc" }
+public class Scripts: UCDDefaultablePropertiesCodeUpdaterDelegate<Unicode.Script> {
+  public override var prefix: String { return "sc" }
 
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/Scripts.txt")!
     ]
   }
 
-  open override func reduce(columns: [String]) throws -> Unicode.Script {
+  public override func reduce(columns: [String]) throws -> Unicode.Script {
     return Unicode.Script(columns.first!)!
   }
 
-  open override func describe(value: Unicode.Script) -> String {
+  public override func describe(value: Unicode.Script) -> String {
     return ".\(String(describing: value))"
   }
   
-  open override var defaultValue: Unicode.Script {
+  public override var defaultValue: Unicode.Script {
     return .unknown
   }
 }

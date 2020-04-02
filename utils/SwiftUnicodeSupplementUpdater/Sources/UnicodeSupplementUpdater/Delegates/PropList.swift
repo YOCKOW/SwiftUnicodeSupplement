@@ -7,10 +7,10 @@
  
 import Foundation
 
-open class PropList: UCDBinaryPropertiesCodeUpdaterDelegate {
-  open override var prefix: String { return "prop" }
+public class PropList: UCDBinaryPropertiesCodeUpdaterDelegate {
+  public override var prefix: String { return "prop" }
   
-  open override var sourceURLs: Array<URL> {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt")!
     ]

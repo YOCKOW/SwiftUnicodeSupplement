@@ -47,14 +47,14 @@ extension StringLines {
   }
 }
 
-open class PropertyValueAliases: UCDCodeUpdaterDelegate {
-  open override var sourceURLs: Array<URL> {
+public class PropertyValueAliases: UCDCodeUpdaterDelegate {
+  public override var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt")!,
     ]
   }
   
-  open override func prepare(sourceURL: URL) throws -> IntermediateDataContainer<UnicodeData> {
+  public override func prepare(sourceURL: URL) throws -> IntermediateDataContainer<UnicodeData> {
     // This is dummy, because PropertyValueAliases.txt is unusual Unicode Data.
     return .init(content: .init(""))
   }
@@ -403,7 +403,7 @@ open class PropertyValueAliases: UCDCodeUpdaterDelegate {
   private enum _Error: Error {
     case failedToFetchContent
   }
-  open override func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public override func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
     let interm = intermidiates.first(where: { _ in true })
     guard let string = interm?.sourceURL.content.flatMap({ String(data: $0, encoding: .utf8) }) else {
       throw _Error.failedToFetchContent
