@@ -10,15 +10,6 @@ import Foundation
 import StringComposition
 import yCodeUpdater
 import yExtensions
-import yNewAPI
-
-extension ArraySlice {
-  fileprivate subscript(_relativeIndex relativeIndex: Int) -> Element {
-    get {
-      return self[self.startIndex + relativeIndex]
-    }
-  }
-}
 
 extension String {
   fileprivate func _trimmed() -> String {
@@ -78,10 +69,10 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
     
     return try format._formatted([
       "cases": {
-        .init(columns.map({ "case \($0[_relativeIndex: 1].lowerCamelCase)" }))
+        .init(columns.map({ "case \($0[relativeIndex: 1].lowerCamelCase)" }))
       },
       "abbreviations": {
-        .init(columns.map({ "case \"\($0[_relativeIndex: 0])\": self = .\($0[_relativeIndex: 1].lowerCamelCase)" }))
+        .init(columns.map({ "case \"\($0[relativeIndex: 0])\": self = .\($0[relativeIndex: 1].lowerCamelCase)" }))
       },
     ])
   }
@@ -98,11 +89,11 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
         contents: "let _ = Unicode.CanonicalCombiningClass.\(ccc)\n".data(using: .utf8)!
       )
       let process = Process()
-      process.newAPI.executableURL = .init(fileURLWithPath: "/bin/sh")
+      process.executableURL = .init(fileURLWithPath: "/bin/sh")
       process.arguments = ["-c", "swiftc \(tmpFilePath.path) -o /dev/null"]
       process.standardOutput = FileHandle.nullDevice
       process.standardError = FileHandle.nullDevice
-      try process.newAPI.run()
+      try process.run()
       process.waitUntilExit()
       return process.terminationStatus == 0
     }
@@ -127,15 +118,15 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
       "static_constants": {
         var result = StringLines()
         for column in columns {
-          let name = column[_relativeIndex: 2].lowerCamelCase
+          let name = column[relativeIndex: 2].lowerCamelCase
           if try _defined(ccc: name) { continue }
-          result.append("public static let \(name) = Unicode.CanonicalCombiningClass(rawValue: \(column[_relativeIndex: 0]))")
+          result.append("public static let \(name) = Unicode.CanonicalCombiningClass(rawValue: \(column[relativeIndex: 0]))")
         }
         return result
       },
       "short_names": {
         return StringLines(columns.map({
-          "case \"\($0[_relativeIndex: 1])\": self.init(rawValue: \($0[_relativeIndex: 0]))"
+          "case \"\($0[relativeIndex: 1])\": self.init(rawValue: \($0[relativeIndex: 0]))"
         }))
       },
     ])
@@ -169,16 +160,16 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
     
     return try format._formatted([
       "cases": {
-        return StringLines(columns.map({ "case \($0[_relativeIndex: 1].lowerCamelCase)" }))
+        return StringLines(columns.map({ "case \($0[relativeIndex: 1].lowerCamelCase)" }))
       },
       "names": {
         return StringLines(columns.map({
-          "case \"\($0[_relativeIndex: 1])\": self = .\($0[_relativeIndex: 1].lowerCamelCase)"
+          "case \"\($0[relativeIndex: 1])\": self = .\($0[relativeIndex: 1].lowerCamelCase)"
         }))
       },
       "short_names": {
         return StringLines(columns.map({
-          "case \"\($0[_relativeIndex: 0])\": self = .\($0[_relativeIndex: 1].lowerCamelCase)"
+          "case \"\($0[relativeIndex: 0])\": self = .\($0[relativeIndex: 1].lowerCamelCase)"
         }))
       },
     ])
@@ -200,10 +191,10 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
     return try format._formatted([
       "short_names": {
         return StringLines(columns.compactMap({
-          let shortName = $0[_relativeIndex: 0]
+          let shortName = $0[relativeIndex: 0]
           guard shortName.count == 2,
             shortName.first!.isUppercase && shortName.last!.isLowercase else { return nil }
-          return "case \"\(shortName)\": self = .\($0[_relativeIndex: 1].lowerCamelCase)"
+          return "case \"\(shortName)\": self = .\($0[relativeIndex: 1].lowerCamelCase)"
         }))
       },
     ])
@@ -231,8 +222,8 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
       "cases": {
         var result = StringLines()
         for column in columns {
-          let preferred = column[_relativeIndex: 0].lowerCamelCase
-          let alias = column[_relativeIndex: 1].lowerCamelCase
+          let preferred = column[relativeIndex: 0].lowerCamelCase
+          let alias = column[relativeIndex: 1].lowerCamelCase
           result.append("case \(preferred)")
           if preferred != alias {
             result.append("public static let \(alias): JoiningGroup = .\(preferred)")
@@ -243,8 +234,8 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
       "names": {
         var result = StringLines()
         for column in columns {
-          let preferred = column[_relativeIndex: 0]
-          let alias = column[_relativeIndex: 1]
+          let preferred = column[relativeIndex: 0]
+          let alias = column[relativeIndex: 1]
           if preferred == alias {
             result.append("case \"\(preferred)\": self = .\(preferred.lowerCamelCase)")
           } else {
@@ -282,11 +273,11 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
     
     return try format._formatted([
       "cases": {
-        return StringLines(columns.map({ "case \($0[_relativeIndex: 1].lowerCamelCase)" }))
+        return StringLines(columns.map({ "case \($0[relativeIndex: 1].lowerCamelCase)" }))
       },
       "short_names": {
         return StringLines(columns.map({
-          "case \"\($0[_relativeIndex: 0])\": self = .\($0[_relativeIndex: 1].lowerCamelCase)"
+          "case \"\($0[relativeIndex: 0])\": self = .\($0[relativeIndex: 1].lowerCamelCase)"
         }))
       },
     ])
@@ -316,7 +307,7 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
     return try format._formatted([
       "long_names": {
         var result = StringLines()
-        for longName in columns.map({ $0[_relativeIndex: 1] }) {
+        for longName in columns.map({ $0[relativeIndex: 1] }) {
           var line = "case \"\(longName)\": "
           if longName == "None" {
             line += "return nil"
@@ -330,8 +321,8 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
       "short_names": {
         var result = StringLines()
         for column in columns {
-          let shortName = column[_relativeIndex: 0]
-          let longName = column[_relativeIndex: 1]
+          let shortName = column[relativeIndex: 0]
+          let longName = column[relativeIndex: 1]
           
           var line = "case \"\(shortName)\": "
           if shortName == "None" {
@@ -377,20 +368,20 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
     
     return try format._formatted([
       "cases": {
-        return StringLines(columns.map({ "case \($0[_relativeIndex: 1].lowerCamelCase)" }))
+        return StringLines(columns.map({ "case \($0[relativeIndex: 1].lowerCamelCase)" }))
       },
       "long_names": {
-        return StringLines(columns.map({ "case \"\($0[_relativeIndex: 1])\": self = .\($0[_relativeIndex: 1].lowerCamelCase)" }))
+        return StringLines(columns.map({ "case \"\($0[relativeIndex: 1])\": self = .\($0[relativeIndex: 1].lowerCamelCase)" }))
       },
       "short_names": {
         var result = StringLines()
         for column in columns {
           switch column.count {
           case 3:
-            result.append("case \"\(column[_relativeIndex: 2])\": self = .\(column[_relativeIndex: 1].lowerCamelCase) // alias")
+            result.append("case \"\(column[relativeIndex: 2])\": self = .\(column[relativeIndex: 1].lowerCamelCase) // alias")
             fallthrough
           case 2:
-            result.append("case \"\(column[_relativeIndex: 0])\": self = .\(column[_relativeIndex: 1].lowerCamelCase)")
+            result.append("case \"\(column[relativeIndex: 0])\": self = .\(column[relativeIndex: 1].lowerCamelCase)")
           default:
             throw _ScriptError.unexpectedNumberOfColumns
           }

@@ -5,7 +5,7 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedGeneralCategory.txt
 // Last-Modified: 2019-10-21T17:30:01Z
-// ETag: "9f803a-3f5af-5956f088e3840"
+// ETag: "3f5af-5956f088e3840-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

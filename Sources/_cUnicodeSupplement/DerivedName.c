@@ -5,7 +5,7 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedName.txt
 // Last-Modified: 2019-09-10T19:51:13Z
-// ETag: "9f8030-1b15b9-592383a084e40"
+// ETag: "1b15b9-592383a084e40-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

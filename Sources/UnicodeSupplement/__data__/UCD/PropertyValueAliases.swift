@@ -5,7 +5,7 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt
 // Last-Modified: 2019-11-13T23:04:13Z
-// ETag: "9f4002-1279d-5974262191540"
+// ETag: "1279d-5974262191540-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

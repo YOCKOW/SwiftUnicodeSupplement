@@ -5,7 +5,7 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningType.txt
 // Last-Modified: 2020-01-21T17:39:14Z
-// ETag: "9f802d-90d3-59ca9e2ead480"
+// ETag: "90d3-59ca9e2ead480-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

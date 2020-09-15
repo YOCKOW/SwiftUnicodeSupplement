@@ -5,7 +5,7 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/DerivedAge.txt
 // Last-Modified: 2019-09-10T18:36:21Z
-// ETag: "9f401d-1de1f-592372e49d340"
+// ETag: "1de1f-592372e49d340-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

@@ -5,7 +5,7 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/NameAliases.txt
 // Last-Modified: 2019-09-09T19:10:55Z
-// ETag: "9f400b-3eb7-592238c112dc0"
+// ETag: "3eb7-592238c112dc0-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
