@@ -5,7 +5,7 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningGroup.txt
 // Last-Modified: 2019-09-10T19:51:16Z
-// ETag: "9f8032-5d27-592383a361500"
+// ETag: "5d27-592383a361500-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

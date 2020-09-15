@@ -5,11 +5,11 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 // Last-Modified: 2019-10-03T23:06:13Z
-// ETag: "96401e-1c4177-59409a1c1c340"
+// ETag: "1c4177-59409a1c1c340-gzip"
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/SpecialCasing.txt
 // Last-Modified: 2019-09-10T18:35:31Z
-// ETag: "9f4016-41be-592372b4ee2c0"
+// ETag: "41be-592372b4ee2c0-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

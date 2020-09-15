@@ -4,8 +4,8 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt
-// Last-Modified: 2019-03-11T16:41:19Z
-// ETag: "774022-1e2a2-583d43df009c0"
+// Last-Modified: 2019-11-28T00:16:05Z
+// ETag: "1ec6f-5985d04e43b40-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
@@ -109,6 +109,7 @@ private let __prop_Dash_set: _T1 = [
   0xfe58,
   0xfe63,
   0xff0d,
+  0x10ead,
 ]
 private let __prop_Dash_range_0: _T2 = 0x2010....0x2015
 private let __prop_Dash_array: _T3 = [
@@ -180,6 +181,7 @@ private let __prop_Diacritic_set: _T1 = [
   0xaff,
   0xb3c,
   0xb4d,
+  0xb55,
   0xbcd,
   0xc4d,
   0xcbc,
@@ -287,6 +289,9 @@ private let __prop_Diacritic_set: _T1 = [
   0xaac1,
   0xaac2,
   0xaaf6,
+  0xab69,
+  0xab6a,
+  0xab6b,
   0xabec,
   0xabed,
   0xfb1e,
@@ -326,6 +331,9 @@ private let __prop_Diacritic_set: _T1 = [
   0x1172b,
   0x11839,
   0x1183a,
+  0x1193d,
+  0x1193e,
+  0x11943,
   0x119e0,
   0x11a34,
   0x11a47,
@@ -335,6 +343,8 @@ private let __prop_Diacritic_set: _T1 = [
   0x11d44,
   0x11d45,
   0x11d97,
+  0x16ff0,
+  0x16ff1,
   0x1d167,
   0x1d168,
   0x1d169,
@@ -445,6 +455,7 @@ private let __prop_Extender_set: _T1 = [
   0x2d1,
   0x640,
   0x7fa,
+  0xb55,
   0xe46,
   0xec6,
   0x180a,
@@ -548,21 +559,24 @@ private let __prop_Ideographic_set: _T1 = [
   0x3038,
   0x3039,
   0x303a,
+  0x16fe4,
 ]
 private let __prop_Ideographic_range_0: _T2 = 0x3021....0x3029
-private let __prop_Ideographic_range_1: _T2 = 0x3400....0x4db5
-private let __prop_Ideographic_range_2: _T2 = 0x4e00....0x9fef
+private let __prop_Ideographic_range_1: _T2 = 0x3400....0x4dbf
+private let __prop_Ideographic_range_2: _T2 = 0x4e00....0x9ffc
 private let __prop_Ideographic_range_3: _T2 = 0xf900....0xfa6d
 private let __prop_Ideographic_range_4: _T2 = 0xfa70....0xfad9
 private let __prop_Ideographic_range_5: _T2 = 0x17000....0x187f7
-private let __prop_Ideographic_range_6: _T2 = 0x18800....0x18af2
-private let __prop_Ideographic_range_7: _T2 = 0x1b170....0x1b2fb
-private let __prop_Ideographic_range_8: _T2 = 0x20000....0x2a6d6
-private let __prop_Ideographic_range_9: _T2 = 0x2a700....0x2b734
-private let __prop_Ideographic_range_a: _T2 = 0x2b740....0x2b81d
-private let __prop_Ideographic_range_b: _T2 = 0x2b820....0x2cea1
-private let __prop_Ideographic_range_c: _T2 = 0x2ceb0....0x2ebe0
-private let __prop_Ideographic_range_d: _T2 = 0x2f800....0x2fa1d
+private let __prop_Ideographic_range_6: _T2 = 0x18800....0x18cd5
+private let __prop_Ideographic_range_7: _T2 = 0x18d00....0x18d08
+private let __prop_Ideographic_range_8: _T2 = 0x1b170....0x1b2fb
+private let __prop_Ideographic_range_9: _T2 = 0x20000....0x2a6dd
+private let __prop_Ideographic_range_a: _T2 = 0x2a700....0x2b734
+private let __prop_Ideographic_range_b: _T2 = 0x2b740....0x2b81d
+private let __prop_Ideographic_range_c: _T2 = 0x2b820....0x2cea1
+private let __prop_Ideographic_range_d: _T2 = 0x2ceb0....0x2ebe0
+private let __prop_Ideographic_range_e: _T2 = 0x2f800....0x2fa1d
+private let __prop_Ideographic_range_f: _T2 = 0x30000....0x3134a
 private let __prop_Ideographic_array: _T3 = [
   __prop_Ideographic_range_0,
   __prop_Ideographic_range_1,
@@ -578,6 +592,8 @@ private let __prop_Ideographic_array: _T3 = [
   __prop_Ideographic_range_b,
   __prop_Ideographic_range_c,
   __prop_Ideographic_range_d,
+  __prop_Ideographic_range_e,
+  __prop_Ideographic_range_f,
 ]
 private let __prop_Ideographic_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Ideographic_array)
 internal let _prop_Ideographic = UnicodeScalarValueSet(singleValues: __prop_Ideographic_set, ranges: __prop_Ideographic_ranges)
@@ -778,6 +794,7 @@ private let __prop_Other_Alphabetic_set: _T1 = [
   0xd57,
   0xd62,
   0xd63,
+  0xd81,
   0xd82,
   0xd83,
   0xdd6,
@@ -824,6 +841,8 @@ private let __prop_Other_Alphabetic_set: _T1 = [
   0x1885,
   0x1886,
   0x18a9,
+  0x1abf,
+  0x1ac0,
   0x1b80,
   0x1b81,
   0x1b82,
@@ -870,6 +889,8 @@ private let __prop_Other_Alphabetic_set: _T1 = [
   0x10d25,
   0x10d26,
   0x10d27,
+  0x10eab,
+  0x10eac,
   0x11000,
   0x11001,
   0x11002,
@@ -882,6 +903,8 @@ private let __prop_Other_Alphabetic_set: _T1 = [
   0x11180,
   0x11181,
   0x11182,
+  0x111ce,
+  0x111cf,
   0x11237,
   0x1123e,
   0x11300,
@@ -901,6 +924,12 @@ private let __prop_Other_Alphabetic_set: _T1 = [
   0x115dc,
   0x115dd,
   0x11640,
+  0x11937,
+  0x11938,
+  0x1193b,
+  0x1193c,
+  0x11940,
+  0x11942,
   0x119e4,
   0x11a3b,
   0x11a3c,
@@ -929,6 +958,8 @@ private let __prop_Other_Alphabetic_set: _T1 = [
   0x16f90,
   0x16f91,
   0x16f92,
+  0x16ff0,
+  0x16ff1,
   0x1bc9e,
   0x1e023,
   0x1e024,
@@ -1003,26 +1034,27 @@ private let __prop_Other_Alphabetic_range_1t: _T2 = 0x11630....0x1163e
 private let __prop_Other_Alphabetic_range_1u: _T2 = 0x116ab....0x116b5
 private let __prop_Other_Alphabetic_range_1v: _T2 = 0x1171d....0x1172a
 private let __prop_Other_Alphabetic_range_1w: _T2 = 0x1182c....0x11838
-private let __prop_Other_Alphabetic_range_1x: _T2 = 0x119d1....0x119d7
-private let __prop_Other_Alphabetic_range_1y: _T2 = 0x119da....0x119df
-private let __prop_Other_Alphabetic_range_1z: _T2 = 0x11a01....0x11a0a
-private let __prop_Other_Alphabetic_range_20: _T2 = 0x11a35....0x11a39
-private let __prop_Other_Alphabetic_range_21: _T2 = 0x11a51....0x11a5b
-private let __prop_Other_Alphabetic_range_22: _T2 = 0x11a8a....0x11a97
-private let __prop_Other_Alphabetic_range_23: _T2 = 0x11c2f....0x11c36
-private let __prop_Other_Alphabetic_range_24: _T2 = 0x11c38....0x11c3e
-private let __prop_Other_Alphabetic_range_25: _T2 = 0x11c92....0x11ca7
-private let __prop_Other_Alphabetic_range_26: _T2 = 0x11ca9....0x11cb6
-private let __prop_Other_Alphabetic_range_27: _T2 = 0x11d31....0x11d36
-private let __prop_Other_Alphabetic_range_28: _T2 = 0x11d8a....0x11d8e
-private let __prop_Other_Alphabetic_range_29: _T2 = 0x16f51....0x16f87
-private let __prop_Other_Alphabetic_range_2a: _T2 = 0x1e000....0x1e006
-private let __prop_Other_Alphabetic_range_2b: _T2 = 0x1e008....0x1e018
-private let __prop_Other_Alphabetic_range_2c: _T2 = 0x1e01b....0x1e021
-private let __prop_Other_Alphabetic_range_2d: _T2 = 0x1e026....0x1e02a
-private let __prop_Other_Alphabetic_range_2e: _T2 = 0x1f130....0x1f149
-private let __prop_Other_Alphabetic_range_2f: _T2 = 0x1f150....0x1f169
-private let __prop_Other_Alphabetic_range_2g: _T2 = 0x1f170....0x1f189
+private let __prop_Other_Alphabetic_range_1x: _T2 = 0x11930....0x11935
+private let __prop_Other_Alphabetic_range_1y: _T2 = 0x119d1....0x119d7
+private let __prop_Other_Alphabetic_range_1z: _T2 = 0x119da....0x119df
+private let __prop_Other_Alphabetic_range_20: _T2 = 0x11a01....0x11a0a
+private let __prop_Other_Alphabetic_range_21: _T2 = 0x11a35....0x11a39
+private let __prop_Other_Alphabetic_range_22: _T2 = 0x11a51....0x11a5b
+private let __prop_Other_Alphabetic_range_23: _T2 = 0x11a8a....0x11a97
+private let __prop_Other_Alphabetic_range_24: _T2 = 0x11c2f....0x11c36
+private let __prop_Other_Alphabetic_range_25: _T2 = 0x11c38....0x11c3e
+private let __prop_Other_Alphabetic_range_26: _T2 = 0x11c92....0x11ca7
+private let __prop_Other_Alphabetic_range_27: _T2 = 0x11ca9....0x11cb6
+private let __prop_Other_Alphabetic_range_28: _T2 = 0x11d31....0x11d36
+private let __prop_Other_Alphabetic_range_29: _T2 = 0x11d8a....0x11d8e
+private let __prop_Other_Alphabetic_range_2a: _T2 = 0x16f51....0x16f87
+private let __prop_Other_Alphabetic_range_2b: _T2 = 0x1e000....0x1e006
+private let __prop_Other_Alphabetic_range_2c: _T2 = 0x1e008....0x1e018
+private let __prop_Other_Alphabetic_range_2d: _T2 = 0x1e01b....0x1e021
+private let __prop_Other_Alphabetic_range_2e: _T2 = 0x1e026....0x1e02a
+private let __prop_Other_Alphabetic_range_2f: _T2 = 0x1f130....0x1f149
+private let __prop_Other_Alphabetic_range_2g: _T2 = 0x1f150....0x1f169
+private let __prop_Other_Alphabetic_range_2h: _T2 = 0x1f170....0x1f189
 private let __prop_Other_Alphabetic_array: _T3 = [
   __prop_Other_Alphabetic_range_0,
   __prop_Other_Alphabetic_range_1,
@@ -1113,6 +1145,7 @@ private let __prop_Other_Alphabetic_array: _T3 = [
   __prop_Other_Alphabetic_range_2e,
   __prop_Other_Alphabetic_range_2f,
   __prop_Other_Alphabetic_range_2g,
+  __prop_Other_Alphabetic_range_2h,
 ]
 private let __prop_Other_Alphabetic_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Other_Alphabetic_array)
 internal let _prop_Other_Alphabetic = UnicodeScalarValueSet(singleValues: __prop_Other_Alphabetic_set, ranges: __prop_Other_Alphabetic_ranges)
@@ -1164,6 +1197,7 @@ private let __prop_Other_Grapheme_Extend_set: _T1 = [
   0x114b0,
   0x114bd,
   0x115af,
+  0x11930,
   0x1d165,
 ]
 private let __prop_Other_Grapheme_Extend_range_0: _T2 = 0x1d16e....0x1d172
@@ -1757,6 +1791,8 @@ private let __prop_Sentence_Terminal_set: _T1 = [
   0x1173c,
   0x1173d,
   0x1173e,
+  0x11944,
+  0x11946,
   0x11a42,
   0x11a43,
   0x11a9b,
@@ -1965,6 +2001,7 @@ private let __prop_Terminal_Punctuation_set: _T1 = [
   0x1144b,
   0x1144c,
   0x1144d,
+  0x1145a,
   0x1145b,
   0x115c2,
   0x115c3,
@@ -1975,6 +2012,8 @@ private let __prop_Terminal_Punctuation_set: _T1 = [
   0x1173c,
   0x1173d,
   0x1173e,
+  0x11944,
+  0x11946,
   0x11a42,
   0x11a43,
   0x11a9b,
@@ -2046,13 +2085,14 @@ private let __prop_Unified_Ideograph_set: _T1 = [
   0xfa28,
   0xfa29,
 ]
-private let __prop_Unified_Ideograph_range_0: _T2 = 0x3400....0x4db5
-private let __prop_Unified_Ideograph_range_1: _T2 = 0x4e00....0x9fef
-private let __prop_Unified_Ideograph_range_2: _T2 = 0x20000....0x2a6d6
+private let __prop_Unified_Ideograph_range_0: _T2 = 0x3400....0x4dbf
+private let __prop_Unified_Ideograph_range_1: _T2 = 0x4e00....0x9ffc
+private let __prop_Unified_Ideograph_range_2: _T2 = 0x20000....0x2a6dd
 private let __prop_Unified_Ideograph_range_3: _T2 = 0x2a700....0x2b734
 private let __prop_Unified_Ideograph_range_4: _T2 = 0x2b740....0x2b81d
 private let __prop_Unified_Ideograph_range_5: _T2 = 0x2b820....0x2cea1
 private let __prop_Unified_Ideograph_range_6: _T2 = 0x2ceb0....0x2ebe0
+private let __prop_Unified_Ideograph_range_7: _T2 = 0x30000....0x3134a
 private let __prop_Unified_Ideograph_array: _T3 = [
   __prop_Unified_Ideograph_range_0,
   __prop_Unified_Ideograph_range_1,
@@ -2061,6 +2101,7 @@ private let __prop_Unified_Ideograph_array: _T3 = [
   __prop_Unified_Ideograph_range_4,
   __prop_Unified_Ideograph_range_5,
   __prop_Unified_Ideograph_range_6,
+  __prop_Unified_Ideograph_range_7,
 ]
 private let __prop_Unified_Ideograph_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Unified_Ideograph_array)
 internal let _prop_Unified_Ideograph = UnicodeScalarValueSet(singleValues: __prop_Unified_Ideograph_set, ranges: __prop_Unified_Ideograph_ranges)

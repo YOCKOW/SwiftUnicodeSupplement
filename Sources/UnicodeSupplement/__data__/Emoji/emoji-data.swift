@@ -5,7 +5,7 @@
 //
 // URL: https://unicode.org/Public/UCD/latest/ucd/emoji/emoji-data.txt
 // Last-Modified: 2020-01-28T23:59:49Z
-// ETag: "9660ba-19de7-59d3c04e0e740"
+// ETag: "19de7-59d3c04e0e740-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

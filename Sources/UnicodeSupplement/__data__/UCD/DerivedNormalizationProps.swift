@@ -5,7 +5,7 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/DerivedNormalizationProps.txt
 // Last-Modified: 2019-09-10T18:36:08Z
-// ETag: "9f401b-c86c0-592372d837600"
+// ETag: "c86c0-592372d837600-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

@@ -5,7 +5,7 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBinaryProperties.txt
 // Last-Modified: 2019-09-10T19:51:21Z
-// ETag: "9f8036-41e9-592383a826040"
+// ETag: "41e9-592383a826040-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

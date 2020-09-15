@@ -5,7 +5,7 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBidiClass.txt
 // Last-Modified: 2019-10-21T17:30:06Z
-// ETag: "9f803d-283c9-5956f08da8380"
+// ETag: "283c9-5956f08da8380-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE

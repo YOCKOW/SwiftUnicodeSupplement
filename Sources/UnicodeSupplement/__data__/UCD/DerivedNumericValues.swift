@@ -5,7 +5,7 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericValues.txt
 // Last-Modified: 2019-09-10T19:51:10Z
-// ETag: "9f802e-1ff59-5923839da8780"
+// ETag: "1ff59-5923839da8780-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
