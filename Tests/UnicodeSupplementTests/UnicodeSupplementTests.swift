@@ -133,6 +133,8 @@ final class UnicodeSupplementTests: XCTestCase {
     // not exhaustive
     XCTAssertEqual(jg("A"), .noJoiningGroup)
     XCTAssertEqual(jg("\u{066E}"), .beh)
+    XCTAssertEqual(jg("\u{0886}"), .thinYeh) // Unicode 14.0
+    XCTAssertEqual(jg("\u{088E}"), .verticalTail) // Unicode 14.0
   }
   
   
@@ -157,6 +159,7 @@ final class UnicodeSupplementTests: XCTestCase {
     XCTAssertEqual(name("\u{0000}"), nil)
     XCTAssertEqual(name("A"), "LATIN CAPITAL LETTER A")
     XCTAssertEqual(name("\u{3456}"), "CJK UNIFIED IDEOGRAPH-3456")
+    XCTAssertEqual(name("\u{1FAE0}"), "MELTING FACE") // Unicode 14.0
   }
   
   func test_nameAlias() {
