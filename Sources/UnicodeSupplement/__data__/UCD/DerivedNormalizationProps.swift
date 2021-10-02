@@ -4,8 +4,8 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/DerivedNormalizationProps.txt
-// Last-Modified: 2019-09-10T18:36:08Z
-// ETag: "c86c0-592372d837600-gzip"
+// Last-Modified: 2021-06-04T16:14:24Z
+// ETag: "cb166-5c3f2fc30be1d-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
@@ -20,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2021 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -425,10 +425,6 @@ private let __normProp_Changes_When_NFKC_Casefolded_set: _T1 = [
   0x1160,
   0x17b4,
   0x17b5,
-  0x180b,
-  0x180c,
-  0x180d,
-  0x180e,
   0x1cbd,
   0x1cbe,
   0x1cbf,
@@ -818,12 +814,19 @@ private let __normProp_Changes_When_NFKC_Casefolded_set: _T1 = [
   0xa7ba,
   0xa7bc,
   0xa7be,
+  0xa7c0,
   0xa7c2,
   0xa7c4,
   0xa7c5,
   0xa7c6,
   0xa7c7,
   0xa7c9,
+  0xa7d0,
+  0xa7d6,
+  0xa7d8,
+  0xa7f2,
+  0xa7f3,
+  0xa7f4,
   0xa7f5,
   0xa7f8,
   0xa7f9,
@@ -856,6 +859,8 @@ private let __normProp_Changes_When_NFKC_Casefolded_set: _T1 = [
   0xffda,
   0xffdb,
   0xffdc,
+  0x10594,
+  0x10595,
   0x1bca0,
   0x1bca1,
   0x1bca2,
@@ -954,109 +959,116 @@ private let __normProp_Changes_When_NFKC_Casefolded_range_d: _T2 = 0x958....0x95
 private let __normProp_Changes_When_NFKC_Casefolded_range_e: _T2 = 0xf75....0xf79
 private let __normProp_Changes_When_NFKC_Casefolded_range_f: _T2 = 0x10a0....0x10c5
 private let __normProp_Changes_When_NFKC_Casefolded_range_g: _T2 = 0x13f8....0x13fd
-private let __normProp_Changes_When_NFKC_Casefolded_range_h: _T2 = 0x1c80....0x1c88
-private let __normProp_Changes_When_NFKC_Casefolded_range_i: _T2 = 0x1c90....0x1cba
-private let __normProp_Changes_When_NFKC_Casefolded_range_j: _T2 = 0x1d30....0x1d3a
-private let __normProp_Changes_When_NFKC_Casefolded_range_k: _T2 = 0x1d3c....0x1d4d
-private let __normProp_Changes_When_NFKC_Casefolded_range_l: _T2 = 0x1d4f....0x1d6a
-private let __normProp_Changes_When_NFKC_Casefolded_range_m: _T2 = 0x1d9b....0x1dbf
-private let __normProp_Changes_When_NFKC_Casefolded_range_n: _T2 = 0x1f08....0x1f0f
-private let __normProp_Changes_When_NFKC_Casefolded_range_o: _T2 = 0x1f18....0x1f1d
-private let __normProp_Changes_When_NFKC_Casefolded_range_p: _T2 = 0x1f28....0x1f2f
-private let __normProp_Changes_When_NFKC_Casefolded_range_q: _T2 = 0x1f38....0x1f3f
-private let __normProp_Changes_When_NFKC_Casefolded_range_r: _T2 = 0x1f48....0x1f4d
-private let __normProp_Changes_When_NFKC_Casefolded_range_s: _T2 = 0x1f68....0x1f6f
-private let __normProp_Changes_When_NFKC_Casefolded_range_t: _T2 = 0x1f80....0x1faf
-private let __normProp_Changes_When_NFKC_Casefolded_range_u: _T2 = 0x1fb7....0x1fc4
-private let __normProp_Changes_When_NFKC_Casefolded_range_v: _T2 = 0x1fc7....0x1fcf
-private let __normProp_Changes_When_NFKC_Casefolded_range_w: _T2 = 0x1fe8....0x1fef
-private let __normProp_Changes_When_NFKC_Casefolded_range_x: _T2 = 0x1ff7....0x1ffe
-private let __normProp_Changes_When_NFKC_Casefolded_range_y: _T2 = 0x2000....0x200f
-private let __normProp_Changes_When_NFKC_Casefolded_range_z: _T2 = 0x202a....0x202f
-private let __normProp_Changes_When_NFKC_Casefolded_range_10: _T2 = 0x205f....0x2071
-private let __normProp_Changes_When_NFKC_Casefolded_range_11: _T2 = 0x2074....0x208e
-private let __normProp_Changes_When_NFKC_Casefolded_range_12: _T2 = 0x2090....0x209c
-private let __normProp_Changes_When_NFKC_Casefolded_range_13: _T2 = 0x2109....0x2113
-private let __normProp_Changes_When_NFKC_Casefolded_range_14: _T2 = 0x2119....0x211d
-private let __normProp_Changes_When_NFKC_Casefolded_range_15: _T2 = 0x212f....0x2139
-private let __normProp_Changes_When_NFKC_Casefolded_range_16: _T2 = 0x213b....0x2140
-private let __normProp_Changes_When_NFKC_Casefolded_range_17: _T2 = 0x2145....0x2149
-private let __normProp_Changes_When_NFKC_Casefolded_range_18: _T2 = 0x2150....0x217f
-private let __normProp_Changes_When_NFKC_Casefolded_range_19: _T2 = 0x2460....0x24ea
-private let __normProp_Changes_When_NFKC_Casefolded_range_1a: _T2 = 0x2c00....0x2c2e
-private let __normProp_Changes_When_NFKC_Casefolded_range_1b: _T2 = 0x2c7c....0x2c80
-private let __normProp_Changes_When_NFKC_Casefolded_range_1c: _T2 = 0x2f00....0x2fd5
-private let __normProp_Changes_When_NFKC_Casefolded_range_1d: _T2 = 0x3131....0x318e
-private let __normProp_Changes_When_NFKC_Casefolded_range_1e: _T2 = 0x3192....0x319f
-private let __normProp_Changes_When_NFKC_Casefolded_range_1f: _T2 = 0x3200....0x321e
-private let __normProp_Changes_When_NFKC_Casefolded_range_1g: _T2 = 0x3220....0x3247
-private let __normProp_Changes_When_NFKC_Casefolded_range_1h: _T2 = 0x3250....0x327e
-private let __normProp_Changes_When_NFKC_Casefolded_range_1i: _T2 = 0x3280....0x33ff
-private let __normProp_Changes_When_NFKC_Casefolded_range_1j: _T2 = 0xa7aa....0xa7ae
-private let __normProp_Changes_When_NFKC_Casefolded_range_1k: _T2 = 0xa7b0....0xa7b4
-private let __normProp_Changes_When_NFKC_Casefolded_range_1l: _T2 = 0xab70....0xabbf
-private let __normProp_Changes_When_NFKC_Casefolded_range_1m: _T2 = 0xf900....0xfa0d
-private let __normProp_Changes_When_NFKC_Casefolded_range_1n: _T2 = 0xfa15....0xfa1e
-private let __normProp_Changes_When_NFKC_Casefolded_range_1o: _T2 = 0xfa2a....0xfa6d
-private let __normProp_Changes_When_NFKC_Casefolded_range_1p: _T2 = 0xfa70....0xfad9
-private let __normProp_Changes_When_NFKC_Casefolded_range_1q: _T2 = 0xfb00....0xfb06
-private let __normProp_Changes_When_NFKC_Casefolded_range_1r: _T2 = 0xfb13....0xfb17
-private let __normProp_Changes_When_NFKC_Casefolded_range_1s: _T2 = 0xfb1f....0xfb36
-private let __normProp_Changes_When_NFKC_Casefolded_range_1t: _T2 = 0xfb38....0xfb3c
-private let __normProp_Changes_When_NFKC_Casefolded_range_1u: _T2 = 0xfb46....0xfbb1
-private let __normProp_Changes_When_NFKC_Casefolded_range_1v: _T2 = 0xfbd3....0xfd3d
-private let __normProp_Changes_When_NFKC_Casefolded_range_1w: _T2 = 0xfd50....0xfd8f
-private let __normProp_Changes_When_NFKC_Casefolded_range_1x: _T2 = 0xfd92....0xfdc7
-private let __normProp_Changes_When_NFKC_Casefolded_range_1y: _T2 = 0xfdf0....0xfdfc
-private let __normProp_Changes_When_NFKC_Casefolded_range_1z: _T2 = 0xfe00....0xfe19
-private let __normProp_Changes_When_NFKC_Casefolded_range_20: _T2 = 0xfe30....0xfe44
-private let __normProp_Changes_When_NFKC_Casefolded_range_21: _T2 = 0xfe47....0xfe52
-private let __normProp_Changes_When_NFKC_Casefolded_range_22: _T2 = 0xfe54....0xfe66
-private let __normProp_Changes_When_NFKC_Casefolded_range_23: _T2 = 0xfe76....0xfefc
-private let __normProp_Changes_When_NFKC_Casefolded_range_24: _T2 = 0xff01....0xffbe
-private let __normProp_Changes_When_NFKC_Casefolded_range_25: _T2 = 0xffc2....0xffc7
-private let __normProp_Changes_When_NFKC_Casefolded_range_26: _T2 = 0xffca....0xffcf
-private let __normProp_Changes_When_NFKC_Casefolded_range_27: _T2 = 0xffd2....0xffd7
-private let __normProp_Changes_When_NFKC_Casefolded_range_28: _T2 = 0xffe0....0xffe6
-private let __normProp_Changes_When_NFKC_Casefolded_range_29: _T2 = 0xffe8....0xffee
-private let __normProp_Changes_When_NFKC_Casefolded_range_2a: _T2 = 0xfff0....0xfff8
-private let __normProp_Changes_When_NFKC_Casefolded_range_2b: _T2 = 0x10400....0x10427
-private let __normProp_Changes_When_NFKC_Casefolded_range_2c: _T2 = 0x104b0....0x104d3
-private let __normProp_Changes_When_NFKC_Casefolded_range_2d: _T2 = 0x10c80....0x10cb2
-private let __normProp_Changes_When_NFKC_Casefolded_range_2e: _T2 = 0x118a0....0x118bf
-private let __normProp_Changes_When_NFKC_Casefolded_range_2f: _T2 = 0x16e40....0x16e5f
-private let __normProp_Changes_When_NFKC_Casefolded_range_2g: _T2 = 0x1d15e....0x1d164
-private let __normProp_Changes_When_NFKC_Casefolded_range_2h: _T2 = 0x1d173....0x1d17a
-private let __normProp_Changes_When_NFKC_Casefolded_range_2i: _T2 = 0x1d1bb....0x1d1c0
-private let __normProp_Changes_When_NFKC_Casefolded_range_2j: _T2 = 0x1d400....0x1d454
-private let __normProp_Changes_When_NFKC_Casefolded_range_2k: _T2 = 0x1d456....0x1d49c
-private let __normProp_Changes_When_NFKC_Casefolded_range_2l: _T2 = 0x1d4ae....0x1d4b9
-private let __normProp_Changes_When_NFKC_Casefolded_range_2m: _T2 = 0x1d4bd....0x1d4c3
-private let __normProp_Changes_When_NFKC_Casefolded_range_2n: _T2 = 0x1d4c5....0x1d505
-private let __normProp_Changes_When_NFKC_Casefolded_range_2o: _T2 = 0x1d50d....0x1d514
-private let __normProp_Changes_When_NFKC_Casefolded_range_2p: _T2 = 0x1d516....0x1d51c
-private let __normProp_Changes_When_NFKC_Casefolded_range_2q: _T2 = 0x1d51e....0x1d539
-private let __normProp_Changes_When_NFKC_Casefolded_range_2r: _T2 = 0x1d540....0x1d544
-private let __normProp_Changes_When_NFKC_Casefolded_range_2s: _T2 = 0x1d54a....0x1d550
-private let __normProp_Changes_When_NFKC_Casefolded_range_2t: _T2 = 0x1d552....0x1d6a5
-private let __normProp_Changes_When_NFKC_Casefolded_range_2u: _T2 = 0x1d6a8....0x1d7cb
-private let __normProp_Changes_When_NFKC_Casefolded_range_2v: _T2 = 0x1d7ce....0x1d7ff
-private let __normProp_Changes_When_NFKC_Casefolded_range_2w: _T2 = 0x1e900....0x1e921
-private let __normProp_Changes_When_NFKC_Casefolded_range_2x: _T2 = 0x1ee05....0x1ee1f
-private let __normProp_Changes_When_NFKC_Casefolded_range_2y: _T2 = 0x1ee29....0x1ee32
-private let __normProp_Changes_When_NFKC_Casefolded_range_2z: _T2 = 0x1ee6c....0x1ee72
-private let __normProp_Changes_When_NFKC_Casefolded_range_30: _T2 = 0x1ee80....0x1ee89
-private let __normProp_Changes_When_NFKC_Casefolded_range_31: _T2 = 0x1ee8b....0x1ee9b
-private let __normProp_Changes_When_NFKC_Casefolded_range_32: _T2 = 0x1eea5....0x1eea9
-private let __normProp_Changes_When_NFKC_Casefolded_range_33: _T2 = 0x1eeab....0x1eebb
-private let __normProp_Changes_When_NFKC_Casefolded_range_34: _T2 = 0x1f100....0x1f10a
-private let __normProp_Changes_When_NFKC_Casefolded_range_35: _T2 = 0x1f110....0x1f12e
-private let __normProp_Changes_When_NFKC_Casefolded_range_36: _T2 = 0x1f130....0x1f14f
-private let __normProp_Changes_When_NFKC_Casefolded_range_37: _T2 = 0x1f210....0x1f23b
-private let __normProp_Changes_When_NFKC_Casefolded_range_38: _T2 = 0x1f240....0x1f248
-private let __normProp_Changes_When_NFKC_Casefolded_range_39: _T2 = 0x1fbf0....0x1fbf9
-private let __normProp_Changes_When_NFKC_Casefolded_range_3a: _T2 = 0x2f800....0x2fa1d
-private let __normProp_Changes_When_NFKC_Casefolded_range_3b: _T2 = 0xe0000....0xe0fff
+private let __normProp_Changes_When_NFKC_Casefolded_range_h: _T2 = 0x180b....0x180f
+private let __normProp_Changes_When_NFKC_Casefolded_range_i: _T2 = 0x1c80....0x1c88
+private let __normProp_Changes_When_NFKC_Casefolded_range_j: _T2 = 0x1c90....0x1cba
+private let __normProp_Changes_When_NFKC_Casefolded_range_k: _T2 = 0x1d30....0x1d3a
+private let __normProp_Changes_When_NFKC_Casefolded_range_l: _T2 = 0x1d3c....0x1d4d
+private let __normProp_Changes_When_NFKC_Casefolded_range_m: _T2 = 0x1d4f....0x1d6a
+private let __normProp_Changes_When_NFKC_Casefolded_range_n: _T2 = 0x1d9b....0x1dbf
+private let __normProp_Changes_When_NFKC_Casefolded_range_o: _T2 = 0x1f08....0x1f0f
+private let __normProp_Changes_When_NFKC_Casefolded_range_p: _T2 = 0x1f18....0x1f1d
+private let __normProp_Changes_When_NFKC_Casefolded_range_q: _T2 = 0x1f28....0x1f2f
+private let __normProp_Changes_When_NFKC_Casefolded_range_r: _T2 = 0x1f38....0x1f3f
+private let __normProp_Changes_When_NFKC_Casefolded_range_s: _T2 = 0x1f48....0x1f4d
+private let __normProp_Changes_When_NFKC_Casefolded_range_t: _T2 = 0x1f68....0x1f6f
+private let __normProp_Changes_When_NFKC_Casefolded_range_u: _T2 = 0x1f80....0x1faf
+private let __normProp_Changes_When_NFKC_Casefolded_range_v: _T2 = 0x1fb7....0x1fc4
+private let __normProp_Changes_When_NFKC_Casefolded_range_w: _T2 = 0x1fc7....0x1fcf
+private let __normProp_Changes_When_NFKC_Casefolded_range_x: _T2 = 0x1fe8....0x1fef
+private let __normProp_Changes_When_NFKC_Casefolded_range_y: _T2 = 0x1ff7....0x1ffe
+private let __normProp_Changes_When_NFKC_Casefolded_range_z: _T2 = 0x2000....0x200f
+private let __normProp_Changes_When_NFKC_Casefolded_range_10: _T2 = 0x202a....0x202f
+private let __normProp_Changes_When_NFKC_Casefolded_range_11: _T2 = 0x205f....0x2071
+private let __normProp_Changes_When_NFKC_Casefolded_range_12: _T2 = 0x2074....0x208e
+private let __normProp_Changes_When_NFKC_Casefolded_range_13: _T2 = 0x2090....0x209c
+private let __normProp_Changes_When_NFKC_Casefolded_range_14: _T2 = 0x2109....0x2113
+private let __normProp_Changes_When_NFKC_Casefolded_range_15: _T2 = 0x2119....0x211d
+private let __normProp_Changes_When_NFKC_Casefolded_range_16: _T2 = 0x212f....0x2139
+private let __normProp_Changes_When_NFKC_Casefolded_range_17: _T2 = 0x213b....0x2140
+private let __normProp_Changes_When_NFKC_Casefolded_range_18: _T2 = 0x2145....0x2149
+private let __normProp_Changes_When_NFKC_Casefolded_range_19: _T2 = 0x2150....0x217f
+private let __normProp_Changes_When_NFKC_Casefolded_range_1a: _T2 = 0x2460....0x24ea
+private let __normProp_Changes_When_NFKC_Casefolded_range_1b: _T2 = 0x2c00....0x2c2f
+private let __normProp_Changes_When_NFKC_Casefolded_range_1c: _T2 = 0x2c7c....0x2c80
+private let __normProp_Changes_When_NFKC_Casefolded_range_1d: _T2 = 0x2f00....0x2fd5
+private let __normProp_Changes_When_NFKC_Casefolded_range_1e: _T2 = 0x3131....0x318e
+private let __normProp_Changes_When_NFKC_Casefolded_range_1f: _T2 = 0x3192....0x319f
+private let __normProp_Changes_When_NFKC_Casefolded_range_1g: _T2 = 0x3200....0x321e
+private let __normProp_Changes_When_NFKC_Casefolded_range_1h: _T2 = 0x3220....0x3247
+private let __normProp_Changes_When_NFKC_Casefolded_range_1i: _T2 = 0x3250....0x327e
+private let __normProp_Changes_When_NFKC_Casefolded_range_1j: _T2 = 0x3280....0x33ff
+private let __normProp_Changes_When_NFKC_Casefolded_range_1k: _T2 = 0xa7aa....0xa7ae
+private let __normProp_Changes_When_NFKC_Casefolded_range_1l: _T2 = 0xa7b0....0xa7b4
+private let __normProp_Changes_When_NFKC_Casefolded_range_1m: _T2 = 0xab70....0xabbf
+private let __normProp_Changes_When_NFKC_Casefolded_range_1n: _T2 = 0xf900....0xfa0d
+private let __normProp_Changes_When_NFKC_Casefolded_range_1o: _T2 = 0xfa15....0xfa1e
+private let __normProp_Changes_When_NFKC_Casefolded_range_1p: _T2 = 0xfa2a....0xfa6d
+private let __normProp_Changes_When_NFKC_Casefolded_range_1q: _T2 = 0xfa70....0xfad9
+private let __normProp_Changes_When_NFKC_Casefolded_range_1r: _T2 = 0xfb00....0xfb06
+private let __normProp_Changes_When_NFKC_Casefolded_range_1s: _T2 = 0xfb13....0xfb17
+private let __normProp_Changes_When_NFKC_Casefolded_range_1t: _T2 = 0xfb1f....0xfb36
+private let __normProp_Changes_When_NFKC_Casefolded_range_1u: _T2 = 0xfb38....0xfb3c
+private let __normProp_Changes_When_NFKC_Casefolded_range_1v: _T2 = 0xfb46....0xfbb1
+private let __normProp_Changes_When_NFKC_Casefolded_range_1w: _T2 = 0xfbd3....0xfd3d
+private let __normProp_Changes_When_NFKC_Casefolded_range_1x: _T2 = 0xfd50....0xfd8f
+private let __normProp_Changes_When_NFKC_Casefolded_range_1y: _T2 = 0xfd92....0xfdc7
+private let __normProp_Changes_When_NFKC_Casefolded_range_1z: _T2 = 0xfdf0....0xfdfc
+private let __normProp_Changes_When_NFKC_Casefolded_range_20: _T2 = 0xfe00....0xfe19
+private let __normProp_Changes_When_NFKC_Casefolded_range_21: _T2 = 0xfe30....0xfe44
+private let __normProp_Changes_When_NFKC_Casefolded_range_22: _T2 = 0xfe47....0xfe52
+private let __normProp_Changes_When_NFKC_Casefolded_range_23: _T2 = 0xfe54....0xfe66
+private let __normProp_Changes_When_NFKC_Casefolded_range_24: _T2 = 0xfe76....0xfefc
+private let __normProp_Changes_When_NFKC_Casefolded_range_25: _T2 = 0xff01....0xffbe
+private let __normProp_Changes_When_NFKC_Casefolded_range_26: _T2 = 0xffc2....0xffc7
+private let __normProp_Changes_When_NFKC_Casefolded_range_27: _T2 = 0xffca....0xffcf
+private let __normProp_Changes_When_NFKC_Casefolded_range_28: _T2 = 0xffd2....0xffd7
+private let __normProp_Changes_When_NFKC_Casefolded_range_29: _T2 = 0xffe0....0xffe6
+private let __normProp_Changes_When_NFKC_Casefolded_range_2a: _T2 = 0xffe8....0xffee
+private let __normProp_Changes_When_NFKC_Casefolded_range_2b: _T2 = 0xfff0....0xfff8
+private let __normProp_Changes_When_NFKC_Casefolded_range_2c: _T2 = 0x10400....0x10427
+private let __normProp_Changes_When_NFKC_Casefolded_range_2d: _T2 = 0x104b0....0x104d3
+private let __normProp_Changes_When_NFKC_Casefolded_range_2e: _T2 = 0x10570....0x1057a
+private let __normProp_Changes_When_NFKC_Casefolded_range_2f: _T2 = 0x1057c....0x1058a
+private let __normProp_Changes_When_NFKC_Casefolded_range_2g: _T2 = 0x1058c....0x10592
+private let __normProp_Changes_When_NFKC_Casefolded_range_2h: _T2 = 0x10781....0x10785
+private let __normProp_Changes_When_NFKC_Casefolded_range_2i: _T2 = 0x10787....0x107b0
+private let __normProp_Changes_When_NFKC_Casefolded_range_2j: _T2 = 0x107b2....0x107ba
+private let __normProp_Changes_When_NFKC_Casefolded_range_2k: _T2 = 0x10c80....0x10cb2
+private let __normProp_Changes_When_NFKC_Casefolded_range_2l: _T2 = 0x118a0....0x118bf
+private let __normProp_Changes_When_NFKC_Casefolded_range_2m: _T2 = 0x16e40....0x16e5f
+private let __normProp_Changes_When_NFKC_Casefolded_range_2n: _T2 = 0x1d15e....0x1d164
+private let __normProp_Changes_When_NFKC_Casefolded_range_2o: _T2 = 0x1d173....0x1d17a
+private let __normProp_Changes_When_NFKC_Casefolded_range_2p: _T2 = 0x1d1bb....0x1d1c0
+private let __normProp_Changes_When_NFKC_Casefolded_range_2q: _T2 = 0x1d400....0x1d454
+private let __normProp_Changes_When_NFKC_Casefolded_range_2r: _T2 = 0x1d456....0x1d49c
+private let __normProp_Changes_When_NFKC_Casefolded_range_2s: _T2 = 0x1d4ae....0x1d4b9
+private let __normProp_Changes_When_NFKC_Casefolded_range_2t: _T2 = 0x1d4bd....0x1d4c3
+private let __normProp_Changes_When_NFKC_Casefolded_range_2u: _T2 = 0x1d4c5....0x1d505
+private let __normProp_Changes_When_NFKC_Casefolded_range_2v: _T2 = 0x1d50d....0x1d514
+private let __normProp_Changes_When_NFKC_Casefolded_range_2w: _T2 = 0x1d516....0x1d51c
+private let __normProp_Changes_When_NFKC_Casefolded_range_2x: _T2 = 0x1d51e....0x1d539
+private let __normProp_Changes_When_NFKC_Casefolded_range_2y: _T2 = 0x1d540....0x1d544
+private let __normProp_Changes_When_NFKC_Casefolded_range_2z: _T2 = 0x1d54a....0x1d550
+private let __normProp_Changes_When_NFKC_Casefolded_range_30: _T2 = 0x1d552....0x1d6a5
+private let __normProp_Changes_When_NFKC_Casefolded_range_31: _T2 = 0x1d6a8....0x1d7cb
+private let __normProp_Changes_When_NFKC_Casefolded_range_32: _T2 = 0x1d7ce....0x1d7ff
+private let __normProp_Changes_When_NFKC_Casefolded_range_33: _T2 = 0x1e900....0x1e921
+private let __normProp_Changes_When_NFKC_Casefolded_range_34: _T2 = 0x1ee05....0x1ee1f
+private let __normProp_Changes_When_NFKC_Casefolded_range_35: _T2 = 0x1ee29....0x1ee32
+private let __normProp_Changes_When_NFKC_Casefolded_range_36: _T2 = 0x1ee6c....0x1ee72
+private let __normProp_Changes_When_NFKC_Casefolded_range_37: _T2 = 0x1ee80....0x1ee89
+private let __normProp_Changes_When_NFKC_Casefolded_range_38: _T2 = 0x1ee8b....0x1ee9b
+private let __normProp_Changes_When_NFKC_Casefolded_range_39: _T2 = 0x1eea5....0x1eea9
+private let __normProp_Changes_When_NFKC_Casefolded_range_3a: _T2 = 0x1eeab....0x1eebb
+private let __normProp_Changes_When_NFKC_Casefolded_range_3b: _T2 = 0x1f100....0x1f10a
+private let __normProp_Changes_When_NFKC_Casefolded_range_3c: _T2 = 0x1f110....0x1f12e
+private let __normProp_Changes_When_NFKC_Casefolded_range_3d: _T2 = 0x1f130....0x1f14f
+private let __normProp_Changes_When_NFKC_Casefolded_range_3e: _T2 = 0x1f210....0x1f23b
+private let __normProp_Changes_When_NFKC_Casefolded_range_3f: _T2 = 0x1f240....0x1f248
+private let __normProp_Changes_When_NFKC_Casefolded_range_3g: _T2 = 0x1fbf0....0x1fbf9
+private let __normProp_Changes_When_NFKC_Casefolded_range_3h: _T2 = 0x2f800....0x2fa1d
+private let __normProp_Changes_When_NFKC_Casefolded_range_3i: _T2 = 0xe0000....0xe0fff
 private let __normProp_Changes_When_NFKC_Casefolded_array: _T3 = [
   __normProp_Changes_When_NFKC_Casefolded_range_0,
   __normProp_Changes_When_NFKC_Casefolded_range_1,
@@ -1178,6 +1190,13 @@ private let __normProp_Changes_When_NFKC_Casefolded_array: _T3 = [
   __normProp_Changes_When_NFKC_Casefolded_range_39,
   __normProp_Changes_When_NFKC_Casefolded_range_3a,
   __normProp_Changes_When_NFKC_Casefolded_range_3b,
+  __normProp_Changes_When_NFKC_Casefolded_range_3c,
+  __normProp_Changes_When_NFKC_Casefolded_range_3d,
+  __normProp_Changes_When_NFKC_Casefolded_range_3e,
+  __normProp_Changes_When_NFKC_Casefolded_range_3f,
+  __normProp_Changes_When_NFKC_Casefolded_range_3g,
+  __normProp_Changes_When_NFKC_Casefolded_range_3h,
+  __normProp_Changes_When_NFKC_Casefolded_range_3i,
 ]
 private let __normProp_Changes_When_NFKC_Casefolded_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __normProp_Changes_When_NFKC_Casefolded_array)
 internal let _normProp_Changes_When_NFKC_Casefolded = UnicodeScalarValueSet(singleValues: __normProp_Changes_When_NFKC_Casefolded_set, ranges: __normProp_Changes_When_NFKC_Casefolded_ranges)

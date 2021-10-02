@@ -4,8 +4,8 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt
-// Last-Modified: 2019-09-10T19:51:11Z
-// ETag: "4c7c-5923839e9c9c0-gzip"
+// Last-Modified: 2021-03-11T21:42:34Z
+// ETag: "4cc4-5bd49a9555aae-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
@@ -20,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2021 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -464,21 +464,22 @@ private let __nt_rangePair_33: _T2 = (0x11da0....0x11da9, .decimal)
 private let __nt_rangePair_34: _T2 = (0x11fc0....0x11fd4, .numeric)
 private let __nt_rangePair_35: _T2 = (0x12400....0x1246e, .numeric)
 private let __nt_rangePair_36: _T2 = (0x16a60....0x16a69, .decimal)
-private let __nt_rangePair_37: _T2 = (0x16b50....0x16b59, .decimal)
-private let __nt_rangePair_38: _T2 = (0x16b5b....0x16b61, .numeric)
-private let __nt_rangePair_39: _T2 = (0x16e80....0x16e96, .numeric)
-private let __nt_rangePair_3a: _T2 = (0x1d2e0....0x1d2f3, .numeric)
-private let __nt_rangePair_3b: _T2 = (0x1d360....0x1d378, .numeric)
-private let __nt_rangePair_3c: _T2 = (0x1d7ce....0x1d7ff, .decimal)
-private let __nt_rangePair_3d: _T2 = (0x1e140....0x1e149, .decimal)
-private let __nt_rangePair_3e: _T2 = (0x1e2f0....0x1e2f9, .decimal)
-private let __nt_rangePair_3f: _T2 = (0x1e8c7....0x1e8cf, .numeric)
-private let __nt_rangePair_3g: _T2 = (0x1e950....0x1e959, .decimal)
-private let __nt_rangePair_3h: _T2 = (0x1ec71....0x1ecab, .numeric)
-private let __nt_rangePair_3i: _T2 = (0x1ed01....0x1ed2d, .numeric)
-private let __nt_rangePair_3j: _T2 = (0x1ed2f....0x1ed3d, .numeric)
-private let __nt_rangePair_3k: _T2 = (0x1f100....0x1f10a, .digit)
-private let __nt_rangePair_3l: _T2 = (0x1fbf0....0x1fbf9, .decimal)
+private let __nt_rangePair_37: _T2 = (0x16ac0....0x16ac9, .decimal)
+private let __nt_rangePair_38: _T2 = (0x16b50....0x16b59, .decimal)
+private let __nt_rangePair_39: _T2 = (0x16b5b....0x16b61, .numeric)
+private let __nt_rangePair_3a: _T2 = (0x16e80....0x16e96, .numeric)
+private let __nt_rangePair_3b: _T2 = (0x1d2e0....0x1d2f3, .numeric)
+private let __nt_rangePair_3c: _T2 = (0x1d360....0x1d378, .numeric)
+private let __nt_rangePair_3d: _T2 = (0x1d7ce....0x1d7ff, .decimal)
+private let __nt_rangePair_3e: _T2 = (0x1e140....0x1e149, .decimal)
+private let __nt_rangePair_3f: _T2 = (0x1e2f0....0x1e2f9, .decimal)
+private let __nt_rangePair_3g: _T2 = (0x1e8c7....0x1e8cf, .numeric)
+private let __nt_rangePair_3h: _T2 = (0x1e950....0x1e959, .decimal)
+private let __nt_rangePair_3i: _T2 = (0x1ec71....0x1ecab, .numeric)
+private let __nt_rangePair_3j: _T2 = (0x1ed01....0x1ed2d, .numeric)
+private let __nt_rangePair_3k: _T2 = (0x1ed2f....0x1ed3d, .numeric)
+private let __nt_rangePair_3l: _T2 = (0x1f100....0x1f10a, .digit)
+private let __nt_rangePair_3m: _T2 = (0x1fbf0....0x1fbf9, .decimal)
 private let __nt_rangePairArray: _T3 = [
   __nt_rangePair_0,
   __nt_rangePair_1,
@@ -610,6 +611,7 @@ private let __nt_rangePairArray: _T3 = [
   __nt_rangePair_3j,
   __nt_rangePair_3k,
   __nt_rangePair_3l,
+  __nt_rangePair_3m,
 ]
 private let __nt_rangeDictionary = RangeDictionary<Unicode.Scalar.Value, _T0>(carefullySortedRangesAndValues: __nt_rangePairArray)
 internal let _nt = UnicodeScalarValueDictionary<Unicode.NumericType>(dictionary: __nt_dictionary, rangeDictionary: __nt_rangeDictionary)

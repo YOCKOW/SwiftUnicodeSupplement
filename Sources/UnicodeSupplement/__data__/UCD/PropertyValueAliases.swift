@@ -4,8 +4,8 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt
-// Last-Modified: 2019-11-13T23:04:13Z
-// ETag: "1279d-5974262191540-gzip"
+// Last-Modified: 2021-05-11T17:50:44Z
+// ETag: "12bd7-5c2118889af19-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
@@ -20,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2021 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -574,6 +574,8 @@ extension Unicode {
     case tehMarbutaGoal
     public static let hamzaOnHehGoal: JoiningGroup = .tehMarbutaGoal
     case teth
+    case thinYeh
+    case verticalTail
     case waw
     case yeh
     case yehBarree
@@ -682,6 +684,8 @@ extension Unicode.JoiningGroup {
     case "Teh_Marbuta": self = .tehMarbuta
     case "Teh_Marbuta_Goal", "Hamza_On_Heh_Goal": self = .tehMarbutaGoal
     case "Teth": self = .teth
+    case "Thin_Yeh": self = .thinYeh
+    case "Vertical_Tail": self = .verticalTail
     case "Waw": self = .waw
     case "Yeh": self = .yeh
     case "Yeh_Barree": self = .yehBarree
@@ -887,6 +891,7 @@ extension Unicode {
     case cherokee
     case chorasmian
     case coptic
+    case cyproMinoan
     case cypriot
     case cyrillic
     case devanagari
@@ -966,6 +971,7 @@ extension Unicode {
     case oriya
     case osage
     case osmanya
+    case oldUyghur
     case palmyrene
     case pauCinHau
     case oldPermic
@@ -1008,8 +1014,11 @@ extension Unicode {
     case thai
     case tibetan
     case tirhuta
+    case tangsa
+    case toto
     case ugaritic
     case vai
+    case vithkuqi
     case warangCiti
     case wancho
     case oldPersian
@@ -1051,6 +1060,7 @@ extension Unicode.Script {
     case "Cherokee": self = .cherokee
     case "Chorasmian": self = .chorasmian
     case "Coptic": self = .coptic
+    case "Cypro_Minoan": self = .cyproMinoan
     case "Cypriot": self = .cypriot
     case "Cyrillic": self = .cyrillic
     case "Devanagari": self = .devanagari
@@ -1130,6 +1140,7 @@ extension Unicode.Script {
     case "Oriya": self = .oriya
     case "Osage": self = .osage
     case "Osmanya": self = .osmanya
+    case "Old_Uyghur": self = .oldUyghur
     case "Palmyrene": self = .palmyrene
     case "Pau_Cin_Hau": self = .pauCinHau
     case "Old_Permic": self = .oldPermic
@@ -1172,8 +1183,11 @@ extension Unicode.Script {
     case "Thai": self = .thai
     case "Tibetan": self = .tibetan
     case "Tirhuta": self = .tirhuta
+    case "Tangsa": self = .tangsa
+    case "Toto": self = .toto
     case "Ugaritic": self = .ugaritic
     case "Vai": self = .vai
+    case "Vithkuqi": self = .vithkuqi
     case "Warang_Citi": self = .warangCiti
     case "Wancho": self = .wancho
     case "Old_Persian": self = .oldPersian
@@ -1217,6 +1231,7 @@ extension Unicode.Script {
     case "Chrs": self = .chorasmian
     case "Qaac": self = .coptic // alias
     case "Copt": self = .coptic
+    case "Cpmn": self = .cyproMinoan
     case "Cprt": self = .cypriot
     case "Cyrl": self = .cyrillic
     case "Deva": self = .devanagari
@@ -1296,6 +1311,7 @@ extension Unicode.Script {
     case "Orya": self = .oriya
     case "Osge": self = .osage
     case "Osma": self = .osmanya
+    case "Ougr": self = .oldUyghur
     case "Palm": self = .palmyrene
     case "Pauc": self = .pauCinHau
     case "Perm": self = .oldPermic
@@ -1338,8 +1354,11 @@ extension Unicode.Script {
     case "Thai": self = .thai
     case "Tibt": self = .tibetan
     case "Tirh": self = .tirhuta
+    case "Tnsa": self = .tangsa
+    case "Toto": self = .toto
     case "Ugar": self = .ugaritic
     case "Vaii": self = .vai
+    case "Vith": self = .vithkuqi
     case "Wara": self = .warangCiti
     case "Wcho": self = .wancho
     case "Xpeo": self = .oldPersian

@@ -4,8 +4,8 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBinaryProperties.txt
-// Last-Modified: 2019-09-10T19:51:21Z
-// ETag: "41e9-592383a826040-gzip"
+// Last-Modified: 2021-06-04T16:15:20Z
+// ETag: "4432-5c3f2ff90f0d2-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
@@ -20,7 +20,7 @@
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2020 Unicode, Inc. All rights reserved.
+  Copyright © 1991-2021 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
@@ -249,9 +249,10 @@ private let __binProp_Bidi_Mirrored_range_l: _T2 = 0x2aaf....0x2ad6
 private let __binProp_Bidi_Mirrored_range_m: _T2 = 0x2ae2....0x2ae6
 private let __binProp_Bidi_Mirrored_range_n: _T2 = 0x2af7....0x2afb
 private let __binProp_Bidi_Mirrored_range_o: _T2 = 0x2e20....0x2e29
-private let __binProp_Bidi_Mirrored_range_p: _T2 = 0x3008....0x3011
-private let __binProp_Bidi_Mirrored_range_q: _T2 = 0x3014....0x301b
-private let __binProp_Bidi_Mirrored_range_r: _T2 = 0xfe59....0xfe5e
+private let __binProp_Bidi_Mirrored_range_p: _T2 = 0x2e55....0x2e5c
+private let __binProp_Bidi_Mirrored_range_q: _T2 = 0x3008....0x3011
+private let __binProp_Bidi_Mirrored_range_r: _T2 = 0x3014....0x301b
+private let __binProp_Bidi_Mirrored_range_s: _T2 = 0xfe59....0xfe5e
 private let __binProp_Bidi_Mirrored_array: _T3 = [
   __binProp_Bidi_Mirrored_range_0,
   __binProp_Bidi_Mirrored_range_1,
@@ -281,6 +282,7 @@ private let __binProp_Bidi_Mirrored_array: _T3 = [
   __binProp_Bidi_Mirrored_range_p,
   __binProp_Bidi_Mirrored_range_q,
   __binProp_Bidi_Mirrored_range_r,
+  __binProp_Bidi_Mirrored_range_s,
 ]
 private let __binProp_Bidi_Mirrored_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __binProp_Bidi_Mirrored_array)
 internal let _binProp_Bidi_Mirrored = UnicodeScalarValueSet(singleValues: __binProp_Bidi_Mirrored_set, ranges: __binProp_Bidi_Mirrored_ranges)
