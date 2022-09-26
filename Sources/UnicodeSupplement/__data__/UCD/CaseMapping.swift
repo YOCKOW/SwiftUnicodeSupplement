@@ -4,18 +4,19 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
-// Last-Modified: 2021-07-06T17:31:05Z
-// ETag: "1cf541-5c677c959d850-gzip"
+// Last-Modified: 2022-08-03T22:00:26Z
+// ETag: "1d3368-5e55d5c44e7ee-gzip"
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/SpecialCasing.txt
-// Last-Modified: 2021-03-11T20:20:44Z
-// ETag: "41be-5bd4884a5b187-gzip"
+// Last-Modified: 2022-04-27T15:40:03Z
+// ETag: "41c0-5dda49f7f67a4-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
   
-  See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
-  Data Files and Software.
+  See Terms of Use <https://www.unicode.org/copyright.html>
+  for definitions of Unicode Inc.’s Data Files and Software.
+  
   NOTICE TO USER: Carefully read the following legal agreement.
   BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
   DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
@@ -23,9 +24,12 @@
   TERMS AND CONDITIONS OF THIS AGREEMENT.
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
+  
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2021 Unicode, Inc. All rights reserved.
+  
+  Copyright © 1991-2022 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+  
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
   (the "Data Files") or Unicode software and any associated documentation
@@ -38,6 +42,7 @@
   of the Data Files or Software, or
   (b) this copyright and permission notice appear in associated
   Documentation.
+  
   THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
   ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
   WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -48,6 +53,7 @@
   DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
   TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
   PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+  
   Except as contained in this notice, the name of a copyright holder
   shall not be used in advertising or otherwise to promote the sale,
   use or other dealings in these Data Files or Software without prior

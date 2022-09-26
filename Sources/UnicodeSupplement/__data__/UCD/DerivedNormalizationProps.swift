@@ -4,14 +4,15 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/DerivedNormalizationProps.txt
-// Last-Modified: 2021-06-04T16:14:24Z
-// ETag: "cb166-5c3f2fc30be1d-gzip"
+// Last-Modified: 2022-04-27T15:41:25Z
+// ETag: "cc838-5dda4a458babe-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
   
-  See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
-  Data Files and Software.
+  See Terms of Use <https://www.unicode.org/copyright.html>
+  for definitions of Unicode Inc.’s Data Files and Software.
+  
   NOTICE TO USER: Carefully read the following legal agreement.
   BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
   DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
@@ -19,9 +20,12 @@
   TERMS AND CONDITIONS OF THIS AGREEMENT.
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
+  
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2021 Unicode, Inc. All rights reserved.
+  
+  Copyright © 1991-2022 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+  
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
   (the "Data Files") or Unicode software and any associated documentation
@@ -34,6 +38,7 @@
   of the Data Files or Software, or
   (b) this copyright and permission notice appear in associated
   Documentation.
+  
   THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
   ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
   WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -44,6 +49,7 @@
   DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
   TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
   PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+  
   Except as contained in this notice, the name of a copyright holder
   shall not be used in advertising or otherwise to promote the sale,
   use or other dealings in these Data Files or Software without prior
@@ -1053,22 +1059,23 @@ private let __normProp_Changes_When_NFKC_Casefolded_range_2z: _T2 = 0x1d54a....0
 private let __normProp_Changes_When_NFKC_Casefolded_range_30: _T2 = 0x1d552....0x1d6a5
 private let __normProp_Changes_When_NFKC_Casefolded_range_31: _T2 = 0x1d6a8....0x1d7cb
 private let __normProp_Changes_When_NFKC_Casefolded_range_32: _T2 = 0x1d7ce....0x1d7ff
-private let __normProp_Changes_When_NFKC_Casefolded_range_33: _T2 = 0x1e900....0x1e921
-private let __normProp_Changes_When_NFKC_Casefolded_range_34: _T2 = 0x1ee05....0x1ee1f
-private let __normProp_Changes_When_NFKC_Casefolded_range_35: _T2 = 0x1ee29....0x1ee32
-private let __normProp_Changes_When_NFKC_Casefolded_range_36: _T2 = 0x1ee6c....0x1ee72
-private let __normProp_Changes_When_NFKC_Casefolded_range_37: _T2 = 0x1ee80....0x1ee89
-private let __normProp_Changes_When_NFKC_Casefolded_range_38: _T2 = 0x1ee8b....0x1ee9b
-private let __normProp_Changes_When_NFKC_Casefolded_range_39: _T2 = 0x1eea5....0x1eea9
-private let __normProp_Changes_When_NFKC_Casefolded_range_3a: _T2 = 0x1eeab....0x1eebb
-private let __normProp_Changes_When_NFKC_Casefolded_range_3b: _T2 = 0x1f100....0x1f10a
-private let __normProp_Changes_When_NFKC_Casefolded_range_3c: _T2 = 0x1f110....0x1f12e
-private let __normProp_Changes_When_NFKC_Casefolded_range_3d: _T2 = 0x1f130....0x1f14f
-private let __normProp_Changes_When_NFKC_Casefolded_range_3e: _T2 = 0x1f210....0x1f23b
-private let __normProp_Changes_When_NFKC_Casefolded_range_3f: _T2 = 0x1f240....0x1f248
-private let __normProp_Changes_When_NFKC_Casefolded_range_3g: _T2 = 0x1fbf0....0x1fbf9
-private let __normProp_Changes_When_NFKC_Casefolded_range_3h: _T2 = 0x2f800....0x2fa1d
-private let __normProp_Changes_When_NFKC_Casefolded_range_3i: _T2 = 0xe0000....0xe0fff
+private let __normProp_Changes_When_NFKC_Casefolded_range_33: _T2 = 0x1e030....0x1e06d
+private let __normProp_Changes_When_NFKC_Casefolded_range_34: _T2 = 0x1e900....0x1e921
+private let __normProp_Changes_When_NFKC_Casefolded_range_35: _T2 = 0x1ee05....0x1ee1f
+private let __normProp_Changes_When_NFKC_Casefolded_range_36: _T2 = 0x1ee29....0x1ee32
+private let __normProp_Changes_When_NFKC_Casefolded_range_37: _T2 = 0x1ee6c....0x1ee72
+private let __normProp_Changes_When_NFKC_Casefolded_range_38: _T2 = 0x1ee80....0x1ee89
+private let __normProp_Changes_When_NFKC_Casefolded_range_39: _T2 = 0x1ee8b....0x1ee9b
+private let __normProp_Changes_When_NFKC_Casefolded_range_3a: _T2 = 0x1eea5....0x1eea9
+private let __normProp_Changes_When_NFKC_Casefolded_range_3b: _T2 = 0x1eeab....0x1eebb
+private let __normProp_Changes_When_NFKC_Casefolded_range_3c: _T2 = 0x1f100....0x1f10a
+private let __normProp_Changes_When_NFKC_Casefolded_range_3d: _T2 = 0x1f110....0x1f12e
+private let __normProp_Changes_When_NFKC_Casefolded_range_3e: _T2 = 0x1f130....0x1f14f
+private let __normProp_Changes_When_NFKC_Casefolded_range_3f: _T2 = 0x1f210....0x1f23b
+private let __normProp_Changes_When_NFKC_Casefolded_range_3g: _T2 = 0x1f240....0x1f248
+private let __normProp_Changes_When_NFKC_Casefolded_range_3h: _T2 = 0x1fbf0....0x1fbf9
+private let __normProp_Changes_When_NFKC_Casefolded_range_3i: _T2 = 0x2f800....0x2fa1d
+private let __normProp_Changes_When_NFKC_Casefolded_range_3j: _T2 = 0xe0000....0xe0fff
 private let __normProp_Changes_When_NFKC_Casefolded_array: _T3 = [
   __normProp_Changes_When_NFKC_Casefolded_range_0,
   __normProp_Changes_When_NFKC_Casefolded_range_1,
@@ -1197,6 +1204,7 @@ private let __normProp_Changes_When_NFKC_Casefolded_array: _T3 = [
   __normProp_Changes_When_NFKC_Casefolded_range_3g,
   __normProp_Changes_When_NFKC_Casefolded_range_3h,
   __normProp_Changes_When_NFKC_Casefolded_range_3i,
+  __normProp_Changes_When_NFKC_Casefolded_range_3j,
 ]
 private let __normProp_Changes_When_NFKC_Casefolded_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __normProp_Changes_When_NFKC_Casefolded_array)
 internal let _normProp_Changes_When_NFKC_Casefolded = UnicodeScalarValueSet(singleValues: __normProp_Changes_When_NFKC_Casefolded_set, ranges: __normProp_Changes_When_NFKC_Casefolded_ranges)

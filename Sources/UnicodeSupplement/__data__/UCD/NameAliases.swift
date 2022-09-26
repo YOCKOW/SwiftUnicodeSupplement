@@ -4,14 +4,15 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/NameAliases.txt
-// Last-Modified: 2020-10-21T23:44:18Z
-// ETag: "3ef8-5b236ed051c3b-gzip"
+// Last-Modified: 2022-08-03T22:00:41Z
+// ETag: "3f78-5e55d5d31d806-gzip"
 
 /*
   UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
   
-  See <a href="https://www.unicode.org/copyright.html">Terms of Use</a> for definitions of Unicode Inc.'s
-  Data Files and Software.
+  See Terms of Use <https://www.unicode.org/copyright.html>
+  for definitions of Unicode Inc.’s Data Files and Software.
+  
   NOTICE TO USER: Carefully read the following legal agreement.
   BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
   DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
@@ -19,9 +20,12 @@
   TERMS AND CONDITIONS OF THIS AGREEMENT.
   IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
   THE DATA FILES OR SOFTWARE.
+  
   COPYRIGHT AND PERMISSION NOTICE
-  Copyright © 1991-2021 Unicode, Inc. All rights reserved.
+  
+  Copyright © 1991-2022 Unicode, Inc. All rights reserved.
   Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+  
   Permission is hereby granted, free of charge, to any person obtaining
   a copy of the Unicode data files and any associated documentation
   (the "Data Files") or Unicode software and any associated documentation
@@ -34,6 +38,7 @@
   of the Data Files or Software, or
   (b) this copyright and permission notice appear in associated
   Documentation.
+  
   THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
   ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
   WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
@@ -44,6 +49,7 @@
   DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
   TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
   PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+  
   Except as contained in this notice, the name of a copyright holder
   shall not be used in advertising or otherwise to promote the sale,
   use or other dealings in these Data Files or Software without prior
@@ -61,33 +67,35 @@ private typealias _T3 = Array<_T2>
 
 private let __nameAliases_pair_0: _T1 = (0x1a2, "LATIN CAPITAL LETTER GHA")
 private let __nameAliases_pair_1: _T1 = (0x1a3, "LATIN SMALL LETTER GHA")
-private let __nameAliases_pair_2: _T1 = (0x709, "SYRIAC SUBLINEAR COLON SKEWED LEFT")
-private let __nameAliases_pair_3: _T1 = (0xcde, "KANNADA LETTER LLLA")
-private let __nameAliases_pair_4: _T1 = (0xe9d, "LAO LETTER FO FON")
-private let __nameAliases_pair_5: _T1 = (0xe9f, "LAO LETTER FO FAY")
-private let __nameAliases_pair_6: _T1 = (0xea3, "LAO LETTER RO")
-private let __nameAliases_pair_7: _T1 = (0xea5, "LAO LETTER LO")
-private let __nameAliases_pair_8: _T1 = (0xfd0, "TIBETAN MARK BKA- SHOG GI MGO RGYAN")
-private let __nameAliases_pair_9: _T1 = (0x11ec, "HANGUL JONGSEONG YESIEUNG-KIYEOK")
-private let __nameAliases_pair_a: _T1 = (0x11ed, "HANGUL JONGSEONG YESIEUNG-SSANGKIYEOK")
-private let __nameAliases_pair_b: _T1 = (0x11ee, "HANGUL JONGSEONG SSANGYESIEUNG")
-private let __nameAliases_pair_c: _T1 = (0x11ef, "HANGUL JONGSEONG YESIEUNG-KHIEUKH")
-private let __nameAliases_pair_d: _T1 = (0x2118, "WEIERSTRASS ELLIPTIC FUNCTION")
-private let __nameAliases_pair_e: _T1 = (0x2448, "MICR ON US SYMBOL")
-private let __nameAliases_pair_f: _T1 = (0x2449, "MICR DASH SYMBOL")
-private let __nameAliases_pair_g: _T1 = (0x2b7a, "LEFTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE")
-private let __nameAliases_pair_h: _T1 = (0x2b7c, "RIGHTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE")
-private let __nameAliases_pair_i: _T1 = (0xa015, "YI SYLLABLE ITERATION MARK")
-private let __nameAliases_pair_j: _T1 = (0xaa6e, "MYANMAR LETTER KHAMTI LLA")
-private let __nameAliases_pair_k: _T1 = (0xfe18, "PRESENTATION FORM FOR VERTICAL RIGHT WHITE LENTICULAR BRACKET")
-private let __nameAliases_pair_l: _T1 = (0x122d4, "CUNEIFORM SIGN NU11 TENU")
-private let __nameAliases_pair_m: _T1 = (0x122d5, "CUNEIFORM SIGN NU11 OVER NU11 BUR OVER BUR")
-private let __nameAliases_pair_n: _T1 = (0x16e56, "MEDEFAIDRIN CAPITAL LETTER H")
-private let __nameAliases_pair_o: _T1 = (0x16e57, "MEDEFAIDRIN CAPITAL LETTER NG")
-private let __nameAliases_pair_p: _T1 = (0x16e76, "MEDEFAIDRIN SMALL LETTER H")
-private let __nameAliases_pair_q: _T1 = (0x16e77, "MEDEFAIDRIN SMALL LETTER NG")
-private let __nameAliases_pair_r: _T1 = (0x1b001, "HENTAIGANA LETTER E-1")
-private let __nameAliases_pair_s: _T1 = (0x1d0c5, "BYZANTINE MUSICAL SYMBOL FTHORA SKLIRON CHROMA VASIS")
+private let __nameAliases_pair_2: _T1 = (0x616, "ARABIC SMALL HIGH LIGATURE ALEF WITH YEH BARREE")
+private let __nameAliases_pair_3: _T1 = (0x709, "SYRIAC SUBLINEAR COLON SKEWED LEFT")
+private let __nameAliases_pair_4: _T1 = (0xcde, "KANNADA LETTER LLLA")
+private let __nameAliases_pair_5: _T1 = (0xe9d, "LAO LETTER FO FON")
+private let __nameAliases_pair_6: _T1 = (0xe9f, "LAO LETTER FO FAY")
+private let __nameAliases_pair_7: _T1 = (0xea3, "LAO LETTER RO")
+private let __nameAliases_pair_8: _T1 = (0xea5, "LAO LETTER LO")
+private let __nameAliases_pair_9: _T1 = (0xfd0, "TIBETAN MARK BKA- SHOG GI MGO RGYAN")
+private let __nameAliases_pair_a: _T1 = (0x11ec, "HANGUL JONGSEONG YESIEUNG-KIYEOK")
+private let __nameAliases_pair_b: _T1 = (0x11ed, "HANGUL JONGSEONG YESIEUNG-SSANGKIYEOK")
+private let __nameAliases_pair_c: _T1 = (0x11ee, "HANGUL JONGSEONG SSANGYESIEUNG")
+private let __nameAliases_pair_d: _T1 = (0x11ef, "HANGUL JONGSEONG YESIEUNG-KHIEUKH")
+private let __nameAliases_pair_e: _T1 = (0x1bbd, "SUNDANESE LETTER ARCHAIC I")
+private let __nameAliases_pair_f: _T1 = (0x2118, "WEIERSTRASS ELLIPTIC FUNCTION")
+private let __nameAliases_pair_g: _T1 = (0x2448, "MICR ON US SYMBOL")
+private let __nameAliases_pair_h: _T1 = (0x2449, "MICR DASH SYMBOL")
+private let __nameAliases_pair_i: _T1 = (0x2b7a, "LEFTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE")
+private let __nameAliases_pair_j: _T1 = (0x2b7c, "RIGHTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE")
+private let __nameAliases_pair_k: _T1 = (0xa015, "YI SYLLABLE ITERATION MARK")
+private let __nameAliases_pair_l: _T1 = (0xaa6e, "MYANMAR LETTER KHAMTI LLA")
+private let __nameAliases_pair_m: _T1 = (0xfe18, "PRESENTATION FORM FOR VERTICAL RIGHT WHITE LENTICULAR BRACKET")
+private let __nameAliases_pair_n: _T1 = (0x122d4, "CUNEIFORM SIGN NU11 TENU")
+private let __nameAliases_pair_o: _T1 = (0x122d5, "CUNEIFORM SIGN NU11 OVER NU11 BUR OVER BUR")
+private let __nameAliases_pair_p: _T1 = (0x16e56, "MEDEFAIDRIN CAPITAL LETTER H")
+private let __nameAliases_pair_q: _T1 = (0x16e57, "MEDEFAIDRIN CAPITAL LETTER NG")
+private let __nameAliases_pair_r: _T1 = (0x16e76, "MEDEFAIDRIN SMALL LETTER H")
+private let __nameAliases_pair_s: _T1 = (0x16e77, "MEDEFAIDRIN SMALL LETTER NG")
+private let __nameAliases_pair_t: _T1 = (0x1b001, "HENTAIGANA LETTER E-1")
+private let __nameAliases_pair_u: _T1 = (0x1d0c5, "BYZANTINE MUSICAL SYMBOL FTHORA SKLIRON CHROMA VASIS")
 private let __nameAliases_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWithValues: [
   __nameAliases_pair_0,
   __nameAliases_pair_1,
@@ -118,6 +126,8 @@ private let __nameAliases_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uni
   __nameAliases_pair_q,
   __nameAliases_pair_r,
   __nameAliases_pair_s,
+  __nameAliases_pair_t,
+  __nameAliases_pair_u,
 ])
 private let __nameAliases_rangePairArray: _T3 = [
 ]
