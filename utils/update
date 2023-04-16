@@ -2,7 +2,7 @@
 
 directory=$(cd "$(dirname "$0")" && pwd)
 package_path="${directory}/SwiftUnicodeSupplementUpdater"
-scratch_path="${directory}/../.build"
+scratch_path=$(cd "${directory}/../.build" && pwd -P)
 build_config="--package-path \"${package_path}\" --scratch-path \"${scratch_path}\""
 
 cmd="exit 1"
