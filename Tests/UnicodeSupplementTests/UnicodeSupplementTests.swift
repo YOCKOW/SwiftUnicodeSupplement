@@ -474,6 +474,13 @@ final class UnicodeSupplementTests: XCTestCase {
         _assert("可", expected: false)
       }
     }
+
+    do { // Original Properties
+      _with(\.isAlphanumeric) {
+        _assert("A", expected: true)
+        _assert("'", expected: false)
+      }
+    }
   }
   
   func test_GeneralCategory() {
