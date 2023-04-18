@@ -15,7 +15,7 @@ import _cUnicodeSupplement
 
 extension Unicode.Scalar {
   public struct LatestProperties {
-    private let _value: UInt32
+    internal let _value: UInt32
     fileprivate init(_ scalar:Unicode.Scalar) {
       self._value = scalar.value
     }
