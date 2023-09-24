@@ -1,11 +1,10 @@
 /* *************************************************************************************************
  PropertyValueAliases.swift
-   © 2020 YOCKOW.
+   © 2020,2023 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
 
-import BonaFideCharacterSet
 import Foundation
 import StringComposition
 import yCodeUpdater
@@ -13,7 +12,7 @@ import yExtensions
 
 extension String {
   fileprivate func _trimmed() -> String {
-    return self.trimmingCharacters(in: BonaFideCharacterSet(charactersIn: "%"))
+    return String(self.trimming(where: { $0 == "%" }))
   }
 }
 
@@ -404,7 +403,7 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
     for line in string.split(whereSeparator: { $0.isNewline }) {
       let commentRemoved = line.splitOnce(separator: "#").0
       if commentRemoved.isEmpty { continue }
-      let rawColumns = commentRemoved.split(separator: ";").map { $0.trimmingUnicodeScalars(in: .whitespacesAndNewlines) }
+      let rawColumns = commentRemoved.split(separator: ";").map { $0.trimmingUnicodeScalars(where: { $0.latestProperties.isWhitespace || $0.latestProperties.isNewline }) }
       let key = rawColumns.first!
       let columns = rawColumns.dropFirst()
       assert(!columns.isEmpty)

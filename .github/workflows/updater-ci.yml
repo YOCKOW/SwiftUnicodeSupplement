@@ -1,4 +1,4 @@
-name: CI
+name: Updater CI
 on:
   push:
     branches:
@@ -16,7 +16,7 @@ jobs:
   test:
     defaults:
       run:
-        working-directory: '.'
+        working-directory: './utils/SwiftUnicodeSupplementUpdater'
     strategy:
       matrix:
         os:
@@ -26,8 +26,8 @@ jobs:
           - '5.9'
         swift-compat-ver:
           - '5'
-          - '4.2'
-          - '4'
+          # - '4.2'
+          # - '4'
     runs-on: ${{ matrix.os }}
     steps:
     - uses: actions/checkout@v4

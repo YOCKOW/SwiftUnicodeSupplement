@@ -4,56 +4,49 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedName.txt
-// Last-Modified: 2022-04-27T16:30:14Z
-// ETag: "1bda71-5dda552f6e26b-gzip"
+// Last-Modified: 2023-08-28T16:08:56Z
+// ETag: "1bdbec-603fde94cd600-gzip"
 
 /*
-  UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
-  
-  See Terms of Use <https://www.unicode.org/copyright.html>
-  for definitions of Unicode Inc.’s Data Files and Software.
-  
-  NOTICE TO USER: Carefully read the following legal agreement.
-  BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
-  DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
-  YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
-  TERMS AND CONDITIONS OF THIS AGREEMENT.
-  IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
-  THE DATA FILES OR SOFTWARE.
+  UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2022 Unicode, Inc. All rights reserved.
-  Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+  Copyright © 1991-2023 Unicode, Inc.
   
-  Permission is hereby granted, free of charge, to any person obtaining
-  a copy of the Unicode data files and any associated documentation
-  (the "Data Files") or Unicode software and any associated documentation
-  (the "Software") to deal in the Data Files or Software
-  without restriction, including without limitation the rights to use,
-  copy, modify, merge, publish, distribute, and/or sell copies of
-  the Data Files or Software, and to permit persons to whom the Data Files
-  or Software are furnished to do so, provided that either
-  (a) this copyright and permission notice appear with all copies
-  of the Data Files or Software, or
-  (b) this copyright and permission notice appear in associated
-  Documentation.
+  NOTICE TO USER: Carefully read the following legal agreement. BY
+  DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
+  SOFTWARE, YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+  TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT
+  DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.
   
-  THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
-  ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-  NONINFRINGEMENT OF THIRD PARTY RIGHTS.
-  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
-  NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
-  DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
-  DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
-  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-  PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+  Permission is hereby granted, free of charge, to any person obtaining a
+  copy of data files and any associated documentation (the "Data Files") or
+  software and any associated documentation (the "Software") to deal in the
+  Data Files or Software without restriction, including without limitation
+  the rights to use, copy, modify, merge, publish, distribute, and/or sell
+  copies of the Data Files or Software, and to permit persons to whom the
+  Data Files or Software are furnished to do so, provided that either (a)
+  this copyright and permission notice appear with all copies of the Data
+  Files or Software, or (b) this copyright and permission notice appear in
+  associated Documentation.
   
-  Except as contained in this notice, the name of a copyright holder
-  shall not be used in advertising or otherwise to promote the sale,
-  use or other dealings in these Data Files or Software without prior
-  written authorization of the copyright holder.
+  THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+  KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+  THIRD PARTY RIGHTS.
+  
+  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE
+  BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,
+  OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+  WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+  ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA
+  FILES OR SOFTWARE.
+  
+  Except as contained in this notice, the name of a copyright holder shall
+  not be used in advertising or otherwise to promote the sale, use or other
+  dealings in these Data Files or Software without prior written
+  authorization of the copyright holder.
 */
 
 
@@ -14261,10 +14254,10 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_10 = {
     "SURROUND FROM UPPER RIGHT", // U+2FF9
     "SURROUND FROM LOWER LEFT", // U+2FFA
     "OVERLAID", // U+2FFB
-    NULL,
-    NULL,
-    NULL,
-    NULL,
+    "SURROUND FROM RIGHT", // U+2FFC
+    "SURROUND FROM LOWER RIGHT", // U+2FFD
+    "HORIZONTAL REFLECTION", // U+2FFE
+    "ROTATION", // U+2FFF
     "SPACE", // U+3000
     "COMMA", // U+3001
     "FULL STOP", // U+3002
@@ -14752,8 +14745,9 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_10 = {
   }
 };
 _cUniSupp_na_suffixes __cUniSupp_na_suffixes_11 = {
-  0x31f0,
+  0x31ef,
   {
+    "SUBTRACTION", // U+31EF
     "KU", // U+31F0
     "SI", // U+31F1
     "SU", // U+31F2
