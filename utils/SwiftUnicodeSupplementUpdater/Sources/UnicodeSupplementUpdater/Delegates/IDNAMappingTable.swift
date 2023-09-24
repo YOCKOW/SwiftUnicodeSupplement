@@ -1,11 +1,10 @@
 /* *************************************************************************************************
  IDNAMappingTable.swift
-   © 2020 YOCKOW.
+   © 2020,2023 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
  
-import BonaFideCharacterSet
 import Foundation
 import Ranges
 import UnicodeSupplement
@@ -49,7 +48,7 @@ extension Unicode.IDNAStatus._ImmatureStatus {
     assert(columns.count > 0)
 
     func _scalars(_ string: String) -> [Unicode.Scalar] {
-      return string.split(separator: .whitespaces).map({ Unicode.Scalar(UInt32($0, radix: 0x10)!)! })
+      return string.split(whereSeparator: { $0.isWhitespace }).map({ Unicode.Scalar(UInt32($0, radix: 0x10)!)! })
     }
 
     switch columns.first! {
