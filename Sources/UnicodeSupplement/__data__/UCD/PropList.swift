@@ -4,56 +4,49 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/PropList.txt
-// Last-Modified: 2022-08-06T00:13:10Z
-// ETag: "20508-5e58772a12657-gzip"
+// Last-Modified: 2023-08-28T16:08:56Z
+// ETag: "214cd-603fde94cd600-gzip"
 
 /*
-  UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
-  
-  See Terms of Use <https://www.unicode.org/copyright.html>
-  for definitions of Unicode Inc.’s Data Files and Software.
-  
-  NOTICE TO USER: Carefully read the following legal agreement.
-  BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
-  DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
-  YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
-  TERMS AND CONDITIONS OF THIS AGREEMENT.
-  IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
-  THE DATA FILES OR SOFTWARE.
+  UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2022 Unicode, Inc. All rights reserved.
-  Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+  Copyright © 1991-2023 Unicode, Inc.
   
-  Permission is hereby granted, free of charge, to any person obtaining
-  a copy of the Unicode data files and any associated documentation
-  (the "Data Files") or Unicode software and any associated documentation
-  (the "Software") to deal in the Data Files or Software
-  without restriction, including without limitation the rights to use,
-  copy, modify, merge, publish, distribute, and/or sell copies of
-  the Data Files or Software, and to permit persons to whom the Data Files
-  or Software are furnished to do so, provided that either
-  (a) this copyright and permission notice appear with all copies
-  of the Data Files or Software, or
-  (b) this copyright and permission notice appear in associated
-  Documentation.
+  NOTICE TO USER: Carefully read the following legal agreement. BY
+  DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
+  SOFTWARE, YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+  TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT
+  DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.
   
-  THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
-  ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-  NONINFRINGEMENT OF THIRD PARTY RIGHTS.
-  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
-  NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
-  DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
-  DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
-  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-  PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+  Permission is hereby granted, free of charge, to any person obtaining a
+  copy of data files and any associated documentation (the "Data Files") or
+  software and any associated documentation (the "Software") to deal in the
+  Data Files or Software without restriction, including without limitation
+  the rights to use, copy, modify, merge, publish, distribute, and/or sell
+  copies of the Data Files or Software, and to permit persons to whom the
+  Data Files or Software are furnished to do so, provided that either (a)
+  this copyright and permission notice appear with all copies of the Data
+  Files or Software, or (b) this copyright and permission notice appear in
+  associated Documentation.
   
-  Except as contained in this notice, the name of a copyright holder
-  shall not be used in advertising or otherwise to promote the sale,
-  use or other dealings in these Data Files or Software without prior
-  written authorization of the copyright holder.
+  THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+  KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+  THIRD PARTY RIGHTS.
+  
+  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE
+  BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,
+  OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+  WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+  ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA
+  FILES OR SOFTWARE.
+  
+  Except as contained in this notice, the name of a copyright holder shall
+  not be used in advertising or otherwise to promote the sale, use or other
+  dealings in these Data Files or Software without prior written
+  authorization of the copyright holder.
 */
 
 // Required Modules
@@ -585,8 +578,9 @@ internal let _prop_Hyphen = UnicodeScalarValueSet(singleValues: __prop_Hyphen_se
 private let __prop_IDS_Binary_Operator_set: _T1 = [
   0x2ff0,
   0x2ff1,
+  0x31ef,
 ]
-private let __prop_IDS_Binary_Operator_range_0: _T2 = 0x2ff4....0x2ffb
+private let __prop_IDS_Binary_Operator_range_0: _T2 = 0x2ff4....0x2ffd
 private let __prop_IDS_Binary_Operator_array: _T3 = [
   __prop_IDS_Binary_Operator_range_0,
 ]
@@ -600,6 +594,60 @@ private let __prop_IDS_Trinary_Operator_array: _T3 = [
 ]
 private let __prop_IDS_Trinary_Operator_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_IDS_Trinary_Operator_array)
 internal let _prop_IDS_Trinary_Operator = UnicodeScalarValueSet(singleValues: __prop_IDS_Trinary_Operator_set, ranges: __prop_IDS_Trinary_Operator_ranges)
+private let __prop_IDS_Unary_Operator_set: _T1 = [
+  0x2ffe,
+  0x2fff,
+]
+private let __prop_IDS_Unary_Operator_array: _T3 = [
+]
+private let __prop_IDS_Unary_Operator_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_IDS_Unary_Operator_array)
+internal let _prop_IDS_Unary_Operator = UnicodeScalarValueSet(singleValues: __prop_IDS_Unary_Operator_set, ranges: __prop_IDS_Unary_Operator_ranges)
+private let __prop_ID_Compat_Math_Continue_set: _T1 = [
+  0xb2,
+  0xb3,
+  0xb9,
+  0x2070,
+  0x2202,
+  0x2207,
+  0x221e,
+  0x1d6c1,
+  0x1d6db,
+  0x1d6fb,
+  0x1d715,
+  0x1d735,
+  0x1d74f,
+  0x1d76f,
+  0x1d789,
+  0x1d7a9,
+  0x1d7c3,
+]
+private let __prop_ID_Compat_Math_Continue_range_0: _T2 = 0x2074....0x207e
+private let __prop_ID_Compat_Math_Continue_range_1: _T2 = 0x2080....0x208e
+private let __prop_ID_Compat_Math_Continue_array: _T3 = [
+  __prop_ID_Compat_Math_Continue_range_0,
+  __prop_ID_Compat_Math_Continue_range_1,
+]
+private let __prop_ID_Compat_Math_Continue_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_ID_Compat_Math_Continue_array)
+internal let _prop_ID_Compat_Math_Continue = UnicodeScalarValueSet(singleValues: __prop_ID_Compat_Math_Continue_set, ranges: __prop_ID_Compat_Math_Continue_ranges)
+private let __prop_ID_Compat_Math_Start_set: _T1 = [
+  0x2202,
+  0x2207,
+  0x221e,
+  0x1d6c1,
+  0x1d6db,
+  0x1d6fb,
+  0x1d715,
+  0x1d735,
+  0x1d74f,
+  0x1d76f,
+  0x1d789,
+  0x1d7a9,
+  0x1d7c3,
+]
+private let __prop_ID_Compat_Math_Start_array: _T3 = [
+]
+private let __prop_ID_Compat_Math_Start_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_ID_Compat_Math_Start_array)
+internal let _prop_ID_Compat_Math_Start = UnicodeScalarValueSet(singleValues: __prop_ID_Compat_Math_Start_set, ranges: __prop_ID_Compat_Math_Start_ranges)
 private let __prop_Ideographic_set: _T1 = [
   0x3006,
   0x3007,
@@ -622,9 +670,10 @@ private let __prop_Ideographic_range_a: _T2 = 0x2a700....0x2b739
 private let __prop_Ideographic_range_b: _T2 = 0x2b740....0x2b81d
 private let __prop_Ideographic_range_c: _T2 = 0x2b820....0x2cea1
 private let __prop_Ideographic_range_d: _T2 = 0x2ceb0....0x2ebe0
-private let __prop_Ideographic_range_e: _T2 = 0x2f800....0x2fa1d
-private let __prop_Ideographic_range_f: _T2 = 0x30000....0x3134a
-private let __prop_Ideographic_range_g: _T2 = 0x31350....0x323af
+private let __prop_Ideographic_range_e: _T2 = 0x2ebf0....0x2ee5d
+private let __prop_Ideographic_range_f: _T2 = 0x2f800....0x2fa1d
+private let __prop_Ideographic_range_g: _T2 = 0x30000....0x3134a
+private let __prop_Ideographic_range_h: _T2 = 0x31350....0x323af
 private let __prop_Ideographic_array: _T3 = [
   __prop_Ideographic_range_0,
   __prop_Ideographic_range_1,
@@ -643,6 +692,7 @@ private let __prop_Ideographic_array: _T3 = [
   __prop_Ideographic_range_e,
   __prop_Ideographic_range_f,
   __prop_Ideographic_range_g,
+  __prop_Ideographic_range_h,
 ]
 private let __prop_Ideographic_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Ideographic_array)
 internal let _prop_Ideographic = UnicodeScalarValueSet(singleValues: __prop_Ideographic_set, ranges: __prop_Ideographic_ranges)
@@ -1278,6 +1328,10 @@ private let __prop_Other_ID_Continue_set: _T1 = [
   0xb7,
   0x387,
   0x19da,
+  0x200c,
+  0x200d,
+  0x30fb,
+  0xff65,
 ]
 private let __prop_Other_ID_Continue_range_0: _T2 = 0x1369....0x1371
 private let __prop_Other_ID_Continue_array: _T3 = [
@@ -1796,6 +1850,8 @@ private let __prop_Sentence_Terminal_set: _T1 = [
   0x166e,
   0x1735,
   0x1736,
+  0x17d4,
+  0x17d5,
   0x1803,
   0x1809,
   0x1944,
@@ -2201,8 +2257,9 @@ private let __prop_Unified_Ideograph_range_3: _T2 = 0x2a700....0x2b739
 private let __prop_Unified_Ideograph_range_4: _T2 = 0x2b740....0x2b81d
 private let __prop_Unified_Ideograph_range_5: _T2 = 0x2b820....0x2cea1
 private let __prop_Unified_Ideograph_range_6: _T2 = 0x2ceb0....0x2ebe0
-private let __prop_Unified_Ideograph_range_7: _T2 = 0x30000....0x3134a
-private let __prop_Unified_Ideograph_range_8: _T2 = 0x31350....0x323af
+private let __prop_Unified_Ideograph_range_7: _T2 = 0x2ebf0....0x2ee5d
+private let __prop_Unified_Ideograph_range_8: _T2 = 0x30000....0x3134a
+private let __prop_Unified_Ideograph_range_9: _T2 = 0x31350....0x323af
 private let __prop_Unified_Ideograph_array: _T3 = [
   __prop_Unified_Ideograph_range_0,
   __prop_Unified_Ideograph_range_1,
@@ -2213,6 +2270,7 @@ private let __prop_Unified_Ideograph_array: _T3 = [
   __prop_Unified_Ideograph_range_6,
   __prop_Unified_Ideograph_range_7,
   __prop_Unified_Ideograph_range_8,
+  __prop_Unified_Ideograph_range_9,
 ]
 private let __prop_Unified_Ideograph_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __prop_Unified_Ideograph_array)
 internal let _prop_Unified_Ideograph = UnicodeScalarValueSet(singleValues: __prop_Unified_Ideograph_set, ranges: __prop_Unified_Ideograph_ranges)

@@ -4,56 +4,49 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/DerivedCoreProperties.txt
-// Last-Modified: 2022-08-06T00:13:35Z
-// ETag: "1014f7-5e587742489f7-gzip"
+// Last-Modified: 2023-08-28T16:08:56Z
+// ETag: "105e2e-603fde94cd600-gzip"
 
 /*
-  UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
-  
-  See Terms of Use <https://www.unicode.org/copyright.html>
-  for definitions of Unicode Inc.’s Data Files and Software.
-  
-  NOTICE TO USER: Carefully read the following legal agreement.
-  BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
-  DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
-  YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
-  TERMS AND CONDITIONS OF THIS AGREEMENT.
-  IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
-  THE DATA FILES OR SOFTWARE.
+  UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2022 Unicode, Inc. All rights reserved.
-  Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+  Copyright © 1991-2023 Unicode, Inc.
   
-  Permission is hereby granted, free of charge, to any person obtaining
-  a copy of the Unicode data files and any associated documentation
-  (the "Data Files") or Unicode software and any associated documentation
-  (the "Software") to deal in the Data Files or Software
-  without restriction, including without limitation the rights to use,
-  copy, modify, merge, publish, distribute, and/or sell copies of
-  the Data Files or Software, and to permit persons to whom the Data Files
-  or Software are furnished to do so, provided that either
-  (a) this copyright and permission notice appear with all copies
-  of the Data Files or Software, or
-  (b) this copyright and permission notice appear in associated
-  Documentation.
+  NOTICE TO USER: Carefully read the following legal agreement. BY
+  DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
+  SOFTWARE, YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+  TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT
+  DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.
   
-  THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
-  ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-  NONINFRINGEMENT OF THIRD PARTY RIGHTS.
-  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
-  NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
-  DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
-  DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
-  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-  PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+  Permission is hereby granted, free of charge, to any person obtaining a
+  copy of data files and any associated documentation (the "Data Files") or
+  software and any associated documentation (the "Software") to deal in the
+  Data Files or Software without restriction, including without limitation
+  the rights to use, copy, modify, merge, publish, distribute, and/or sell
+  copies of the Data Files or Software, and to permit persons to whom the
+  Data Files or Software are furnished to do so, provided that either (a)
+  this copyright and permission notice appear with all copies of the Data
+  Files or Software, or (b) this copyright and permission notice appear in
+  associated Documentation.
   
-  Except as contained in this notice, the name of a copyright holder
-  shall not be used in advertising or otherwise to promote the sale,
-  use or other dealings in these Data Files or Software without prior
-  written authorization of the copyright holder.
+  THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+  KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+  THIRD PARTY RIGHTS.
+  
+  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE
+  BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,
+  OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+  WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+  ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA
+  FILES OR SOFTWARE.
+  
+  Except as contained in this notice, the name of a copyright holder shall
+  not be used in advertising or otherwise to promote the sale, use or other
+  dealings in these Data Files or Software without prior written
+  authorization of the copyright holder.
 */
 
 // Required Modules
@@ -1104,9 +1097,10 @@ private let __coreProp_Alphabetic_range_c8: _T2 = 0x2a700....0x2b739
 private let __coreProp_Alphabetic_range_c9: _T2 = 0x2b740....0x2b81d
 private let __coreProp_Alphabetic_range_ca: _T2 = 0x2b820....0x2cea1
 private let __coreProp_Alphabetic_range_cb: _T2 = 0x2ceb0....0x2ebe0
-private let __coreProp_Alphabetic_range_cc: _T2 = 0x2f800....0x2fa1d
-private let __coreProp_Alphabetic_range_cd: _T2 = 0x30000....0x3134a
-private let __coreProp_Alphabetic_range_ce: _T2 = 0x31350....0x323af
+private let __coreProp_Alphabetic_range_cc: _T2 = 0x2ebf0....0x2ee5d
+private let __coreProp_Alphabetic_range_cd: _T2 = 0x2f800....0x2fa1d
+private let __coreProp_Alphabetic_range_ce: _T2 = 0x30000....0x3134a
+private let __coreProp_Alphabetic_range_cf: _T2 = 0x31350....0x323af
 private let __coreProp_Alphabetic_array: _T3 = [
   __coreProp_Alphabetic_range_0,
   __coreProp_Alphabetic_range_1,
@@ -1555,6 +1549,7 @@ private let __coreProp_Alphabetic_array: _T3 = [
   __coreProp_Alphabetic_range_cc,
   __coreProp_Alphabetic_range_cd,
   __coreProp_Alphabetic_range_ce,
+  __coreProp_Alphabetic_range_cf,
 ]
 private let __coreProp_Alphabetic_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __coreProp_Alphabetic_array)
 internal let _coreProp_Alphabetic = UnicodeScalarValueSet(singleValues: __coreProp_Alphabetic_set, ranges: __coreProp_Alphabetic_ranges)
@@ -6693,349 +6688,349 @@ private let __coreProp_Grapheme_Base_range_56: _T2 = 0x2e00....0x2e5d
 private let __coreProp_Grapheme_Base_range_57: _T2 = 0x2e80....0x2e99
 private let __coreProp_Grapheme_Base_range_58: _T2 = 0x2e9b....0x2ef3
 private let __coreProp_Grapheme_Base_range_59: _T2 = 0x2f00....0x2fd5
-private let __coreProp_Grapheme_Base_range_5a: _T2 = 0x2ff0....0x2ffb
-private let __coreProp_Grapheme_Base_range_5b: _T2 = 0x3000....0x3029
-private let __coreProp_Grapheme_Base_range_5c: _T2 = 0x3030....0x303f
-private let __coreProp_Grapheme_Base_range_5d: _T2 = 0x3041....0x3096
-private let __coreProp_Grapheme_Base_range_5e: _T2 = 0x309b....0x30ff
-private let __coreProp_Grapheme_Base_range_5f: _T2 = 0x3105....0x312f
-private let __coreProp_Grapheme_Base_range_5g: _T2 = 0x3131....0x318e
-private let __coreProp_Grapheme_Base_range_5h: _T2 = 0x3190....0x31e3
-private let __coreProp_Grapheme_Base_range_5i: _T2 = 0x31f0....0x321e
-private let __coreProp_Grapheme_Base_range_5j: _T2 = 0x3220....0xa48c
-private let __coreProp_Grapheme_Base_range_5k: _T2 = 0xa490....0xa4c6
-private let __coreProp_Grapheme_Base_range_5l: _T2 = 0xa4d0....0xa62b
-private let __coreProp_Grapheme_Base_range_5m: _T2 = 0xa640....0xa66e
-private let __coreProp_Grapheme_Base_range_5n: _T2 = 0xa67e....0xa69d
-private let __coreProp_Grapheme_Base_range_5o: _T2 = 0xa6a0....0xa6ef
-private let __coreProp_Grapheme_Base_range_5p: _T2 = 0xa6f2....0xa6f7
-private let __coreProp_Grapheme_Base_range_5q: _T2 = 0xa700....0xa7ca
-private let __coreProp_Grapheme_Base_range_5r: _T2 = 0xa7d5....0xa7d9
-private let __coreProp_Grapheme_Base_range_5s: _T2 = 0xa7f2....0xa801
-private let __coreProp_Grapheme_Base_range_5t: _T2 = 0xa80c....0xa824
-private let __coreProp_Grapheme_Base_range_5u: _T2 = 0xa827....0xa82b
-private let __coreProp_Grapheme_Base_range_5v: _T2 = 0xa830....0xa839
-private let __coreProp_Grapheme_Base_range_5w: _T2 = 0xa840....0xa877
-private let __coreProp_Grapheme_Base_range_5x: _T2 = 0xa880....0xa8c3
-private let __coreProp_Grapheme_Base_range_5y: _T2 = 0xa8ce....0xa8d9
-private let __coreProp_Grapheme_Base_range_5z: _T2 = 0xa8f2....0xa8fe
-private let __coreProp_Grapheme_Base_range_60: _T2 = 0xa900....0xa925
-private let __coreProp_Grapheme_Base_range_61: _T2 = 0xa92e....0xa946
-private let __coreProp_Grapheme_Base_range_62: _T2 = 0xa95f....0xa97c
-private let __coreProp_Grapheme_Base_range_63: _T2 = 0xa983....0xa9b2
-private let __coreProp_Grapheme_Base_range_64: _T2 = 0xa9be....0xa9cd
-private let __coreProp_Grapheme_Base_range_65: _T2 = 0xa9cf....0xa9d9
-private let __coreProp_Grapheme_Base_range_66: _T2 = 0xa9de....0xa9e4
-private let __coreProp_Grapheme_Base_range_67: _T2 = 0xa9e6....0xa9fe
-private let __coreProp_Grapheme_Base_range_68: _T2 = 0xaa00....0xaa28
-private let __coreProp_Grapheme_Base_range_69: _T2 = 0xaa44....0xaa4b
-private let __coreProp_Grapheme_Base_range_6a: _T2 = 0xaa50....0xaa59
-private let __coreProp_Grapheme_Base_range_6b: _T2 = 0xaa5c....0xaa7b
-private let __coreProp_Grapheme_Base_range_6c: _T2 = 0xaa7d....0xaaaf
-private let __coreProp_Grapheme_Base_range_6d: _T2 = 0xaab9....0xaabd
-private let __coreProp_Grapheme_Base_range_6e: _T2 = 0xaadb....0xaaeb
-private let __coreProp_Grapheme_Base_range_6f: _T2 = 0xaaee....0xaaf5
-private let __coreProp_Grapheme_Base_range_6g: _T2 = 0xab01....0xab06
-private let __coreProp_Grapheme_Base_range_6h: _T2 = 0xab09....0xab0e
-private let __coreProp_Grapheme_Base_range_6i: _T2 = 0xab11....0xab16
-private let __coreProp_Grapheme_Base_range_6j: _T2 = 0xab20....0xab26
-private let __coreProp_Grapheme_Base_range_6k: _T2 = 0xab28....0xab2e
-private let __coreProp_Grapheme_Base_range_6l: _T2 = 0xab30....0xab6b
-private let __coreProp_Grapheme_Base_range_6m: _T2 = 0xab70....0xabe4
-private let __coreProp_Grapheme_Base_range_6n: _T2 = 0xabf0....0xabf9
-private let __coreProp_Grapheme_Base_range_6o: _T2 = 0xac00....0xd7a3
-private let __coreProp_Grapheme_Base_range_6p: _T2 = 0xd7b0....0xd7c6
-private let __coreProp_Grapheme_Base_range_6q: _T2 = 0xd7cb....0xd7fb
-private let __coreProp_Grapheme_Base_range_6r: _T2 = 0xf900....0xfa6d
-private let __coreProp_Grapheme_Base_range_6s: _T2 = 0xfa70....0xfad9
-private let __coreProp_Grapheme_Base_range_6t: _T2 = 0xfb00....0xfb06
-private let __coreProp_Grapheme_Base_range_6u: _T2 = 0xfb13....0xfb17
-private let __coreProp_Grapheme_Base_range_6v: _T2 = 0xfb1f....0xfb36
-private let __coreProp_Grapheme_Base_range_6w: _T2 = 0xfb38....0xfb3c
-private let __coreProp_Grapheme_Base_range_6x: _T2 = 0xfb46....0xfbc2
-private let __coreProp_Grapheme_Base_range_6y: _T2 = 0xfbd3....0xfd8f
-private let __coreProp_Grapheme_Base_range_6z: _T2 = 0xfd92....0xfdc7
-private let __coreProp_Grapheme_Base_range_70: _T2 = 0xfdf0....0xfdff
-private let __coreProp_Grapheme_Base_range_71: _T2 = 0xfe10....0xfe19
-private let __coreProp_Grapheme_Base_range_72: _T2 = 0xfe30....0xfe52
-private let __coreProp_Grapheme_Base_range_73: _T2 = 0xfe54....0xfe66
-private let __coreProp_Grapheme_Base_range_74: _T2 = 0xfe70....0xfe74
-private let __coreProp_Grapheme_Base_range_75: _T2 = 0xfe76....0xfefc
-private let __coreProp_Grapheme_Base_range_76: _T2 = 0xff01....0xff9d
-private let __coreProp_Grapheme_Base_range_77: _T2 = 0xffa0....0xffbe
-private let __coreProp_Grapheme_Base_range_78: _T2 = 0xffc2....0xffc7
-private let __coreProp_Grapheme_Base_range_79: _T2 = 0xffca....0xffcf
-private let __coreProp_Grapheme_Base_range_7a: _T2 = 0xffd2....0xffd7
-private let __coreProp_Grapheme_Base_range_7b: _T2 = 0xffe0....0xffe6
-private let __coreProp_Grapheme_Base_range_7c: _T2 = 0xffe8....0xffee
-private let __coreProp_Grapheme_Base_range_7d: _T2 = 0x10000....0x1000b
-private let __coreProp_Grapheme_Base_range_7e: _T2 = 0x1000d....0x10026
-private let __coreProp_Grapheme_Base_range_7f: _T2 = 0x10028....0x1003a
-private let __coreProp_Grapheme_Base_range_7g: _T2 = 0x1003f....0x1004d
-private let __coreProp_Grapheme_Base_range_7h: _T2 = 0x10050....0x1005d
-private let __coreProp_Grapheme_Base_range_7i: _T2 = 0x10080....0x100fa
-private let __coreProp_Grapheme_Base_range_7j: _T2 = 0x10107....0x10133
-private let __coreProp_Grapheme_Base_range_7k: _T2 = 0x10137....0x1018e
-private let __coreProp_Grapheme_Base_range_7l: _T2 = 0x10190....0x1019c
-private let __coreProp_Grapheme_Base_range_7m: _T2 = 0x101d0....0x101fc
-private let __coreProp_Grapheme_Base_range_7n: _T2 = 0x10280....0x1029c
-private let __coreProp_Grapheme_Base_range_7o: _T2 = 0x102a0....0x102d0
-private let __coreProp_Grapheme_Base_range_7p: _T2 = 0x102e1....0x102fb
-private let __coreProp_Grapheme_Base_range_7q: _T2 = 0x10300....0x10323
-private let __coreProp_Grapheme_Base_range_7r: _T2 = 0x1032d....0x1034a
-private let __coreProp_Grapheme_Base_range_7s: _T2 = 0x10350....0x10375
-private let __coreProp_Grapheme_Base_range_7t: _T2 = 0x10380....0x1039d
-private let __coreProp_Grapheme_Base_range_7u: _T2 = 0x1039f....0x103c3
-private let __coreProp_Grapheme_Base_range_7v: _T2 = 0x103c8....0x103d5
-private let __coreProp_Grapheme_Base_range_7w: _T2 = 0x10400....0x1049d
-private let __coreProp_Grapheme_Base_range_7x: _T2 = 0x104a0....0x104a9
-private let __coreProp_Grapheme_Base_range_7y: _T2 = 0x104b0....0x104d3
-private let __coreProp_Grapheme_Base_range_7z: _T2 = 0x104d8....0x104fb
-private let __coreProp_Grapheme_Base_range_80: _T2 = 0x10500....0x10527
-private let __coreProp_Grapheme_Base_range_81: _T2 = 0x10530....0x10563
-private let __coreProp_Grapheme_Base_range_82: _T2 = 0x1056f....0x1057a
-private let __coreProp_Grapheme_Base_range_83: _T2 = 0x1057c....0x1058a
-private let __coreProp_Grapheme_Base_range_84: _T2 = 0x1058c....0x10592
-private let __coreProp_Grapheme_Base_range_85: _T2 = 0x10597....0x105a1
-private let __coreProp_Grapheme_Base_range_86: _T2 = 0x105a3....0x105b1
-private let __coreProp_Grapheme_Base_range_87: _T2 = 0x105b3....0x105b9
-private let __coreProp_Grapheme_Base_range_88: _T2 = 0x10600....0x10736
-private let __coreProp_Grapheme_Base_range_89: _T2 = 0x10740....0x10755
-private let __coreProp_Grapheme_Base_range_8a: _T2 = 0x10760....0x10767
-private let __coreProp_Grapheme_Base_range_8b: _T2 = 0x10780....0x10785
-private let __coreProp_Grapheme_Base_range_8c: _T2 = 0x10787....0x107b0
-private let __coreProp_Grapheme_Base_range_8d: _T2 = 0x107b2....0x107ba
-private let __coreProp_Grapheme_Base_range_8e: _T2 = 0x10800....0x10805
-private let __coreProp_Grapheme_Base_range_8f: _T2 = 0x1080a....0x10835
-private let __coreProp_Grapheme_Base_range_8g: _T2 = 0x1083f....0x10855
-private let __coreProp_Grapheme_Base_range_8h: _T2 = 0x10857....0x1089e
-private let __coreProp_Grapheme_Base_range_8i: _T2 = 0x108a7....0x108af
-private let __coreProp_Grapheme_Base_range_8j: _T2 = 0x108e0....0x108f2
-private let __coreProp_Grapheme_Base_range_8k: _T2 = 0x108fb....0x1091b
-private let __coreProp_Grapheme_Base_range_8l: _T2 = 0x1091f....0x10939
-private let __coreProp_Grapheme_Base_range_8m: _T2 = 0x10980....0x109b7
-private let __coreProp_Grapheme_Base_range_8n: _T2 = 0x109bc....0x109cf
-private let __coreProp_Grapheme_Base_range_8o: _T2 = 0x109d2....0x10a00
-private let __coreProp_Grapheme_Base_range_8p: _T2 = 0x10a19....0x10a35
-private let __coreProp_Grapheme_Base_range_8q: _T2 = 0x10a40....0x10a48
-private let __coreProp_Grapheme_Base_range_8r: _T2 = 0x10a50....0x10a58
-private let __coreProp_Grapheme_Base_range_8s: _T2 = 0x10a60....0x10a9f
-private let __coreProp_Grapheme_Base_range_8t: _T2 = 0x10ac0....0x10ae4
-private let __coreProp_Grapheme_Base_range_8u: _T2 = 0x10aeb....0x10af6
-private let __coreProp_Grapheme_Base_range_8v: _T2 = 0x10b00....0x10b35
-private let __coreProp_Grapheme_Base_range_8w: _T2 = 0x10b39....0x10b55
-private let __coreProp_Grapheme_Base_range_8x: _T2 = 0x10b58....0x10b72
-private let __coreProp_Grapheme_Base_range_8y: _T2 = 0x10b78....0x10b91
-private let __coreProp_Grapheme_Base_range_8z: _T2 = 0x10ba9....0x10baf
-private let __coreProp_Grapheme_Base_range_90: _T2 = 0x10c00....0x10c48
-private let __coreProp_Grapheme_Base_range_91: _T2 = 0x10c80....0x10cb2
-private let __coreProp_Grapheme_Base_range_92: _T2 = 0x10cc0....0x10cf2
-private let __coreProp_Grapheme_Base_range_93: _T2 = 0x10cfa....0x10d23
-private let __coreProp_Grapheme_Base_range_94: _T2 = 0x10d30....0x10d39
-private let __coreProp_Grapheme_Base_range_95: _T2 = 0x10e60....0x10e7e
-private let __coreProp_Grapheme_Base_range_96: _T2 = 0x10e80....0x10ea9
-private let __coreProp_Grapheme_Base_range_97: _T2 = 0x10f00....0x10f27
-private let __coreProp_Grapheme_Base_range_98: _T2 = 0x10f30....0x10f45
-private let __coreProp_Grapheme_Base_range_99: _T2 = 0x10f51....0x10f59
-private let __coreProp_Grapheme_Base_range_9a: _T2 = 0x10f70....0x10f81
-private let __coreProp_Grapheme_Base_range_9b: _T2 = 0x10fb0....0x10fcb
-private let __coreProp_Grapheme_Base_range_9c: _T2 = 0x10fe0....0x10ff6
-private let __coreProp_Grapheme_Base_range_9d: _T2 = 0x11002....0x11037
-private let __coreProp_Grapheme_Base_range_9e: _T2 = 0x11047....0x1104d
-private let __coreProp_Grapheme_Base_range_9f: _T2 = 0x11052....0x1106f
-private let __coreProp_Grapheme_Base_range_9g: _T2 = 0x11082....0x110b2
-private let __coreProp_Grapheme_Base_range_9h: _T2 = 0x110d0....0x110e8
-private let __coreProp_Grapheme_Base_range_9i: _T2 = 0x110f0....0x110f9
-private let __coreProp_Grapheme_Base_range_9j: _T2 = 0x11103....0x11126
-private let __coreProp_Grapheme_Base_range_9k: _T2 = 0x11136....0x11147
-private let __coreProp_Grapheme_Base_range_9l: _T2 = 0x11150....0x11172
-private let __coreProp_Grapheme_Base_range_9m: _T2 = 0x11182....0x111b5
-private let __coreProp_Grapheme_Base_range_9n: _T2 = 0x111bf....0x111c8
-private let __coreProp_Grapheme_Base_range_9o: _T2 = 0x111d0....0x111df
-private let __coreProp_Grapheme_Base_range_9p: _T2 = 0x111e1....0x111f4
-private let __coreProp_Grapheme_Base_range_9q: _T2 = 0x11200....0x11211
-private let __coreProp_Grapheme_Base_range_9r: _T2 = 0x11213....0x1122e
-private let __coreProp_Grapheme_Base_range_9s: _T2 = 0x11238....0x1123d
-private let __coreProp_Grapheme_Base_range_9t: _T2 = 0x11280....0x11286
-private let __coreProp_Grapheme_Base_range_9u: _T2 = 0x1128f....0x1129d
-private let __coreProp_Grapheme_Base_range_9v: _T2 = 0x1129f....0x112a9
-private let __coreProp_Grapheme_Base_range_9w: _T2 = 0x112b0....0x112de
-private let __coreProp_Grapheme_Base_range_9x: _T2 = 0x112f0....0x112f9
-private let __coreProp_Grapheme_Base_range_9y: _T2 = 0x11305....0x1130c
-private let __coreProp_Grapheme_Base_range_9z: _T2 = 0x11313....0x11328
-private let __coreProp_Grapheme_Base_range_a0: _T2 = 0x1132a....0x11330
-private let __coreProp_Grapheme_Base_range_a1: _T2 = 0x11335....0x11339
-private let __coreProp_Grapheme_Base_range_a2: _T2 = 0x1135d....0x11363
-private let __coreProp_Grapheme_Base_range_a3: _T2 = 0x11400....0x11437
-private let __coreProp_Grapheme_Base_range_a4: _T2 = 0x11447....0x1145b
-private let __coreProp_Grapheme_Base_range_a5: _T2 = 0x11480....0x114af
-private let __coreProp_Grapheme_Base_range_a6: _T2 = 0x114d0....0x114d9
-private let __coreProp_Grapheme_Base_range_a7: _T2 = 0x11580....0x115ae
-private let __coreProp_Grapheme_Base_range_a8: _T2 = 0x115c1....0x115db
-private let __coreProp_Grapheme_Base_range_a9: _T2 = 0x11600....0x11632
-private let __coreProp_Grapheme_Base_range_aa: _T2 = 0x11650....0x11659
-private let __coreProp_Grapheme_Base_range_ab: _T2 = 0x11660....0x1166c
-private let __coreProp_Grapheme_Base_range_ac: _T2 = 0x11680....0x116aa
-private let __coreProp_Grapheme_Base_range_ad: _T2 = 0x116c0....0x116c9
-private let __coreProp_Grapheme_Base_range_ae: _T2 = 0x11700....0x1171a
-private let __coreProp_Grapheme_Base_range_af: _T2 = 0x11730....0x11746
-private let __coreProp_Grapheme_Base_range_ag: _T2 = 0x11800....0x1182e
-private let __coreProp_Grapheme_Base_range_ah: _T2 = 0x118a0....0x118f2
-private let __coreProp_Grapheme_Base_range_ai: _T2 = 0x118ff....0x11906
-private let __coreProp_Grapheme_Base_range_aj: _T2 = 0x1190c....0x11913
-private let __coreProp_Grapheme_Base_range_ak: _T2 = 0x11918....0x1192f
-private let __coreProp_Grapheme_Base_range_al: _T2 = 0x11931....0x11935
-private let __coreProp_Grapheme_Base_range_am: _T2 = 0x11950....0x11959
-private let __coreProp_Grapheme_Base_range_an: _T2 = 0x119a0....0x119a7
-private let __coreProp_Grapheme_Base_range_ao: _T2 = 0x119aa....0x119d3
-private let __coreProp_Grapheme_Base_range_ap: _T2 = 0x11a0b....0x11a32
-private let __coreProp_Grapheme_Base_range_aq: _T2 = 0x11a3f....0x11a46
-private let __coreProp_Grapheme_Base_range_ar: _T2 = 0x11a5c....0x11a89
-private let __coreProp_Grapheme_Base_range_as: _T2 = 0x11a9a....0x11aa2
-private let __coreProp_Grapheme_Base_range_at: _T2 = 0x11ab0....0x11af8
-private let __coreProp_Grapheme_Base_range_au: _T2 = 0x11b00....0x11b09
-private let __coreProp_Grapheme_Base_range_av: _T2 = 0x11c00....0x11c08
-private let __coreProp_Grapheme_Base_range_aw: _T2 = 0x11c0a....0x11c2f
-private let __coreProp_Grapheme_Base_range_ax: _T2 = 0x11c40....0x11c45
-private let __coreProp_Grapheme_Base_range_ay: _T2 = 0x11c50....0x11c6c
-private let __coreProp_Grapheme_Base_range_az: _T2 = 0x11c70....0x11c8f
-private let __coreProp_Grapheme_Base_range_b0: _T2 = 0x11d00....0x11d06
-private let __coreProp_Grapheme_Base_range_b1: _T2 = 0x11d0b....0x11d30
-private let __coreProp_Grapheme_Base_range_b2: _T2 = 0x11d50....0x11d59
-private let __coreProp_Grapheme_Base_range_b3: _T2 = 0x11d60....0x11d65
-private let __coreProp_Grapheme_Base_range_b4: _T2 = 0x11d6a....0x11d8e
-private let __coreProp_Grapheme_Base_range_b5: _T2 = 0x11da0....0x11da9
-private let __coreProp_Grapheme_Base_range_b6: _T2 = 0x11ee0....0x11ef2
-private let __coreProp_Grapheme_Base_range_b7: _T2 = 0x11f02....0x11f10
-private let __coreProp_Grapheme_Base_range_b8: _T2 = 0x11f12....0x11f35
-private let __coreProp_Grapheme_Base_range_b9: _T2 = 0x11f43....0x11f59
-private let __coreProp_Grapheme_Base_range_ba: _T2 = 0x11fc0....0x11ff1
-private let __coreProp_Grapheme_Base_range_bb: _T2 = 0x11fff....0x12399
-private let __coreProp_Grapheme_Base_range_bc: _T2 = 0x12400....0x1246e
-private let __coreProp_Grapheme_Base_range_bd: _T2 = 0x12470....0x12474
-private let __coreProp_Grapheme_Base_range_be: _T2 = 0x12480....0x12543
-private let __coreProp_Grapheme_Base_range_bf: _T2 = 0x12f90....0x12ff2
-private let __coreProp_Grapheme_Base_range_bg: _T2 = 0x13000....0x1342f
-private let __coreProp_Grapheme_Base_range_bh: _T2 = 0x13441....0x13446
-private let __coreProp_Grapheme_Base_range_bi: _T2 = 0x14400....0x14646
-private let __coreProp_Grapheme_Base_range_bj: _T2 = 0x16800....0x16a38
-private let __coreProp_Grapheme_Base_range_bk: _T2 = 0x16a40....0x16a5e
-private let __coreProp_Grapheme_Base_range_bl: _T2 = 0x16a60....0x16a69
-private let __coreProp_Grapheme_Base_range_bm: _T2 = 0x16a6e....0x16abe
-private let __coreProp_Grapheme_Base_range_bn: _T2 = 0x16ac0....0x16ac9
-private let __coreProp_Grapheme_Base_range_bo: _T2 = 0x16ad0....0x16aed
-private let __coreProp_Grapheme_Base_range_bp: _T2 = 0x16b00....0x16b2f
-private let __coreProp_Grapheme_Base_range_bq: _T2 = 0x16b37....0x16b45
-private let __coreProp_Grapheme_Base_range_br: _T2 = 0x16b50....0x16b59
-private let __coreProp_Grapheme_Base_range_bs: _T2 = 0x16b5b....0x16b61
-private let __coreProp_Grapheme_Base_range_bt: _T2 = 0x16b63....0x16b77
-private let __coreProp_Grapheme_Base_range_bu: _T2 = 0x16b7d....0x16b8f
-private let __coreProp_Grapheme_Base_range_bv: _T2 = 0x16e40....0x16e9a
-private let __coreProp_Grapheme_Base_range_bw: _T2 = 0x16f00....0x16f4a
-private let __coreProp_Grapheme_Base_range_bx: _T2 = 0x16f50....0x16f87
-private let __coreProp_Grapheme_Base_range_by: _T2 = 0x16f93....0x16f9f
-private let __coreProp_Grapheme_Base_range_bz: _T2 = 0x17000....0x187f7
-private let __coreProp_Grapheme_Base_range_c0: _T2 = 0x18800....0x18cd5
-private let __coreProp_Grapheme_Base_range_c1: _T2 = 0x18d00....0x18d08
-private let __coreProp_Grapheme_Base_range_c2: _T2 = 0x1aff5....0x1affb
-private let __coreProp_Grapheme_Base_range_c3: _T2 = 0x1b000....0x1b122
-private let __coreProp_Grapheme_Base_range_c4: _T2 = 0x1b170....0x1b2fb
-private let __coreProp_Grapheme_Base_range_c5: _T2 = 0x1bc00....0x1bc6a
-private let __coreProp_Grapheme_Base_range_c6: _T2 = 0x1bc70....0x1bc7c
-private let __coreProp_Grapheme_Base_range_c7: _T2 = 0x1bc80....0x1bc88
-private let __coreProp_Grapheme_Base_range_c8: _T2 = 0x1bc90....0x1bc99
-private let __coreProp_Grapheme_Base_range_c9: _T2 = 0x1cf50....0x1cfc3
-private let __coreProp_Grapheme_Base_range_ca: _T2 = 0x1d000....0x1d0f5
-private let __coreProp_Grapheme_Base_range_cb: _T2 = 0x1d100....0x1d126
-private let __coreProp_Grapheme_Base_range_cc: _T2 = 0x1d129....0x1d164
-private let __coreProp_Grapheme_Base_range_cd: _T2 = 0x1d18c....0x1d1a9
-private let __coreProp_Grapheme_Base_range_ce: _T2 = 0x1d1ae....0x1d1ea
-private let __coreProp_Grapheme_Base_range_cf: _T2 = 0x1d200....0x1d241
-private let __coreProp_Grapheme_Base_range_cg: _T2 = 0x1d2c0....0x1d2d3
-private let __coreProp_Grapheme_Base_range_ch: _T2 = 0x1d2e0....0x1d2f3
-private let __coreProp_Grapheme_Base_range_ci: _T2 = 0x1d300....0x1d356
-private let __coreProp_Grapheme_Base_range_cj: _T2 = 0x1d360....0x1d378
-private let __coreProp_Grapheme_Base_range_ck: _T2 = 0x1d400....0x1d454
-private let __coreProp_Grapheme_Base_range_cl: _T2 = 0x1d456....0x1d49c
-private let __coreProp_Grapheme_Base_range_cm: _T2 = 0x1d4ae....0x1d4b9
-private let __coreProp_Grapheme_Base_range_cn: _T2 = 0x1d4bd....0x1d4c3
-private let __coreProp_Grapheme_Base_range_co: _T2 = 0x1d4c5....0x1d505
-private let __coreProp_Grapheme_Base_range_cp: _T2 = 0x1d50d....0x1d514
-private let __coreProp_Grapheme_Base_range_cq: _T2 = 0x1d516....0x1d51c
-private let __coreProp_Grapheme_Base_range_cr: _T2 = 0x1d51e....0x1d539
-private let __coreProp_Grapheme_Base_range_cs: _T2 = 0x1d540....0x1d544
-private let __coreProp_Grapheme_Base_range_ct: _T2 = 0x1d54a....0x1d550
-private let __coreProp_Grapheme_Base_range_cu: _T2 = 0x1d552....0x1d6a5
-private let __coreProp_Grapheme_Base_range_cv: _T2 = 0x1d6a8....0x1d7cb
-private let __coreProp_Grapheme_Base_range_cw: _T2 = 0x1d7ce....0x1d9ff
-private let __coreProp_Grapheme_Base_range_cx: _T2 = 0x1da6d....0x1da74
-private let __coreProp_Grapheme_Base_range_cy: _T2 = 0x1da76....0x1da83
-private let __coreProp_Grapheme_Base_range_cz: _T2 = 0x1da85....0x1da8b
-private let __coreProp_Grapheme_Base_range_d0: _T2 = 0x1df00....0x1df1e
-private let __coreProp_Grapheme_Base_range_d1: _T2 = 0x1df25....0x1df2a
-private let __coreProp_Grapheme_Base_range_d2: _T2 = 0x1e030....0x1e06d
-private let __coreProp_Grapheme_Base_range_d3: _T2 = 0x1e100....0x1e12c
-private let __coreProp_Grapheme_Base_range_d4: _T2 = 0x1e137....0x1e13d
-private let __coreProp_Grapheme_Base_range_d5: _T2 = 0x1e140....0x1e149
-private let __coreProp_Grapheme_Base_range_d6: _T2 = 0x1e290....0x1e2ad
-private let __coreProp_Grapheme_Base_range_d7: _T2 = 0x1e2c0....0x1e2eb
-private let __coreProp_Grapheme_Base_range_d8: _T2 = 0x1e2f0....0x1e2f9
-private let __coreProp_Grapheme_Base_range_d9: _T2 = 0x1e4d0....0x1e4eb
-private let __coreProp_Grapheme_Base_range_da: _T2 = 0x1e4f0....0x1e4f9
-private let __coreProp_Grapheme_Base_range_db: _T2 = 0x1e7e0....0x1e7e6
-private let __coreProp_Grapheme_Base_range_dc: _T2 = 0x1e7f0....0x1e7fe
-private let __coreProp_Grapheme_Base_range_dd: _T2 = 0x1e800....0x1e8c4
-private let __coreProp_Grapheme_Base_range_de: _T2 = 0x1e8c7....0x1e8cf
-private let __coreProp_Grapheme_Base_range_df: _T2 = 0x1e900....0x1e943
-private let __coreProp_Grapheme_Base_range_dg: _T2 = 0x1e950....0x1e959
-private let __coreProp_Grapheme_Base_range_dh: _T2 = 0x1ec71....0x1ecb4
-private let __coreProp_Grapheme_Base_range_di: _T2 = 0x1ed01....0x1ed3d
-private let __coreProp_Grapheme_Base_range_dj: _T2 = 0x1ee05....0x1ee1f
-private let __coreProp_Grapheme_Base_range_dk: _T2 = 0x1ee29....0x1ee32
-private let __coreProp_Grapheme_Base_range_dl: _T2 = 0x1ee6c....0x1ee72
-private let __coreProp_Grapheme_Base_range_dm: _T2 = 0x1ee80....0x1ee89
-private let __coreProp_Grapheme_Base_range_dn: _T2 = 0x1ee8b....0x1ee9b
-private let __coreProp_Grapheme_Base_range_do: _T2 = 0x1eea5....0x1eea9
-private let __coreProp_Grapheme_Base_range_dp: _T2 = 0x1eeab....0x1eebb
-private let __coreProp_Grapheme_Base_range_dq: _T2 = 0x1f000....0x1f02b
-private let __coreProp_Grapheme_Base_range_dr: _T2 = 0x1f030....0x1f093
-private let __coreProp_Grapheme_Base_range_ds: _T2 = 0x1f0a0....0x1f0ae
-private let __coreProp_Grapheme_Base_range_dt: _T2 = 0x1f0b1....0x1f0bf
-private let __coreProp_Grapheme_Base_range_du: _T2 = 0x1f0c1....0x1f0cf
-private let __coreProp_Grapheme_Base_range_dv: _T2 = 0x1f0d1....0x1f0f5
-private let __coreProp_Grapheme_Base_range_dw: _T2 = 0x1f100....0x1f1ad
-private let __coreProp_Grapheme_Base_range_dx: _T2 = 0x1f1e6....0x1f202
-private let __coreProp_Grapheme_Base_range_dy: _T2 = 0x1f210....0x1f23b
-private let __coreProp_Grapheme_Base_range_dz: _T2 = 0x1f240....0x1f248
-private let __coreProp_Grapheme_Base_range_e0: _T2 = 0x1f260....0x1f265
-private let __coreProp_Grapheme_Base_range_e1: _T2 = 0x1f300....0x1f6d7
-private let __coreProp_Grapheme_Base_range_e2: _T2 = 0x1f6dc....0x1f6ec
-private let __coreProp_Grapheme_Base_range_e3: _T2 = 0x1f6f0....0x1f6fc
-private let __coreProp_Grapheme_Base_range_e4: _T2 = 0x1f700....0x1f776
-private let __coreProp_Grapheme_Base_range_e5: _T2 = 0x1f77b....0x1f7d9
-private let __coreProp_Grapheme_Base_range_e6: _T2 = 0x1f7e0....0x1f7eb
-private let __coreProp_Grapheme_Base_range_e7: _T2 = 0x1f800....0x1f80b
-private let __coreProp_Grapheme_Base_range_e8: _T2 = 0x1f810....0x1f847
-private let __coreProp_Grapheme_Base_range_e9: _T2 = 0x1f850....0x1f859
-private let __coreProp_Grapheme_Base_range_ea: _T2 = 0x1f860....0x1f887
-private let __coreProp_Grapheme_Base_range_eb: _T2 = 0x1f890....0x1f8ad
-private let __coreProp_Grapheme_Base_range_ec: _T2 = 0x1f900....0x1fa53
-private let __coreProp_Grapheme_Base_range_ed: _T2 = 0x1fa60....0x1fa6d
-private let __coreProp_Grapheme_Base_range_ee: _T2 = 0x1fa70....0x1fa7c
-private let __coreProp_Grapheme_Base_range_ef: _T2 = 0x1fa80....0x1fa88
-private let __coreProp_Grapheme_Base_range_eg: _T2 = 0x1fa90....0x1fabd
-private let __coreProp_Grapheme_Base_range_eh: _T2 = 0x1fabf....0x1fac5
-private let __coreProp_Grapheme_Base_range_ei: _T2 = 0x1face....0x1fadb
-private let __coreProp_Grapheme_Base_range_ej: _T2 = 0x1fae0....0x1fae8
-private let __coreProp_Grapheme_Base_range_ek: _T2 = 0x1faf0....0x1faf8
-private let __coreProp_Grapheme_Base_range_el: _T2 = 0x1fb00....0x1fb92
-private let __coreProp_Grapheme_Base_range_em: _T2 = 0x1fb94....0x1fbca
-private let __coreProp_Grapheme_Base_range_en: _T2 = 0x1fbf0....0x1fbf9
-private let __coreProp_Grapheme_Base_range_eo: _T2 = 0x20000....0x2a6df
-private let __coreProp_Grapheme_Base_range_ep: _T2 = 0x2a700....0x2b739
-private let __coreProp_Grapheme_Base_range_eq: _T2 = 0x2b740....0x2b81d
-private let __coreProp_Grapheme_Base_range_er: _T2 = 0x2b820....0x2cea1
-private let __coreProp_Grapheme_Base_range_es: _T2 = 0x2ceb0....0x2ebe0
+private let __coreProp_Grapheme_Base_range_5a: _T2 = 0x2ff0....0x3029
+private let __coreProp_Grapheme_Base_range_5b: _T2 = 0x3030....0x303f
+private let __coreProp_Grapheme_Base_range_5c: _T2 = 0x3041....0x3096
+private let __coreProp_Grapheme_Base_range_5d: _T2 = 0x309b....0x30ff
+private let __coreProp_Grapheme_Base_range_5e: _T2 = 0x3105....0x312f
+private let __coreProp_Grapheme_Base_range_5f: _T2 = 0x3131....0x318e
+private let __coreProp_Grapheme_Base_range_5g: _T2 = 0x3190....0x31e3
+private let __coreProp_Grapheme_Base_range_5h: _T2 = 0x31ef....0x321e
+private let __coreProp_Grapheme_Base_range_5i: _T2 = 0x3220....0xa48c
+private let __coreProp_Grapheme_Base_range_5j: _T2 = 0xa490....0xa4c6
+private let __coreProp_Grapheme_Base_range_5k: _T2 = 0xa4d0....0xa62b
+private let __coreProp_Grapheme_Base_range_5l: _T2 = 0xa640....0xa66e
+private let __coreProp_Grapheme_Base_range_5m: _T2 = 0xa67e....0xa69d
+private let __coreProp_Grapheme_Base_range_5n: _T2 = 0xa6a0....0xa6ef
+private let __coreProp_Grapheme_Base_range_5o: _T2 = 0xa6f2....0xa6f7
+private let __coreProp_Grapheme_Base_range_5p: _T2 = 0xa700....0xa7ca
+private let __coreProp_Grapheme_Base_range_5q: _T2 = 0xa7d5....0xa7d9
+private let __coreProp_Grapheme_Base_range_5r: _T2 = 0xa7f2....0xa801
+private let __coreProp_Grapheme_Base_range_5s: _T2 = 0xa80c....0xa824
+private let __coreProp_Grapheme_Base_range_5t: _T2 = 0xa827....0xa82b
+private let __coreProp_Grapheme_Base_range_5u: _T2 = 0xa830....0xa839
+private let __coreProp_Grapheme_Base_range_5v: _T2 = 0xa840....0xa877
+private let __coreProp_Grapheme_Base_range_5w: _T2 = 0xa880....0xa8c3
+private let __coreProp_Grapheme_Base_range_5x: _T2 = 0xa8ce....0xa8d9
+private let __coreProp_Grapheme_Base_range_5y: _T2 = 0xa8f2....0xa8fe
+private let __coreProp_Grapheme_Base_range_5z: _T2 = 0xa900....0xa925
+private let __coreProp_Grapheme_Base_range_60: _T2 = 0xa92e....0xa946
+private let __coreProp_Grapheme_Base_range_61: _T2 = 0xa95f....0xa97c
+private let __coreProp_Grapheme_Base_range_62: _T2 = 0xa983....0xa9b2
+private let __coreProp_Grapheme_Base_range_63: _T2 = 0xa9be....0xa9cd
+private let __coreProp_Grapheme_Base_range_64: _T2 = 0xa9cf....0xa9d9
+private let __coreProp_Grapheme_Base_range_65: _T2 = 0xa9de....0xa9e4
+private let __coreProp_Grapheme_Base_range_66: _T2 = 0xa9e6....0xa9fe
+private let __coreProp_Grapheme_Base_range_67: _T2 = 0xaa00....0xaa28
+private let __coreProp_Grapheme_Base_range_68: _T2 = 0xaa44....0xaa4b
+private let __coreProp_Grapheme_Base_range_69: _T2 = 0xaa50....0xaa59
+private let __coreProp_Grapheme_Base_range_6a: _T2 = 0xaa5c....0xaa7b
+private let __coreProp_Grapheme_Base_range_6b: _T2 = 0xaa7d....0xaaaf
+private let __coreProp_Grapheme_Base_range_6c: _T2 = 0xaab9....0xaabd
+private let __coreProp_Grapheme_Base_range_6d: _T2 = 0xaadb....0xaaeb
+private let __coreProp_Grapheme_Base_range_6e: _T2 = 0xaaee....0xaaf5
+private let __coreProp_Grapheme_Base_range_6f: _T2 = 0xab01....0xab06
+private let __coreProp_Grapheme_Base_range_6g: _T2 = 0xab09....0xab0e
+private let __coreProp_Grapheme_Base_range_6h: _T2 = 0xab11....0xab16
+private let __coreProp_Grapheme_Base_range_6i: _T2 = 0xab20....0xab26
+private let __coreProp_Grapheme_Base_range_6j: _T2 = 0xab28....0xab2e
+private let __coreProp_Grapheme_Base_range_6k: _T2 = 0xab30....0xab6b
+private let __coreProp_Grapheme_Base_range_6l: _T2 = 0xab70....0xabe4
+private let __coreProp_Grapheme_Base_range_6m: _T2 = 0xabf0....0xabf9
+private let __coreProp_Grapheme_Base_range_6n: _T2 = 0xac00....0xd7a3
+private let __coreProp_Grapheme_Base_range_6o: _T2 = 0xd7b0....0xd7c6
+private let __coreProp_Grapheme_Base_range_6p: _T2 = 0xd7cb....0xd7fb
+private let __coreProp_Grapheme_Base_range_6q: _T2 = 0xf900....0xfa6d
+private let __coreProp_Grapheme_Base_range_6r: _T2 = 0xfa70....0xfad9
+private let __coreProp_Grapheme_Base_range_6s: _T2 = 0xfb00....0xfb06
+private let __coreProp_Grapheme_Base_range_6t: _T2 = 0xfb13....0xfb17
+private let __coreProp_Grapheme_Base_range_6u: _T2 = 0xfb1f....0xfb36
+private let __coreProp_Grapheme_Base_range_6v: _T2 = 0xfb38....0xfb3c
+private let __coreProp_Grapheme_Base_range_6w: _T2 = 0xfb46....0xfbc2
+private let __coreProp_Grapheme_Base_range_6x: _T2 = 0xfbd3....0xfd8f
+private let __coreProp_Grapheme_Base_range_6y: _T2 = 0xfd92....0xfdc7
+private let __coreProp_Grapheme_Base_range_6z: _T2 = 0xfdf0....0xfdff
+private let __coreProp_Grapheme_Base_range_70: _T2 = 0xfe10....0xfe19
+private let __coreProp_Grapheme_Base_range_71: _T2 = 0xfe30....0xfe52
+private let __coreProp_Grapheme_Base_range_72: _T2 = 0xfe54....0xfe66
+private let __coreProp_Grapheme_Base_range_73: _T2 = 0xfe70....0xfe74
+private let __coreProp_Grapheme_Base_range_74: _T2 = 0xfe76....0xfefc
+private let __coreProp_Grapheme_Base_range_75: _T2 = 0xff01....0xff9d
+private let __coreProp_Grapheme_Base_range_76: _T2 = 0xffa0....0xffbe
+private let __coreProp_Grapheme_Base_range_77: _T2 = 0xffc2....0xffc7
+private let __coreProp_Grapheme_Base_range_78: _T2 = 0xffca....0xffcf
+private let __coreProp_Grapheme_Base_range_79: _T2 = 0xffd2....0xffd7
+private let __coreProp_Grapheme_Base_range_7a: _T2 = 0xffe0....0xffe6
+private let __coreProp_Grapheme_Base_range_7b: _T2 = 0xffe8....0xffee
+private let __coreProp_Grapheme_Base_range_7c: _T2 = 0x10000....0x1000b
+private let __coreProp_Grapheme_Base_range_7d: _T2 = 0x1000d....0x10026
+private let __coreProp_Grapheme_Base_range_7e: _T2 = 0x10028....0x1003a
+private let __coreProp_Grapheme_Base_range_7f: _T2 = 0x1003f....0x1004d
+private let __coreProp_Grapheme_Base_range_7g: _T2 = 0x10050....0x1005d
+private let __coreProp_Grapheme_Base_range_7h: _T2 = 0x10080....0x100fa
+private let __coreProp_Grapheme_Base_range_7i: _T2 = 0x10107....0x10133
+private let __coreProp_Grapheme_Base_range_7j: _T2 = 0x10137....0x1018e
+private let __coreProp_Grapheme_Base_range_7k: _T2 = 0x10190....0x1019c
+private let __coreProp_Grapheme_Base_range_7l: _T2 = 0x101d0....0x101fc
+private let __coreProp_Grapheme_Base_range_7m: _T2 = 0x10280....0x1029c
+private let __coreProp_Grapheme_Base_range_7n: _T2 = 0x102a0....0x102d0
+private let __coreProp_Grapheme_Base_range_7o: _T2 = 0x102e1....0x102fb
+private let __coreProp_Grapheme_Base_range_7p: _T2 = 0x10300....0x10323
+private let __coreProp_Grapheme_Base_range_7q: _T2 = 0x1032d....0x1034a
+private let __coreProp_Grapheme_Base_range_7r: _T2 = 0x10350....0x10375
+private let __coreProp_Grapheme_Base_range_7s: _T2 = 0x10380....0x1039d
+private let __coreProp_Grapheme_Base_range_7t: _T2 = 0x1039f....0x103c3
+private let __coreProp_Grapheme_Base_range_7u: _T2 = 0x103c8....0x103d5
+private let __coreProp_Grapheme_Base_range_7v: _T2 = 0x10400....0x1049d
+private let __coreProp_Grapheme_Base_range_7w: _T2 = 0x104a0....0x104a9
+private let __coreProp_Grapheme_Base_range_7x: _T2 = 0x104b0....0x104d3
+private let __coreProp_Grapheme_Base_range_7y: _T2 = 0x104d8....0x104fb
+private let __coreProp_Grapheme_Base_range_7z: _T2 = 0x10500....0x10527
+private let __coreProp_Grapheme_Base_range_80: _T2 = 0x10530....0x10563
+private let __coreProp_Grapheme_Base_range_81: _T2 = 0x1056f....0x1057a
+private let __coreProp_Grapheme_Base_range_82: _T2 = 0x1057c....0x1058a
+private let __coreProp_Grapheme_Base_range_83: _T2 = 0x1058c....0x10592
+private let __coreProp_Grapheme_Base_range_84: _T2 = 0x10597....0x105a1
+private let __coreProp_Grapheme_Base_range_85: _T2 = 0x105a3....0x105b1
+private let __coreProp_Grapheme_Base_range_86: _T2 = 0x105b3....0x105b9
+private let __coreProp_Grapheme_Base_range_87: _T2 = 0x10600....0x10736
+private let __coreProp_Grapheme_Base_range_88: _T2 = 0x10740....0x10755
+private let __coreProp_Grapheme_Base_range_89: _T2 = 0x10760....0x10767
+private let __coreProp_Grapheme_Base_range_8a: _T2 = 0x10780....0x10785
+private let __coreProp_Grapheme_Base_range_8b: _T2 = 0x10787....0x107b0
+private let __coreProp_Grapheme_Base_range_8c: _T2 = 0x107b2....0x107ba
+private let __coreProp_Grapheme_Base_range_8d: _T2 = 0x10800....0x10805
+private let __coreProp_Grapheme_Base_range_8e: _T2 = 0x1080a....0x10835
+private let __coreProp_Grapheme_Base_range_8f: _T2 = 0x1083f....0x10855
+private let __coreProp_Grapheme_Base_range_8g: _T2 = 0x10857....0x1089e
+private let __coreProp_Grapheme_Base_range_8h: _T2 = 0x108a7....0x108af
+private let __coreProp_Grapheme_Base_range_8i: _T2 = 0x108e0....0x108f2
+private let __coreProp_Grapheme_Base_range_8j: _T2 = 0x108fb....0x1091b
+private let __coreProp_Grapheme_Base_range_8k: _T2 = 0x1091f....0x10939
+private let __coreProp_Grapheme_Base_range_8l: _T2 = 0x10980....0x109b7
+private let __coreProp_Grapheme_Base_range_8m: _T2 = 0x109bc....0x109cf
+private let __coreProp_Grapheme_Base_range_8n: _T2 = 0x109d2....0x10a00
+private let __coreProp_Grapheme_Base_range_8o: _T2 = 0x10a19....0x10a35
+private let __coreProp_Grapheme_Base_range_8p: _T2 = 0x10a40....0x10a48
+private let __coreProp_Grapheme_Base_range_8q: _T2 = 0x10a50....0x10a58
+private let __coreProp_Grapheme_Base_range_8r: _T2 = 0x10a60....0x10a9f
+private let __coreProp_Grapheme_Base_range_8s: _T2 = 0x10ac0....0x10ae4
+private let __coreProp_Grapheme_Base_range_8t: _T2 = 0x10aeb....0x10af6
+private let __coreProp_Grapheme_Base_range_8u: _T2 = 0x10b00....0x10b35
+private let __coreProp_Grapheme_Base_range_8v: _T2 = 0x10b39....0x10b55
+private let __coreProp_Grapheme_Base_range_8w: _T2 = 0x10b58....0x10b72
+private let __coreProp_Grapheme_Base_range_8x: _T2 = 0x10b78....0x10b91
+private let __coreProp_Grapheme_Base_range_8y: _T2 = 0x10ba9....0x10baf
+private let __coreProp_Grapheme_Base_range_8z: _T2 = 0x10c00....0x10c48
+private let __coreProp_Grapheme_Base_range_90: _T2 = 0x10c80....0x10cb2
+private let __coreProp_Grapheme_Base_range_91: _T2 = 0x10cc0....0x10cf2
+private let __coreProp_Grapheme_Base_range_92: _T2 = 0x10cfa....0x10d23
+private let __coreProp_Grapheme_Base_range_93: _T2 = 0x10d30....0x10d39
+private let __coreProp_Grapheme_Base_range_94: _T2 = 0x10e60....0x10e7e
+private let __coreProp_Grapheme_Base_range_95: _T2 = 0x10e80....0x10ea9
+private let __coreProp_Grapheme_Base_range_96: _T2 = 0x10f00....0x10f27
+private let __coreProp_Grapheme_Base_range_97: _T2 = 0x10f30....0x10f45
+private let __coreProp_Grapheme_Base_range_98: _T2 = 0x10f51....0x10f59
+private let __coreProp_Grapheme_Base_range_99: _T2 = 0x10f70....0x10f81
+private let __coreProp_Grapheme_Base_range_9a: _T2 = 0x10fb0....0x10fcb
+private let __coreProp_Grapheme_Base_range_9b: _T2 = 0x10fe0....0x10ff6
+private let __coreProp_Grapheme_Base_range_9c: _T2 = 0x11002....0x11037
+private let __coreProp_Grapheme_Base_range_9d: _T2 = 0x11047....0x1104d
+private let __coreProp_Grapheme_Base_range_9e: _T2 = 0x11052....0x1106f
+private let __coreProp_Grapheme_Base_range_9f: _T2 = 0x11082....0x110b2
+private let __coreProp_Grapheme_Base_range_9g: _T2 = 0x110d0....0x110e8
+private let __coreProp_Grapheme_Base_range_9h: _T2 = 0x110f0....0x110f9
+private let __coreProp_Grapheme_Base_range_9i: _T2 = 0x11103....0x11126
+private let __coreProp_Grapheme_Base_range_9j: _T2 = 0x11136....0x11147
+private let __coreProp_Grapheme_Base_range_9k: _T2 = 0x11150....0x11172
+private let __coreProp_Grapheme_Base_range_9l: _T2 = 0x11182....0x111b5
+private let __coreProp_Grapheme_Base_range_9m: _T2 = 0x111bf....0x111c8
+private let __coreProp_Grapheme_Base_range_9n: _T2 = 0x111d0....0x111df
+private let __coreProp_Grapheme_Base_range_9o: _T2 = 0x111e1....0x111f4
+private let __coreProp_Grapheme_Base_range_9p: _T2 = 0x11200....0x11211
+private let __coreProp_Grapheme_Base_range_9q: _T2 = 0x11213....0x1122e
+private let __coreProp_Grapheme_Base_range_9r: _T2 = 0x11238....0x1123d
+private let __coreProp_Grapheme_Base_range_9s: _T2 = 0x11280....0x11286
+private let __coreProp_Grapheme_Base_range_9t: _T2 = 0x1128f....0x1129d
+private let __coreProp_Grapheme_Base_range_9u: _T2 = 0x1129f....0x112a9
+private let __coreProp_Grapheme_Base_range_9v: _T2 = 0x112b0....0x112de
+private let __coreProp_Grapheme_Base_range_9w: _T2 = 0x112f0....0x112f9
+private let __coreProp_Grapheme_Base_range_9x: _T2 = 0x11305....0x1130c
+private let __coreProp_Grapheme_Base_range_9y: _T2 = 0x11313....0x11328
+private let __coreProp_Grapheme_Base_range_9z: _T2 = 0x1132a....0x11330
+private let __coreProp_Grapheme_Base_range_a0: _T2 = 0x11335....0x11339
+private let __coreProp_Grapheme_Base_range_a1: _T2 = 0x1135d....0x11363
+private let __coreProp_Grapheme_Base_range_a2: _T2 = 0x11400....0x11437
+private let __coreProp_Grapheme_Base_range_a3: _T2 = 0x11447....0x1145b
+private let __coreProp_Grapheme_Base_range_a4: _T2 = 0x11480....0x114af
+private let __coreProp_Grapheme_Base_range_a5: _T2 = 0x114d0....0x114d9
+private let __coreProp_Grapheme_Base_range_a6: _T2 = 0x11580....0x115ae
+private let __coreProp_Grapheme_Base_range_a7: _T2 = 0x115c1....0x115db
+private let __coreProp_Grapheme_Base_range_a8: _T2 = 0x11600....0x11632
+private let __coreProp_Grapheme_Base_range_a9: _T2 = 0x11650....0x11659
+private let __coreProp_Grapheme_Base_range_aa: _T2 = 0x11660....0x1166c
+private let __coreProp_Grapheme_Base_range_ab: _T2 = 0x11680....0x116aa
+private let __coreProp_Grapheme_Base_range_ac: _T2 = 0x116c0....0x116c9
+private let __coreProp_Grapheme_Base_range_ad: _T2 = 0x11700....0x1171a
+private let __coreProp_Grapheme_Base_range_ae: _T2 = 0x11730....0x11746
+private let __coreProp_Grapheme_Base_range_af: _T2 = 0x11800....0x1182e
+private let __coreProp_Grapheme_Base_range_ag: _T2 = 0x118a0....0x118f2
+private let __coreProp_Grapheme_Base_range_ah: _T2 = 0x118ff....0x11906
+private let __coreProp_Grapheme_Base_range_ai: _T2 = 0x1190c....0x11913
+private let __coreProp_Grapheme_Base_range_aj: _T2 = 0x11918....0x1192f
+private let __coreProp_Grapheme_Base_range_ak: _T2 = 0x11931....0x11935
+private let __coreProp_Grapheme_Base_range_al: _T2 = 0x11950....0x11959
+private let __coreProp_Grapheme_Base_range_am: _T2 = 0x119a0....0x119a7
+private let __coreProp_Grapheme_Base_range_an: _T2 = 0x119aa....0x119d3
+private let __coreProp_Grapheme_Base_range_ao: _T2 = 0x11a0b....0x11a32
+private let __coreProp_Grapheme_Base_range_ap: _T2 = 0x11a3f....0x11a46
+private let __coreProp_Grapheme_Base_range_aq: _T2 = 0x11a5c....0x11a89
+private let __coreProp_Grapheme_Base_range_ar: _T2 = 0x11a9a....0x11aa2
+private let __coreProp_Grapheme_Base_range_as: _T2 = 0x11ab0....0x11af8
+private let __coreProp_Grapheme_Base_range_at: _T2 = 0x11b00....0x11b09
+private let __coreProp_Grapheme_Base_range_au: _T2 = 0x11c00....0x11c08
+private let __coreProp_Grapheme_Base_range_av: _T2 = 0x11c0a....0x11c2f
+private let __coreProp_Grapheme_Base_range_aw: _T2 = 0x11c40....0x11c45
+private let __coreProp_Grapheme_Base_range_ax: _T2 = 0x11c50....0x11c6c
+private let __coreProp_Grapheme_Base_range_ay: _T2 = 0x11c70....0x11c8f
+private let __coreProp_Grapheme_Base_range_az: _T2 = 0x11d00....0x11d06
+private let __coreProp_Grapheme_Base_range_b0: _T2 = 0x11d0b....0x11d30
+private let __coreProp_Grapheme_Base_range_b1: _T2 = 0x11d50....0x11d59
+private let __coreProp_Grapheme_Base_range_b2: _T2 = 0x11d60....0x11d65
+private let __coreProp_Grapheme_Base_range_b3: _T2 = 0x11d6a....0x11d8e
+private let __coreProp_Grapheme_Base_range_b4: _T2 = 0x11da0....0x11da9
+private let __coreProp_Grapheme_Base_range_b5: _T2 = 0x11ee0....0x11ef2
+private let __coreProp_Grapheme_Base_range_b6: _T2 = 0x11f02....0x11f10
+private let __coreProp_Grapheme_Base_range_b7: _T2 = 0x11f12....0x11f35
+private let __coreProp_Grapheme_Base_range_b8: _T2 = 0x11f43....0x11f59
+private let __coreProp_Grapheme_Base_range_b9: _T2 = 0x11fc0....0x11ff1
+private let __coreProp_Grapheme_Base_range_ba: _T2 = 0x11fff....0x12399
+private let __coreProp_Grapheme_Base_range_bb: _T2 = 0x12400....0x1246e
+private let __coreProp_Grapheme_Base_range_bc: _T2 = 0x12470....0x12474
+private let __coreProp_Grapheme_Base_range_bd: _T2 = 0x12480....0x12543
+private let __coreProp_Grapheme_Base_range_be: _T2 = 0x12f90....0x12ff2
+private let __coreProp_Grapheme_Base_range_bf: _T2 = 0x13000....0x1342f
+private let __coreProp_Grapheme_Base_range_bg: _T2 = 0x13441....0x13446
+private let __coreProp_Grapheme_Base_range_bh: _T2 = 0x14400....0x14646
+private let __coreProp_Grapheme_Base_range_bi: _T2 = 0x16800....0x16a38
+private let __coreProp_Grapheme_Base_range_bj: _T2 = 0x16a40....0x16a5e
+private let __coreProp_Grapheme_Base_range_bk: _T2 = 0x16a60....0x16a69
+private let __coreProp_Grapheme_Base_range_bl: _T2 = 0x16a6e....0x16abe
+private let __coreProp_Grapheme_Base_range_bm: _T2 = 0x16ac0....0x16ac9
+private let __coreProp_Grapheme_Base_range_bn: _T2 = 0x16ad0....0x16aed
+private let __coreProp_Grapheme_Base_range_bo: _T2 = 0x16b00....0x16b2f
+private let __coreProp_Grapheme_Base_range_bp: _T2 = 0x16b37....0x16b45
+private let __coreProp_Grapheme_Base_range_bq: _T2 = 0x16b50....0x16b59
+private let __coreProp_Grapheme_Base_range_br: _T2 = 0x16b5b....0x16b61
+private let __coreProp_Grapheme_Base_range_bs: _T2 = 0x16b63....0x16b77
+private let __coreProp_Grapheme_Base_range_bt: _T2 = 0x16b7d....0x16b8f
+private let __coreProp_Grapheme_Base_range_bu: _T2 = 0x16e40....0x16e9a
+private let __coreProp_Grapheme_Base_range_bv: _T2 = 0x16f00....0x16f4a
+private let __coreProp_Grapheme_Base_range_bw: _T2 = 0x16f50....0x16f87
+private let __coreProp_Grapheme_Base_range_bx: _T2 = 0x16f93....0x16f9f
+private let __coreProp_Grapheme_Base_range_by: _T2 = 0x17000....0x187f7
+private let __coreProp_Grapheme_Base_range_bz: _T2 = 0x18800....0x18cd5
+private let __coreProp_Grapheme_Base_range_c0: _T2 = 0x18d00....0x18d08
+private let __coreProp_Grapheme_Base_range_c1: _T2 = 0x1aff5....0x1affb
+private let __coreProp_Grapheme_Base_range_c2: _T2 = 0x1b000....0x1b122
+private let __coreProp_Grapheme_Base_range_c3: _T2 = 0x1b170....0x1b2fb
+private let __coreProp_Grapheme_Base_range_c4: _T2 = 0x1bc00....0x1bc6a
+private let __coreProp_Grapheme_Base_range_c5: _T2 = 0x1bc70....0x1bc7c
+private let __coreProp_Grapheme_Base_range_c6: _T2 = 0x1bc80....0x1bc88
+private let __coreProp_Grapheme_Base_range_c7: _T2 = 0x1bc90....0x1bc99
+private let __coreProp_Grapheme_Base_range_c8: _T2 = 0x1cf50....0x1cfc3
+private let __coreProp_Grapheme_Base_range_c9: _T2 = 0x1d000....0x1d0f5
+private let __coreProp_Grapheme_Base_range_ca: _T2 = 0x1d100....0x1d126
+private let __coreProp_Grapheme_Base_range_cb: _T2 = 0x1d129....0x1d164
+private let __coreProp_Grapheme_Base_range_cc: _T2 = 0x1d18c....0x1d1a9
+private let __coreProp_Grapheme_Base_range_cd: _T2 = 0x1d1ae....0x1d1ea
+private let __coreProp_Grapheme_Base_range_ce: _T2 = 0x1d200....0x1d241
+private let __coreProp_Grapheme_Base_range_cf: _T2 = 0x1d2c0....0x1d2d3
+private let __coreProp_Grapheme_Base_range_cg: _T2 = 0x1d2e0....0x1d2f3
+private let __coreProp_Grapheme_Base_range_ch: _T2 = 0x1d300....0x1d356
+private let __coreProp_Grapheme_Base_range_ci: _T2 = 0x1d360....0x1d378
+private let __coreProp_Grapheme_Base_range_cj: _T2 = 0x1d400....0x1d454
+private let __coreProp_Grapheme_Base_range_ck: _T2 = 0x1d456....0x1d49c
+private let __coreProp_Grapheme_Base_range_cl: _T2 = 0x1d4ae....0x1d4b9
+private let __coreProp_Grapheme_Base_range_cm: _T2 = 0x1d4bd....0x1d4c3
+private let __coreProp_Grapheme_Base_range_cn: _T2 = 0x1d4c5....0x1d505
+private let __coreProp_Grapheme_Base_range_co: _T2 = 0x1d50d....0x1d514
+private let __coreProp_Grapheme_Base_range_cp: _T2 = 0x1d516....0x1d51c
+private let __coreProp_Grapheme_Base_range_cq: _T2 = 0x1d51e....0x1d539
+private let __coreProp_Grapheme_Base_range_cr: _T2 = 0x1d540....0x1d544
+private let __coreProp_Grapheme_Base_range_cs: _T2 = 0x1d54a....0x1d550
+private let __coreProp_Grapheme_Base_range_ct: _T2 = 0x1d552....0x1d6a5
+private let __coreProp_Grapheme_Base_range_cu: _T2 = 0x1d6a8....0x1d7cb
+private let __coreProp_Grapheme_Base_range_cv: _T2 = 0x1d7ce....0x1d9ff
+private let __coreProp_Grapheme_Base_range_cw: _T2 = 0x1da6d....0x1da74
+private let __coreProp_Grapheme_Base_range_cx: _T2 = 0x1da76....0x1da83
+private let __coreProp_Grapheme_Base_range_cy: _T2 = 0x1da85....0x1da8b
+private let __coreProp_Grapheme_Base_range_cz: _T2 = 0x1df00....0x1df1e
+private let __coreProp_Grapheme_Base_range_d0: _T2 = 0x1df25....0x1df2a
+private let __coreProp_Grapheme_Base_range_d1: _T2 = 0x1e030....0x1e06d
+private let __coreProp_Grapheme_Base_range_d2: _T2 = 0x1e100....0x1e12c
+private let __coreProp_Grapheme_Base_range_d3: _T2 = 0x1e137....0x1e13d
+private let __coreProp_Grapheme_Base_range_d4: _T2 = 0x1e140....0x1e149
+private let __coreProp_Grapheme_Base_range_d5: _T2 = 0x1e290....0x1e2ad
+private let __coreProp_Grapheme_Base_range_d6: _T2 = 0x1e2c0....0x1e2eb
+private let __coreProp_Grapheme_Base_range_d7: _T2 = 0x1e2f0....0x1e2f9
+private let __coreProp_Grapheme_Base_range_d8: _T2 = 0x1e4d0....0x1e4eb
+private let __coreProp_Grapheme_Base_range_d9: _T2 = 0x1e4f0....0x1e4f9
+private let __coreProp_Grapheme_Base_range_da: _T2 = 0x1e7e0....0x1e7e6
+private let __coreProp_Grapheme_Base_range_db: _T2 = 0x1e7f0....0x1e7fe
+private let __coreProp_Grapheme_Base_range_dc: _T2 = 0x1e800....0x1e8c4
+private let __coreProp_Grapheme_Base_range_dd: _T2 = 0x1e8c7....0x1e8cf
+private let __coreProp_Grapheme_Base_range_de: _T2 = 0x1e900....0x1e943
+private let __coreProp_Grapheme_Base_range_df: _T2 = 0x1e950....0x1e959
+private let __coreProp_Grapheme_Base_range_dg: _T2 = 0x1ec71....0x1ecb4
+private let __coreProp_Grapheme_Base_range_dh: _T2 = 0x1ed01....0x1ed3d
+private let __coreProp_Grapheme_Base_range_di: _T2 = 0x1ee05....0x1ee1f
+private let __coreProp_Grapheme_Base_range_dj: _T2 = 0x1ee29....0x1ee32
+private let __coreProp_Grapheme_Base_range_dk: _T2 = 0x1ee6c....0x1ee72
+private let __coreProp_Grapheme_Base_range_dl: _T2 = 0x1ee80....0x1ee89
+private let __coreProp_Grapheme_Base_range_dm: _T2 = 0x1ee8b....0x1ee9b
+private let __coreProp_Grapheme_Base_range_dn: _T2 = 0x1eea5....0x1eea9
+private let __coreProp_Grapheme_Base_range_do: _T2 = 0x1eeab....0x1eebb
+private let __coreProp_Grapheme_Base_range_dp: _T2 = 0x1f000....0x1f02b
+private let __coreProp_Grapheme_Base_range_dq: _T2 = 0x1f030....0x1f093
+private let __coreProp_Grapheme_Base_range_dr: _T2 = 0x1f0a0....0x1f0ae
+private let __coreProp_Grapheme_Base_range_ds: _T2 = 0x1f0b1....0x1f0bf
+private let __coreProp_Grapheme_Base_range_dt: _T2 = 0x1f0c1....0x1f0cf
+private let __coreProp_Grapheme_Base_range_du: _T2 = 0x1f0d1....0x1f0f5
+private let __coreProp_Grapheme_Base_range_dv: _T2 = 0x1f100....0x1f1ad
+private let __coreProp_Grapheme_Base_range_dw: _T2 = 0x1f1e6....0x1f202
+private let __coreProp_Grapheme_Base_range_dx: _T2 = 0x1f210....0x1f23b
+private let __coreProp_Grapheme_Base_range_dy: _T2 = 0x1f240....0x1f248
+private let __coreProp_Grapheme_Base_range_dz: _T2 = 0x1f260....0x1f265
+private let __coreProp_Grapheme_Base_range_e0: _T2 = 0x1f300....0x1f6d7
+private let __coreProp_Grapheme_Base_range_e1: _T2 = 0x1f6dc....0x1f6ec
+private let __coreProp_Grapheme_Base_range_e2: _T2 = 0x1f6f0....0x1f6fc
+private let __coreProp_Grapheme_Base_range_e3: _T2 = 0x1f700....0x1f776
+private let __coreProp_Grapheme_Base_range_e4: _T2 = 0x1f77b....0x1f7d9
+private let __coreProp_Grapheme_Base_range_e5: _T2 = 0x1f7e0....0x1f7eb
+private let __coreProp_Grapheme_Base_range_e6: _T2 = 0x1f800....0x1f80b
+private let __coreProp_Grapheme_Base_range_e7: _T2 = 0x1f810....0x1f847
+private let __coreProp_Grapheme_Base_range_e8: _T2 = 0x1f850....0x1f859
+private let __coreProp_Grapheme_Base_range_e9: _T2 = 0x1f860....0x1f887
+private let __coreProp_Grapheme_Base_range_ea: _T2 = 0x1f890....0x1f8ad
+private let __coreProp_Grapheme_Base_range_eb: _T2 = 0x1f900....0x1fa53
+private let __coreProp_Grapheme_Base_range_ec: _T2 = 0x1fa60....0x1fa6d
+private let __coreProp_Grapheme_Base_range_ed: _T2 = 0x1fa70....0x1fa7c
+private let __coreProp_Grapheme_Base_range_ee: _T2 = 0x1fa80....0x1fa88
+private let __coreProp_Grapheme_Base_range_ef: _T2 = 0x1fa90....0x1fabd
+private let __coreProp_Grapheme_Base_range_eg: _T2 = 0x1fabf....0x1fac5
+private let __coreProp_Grapheme_Base_range_eh: _T2 = 0x1face....0x1fadb
+private let __coreProp_Grapheme_Base_range_ei: _T2 = 0x1fae0....0x1fae8
+private let __coreProp_Grapheme_Base_range_ej: _T2 = 0x1faf0....0x1faf8
+private let __coreProp_Grapheme_Base_range_ek: _T2 = 0x1fb00....0x1fb92
+private let __coreProp_Grapheme_Base_range_el: _T2 = 0x1fb94....0x1fbca
+private let __coreProp_Grapheme_Base_range_em: _T2 = 0x1fbf0....0x1fbf9
+private let __coreProp_Grapheme_Base_range_en: _T2 = 0x20000....0x2a6df
+private let __coreProp_Grapheme_Base_range_eo: _T2 = 0x2a700....0x2b739
+private let __coreProp_Grapheme_Base_range_ep: _T2 = 0x2b740....0x2b81d
+private let __coreProp_Grapheme_Base_range_eq: _T2 = 0x2b820....0x2cea1
+private let __coreProp_Grapheme_Base_range_er: _T2 = 0x2ceb0....0x2ebe0
+private let __coreProp_Grapheme_Base_range_es: _T2 = 0x2ebf0....0x2ee5d
 private let __coreProp_Grapheme_Base_range_et: _T2 = 0x2f800....0x2fa1d
 private let __coreProp_Grapheme_Base_range_eu: _T2 = 0x30000....0x3134a
 private let __coreProp_Grapheme_Base_range_ev: _T2 = 0x31350....0x323af
@@ -8608,6 +8603,8 @@ private let __coreProp_ID_Continue_set: _T1 = [
   0x1ff2,
   0x1ff3,
   0x1ff4,
+  0x200c,
+  0x200d,
   0x203f,
   0x2040,
   0x2054,
@@ -8631,10 +8628,6 @@ private let __coreProp_ID_Continue_set: _T1 = [
   0x3005,
   0x3006,
   0x3007,
-  0x30fc,
-  0x30fd,
-  0x30fe,
-  0x30ff,
   0xa7d0,
   0xa7d1,
   0xa7d3,
@@ -9067,7 +9060,7 @@ private let __coreProp_ID_Continue_range_5g: _T2 = 0x3031....0x3035
 private let __coreProp_ID_Continue_range_5h: _T2 = 0x3038....0x303c
 private let __coreProp_ID_Continue_range_5i: _T2 = 0x3041....0x3096
 private let __coreProp_ID_Continue_range_5j: _T2 = 0x3099....0x309f
-private let __coreProp_ID_Continue_range_5k: _T2 = 0x30a1....0x30fa
+private let __coreProp_ID_Continue_range_5k: _T2 = 0x30a1....0x30ff
 private let __coreProp_ID_Continue_range_5l: _T2 = 0x3105....0x312f
 private let __coreProp_ID_Continue_range_5m: _T2 = 0x3131....0x318e
 private let __coreProp_ID_Continue_range_5n: _T2 = 0x31a0....0x31bf
@@ -9133,7 +9126,7 @@ private let __coreProp_ID_Continue_range_7a: _T2 = 0xfe76....0xfefc
 private let __coreProp_ID_Continue_range_7b: _T2 = 0xff10....0xff19
 private let __coreProp_ID_Continue_range_7c: _T2 = 0xff21....0xff3a
 private let __coreProp_ID_Continue_range_7d: _T2 = 0xff41....0xff5a
-private let __coreProp_ID_Continue_range_7e: _T2 = 0xff66....0xffbe
+private let __coreProp_ID_Continue_range_7e: _T2 = 0xff65....0xffbe
 private let __coreProp_ID_Continue_range_7f: _T2 = 0xffc2....0xffc7
 private let __coreProp_ID_Continue_range_7g: _T2 = 0xffca....0xffcf
 private let __coreProp_ID_Continue_range_7h: _T2 = 0xffd2....0xffd7
@@ -9371,10 +9364,11 @@ private let __coreProp_ID_Continue_range_dw: _T2 = 0x2a700....0x2b739
 private let __coreProp_ID_Continue_range_dx: _T2 = 0x2b740....0x2b81d
 private let __coreProp_ID_Continue_range_dy: _T2 = 0x2b820....0x2cea1
 private let __coreProp_ID_Continue_range_dz: _T2 = 0x2ceb0....0x2ebe0
-private let __coreProp_ID_Continue_range_e0: _T2 = 0x2f800....0x2fa1d
-private let __coreProp_ID_Continue_range_e1: _T2 = 0x30000....0x3134a
-private let __coreProp_ID_Continue_range_e2: _T2 = 0x31350....0x323af
-private let __coreProp_ID_Continue_range_e3: _T2 = 0xe0100....0xe01ef
+private let __coreProp_ID_Continue_range_e0: _T2 = 0x2ebf0....0x2ee5d
+private let __coreProp_ID_Continue_range_e1: _T2 = 0x2f800....0x2fa1d
+private let __coreProp_ID_Continue_range_e2: _T2 = 0x30000....0x3134a
+private let __coreProp_ID_Continue_range_e3: _T2 = 0x31350....0x323af
+private let __coreProp_ID_Continue_range_e4: _T2 = 0xe0100....0xe01ef
 private let __coreProp_ID_Continue_array: _T3 = [
   __coreProp_ID_Continue_range_0,
   __coreProp_ID_Continue_range_1,
@@ -9884,6 +9878,7 @@ private let __coreProp_ID_Continue_array: _T3 = [
   __coreProp_ID_Continue_range_e1,
   __coreProp_ID_Continue_range_e2,
   __coreProp_ID_Continue_range_e3,
+  __coreProp_ID_Continue_range_e4,
 ]
 private let __coreProp_ID_Continue_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __coreProp_ID_Continue_array)
 internal let _coreProp_ID_Continue = UnicodeScalarValueSet(singleValues: __coreProp_ID_Continue_set, ranges: __coreProp_ID_Continue_ranges)
@@ -10775,9 +10770,10 @@ private let __coreProp_ID_Start_range_at: _T2 = 0x2a700....0x2b739
 private let __coreProp_ID_Start_range_au: _T2 = 0x2b740....0x2b81d
 private let __coreProp_ID_Start_range_av: _T2 = 0x2b820....0x2cea1
 private let __coreProp_ID_Start_range_aw: _T2 = 0x2ceb0....0x2ebe0
-private let __coreProp_ID_Start_range_ax: _T2 = 0x2f800....0x2fa1d
-private let __coreProp_ID_Start_range_ay: _T2 = 0x30000....0x3134a
-private let __coreProp_ID_Start_range_az: _T2 = 0x31350....0x323af
+private let __coreProp_ID_Start_range_ax: _T2 = 0x2ebf0....0x2ee5d
+private let __coreProp_ID_Start_range_ay: _T2 = 0x2f800....0x2fa1d
+private let __coreProp_ID_Start_range_az: _T2 = 0x30000....0x3134a
+private let __coreProp_ID_Start_range_b0: _T2 = 0x31350....0x323af
 private let __coreProp_ID_Start_array: _T3 = [
   __coreProp_ID_Start_range_0,
   __coreProp_ID_Start_range_1,
@@ -11175,9 +11171,372 @@ private let __coreProp_ID_Start_array: _T3 = [
   __coreProp_ID_Start_range_ax,
   __coreProp_ID_Start_range_ay,
   __coreProp_ID_Start_range_az,
+  __coreProp_ID_Start_range_b0,
 ]
 private let __coreProp_ID_Start_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __coreProp_ID_Start_array)
 internal let _coreProp_ID_Start = UnicodeScalarValueSet(singleValues: __coreProp_ID_Start_set, ranges: __coreProp_ID_Start_ranges)
+private let __coreProp_InCB_set: _T1 = [
+  0x5bf,
+  0x5c1,
+  0x5c2,
+  0x5c4,
+  0x5c5,
+  0x5c7,
+  0x670,
+  0x6e7,
+  0x6e8,
+  0x6ea,
+  0x6eb,
+  0x6ec,
+  0x6ed,
+  0x711,
+  0x7fd,
+  0x816,
+  0x817,
+  0x818,
+  0x819,
+  0x825,
+  0x826,
+  0x827,
+  0x859,
+  0x85a,
+  0x85b,
+  0x93c,
+  0x94d,
+  0x951,
+  0x952,
+  0x953,
+  0x954,
+  0x9b2,
+  0x9b6,
+  0x9b7,
+  0x9b8,
+  0x9b9,
+  0x9bc,
+  0x9cd,
+  0x9dc,
+  0x9dd,
+  0x9df,
+  0x9f0,
+  0x9f1,
+  0x9fe,
+  0xa3c,
+  0xab2,
+  0xab3,
+  0xabc,
+  0xacd,
+  0xaf9,
+  0xb32,
+  0xb33,
+  0xb3c,
+  0xb4d,
+  0xb5c,
+  0xb5d,
+  0xb5f,
+  0xb71,
+  0xc3c,
+  0xc4d,
+  0xc55,
+  0xc56,
+  0xc58,
+  0xc59,
+  0xc5a,
+  0xcbc,
+  0xd4d,
+  0xe38,
+  0xe39,
+  0xe3a,
+  0xe48,
+  0xe49,
+  0xe4a,
+  0xe4b,
+  0xeb8,
+  0xeb9,
+  0xeba,
+  0xec8,
+  0xec9,
+  0xeca,
+  0xecb,
+  0xf18,
+  0xf19,
+  0xf35,
+  0xf37,
+  0xf39,
+  0xf71,
+  0xf72,
+  0xf74,
+  0xf7a,
+  0xf7b,
+  0xf7c,
+  0xf7d,
+  0xf80,
+  0xf82,
+  0xf83,
+  0xf84,
+  0xf86,
+  0xf87,
+  0xfc6,
+  0x1037,
+  0x1039,
+  0x103a,
+  0x108d,
+  0x135d,
+  0x135e,
+  0x135f,
+  0x1714,
+  0x17d2,
+  0x17dd,
+  0x18a9,
+  0x1939,
+  0x193a,
+  0x193b,
+  0x1a17,
+  0x1a18,
+  0x1a60,
+  0x1a7f,
+  0x1b34,
+  0x1bab,
+  0x1be6,
+  0x1c37,
+  0x1cd0,
+  0x1cd1,
+  0x1cd2,
+  0x1ced,
+  0x1cf4,
+  0x1cf8,
+  0x1cf9,
+  0x200d,
+  0x20e1,
+  0x2cef,
+  0x2cf0,
+  0x2cf1,
+  0x2d7f,
+  0x3099,
+  0x309a,
+  0xa66f,
+  0xa69e,
+  0xa69f,
+  0xa6f0,
+  0xa6f1,
+  0xa82c,
+  0xa92b,
+  0xa92c,
+  0xa92d,
+  0xa9b3,
+  0xaab0,
+  0xaab2,
+  0xaab3,
+  0xaab4,
+  0xaab7,
+  0xaab8,
+  0xaabe,
+  0xaabf,
+  0xaac1,
+  0xaaf6,
+  0xabed,
+  0xfb1e,
+  0x101fd,
+  0x102e0,
+  0x10a0d,
+  0x10a0f,
+  0x10a38,
+  0x10a39,
+  0x10a3a,
+  0x10a3f,
+  0x10ae5,
+  0x10ae6,
+  0x10d24,
+  0x10d25,
+  0x10d26,
+  0x10d27,
+  0x10eab,
+  0x10eac,
+  0x10efd,
+  0x10efe,
+  0x10eff,
+  0x10f82,
+  0x10f83,
+  0x10f84,
+  0x10f85,
+  0x11070,
+  0x1107f,
+  0x110ba,
+  0x11100,
+  0x11101,
+  0x11102,
+  0x11133,
+  0x11134,
+  0x11173,
+  0x111ca,
+  0x11236,
+  0x112e9,
+  0x112ea,
+  0x1133b,
+  0x1133c,
+  0x11446,
+  0x1145e,
+  0x114c3,
+  0x115c0,
+  0x116b7,
+  0x1172b,
+  0x1183a,
+  0x1193e,
+  0x11943,
+  0x11a34,
+  0x11a47,
+  0x11a99,
+  0x11d42,
+  0x11d44,
+  0x11d45,
+  0x11d97,
+  0x11f42,
+  0x1bc9e,
+  0x1d165,
+  0x1d167,
+  0x1d168,
+  0x1d169,
+  0x1d1aa,
+  0x1d1ab,
+  0x1d1ac,
+  0x1d1ad,
+  0x1d242,
+  0x1d243,
+  0x1d244,
+  0x1e023,
+  0x1e024,
+  0x1e08f,
+  0x1e2ae,
+  0x1e2ec,
+  0x1e2ed,
+  0x1e2ee,
+  0x1e2ef,
+  0x1e4ec,
+  0x1e4ed,
+  0x1e4ee,
+  0x1e4ef,
+]
+private let __coreProp_InCB_range_0: _T2 = 0x300....0x34e
+private let __coreProp_InCB_range_1: _T2 = 0x350....0x36f
+private let __coreProp_InCB_range_2: _T2 = 0x483....0x487
+private let __coreProp_InCB_range_3: _T2 = 0x591....0x5bd
+private let __coreProp_InCB_range_4: _T2 = 0x610....0x61a
+private let __coreProp_InCB_range_5: _T2 = 0x64b....0x65f
+private let __coreProp_InCB_range_6: _T2 = 0x6d6....0x6dc
+private let __coreProp_InCB_range_7: _T2 = 0x6df....0x6e4
+private let __coreProp_InCB_range_8: _T2 = 0x730....0x74a
+private let __coreProp_InCB_range_9: _T2 = 0x7eb....0x7f3
+private let __coreProp_InCB_range_a: _T2 = 0x81b....0x823
+private let __coreProp_InCB_range_b: _T2 = 0x829....0x82d
+private let __coreProp_InCB_range_c: _T2 = 0x898....0x89f
+private let __coreProp_InCB_range_d: _T2 = 0x8ca....0x8e1
+private let __coreProp_InCB_range_e: _T2 = 0x8e3....0x8ff
+private let __coreProp_InCB_range_f: _T2 = 0x915....0x939
+private let __coreProp_InCB_range_g: _T2 = 0x958....0x95f
+private let __coreProp_InCB_range_h: _T2 = 0x978....0x97f
+private let __coreProp_InCB_range_i: _T2 = 0x995....0x9a8
+private let __coreProp_InCB_range_j: _T2 = 0x9aa....0x9b0
+private let __coreProp_InCB_range_k: _T2 = 0xa95....0xaa8
+private let __coreProp_InCB_range_l: _T2 = 0xaaa....0xab0
+private let __coreProp_InCB_range_m: _T2 = 0xab5....0xab9
+private let __coreProp_InCB_range_n: _T2 = 0xb15....0xb28
+private let __coreProp_InCB_range_o: _T2 = 0xb2a....0xb30
+private let __coreProp_InCB_range_p: _T2 = 0xb35....0xb39
+private let __coreProp_InCB_range_q: _T2 = 0xc15....0xc28
+private let __coreProp_InCB_range_r: _T2 = 0xc2a....0xc39
+private let __coreProp_InCB_range_s: _T2 = 0xd15....0xd3c
+private let __coreProp_InCB_range_t: _T2 = 0x1a75....0x1a7c
+private let __coreProp_InCB_range_u: _T2 = 0x1ab0....0x1abd
+private let __coreProp_InCB_range_v: _T2 = 0x1abf....0x1ace
+private let __coreProp_InCB_range_w: _T2 = 0x1b6b....0x1b73
+private let __coreProp_InCB_range_x: _T2 = 0x1cd4....0x1ce0
+private let __coreProp_InCB_range_y: _T2 = 0x1ce2....0x1ce8
+private let __coreProp_InCB_range_z: _T2 = 0x1dc0....0x1dff
+private let __coreProp_InCB_range_10: _T2 = 0x20d0....0x20dc
+private let __coreProp_InCB_range_11: _T2 = 0x20e5....0x20f0
+private let __coreProp_InCB_range_12: _T2 = 0x2de0....0x2dff
+private let __coreProp_InCB_range_13: _T2 = 0x302a....0x302f
+private let __coreProp_InCB_range_14: _T2 = 0xa674....0xa67d
+private let __coreProp_InCB_range_15: _T2 = 0xa8e0....0xa8f1
+private let __coreProp_InCB_range_16: _T2 = 0xfe20....0xfe2f
+private let __coreProp_InCB_range_17: _T2 = 0x10376....0x1037a
+private let __coreProp_InCB_range_18: _T2 = 0x10f46....0x10f50
+private let __coreProp_InCB_range_19: _T2 = 0x11366....0x1136c
+private let __coreProp_InCB_range_1a: _T2 = 0x11370....0x11374
+private let __coreProp_InCB_range_1b: _T2 = 0x16af0....0x16af4
+private let __coreProp_InCB_range_1c: _T2 = 0x16b30....0x16b36
+private let __coreProp_InCB_range_1d: _T2 = 0x1d16e....0x1d172
+private let __coreProp_InCB_range_1e: _T2 = 0x1d17b....0x1d182
+private let __coreProp_InCB_range_1f: _T2 = 0x1d185....0x1d18b
+private let __coreProp_InCB_range_1g: _T2 = 0x1e000....0x1e006
+private let __coreProp_InCB_range_1h: _T2 = 0x1e008....0x1e018
+private let __coreProp_InCB_range_1i: _T2 = 0x1e01b....0x1e021
+private let __coreProp_InCB_range_1j: _T2 = 0x1e026....0x1e02a
+private let __coreProp_InCB_range_1k: _T2 = 0x1e130....0x1e136
+private let __coreProp_InCB_range_1l: _T2 = 0x1e8d0....0x1e8d6
+private let __coreProp_InCB_range_1m: _T2 = 0x1e944....0x1e94a
+private let __coreProp_InCB_array: _T3 = [
+  __coreProp_InCB_range_0,
+  __coreProp_InCB_range_1,
+  __coreProp_InCB_range_2,
+  __coreProp_InCB_range_3,
+  __coreProp_InCB_range_4,
+  __coreProp_InCB_range_5,
+  __coreProp_InCB_range_6,
+  __coreProp_InCB_range_7,
+  __coreProp_InCB_range_8,
+  __coreProp_InCB_range_9,
+  __coreProp_InCB_range_a,
+  __coreProp_InCB_range_b,
+  __coreProp_InCB_range_c,
+  __coreProp_InCB_range_d,
+  __coreProp_InCB_range_e,
+  __coreProp_InCB_range_f,
+  __coreProp_InCB_range_g,
+  __coreProp_InCB_range_h,
+  __coreProp_InCB_range_i,
+  __coreProp_InCB_range_j,
+  __coreProp_InCB_range_k,
+  __coreProp_InCB_range_l,
+  __coreProp_InCB_range_m,
+  __coreProp_InCB_range_n,
+  __coreProp_InCB_range_o,
+  __coreProp_InCB_range_p,
+  __coreProp_InCB_range_q,
+  __coreProp_InCB_range_r,
+  __coreProp_InCB_range_s,
+  __coreProp_InCB_range_t,
+  __coreProp_InCB_range_u,
+  __coreProp_InCB_range_v,
+  __coreProp_InCB_range_w,
+  __coreProp_InCB_range_x,
+  __coreProp_InCB_range_y,
+  __coreProp_InCB_range_z,
+  __coreProp_InCB_range_10,
+  __coreProp_InCB_range_11,
+  __coreProp_InCB_range_12,
+  __coreProp_InCB_range_13,
+  __coreProp_InCB_range_14,
+  __coreProp_InCB_range_15,
+  __coreProp_InCB_range_16,
+  __coreProp_InCB_range_17,
+  __coreProp_InCB_range_18,
+  __coreProp_InCB_range_19,
+  __coreProp_InCB_range_1a,
+  __coreProp_InCB_range_1b,
+  __coreProp_InCB_range_1c,
+  __coreProp_InCB_range_1d,
+  __coreProp_InCB_range_1e,
+  __coreProp_InCB_range_1f,
+  __coreProp_InCB_range_1g,
+  __coreProp_InCB_range_1h,
+  __coreProp_InCB_range_1i,
+  __coreProp_InCB_range_1j,
+  __coreProp_InCB_range_1k,
+  __coreProp_InCB_range_1l,
+  __coreProp_InCB_range_1m,
+]
+private let __coreProp_InCB_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __coreProp_InCB_array)
+internal let _coreProp_InCB = UnicodeScalarValueSet(singleValues: __coreProp_InCB_set, ranges: __coreProp_InCB_ranges)
 private let __coreProp_Lowercase_set: _T1 = [
   0xaa,
   0xb5,
@@ -13332,6 +13691,8 @@ private let __coreProp_XID_Continue_set: _T1 = [
   0x1ff2,
   0x1ff3,
   0x1ff4,
+  0x200c,
+  0x200d,
   0x203f,
   0x2040,
   0x2054,
@@ -13360,10 +13721,6 @@ private let __coreProp_XID_Continue_set: _T1 = [
   0x309d,
   0x309e,
   0x309f,
-  0x30fc,
-  0x30fd,
-  0x30fe,
-  0x30ff,
   0xa7d0,
   0xa7d1,
   0xa7d3,
@@ -13801,7 +14158,7 @@ private let __coreProp_XID_Continue_range_5f: _T2 = 0x3021....0x302f
 private let __coreProp_XID_Continue_range_5g: _T2 = 0x3031....0x3035
 private let __coreProp_XID_Continue_range_5h: _T2 = 0x3038....0x303c
 private let __coreProp_XID_Continue_range_5i: _T2 = 0x3041....0x3096
-private let __coreProp_XID_Continue_range_5j: _T2 = 0x30a1....0x30fa
+private let __coreProp_XID_Continue_range_5j: _T2 = 0x30a1....0x30ff
 private let __coreProp_XID_Continue_range_5k: _T2 = 0x3105....0x312f
 private let __coreProp_XID_Continue_range_5l: _T2 = 0x3131....0x318e
 private let __coreProp_XID_Continue_range_5m: _T2 = 0x31a0....0x31bf
@@ -13867,7 +14224,7 @@ private let __coreProp_XID_Continue_range_79: _T2 = 0xfe7f....0xfefc
 private let __coreProp_XID_Continue_range_7a: _T2 = 0xff10....0xff19
 private let __coreProp_XID_Continue_range_7b: _T2 = 0xff21....0xff3a
 private let __coreProp_XID_Continue_range_7c: _T2 = 0xff41....0xff5a
-private let __coreProp_XID_Continue_range_7d: _T2 = 0xff66....0xffbe
+private let __coreProp_XID_Continue_range_7d: _T2 = 0xff65....0xffbe
 private let __coreProp_XID_Continue_range_7e: _T2 = 0xffc2....0xffc7
 private let __coreProp_XID_Continue_range_7f: _T2 = 0xffca....0xffcf
 private let __coreProp_XID_Continue_range_7g: _T2 = 0xffd2....0xffd7
@@ -14105,10 +14462,11 @@ private let __coreProp_XID_Continue_range_dv: _T2 = 0x2a700....0x2b739
 private let __coreProp_XID_Continue_range_dw: _T2 = 0x2b740....0x2b81d
 private let __coreProp_XID_Continue_range_dx: _T2 = 0x2b820....0x2cea1
 private let __coreProp_XID_Continue_range_dy: _T2 = 0x2ceb0....0x2ebe0
-private let __coreProp_XID_Continue_range_dz: _T2 = 0x2f800....0x2fa1d
-private let __coreProp_XID_Continue_range_e0: _T2 = 0x30000....0x3134a
-private let __coreProp_XID_Continue_range_e1: _T2 = 0x31350....0x323af
-private let __coreProp_XID_Continue_range_e2: _T2 = 0xe0100....0xe01ef
+private let __coreProp_XID_Continue_range_dz: _T2 = 0x2ebf0....0x2ee5d
+private let __coreProp_XID_Continue_range_e0: _T2 = 0x2f800....0x2fa1d
+private let __coreProp_XID_Continue_range_e1: _T2 = 0x30000....0x3134a
+private let __coreProp_XID_Continue_range_e2: _T2 = 0x31350....0x323af
+private let __coreProp_XID_Continue_range_e3: _T2 = 0xe0100....0xe01ef
 private let __coreProp_XID_Continue_array: _T3 = [
   __coreProp_XID_Continue_range_0,
   __coreProp_XID_Continue_range_1,
@@ -14617,6 +14975,7 @@ private let __coreProp_XID_Continue_array: _T3 = [
   __coreProp_XID_Continue_range_e0,
   __coreProp_XID_Continue_range_e1,
   __coreProp_XID_Continue_range_e2,
+  __coreProp_XID_Continue_range_e3,
 ]
 private let __coreProp_XID_Continue_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __coreProp_XID_Continue_array)
 internal let _coreProp_XID_Continue = UnicodeScalarValueSet(singleValues: __coreProp_XID_Continue_set, ranges: __coreProp_XID_Continue_ranges)
@@ -15514,9 +15873,10 @@ private let __coreProp_XID_Start_range_at: _T2 = 0x2a700....0x2b739
 private let __coreProp_XID_Start_range_au: _T2 = 0x2b740....0x2b81d
 private let __coreProp_XID_Start_range_av: _T2 = 0x2b820....0x2cea1
 private let __coreProp_XID_Start_range_aw: _T2 = 0x2ceb0....0x2ebe0
-private let __coreProp_XID_Start_range_ax: _T2 = 0x2f800....0x2fa1d
-private let __coreProp_XID_Start_range_ay: _T2 = 0x30000....0x3134a
-private let __coreProp_XID_Start_range_az: _T2 = 0x31350....0x323af
+private let __coreProp_XID_Start_range_ax: _T2 = 0x2ebf0....0x2ee5d
+private let __coreProp_XID_Start_range_ay: _T2 = 0x2f800....0x2fa1d
+private let __coreProp_XID_Start_range_az: _T2 = 0x30000....0x3134a
+private let __coreProp_XID_Start_range_b0: _T2 = 0x31350....0x323af
 private let __coreProp_XID_Start_array: _T3 = [
   __coreProp_XID_Start_range_0,
   __coreProp_XID_Start_range_1,
@@ -15914,6 +16274,7 @@ private let __coreProp_XID_Start_array: _T3 = [
   __coreProp_XID_Start_range_ax,
   __coreProp_XID_Start_range_ay,
   __coreProp_XID_Start_range_az,
+  __coreProp_XID_Start_range_b0,
 ]
 private let __coreProp_XID_Start_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __coreProp_XID_Start_array)
 internal let _coreProp_XID_Start = UnicodeScalarValueSet(singleValues: __coreProp_XID_Start_set, ranges: __coreProp_XID_Start_ranges)

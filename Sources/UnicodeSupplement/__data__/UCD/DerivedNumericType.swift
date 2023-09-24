@@ -4,56 +4,49 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt
-// Last-Modified: 2022-04-27T16:30:09Z
-// ETag: "4db0-5dda552a9204d-gzip"
+// Last-Modified: 2023-08-28T16:08:56Z
+// ETag: "501c-603fde94cd600-gzip"
 
 /*
-  UNICODE, INC. LICENSE AGREEMENT - DATA FILES AND SOFTWARE
-  
-  See Terms of Use <https://www.unicode.org/copyright.html>
-  for definitions of Unicode Inc.’s Data Files and Software.
-  
-  NOTICE TO USER: Carefully read the following legal agreement.
-  BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING UNICODE INC.'S
-  DATA FILES ("DATA FILES"), AND/OR SOFTWARE ("SOFTWARE"),
-  YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
-  TERMS AND CONDITIONS OF THIS AGREEMENT.
-  IF YOU DO NOT AGREE, DO NOT DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE
-  THE DATA FILES OR SOFTWARE.
+  UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2022 Unicode, Inc. All rights reserved.
-  Distributed under the Terms of Use in https://www.unicode.org/copyright.html.
+  Copyright © 1991-2023 Unicode, Inc.
   
-  Permission is hereby granted, free of charge, to any person obtaining
-  a copy of the Unicode data files and any associated documentation
-  (the "Data Files") or Unicode software and any associated documentation
-  (the "Software") to deal in the Data Files or Software
-  without restriction, including without limitation the rights to use,
-  copy, modify, merge, publish, distribute, and/or sell copies of
-  the Data Files or Software, and to permit persons to whom the Data Files
-  or Software are furnished to do so, provided that either
-  (a) this copyright and permission notice appear with all copies
-  of the Data Files or Software, or
-  (b) this copyright and permission notice appear in associated
-  Documentation.
+  NOTICE TO USER: Carefully read the following legal agreement. BY
+  DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
+  SOFTWARE, YOU UNEQUIVOCALLY ACCEPT, AND AGREE TO BE BOUND BY, ALL OF THE
+  TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE, DO NOT
+  DOWNLOAD, INSTALL, COPY, DISTRIBUTE OR USE THE DATA FILES OR SOFTWARE.
   
-  THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
-  ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE
-  WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-  NONINFRINGEMENT OF THIRD PARTY RIGHTS.
-  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS
-  NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL
-  DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE,
-  DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER
-  TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
-  PERFORMANCE OF THE DATA FILES OR SOFTWARE.
+  Permission is hereby granted, free of charge, to any person obtaining a
+  copy of data files and any associated documentation (the "Data Files") or
+  software and any associated documentation (the "Software") to deal in the
+  Data Files or Software without restriction, including without limitation
+  the rights to use, copy, modify, merge, publish, distribute, and/or sell
+  copies of the Data Files or Software, and to permit persons to whom the
+  Data Files or Software are furnished to do so, provided that either (a)
+  this copyright and permission notice appear with all copies of the Data
+  Files or Software, or (b) this copyright and permission notice appear in
+  associated Documentation.
   
-  Except as contained in this notice, the name of a copyright holder
-  shall not be used in advertising or otherwise to promote the sale,
-  use or other dealings in these Data Files or Software without prior
-  written authorization of the copyright holder.
+  THE DATA FILES AND SOFTWARE ARE PROVIDED "AS IS", WITHOUT WARRANTY OF ANY
+  KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+  MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF
+  THIRD PARTY RIGHTS.
+  
+  IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE
+  BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES,
+  OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS,
+  WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+  ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THE DATA
+  FILES OR SOFTWARE.
+  
+  Except as contained in this notice, the name of a copyright holder shall
+  not be used in advertising or otherwise to promote the sale, use or other
+  dealings in these Data Files or Software without prior written
+  authorization of the copyright holder.
 */
 
 // Required Modules
@@ -102,113 +95,123 @@ private let __nt_pair_x: _T1 = (0x4e00, .numeric)
 private let __nt_pair_y: _T1 = (0x4e03, .numeric)
 private let __nt_pair_z: _T1 = (0x4e07, .numeric)
 private let __nt_pair_10: _T1 = (0x4e09, .numeric)
-private let __nt_pair_11: _T1 = (0x4e5d, .numeric)
-private let __nt_pair_12: _T1 = (0x4e8c, .numeric)
-private let __nt_pair_13: _T1 = (0x4e94, .numeric)
-private let __nt_pair_14: _T1 = (0x4e96, .numeric)
-private let __nt_pair_15: _T1 = (0x4ebf, .numeric)
-private let __nt_pair_16: _T1 = (0x4ec0, .numeric)
-private let __nt_pair_17: _T1 = (0x4edf, .numeric)
-private let __nt_pair_18: _T1 = (0x4ee8, .numeric)
-private let __nt_pair_19: _T1 = (0x4f0d, .numeric)
-private let __nt_pair_1a: _T1 = (0x4f70, .numeric)
-private let __nt_pair_1b: _T1 = (0x5104, .numeric)
-private let __nt_pair_1c: _T1 = (0x5146, .numeric)
-private let __nt_pair_1d: _T1 = (0x5169, .numeric)
-private let __nt_pair_1e: _T1 = (0x516b, .numeric)
-private let __nt_pair_1f: _T1 = (0x516d, .numeric)
-private let __nt_pair_1g: _T1 = (0x5341, .numeric)
-private let __nt_pair_1h: _T1 = (0x5343, .numeric)
-private let __nt_pair_1i: _T1 = (0x5344, .numeric)
-private let __nt_pair_1j: _T1 = (0x5345, .numeric)
-private let __nt_pair_1k: _T1 = (0x534c, .numeric)
-private let __nt_pair_1l: _T1 = (0x53c1, .numeric)
-private let __nt_pair_1m: _T1 = (0x53c2, .numeric)
-private let __nt_pair_1n: _T1 = (0x53c3, .numeric)
-private let __nt_pair_1o: _T1 = (0x53c4, .numeric)
-private let __nt_pair_1p: _T1 = (0x56db, .numeric)
-private let __nt_pair_1q: _T1 = (0x58f1, .numeric)
-private let __nt_pair_1r: _T1 = (0x58f9, .numeric)
-private let __nt_pair_1s: _T1 = (0x5e7a, .numeric)
-private let __nt_pair_1t: _T1 = (0x5efe, .numeric)
-private let __nt_pair_1u: _T1 = (0x5eff, .numeric)
-private let __nt_pair_1v: _T1 = (0x5f0c, .numeric)
-private let __nt_pair_1w: _T1 = (0x5f0d, .numeric)
-private let __nt_pair_1x: _T1 = (0x5f0e, .numeric)
-private let __nt_pair_1y: _T1 = (0x5f10, .numeric)
-private let __nt_pair_1z: _T1 = (0x62fe, .numeric)
-private let __nt_pair_20: _T1 = (0x634c, .numeric)
-private let __nt_pair_21: _T1 = (0x67d2, .numeric)
-private let __nt_pair_22: _T1 = (0x6f06, .numeric)
-private let __nt_pair_23: _T1 = (0x7396, .numeric)
-private let __nt_pair_24: _T1 = (0x767e, .numeric)
-private let __nt_pair_25: _T1 = (0x8086, .numeric)
-private let __nt_pair_26: _T1 = (0x842c, .numeric)
-private let __nt_pair_27: _T1 = (0x8cae, .numeric)
-private let __nt_pair_28: _T1 = (0x8cb3, .numeric)
-private let __nt_pair_29: _T1 = (0x8d30, .numeric)
-private let __nt_pair_2a: _T1 = (0x9621, .numeric)
-private let __nt_pair_2b: _T1 = (0x9646, .numeric)
-private let __nt_pair_2c: _T1 = (0x964c, .numeric)
-private let __nt_pair_2d: _T1 = (0x9678, .numeric)
-private let __nt_pair_2e: _T1 = (0x96f6, .numeric)
-private let __nt_pair_2f: _T1 = (0xf96b, .numeric)
-private let __nt_pair_2g: _T1 = (0xf973, .numeric)
-private let __nt_pair_2h: _T1 = (0xf978, .numeric)
-private let __nt_pair_2i: _T1 = (0xf9b2, .numeric)
-private let __nt_pair_2j: _T1 = (0xf9d1, .numeric)
-private let __nt_pair_2k: _T1 = (0xf9d3, .numeric)
-private let __nt_pair_2l: _T1 = (0xf9fd, .numeric)
-private let __nt_pair_2m: _T1 = (0x1018a, .numeric)
-private let __nt_pair_2n: _T1 = (0x1018b, .numeric)
-private let __nt_pair_2o: _T1 = (0x10320, .numeric)
-private let __nt_pair_2p: _T1 = (0x10321, .numeric)
-private let __nt_pair_2q: _T1 = (0x10322, .numeric)
-private let __nt_pair_2r: _T1 = (0x10323, .numeric)
-private let __nt_pair_2s: _T1 = (0x10341, .numeric)
-private let __nt_pair_2t: _T1 = (0x1034a, .numeric)
-private let __nt_pair_2u: _T1 = (0x109bc, .numeric)
-private let __nt_pair_2v: _T1 = (0x109bd, .numeric)
-private let __nt_pair_2w: _T1 = (0x10a40, .digit)
-private let __nt_pair_2x: _T1 = (0x10a41, .digit)
-private let __nt_pair_2y: _T1 = (0x10a42, .digit)
-private let __nt_pair_2z: _T1 = (0x10a43, .digit)
-private let __nt_pair_30: _T1 = (0x10a7d, .numeric)
-private let __nt_pair_31: _T1 = (0x10a7e, .numeric)
-private let __nt_pair_32: _T1 = (0x10a9d, .numeric)
-private let __nt_pair_33: _T1 = (0x10a9e, .numeric)
-private let __nt_pair_34: _T1 = (0x10a9f, .numeric)
-private let __nt_pair_35: _T1 = (0x10f51, .numeric)
-private let __nt_pair_36: _T1 = (0x10f52, .numeric)
-private let __nt_pair_37: _T1 = (0x10f53, .numeric)
-private let __nt_pair_38: _T1 = (0x10f54, .numeric)
-private let __nt_pair_39: _T1 = (0x1173a, .numeric)
-private let __nt_pair_3a: _T1 = (0x1173b, .numeric)
-private let __nt_pair_3b: _T1 = (0x1ecad, .numeric)
-private let __nt_pair_3c: _T1 = (0x1ecae, .numeric)
-private let __nt_pair_3d: _T1 = (0x1ecaf, .numeric)
-private let __nt_pair_3e: _T1 = (0x1ecb1, .numeric)
-private let __nt_pair_3f: _T1 = (0x1ecb2, .numeric)
-private let __nt_pair_3g: _T1 = (0x1ecb3, .numeric)
-private let __nt_pair_3h: _T1 = (0x1ecb4, .numeric)
-private let __nt_pair_3i: _T1 = (0x1f10b, .numeric)
-private let __nt_pair_3j: _T1 = (0x1f10c, .numeric)
-private let __nt_pair_3k: _T1 = (0x20001, .numeric)
-private let __nt_pair_3l: _T1 = (0x20064, .numeric)
-private let __nt_pair_3m: _T1 = (0x200e2, .numeric)
-private let __nt_pair_3n: _T1 = (0x20121, .numeric)
-private let __nt_pair_3o: _T1 = (0x2092a, .numeric)
-private let __nt_pair_3p: _T1 = (0x20983, .numeric)
-private let __nt_pair_3q: _T1 = (0x2098c, .numeric)
-private let __nt_pair_3r: _T1 = (0x2099c, .numeric)
-private let __nt_pair_3s: _T1 = (0x20aea, .numeric)
-private let __nt_pair_3t: _T1 = (0x20afd, .numeric)
-private let __nt_pair_3u: _T1 = (0x20b19, .numeric)
-private let __nt_pair_3v: _T1 = (0x22390, .numeric)
-private let __nt_pair_3w: _T1 = (0x22998, .numeric)
-private let __nt_pair_3x: _T1 = (0x23b1b, .numeric)
-private let __nt_pair_3y: _T1 = (0x2626d, .numeric)
-private let __nt_pair_3z: _T1 = (0x2f890, .numeric)
+private let __nt_pair_11: _T1 = (0x4e24, .numeric)
+private let __nt_pair_12: _T1 = (0x4e5d, .numeric)
+private let __nt_pair_13: _T1 = (0x4e8c, .numeric)
+private let __nt_pair_14: _T1 = (0x4e94, .numeric)
+private let __nt_pair_15: _T1 = (0x4e96, .numeric)
+private let __nt_pair_16: _T1 = (0x4eac, .numeric)
+private let __nt_pair_17: _T1 = (0x4ebf, .numeric)
+private let __nt_pair_18: _T1 = (0x4ec0, .numeric)
+private let __nt_pair_19: _T1 = (0x4edf, .numeric)
+private let __nt_pair_1a: _T1 = (0x4ee8, .numeric)
+private let __nt_pair_1b: _T1 = (0x4f0d, .numeric)
+private let __nt_pair_1c: _T1 = (0x4f70, .numeric)
+private let __nt_pair_1d: _T1 = (0x4fe9, .numeric)
+private let __nt_pair_1e: _T1 = (0x5006, .numeric)
+private let __nt_pair_1f: _T1 = (0x5104, .numeric)
+private let __nt_pair_1g: _T1 = (0x5146, .numeric)
+private let __nt_pair_1h: _T1 = (0x5169, .numeric)
+private let __nt_pair_1i: _T1 = (0x516b, .numeric)
+private let __nt_pair_1j: _T1 = (0x516d, .numeric)
+private let __nt_pair_1k: _T1 = (0x5341, .numeric)
+private let __nt_pair_1l: _T1 = (0x5343, .numeric)
+private let __nt_pair_1m: _T1 = (0x5344, .numeric)
+private let __nt_pair_1n: _T1 = (0x5345, .numeric)
+private let __nt_pair_1o: _T1 = (0x534c, .numeric)
+private let __nt_pair_1p: _T1 = (0x53c1, .numeric)
+private let __nt_pair_1q: _T1 = (0x53c2, .numeric)
+private let __nt_pair_1r: _T1 = (0x53c3, .numeric)
+private let __nt_pair_1s: _T1 = (0x53c4, .numeric)
+private let __nt_pair_1t: _T1 = (0x56db, .numeric)
+private let __nt_pair_1u: _T1 = (0x58f1, .numeric)
+private let __nt_pair_1v: _T1 = (0x58f9, .numeric)
+private let __nt_pair_1w: _T1 = (0x5e7a, .numeric)
+private let __nt_pair_1x: _T1 = (0x5efe, .numeric)
+private let __nt_pair_1y: _T1 = (0x5eff, .numeric)
+private let __nt_pair_1z: _T1 = (0x5f0c, .numeric)
+private let __nt_pair_20: _T1 = (0x5f0d, .numeric)
+private let __nt_pair_21: _T1 = (0x5f0e, .numeric)
+private let __nt_pair_22: _T1 = (0x5f10, .numeric)
+private let __nt_pair_23: _T1 = (0x62d0, .numeric)
+private let __nt_pair_24: _T1 = (0x62fe, .numeric)
+private let __nt_pair_25: _T1 = (0x634c, .numeric)
+private let __nt_pair_26: _T1 = (0x67d2, .numeric)
+private let __nt_pair_27: _T1 = (0x6d1e, .numeric)
+private let __nt_pair_28: _T1 = (0x6f06, .numeric)
+private let __nt_pair_29: _T1 = (0x7396, .numeric)
+private let __nt_pair_2a: _T1 = (0x767e, .numeric)
+private let __nt_pair_2b: _T1 = (0x7695, .numeric)
+private let __nt_pair_2c: _T1 = (0x79ed, .numeric)
+private let __nt_pair_2d: _T1 = (0x8086, .numeric)
+private let __nt_pair_2e: _T1 = (0x842c, .numeric)
+private let __nt_pair_2f: _T1 = (0x8cae, .numeric)
+private let __nt_pair_2g: _T1 = (0x8cb3, .numeric)
+private let __nt_pair_2h: _T1 = (0x8d30, .numeric)
+private let __nt_pair_2i: _T1 = (0x920e, .numeric)
+private let __nt_pair_2j: _T1 = (0x94a9, .numeric)
+private let __nt_pair_2k: _T1 = (0x9621, .numeric)
+private let __nt_pair_2l: _T1 = (0x9646, .numeric)
+private let __nt_pair_2m: _T1 = (0x964c, .numeric)
+private let __nt_pair_2n: _T1 = (0x9678, .numeric)
+private let __nt_pair_2o: _T1 = (0x96f6, .numeric)
+private let __nt_pair_2p: _T1 = (0xf96b, .numeric)
+private let __nt_pair_2q: _T1 = (0xf973, .numeric)
+private let __nt_pair_2r: _T1 = (0xf978, .numeric)
+private let __nt_pair_2s: _T1 = (0xf9b2, .numeric)
+private let __nt_pair_2t: _T1 = (0xf9d1, .numeric)
+private let __nt_pair_2u: _T1 = (0xf9d3, .numeric)
+private let __nt_pair_2v: _T1 = (0xf9fd, .numeric)
+private let __nt_pair_2w: _T1 = (0x1018a, .numeric)
+private let __nt_pair_2x: _T1 = (0x1018b, .numeric)
+private let __nt_pair_2y: _T1 = (0x10320, .numeric)
+private let __nt_pair_2z: _T1 = (0x10321, .numeric)
+private let __nt_pair_30: _T1 = (0x10322, .numeric)
+private let __nt_pair_31: _T1 = (0x10323, .numeric)
+private let __nt_pair_32: _T1 = (0x10341, .numeric)
+private let __nt_pair_33: _T1 = (0x1034a, .numeric)
+private let __nt_pair_34: _T1 = (0x109bc, .numeric)
+private let __nt_pair_35: _T1 = (0x109bd, .numeric)
+private let __nt_pair_36: _T1 = (0x10a40, .digit)
+private let __nt_pair_37: _T1 = (0x10a41, .digit)
+private let __nt_pair_38: _T1 = (0x10a42, .digit)
+private let __nt_pair_39: _T1 = (0x10a43, .digit)
+private let __nt_pair_3a: _T1 = (0x10a7d, .numeric)
+private let __nt_pair_3b: _T1 = (0x10a7e, .numeric)
+private let __nt_pair_3c: _T1 = (0x10a9d, .numeric)
+private let __nt_pair_3d: _T1 = (0x10a9e, .numeric)
+private let __nt_pair_3e: _T1 = (0x10a9f, .numeric)
+private let __nt_pair_3f: _T1 = (0x10f51, .numeric)
+private let __nt_pair_3g: _T1 = (0x10f52, .numeric)
+private let __nt_pair_3h: _T1 = (0x10f53, .numeric)
+private let __nt_pair_3i: _T1 = (0x10f54, .numeric)
+private let __nt_pair_3j: _T1 = (0x1173a, .numeric)
+private let __nt_pair_3k: _T1 = (0x1173b, .numeric)
+private let __nt_pair_3l: _T1 = (0x1ecad, .numeric)
+private let __nt_pair_3m: _T1 = (0x1ecae, .numeric)
+private let __nt_pair_3n: _T1 = (0x1ecaf, .numeric)
+private let __nt_pair_3o: _T1 = (0x1ecb1, .numeric)
+private let __nt_pair_3p: _T1 = (0x1ecb2, .numeric)
+private let __nt_pair_3q: _T1 = (0x1ecb3, .numeric)
+private let __nt_pair_3r: _T1 = (0x1ecb4, .numeric)
+private let __nt_pair_3s: _T1 = (0x1f10b, .numeric)
+private let __nt_pair_3t: _T1 = (0x1f10c, .numeric)
+private let __nt_pair_3u: _T1 = (0x20001, .numeric)
+private let __nt_pair_3v: _T1 = (0x20064, .numeric)
+private let __nt_pair_3w: _T1 = (0x200e2, .numeric)
+private let __nt_pair_3x: _T1 = (0x20121, .numeric)
+private let __nt_pair_3y: _T1 = (0x2092a, .numeric)
+private let __nt_pair_3z: _T1 = (0x20983, .numeric)
+private let __nt_pair_40: _T1 = (0x2098c, .numeric)
+private let __nt_pair_41: _T1 = (0x2099c, .numeric)
+private let __nt_pair_42: _T1 = (0x20aea, .numeric)
+private let __nt_pair_43: _T1 = (0x20afd, .numeric)
+private let __nt_pair_44: _T1 = (0x20b19, .numeric)
+private let __nt_pair_45: _T1 = (0x22390, .numeric)
+private let __nt_pair_46: _T1 = (0x22998, .numeric)
+private let __nt_pair_47: _T1 = (0x23b1b, .numeric)
+private let __nt_pair_48: _T1 = (0x2626d, .numeric)
+private let __nt_pair_49: _T1 = (0x2f890, .numeric)
 private let __nt_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWithValues: [
   __nt_pair_0,
   __nt_pair_1,
@@ -354,6 +357,16 @@ private let __nt_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWi
   __nt_pair_3x,
   __nt_pair_3y,
   __nt_pair_3z,
+  __nt_pair_40,
+  __nt_pair_41,
+  __nt_pair_42,
+  __nt_pair_43,
+  __nt_pair_44,
+  __nt_pair_45,
+  __nt_pair_46,
+  __nt_pair_47,
+  __nt_pair_48,
+  __nt_pair_49,
 ])
 private let __nt_rangePair_0: _T2 = (0x30....0x39, .decimal)
 private let __nt_rangePair_1: _T2 = (0x660....0x669, .decimal)
