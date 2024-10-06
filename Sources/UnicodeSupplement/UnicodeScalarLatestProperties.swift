@@ -14,7 +14,7 @@ import Glibc
 import _cUnicodeSupplement
 
 extension Unicode.Scalar {
-  public struct LatestProperties {
+  public struct LatestProperties: Sendable {
     internal let _value: UInt32
     fileprivate init(_ scalar:Unicode.Scalar) {
       self._value = scalar.value
@@ -33,7 +33,7 @@ extension Unicode.Scalar.LatestProperties {
     if let bidiClass = _bidiClass[self._value] {
       return bidiClass
     } else {
-      for (keyPath, status, bidiClass) in _bidiClass_default_properties {
+      for (keyPath, status, bidiClass): (KeyPath<Unicode.Scalar.LatestProperties, Bool>, Bool, Unicode.BidiClass) in _bidiClass_default_properties {
         if self[keyPath: keyPath] == status {
           return bidiClass
         }

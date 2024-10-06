@@ -8,7 +8,7 @@
 extension Unicode {
   /// Represents the IDNA status value.
   /// See [UTS #46: §5](https://www.unicode.org/reports/tr46/#IDNA_Mapping_Table).
-  public enum IDNAStatus {
+  public enum IDNAStatus: Sendable {
     /// Scalar is valid (and not modified).
     case valid
     
@@ -42,7 +42,7 @@ extension Unicode.IDNAStatus: Equatable {
 extension Unicode.IDNAStatus {
   /// Represents the raw status.
   /// This is for internal use, but declared as `public` so that it is available in "Updater".
-  public enum _ImmatureStatus: Equatable {
+  public enum _ImmatureStatus: Equatable, Sendable {
     case _valid_idna2008_disallowed
     case _valid
     case _ignored

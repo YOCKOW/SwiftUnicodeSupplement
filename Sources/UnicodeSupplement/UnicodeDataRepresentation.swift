@@ -12,7 +12,7 @@ extension Unicode.Scalar {
 }
 
 /// Immutable Set-like class for Unicode scalars.
-internal final class UnicodeScalarValueSet {
+internal final class UnicodeScalarValueSet: Sendable {
   private let _set: Set<Unicode.Scalar.Value>
   private let _ranges: MemoizableMultipleRanges<Unicode.Scalar.Value>
   
@@ -35,7 +35,7 @@ internal final class UnicodeScalarValueSet {
 }
 
 /// Immutable Dictionary-like class for Unicode scalars.
-internal final class UnicodeScalarValueDictionary<AssociatedValue> {
+internal final class UnicodeScalarValueDictionary<AssociatedValue>: Sendable where AssociatedValue: Sendable {
   private let _dictionary: Dictionary<Unicode.Scalar.Value, AssociatedValue>
   private let _rangeDictionary: MemoizableRangeDictionary<Unicode.Scalar.Value, AssociatedValue>
   
