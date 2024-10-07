@@ -57,7 +57,7 @@ private typealias _T0 = Unicode.BidiClass
 private typealias _T1 = (Unicode.Scalar.Value, _T0)
 private typealias _T2 = (AnyRange<UInt32>, _T0)
 private typealias _T3 = Array<_T2>
-private typealias _T4 = (KeyPath<Unicode.Scalar.LatestProperties, Bool>, Bool, Unicode.BidiClass)
+private typealias _T4 = (KeyPath<Unicode.Scalar.LatestProperties, Bool> & Sendable, Bool, Unicode.BidiClass)
 
 private let __bidiClass_pair_0: _T1 = (0x9, .segmentSeparator)
 private let __bidiClass_pair_1: _T1 = (0xa, .paragraphSeparator)
@@ -4542,9 +4542,9 @@ private let __bidiClass_rangePairArray: _T3 = [
 private let __bidiClass_rangeDictionary = RangeDictionary<Unicode.Scalar.Value, _T0>(carefullySortedRangesAndValues: __bidiClass_rangePairArray)
 internal let _bidiClass = UnicodeScalarValueDictionary<Unicode.BidiClass>(dictionary: __bidiClass_dictionary, rangeDictionary: __bidiClass_rangeDictionary)
 // Default Values defined by core properties
-private let __bidiClass_default_properties_triple_0: _T4 = (\.isDefaultIgnorableCodePoint, true, .boundaryNeutral)
-private let __bidiClass_default_properties_triple_1: _T4 = (\.isNoncharacterCodePoint, true, .boundaryNeutral)
-internal let _bidiClass_default_properties: Array<(KeyPath<Unicode.Scalar.LatestProperties, Bool>, Bool, Unicode.BidiClass)> = [
+private let __bidiClass_default_properties_triple_0: _T4 = (\Unicode.Scalar.LatestProperties.isDefaultIgnorableCodePoint, true, .boundaryNeutral)
+private let __bidiClass_default_properties_triple_1: _T4 = (\Unicode.Scalar.LatestProperties.isNoncharacterCodePoint, true, .boundaryNeutral)
+internal let _bidiClass_default_properties: Array<(KeyPath<Unicode.Scalar.LatestProperties, Bool> & Sendable, Bool, Unicode.BidiClass)> = [
   __bidiClass_default_properties_triple_0,
   __bidiClass_default_properties_triple_1,
 ]

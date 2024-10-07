@@ -18,7 +18,7 @@ let package = Package(
   ],
   dependencies: [
     // Dependencies declare other packages that this package depends on.
-    .package(url: "https://github.com/YOCKOW/SwiftRanges.git", from: "3.1.3"),
+    .package(url: "https://github.com/YOCKOW/SwiftRanges.git", from: "3.2.1"),
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -33,7 +33,7 @@ let package = Package(
     ),
     .testTarget(name: "UnicodeSupplementTests", dependencies: ["UnicodeSupplement", "SwiftRanges"]),
   ],
-  swiftLanguageVersions: [.v4, .v4_2, .v5]
+  swiftLanguageVersions: [.v4, .v4_2, .v5, .version("6")]
 )
 
 

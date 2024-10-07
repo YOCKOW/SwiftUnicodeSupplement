@@ -66,7 +66,7 @@
 /* ********************************************************************************************** */
 // Property: bc
 extension Unicode {
-  public enum BidiClass {
+  public enum BidiClass: Sendable {
   case arabicLetter
   case arabicNumber
   case paragraphSeparator
@@ -312,7 +312,7 @@ extension Unicode.CanonicalCombiningClass {
 /* ********************************************************************************************** */
 // Property: ea
 extension Unicode {
-  public enum EastAsianWidth {
+  public enum EastAsianWidth: Sendable {
     case ambiguous
     case fullwidth
     case halfwidth
@@ -493,7 +493,7 @@ extension Unicode.GeneralCategory {
 /* ********************************************************************************************** */
 // Property: jg
 extension Unicode {
-  public enum JoiningGroup {
+  public enum JoiningGroup: Sendable {
     case africanFeh
     case africanNoon
     case africanQaf
@@ -725,7 +725,7 @@ extension Unicode.JoiningGroup {
 /* ********************************************************************************************** */
 // Property: jt
 extension Unicode {
-  public enum JoiningType {
+  public enum JoiningType: Sendable {
     case joinCausing
     case dualJoining
     case leftJoining
@@ -880,7 +880,7 @@ extension Unicode.NumericType {
 /* ********************************************************************************************** */
 // Property: sc
 extension Unicode {
-  public enum Script {
+  public enum Script: Sendable {
     case adlam
     case caucasianAlbanian
     case ahom
