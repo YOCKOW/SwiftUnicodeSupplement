@@ -4,15 +4,15 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://unicode.org/Public/UCD/latest/ucd/emoji/emoji-data.txt
-// Last-Modified: 2023-08-28T16:08:56Z
-// ETag: "1b391-603fde94cd600-gzip"
+// Last-Modified: 2024-08-25T23:05:31Z
+// ETag: "1b980-6208a0b8364c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2023 Unicode, Inc.
+  Copyright © 1991-2024 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
@@ -270,12 +270,11 @@ private let __emoji_Emoji_range_p: _T2 = 0x1f90c....0x1f93a
 private let __emoji_Emoji_range_q: _T2 = 0x1f93c....0x1f945
 private let __emoji_Emoji_range_r: _T2 = 0x1f947....0x1f9ff
 private let __emoji_Emoji_range_s: _T2 = 0x1fa70....0x1fa7c
-private let __emoji_Emoji_range_t: _T2 = 0x1fa80....0x1fa88
-private let __emoji_Emoji_range_u: _T2 = 0x1fa90....0x1fabd
-private let __emoji_Emoji_range_v: _T2 = 0x1fabf....0x1fac5
-private let __emoji_Emoji_range_w: _T2 = 0x1face....0x1fadb
-private let __emoji_Emoji_range_x: _T2 = 0x1fae0....0x1fae8
-private let __emoji_Emoji_range_y: _T2 = 0x1faf0....0x1faf8
+private let __emoji_Emoji_range_t: _T2 = 0x1fa80....0x1fa89
+private let __emoji_Emoji_range_u: _T2 = 0x1fa8f....0x1fac6
+private let __emoji_Emoji_range_v: _T2 = 0x1face....0x1fadc
+private let __emoji_Emoji_range_w: _T2 = 0x1fadf....0x1fae9
+private let __emoji_Emoji_range_x: _T2 = 0x1faf0....0x1faf8
 private let __emoji_Emoji_array: _T3 = [
   __emoji_Emoji_range_0,
   __emoji_Emoji_range_1,
@@ -311,7 +310,6 @@ private let __emoji_Emoji_array: _T3 = [
   __emoji_Emoji_range_v,
   __emoji_Emoji_range_w,
   __emoji_Emoji_range_x,
-  __emoji_Emoji_range_y,
 ]
 private let __emoji_Emoji_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __emoji_Emoji_array)
 internal let _emoji_Emoji = UnicodeScalarValueSet(singleValues: __emoji_Emoji_set, ranges: __emoji_Emoji_ranges)
@@ -541,12 +539,11 @@ private let __emoji_Emoji_Presentation_range_j: _T2 = 0x1f90c....0x1f93a
 private let __emoji_Emoji_Presentation_range_k: _T2 = 0x1f93c....0x1f945
 private let __emoji_Emoji_Presentation_range_l: _T2 = 0x1f947....0x1f9ff
 private let __emoji_Emoji_Presentation_range_m: _T2 = 0x1fa70....0x1fa7c
-private let __emoji_Emoji_Presentation_range_n: _T2 = 0x1fa80....0x1fa88
-private let __emoji_Emoji_Presentation_range_o: _T2 = 0x1fa90....0x1fabd
-private let __emoji_Emoji_Presentation_range_p: _T2 = 0x1fabf....0x1fac5
-private let __emoji_Emoji_Presentation_range_q: _T2 = 0x1face....0x1fadb
-private let __emoji_Emoji_Presentation_range_r: _T2 = 0x1fae0....0x1fae8
-private let __emoji_Emoji_Presentation_range_s: _T2 = 0x1faf0....0x1faf8
+private let __emoji_Emoji_Presentation_range_n: _T2 = 0x1fa80....0x1fa89
+private let __emoji_Emoji_Presentation_range_o: _T2 = 0x1fa8f....0x1fac6
+private let __emoji_Emoji_Presentation_range_p: _T2 = 0x1face....0x1fadc
+private let __emoji_Emoji_Presentation_range_q: _T2 = 0x1fadf....0x1fae9
+private let __emoji_Emoji_Presentation_range_r: _T2 = 0x1faf0....0x1faf8
 private let __emoji_Emoji_Presentation_array: _T3 = [
   __emoji_Emoji_Presentation_range_0,
   __emoji_Emoji_Presentation_range_1,
@@ -576,7 +573,6 @@ private let __emoji_Emoji_Presentation_array: _T3 = [
   __emoji_Emoji_Presentation_range_p,
   __emoji_Emoji_Presentation_range_q,
   __emoji_Emoji_Presentation_range_r,
-  __emoji_Emoji_Presentation_range_s,
 ]
 private let __emoji_Emoji_Presentation_ranges = MultipleRanges<Unicode.Scalar.Value>(carefullySortedRanges: __emoji_Emoji_Presentation_array)
 internal let _emoji_Emoji_Presentation = UnicodeScalarValueSet(singleValues: __emoji_Emoji_Presentation_set, ranges: __emoji_Emoji_Presentation_ranges)

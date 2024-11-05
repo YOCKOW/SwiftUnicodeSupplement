@@ -4,15 +4,15 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericType.txt
-// Last-Modified: 2023-08-28T16:08:56Z
-// ETag: "501c-603fde94cd600-gzip"
+// Last-Modified: 2024-08-25T23:05:31Z
+// ETag: "5250-6208a0b8364c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2023 Unicode, Inc.
+  Copyright © 1991-2024 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
@@ -456,52 +456,59 @@ private let __nt_rangePair_2c: _T2 = (0x10b78....0x10b7f, .numeric)
 private let __nt_rangePair_2d: _T2 = (0x10ba9....0x10baf, .numeric)
 private let __nt_rangePair_2e: _T2 = (0x10cfa....0x10cff, .numeric)
 private let __nt_rangePair_2f: _T2 = (0x10d30....0x10d39, .decimal)
-private let __nt_rangePair_2g: _T2 = (0x10e60....0x10e68, .digit)
-private let __nt_rangePair_2h: _T2 = (0x10e69....0x10e7e, .numeric)
-private let __nt_rangePair_2i: _T2 = (0x10f1d....0x10f26, .numeric)
-private let __nt_rangePair_2j: _T2 = (0x10fc5....0x10fcb, .numeric)
-private let __nt_rangePair_2k: _T2 = (0x11052....0x1105a, .digit)
-private let __nt_rangePair_2l: _T2 = (0x1105b....0x11065, .numeric)
-private let __nt_rangePair_2m: _T2 = (0x11066....0x1106f, .decimal)
-private let __nt_rangePair_2n: _T2 = (0x110f0....0x110f9, .decimal)
-private let __nt_rangePair_2o: _T2 = (0x11136....0x1113f, .decimal)
-private let __nt_rangePair_2p: _T2 = (0x111d0....0x111d9, .decimal)
-private let __nt_rangePair_2q: _T2 = (0x111e1....0x111f4, .numeric)
-private let __nt_rangePair_2r: _T2 = (0x112f0....0x112f9, .decimal)
-private let __nt_rangePair_2s: _T2 = (0x11450....0x11459, .decimal)
-private let __nt_rangePair_2t: _T2 = (0x114d0....0x114d9, .decimal)
-private let __nt_rangePair_2u: _T2 = (0x11650....0x11659, .decimal)
-private let __nt_rangePair_2v: _T2 = (0x116c0....0x116c9, .decimal)
-private let __nt_rangePair_2w: _T2 = (0x11730....0x11739, .decimal)
-private let __nt_rangePair_2x: _T2 = (0x118e0....0x118e9, .decimal)
-private let __nt_rangePair_2y: _T2 = (0x118ea....0x118f2, .numeric)
-private let __nt_rangePair_2z: _T2 = (0x11950....0x11959, .decimal)
-private let __nt_rangePair_30: _T2 = (0x11c50....0x11c59, .decimal)
-private let __nt_rangePair_31: _T2 = (0x11c5a....0x11c6c, .numeric)
-private let __nt_rangePair_32: _T2 = (0x11d50....0x11d59, .decimal)
-private let __nt_rangePair_33: _T2 = (0x11da0....0x11da9, .decimal)
-private let __nt_rangePair_34: _T2 = (0x11f50....0x11f59, .decimal)
-private let __nt_rangePair_35: _T2 = (0x11fc0....0x11fd4, .numeric)
-private let __nt_rangePair_36: _T2 = (0x12400....0x1246e, .numeric)
-private let __nt_rangePair_37: _T2 = (0x16a60....0x16a69, .decimal)
-private let __nt_rangePair_38: _T2 = (0x16ac0....0x16ac9, .decimal)
-private let __nt_rangePair_39: _T2 = (0x16b50....0x16b59, .decimal)
-private let __nt_rangePair_3a: _T2 = (0x16b5b....0x16b61, .numeric)
-private let __nt_rangePair_3b: _T2 = (0x16e80....0x16e96, .numeric)
-private let __nt_rangePair_3c: _T2 = (0x1d2c0....0x1d2d3, .numeric)
-private let __nt_rangePair_3d: _T2 = (0x1d2e0....0x1d2f3, .numeric)
-private let __nt_rangePair_3e: _T2 = (0x1d360....0x1d378, .numeric)
-private let __nt_rangePair_3f: _T2 = (0x1d7ce....0x1d7ff, .decimal)
-private let __nt_rangePair_3g: _T2 = (0x1e140....0x1e149, .decimal)
-private let __nt_rangePair_3h: _T2 = (0x1e2f0....0x1e2f9, .decimal)
-private let __nt_rangePair_3i: _T2 = (0x1e4f0....0x1e4f9, .decimal)
-private let __nt_rangePair_3j: _T2 = (0x1e8c7....0x1e8cf, .numeric)
-private let __nt_rangePair_3k: _T2 = (0x1e950....0x1e959, .decimal)
-private let __nt_rangePair_3l: _T2 = (0x1ec71....0x1ecab, .numeric)
-private let __nt_rangePair_3m: _T2 = (0x1ed01....0x1ed2d, .numeric)
-private let __nt_rangePair_3n: _T2 = (0x1ed2f....0x1ed3d, .numeric)
-private let __nt_rangePair_3o: _T2 = (0x1f100....0x1f10a, .digit)
-private let __nt_rangePair_3p: _T2 = (0x1fbf0....0x1fbf9, .decimal)
+private let __nt_rangePair_2g: _T2 = (0x10d40....0x10d49, .decimal)
+private let __nt_rangePair_2h: _T2 = (0x10e60....0x10e68, .digit)
+private let __nt_rangePair_2i: _T2 = (0x10e69....0x10e7e, .numeric)
+private let __nt_rangePair_2j: _T2 = (0x10f1d....0x10f26, .numeric)
+private let __nt_rangePair_2k: _T2 = (0x10fc5....0x10fcb, .numeric)
+private let __nt_rangePair_2l: _T2 = (0x11052....0x1105a, .digit)
+private let __nt_rangePair_2m: _T2 = (0x1105b....0x11065, .numeric)
+private let __nt_rangePair_2n: _T2 = (0x11066....0x1106f, .decimal)
+private let __nt_rangePair_2o: _T2 = (0x110f0....0x110f9, .decimal)
+private let __nt_rangePair_2p: _T2 = (0x11136....0x1113f, .decimal)
+private let __nt_rangePair_2q: _T2 = (0x111d0....0x111d9, .decimal)
+private let __nt_rangePair_2r: _T2 = (0x111e1....0x111f4, .numeric)
+private let __nt_rangePair_2s: _T2 = (0x112f0....0x112f9, .decimal)
+private let __nt_rangePair_2t: _T2 = (0x11450....0x11459, .decimal)
+private let __nt_rangePair_2u: _T2 = (0x114d0....0x114d9, .decimal)
+private let __nt_rangePair_2v: _T2 = (0x11650....0x11659, .decimal)
+private let __nt_rangePair_2w: _T2 = (0x116c0....0x116c9, .decimal)
+private let __nt_rangePair_2x: _T2 = (0x116d0....0x116e3, .decimal)
+private let __nt_rangePair_2y: _T2 = (0x11730....0x11739, .decimal)
+private let __nt_rangePair_2z: _T2 = (0x118e0....0x118e9, .decimal)
+private let __nt_rangePair_30: _T2 = (0x118ea....0x118f2, .numeric)
+private let __nt_rangePair_31: _T2 = (0x11950....0x11959, .decimal)
+private let __nt_rangePair_32: _T2 = (0x11bf0....0x11bf9, .decimal)
+private let __nt_rangePair_33: _T2 = (0x11c50....0x11c59, .decimal)
+private let __nt_rangePair_34: _T2 = (0x11c5a....0x11c6c, .numeric)
+private let __nt_rangePair_35: _T2 = (0x11d50....0x11d59, .decimal)
+private let __nt_rangePair_36: _T2 = (0x11da0....0x11da9, .decimal)
+private let __nt_rangePair_37: _T2 = (0x11f50....0x11f59, .decimal)
+private let __nt_rangePair_38: _T2 = (0x11fc0....0x11fd4, .numeric)
+private let __nt_rangePair_39: _T2 = (0x12400....0x1246e, .numeric)
+private let __nt_rangePair_3a: _T2 = (0x16130....0x16139, .decimal)
+private let __nt_rangePair_3b: _T2 = (0x16a60....0x16a69, .decimal)
+private let __nt_rangePair_3c: _T2 = (0x16ac0....0x16ac9, .decimal)
+private let __nt_rangePair_3d: _T2 = (0x16b50....0x16b59, .decimal)
+private let __nt_rangePair_3e: _T2 = (0x16b5b....0x16b61, .numeric)
+private let __nt_rangePair_3f: _T2 = (0x16d70....0x16d79, .decimal)
+private let __nt_rangePair_3g: _T2 = (0x16e80....0x16e96, .numeric)
+private let __nt_rangePair_3h: _T2 = (0x1ccf0....0x1ccf9, .decimal)
+private let __nt_rangePair_3i: _T2 = (0x1d2c0....0x1d2d3, .numeric)
+private let __nt_rangePair_3j: _T2 = (0x1d2e0....0x1d2f3, .numeric)
+private let __nt_rangePair_3k: _T2 = (0x1d360....0x1d378, .numeric)
+private let __nt_rangePair_3l: _T2 = (0x1d7ce....0x1d7ff, .decimal)
+private let __nt_rangePair_3m: _T2 = (0x1e140....0x1e149, .decimal)
+private let __nt_rangePair_3n: _T2 = (0x1e2f0....0x1e2f9, .decimal)
+private let __nt_rangePair_3o: _T2 = (0x1e4f0....0x1e4f9, .decimal)
+private let __nt_rangePair_3p: _T2 = (0x1e5f1....0x1e5fa, .decimal)
+private let __nt_rangePair_3q: _T2 = (0x1e8c7....0x1e8cf, .numeric)
+private let __nt_rangePair_3r: _T2 = (0x1e950....0x1e959, .decimal)
+private let __nt_rangePair_3s: _T2 = (0x1ec71....0x1ecab, .numeric)
+private let __nt_rangePair_3t: _T2 = (0x1ed01....0x1ed2d, .numeric)
+private let __nt_rangePair_3u: _T2 = (0x1ed2f....0x1ed3d, .numeric)
+private let __nt_rangePair_3v: _T2 = (0x1f100....0x1f10a, .digit)
+private let __nt_rangePair_3w: _T2 = (0x1fbf0....0x1fbf9, .decimal)
 private let __nt_rangePairArray: _T3 = [
   __nt_rangePair_0,
   __nt_rangePair_1,
@@ -637,6 +644,13 @@ private let __nt_rangePairArray: _T3 = [
   __nt_rangePair_3n,
   __nt_rangePair_3o,
   __nt_rangePair_3p,
+  __nt_rangePair_3q,
+  __nt_rangePair_3r,
+  __nt_rangePair_3s,
+  __nt_rangePair_3t,
+  __nt_rangePair_3u,
+  __nt_rangePair_3v,
+  __nt_rangePair_3w,
 ]
 private let __nt_rangeDictionary = RangeDictionary<Unicode.Scalar.Value, _T0>(carefullySortedRangesAndValues: __nt_rangePairArray)
 internal let _nt = UnicodeScalarValueDictionary<Unicode.NumericType>(dictionary: __nt_dictionary, rangeDictionary: __nt_rangeDictionary)

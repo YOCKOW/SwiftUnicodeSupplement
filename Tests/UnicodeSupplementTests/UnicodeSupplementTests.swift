@@ -142,13 +142,12 @@ import Testing
     _assert("\u{DF}", std3: true, idna2008: false, expected: .deviation(["s", "s"]))
     _assert("\u{200C}", std3: true, idna2008: false, expected: .deviation([]))
 
-    _assert("\u{04C0}", std3: true, idna2008: false, expected: .disallowed)
+    _assert("\u{04BF}", std3: true, idna2008: false, expected: .valid)
 
     _assert("?", std3: true, idna2008: false, expected: .valid)
-    _assert("?", std3: false, idna2008: false, expected: .disallowed)
+    _assert("?", std3: false, idna2008: true, expected: .disallowed)
 
     _assert("\u{2474}", std3: true, idna2008: false, expected: .mapped(["(", "1", ")"]))
-    _assert("\u{2474}", std3: false, idna2008: false, expected: .disallowed)
   }
 
   @Test func joiningGroup() {
@@ -707,23 +706,22 @@ final class UnicodeSupplementTests: XCTestCase {
     _assert("\u{A1}", std3: true, idna2008: true, expected: .disallowed)
     _assert("\u{19DA}", std3: true, idna2008: false, expected: .valid)
     _assert("\u{19DA}", std3: true, idna2008: true, expected: .disallowed)
-    
+
     _assert("あ", std3: true, idna2008: false, expected: .valid)
-    
+
     _assert("\u{AD}", std3: true, idna2008: false, expected: .ignored)
-    
+
     _assert("A", std3: true, idna2008: false, expected: .mapped(["a"]))
-    
+
     _assert("\u{DF}", std3: true, idna2008: false, expected: .deviation(["s", "s"]))
     _assert("\u{200C}", std3: true, idna2008: false, expected: .deviation([]))
-    
-    _assert("\u{04C0}", std3: true, idna2008: false, expected: .disallowed)
-    
+
+    _assert("\u{04BF}", std3: true, idna2008: false, expected: .valid)
+
     _assert("?", std3: true, idna2008: false, expected: .valid)
-    _assert("?", std3: false, idna2008: false, expected: .disallowed)
-    
+    _assert("?", std3: false, idna2008: true, expected: .disallowed)
+
     _assert("\u{2474}", std3: true, idna2008: false, expected: .mapped(["(", "1", ")"]))
-    _assert("\u{2474}", std3: false, idna2008: false, expected: .disallowed)
   }
   
   func test_JoiningGroup() {

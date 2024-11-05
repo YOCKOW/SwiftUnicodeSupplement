@@ -4,15 +4,15 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt
-// Last-Modified: 2023-08-28T16:08:56Z
-// ETag: "132d2-603fde94cd600-gzip"
+// Last-Modified: 2024-08-25T23:05:31Z
+// ETag: "13b85-6208a0b8364c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2023 Unicode, Inc.
+  Copyright © 1991-2024 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
@@ -93,6 +93,7 @@ extension Unicode {
   }
 }
 extension Unicode.BidiClass {
+  @inlinable
   public init?<S>(abbreviated name: S) where S: StringProtocol {
     switch name {
     case "AL": self = .arabicLetter
@@ -188,6 +189,7 @@ extension Unicode.CanonicalCombiningClass {
 }
 extension Unicode.CanonicalCombiningClass {
   /// Initialize with a short name
+  @inlinable
   public init?<S>(abbreviated name: S) where S: StringProtocol {
     switch name {
     case "NR": self.init(rawValue: 0)
@@ -323,6 +325,7 @@ extension Unicode {
 }
 extension Unicode.EastAsianWidth {
   /// Initialize with a name.
+  @inlinable
   public init?<S>(_ name: S) where S: StringProtocol {
     switch name {
     case "Ambiguous": self = .ambiguous
@@ -336,6 +339,7 @@ extension Unicode.EastAsianWidth {
   }
   
   /// Initialize with a short name.
+  @inlinable
   public init?<S>(abbreviated name: S) where S: StringProtocol {
     switch name {
     case "A": self = .ambiguous
@@ -521,6 +525,7 @@ extension Unicode {
     case heth
     case kaf
     case kaph
+    case kashmiriYeh
     case khaph
     case knottedHeh
     case lam
@@ -603,6 +608,7 @@ extension Unicode {
 }
 extension Unicode.JoiningGroup {
   /// Initialize with a name.
+  @inlinable
   public init?<S>(_ name: S) where S: StringProtocol {
     switch name {
     case "African_Feh": self = .africanFeh
@@ -632,6 +638,7 @@ extension Unicode.JoiningGroup {
     case "Heth": self = .heth
     case "Kaf": self = .kaf
     case "Kaph": self = .kaph
+    case "Kashmiri_Yeh": self = .kashmiriYeh
     case "Khaph": self = .khaph
     case "Knotted_Heh": self = .knottedHeh
     case "Lam": self = .lam
@@ -697,7 +704,7 @@ extension Unicode.JoiningGroup {
     case "Tah": self = .tah
     case "Taw": self = .taw
     case "Teh_Marbuta": self = .tehMarbuta
-    case "Teh_Marbuta_Goal", "Hamza_On_Heh_Goal": self = .tehMarbutaGoal
+    case "Hamza_On_Heh_Goal", "Teh_Marbuta_Goal": self = .tehMarbutaGoal
     case "Teth": self = .teth
     case "Thin_Yeh": self = .thinYeh
     case "Vertical_Tail": self = .verticalTail
@@ -736,6 +743,7 @@ extension Unicode {
 }
 extension Unicode.JoiningType {
   /// Initialize with a short name.
+  @inlinable
   public init?(abbreviated name: Character) {
     switch name {
     case "C": self = .joinCausing
@@ -749,11 +757,20 @@ extension Unicode.JoiningType {
   }
   
   /// Initialize with a short name.
+  @inlinable
   public init?<S>(abbreviated name: S) where S: StringProtocol {
     guard name.count == 1 else { return nil }
     self.init(abbreviated: name.first!)
   }
 }
+
+/* ********************************************************************************************** */
+// Property: kEH_NoMirror
+// * No converted code for kEH_NoMirror.
+
+/* ********************************************************************************************** */
+// Property: kEH_NoRotate
+// * No converted code for kEH_NoRotate.
 
 /* ********************************************************************************************** */
 // Property: lb
@@ -770,6 +787,10 @@ extension Unicode.JoiningType {
 /* ********************************************************************************************** */
 // Property: Math
 // * No converted code for Math.
+
+/* ********************************************************************************************** */
+// Property: MCM
+// * No converted code for MCM.
 
 /* ********************************************************************************************** */
 // Property: NChar
@@ -795,6 +816,7 @@ extension Unicode.JoiningType {
 // Property: nt
 extension Unicode.NumericType {
   /// Initialize with a long name.
+  @inlinable
   public init?<S>(_ name: S) where S: StringProtocol {
     switch name {
     case "Decimal": self = .decimal
@@ -806,6 +828,7 @@ extension Unicode.NumericType {
   }
 
   /// Initialize with a short name.
+  @inlinable
   public init?<S>(abbreviated name: S) where S: StringProtocol {
     switch name {
     case "De": self = .decimal
@@ -918,6 +941,7 @@ extension Unicode {
     case elbasan
     case elymaic
     case ethiopic
+    case garay
     case georgian
     case glagolitic
     case gunjalaGondi
@@ -926,6 +950,7 @@ extension Unicode {
     case grantha
     case greek
     case gujarati
+    case gurungKhema
     case gurmukhi
     case hangul
     case han
@@ -948,6 +973,7 @@ extension Unicode {
     case khojki
     case khitanSmallScript
     case kannada
+    case kiratRai
     case kaithi
     case taiTham
     case lao
@@ -984,6 +1010,7 @@ extension Unicode {
     case nushu
     case ogham
     case olChiki
+    case olOnal
     case oldTurkic
     case oriya
     case osage
@@ -1015,6 +1042,7 @@ extension Unicode {
     case soraSompeng
     case soyombo
     case sundanese
+    case sunuwar
     case sylotiNagri
     case syriac
     case tagbanwa
@@ -1032,7 +1060,9 @@ extension Unicode {
     case tibetan
     case tirhuta
     case tangsa
+    case todhri
     case toto
+    case tuluTigalari
     case ugaritic
     case vai
     case vithkuqi
@@ -1050,6 +1080,7 @@ extension Unicode {
 }
 extension Unicode.Script {
   /// Initialize with a long name.
+  @inlinable
   public init?<S>(_ name: S) where S: StringProtocol {
     switch name {
     case "Adlam": self = .adlam
@@ -1089,6 +1120,7 @@ extension Unicode.Script {
     case "Elbasan": self = .elbasan
     case "Elymaic": self = .elymaic
     case "Ethiopic": self = .ethiopic
+    case "Garay": self = .garay
     case "Georgian": self = .georgian
     case "Glagolitic": self = .glagolitic
     case "Gunjala_Gondi": self = .gunjalaGondi
@@ -1097,6 +1129,7 @@ extension Unicode.Script {
     case "Grantha": self = .grantha
     case "Greek": self = .greek
     case "Gujarati": self = .gujarati
+    case "Gurung_Khema": self = .gurungKhema
     case "Gurmukhi": self = .gurmukhi
     case "Hangul": self = .hangul
     case "Han": self = .han
@@ -1119,6 +1152,7 @@ extension Unicode.Script {
     case "Khojki": self = .khojki
     case "Khitan_Small_Script": self = .khitanSmallScript
     case "Kannada": self = .kannada
+    case "Kirat_Rai": self = .kiratRai
     case "Kaithi": self = .kaithi
     case "Tai_Tham": self = .taiTham
     case "Lao": self = .lao
@@ -1155,6 +1189,7 @@ extension Unicode.Script {
     case "Nushu": self = .nushu
     case "Ogham": self = .ogham
     case "Ol_Chiki": self = .olChiki
+    case "Ol_Onal": self = .olOnal
     case "Old_Turkic": self = .oldTurkic
     case "Oriya": self = .oriya
     case "Osage": self = .osage
@@ -1186,6 +1221,7 @@ extension Unicode.Script {
     case "Sora_Sompeng": self = .soraSompeng
     case "Soyombo": self = .soyombo
     case "Sundanese": self = .sundanese
+    case "Sunuwar": self = .sunuwar
     case "Syloti_Nagri": self = .sylotiNagri
     case "Syriac": self = .syriac
     case "Tagbanwa": self = .tagbanwa
@@ -1203,7 +1239,9 @@ extension Unicode.Script {
     case "Tibetan": self = .tibetan
     case "Tirhuta": self = .tirhuta
     case "Tangsa": self = .tangsa
+    case "Todhri": self = .todhri
     case "Toto": self = .toto
+    case "Tulu_Tigalari": self = .tuluTigalari
     case "Ugaritic": self = .ugaritic
     case "Vai": self = .vai
     case "Vithkuqi": self = .vithkuqi
@@ -1222,6 +1260,7 @@ extension Unicode.Script {
   }
 
   /// Initialize with a short name.
+  @inlinable
   public init?<S>(abbreviated name: S) where S: StringProtocol {
     switch name {
     case "Adlm": self = .adlam
@@ -1262,6 +1301,7 @@ extension Unicode.Script {
     case "Elba": self = .elbasan
     case "Elym": self = .elymaic
     case "Ethi": self = .ethiopic
+    case "Gara": self = .garay
     case "Geor": self = .georgian
     case "Glag": self = .glagolitic
     case "Gong": self = .gunjalaGondi
@@ -1270,6 +1310,7 @@ extension Unicode.Script {
     case "Gran": self = .grantha
     case "Grek": self = .greek
     case "Gujr": self = .gujarati
+    case "Gukh": self = .gurungKhema
     case "Guru": self = .gurmukhi
     case "Hang": self = .hangul
     case "Hani": self = .han
@@ -1292,6 +1333,7 @@ extension Unicode.Script {
     case "Khoj": self = .khojki
     case "Kits": self = .khitanSmallScript
     case "Knda": self = .kannada
+    case "Krai": self = .kiratRai
     case "Kthi": self = .kaithi
     case "Lana": self = .taiTham
     case "Laoo": self = .lao
@@ -1328,6 +1370,7 @@ extension Unicode.Script {
     case "Nshu": self = .nushu
     case "Ogam": self = .ogham
     case "Olck": self = .olChiki
+    case "Onao": self = .olOnal
     case "Orkh": self = .oldTurkic
     case "Orya": self = .oriya
     case "Osge": self = .osage
@@ -1359,6 +1402,7 @@ extension Unicode.Script {
     case "Sora": self = .soraSompeng
     case "Soyo": self = .soyombo
     case "Sund": self = .sundanese
+    case "Sunu": self = .sunuwar
     case "Sylo": self = .sylotiNagri
     case "Syrc": self = .syriac
     case "Tagb": self = .tagbanwa
@@ -1376,7 +1420,9 @@ extension Unicode.Script {
     case "Tibt": self = .tibetan
     case "Tirh": self = .tirhuta
     case "Tnsa": self = .tangsa
+    case "Todr": self = .todhri
     case "Toto": self = .toto
+    case "Tutg": self = .tuluTigalari
     case "Ugar": self = .ugaritic
     case "Vaii": self = .vai
     case "Vith": self = .vithkuqi

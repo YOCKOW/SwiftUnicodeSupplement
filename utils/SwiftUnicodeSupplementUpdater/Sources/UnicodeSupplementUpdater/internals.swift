@@ -21,7 +21,7 @@ extension URL {
 
 internal let _mainModuleName = "UnicodeSupplement"
 internal let _cModuleName = "_cUnicodeSupplement"
-internal let _packageRoot = URL(fileURLWithPath: #file)._deletingLastPathComponent(5)
+internal let _packageRoot = URL(fileURLWithPath: #filePath)._deletingLastPathComponent(5)
 internal let _sourcesDirectory = _packageRoot.appendingPathComponent("Sources", isDirectory: true)
 internal let _mainModuleDirectory = _sourcesDirectory.appendingPathComponent(_mainModuleName, isDirectory: true)
 internal let _cModuleDirectory = _sourcesDirectory.appendingPathComponent(_cModuleName, isDirectory: true)

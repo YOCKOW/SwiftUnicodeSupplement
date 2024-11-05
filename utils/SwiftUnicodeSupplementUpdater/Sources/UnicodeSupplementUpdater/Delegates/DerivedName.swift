@@ -1,10 +1,11 @@
 /* *************************************************************************************************
  DerivedName.swift
-   © 2020 YOCKOW.
+   © 2020,2024 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
- 
+
+import Dispatch
 import Foundation
 import Ranges
 import StringComposition
@@ -23,17 +24,27 @@ private protocol __DataStore {
 }
 extension __DataStore {
   init<S>(_intermediates: S) where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    if _DataStore.shared != nil {
-      self = _DataStore.shared as! Self
-    } else {
-      self.init(__intermediates: _intermediates)
-      _DataStore.shared = (self as! _DataStore)
+    self = _DataStore.withShared {
+      if let shared = $0 {
+        return shared as! Self
+      }
+      let instance = Self.init(__intermediates: _intermediates)
+      $0 = (instance as! _DataStore)
+      return instance
     }
   }
 }
 private final class _DataStore: __DataStore {
-  static var shared: _DataStore!
-  
+  private static let _sharedInstanceQueue: DispatchQueue = .init(
+    label: "jp.YOCKOW.UnicodeSupplementUpdater.DerivedName._DataStore",
+    attributes: .concurrent
+  )
+  nonisolated(unsafe) private static var _shared: _DataStore? = nil
+
+  static func withShared<T>(_ body: (inout _DataStore?) throws -> T) rethrows -> T {
+    return try _sharedInstanceQueue.sync(flags: .barrier) { try body(&_shared) }
+  }
+
   final class NameParts {
     let prefixes: [Substring]
     let prefixList: RangeDictionary<Unicode.Scalar.Value, Substring>
@@ -204,10 +215,12 @@ public class DerivedName: UCDCodeUpdaterDelegate, _DerivedName {
   }
   
   public override func prepare(sourceURL: URL) throws -> IntermediateDataContainer<UnicodeData> {
-    if _DataStore.shared != nil {
-      return .init(content: .init("")) // dummy
-    } else {
-      return try super.prepare(sourceURL: sourceURL)
+    return try _DataStore.withShared {
+      if $0 != nil {
+        return .init(content: .init("")) // dummy
+      } else {
+        return try super.prepare(sourceURL: sourceURL)
+      }
     }
   }
   

@@ -4,15 +4,15 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/NameAliases.txt
-// Last-Modified: 2023-08-28T16:08:56Z
-// ETag: "3f65-603fde94cd600-gzip"
+// Last-Modified: 2024-08-25T23:05:31Z
+// ETag: "4095-6208a0b8364c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2023 Unicode, Inc.
+  Copyright © 1991-2024 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
@@ -83,12 +83,16 @@ private let __nameAliases_pair_l: _T1 = (0xaa6e, "MYANMAR LETTER KHAMTI LLA")
 private let __nameAliases_pair_m: _T1 = (0xfe18, "PRESENTATION FORM FOR VERTICAL RIGHT WHITE LENTICULAR BRACKET")
 private let __nameAliases_pair_n: _T1 = (0x122d4, "CUNEIFORM SIGN NU11 TENU")
 private let __nameAliases_pair_o: _T1 = (0x122d5, "CUNEIFORM SIGN NU11 OVER NU11 BUR OVER BUR")
-private let __nameAliases_pair_p: _T1 = (0x16e56, "MEDEFAIDRIN CAPITAL LETTER H")
-private let __nameAliases_pair_q: _T1 = (0x16e57, "MEDEFAIDRIN CAPITAL LETTER NG")
-private let __nameAliases_pair_r: _T1 = (0x16e76, "MEDEFAIDRIN SMALL LETTER H")
-private let __nameAliases_pair_s: _T1 = (0x16e77, "MEDEFAIDRIN SMALL LETTER NG")
-private let __nameAliases_pair_t: _T1 = (0x1b001, "HENTAIGANA LETTER E-1")
-private let __nameAliases_pair_u: _T1 = (0x1d0c5, "BYZANTINE MUSICAL SYMBOL FTHORA SKLIRON CHROMA VASIS")
+private let __nameAliases_pair_p: _T1 = (0x12327, "CUNEIFORM SIGN KALAM")
+private let __nameAliases_pair_q: _T1 = (0x1680b, "BAMUM LETTER PHASE-A MAEMGBIEE")
+private let __nameAliases_pair_r: _T1 = (0x16e56, "MEDEFAIDRIN CAPITAL LETTER H")
+private let __nameAliases_pair_s: _T1 = (0x16e57, "MEDEFAIDRIN CAPITAL LETTER NG")
+private let __nameAliases_pair_t: _T1 = (0x16e76, "MEDEFAIDRIN SMALL LETTER H")
+private let __nameAliases_pair_u: _T1 = (0x16e77, "MEDEFAIDRIN SMALL LETTER NG")
+private let __nameAliases_pair_v: _T1 = (0x1b001, "HENTAIGANA LETTER E-1")
+private let __nameAliases_pair_w: _T1 = (0x1d0c5, "BYZANTINE MUSICAL SYMBOL FTHORA SKLIRON CHROMA VASIS")
+private let __nameAliases_pair_x: _T1 = (0x1e899, "MENDE KIKAKUI SYLLABLE M172 MBO")
+private let __nameAliases_pair_y: _T1 = (0x1e89a, "MENDE KIKAKUI SYLLABLE M174 MBOO")
 private let __nameAliases_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWithValues: [
   __nameAliases_pair_0,
   __nameAliases_pair_1,
@@ -121,6 +125,10 @@ private let __nameAliases_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uni
   __nameAliases_pair_s,
   __nameAliases_pair_t,
   __nameAliases_pair_u,
+  __nameAliases_pair_v,
+  __nameAliases_pair_w,
+  __nameAliases_pair_x,
+  __nameAliases_pair_y,
 ])
 private let __nameAliases_rangePairArray: _T3 = [
 ]
