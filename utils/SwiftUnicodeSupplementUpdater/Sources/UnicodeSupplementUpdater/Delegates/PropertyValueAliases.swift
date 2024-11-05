@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  PropertyValueAliases.swift
-   © 2020,2023 YOCKOW.
+   © 2020,2023-2024 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
@@ -52,11 +52,12 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
   private func _convertBidiClass(_ columns: [ArraySlice<String>]) throws -> StringLines {
     let format = StringLines("""
     extension Unicode {
-      public enum BidiClass {
+      public enum BidiClass: Sendable {
       %%cases%%
       }
     }
     extension Unicode.BidiClass {
+      @inlinable
       public init?<S>(abbreviated name: S) where S: StringProtocol {
         switch name {
         %%abbreviations%%
@@ -104,6 +105,7 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
     }
     extension Unicode.CanonicalCombiningClass {
       /// Initialize with a short name
+      @inlinable
       public init?<S>(abbreviated name: S) where S: StringProtocol {
         switch name {
         %%short_names%%
@@ -134,12 +136,13 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
   private func _convertEastAsianWidth(_ columns: [ArraySlice<String>]) throws -> StringLines {
     let format = StringLines("""
     extension Unicode {
-      public enum EastAsianWidth {
+      public enum EastAsianWidth: Sendable {
         %%cases%%
       }
     }
     extension Unicode.EastAsianWidth {
       /// Initialize with a name.
+      @inlinable
       public init?<S>(_ name: S) where S: StringProtocol {
         switch name {
         %%names%%
@@ -148,6 +151,7 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
       }
       
       /// Initialize with a short name.
+      @inlinable
       public init?<S>(abbreviated name: S) where S: StringProtocol {
         switch name {
         %%short_names%%
@@ -202,12 +206,13 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
   private func _convertJoiningGroup(_ columns: [ArraySlice<String>]) throws -> StringLines {
     let format = StringLines("""
     extension Unicode {
-      public enum JoiningGroup {
+      public enum JoiningGroup: Sendable {
         %%cases%%
       }
     }
     extension Unicode.JoiningGroup {
       /// Initialize with a name.
+      @inlinable
       public init?<S>(_ name: S) where S: StringProtocol {
         switch name {
         %%names%%
@@ -216,30 +221,51 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
       }
     }
     """)
-    
+
+    typealias _Column = (shortName: String, longName: String, alias: String?)
+    func __convertColumn(_ array: ArraySlice<String>) -> _Column {
+      return (
+        shortName: array[relativeIndex: 0],
+        longName: array[relativeIndex: 1],
+        alias: array.count > 2 ? array[relativeIndex: 2] : nil
+      )
+    }
+    let convertedColumns = columns.map(__convertColumn)
+
     return try format._formatted([
       "cases": {
         var result = StringLines()
-        for column in columns {
-          let preferred = column[relativeIndex: 0].lowerCamelCase
-          let alias = column[relativeIndex: 1].lowerCamelCase
-          result.append("case \(preferred)")
-          if preferred != alias {
-            result.append("public static let \(alias): JoiningGroup = .\(preferred)")
+        for column in convertedColumns {
+          let shortID = column.shortName.lowerCamelCase
+          let longID = column.longName.lowerCamelCase
+
+          result.append("case \(shortID)")
+          if shortID != longID {
+            result.append("public static let \(longID): JoiningGroup = .\(shortID)")
+          }
+          if let aliasID = column.alias?.lowerCamelCase,
+             aliasID != shortID, aliasID != longID {
+            result.append("public static let \(aliasID): JoiningGroup = .\(shortID)")
           }
         }
         return result
       },
       "names": {
         var result = StringLines()
-        for column in columns {
-          let preferred = column[relativeIndex: 0]
-          let alias = column[relativeIndex: 1]
-          if preferred == alias {
-            result.append("case \"\(preferred)\": self = .\(preferred.lowerCamelCase)")
-          } else {
-            result.append("case \"\(preferred)\", \"\(alias)\": self = .\(preferred.lowerCamelCase)")
-          }
+        for column in convertedColumns {
+          let nameList: String = Set<String>(
+              Array<String?>([
+              column.shortName,
+              column.longName,
+              column.alias,
+            ]).compactMap({
+              guard let name = $0 else {
+                return nil
+              }
+              return #""\#(name)""#
+            })
+          ).sorted().joined(separator: ", ")
+          result.append("case \(nameList): self = .\(column.shortName.lowerCamelCase)")
         }
         return result
       }
@@ -249,12 +275,13 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
   private func _convertJoiningType(_ columns: [ArraySlice<String>]) throws -> StringLines {
     let format = StringLines("""
     extension Unicode {
-      public enum JoiningType {
+      public enum JoiningType: Sendable {
         %%cases%%
       }
     }
     extension Unicode.JoiningType {
       /// Initialize with a short name.
+      @inlinable
       public init?(abbreviated name: Character) {
         switch name {
         %%short_names%%
@@ -263,6 +290,7 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
       }
       
       /// Initialize with a short name.
+      @inlinable
       public init?<S>(abbreviated name: S) where S: StringProtocol {
         guard name.count == 1 else { return nil }
         self.init(abbreviated: name.first!)
@@ -286,6 +314,7 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
     let format = StringLines("""
     extension Unicode.NumericType {
       /// Initialize with a long name.
+      @inlinable
       public init?<S>(_ name: S) where S: StringProtocol {
         switch name {
         %%long_names%%
@@ -294,6 +323,7 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
       }
     
       /// Initialize with a short name.
+      @inlinable
       public init?<S>(abbreviated name: S) where S: StringProtocol {
         switch name {
         %%short_names%%
@@ -342,12 +372,13 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
   private func _convertScript(_ columns: [ArraySlice<String>]) throws -> StringLines {
     let format = StringLines("""
     extension Unicode {
-      public enum Script {
+      public enum Script: Sendable {
         %%cases%%
       }
     }
     extension Unicode.Script {
       /// Initialize with a long name.
+      @inlinable
       public init?<S>(_ name: S) where S: StringProtocol {
         switch name {
         %%long_names%%
@@ -356,6 +387,7 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
       }
     
       /// Initialize with a short name.
+      @inlinable
       public init?<S>(abbreviated name: S) where S: StringProtocol {
         switch name {
         %%short_names%%

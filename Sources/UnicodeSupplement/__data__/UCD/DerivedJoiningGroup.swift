@@ -4,15 +4,15 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningGroup.txt
-// Last-Modified: 2023-08-28T16:08:56Z
-// ETag: "6085-603fde94cd600-gzip"
+// Last-Modified: 2024-08-25T23:05:31Z
+// ETag: "61d7-6208a0b8364c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2023 Unicode, Inc.
+  Copyright © 1991-2024 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
@@ -58,7 +58,7 @@ private typealias _T1 = (Unicode.Scalar.Value, _T0)
 private typealias _T2 = (AnyRange<UInt32>, _T0)
 private typealias _T3 = Array<_T2>
 
-private let __jg_pair_0: _T1 = (0x620, .yeh)
+private let __jg_pair_0: _T1 = (0x620, .kashmiriYeh)
 private let __jg_pair_1: _T1 = (0x621, .noJoiningGroup)
 private let __jg_pair_2: _T1 = (0x622, .alef)
 private let __jg_pair_3: _T1 = (0x623, .alef)
@@ -355,6 +355,9 @@ private let __jg_pair_85: _T1 = (0x10d20, .hanifiRohingyaKinnaYa)
 private let __jg_pair_86: _T1 = (0x10d21, .noJoiningGroup)
 private let __jg_pair_87: _T1 = (0x10d22, .noJoiningGroup)
 private let __jg_pair_88: _T1 = (0x10d23, .hanifiRohingyaKinnaYa)
+private let __jg_pair_89: _T1 = (0x10ec2, .dal)
+private let __jg_pair_8a: _T1 = (0x10ec3, .tah)
+private let __jg_pair_8b: _T1 = (0x10ec4, .kaf)
 private let __jg_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWithValues: [
   __jg_pair_0,
   __jg_pair_1,
@@ -653,6 +656,9 @@ private let __jg_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWi
   __jg_pair_86,
   __jg_pair_87,
   __jg_pair_88,
+  __jg_pair_89,
+  __jg_pair_8a,
+  __jg_pair_8b,
 ])
 private let __jg_rangePair_0: _T2 = (0x0...<0x620, .noJoiningGroup)
 private let __jg_rangePair_1: _T2 = (0x64a<...<0x66e, .noJoiningGroup)
@@ -677,7 +683,8 @@ private let __jg_rangePair_j: _T2 = (0x10ae4<...<0x10aeb, .noJoiningGroup)
 private let __jg_rangePair_k: _T2 = (0x10aef<...<0x10d02, .noJoiningGroup)
 private let __jg_rangePair_l: _T2 = (0x10d02<...<0x10d09, .noJoiningGroup)
 private let __jg_rangePair_m: _T2 = (0x10d09<...<0x10d19, .noJoiningGroup)
-private let __jg_rangePair_n: _T2 = (0x10d23<...0x10ffff, .noJoiningGroup)
+private let __jg_rangePair_n: _T2 = (0x10d23<...<0x10ec2, .noJoiningGroup)
+private let __jg_rangePair_o: _T2 = (0x10ec4<...0x10ffff, .noJoiningGroup)
 private let __jg_rangePairArray: _T3 = [
   __jg_rangePair_0,
   __jg_rangePair_1,
@@ -703,6 +710,7 @@ private let __jg_rangePairArray: _T3 = [
   __jg_rangePair_l,
   __jg_rangePair_m,
   __jg_rangePair_n,
+  __jg_rangePair_o,
 ]
 private let __jg_rangeDictionary = RangeDictionary<Unicode.Scalar.Value, _T0>(carefullySortedRangesAndValues: __jg_rangePairArray)
 internal let _jg = UnicodeScalarValueDictionary<Unicode.JoiningGroup>(dictionary: __jg_dictionary, rangeDictionary: __jg_rangeDictionary)

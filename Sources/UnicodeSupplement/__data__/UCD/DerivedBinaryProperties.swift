@@ -4,15 +4,15 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBinaryProperties.txt
-// Last-Modified: 2023-08-28T16:08:56Z
-// ETag: "4434-603fde94cd600-gzip"
+// Last-Modified: 2024-08-25T23:05:31Z
+// ETag: "4444-6208a0b8364c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2023 Unicode, Inc.
+  Copyright © 1991-2024 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
@@ -227,7 +227,7 @@ private let __binProp_Bidi_Mirrored_range_0: _T2 = 0x2208....0x220d
 private let __binProp_Bidi_Mirrored_range_1: _T2 = 0x222b....0x2233
 private let __binProp_Bidi_Mirrored_range_2: _T2 = 0x223b....0x224c
 private let __binProp_Bidi_Mirrored_range_3: _T2 = 0x2264....0x226b
-private let __binProp_Bidi_Mirrored_range_4: _T2 = 0x226e....0x228c
+private let __binProp_Bidi_Mirrored_range_4: _T2 = 0x226d....0x228c
 private let __binProp_Bidi_Mirrored_range_5: _T2 = 0x22a6....0x22b8
 private let __binProp_Bidi_Mirrored_range_6: _T2 = 0x22c9....0x22cd
 private let __binProp_Bidi_Mirrored_range_7: _T2 = 0x22d6....0x22ed

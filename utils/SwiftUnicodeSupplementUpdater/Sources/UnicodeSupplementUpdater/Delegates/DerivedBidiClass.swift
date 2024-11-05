@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  DerivedBidiClass.swift
-   © 2020 YOCKOW.
+   © 2020,2024 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
@@ -132,13 +132,13 @@ public class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClas
     do { // Default Properties
       result.append("// Default Values defined by core properties")
       
-      let keyPathOriginalTypeName = "(KeyPath<Unicode.Scalar.LatestProperties, Bool>, Bool, Unicode.BidiClass)"
+      let keyPathOriginalTypeName = "(KeyPath<Unicode.Scalar.LatestProperties, Bool> & Sendable, Bool, Unicode.BidiClass)"
       let keyPathTypeName = self.typeAliasName(for: keyPathOriginalTypeName)
       func _tripleID(_ nx: Int) -> String {
         return "__\(self.prefix)_default_properties_triple_\(nx._base36)"
       }
       func _triple(_ prop: String, _ status: Bool, _ bidiClass: Unicode.BidiClass) -> String {
-        return "(\\.is\(prop.upperCamelCase), \(status ? "true" : "false"), \(self.describe(value: bidiClass)))"
+        return "(\\Unicode.Scalar.LatestProperties.is\(prop.upperCamelCase), \(status ? "true" : "false"), \(self.describe(value: bidiClass)))"
       }
       
       var nn = 0
