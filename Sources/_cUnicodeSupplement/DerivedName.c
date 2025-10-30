@@ -4,15 +4,15 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedName.txt
-// Last-Modified: 2024-08-25T23:05:31Z
-// ETag: "1c9ec9-6208a0b8364c0-gzip"
+// Last-Modified: 2025-08-16T00:45:11Z
+// ETag: "1ce6a3-63c70d19d13c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2024 Unicode, Inc.
+  Copyright © 1991-2025 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
@@ -54,7 +54,7 @@
 #include "DerivedName.h"
 #include "stddef.h"
 
-const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
+const char * _Nonnull const __cUniSupp_na_prefixes[2490] = {
   "ABACUS",
   "AC CURRENT",
   "ACCORDION",
@@ -84,7 +84,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "AIRPLANE",
   "AIRPLANE ",
   "AKTIESELSKAB",
-  "ALARM CLOCK",
+  "ALARM ",
   "ALCHEMICAL SYMBOL FOR ",
   "ALEF SYMBOL",
   "ALEMBIC",
@@ -101,6 +101,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "AMBULANCE",
   "AMERICAN FOOTBALL",
   "AMPERSAND",
+  "AMPHITRITE",
   "AMPHORA",
   "ANATOLIAN HIEROGLYPH ",
   "ANATOMICAL HEART",
@@ -120,6 +121,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "APL FUNCTIONAL SYMBOL ",
   "APOLLON",
   "APOSTROPHE",
+  "APPLE SYMBOL",
   "APPROACHES THE LIMIT",
   "APPROXIMATELY ",
   "APPROXIMATELY EQUAL ",
@@ -146,7 +148,8 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "ASTERISM",
   "ASTONISHED FACE",
   "ASTRAEA",
-  "ASTRONOMICAL SYMBOL FOR URANUS",
+  "ASTRAEA FORM TWO",
+  "ASTRONOMICAL SYMBOL FOR ",
   "ASYMPTOTICALLY EQUAL TO",
   "ATHLETIC SHOE",
   "ATOM SYMBOL",
@@ -216,10 +219,13 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "BELL",
   "BELL ",
   "BELLHOP BELL",
+  "BELLONA",
   "BENGALI ",
   "BENT ARROW POINTING DOWNWARDS THEN NORTH EAST",
   "BENTO BOX",
   "BENZENE ",
+  "BERIA ERFE CAPITAL LETTER ",
+  "BERIA ERFE SMALL LETTER ",
   "BET SYMBOL",
   "BETWEEN",
   "BEVERAGE BOX",
@@ -416,12 +422,13 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "CHEROKEE LETTER ",
   "CHEROKEE SMALL LETTER ",
   "CHERRIES",
-  "CHERRY BLOSSOM",
+  "CHERRY ",
   "CHESTNUT",
   "CHI RHO",
   "CHICKEN",
   "CHILD",
   "CHILDREN CROSSING",
+  "CHINESE SMALL ",
   "CHIPMUNK",
   "CHIRON",
   "CHOCOLATE BAR",
@@ -624,6 +631,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "DISAPPOINTED ",
   "DISCONTINUOUS UNDERLINE SYMBOL",
   "DISGUISED FACE",
+  "DISTORTED FACE",
   "DITTO MARK",
   "DIVES AKURU ",
   "DIVES AKURU LETTER ",
@@ -696,6 +704,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "EARTH ",
   "EAST SYRIAC CROSS",
   "EDITORIAL CORONIS",
+  "EGERIA",
   "EGG",
   "EGYPTIAN HIEROGLYPH ",
   "EGYPTIAN HIEROGLYPH-*",
@@ -737,6 +746,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "ETHIOPIC COMBINING GEMINATION ",
   "ETHIOPIC SYLLABLE ",
   "EULER CONSTANT",
+  "EUNOMIA",
   "EURO SIGN",
   "EURO-CURRENCY SIGN",
   "EUROPEAN ",
@@ -772,6 +782,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "FERRIS WHEEL",
   "FERRY",
   "FIELD HOCKEY STICK AND BALL",
+  "FIGHT CLOUD",
   "FIGURE ",
   "FILE ",
   "FILM ",
@@ -798,6 +809,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "FLEUR-DE-LIS",
   "FLEXED BICEPS",
   "FLOPPY DISK",
+  "FLORA",
   "FLORAL HEART",
   "FLOWER",
   "FLOWER ",
@@ -818,6 +830,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "FORK AND ",
   "FORKED PARAGRAPHOS",
   "FORKING",
+  "FORTUNA",
   "FORTUNE COOKIE",
   "FOUNTAIN",
   "FOUR ",
@@ -826,6 +839,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "FOURTH ROOT",
   "FOX FACE",
   "FRACTION ",
+  "FRAGILE SYMBOL",
   "FRAME WITH ",
   "FREEZING FACE",
   "FRENCH ",
@@ -852,6 +866,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "GEM STONE",
   "GEMINI",
   "GENIE",
+  "GEOMANTIC FIGURE ",
   "GEOMETRIC PROPORTION",
   "GEOMETRICALLY ",
   "GEORGIAN ",
@@ -921,6 +936,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "HADES",
   "HAIR ",
   "HAIRCUT",
+  "HAIRY CREATURE",
   "HALFWIDTH ",
   "HALFWIDTH IDEOGRAPHIC ",
   "HAMBURGER",
@@ -961,6 +977,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "HEAVY ",
   "HEAVY CIRCLE WITH ",
   "HEAVY WHITE ",
+  "HEBE",
   "HEBREW ",
   "HEBREW ACCENT ",
   "HEBREW LETTER ",
@@ -1058,6 +1075,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "HUT",
   "HYACINTH",
   "HYGIEA",
+  "HYGIEA FORM TWO",
   "HYPHEN",
   "HYPHEN ",
   "HYPHEN-MINUS",
@@ -1111,6 +1129,8 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "INVERSE ",
   "INVERTED ",
   "INVISIBLE ",
+  "IRENE",
+  "IRIS",
   "IZAKAYA LANTERN",
   "JACK-O-LANTERN",
   "JAPANESE ",
@@ -1201,6 +1221,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "LACROSSE STICK AND BALL",
   "LADDER",
   "LADY BEETLE",
+  "LANDSLIDE",
   "LANGUAGE TAG",
   "LAO ",
   "LAO LETTER ",
@@ -1238,6 +1259,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "LEPCHA SUBJOINED LETTER ",
   "LEPCHA VOWEL SIGN ",
   "LESS-THAN ",
+  "LEUKOTHEA",
   "LEVEL SLIDER",
   "LIBRA",
   "LIGATURE OPEN ET ORNAMENT",
@@ -1348,6 +1370,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "MEETEI MAYEK LETTER ",
   "MEETEI MAYEK VOWEL SIGN ",
   "MELON",
+  "MELPOMENE",
   "MELTING FACE",
   "MEMO",
   "MENDE KIKAKUI COMBINING NUMBER ",
@@ -1363,6 +1386,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "MEROITIC HIEROGLYPHIC LETTER ",
   "MEROITIC HIEROGLYPHIC SYMBOL ",
   "MERPERSON",
+  "METIS",
   "METRICAL ",
   "METRO",
   "MIAO LETTER ",
@@ -1523,6 +1547,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "NORTH WEST ",
   "NORTHEAST-POINTING AIRPLANE",
   "NOSE",
+  "NOSE SYMBOL",
   "NOT ",
   "NOTCHED ",
   "NOTE",
@@ -1548,7 +1573,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "OCTAGONAL SIGN",
   "OCTOPUS",
   "ODEN",
-  "OFFICE BUILDING",
+  "OFFICE ",
   "OGHAM ",
   "OGONEK",
   "OHM SIGN",
@@ -1588,6 +1613,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "OR WITH DOT INSIDE",
   "ORANGE ",
   "ORANGUTAN",
+  "ORCA",
   "ORCUS",
   "ORIGINAL OF",
   "ORIYA ",
@@ -1655,6 +1681,8 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "PARENTHESIZED NUMBER ",
   "PARROT",
   "PART ALTERNATION MARK",
+  "PARTHENOPE",
+  "PARTHENOPE FORM TWO",
   "PARTIAL DIFFERENTIAL",
   "PARTIALLY-RECYCLED PAPER SYMBOL",
   "PARTNERSHIP SIGN",
@@ -1784,6 +1812,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "PROSERPINA",
   "PSALTER PAHLAVI ",
   "PSALTER PAHLAVI LETTER ",
+  "PSYCHE",
   "PUBLIC ADDRESS LOUDSPEAKER",
   "PUNCTUATION SPACE",
   "PUNCTUS ELEVATUS MARK",
@@ -1915,6 +1944,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "SATELLITE",
   "SATELLITE ANTENNA",
   "SATURN",
+  "SAUDI RIYAL SIGN",
   "SAURASHTRA ",
   "SAURASHTRA LETTER ",
   "SAURASHTRA SIGN ",
@@ -1975,6 +2005,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "SHOOTING STAR",
   "SHOPPING ",
   "SHORT ",
+  "SHORT RIGHTWARDS ",
   "SHORTCAKE",
   "SHORTHAND FORMAT ",
   "SHORTS",
@@ -1988,6 +2019,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "SIDDHAM LETTER ",
   "SIDDHAM SIGN ",
   "SIDDHAM VOWEL SIGN ",
+  "SIDETIC LETTER ",
   "SIDEWAYS BLACK ",
   "SIDEWAYS WHITE ",
   "SIGN OF THE HORNS",
@@ -2058,6 +2090,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "SMOKING SYMBOL",
   "SNAIL",
   "SNAKE",
+  "SNAKE SYMBOL",
   "SNEEZING FACE",
   "SNOW CAPPED MOUNTAIN",
   "SNOWBOARDER",
@@ -2130,6 +2163,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "STRAIGHT RULER",
   "STRAIGHTNESS",
   "STRAWBERRY",
+  "STRAWBERRY SYMBOL",
   "STRESS OUTLINED WHITE STAR",
   "STRICTLY EQUIVALENT TO",
   "STRIPED ",
@@ -2202,6 +2236,11 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "TAI VIET SYMBOL ",
   "TAI VIET TONE MAI ",
   "TAI VIET VOWEL ",
+  "TAI YO ",
+  "TAI YO LETTER ",
+  "TAI YO LETTER HIGH ",
+  "TAI YO LETTER LOW ",
+  "TAI YO SIGN ",
   "TAKEOUT BOX",
   "TAKRI ",
   "TAKRI LETTER ",
@@ -2248,6 +2287,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "THEREFORE",
   "THERMODYNAMIC",
   "THERMOMETER",
+  "THETIS",
   "THIN ",
   "THINKING FACE",
   "THIRD PLACE MEDAL",
@@ -2278,6 +2318,9 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "TODHRI LETTER ",
   "TOILET",
   "TOKYO TOWER",
+  "TOLONG SIKI ",
+  "TOLONG SIKI LETTER ",
+  "TOLONG SIKI SIGN ",
   "TOMATO",
   "TONGUE",
   "TOOLBOX",
@@ -2299,6 +2342,8 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "TRAM CAR",
   "TRANSPLUTO",
   "TRANSVERSAL INTERSECTION",
+  "TREASURE CHEST",
+  "TREE SYMBOL",
   "TRIANGLE WITH ",
   "TRIANGLE-HEADED RIGHTWARDS ARROW",
   "TRIANGULAR ",
@@ -2308,6 +2353,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "TRIPLE ",
   "TROLL",
   "TROLLEYBUS",
+  "TROMBONE",
   "TROPHY",
   "TROPICAL ",
   "TRUE",
@@ -2371,7 +2417,9 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "VERY HEAVY ",
   "VERY MUCH ",
   "VESTA",
+  "VESTA FORM TWO",
   "VIBRATION MODE",
+  "VICTORIA",
   "VICTORY HAND",
   "VIDEO ",
   "VIDEOCASSETTE",
@@ -2461,6 +2509,7 @@ const char * _Nonnull const __cUniSupp_na_prefixes[2441] = {
   "XIANGQI BLACK ",
   "XIANGQI RED ",
   "XOR",
+  "YANGQIN SIGN SLOW ",
   "YAWNING FACE",
   "YELLOW HEART",
   "YEN SIGN",
@@ -4611,7 +4660,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4 = {
     "LETTER TAH WITH THREE DOTS BELOW", // U+088C
     "LETTER KEHEH WITH TWO DOTS VERTICALLY BELOW", // U+088D
     "VERTICAL TAIL", // U+088E
-    NULL,
+    "LETTER NOON WITH RING ABOVE", // U+088F
     "POUND MARK ABOVE", // U+0890
     "PIASTRE MARK ABOVE", // U+0891
     NULL,
@@ -5552,7 +5601,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_9 = {
     "DZA", // U+0C59
     "RRRA", // U+0C5A
     NULL,
-    NULL,
+    "ARCHAIC SHRII", // U+0C5C
     "NAKAARA POLLU", // U+0C5D
     NULL,
     NULL,
@@ -5680,7 +5729,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_9 = {
     NULL,
     NULL,
     NULL,
-    NULL,
+    "ARCHAIC SHRII", // U+0CDC
     "NAKAARA POLLU", // U+0CDD
     "FA", // U+0CDE
     NULL,
@@ -9113,6 +9162,35 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_k = {
     "LATIN SMALL LETTER INSULAR G", // U+1ACC
     "LATIN SMALL LETTER INSULAR R", // U+1ACD
     "LATIN SMALL LETTER INSULAR T", // U+1ACE
+    "DOUBLE CARON", // U+1ACF
+    "VERTICAL-LINE-ACUTE", // U+1AD0
+    "GRAVE-VERTICAL-LINE", // U+1AD1
+    "VERTICAL-LINE-GRAVE", // U+1AD2
+    "ACUTE-VERTICAL-LINE", // U+1AD3
+    "VERTICAL-LINE-MACRON", // U+1AD4
+    "MACRON-VERTICAL-LINE", // U+1AD5
+    "VERTICAL-LINE-ACUTE-GRAVE", // U+1AD6
+    "VERTICAL-LINE-GRAVE-ACUTE", // U+1AD7
+    "MACRON-ACUTE-GRAVE", // U+1AD8
+    "SHARP SIGN", // U+1AD9
+    "FLAT SIGN", // U+1ADA
+    "DOWN TACK ABOVE", // U+1ADB
+    "DIAERESIS WITH RAISED LEFT DOT", // U+1ADC
+    "DOT-AND-RING BELOW", // U+1ADD
+    NULL,
+    NULL,
+    "LEFT TACK ABOVE", // U+1AE0
+    "RIGHT TACK ABOVE", // U+1AE1
+    "MINUS SIGN ABOVE", // U+1AE2
+    "INVERTED BRIDGE ABOVE", // U+1AE3
+    "SQUARE ABOVE", // U+1AE4
+    "SEAGULL ABOVE", // U+1AE5
+    "DOUBLE ARCH BELOW", // U+1AE6
+    "DOUBLE ARCH ABOVE", // U+1AE7
+    "EQUALS SIGN ABOVE", // U+1AE8
+    "LEFT ANGLE CENTRED ABOVE", // U+1AE9
+    "UPWARDS ARROW ABOVE", // U+1AEA
+    "DOUBLE RIGHTWARDS ARROW ABOVE", // U+1AEB
   }
 };
 _cUniSupp_na_suffixes __cUniSupp_na_suffixes_l = {
@@ -11356,7 +11434,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_p = {
     "TRIANGLE WITH VERTICAL BAR", // U+23ED
     "TRIANGLE WITH VERTICAL BAR", // U+23EE
     "TRIANGLE WITH DOUBLE VERTICAL BAR", // U+23EF
-    NULL,
+    "CLOCK", // U+23F0
     NULL,
     NULL,
     NULL,
@@ -12056,7 +12134,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_u = {
     "TRUCK", // U+26DF
     "1", // U+26E0
     "2", // U+26E1
-    NULL,
+    "URANUS", // U+26E2
     "STROKE AND TWO DOTS ABOVE", // U+26E3
     NULL,
     "HANDED INTERLACED PENTAGRAM", // U+26E5
@@ -12666,7 +12744,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_u = {
     "CLOSED CIRCLE ARROW", // U+2941
     "ARROW ABOVE SHORT LEFTWARDS ARROW", // U+2942
     "ARROW ABOVE SHORT RIGHTWARDS ARROW", // U+2943
-    "RIGHTWARDS ARROW ABOVE LEFTWARDS ARROW", // U+2944
+    "ARROW ABOVE LEFTWARDS ARROW", // U+2944
     "ARROW WITH PLUS BELOW", // U+2945
     "ARROW WITH PLUS BELOW", // U+2946
     "ARROW THROUGH X", // U+2947
@@ -13260,7 +13338,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_u = {
     "RIGHT", // U+2B93
     "CORNER ARROWS CIRCLING ANTICLOCKWISE", // U+2B94
     "BLACK ARROW", // U+2B95
-    NULL,
+    "SIGN WITH INFINITY ABOVE", // U+2B96
     "TYPE A ELECTRONICS", // U+2B97
     "D TOP-LIGHTED LEFTWARDS EQUILATERAL ARROWHEAD", // U+2B98
     "D RIGHT-LIGHTED UPWARDS EQUILATERAL ARROWHEAD", // U+2B99
@@ -17385,13 +17463,13 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_16 = {
     "RAMS HORN", // U+A7CB
     "S WITH DIAGONAL STROKE", // U+A7CC
     "S WITH DIAGONAL STROKE", // U+A7CD
-    NULL,
-    NULL,
+    "PHARYNGEAL VOICED FRICATIVE", // U+A7CE
+    "PHARYNGEAL VOICED FRICATIVE", // U+A7CF
     "CLOSED INSULAR G", // U+A7D0
     "CLOSED INSULAR G", // U+A7D1
-    NULL,
+    "DOUBLE THORN", // U+A7D2
     "DOUBLE THORN", // U+A7D3
-    NULL,
+    "DOUBLE WYNN", // U+A7D4
     "DOUBLE WYNN", // U+A7D5
     "MIDDLE SCOTS S", // U+A7D6
     "MIDDLE SCOTS S", // U+A7D7
@@ -17403,8 +17481,9 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_16 = {
   }
 };
 _cUniSupp_na_suffixes __cUniSupp_na_suffixes_17 = {
-  0xa7f2,
+  0xa7f1,
   {
+    "CAPITAL S", // U+A7F1
     "CAPITAL C", // U+A7F2
     "CAPITAL F", // U+A7F3
     "CAPITAL Q", // U+A7F4
@@ -29845,11 +29924,22 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1h = {
     "SYMBOL SMALL TAH ABOVE", // U+FBC0
     "SYMBOL SMALL TAH BELOW", // U+FBC1
     "SYMBOL WASLA ABOVE", // U+FBC2
-  }
-};
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1i = {
-  0xfbd3,
-  {
+    "LIGATURE JALLA WA-ALAA", // U+FBC3
+    "LIGATURE DAAMAT BARAKAATUHUM", // U+FBC4
+    "LIGATURE RAHMATU ALLAAHI TAAALAA ALAYH", // U+FBC5
+    "LIGATURE RAHMATU ALLAAHI ALAYHIM", // U+FBC6
+    "LIGATURE RAHMATU ALLAAHI ALAYHIMAA", // U+FBC7
+    "LIGATURE RAHIMAHUM ALLAAHU TAAALAA", // U+FBC8
+    "LIGATURE RAHIMAHUMAA ALLAAH", // U+FBC9
+    "LIGATURE RAHIMAHUMAA ALLAAHU TAAALAA", // U+FBCA
+    "LIGATURE RADI ALLAAHU TAAALAA ANHUM", // U+FBCB
+    "LIGATURE HAFIZAHU ALLAAH", // U+FBCC
+    "LIGATURE HAFIZAHU ALLAAHU TAAALAA", // U+FBCD
+    "LIGATURE HAFIZAHUM ALLAAHU TAAALAA", // U+FBCE
+    "LIGATURE HAFIZAHUMAA ALLAAHU TAAALAA", // U+FBCF
+    "LIGATURE SALLALLAAHU TAAALAA ALAYHI WA-SALLAM", // U+FBD0
+    "LIGATURE AJJAL ALLAAHU FARAJAHU ASH-SHAREEF", // U+FBD1
+    "LIGATURE ALAYHI AR-RAHMAH", // U+FBD2
     "LETTER NG ISOLATED FORM", // U+FBD3
     "LETTER NG FINAL FORM", // U+FBD4
     "LETTER NG INITIAL FORM", // U+FBD5
@@ -30295,8 +30385,8 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1i = {
     "LIGATURE MEEM WITH JEEM WITH MEEM INITIAL FORM", // U+FD8D
     "LIGATURE MEEM WITH KHAH WITH JEEM INITIAL FORM", // U+FD8E
     "LIGATURE MEEM WITH KHAH WITH MEEM INITIAL FORM", // U+FD8F
-    NULL,
-    NULL,
+    "LIGATURE RAHMATU ALLAAHI ALAYH", // U+FD90
+    "LIGATURE RAHMATU ALLAAHI ALAYHAA", // U+FD91
     "LIGATURE MEEM WITH JEEM WITH KHAH INITIAL FORM", // U+FD92
     "LIGATURE HEH WITH MEEM WITH JEEM INITIAL FORM", // U+FD93
     "LIGATURE HEH WITH MEEM WITH MEEM INITIAL FORM", // U+FD94
@@ -30351,17 +30441,17 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1i = {
     "LIGATURE SAD WITH MEEM WITH MEEM INITIAL FORM", // U+FDC5
     "LIGATURE SEEN WITH KHAH WITH YEH FINAL FORM", // U+FDC6
     "LIGATURE NOON WITH JEEM WITH YEH FINAL FORM", // U+FDC7
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    NULL,
+    "LIGATURE RAHIMAHU ALLAAH TAAALAA", // U+FDC8
+    "LIGATURE RADI ALLAAHU TAAALAA ANH", // U+FDC9
+    "LIGATURE RADI ALLAAHU TAAALAA ANHAA", // U+FDCA
+    "LIGATURE RADI ALLAAHU TAAALAA ANHUMAA", // U+FDCB
+    "LIGATURE SALLALLAHU ALAYHI WA-ALAA AALIHEE WA-SALLAM", // U+FDCC
+    "LIGATURE AJJAL ALLAAHU TAAALAA FARAJAHU ASH-SHAREEF", // U+FDCD
+    "LIGATURE KARRAMA ALLAAHU WAJHAH", // U+FDCE
     "LIGATURE SALAAMUHU ALAYNAA", // U+FDCF
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1j = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1i = {
   0xfdf0,
   {
     "LIGATURE SALLA USED AS KORANIC STOP SIGN ISOLATED FORM", // U+FDF0
@@ -30877,7 +30967,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1j = {
     "WHITE CIRCLE", // U+FFEE
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1k = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1j = {
   0xfff9,
   {
     "ANCHOR", // U+FFF9
@@ -30983,7 +31073,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1k = {
     "B089", // U+1005D
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1l = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1k = {
   0x10080,
   {
     "B100 MAN", // U+10080
@@ -31277,7 +31367,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1l = {
     "SYMBOL TAU RHO", // U+101A0
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1m = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1l = {
   0x101d0,
   {
     "PEDESTRIAN", // U+101D0
@@ -31328,7 +31418,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1m = {
     "COMBINING OBLIQUE STROKE", // U+101FD
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1n = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1m = {
   0x10280,
   {
     "A", // U+10280
@@ -31414,7 +31504,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1n = {
     "UUU3", // U+102D0
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1o = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1n = {
   0x102e0,
   {
     "EPACT THOUSANDS MARK", // U+102E0
@@ -31487,7 +31577,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1o = {
     "FIFTY", // U+10323
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1p = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1o = {
   0x1032d,
   {
     "YE", // U+1032D
@@ -31661,7 +31751,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1p = {
     "NUMBER HUNDRED", // U+103D5
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1q = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1p = {
   0x10400,
   {
     "I", // U+10400
@@ -31962,7 +32052,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1q = {
     "KHE", // U+10527
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1r = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1q = {
   0x10530,
   {
     "ALT", // U+10530
@@ -32019,7 +32109,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1r = {
     "KIW", // U+10563
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1s = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1r = {
   0x10570,
   {
     "A", // U+10570
@@ -32156,7 +32246,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1s = {
     "OO", // U+105F3
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1t = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1s = {
   0x10600,
   {
     "AB001", // U+10600
@@ -32472,7 +32562,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1t = {
     "A664", // U+10736
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1u = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1t = {
   0x10740,
   {
     "A701 A", // U+10740
@@ -32499,7 +32589,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1u = {
     "A732 JE", // U+10755
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1v = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1u = {
   0x10760,
   {
     "A800", // U+10760
@@ -32512,7 +32602,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1v = {
     "A807", // U+10767
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1w = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1v = {
   0x10780,
   {
     "CAPITAL AA", // U+10780
@@ -32576,7 +32666,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1w = {
     "S WITH CURL", // U+107BA
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1x = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1w = {
   0x10800,
   {
     "A", // U+10800
@@ -32740,7 +32830,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1x = {
     "TAW", // U+1089E
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1y = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1x = {
   0x108a7,
   {
     "ONE", // U+108A7
@@ -32754,7 +32844,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1y = {
     "ONE HUNDRED", // U+108AF
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1z = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1y = {
   0x108e0,
   {
     "ALEPH", // U+108E0
@@ -32847,9 +32937,41 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_1z = {
     "LY", // U+10937
     "NN", // U+10938
     "C", // U+10939
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    "N01", // U+10940
+    "N02", // U+10941
+    "N03", // U+10942
+    "N04", // U+10943
+    "N05", // U+10944
+    "N06", // U+10945
+    "N07", // U+10946
+    "N08", // U+10947
+    "N09", // U+10948
+    "N10", // U+10949
+    "N11", // U+1094A
+    "N12", // U+1094B
+    "N13", // U+1094C
+    "N14", // U+1094D
+    "N15", // U+1094E
+    "N16", // U+1094F
+    "N17", // U+10950
+    "N18", // U+10951
+    "N19", // U+10952
+    "N20", // U+10953
+    "N21", // U+10954
+    "N22", // U+10955
+    "N23", // U+10956
+    "N24", // U+10957
+    "N25", // U+10958
+    "N26", // U+10959
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_20 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_1z = {
   0x10980,
   {
     "A", // U+10980
@@ -33142,7 +33264,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_20 = {
     "NORTH ARABIAN NUMBER TWENTY", // U+10A9F
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_21 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_20 = {
   0x10ac0,
   {
     "ALEPH", // U+10AC0
@@ -33202,7 +33324,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_21 = {
     "PUNCTUATION LINE FILLER", // U+10AF6
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_22 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_21 = {
   0x10b00,
   {
     "A", // U+10B00
@@ -33364,7 +33486,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_22 = {
     "FOUR DOTS WITH DOT", // U+10B9C
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_23 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_22 = {
   0x10ba9,
   {
     "NUMBER ONE", // U+10BA9
@@ -33376,7 +33498,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_23 = {
     "NUMBER ONE HUNDRED", // U+10BAF
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_24 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_23 = {
   0x10c00,
   {
     "TURKIC LETTER ORKHON A", // U+10C00
@@ -33454,7 +33576,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_24 = {
     "TURKIC LETTER ORKHON BASH", // U+10C48
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_25 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_24 = {
   0x10c80,
   {
     "HUNGARIAN CAPITAL LETTER A", // U+10C80
@@ -33510,7 +33632,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_25 = {
     "HUNGARIAN CAPITAL LETTER US", // U+10CB2
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_26 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_25 = {
   0x10cc0,
   {
     "HUNGARIAN SMALL LETTER A", // U+10CC0
@@ -33619,7 +33741,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_26 = {
     "TASSI", // U+10D27
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_27 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_26 = {
   0x10d30,
   {
     "ZERO", // U+10D30
@@ -33710,14 +33832,14 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_27 = {
     "SMALL LETTER OLD NA", // U+10D85
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_28 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_27 = {
   0x10d8e,
   {
     "PLUS SIGN", // U+10D8E
     "MINUS SIGN", // U+10D8F
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_29 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_28 = {
   0x10e60,
   {
     "ONE", // U+10E60
@@ -33804,17 +33926,36 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_29 = {
     "YOT WITH CIRCUMFLEX ABOVE", // U+10EB1
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_2a = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_29 = {
   0x10ec2,
   {
     "LETTER DAL WITH TWO DOTS VERTICALLY BELOW", // U+10EC2
     "LETTER TAH WITH TWO DOTS VERTICALLY BELOW", // U+10EC3
     "LETTER KAF WITH TWO DOTS VERTICALLY BELOW", // U+10EC4
+    "SMALL YEH BARREE WITH TWO DOTS BELOW", // U+10EC5
+    "LETTER THIN NOON", // U+10EC6
+    "LETTER YEH WITH FOUR DOTS BELOW", // U+10EC7
+  }
+};
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_2a = {
+  0x10ed0,
+  {
+    "BIBLICAL END OF VERSE", // U+10ED0
+    "LIGATURE ALAYHAA AS-SALAATU WAS-SALAAM", // U+10ED1
+    "LIGATURE ALAYHIM AS-SALAATU WAS-SALAAM", // U+10ED2
+    "LIGATURE ALAYHIMAA AS-SALAATU WAS-SALAAM", // U+10ED3
+    "LIGATURE QADDASA ALLAAHU SIRRAH", // U+10ED4
+    "LIGATURE QUDDISA SIRRUHUM", // U+10ED5
+    "LIGATURE QUDDISA SIRRUHUMAA", // U+10ED6
+    "LIGATURE QUDDISAT ASRAARUHUM", // U+10ED7
+    "LIGATURE NAWWARA ALLAAHU MARQADAH", // U+10ED8
   }
 };
 _cUniSupp_na_suffixes __cUniSupp_na_suffixes_2b = {
-  0x10efc,
+  0x10efa,
   {
+    "DOUBLE VERTICAL BAR BELOW", // U+10EFA
+    "SMALL LOW NOON", // U+10EFB
     "COMBINING ALEF OVERLAY", // U+10EFC
     "SMALL LOW WORD SAKTA", // U+10EFD
     "SMALL LOW WORD QASR", // U+10EFE
@@ -36072,6 +36213,19 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_34 = {
   }
 };
 _cUniSupp_na_suffixes __cUniSupp_na_suffixes_35 = {
+  0x11b60,
+  {
+    "OE", // U+11B60
+    "OOE", // U+11B61
+    "UE", // U+11B62
+    "UUE", // U+11B63
+    "SHORT E", // U+11B64
+    "SHORT O", // U+11B65
+    "CANDRA E", // U+11B66
+    "CANDRA O", // U+11B67
+  }
+};
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_36 = {
   0x11bc0,
   {
     "DEVI", // U+11BC0
@@ -36110,7 +36264,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_35 = {
     "SIGN PVO", // U+11BE1
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_36 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_37 = {
   0x11bf0,
   {
     "DIGIT ZERO", // U+11BF0
@@ -36201,7 +36355,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_36 = {
     "GAP FILLER-2", // U+11C45
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_37 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_38 = {
   0x11c50,
   {
     "DIGIT ZERO", // U+11C50
@@ -36309,7 +36463,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_37 = {
     "SIGN CANDRABINDU", // U+11CB6
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_38 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_39 = {
   0x11d00,
   {
     "A", // U+11D00
@@ -36386,7 +36540,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_38 = {
     "RA-KARA", // U+11D47
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_39 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3a = {
   0x11d50,
   {
     "DIGIT ZERO", // U+11D50
@@ -36479,9 +36633,73 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_39 = {
     "DIGIT SEVEN", // U+11DA7
     "DIGIT EIGHT", // U+11DA8
     "DIGIT NINE", // U+11DA9
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    "I", // U+11DB0
+    "E", // U+11DB1
+    "U", // U+11DB2
+    "O", // U+11DB3
+    "A", // U+11DB4
+    "AA", // U+11DB5
+    "P", // U+11DB6
+    "PH", // U+11DB7
+    "B", // U+11DB8
+    "BH", // U+11DB9
+    "M", // U+11DBA
+    "T", // U+11DBB
+    "TH", // U+11DBC
+    "D", // U+11DBD
+    "DH", // U+11DBE
+    "N", // U+11DBF
+    "TT", // U+11DC0
+    "TTH", // U+11DC1
+    "DD", // U+11DC2
+    "DDH", // U+11DC3
+    "NN", // U+11DC4
+    "C", // U+11DC5
+    "CH", // U+11DC6
+    "J", // U+11DC7
+    "JH", // U+11DC8
+    "NY", // U+11DC9
+    "K", // U+11DCA
+    "KH", // U+11DCB
+    "G", // U+11DCC
+    "GH", // U+11DCD
+    "NG", // U+11DCE
+    "Y", // U+11DCF
+    "R", // U+11DD0
+    "L", // U+11DD1
+    "V", // U+11DD2
+    "NNY", // U+11DD3
+    "S", // U+11DD4
+    "H", // U+11DD5
+    "X", // U+11DD6
+    "RR", // U+11DD7
+    "RRH", // U+11DD8
+    "SELA", // U+11DD9
+    "HECAKA", // U+11DDA
+    "UNGGA", // U+11DDB
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    "DIGIT ZERO", // U+11DE0
+    "DIGIT ONE", // U+11DE1
+    "DIGIT TWO", // U+11DE2
+    "DIGIT THREE", // U+11DE3
+    "DIGIT FOUR", // U+11DE4
+    "DIGIT FIVE", // U+11DE5
+    "DIGIT SIX", // U+11DE6
+    "DIGIT SEVEN", // U+11DE7
+    "DIGIT EIGHT", // U+11DE8
+    "DIGIT NINE", // U+11DE9
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3a = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3b = {
   0x11ee0,
   {
     "KA", // U+11EE0
@@ -36609,13 +36827,13 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3a = {
     "NUKTA", // U+11F5A
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3b = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3c = {
   0x11fb0,
   {
     "YHA", // U+11FB0
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3c = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3d = {
   0x11fc0,
   {
     "FRACTION ONE THREE-HUNDRED-AND-TWENTIETH", // U+11FC0
@@ -36670,7 +36888,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3c = {
     "VAKAIYARAA", // U+11FF1
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3d = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3e = {
   0x11fff,
   {
     "PUNCTUATION END OF TEXT", // U+11FFF
@@ -37598,7 +37816,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3d = {
     "U U", // U+12399
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3e = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3f = {
   0x12400,
   {
     "ASH", // U+12400
@@ -37720,7 +37938,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3e = {
     "DIAGONAL QUADCOLON", // U+12474
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3f = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3g = {
   0x12480,
   {
     "AB TIMES NUN TENU", // U+12480
@@ -37921,7 +38139,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3f = {
     "ZU5 TIMES THREE DISH TENU", // U+12543
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3g = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3h = {
   0x12f90,
   {
     "CM001", // U+12F90
@@ -38025,7 +38243,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3g = {
     "CM302", // U+12FF2
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3h = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3i = {
   0x13000,
   {
     "A001", // U+13000
@@ -39140,7 +39358,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3h = {
     "MODIFIER DAMAGED", // U+13455
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3i = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3j = {
   0x14400,
   {
     "A001", // U+14400
@@ -39728,7 +39946,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3i = {
     "A530", // U+14646
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3j = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3k = {
   0x16100,
   {
     "A", // U+16100
@@ -39791,7 +40009,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3j = {
     "DIGIT NINE", // U+16139
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3k = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3l = {
   0x16800,
   {
     "PHASE-A NGKUE MFON", // U+16800
@@ -40553,7 +40771,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3k = {
     "HIGH-LOW TONE", // U+16AF4
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3l = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3m = {
   0x16b00,
   {
     "KEEB", // U+16B00
@@ -40628,7 +40846,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3l = {
     "TSOV ROG", // U+16B45
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3m = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3n = {
   0x16b50,
   {
     "ZERO", // U+16B50
@@ -40697,7 +40915,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3m = {
     "VWJ", // U+16B8F
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3n = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3o = {
   0x16d40,
   {
     "ANUSVARA", // U+16D40
@@ -40760,7 +40978,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3n = {
     "DIGIT NINE", // U+16D79
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3o = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3p = {
   0x16e40,
   {
     "M", // U+16E40
@@ -40854,9 +41072,66 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3o = {
     "FULL STOP", // U+16E98
     "SYMBOL AIVA", // U+16E99
     "EXCLAMATION OH", // U+16E9A
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    "ARKAB", // U+16EA0
+    "BASIGNA", // U+16EA1
+    "DARBAI", // U+16EA2
+    "EH", // U+16EA3
+    "FITKO", // U+16EA4
+    "GOWAY", // U+16EA5
+    "HIRDEABO", // U+16EA6
+    "I", // U+16EA7
+    "DJAI", // U+16EA8
+    "KOBO", // U+16EA9
+    "LAKKO", // U+16EAA
+    "MERI", // U+16EAB
+    "NINI", // U+16EAC
+    "GNA", // U+16EAD
+    "NGAY", // U+16EAE
+    "OI", // U+16EAF
+    "PI", // U+16EB0
+    "ERIGO", // U+16EB1
+    "ERIGO TAMURA", // U+16EB2
+    "SERI", // U+16EB3
+    "SHEP", // U+16EB4
+    "TATASOUE", // U+16EB5
+    "UI", // U+16EB6
+    "WASSE", // U+16EB7
+    "AY", // U+16EB8
+    NULL,
+    NULL,
+    "ARKAB", // U+16EBB
+    "BASIGNA", // U+16EBC
+    "DARBAI", // U+16EBD
+    "EH", // U+16EBE
+    "FITKO", // U+16EBF
+    "GOWAY", // U+16EC0
+    "HIRDEABO", // U+16EC1
+    "I", // U+16EC2
+    "DJAI", // U+16EC3
+    "KOBO", // U+16EC4
+    "LAKKO", // U+16EC5
+    "MERI", // U+16EC6
+    "NINI", // U+16EC7
+    "GNA", // U+16EC8
+    "NGAY", // U+16EC9
+    "OI", // U+16ECA
+    "PI", // U+16ECB
+    "ERIGO", // U+16ECC
+    "ERIGO TAMURA", // U+16ECD
+    "SERI", // U+16ECE
+    "SHEP", // U+16ECF
+    "TATASOUE", // U+16ED0
+    "UI", // U+16ED1
+    "WASSE", // U+16ED2
+    "AY", // U+16ED3
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3p = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3q = {
   0x16f00,
   {
     "PA", // U+16F00
@@ -41021,7 +41296,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3p = {
     "REFORMED TONE-8", // U+16F9F
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3q = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3r = {
   0x16fe0,
   {
     "ITERATION MARK", // U+16FE0
@@ -41031,14 +41306,19 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3q = {
     "FILLER", // U+16FE4
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3r = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3s = {
   0x16ff0,
   {
     "CA", // U+16FF0
     "NHAY", // U+16FF1
+    "SIMPLIFIED ER", // U+16FF2
+    "TRADITIONAL ER", // U+16FF3
+    "ONE BEAT", // U+16FF4
+    "THREE HALF BEATS", // U+16FF5
+    "TWO BEATS", // U+16FF6
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3s = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3t = {
   0x18800,
   {
     "COMPONENT-001", // U+18800
@@ -41811,13 +42091,133 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3s = {
     "COMPONENT-768", // U+18AFF
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3t = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3u = {
   0x18cff,
   {
     "CHARACTER-*", // U+18CFF
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3u = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3v = {
+  0x18d80,
+  {
+    "COMPONENT-769", // U+18D80
+    "COMPONENT-770", // U+18D81
+    "COMPONENT-771", // U+18D82
+    "COMPONENT-772", // U+18D83
+    "COMPONENT-773", // U+18D84
+    "COMPONENT-774", // U+18D85
+    "COMPONENT-775", // U+18D86
+    "COMPONENT-776", // U+18D87
+    "COMPONENT-777", // U+18D88
+    "COMPONENT-778", // U+18D89
+    "COMPONENT-779", // U+18D8A
+    "COMPONENT-780", // U+18D8B
+    "COMPONENT-781", // U+18D8C
+    "COMPONENT-782", // U+18D8D
+    "COMPONENT-783", // U+18D8E
+    "COMPONENT-784", // U+18D8F
+    "COMPONENT-785", // U+18D90
+    "COMPONENT-786", // U+18D91
+    "COMPONENT-787", // U+18D92
+    "COMPONENT-788", // U+18D93
+    "COMPONENT-789", // U+18D94
+    "COMPONENT-790", // U+18D95
+    "COMPONENT-791", // U+18D96
+    "COMPONENT-792", // U+18D97
+    "COMPONENT-793", // U+18D98
+    "COMPONENT-794", // U+18D99
+    "COMPONENT-795", // U+18D9A
+    "COMPONENT-796", // U+18D9B
+    "COMPONENT-797", // U+18D9C
+    "COMPONENT-798", // U+18D9D
+    "COMPONENT-799", // U+18D9E
+    "COMPONENT-800", // U+18D9F
+    "COMPONENT-801", // U+18DA0
+    "COMPONENT-802", // U+18DA1
+    "COMPONENT-803", // U+18DA2
+    "COMPONENT-804", // U+18DA3
+    "COMPONENT-805", // U+18DA4
+    "COMPONENT-806", // U+18DA5
+    "COMPONENT-807", // U+18DA6
+    "COMPONENT-808", // U+18DA7
+    "COMPONENT-809", // U+18DA8
+    "COMPONENT-810", // U+18DA9
+    "COMPONENT-811", // U+18DAA
+    "COMPONENT-812", // U+18DAB
+    "COMPONENT-813", // U+18DAC
+    "COMPONENT-814", // U+18DAD
+    "COMPONENT-815", // U+18DAE
+    "COMPONENT-816", // U+18DAF
+    "COMPONENT-817", // U+18DB0
+    "COMPONENT-818", // U+18DB1
+    "COMPONENT-819", // U+18DB2
+    "COMPONENT-820", // U+18DB3
+    "COMPONENT-821", // U+18DB4
+    "COMPONENT-822", // U+18DB5
+    "COMPONENT-823", // U+18DB6
+    "COMPONENT-824", // U+18DB7
+    "COMPONENT-825", // U+18DB8
+    "COMPONENT-826", // U+18DB9
+    "COMPONENT-827", // U+18DBA
+    "COMPONENT-828", // U+18DBB
+    "COMPONENT-829", // U+18DBC
+    "COMPONENT-830", // U+18DBD
+    "COMPONENT-831", // U+18DBE
+    "COMPONENT-832", // U+18DBF
+    "COMPONENT-833", // U+18DC0
+    "COMPONENT-834", // U+18DC1
+    "COMPONENT-835", // U+18DC2
+    "COMPONENT-836", // U+18DC3
+    "COMPONENT-837", // U+18DC4
+    "COMPONENT-838", // U+18DC5
+    "COMPONENT-839", // U+18DC6
+    "COMPONENT-840", // U+18DC7
+    "COMPONENT-841", // U+18DC8
+    "COMPONENT-842", // U+18DC9
+    "COMPONENT-843", // U+18DCA
+    "COMPONENT-844", // U+18DCB
+    "COMPONENT-845", // U+18DCC
+    "COMPONENT-846", // U+18DCD
+    "COMPONENT-847", // U+18DCE
+    "COMPONENT-848", // U+18DCF
+    "COMPONENT-849", // U+18DD0
+    "COMPONENT-850", // U+18DD1
+    "COMPONENT-851", // U+18DD2
+    "COMPONENT-852", // U+18DD3
+    "COMPONENT-853", // U+18DD4
+    "COMPONENT-854", // U+18DD5
+    "COMPONENT-855", // U+18DD6
+    "COMPONENT-856", // U+18DD7
+    "COMPONENT-857", // U+18DD8
+    "COMPONENT-858", // U+18DD9
+    "COMPONENT-859", // U+18DDA
+    "COMPONENT-860", // U+18DDB
+    "COMPONENT-861", // U+18DDC
+    "COMPONENT-862", // U+18DDD
+    "COMPONENT-863", // U+18DDE
+    "COMPONENT-864", // U+18DDF
+    "COMPONENT-865", // U+18DE0
+    "COMPONENT-866", // U+18DE1
+    "COMPONENT-867", // U+18DE2
+    "COMPONENT-868", // U+18DE3
+    "COMPONENT-869", // U+18DE4
+    "COMPONENT-870", // U+18DE5
+    "COMPONENT-871", // U+18DE6
+    "COMPONENT-872", // U+18DE7
+    "COMPONENT-873", // U+18DE8
+    "COMPONENT-874", // U+18DE9
+    "COMPONENT-875", // U+18DEA
+    "COMPONENT-876", // U+18DEB
+    "COMPONENT-877", // U+18DEC
+    "COMPONENT-878", // U+18DED
+    "COMPONENT-879", // U+18DEE
+    "COMPONENT-880", // U+18DEF
+    "COMPONENT-881", // U+18DF0
+    "COMPONENT-882", // U+18DF1
+    "COMPONENT-883", // U+18DF2
+  }
+};
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3w = {
   0x1aff0,
   {
     "MINNAN TONE-2", // U+1AFF0
@@ -42129,13 +42529,13 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3u = {
     "ARCHAIC WU", // U+1B122
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3v = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3x = {
   0x1b132,
   {
     "KO", // U+1B132
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3w = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3y = {
   0x1b150,
   {
     "WI", // U+1B150
@@ -42146,7 +42546,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3w = {
     "KO", // U+1B155
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3x = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3z = {
   0x1b164,
   {
     "WI", // U+1B164
@@ -42155,7 +42555,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3x = {
     "N", // U+1B167
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3y = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_40 = {
   0x1bc00,
   {
     "H", // U+1BC00
@@ -42324,7 +42724,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3y = {
     "UP STEP", // U+1BCA3
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_3z = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_41 = {
   0x1cc00,
   {
     "GO-KART", // U+1CC00
@@ -42578,7 +42978,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3z = {
     "DIGIT EIGHT", // U+1CCF8
     "DIGIT NINE", // U+1CCF9
     NULL,
-    NULL,
+    "SYMBOL", // U+1CCFB
     NULL,
     NULL,
     NULL,
@@ -43019,9 +43419,48 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_3z = {
     NULL,
     "PERSONAL COMPUTER WITH MONITOR IN PORTRAIT ORIENTATION", // U+1CEB2
     "RIGHT TRIANGLE CARET", // U+1CEB3
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    NULL,
+    "BUILDING SYMBOL", // U+1CEBB
+    NULL,
+    NULL,
+    "SYMBOL", // U+1CEBE
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_40 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_42 = {
+  0x1cecd,
+  {
+    "ASTEROID PROSERPINA", // U+1CECD
+  }
+};
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_43 = {
+  0x1cee0,
+  {
+    "POPULUS", // U+1CEE0
+    "TRISTITIA", // U+1CEE1
+    "ALBUS", // U+1CEE2
+    "FORTUNA MAJOR", // U+1CEE3
+    "RUBEUS", // U+1CEE4
+    "ACQUISITIO", // U+1CEE5
+    "CONJUNCTIO", // U+1CEE6
+    "CAPUT DRACONIS", // U+1CEE7
+    "LAETITIA", // U+1CEE8
+    "CARCER", // U+1CEE9
+    "AMISSIO", // U+1CEEA
+    "PUELLA", // U+1CEEB
+    "FORTUNA MINOR", // U+1CEEC
+    "PUER", // U+1CEED
+    "CAUDA DRACONIS", // U+1CEEE
+    "VIA", // U+1CEEF
+    "SMALL WHITE CIRCLE WITH HORIZONTAL BAR", // U+1CEF0
+  }
+};
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_44 = {
   0x1cf00,
   {
     "S KRYZHEM ON LEFT", // U+1CF00
@@ -43097,7 +43536,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_40 = {
     "ROG", // U+1CF46
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_41 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_45 = {
   0x1cf50,
   {
     "KRYUK", // U+1CF50
@@ -43218,7 +43657,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_41 = {
     "PAUK", // U+1CFC3
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_42 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_46 = {
   0x1d000,
   {
     "PSILI", // U+1D000
@@ -43469,7 +43908,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_42 = {
     "GORGON NEO KATO", // U+1D0F5
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_43 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_47 = {
   0x1d100,
   {
     "SINGLE BARLINE", // U+1D100
@@ -43709,7 +44148,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_43 = {
     "KORON", // U+1D1EA
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_44 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_48 = {
   0x1d200,
   {
     "VOCAL NOTATION SYMBOL-1", // U+1D200
@@ -43784,7 +44223,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_44 = {
     "MUSICAL LEIMMA", // U+1D245
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_45 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_49 = {
   0x1d2c0,
   {
     "ZERO", // U+1D2C0
@@ -43809,7 +44248,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_45 = {
     "NINETEEN", // U+1D2D3
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_46 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4a = {
   0x1d2e0,
   {
     "ZERO", // U+1D2E0
@@ -43834,7 +44273,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_46 = {
     "NINETEEN", // U+1D2F3
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_47 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4b = {
   0x1d300,
   {
     "EARTH", // U+1D300
@@ -43926,7 +44365,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_47 = {
     "FOSTERING", // U+1D356
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_48 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4c = {
   0x1d360,
   {
     "ONE", // U+1D360
@@ -43956,7 +44395,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_48 = {
     "FIVE", // U+1D378
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_49 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4d = {
   0x1d400,
   {
     "BOLD CAPITAL A", // U+1D400
@@ -45637,7 +46076,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_49 = {
     "PARENTHESIS", // U+1DA8B
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4a = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4e = {
   0x1da9b,
   {
     "FILL MODIFIER-2", // U+1DA9B
@@ -45663,7 +46102,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4a = {
     "ROTATION MODIFIER-16", // U+1DAAF
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4b = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4f = {
   0x1df00,
   {
     "FENG DIGRAPH WITH TRILL", // U+1DF00
@@ -45711,7 +46150,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4b = {
     "T WITH MID-HEIGHT LEFT HOOK", // U+1DF2A
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4c = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4g = {
   0x1e000,
   {
     "GLAGOLITIC LETTER AZU", // U+1E000
@@ -45826,13 +46265,13 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4c = {
     "CYRILLIC SMALL STRAIGHT U WITH STROKE", // U+1E06D
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4d = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4h = {
   0x1e08f,
   {
     "CYRILLIC SMALL LETTER BYELORUSSIAN-UKRAINIAN I", // U+1E08F
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4e = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4i = {
   0x1e100,
   {
     "MA", // U+1E100
@@ -45917,7 +46356,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4e = {
     "CIRCLED CA", // U+1E14F
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4f = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4j = {
   0x1e290,
   {
     "PA", // U+1E290
@@ -45952,7 +46391,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4f = {
     "A", // U+1E2AD
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4g = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4k = {
   0x1e2c0,
   {
     "AA", // U+1E2C0
@@ -46015,7 +46454,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4g = {
     "NINE", // U+1E2F9
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4h = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4l = {
   0x1e4d0,
   {
     "O", // U+1E4D0
@@ -46062,7 +46501,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4h = {
     "NINE", // U+1E4F9
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4i = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4m = {
   0x1e5d0,
   {
     "O", // U+1E5D0
@@ -46110,7 +46549,73 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4i = {
     "NINE", // U+1E5FA
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4j = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4n = {
+  0x1e6c0,
+  {
+    "KO", // U+1E6C0
+    "KO", // U+1E6C1
+    "KHO", // U+1E6C2
+    "KHO", // U+1E6C3
+    "GO", // U+1E6C4
+    "NGO", // U+1E6C5
+    "CO", // U+1E6C6
+    "XO", // U+1E6C7
+    "XO", // U+1E6C8
+    "NYO", // U+1E6C9
+    "NYO", // U+1E6CA
+    "DO", // U+1E6CB
+    "TO", // U+1E6CC
+    "TO", // U+1E6CD
+    "THO", // U+1E6CE
+    "NO", // U+1E6CF
+    "BO", // U+1E6D0
+    "PO", // U+1E6D1
+    "PO", // U+1E6D2
+    "PHO", // U+1E6D3
+    "FO", // U+1E6D4
+    "FO", // U+1E6D5
+    "MO", // U+1E6D6
+    "YO", // U+1E6D7
+    "LO", // U+1E6D8
+    "VO", // U+1E6D9
+    "HO", // U+1E6DA
+    "HO", // U+1E6DB
+    "QO", // U+1E6DC
+    "KVO", // U+1E6DD
+    "KVO", // U+1E6DE
+    NULL,
+    "AA", // U+1E6E0
+    "I", // U+1E6E1
+    "UE", // U+1E6E2
+    "UE", // U+1E6E3
+    "U", // U+1E6E4
+    "AE", // U+1E6E5
+    "AU", // U+1E6E6
+    "O", // U+1E6E7
+    "E", // U+1E6E8
+    "IA", // U+1E6E9
+    "UEA", // U+1E6EA
+    "UA", // U+1E6EB
+    "OO", // U+1E6EC
+    "AUE", // U+1E6ED
+    "AY", // U+1E6EE
+    "ANG", // U+1E6EF
+    "AN", // U+1E6F0
+    "AM", // U+1E6F1
+    "AK", // U+1E6F2
+    "AT", // U+1E6F3
+    "AP", // U+1E6F4
+    "OM", // U+1E6F5
+  }
+};
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4o = {
+  0x1e6fe,
+  {
+    "SYMBOL MUEANG", // U+1E6FE
+    "XAM LAI", // U+1E6FF
+  }
+};
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4p = {
   0x1e7e0,
   {
     "HHYA", // U+1E7E0
@@ -46362,7 +46867,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4j = {
     "MILLIONS", // U+1E8D6
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4k = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4q = {
   0x1e900,
   {
     "ALIF", // U+1E900
@@ -46463,7 +46968,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4k = {
     "INITIAL QUESTION MARK", // U+1E95F
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4l = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4r = {
   0x1ec71,
   {
     "ONE", // U+1EC71
@@ -46536,7 +47041,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4l = {
     "ALTERNATE LAKH MARK", // U+1ECB4
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4m = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4s = {
   0x1ed01,
   {
     "ONE", // U+1ED01
@@ -46602,7 +47107,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4m = {
     "FRACTION ONE SIXTH", // U+1ED3D
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4n = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4t = {
   0x1ee00,
   {
     "MATHEMATICAL ALEF", // U+1EE00
@@ -46795,14 +47300,14 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4n = {
     "MATHEMATICAL DOUBLE-STRUCK GHAIN", // U+1EEBB
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4o = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4u = {
   0x1eef0,
   {
     "MATHEMATICAL OPERATOR MEEM WITH HAH WITH TATWEEL", // U+1EEF0
     "MATHEMATICAL OPERATOR HAH WITH DAL", // U+1EEF1
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4p = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4v = {
   0x1f000,
   {
     "EAST WIND", // U+1F000
@@ -46955,7 +47460,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4p = {
     "VERTICAL-06-06", // U+1F093
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4q = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4w = {
   0x1f0a0,
   {
     "BACK", // U+1F0A0
@@ -47046,7 +47551,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4q = {
     "TRUMP-21", // U+1F0F5
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4r = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4x = {
   0x1f100,
   {
     "ZERO FULL STOP", // U+1F100
@@ -47224,7 +47729,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4r = {
     "VOD", // U+1F1AC
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4s = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4y = {
   0x1f1e6,
   {
     "A", // U+1F1E6
@@ -47258,7 +47763,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4s = {
     "KATAKANA SA", // U+1F202
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4t = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4z = {
   0x1f210,
   {
     "CJK UNIFIED IDEOGRAPH-624B", // U+1F210
@@ -47329,7 +47834,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4t = {
     "IDEOGRAPH ACCEPT", // U+1F251
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4u = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_50 = {
   0x1f260,
   {
     "FU", // U+1F260
@@ -47340,7 +47845,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4u = {
     "CAI", // U+1F265
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4v = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_51 = {
   0x1f302,
   {
     "UMBRELLA", // U+1F302
@@ -47397,7 +47902,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4v = {
     NULL,
     "PEPPER", // U+1F336
     NULL,
-    NULL,
+    "BLOSSOM", // U+1F338
     NULL,
     NULL,
     NULL,
@@ -47408,14 +47913,14 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4v = {
     "LEAF CLOVER", // U+1F340
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4w = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_52 = {
   0x1f34e,
   {
     "APPLE", // U+1F34E
     "APPLE", // U+1F34F
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4x = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_53 = {
   0x1f358,
   {
     "CRACKER", // U+1F358
@@ -47437,7 +47942,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4x = {
     "CREAM", // U+1F368
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4y = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_54 = {
   0x1f374,
   {
     "KNIFE", // U+1F374
@@ -47452,7 +47957,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4y = {
     "KNIFE WITH PLATE", // U+1F37D
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_4z = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_55 = {
   0x1f38c,
   {
     "FLAGS", // U+1F38C
@@ -47506,7 +48011,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_4z = {
     "SCORE", // U+1F3BC
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_50 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_56 = {
   0x1f3c7,
   {
     "RACING", // U+1F3C7
@@ -47536,7 +48041,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_50 = {
     NULL,
     "BUILDING", // U+1F3E0
     "WITH GARDEN", // U+1F3E1
-    NULL,
+    "BUILDING", // U+1F3E2
     "POST OFFICE", // U+1F3E3
     "POST OFFICE", // U+1F3E4
     NULL,
@@ -47572,7 +48077,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_50 = {
     "BUFFALO", // U+1F403
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_51 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_57 = {
   0x1f41a,
   {
     "SHELL", // U+1F41A
@@ -47613,7 +48118,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_51 = {
     "NOSE", // U+1F43D
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_52 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_58 = {
   0x1f446,
   {
     "UP POINTING BACKHAND INDEX", // U+1F446
@@ -47647,7 +48152,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_52 = {
     "BOOTS", // U+1F462
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_53 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_59 = {
   0x1f46b,
   {
     "AND WOMAN HOLDING HANDS", // U+1F46B
@@ -47770,7 +48275,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_53 = {
     "MACHINE", // U+1F4E0
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_54 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5a = {
   0x1f4e9,
   {
     "DOWNWARDS ARROW ABOVE", // U+1F4E9
@@ -47837,7 +48342,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_54 = {
     "TORCH", // U+1F526
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_55 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5b = {
   0x1f52f,
   {
     "STAR WITH MIDDLE DOT", // U+1F52F
@@ -48262,7 +48767,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_55 = {
     "TROLLEY", // U+1F6D2
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_56 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5c = {
   0x1f6df,
   {
     "BUOY", // U+1F6DF
@@ -48416,7 +48921,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_56 = {
     "HALF OUNCE", // U+1F773
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_57 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5d = {
   0x1f780,
   {
     "LEFT-POINTING ISOSCELES RIGHT TRIANGLE", // U+1F780
@@ -48534,7 +49039,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_57 = {
     "EQUALS SIGN", // U+1F7F0
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_58 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5e = {
   0x1f800,
   {
     "ARROW WITH SMALL TRIANGLE ARROWHEAD", // U+1F800
@@ -48611,7 +49116,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_58 = {
     "HEAVY ARROW", // U+1F847
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_59 = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5f = {
   0x1f850,
   {
     "SANS-SERIF ARROW", // U+1F850
@@ -48672,7 +49177,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_59 = {
     "VERY HEAVY BARB ARROW", // U+1F887
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5a = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5g = {
   0x1f890,
   {
     "TRIANGLE ARROWHEAD", // U+1F890
@@ -48727,7 +49232,21 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5a = {
     "ARROW FROM DOWNWARDS ARROW", // U+1F8C1
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5b = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5h = {
+  0x1f8d0,
+  {
+    "RIGHTWARDS ARROW OVER LONG LEFTWARDS ARROW", // U+1F8D0
+    "RIGHTWARDS HARPOON OVER LONG LEFTWARDS HARPOON", // U+1F8D1
+    "RIGHTWARDS HARPOON ABOVE SHORT LEFTWARDS HARPOON", // U+1F8D2
+    "HARPOON ABOVE LONG LEFTWARDS HARPOON", // U+1F8D3
+    "LEFTWARDS HARPOON ABOVE SHORT RIGHTWARDS HARPOON", // U+1F8D4
+    "LEFTWARDS HARPOON ABOVE LONG RIGHTWARDS HARPOON", // U+1F8D5
+    "RIGHTWARDS ARROW THROUGH X", // U+1F8D6
+    "RIGHTWARDS ARROW WITH DOUBLE SLASH", // U+1F8D7
+    "LEFT RIGHT ARROW WITH DEPENDENT LOBE", // U+1F8D8
+  }
+};
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5i = {
   0x1f900,
   {
     "CROSS FORMEE WITH FOUR DOTS", // U+1F900
@@ -48820,14 +49339,14 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5b = {
     "SALAD", // U+1F957
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5c = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5j = {
   0x1f963,
   {
     "WITH SPOON", // U+1F963
     "WITH STRAW", // U+1F964
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5d = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5k = {
   0x1f96e,
   {
     "CAKE", // U+1F96E
@@ -48845,13 +49364,13 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5d = {
     "WITH PLEADING EYES", // U+1F97A
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5e = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5l = {
   0x1f996,
   {
     "REX", // U+1F996
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5f = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5m = {
   0x1f9b0,
   {
     "RED HAIR", // U+1F9B0
@@ -48872,7 +49391,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5f = {
     "LEG", // U+1F9BF
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5g = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5n = {
   0x1f9ca,
   {
     "CUBE", // U+1F9CA
@@ -48892,7 +49411,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5g = {
     "IN LOTUS POSITION", // U+1F9D8
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5h = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5o = {
   0x1f9e1,
   {
     "HEART", // U+1F9E1
@@ -49010,9 +49529,13 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5h = {
     "CHESS KNIGHT-QUEEN", // U+1FA51
     "CHESS KNIGHT-ROOK", // U+1FA52
     "CHESS KNIGHT-BISHOP", // U+1FA53
+    "CHESS FERZ", // U+1FA54
+    "CHESS ALFIL", // U+1FA55
+    "CHESS FERZ", // U+1FA56
+    "CHESS ALFIL", // U+1FA57
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5i = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5p = {
   0x1fa60,
   {
     "GENERAL", // U+1FA60
@@ -49039,7 +49562,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5i = {
     "BLUE HEART", // U+1FA75
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5j = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5q = {
   0x1fa96,
   {
     "HELMET", // U+1FA96
@@ -49047,7 +49570,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5j = {
     "DRUM", // U+1FA98
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5k = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5r = {
   0x1faa4,
   {
     "TRAP", // U+1FAA4
@@ -49063,13 +49586,13 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5k = {
     "PICK", // U+1FAAE
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5l = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5s = {
   0x1fab9,
   {
     "NEST", // U+1FAB9
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5m = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5t = {
   0x1fac3,
   {
     "MAN", // U+1FAC3
@@ -49077,13 +49600,13 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5m = {
     "CROWN", // U+1FAC5
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5n = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5u = {
   0x1fad1,
   {
     "PEPPER", // U+1FAD1
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5o = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5v = {
   0x1fae2,
   {
     "WITH OPEN EYES AND HAND OVER MOUTH", // U+1FAE2
@@ -49366,9 +49889,10 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5o = {
     "SEVEN", // U+1FBF7
     "EIGHT", // U+1FBF8
     "NINE", // U+1FBF9
+    "BELL SYMBOL", // U+1FBFA
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5p = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5w = {
   0xe0020,
   {
     "SPACE", // U+E0020
@@ -49468,7 +49992,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5p = {
     "TILDE", // U+E007E
   }
 };
-_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5q = {
+_cUniSupp_na_suffixes __cUniSupp_na_suffixes_5x = {
   0xe0100,
   {
     "17", // U+E0100
@@ -49714,7 +50238,7 @@ _cUniSupp_na_suffixes __cUniSupp_na_suffixes_5q = {
   }
 };
 
-const _cUniSupp_na_suffixes_ptr _Nonnull __cUniSupp_na_suffixLists[207] = {
+const _cUniSupp_na_suffixes_ptr _Nonnull __cUniSupp_na_suffixLists[214] = {
   &__cUniSupp_na_suffixes_0,
   &__cUniSupp_na_suffixes_1,
   &__cUniSupp_na_suffixes_2,
@@ -49922,4 +50446,11 @@ const _cUniSupp_na_suffixes_ptr _Nonnull __cUniSupp_na_suffixLists[207] = {
   &__cUniSupp_na_suffixes_5o,
   &__cUniSupp_na_suffixes_5p,
   &__cUniSupp_na_suffixes_5q,
+  &__cUniSupp_na_suffixes_5r,
+  &__cUniSupp_na_suffixes_5s,
+  &__cUniSupp_na_suffixes_5t,
+  &__cUniSupp_na_suffixes_5u,
+  &__cUniSupp_na_suffixes_5v,
+  &__cUniSupp_na_suffixes_5w,
+  &__cUniSupp_na_suffixes_5x,
 };

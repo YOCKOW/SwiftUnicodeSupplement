@@ -4,15 +4,15 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBinaryProperties.txt
-// Last-Modified: 2024-08-25T23:05:31Z
-// ETag: "4444-6208a0b8364c0-gzip"
+// Last-Modified: 2025-08-16T00:45:11Z
+// ETag: "4444-63c70d19d13c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2024 Unicode, Inc.
+  Copyright © 1991-2025 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
