@@ -4,15 +4,15 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt
-// Last-Modified: 2024-08-25T23:05:31Z
-// ETag: "13b85-6208a0b8364c0-gzip"
+// Last-Modified: 2025-08-16T00:45:11Z
+// ETag: "13fc2-63c70d19d13c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2024 Unicode, Inc.
+  Copyright © 1991-2025 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
@@ -594,6 +594,7 @@ extension Unicode {
     case tehMarbutaGoal
     public static let hamzaOnHehGoal: JoiningGroup = .tehMarbutaGoal
     case teth
+    case thinNoon
     case thinYeh
     case verticalTail
     case waw
@@ -706,6 +707,7 @@ extension Unicode.JoiningGroup {
     case "Teh_Marbuta": self = .tehMarbuta
     case "Hamza_On_Heh_Goal", "Teh_Marbuta_Goal": self = .tehMarbutaGoal
     case "Teth": self = .teth
+    case "Thin_Noon": self = .thinNoon
     case "Thin_Yeh": self = .thinYeh
     case "Vertical_Tail": self = .verticalTail
     case "Waw": self = .waw
@@ -916,6 +918,7 @@ extension Unicode {
     case bassaVah
     case batak
     case bengali
+    case beriaErfe
     case bhaiksuki
     case bopomofo
     case brahmi
@@ -1035,6 +1038,7 @@ extension Unicode {
     case shavian
     case sharada
     case siddham
+    case sidetic
     case khudawadi
     case sinhala
     case sogdian
@@ -1052,6 +1056,7 @@ extension Unicode {
     case tamil
     case tangut
     case taiViet
+    case taiYo
     case telugu
     case tifinagh
     case tagalog
@@ -1061,6 +1066,7 @@ extension Unicode {
     case tirhuta
     case tangsa
     case todhri
+    case tolongSiki
     case toto
     case tuluTigalari
     case ugaritic
@@ -1095,6 +1101,7 @@ extension Unicode.Script {
     case "Bassa_Vah": self = .bassaVah
     case "Batak": self = .batak
     case "Bengali": self = .bengali
+    case "Beria_Erfe": self = .beriaErfe
     case "Bhaiksuki": self = .bhaiksuki
     case "Bopomofo": self = .bopomofo
     case "Brahmi": self = .brahmi
@@ -1214,6 +1221,7 @@ extension Unicode.Script {
     case "Shavian": self = .shavian
     case "Sharada": self = .sharada
     case "Siddham": self = .siddham
+    case "Sidetic": self = .sidetic
     case "Khudawadi": self = .khudawadi
     case "Sinhala": self = .sinhala
     case "Sogdian": self = .sogdian
@@ -1231,6 +1239,7 @@ extension Unicode.Script {
     case "Tamil": self = .tamil
     case "Tangut": self = .tangut
     case "Tai_Viet": self = .taiViet
+    case "Tai_Yo": self = .taiYo
     case "Telugu": self = .telugu
     case "Tifinagh": self = .tifinagh
     case "Tagalog": self = .tagalog
@@ -1240,6 +1249,7 @@ extension Unicode.Script {
     case "Tirhuta": self = .tirhuta
     case "Tangsa": self = .tangsa
     case "Todhri": self = .todhri
+    case "Tolong_Siki": self = .tolongSiki
     case "Toto": self = .toto
     case "Tulu_Tigalari": self = .tuluTigalari
     case "Ugaritic": self = .ugaritic
@@ -1275,6 +1285,7 @@ extension Unicode.Script {
     case "Bass": self = .bassaVah
     case "Batk": self = .batak
     case "Beng": self = .bengali
+    case "Berf": self = .beriaErfe
     case "Bhks": self = .bhaiksuki
     case "Bopo": self = .bopomofo
     case "Brah": self = .brahmi
@@ -1395,6 +1406,7 @@ extension Unicode.Script {
     case "Shaw": self = .shavian
     case "Shrd": self = .sharada
     case "Sidd": self = .siddham
+    case "Sidt": self = .sidetic
     case "Sind": self = .khudawadi
     case "Sinh": self = .sinhala
     case "Sogd": self = .sogdian
@@ -1412,6 +1424,7 @@ extension Unicode.Script {
     case "Taml": self = .tamil
     case "Tang": self = .tangut
     case "Tavt": self = .taiViet
+    case "Tayo": self = .taiYo
     case "Telu": self = .telugu
     case "Tfng": self = .tifinagh
     case "Tglg": self = .tagalog
@@ -1421,6 +1434,7 @@ extension Unicode.Script {
     case "Tirh": self = .tirhuta
     case "Tnsa": self = .tangsa
     case "Todr": self = .todhri
+    case "Tols": self = .tolongSiki
     case "Toto": self = .toto
     case "Tutg": self = .tuluTigalari
     case "Ugar": self = .ugaritic

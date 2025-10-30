@@ -12,7 +12,7 @@ if [ "$1" = "--build" ] || [ "$1" = "-b" ]; then
 elif [ "$1" = "--test" ] || [ "$1" = "-t" ]; then
   cmd="swift test ${build_config}"
 else
-  cmd="swift run ${build_config} Updater $@"
+  cmd="swift run ${build_config} Updater --only PropertyValueAliases && swift run ${build_config} Updater $@"
 fi
 
 eval $cmd

@@ -4,19 +4,19 @@
 //# The material(s) to generate this file was/were obtained from below:
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
-// Last-Modified: 2024-08-25T23:05:31Z
-// ETag: "213182-6208a0b8364c0-gzip"
+// Last-Modified: 2025-08-16T00:45:11Z
+// ETag: "218ac1-63c70d19d13c0-gzip"
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/SpecialCasing.txt
-// Last-Modified: 2024-08-25T23:05:31Z
-// ETag: "41a9-6208a0b8364c0-gzip"
+// Last-Modified: 2025-08-16T00:45:11Z
+// ETag: "4299-63c70d19d13c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2024 Unicode, Inc.
+  Copyright © 1991-2025 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
@@ -1139,7 +1139,10 @@ internal let _caseMapping_simpleUppercaseMapping: [Unicode.Scalar.Value: String]
   0xa7c8: "\u{A7C7}",
   0xa7ca: "\u{A7C9}",
   0xa7cd: "\u{A7CC}",
+  0xa7cf: "\u{A7CE}",
   0xa7d1: "\u{A7D0}",
+  0xa7d3: "\u{A7D2}",
+  0xa7d5: "\u{A7D4}",
   0xa7d7: "\u{A7D6}",
   0xa7d9: "\u{A7D8}",
   0xa7db: "\u{A7DA}",
@@ -1499,6 +1502,31 @@ internal let _caseMapping_simpleUppercaseMapping: [Unicode.Scalar.Value: String]
   0x16e7d: "\u{16E5D}",
   0x16e7e: "\u{16E5E}",
   0x16e7f: "\u{16E5F}",
+  0x16ebb: "\u{16EA0}",
+  0x16ebc: "\u{16EA1}",
+  0x16ebd: "\u{16EA2}",
+  0x16ebe: "\u{16EA3}",
+  0x16ebf: "\u{16EA4}",
+  0x16ec0: "\u{16EA5}",
+  0x16ec1: "\u{16EA6}",
+  0x16ec2: "\u{16EA7}",
+  0x16ec3: "\u{16EA8}",
+  0x16ec4: "\u{16EA9}",
+  0x16ec5: "\u{16EAA}",
+  0x16ec6: "\u{16EAB}",
+  0x16ec7: "\u{16EAC}",
+  0x16ec8: "\u{16EAD}",
+  0x16ec9: "\u{16EAE}",
+  0x16eca: "\u{16EAF}",
+  0x16ecb: "\u{16EB0}",
+  0x16ecc: "\u{16EB1}",
+  0x16ecd: "\u{16EB2}",
+  0x16ece: "\u{16EB3}",
+  0x16ecf: "\u{16EB4}",
+  0x16ed0: "\u{16EB5}",
+  0x16ed1: "\u{16EB6}",
+  0x16ed2: "\u{16EB7}",
+  0x16ed3: "\u{16EB8}",
   0x1e922: "\u{1E900}",
   0x1e923: "\u{1E901}",
   0x1e924: "\u{1E902}",
@@ -2681,7 +2709,10 @@ internal let _caseMapping_simpleLowercaseMapping: [Unicode.Scalar.Value: String]
   0xa7c9: "\u{A7CA}",
   0xa7cb: "\u{0264}",
   0xa7cc: "\u{A7CD}",
+  0xa7ce: "\u{A7CF}",
   0xa7d0: "\u{A7D1}",
+  0xa7d2: "\u{A7D3}",
+  0xa7d4: "\u{A7D5}",
   0xa7d6: "\u{A7D7}",
   0xa7d8: "\u{A7D9}",
   0xa7da: "\u{A7DB}",
@@ -2961,6 +2992,31 @@ internal let _caseMapping_simpleLowercaseMapping: [Unicode.Scalar.Value: String]
   0x16e5d: "\u{16E7D}",
   0x16e5e: "\u{16E7E}",
   0x16e5f: "\u{16E7F}",
+  0x16ea0: "\u{16EBB}",
+  0x16ea1: "\u{16EBC}",
+  0x16ea2: "\u{16EBD}",
+  0x16ea3: "\u{16EBE}",
+  0x16ea4: "\u{16EBF}",
+  0x16ea5: "\u{16EC0}",
+  0x16ea6: "\u{16EC1}",
+  0x16ea7: "\u{16EC2}",
+  0x16ea8: "\u{16EC3}",
+  0x16ea9: "\u{16EC4}",
+  0x16eaa: "\u{16EC5}",
+  0x16eab: "\u{16EC6}",
+  0x16eac: "\u{16EC7}",
+  0x16ead: "\u{16EC8}",
+  0x16eae: "\u{16EC9}",
+  0x16eaf: "\u{16ECA}",
+  0x16eb0: "\u{16ECB}",
+  0x16eb1: "\u{16ECC}",
+  0x16eb2: "\u{16ECD}",
+  0x16eb3: "\u{16ECE}",
+  0x16eb4: "\u{16ECF}",
+  0x16eb5: "\u{16ED0}",
+  0x16eb6: "\u{16ED1}",
+  0x16eb7: "\u{16ED2}",
+  0x16eb8: "\u{16ED3}",
   0x1e900: "\u{1E922}",
   0x1e901: "\u{1E923}",
   0x1e902: "\u{1E924}",
@@ -4084,7 +4140,10 @@ internal let _caseMapping_simpleTitlecaseMapping: [Unicode.Scalar.Value: String]
   0xa7c8: "\u{A7C7}",
   0xa7ca: "\u{A7C9}",
   0xa7cd: "\u{A7CC}",
+  0xa7cf: "\u{A7CE}",
   0xa7d1: "\u{A7D0}",
+  0xa7d3: "\u{A7D2}",
+  0xa7d5: "\u{A7D4}",
   0xa7d7: "\u{A7D6}",
   0xa7d9: "\u{A7D8}",
   0xa7db: "\u{A7DA}",
@@ -4444,6 +4503,31 @@ internal let _caseMapping_simpleTitlecaseMapping: [Unicode.Scalar.Value: String]
   0x16e7d: "\u{16E5D}",
   0x16e7e: "\u{16E5E}",
   0x16e7f: "\u{16E5F}",
+  0x16ebb: "\u{16EA0}",
+  0x16ebc: "\u{16EA1}",
+  0x16ebd: "\u{16EA2}",
+  0x16ebe: "\u{16EA3}",
+  0x16ebf: "\u{16EA4}",
+  0x16ec0: "\u{16EA5}",
+  0x16ec1: "\u{16EA6}",
+  0x16ec2: "\u{16EA7}",
+  0x16ec3: "\u{16EA8}",
+  0x16ec4: "\u{16EA9}",
+  0x16ec5: "\u{16EAA}",
+  0x16ec6: "\u{16EAB}",
+  0x16ec7: "\u{16EAC}",
+  0x16ec8: "\u{16EAD}",
+  0x16ec9: "\u{16EAE}",
+  0x16eca: "\u{16EAF}",
+  0x16ecb: "\u{16EB0}",
+  0x16ecc: "\u{16EB1}",
+  0x16ecd: "\u{16EB2}",
+  0x16ece: "\u{16EB3}",
+  0x16ecf: "\u{16EB4}",
+  0x16ed0: "\u{16EB5}",
+  0x16ed1: "\u{16EB6}",
+  0x16ed2: "\u{16EB7}",
+  0x16ed3: "\u{16EB8}",
   0x1e922: "\u{1E900}",
   0x1e923: "\u{1E901}",
   0x1e924: "\u{1E902}",

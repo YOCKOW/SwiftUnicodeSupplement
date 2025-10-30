@@ -20,7 +20,7 @@ let package = Package(
     // Dependencies declare other packages that this package depends on.
     .package(url: "https://github.com/YOCKOW/SwiftRanges.git", from: "3.2.1"),
     .package(url: "https://github.com/YOCKOW/SwiftStringComposition.git", from: "2.1.0"),
-    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", from: "1.6.0"),
+    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", from: "1.7.0"),
     .package(url: "https://github.com/YOCKOW/ySwiftCodeUpdater.git", from: "2.1.0"),
     .package(url: "https://github.com/YOCKOW/ySwiftExtensions.git", from: "1.11.1"),
   ],
