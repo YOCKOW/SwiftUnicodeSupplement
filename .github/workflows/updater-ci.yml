@@ -1,16 +1,8 @@
 name: Updater CI
 on:
   push:
-    branches:
+    tags:
       - '**'
-    tags-ignore:
-      - '**'
-    paths:
-      - '**/*.swift'
-      - '**/*.c'
-      - '**/*.h'
-      - '.github/workflows/*.yml'
-  pull_request:
     paths:
       - '**/*.swift'
       - '**/*.c'
