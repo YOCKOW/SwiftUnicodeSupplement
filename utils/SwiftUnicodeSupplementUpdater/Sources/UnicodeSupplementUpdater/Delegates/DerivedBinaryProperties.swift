@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  DerivedBinaryProperties.swift
-   © 2020 YOCKOW.
+   © 2020,2026 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
@@ -8,10 +8,18 @@
 import Foundation
 import yCodeUpdater
 
-public class DerivedBinaryProperties: UCDBinaryPropertiesCodeUpdaterDelegate {
-  public override var prefix: String { return "binProp" }
+public struct DerivedBinaryProperties: UCDBinaryPropertiesCodeUpdaterDelegate {
+  public let dependencies: CodeDependencies = .init()
+
+  public let setConversionCounter: ConversionCounter<String> = .init()
+
+  public let dictionaryConversionCounter: ConversionCounter<String?> = .init()
+
+  public init() {}
+
+  public var prefix: String { return "binProp" }
   
-  public override var sourceURLs: Array<URL> {
+  public var sourceURLs: Array<URL> {
     return [
       URL(string:"https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBinaryProperties.txt")!
     ]

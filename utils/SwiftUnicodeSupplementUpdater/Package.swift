@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:6.2
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -6,10 +6,10 @@ import PackageDescription
 let package = Package(
   name: "UnicodeSupplementUpdater",
   platforms: [
-    .macOS("10.15.4"), // Workaround for https://bugs.swift.org/browse/SR-13859
-    .iOS(.v13),
-    .watchOS(.v6),
-    .tvOS(.v13),
+    .macOS(.v13),
+    .iOS(.v16),
+    .watchOS(.v9),
+    .tvOS(.v16),
   ],
   products: [
     // Products define the executables and libraries produced by a package, and make them visible to other packages.
@@ -18,11 +18,12 @@ let package = Package(
   ],
   dependencies: [
     // Dependencies declare other packages that this package depends on.
-    .package(url: "https://github.com/YOCKOW/SwiftRanges.git", from: "3.2.1"),
-    .package(url: "https://github.com/YOCKOW/SwiftStringComposition.git", from: "2.1.0"),
-    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", from: "1.7.0"),
-    .package(url: "https://github.com/YOCKOW/ySwiftCodeUpdater.git", from: "2.1.0"),
-    .package(url: "https://github.com/YOCKOW/ySwiftExtensions.git", from: "1.11.1"),
+    .package(url: "https://github.com/YOCKOW/SwiftNetworkGear.git", from: "0.20.1"),
+    .package(url: "https://github.com/YOCKOW/SwiftRanges.git", from: "4.0.2"),
+    .package(url: "https://github.com/YOCKOW/SwiftStringComposition.git", from: "3.0.0"),
+    .package(url: "https://github.com/YOCKOW/SwiftUnicodeSupplement.git", from: "2.0.0"),
+    .package(url: "https://github.com/YOCKOW/ySwiftCodeUpdater.git", from: "4.1.2"),
+    .package(url: "https://github.com/YOCKOW/ySwiftExtensions.git", from: "2.1.0"),
   ],
   targets: [
     // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -30,6 +31,7 @@ let package = Package(
     .target(
       name: "UnicodeSupplementUpdater",
       dependencies: [
+        "SwiftNetworkGear",
         "SwiftRanges",
         "SwiftStringComposition",
         "SwiftUnicodeSupplement",
@@ -41,14 +43,16 @@ let package = Package(
       name: "Updater",
       dependencies: ["ySwiftCodeUpdater", "UnicodeSupplementUpdater"]
     ),
-    .testTarget(name: "UnicodeSupplementUpdaterTests",
-                dependencies: [
-                  "UnicodeSupplementUpdater",
-                  "SwiftStringComposition",
-                  "ySwiftCodeUpdater",
-                ]),
+    .testTarget(
+      name: "UnicodeSupplementUpdaterTests",
+      dependencies: [
+        "UnicodeSupplementUpdater",
+        "SwiftStringComposition",
+        "ySwiftCodeUpdater",
+      ]
+    ),
   ],
-  swiftLanguageVersions: [.v5, .version("6")]
+  swiftLanguageModes: [.v5, .v6]
 )
 
 
