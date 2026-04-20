@@ -3,6 +3,7 @@
 **/.swiftpm/
 /Packages
 Package.resolved
+.vscode
 **/*.xcodeproj
 
 

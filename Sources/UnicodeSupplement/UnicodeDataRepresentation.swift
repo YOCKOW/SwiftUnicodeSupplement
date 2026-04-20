@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  UnicodeDataRepresentation.swift
-   © 2020 YOCKOW.
+   © 2020,2026 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
@@ -14,19 +14,25 @@ extension Unicode.Scalar {
 /// Immutable Set-like class for Unicode scalars.
 internal final class UnicodeScalarValueSet: Sendable {
   private let _set: Set<Unicode.Scalar.Value>
-  private let _ranges: MemoizableMultipleRanges<Unicode.Scalar.Value>
+  private let _ranges: MemoizableGeneralizedRangeSet<Unicode.Scalar.Value>
   
-  init(singleValues: Set<Unicode.Scalar.Value>,
-              ranges: MemoizableMultipleRanges<Unicode.Scalar.Value>) {
+  init(
+    singleValues: Set<Unicode.Scalar.Value>,
+    ranges: MemoizableGeneralizedRangeSet<Unicode.Scalar.Value>
+  ) {
     self._set = singleValues
     self._ranges = ranges
   }
   
   @inlinable
-  convenience init(singleValues: Set<Unicode.Scalar.Value>,
-                   ranges: MultipleRanges<Unicode.Scalar.Value>) {
-    self.init(singleValues: singleValues,
-              ranges: MemoizableMultipleRanges(ranges))
+  convenience init(
+    singleValues: Set<Unicode.Scalar.Value>,
+    ranges: GeneralizedRangeSet<Unicode.Scalar.Value>
+  ) {
+    self.init(
+      singleValues: singleValues,
+      ranges: MemoizableGeneralizedRangeSet(ranges)
+    )
   }
   
   func contains(_ value: Unicode.Scalar.Value) -> Bool {

@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  IDNAMappingTable.swift
-   © 2020,2023 YOCKOW.
+   © 2020,2023,2026 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
@@ -96,22 +96,32 @@ extension Unicode.IDNAStatus._ImmatureStatus {
   }
 }
 
-public class IDNAMappingTable: UCDPropertiesCodeUpdaterDelegate<Unicode.IDNAStatus._ImmatureStatus> {
-  public override var prefix: String { return "idna" }
+public struct IDNAMappingTable: UCDPropertiesCodeUpdaterDelegate {
+  public typealias Property = Unicode.IDNAStatus._ImmatureStatus
+
+  public let dependencies: CodeDependencies = .init()
+
+  public let setConversionCounter: ConversionCounter<String> = .init()
+
+  public let dictionaryConversionCounter: ConversionCounter<String?> = .init()
+
+  public init() {}
+
+  public var prefix: String { return "idna" }
   
-  public override var sourceURLs: Array<URL> {
+  public var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/idna/latest/IdnaMappingTable.txt")!,
     ]
   }
   
-  public override var subdirectory: String { return "IDNA" }
+  public var subdirectory: String { return "IDNA" }
   
-  public override func reduce(columns: [String]) throws -> Unicode.IDNAStatus._ImmatureStatus {
+  public func reduce(columns: [String]) throws -> Unicode.IDNAStatus._ImmatureStatus {
     return try .init(columns)
   }
   
-  public override func describe(value: Unicode.IDNAStatus._ImmatureStatus) -> String {
+  public func describe(value: Unicode.IDNAStatus._ImmatureStatus) -> String {
     return value._description
   }
 }

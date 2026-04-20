@@ -1,18 +1,59 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 
-directory=$(cd "$(dirname "$0")" && pwd)
-package_path="${directory}/SwiftUnicodeSupplementUpdater"
-scratch_path=$(cd "${directory}/../.build" && pwd -P)
-build_config="--package-path \"${package_path}\" --scratch-path \"${scratch_path}\""
+set -eu
 
-cmd="exit 1"
+function __isTrue() {
+  if [[ "${(L)1:-}" == "true" ]]; then
+    return 0
+  fi
+  return 1
+}
 
-if [ "$1" = "--build" ] || [ "$1" = "-b" ]; then
-  cmd="swift build ${build_config}"
-elif [ "$1" = "--test" ] || [ "$1" = "-t" ]; then
-  cmd="swift test ${build_config}"
-else
-  cmd="swift run ${build_config} Updater --only PropertyValueAliases && swift run ${build_config} Updater $@"
+function __isFalse() {
+  if [[ "${(L)1:-}" == "false" ]] || [[ "${(L)1:-}" == "0" ]]; then
+    return 0
+  fi
+  return 1
+}
+
+declare -r utilsDir="$(cd "$(dirname "$0")" && pwd)"
+declare -r repoDir="$(cd "${utilsDir}/.." && pwd -P)"
+declare -r updaterPackageDir="${utilsDir}/SwiftUnicodeSupplementUpdater"
+declare scratchPath="${repoDir}/.build"
+if [[ -v YOCKOW_USE_LOCAL_PACKAGES ]] && ! __isFalse "$YOCKOW_USE_LOCAL_PACKAGES"; then
+  scratchPath="$HOME/.yswift-build"
+fi
+declare -a swiftCommandArguments=(--package-path "$updaterPackageDir" --scratch-path "$scratchPath")
+declare -A parsedArguments=()
+zparseopts -D -E -M -A parsedArguments -- \
+  b -build=b \
+  t -test=t
+
+declare doBuild="false"
+if [[ -n "${parsedArguments[(i)-b]}" ]]; then
+  doBuild="true"
 fi
 
-eval $cmd
+declare doTest="false"
+if [[ -n "${parsedArguments[(i)-t]}" ]]; then
+  doTest="true"
+fi
+
+if __isTrue "$doBuild"; then
+  set -x;
+  swift build $swiftCommandArguments
+  { set +x; } 2>/dev/null
+fi
+
+if __isTrue "$doTest"; then
+  set -x;
+  swift test $swiftCommandArguments
+  { set +x; } 2>/dev/null
+fi
+
+if ! __isTrue "$doBuild" && ! __isTrue "$doTest"; then
+  set -x;
+  swift run $swiftCommandArguments Updater --only PropertyValueAliases
+  swift run $swiftCommandArguments Updater $@
+  { set +x; } 2>/dev/null
+fi

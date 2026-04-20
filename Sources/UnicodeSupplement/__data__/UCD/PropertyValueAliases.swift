@@ -5,14 +5,14 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt
 // Last-Modified: 2025-08-16T00:45:11Z
-// ETag: "13fc2-63c70d19d13c0-gzip"
+// ETag: W/"13fc2-63c70d19d13c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2025 Unicode, Inc.
+  Copyright © 1991-2026 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR

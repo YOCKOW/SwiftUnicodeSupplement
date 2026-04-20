@@ -1,9 +1,9 @@
 /* *************************************************************************************************
-UnicodeSupplementUpdater.swift
+internals.swift
   © 2020 YOCKOW.
     Licensed under MIT License.
     See "LICENSE.txt" for more information.
-************************************************************************************************ */
+************************************************************************************************* */
 
 import Foundation
 import Ranges
@@ -51,19 +51,21 @@ extension Unicode.Scalar.Value {
   }
 }
 
-extension AnyRange where Bound == Unicode.Scalar.Value {
+extension GeneralizedRange where Bound == Unicode.Scalar.Value {
   internal var _description: String {
-    let bounds = self.bounds!
-    
+    guard let bounds = self.bounds else {
+      fatalError("Empty Range?!")
+    }
+
     switch (bounds.lower, bounds.upper) {
     case (.excluded(let lv), .excluded(let uv)):
-      return "\(lv._description)<...<\(uv._description)"
+      return "\(lv._description)<..<\(uv._description)"
     case (.excluded(let lv), .included(let uv)):
-      return "\(lv._description)<...\(uv._description)"
+      return "\(lv._description)<..\(uv._description)"
     case (.included(let lv), .excluded(let uv)):
-      return "\(lv._description)...<\(uv._description)"
+      return "\(lv._description)..<\(uv._description)"
     case (.included(let lv), .included(let uv)):
-      return "\(lv._description)....\(uv._description)"
+      return "\(lv._description)...\(uv._description)"
     default:
       fatalError("Unexpected Range.")
     }

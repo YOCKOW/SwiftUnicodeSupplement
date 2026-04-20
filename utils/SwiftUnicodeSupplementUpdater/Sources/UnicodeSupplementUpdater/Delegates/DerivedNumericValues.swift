@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  DerivedNumericValues.swift
-   © 2020 YOCKOW.
+   © 2020,2026 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
@@ -12,20 +12,30 @@ import yExtensions
 
 public typealias DoubleRepresentation = String
 
-public class DerivedNumericValues: UCDPropertiesCodeUpdaterDelegate<DoubleRepresentation> {
-  public override var prefix: String { return "nv" }
+public struct DerivedNumericValues: UCDPropertiesCodeUpdaterDelegate {
+  public typealias Property = DoubleRepresentation
+
+  public let dependencies: CodeDependencies = .init()
+
+  public let setConversionCounter: ConversionCounter<String> = .init()
+
+  public let dictionaryConversionCounter: ConversionCounter<String?> = .init()
+
+  public init() {}
+
+  public var prefix: String { return "nv" }
   
-  public override var sourceURLs: Array<URL> {
+  public var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedNumericValues.txt")!
     ]
   }
   
-  public override func reduce(columns: [String]) throws -> DoubleRepresentation {
+  public func reduce(columns: [String]) throws -> DoubleRepresentation {
     return columns[2]
   }
    
-  public override func describe(value: DoubleRepresentation) -> String {
+  public func describe(value: DoubleRepresentation) -> String {
     switch value.splitOnce(separator: "/") {
     case (let integer, nil):
       return "\(integer)"
@@ -34,10 +44,12 @@ public class DerivedNumericValues: UCDPropertiesCodeUpdaterDelegate<DoubleRepres
     }
   }
   
-  public override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    return self._convert(try self._convert(intermediates),
-                         typeName: "Double",
-                         describer: self.describe(value:))
+  public func convert<S>(_ intermediates: S) async throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeDataTable> {
+    return await self._convert(
+      try self._convert(intermediates),
+      typeName: "Double",
+      describer: self.describe(value:)
+    )
   }
 }
 
