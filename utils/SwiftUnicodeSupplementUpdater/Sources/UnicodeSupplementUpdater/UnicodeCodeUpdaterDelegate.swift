@@ -180,7 +180,7 @@ extension UnicodeCodeUpdaterDelegate {
         let idPrefix = self._identifierPrefix(for: currentCount)
         let scalarValueTypeName = await self.typeAliasName(for: "Unicode.Scalar.Value")
         let setTypeName = await self.typeAliasName(for: "Set<\(scalarValueTypeName)>")
-        let rangeTypeName = await self.typeAliasName(for: "any GeneralizedRange<\(scalarValueTypeName)>")
+        let rangeTypeName = await self.typeAliasName(for: "any GeneralizedRange<\(scalarValueTypeName)> & Sendable")
         let arrayTypeName = await self.typeAliasName(for: "Array<\(rangeTypeName)>")
         let setID = "__\(idPrefix)_\(key)_set"
         let arrayID = "__\(idPrefix)_\(key)_array"
@@ -249,7 +249,7 @@ extension UnicodeCodeUpdaterDelegate {
         let scalarValueTypeName = await self.typeAliasName(for: "Unicode.Scalar.Value")
         let assocTypeName = await self.typeAliasName(for: assocTypeOriginalName)
         let pairTypeName = await self.typeAliasName(for: "(\(scalarValueTypeName), \(assocTypeName))")
-        let rangeValuePairTypeName = await self.typeAliasName(for: "(any GeneralizedRange<\(scalarValueTypeName)>, \(assocTypeName))")
+        let rangeValuePairTypeName = await self.typeAliasName(for: "(any GeneralizedRange<\(scalarValueTypeName)> & Sendable, \(assocTypeName))")
         let arrayTypeName = await self.typeAliasName(for: "Array<\(rangeValuePairTypeName)>")
         let dictionaryID = "__\(idPrefix)_dictionary"
         let rangeValuePairArrayID = "__\(idPrefix)_pairArray"
