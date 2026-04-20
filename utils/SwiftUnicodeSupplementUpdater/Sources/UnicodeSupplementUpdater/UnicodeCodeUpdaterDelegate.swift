@@ -252,7 +252,7 @@ extension UnicodeCodeUpdaterDelegate {
         let rangeValuePairTypeName = await self.typeAliasName(for: "(any GeneralizedRange<\(scalarValueTypeName)> & Sendable, \(assocTypeName))")
         let arrayTypeName = await self.typeAliasName(for: "Array<\(rangeValuePairTypeName)>")
         let dictionaryID = "__\(idPrefix)_dictionary"
-        let rangeValuePairArrayID = "__\(idPrefix)_pairArray"
+        let rangeValuePairArrayID = "__\(idPrefix)_rangeValuePairArray"
         let rangeDictionaryID = "__\(idPrefix)_rangeDictionary"
 
         // Single Values
@@ -272,7 +272,7 @@ extension UnicodeCodeUpdaterDelegate {
         // Range-associated Values
         context.view(message: "Pick up range-associated values.")
         func __rangeValuePairID(_ nn: Int) -> String {
-          return "__\(idPrefix)_pair_\(nn._base36)"
+          return "__\(idPrefix)_rangeValuePair_\(nn._base36)"
         }
         for (ii, (range, value)) in extractedRangeDictionary.enumerated() {
           result.append("private let \(__rangeValuePairID(ii)): \(rangeValuePairTypeName) = (\(range._description), \(describer(value)))")
