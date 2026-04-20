@@ -5,14 +5,14 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedJoiningType.txt
 // Last-Modified: 2025-08-16T00:45:11Z
-// ETag: "9ebb-63c70d19d13c0-gzip"
+// ETag: W/"9ebb-63c70d19d13c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2025 Unicode, Inc.
+  Copyright © 1991-2026 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
@@ -53,1019 +53,1020 @@
 import Ranges
 
 // Type Aliases
-private typealias _T0 = Unicode.JoiningType
-private typealias _T1 = (Unicode.Scalar.Value, _T0)
-private typealias _T2 = (AnyRange<UInt32>, _T0)
-private typealias _T3 = Array<_T2>
+private typealias _T0 = Unicode.Scalar.Value
+private typealias _T1 = Unicode.JoiningType
+private typealias _T2 = (_T0, _T1)
+private typealias _T3 = (any GeneralizedRange<_T0> & Sendable, _T1)
+private typealias _T4 = Array<_T3>
 
-private let __jt_pair_0: _T1 = (0xad, .transparent)
-private let __jt_pair_1: _T1 = (0x5be, .nonJoining)
-private let __jt_pair_2: _T1 = (0x5bf, .transparent)
-private let __jt_pair_3: _T1 = (0x5c0, .nonJoining)
-private let __jt_pair_4: _T1 = (0x5c1, .transparent)
-private let __jt_pair_5: _T1 = (0x5c2, .transparent)
-private let __jt_pair_6: _T1 = (0x5c3, .nonJoining)
-private let __jt_pair_7: _T1 = (0x5c4, .transparent)
-private let __jt_pair_8: _T1 = (0x5c5, .transparent)
-private let __jt_pair_9: _T1 = (0x5c6, .nonJoining)
-private let __jt_pair_a: _T1 = (0x5c7, .transparent)
-private let __jt_pair_b: _T1 = (0x61b, .nonJoining)
-private let __jt_pair_c: _T1 = (0x61c, .transparent)
-private let __jt_pair_d: _T1 = (0x61d, .nonJoining)
-private let __jt_pair_e: _T1 = (0x61e, .nonJoining)
-private let __jt_pair_f: _T1 = (0x61f, .nonJoining)
-private let __jt_pair_g: _T1 = (0x620, .dualJoining)
-private let __jt_pair_h: _T1 = (0x621, .nonJoining)
-private let __jt_pair_i: _T1 = (0x622, .rightJoining)
-private let __jt_pair_j: _T1 = (0x623, .rightJoining)
-private let __jt_pair_k: _T1 = (0x624, .rightJoining)
-private let __jt_pair_l: _T1 = (0x625, .rightJoining)
-private let __jt_pair_m: _T1 = (0x626, .dualJoining)
-private let __jt_pair_n: _T1 = (0x627, .rightJoining)
-private let __jt_pair_o: _T1 = (0x628, .dualJoining)
-private let __jt_pair_p: _T1 = (0x629, .rightJoining)
-private let __jt_pair_q: _T1 = (0x62f, .rightJoining)
-private let __jt_pair_r: _T1 = (0x630, .rightJoining)
-private let __jt_pair_s: _T1 = (0x631, .rightJoining)
-private let __jt_pair_t: _T1 = (0x632, .rightJoining)
-private let __jt_pair_u: _T1 = (0x640, .joinCausing)
-private let __jt_pair_v: _T1 = (0x648, .rightJoining)
-private let __jt_pair_w: _T1 = (0x649, .dualJoining)
-private let __jt_pair_x: _T1 = (0x64a, .dualJoining)
-private let __jt_pair_y: _T1 = (0x66e, .dualJoining)
-private let __jt_pair_z: _T1 = (0x66f, .dualJoining)
-private let __jt_pair_10: _T1 = (0x670, .transparent)
-private let __jt_pair_11: _T1 = (0x671, .rightJoining)
-private let __jt_pair_12: _T1 = (0x672, .rightJoining)
-private let __jt_pair_13: _T1 = (0x673, .rightJoining)
-private let __jt_pair_14: _T1 = (0x674, .nonJoining)
-private let __jt_pair_15: _T1 = (0x675, .rightJoining)
-private let __jt_pair_16: _T1 = (0x676, .rightJoining)
-private let __jt_pair_17: _T1 = (0x677, .rightJoining)
-private let __jt_pair_18: _T1 = (0x6c0, .rightJoining)
-private let __jt_pair_19: _T1 = (0x6c1, .dualJoining)
-private let __jt_pair_1a: _T1 = (0x6c2, .dualJoining)
-private let __jt_pair_1b: _T1 = (0x6cc, .dualJoining)
-private let __jt_pair_1c: _T1 = (0x6cd, .rightJoining)
-private let __jt_pair_1d: _T1 = (0x6ce, .dualJoining)
-private let __jt_pair_1e: _T1 = (0x6cf, .rightJoining)
-private let __jt_pair_1f: _T1 = (0x6d0, .dualJoining)
-private let __jt_pair_1g: _T1 = (0x6d1, .dualJoining)
-private let __jt_pair_1h: _T1 = (0x6d2, .rightJoining)
-private let __jt_pair_1i: _T1 = (0x6d3, .rightJoining)
-private let __jt_pair_1j: _T1 = (0x6d4, .nonJoining)
-private let __jt_pair_1k: _T1 = (0x6d5, .rightJoining)
-private let __jt_pair_1l: _T1 = (0x6dd, .nonJoining)
-private let __jt_pair_1m: _T1 = (0x6de, .nonJoining)
-private let __jt_pair_1n: _T1 = (0x6e5, .nonJoining)
-private let __jt_pair_1o: _T1 = (0x6e6, .nonJoining)
-private let __jt_pair_1p: _T1 = (0x6e7, .transparent)
-private let __jt_pair_1q: _T1 = (0x6e8, .transparent)
-private let __jt_pair_1r: _T1 = (0x6e9, .nonJoining)
-private let __jt_pair_1s: _T1 = (0x6ea, .transparent)
-private let __jt_pair_1t: _T1 = (0x6eb, .transparent)
-private let __jt_pair_1u: _T1 = (0x6ec, .transparent)
-private let __jt_pair_1v: _T1 = (0x6ed, .transparent)
-private let __jt_pair_1w: _T1 = (0x6ee, .rightJoining)
-private let __jt_pair_1x: _T1 = (0x6ef, .rightJoining)
-private let __jt_pair_1y: _T1 = (0x6fa, .dualJoining)
-private let __jt_pair_1z: _T1 = (0x6fb, .dualJoining)
-private let __jt_pair_20: _T1 = (0x6fc, .dualJoining)
-private let __jt_pair_21: _T1 = (0x6fd, .nonJoining)
-private let __jt_pair_22: _T1 = (0x6fe, .nonJoining)
-private let __jt_pair_23: _T1 = (0x6ff, .dualJoining)
-private let __jt_pair_24: _T1 = (0x70f, .transparent)
-private let __jt_pair_25: _T1 = (0x710, .rightJoining)
-private let __jt_pair_26: _T1 = (0x711, .transparent)
-private let __jt_pair_27: _T1 = (0x712, .dualJoining)
-private let __jt_pair_28: _T1 = (0x713, .dualJoining)
-private let __jt_pair_29: _T1 = (0x714, .dualJoining)
-private let __jt_pair_2a: _T1 = (0x71a, .dualJoining)
-private let __jt_pair_2b: _T1 = (0x71b, .dualJoining)
-private let __jt_pair_2c: _T1 = (0x71c, .dualJoining)
-private let __jt_pair_2d: _T1 = (0x71d, .dualJoining)
-private let __jt_pair_2e: _T1 = (0x71e, .rightJoining)
-private let __jt_pair_2f: _T1 = (0x728, .rightJoining)
-private let __jt_pair_2g: _T1 = (0x729, .dualJoining)
-private let __jt_pair_2h: _T1 = (0x72a, .rightJoining)
-private let __jt_pair_2i: _T1 = (0x72b, .dualJoining)
-private let __jt_pair_2j: _T1 = (0x72c, .rightJoining)
-private let __jt_pair_2k: _T1 = (0x72d, .dualJoining)
-private let __jt_pair_2l: _T1 = (0x72e, .dualJoining)
-private let __jt_pair_2m: _T1 = (0x72f, .rightJoining)
-private let __jt_pair_2n: _T1 = (0x74b, .nonJoining)
-private let __jt_pair_2o: _T1 = (0x74c, .nonJoining)
-private let __jt_pair_2p: _T1 = (0x74d, .rightJoining)
-private let __jt_pair_2q: _T1 = (0x759, .rightJoining)
-private let __jt_pair_2r: _T1 = (0x75a, .rightJoining)
-private let __jt_pair_2s: _T1 = (0x75b, .rightJoining)
-private let __jt_pair_2t: _T1 = (0x76b, .rightJoining)
-private let __jt_pair_2u: _T1 = (0x76c, .rightJoining)
-private let __jt_pair_2v: _T1 = (0x76d, .dualJoining)
-private let __jt_pair_2w: _T1 = (0x76e, .dualJoining)
-private let __jt_pair_2x: _T1 = (0x76f, .dualJoining)
-private let __jt_pair_2y: _T1 = (0x770, .dualJoining)
-private let __jt_pair_2z: _T1 = (0x771, .rightJoining)
-private let __jt_pair_30: _T1 = (0x772, .dualJoining)
-private let __jt_pair_31: _T1 = (0x773, .rightJoining)
-private let __jt_pair_32: _T1 = (0x774, .rightJoining)
-private let __jt_pair_33: _T1 = (0x775, .dualJoining)
-private let __jt_pair_34: _T1 = (0x776, .dualJoining)
-private let __jt_pair_35: _T1 = (0x777, .dualJoining)
-private let __jt_pair_36: _T1 = (0x778, .rightJoining)
-private let __jt_pair_37: _T1 = (0x779, .rightJoining)
-private let __jt_pair_38: _T1 = (0x7fa, .joinCausing)
-private let __jt_pair_39: _T1 = (0x7fb, .nonJoining)
-private let __jt_pair_3a: _T1 = (0x7fc, .nonJoining)
-private let __jt_pair_3b: _T1 = (0x7fd, .transparent)
-private let __jt_pair_3c: _T1 = (0x816, .transparent)
-private let __jt_pair_3d: _T1 = (0x817, .transparent)
-private let __jt_pair_3e: _T1 = (0x818, .transparent)
-private let __jt_pair_3f: _T1 = (0x819, .transparent)
-private let __jt_pair_3g: _T1 = (0x81a, .nonJoining)
-private let __jt_pair_3h: _T1 = (0x824, .nonJoining)
-private let __jt_pair_3i: _T1 = (0x825, .transparent)
-private let __jt_pair_3j: _T1 = (0x826, .transparent)
-private let __jt_pair_3k: _T1 = (0x827, .transparent)
-private let __jt_pair_3l: _T1 = (0x828, .nonJoining)
-private let __jt_pair_3m: _T1 = (0x840, .rightJoining)
-private let __jt_pair_3n: _T1 = (0x846, .rightJoining)
-private let __jt_pair_3o: _T1 = (0x847, .rightJoining)
-private let __jt_pair_3p: _T1 = (0x848, .dualJoining)
-private let __jt_pair_3q: _T1 = (0x849, .rightJoining)
-private let __jt_pair_3r: _T1 = (0x854, .rightJoining)
-private let __jt_pair_3s: _T1 = (0x855, .dualJoining)
-private let __jt_pair_3t: _T1 = (0x856, .rightJoining)
-private let __jt_pair_3u: _T1 = (0x857, .rightJoining)
-private let __jt_pair_3v: _T1 = (0x858, .rightJoining)
-private let __jt_pair_3w: _T1 = (0x859, .transparent)
-private let __jt_pair_3x: _T1 = (0x85a, .transparent)
-private let __jt_pair_3y: _T1 = (0x85b, .transparent)
-private let __jt_pair_3z: _T1 = (0x85c, .nonJoining)
-private let __jt_pair_40: _T1 = (0x85d, .nonJoining)
-private let __jt_pair_41: _T1 = (0x85e, .nonJoining)
-private let __jt_pair_42: _T1 = (0x85f, .nonJoining)
-private let __jt_pair_43: _T1 = (0x860, .dualJoining)
-private let __jt_pair_44: _T1 = (0x861, .nonJoining)
-private let __jt_pair_45: _T1 = (0x862, .dualJoining)
-private let __jt_pair_46: _T1 = (0x863, .dualJoining)
-private let __jt_pair_47: _T1 = (0x864, .dualJoining)
-private let __jt_pair_48: _T1 = (0x865, .dualJoining)
-private let __jt_pair_49: _T1 = (0x866, .nonJoining)
-private let __jt_pair_4a: _T1 = (0x867, .rightJoining)
-private let __jt_pair_4b: _T1 = (0x868, .dualJoining)
-private let __jt_pair_4c: _T1 = (0x869, .rightJoining)
-private let __jt_pair_4d: _T1 = (0x86a, .rightJoining)
-private let __jt_pair_4e: _T1 = (0x883, .joinCausing)
-private let __jt_pair_4f: _T1 = (0x884, .joinCausing)
-private let __jt_pair_4g: _T1 = (0x885, .joinCausing)
-private let __jt_pair_4h: _T1 = (0x886, .dualJoining)
-private let __jt_pair_4i: _T1 = (0x887, .nonJoining)
-private let __jt_pair_4j: _T1 = (0x888, .nonJoining)
-private let __jt_pair_4k: _T1 = (0x88e, .rightJoining)
-private let __jt_pair_4l: _T1 = (0x88f, .dualJoining)
-private let __jt_pair_4m: _T1 = (0x8aa, .rightJoining)
-private let __jt_pair_4n: _T1 = (0x8ab, .rightJoining)
-private let __jt_pair_4o: _T1 = (0x8ac, .rightJoining)
-private let __jt_pair_4p: _T1 = (0x8ad, .nonJoining)
-private let __jt_pair_4q: _T1 = (0x8ae, .rightJoining)
-private let __jt_pair_4r: _T1 = (0x8af, .dualJoining)
-private let __jt_pair_4s: _T1 = (0x8b0, .dualJoining)
-private let __jt_pair_4t: _T1 = (0x8b1, .rightJoining)
-private let __jt_pair_4u: _T1 = (0x8b2, .rightJoining)
-private let __jt_pair_4v: _T1 = (0x8b9, .rightJoining)
-private let __jt_pair_4w: _T1 = (0x8c9, .nonJoining)
-private let __jt_pair_4x: _T1 = (0x8e2, .nonJoining)
-private let __jt_pair_4y: _T1 = (0x93a, .transparent)
-private let __jt_pair_4z: _T1 = (0x93b, .nonJoining)
-private let __jt_pair_50: _T1 = (0x93c, .transparent)
-private let __jt_pair_51: _T1 = (0x93d, .nonJoining)
-private let __jt_pair_52: _T1 = (0x93e, .nonJoining)
-private let __jt_pair_53: _T1 = (0x93f, .nonJoining)
-private let __jt_pair_54: _T1 = (0x940, .nonJoining)
-private let __jt_pair_55: _T1 = (0x949, .nonJoining)
-private let __jt_pair_56: _T1 = (0x94a, .nonJoining)
-private let __jt_pair_57: _T1 = (0x94b, .nonJoining)
-private let __jt_pair_58: _T1 = (0x94c, .nonJoining)
-private let __jt_pair_59: _T1 = (0x94d, .transparent)
-private let __jt_pair_5a: _T1 = (0x94e, .nonJoining)
-private let __jt_pair_5b: _T1 = (0x94f, .nonJoining)
-private let __jt_pair_5c: _T1 = (0x950, .nonJoining)
-private let __jt_pair_5d: _T1 = (0x962, .transparent)
-private let __jt_pair_5e: _T1 = (0x963, .transparent)
-private let __jt_pair_5f: _T1 = (0x981, .transparent)
-private let __jt_pair_5g: _T1 = (0x9bc, .transparent)
-private let __jt_pair_5h: _T1 = (0x9bd, .nonJoining)
-private let __jt_pair_5i: _T1 = (0x9be, .nonJoining)
-private let __jt_pair_5j: _T1 = (0x9bf, .nonJoining)
-private let __jt_pair_5k: _T1 = (0x9c0, .nonJoining)
-private let __jt_pair_5l: _T1 = (0x9c1, .transparent)
-private let __jt_pair_5m: _T1 = (0x9c2, .transparent)
-private let __jt_pair_5n: _T1 = (0x9c3, .transparent)
-private let __jt_pair_5o: _T1 = (0x9c4, .transparent)
-private let __jt_pair_5p: _T1 = (0x9cd, .transparent)
-private let __jt_pair_5q: _T1 = (0x9e2, .transparent)
-private let __jt_pair_5r: _T1 = (0x9e3, .transparent)
-private let __jt_pair_5s: _T1 = (0x9fe, .transparent)
-private let __jt_pair_5t: _T1 = (0x9ff, .nonJoining)
-private let __jt_pair_5u: _T1 = (0xa00, .nonJoining)
-private let __jt_pair_5v: _T1 = (0xa01, .transparent)
-private let __jt_pair_5w: _T1 = (0xa02, .transparent)
-private let __jt_pair_5x: _T1 = (0xa3c, .transparent)
-private let __jt_pair_5y: _T1 = (0xa3d, .nonJoining)
-private let __jt_pair_5z: _T1 = (0xa3e, .nonJoining)
-private let __jt_pair_60: _T1 = (0xa3f, .nonJoining)
-private let __jt_pair_61: _T1 = (0xa40, .nonJoining)
-private let __jt_pair_62: _T1 = (0xa41, .transparent)
-private let __jt_pair_63: _T1 = (0xa42, .transparent)
-private let __jt_pair_64: _T1 = (0xa43, .nonJoining)
-private let __jt_pair_65: _T1 = (0xa44, .nonJoining)
-private let __jt_pair_66: _T1 = (0xa45, .nonJoining)
-private let __jt_pair_67: _T1 = (0xa46, .nonJoining)
-private let __jt_pair_68: _T1 = (0xa47, .transparent)
-private let __jt_pair_69: _T1 = (0xa48, .transparent)
-private let __jt_pair_6a: _T1 = (0xa49, .nonJoining)
-private let __jt_pair_6b: _T1 = (0xa4a, .nonJoining)
-private let __jt_pair_6c: _T1 = (0xa4b, .transparent)
-private let __jt_pair_6d: _T1 = (0xa4c, .transparent)
-private let __jt_pair_6e: _T1 = (0xa4d, .transparent)
-private let __jt_pair_6f: _T1 = (0xa4e, .nonJoining)
-private let __jt_pair_6g: _T1 = (0xa4f, .nonJoining)
-private let __jt_pair_6h: _T1 = (0xa50, .nonJoining)
-private let __jt_pair_6i: _T1 = (0xa51, .transparent)
-private let __jt_pair_6j: _T1 = (0xa70, .transparent)
-private let __jt_pair_6k: _T1 = (0xa71, .transparent)
-private let __jt_pair_6l: _T1 = (0xa72, .nonJoining)
-private let __jt_pair_6m: _T1 = (0xa73, .nonJoining)
-private let __jt_pair_6n: _T1 = (0xa74, .nonJoining)
-private let __jt_pair_6o: _T1 = (0xa75, .transparent)
-private let __jt_pair_6p: _T1 = (0xa81, .transparent)
-private let __jt_pair_6q: _T1 = (0xa82, .transparent)
-private let __jt_pair_6r: _T1 = (0xabc, .transparent)
-private let __jt_pair_6s: _T1 = (0xabd, .nonJoining)
-private let __jt_pair_6t: _T1 = (0xabe, .nonJoining)
-private let __jt_pair_6u: _T1 = (0xabf, .nonJoining)
-private let __jt_pair_6v: _T1 = (0xac0, .nonJoining)
-private let __jt_pair_6w: _T1 = (0xac6, .nonJoining)
-private let __jt_pair_6x: _T1 = (0xac7, .transparent)
-private let __jt_pair_6y: _T1 = (0xac8, .transparent)
-private let __jt_pair_6z: _T1 = (0xac9, .nonJoining)
-private let __jt_pair_70: _T1 = (0xaca, .nonJoining)
-private let __jt_pair_71: _T1 = (0xacb, .nonJoining)
-private let __jt_pair_72: _T1 = (0xacc, .nonJoining)
-private let __jt_pair_73: _T1 = (0xacd, .transparent)
-private let __jt_pair_74: _T1 = (0xae2, .transparent)
-private let __jt_pair_75: _T1 = (0xae3, .transparent)
-private let __jt_pair_76: _T1 = (0xb00, .nonJoining)
-private let __jt_pair_77: _T1 = (0xb01, .transparent)
-private let __jt_pair_78: _T1 = (0xb3c, .transparent)
-private let __jt_pair_79: _T1 = (0xb3d, .nonJoining)
-private let __jt_pair_7a: _T1 = (0xb3e, .nonJoining)
-private let __jt_pair_7b: _T1 = (0xb3f, .transparent)
-private let __jt_pair_7c: _T1 = (0xb40, .nonJoining)
-private let __jt_pair_7d: _T1 = (0xb41, .transparent)
-private let __jt_pair_7e: _T1 = (0xb42, .transparent)
-private let __jt_pair_7f: _T1 = (0xb43, .transparent)
-private let __jt_pair_7g: _T1 = (0xb44, .transparent)
-private let __jt_pair_7h: _T1 = (0xb4d, .transparent)
-private let __jt_pair_7i: _T1 = (0xb55, .transparent)
-private let __jt_pair_7j: _T1 = (0xb56, .transparent)
-private let __jt_pair_7k: _T1 = (0xb62, .transparent)
-private let __jt_pair_7l: _T1 = (0xb63, .transparent)
-private let __jt_pair_7m: _T1 = (0xb82, .transparent)
-private let __jt_pair_7n: _T1 = (0xbc0, .transparent)
-private let __jt_pair_7o: _T1 = (0xbcd, .transparent)
-private let __jt_pair_7p: _T1 = (0xc00, .transparent)
-private let __jt_pair_7q: _T1 = (0xc01, .nonJoining)
-private let __jt_pair_7r: _T1 = (0xc02, .nonJoining)
-private let __jt_pair_7s: _T1 = (0xc03, .nonJoining)
-private let __jt_pair_7t: _T1 = (0xc04, .transparent)
-private let __jt_pair_7u: _T1 = (0xc3c, .transparent)
-private let __jt_pair_7v: _T1 = (0xc3d, .nonJoining)
-private let __jt_pair_7w: _T1 = (0xc3e, .transparent)
-private let __jt_pair_7x: _T1 = (0xc3f, .transparent)
-private let __jt_pair_7y: _T1 = (0xc40, .transparent)
-private let __jt_pair_7z: _T1 = (0xc46, .transparent)
-private let __jt_pair_80: _T1 = (0xc47, .transparent)
-private let __jt_pair_81: _T1 = (0xc48, .transparent)
-private let __jt_pair_82: _T1 = (0xc49, .nonJoining)
-private let __jt_pair_83: _T1 = (0xc4a, .transparent)
-private let __jt_pair_84: _T1 = (0xc4b, .transparent)
-private let __jt_pair_85: _T1 = (0xc4c, .transparent)
-private let __jt_pair_86: _T1 = (0xc4d, .transparent)
-private let __jt_pair_87: _T1 = (0xc55, .transparent)
-private let __jt_pair_88: _T1 = (0xc56, .transparent)
-private let __jt_pair_89: _T1 = (0xc62, .transparent)
-private let __jt_pair_8a: _T1 = (0xc63, .transparent)
-private let __jt_pair_8b: _T1 = (0xc81, .transparent)
-private let __jt_pair_8c: _T1 = (0xcbc, .transparent)
-private let __jt_pair_8d: _T1 = (0xcbd, .nonJoining)
-private let __jt_pair_8e: _T1 = (0xcbe, .nonJoining)
-private let __jt_pair_8f: _T1 = (0xcbf, .transparent)
-private let __jt_pair_8g: _T1 = (0xcc6, .transparent)
-private let __jt_pair_8h: _T1 = (0xccc, .transparent)
-private let __jt_pair_8i: _T1 = (0xccd, .transparent)
-private let __jt_pair_8j: _T1 = (0xce2, .transparent)
-private let __jt_pair_8k: _T1 = (0xce3, .transparent)
-private let __jt_pair_8l: _T1 = (0xd00, .transparent)
-private let __jt_pair_8m: _T1 = (0xd01, .transparent)
-private let __jt_pair_8n: _T1 = (0xd3b, .transparent)
-private let __jt_pair_8o: _T1 = (0xd3c, .transparent)
-private let __jt_pair_8p: _T1 = (0xd3d, .nonJoining)
-private let __jt_pair_8q: _T1 = (0xd3e, .nonJoining)
-private let __jt_pair_8r: _T1 = (0xd3f, .nonJoining)
-private let __jt_pair_8s: _T1 = (0xd40, .nonJoining)
-private let __jt_pair_8t: _T1 = (0xd41, .transparent)
-private let __jt_pair_8u: _T1 = (0xd42, .transparent)
-private let __jt_pair_8v: _T1 = (0xd43, .transparent)
-private let __jt_pair_8w: _T1 = (0xd44, .transparent)
-private let __jt_pair_8x: _T1 = (0xd4d, .transparent)
-private let __jt_pair_8y: _T1 = (0xd62, .transparent)
-private let __jt_pair_8z: _T1 = (0xd63, .transparent)
-private let __jt_pair_90: _T1 = (0xd81, .transparent)
-private let __jt_pair_91: _T1 = (0xdca, .transparent)
-private let __jt_pair_92: _T1 = (0xdd2, .transparent)
-private let __jt_pair_93: _T1 = (0xdd3, .transparent)
-private let __jt_pair_94: _T1 = (0xdd4, .transparent)
-private let __jt_pair_95: _T1 = (0xdd5, .nonJoining)
-private let __jt_pair_96: _T1 = (0xdd6, .transparent)
-private let __jt_pair_97: _T1 = (0xe31, .transparent)
-private let __jt_pair_98: _T1 = (0xe32, .nonJoining)
-private let __jt_pair_99: _T1 = (0xe33, .nonJoining)
-private let __jt_pair_9a: _T1 = (0xeb1, .transparent)
-private let __jt_pair_9b: _T1 = (0xeb2, .nonJoining)
-private let __jt_pair_9c: _T1 = (0xeb3, .nonJoining)
-private let __jt_pair_9d: _T1 = (0xf18, .transparent)
-private let __jt_pair_9e: _T1 = (0xf19, .transparent)
-private let __jt_pair_9f: _T1 = (0xf35, .transparent)
-private let __jt_pair_9g: _T1 = (0xf36, .nonJoining)
-private let __jt_pair_9h: _T1 = (0xf37, .transparent)
-private let __jt_pair_9i: _T1 = (0xf38, .nonJoining)
-private let __jt_pair_9j: _T1 = (0xf39, .transparent)
-private let __jt_pair_9k: _T1 = (0xf7f, .nonJoining)
-private let __jt_pair_9l: _T1 = (0xf85, .nonJoining)
-private let __jt_pair_9m: _T1 = (0xf86, .transparent)
-private let __jt_pair_9n: _T1 = (0xf87, .transparent)
-private let __jt_pair_9o: _T1 = (0xf98, .nonJoining)
-private let __jt_pair_9p: _T1 = (0xfc6, .transparent)
-private let __jt_pair_9q: _T1 = (0x102d, .transparent)
-private let __jt_pair_9r: _T1 = (0x102e, .transparent)
-private let __jt_pair_9s: _T1 = (0x102f, .transparent)
-private let __jt_pair_9t: _T1 = (0x1030, .transparent)
-private let __jt_pair_9u: _T1 = (0x1031, .nonJoining)
-private let __jt_pair_9v: _T1 = (0x1038, .nonJoining)
-private let __jt_pair_9w: _T1 = (0x1039, .transparent)
-private let __jt_pair_9x: _T1 = (0x103a, .transparent)
-private let __jt_pair_9y: _T1 = (0x103b, .nonJoining)
-private let __jt_pair_9z: _T1 = (0x103c, .nonJoining)
-private let __jt_pair_a0: _T1 = (0x103d, .transparent)
-private let __jt_pair_a1: _T1 = (0x103e, .transparent)
-private let __jt_pair_a2: _T1 = (0x1058, .transparent)
-private let __jt_pair_a3: _T1 = (0x1059, .transparent)
-private let __jt_pair_a4: _T1 = (0x105a, .nonJoining)
-private let __jt_pair_a5: _T1 = (0x105b, .nonJoining)
-private let __jt_pair_a6: _T1 = (0x105c, .nonJoining)
-private let __jt_pair_a7: _T1 = (0x105d, .nonJoining)
-private let __jt_pair_a8: _T1 = (0x105e, .transparent)
-private let __jt_pair_a9: _T1 = (0x105f, .transparent)
-private let __jt_pair_aa: _T1 = (0x1060, .transparent)
-private let __jt_pair_ab: _T1 = (0x1071, .transparent)
-private let __jt_pair_ac: _T1 = (0x1072, .transparent)
-private let __jt_pair_ad: _T1 = (0x1073, .transparent)
-private let __jt_pair_ae: _T1 = (0x1074, .transparent)
-private let __jt_pair_af: _T1 = (0x1082, .transparent)
-private let __jt_pair_ag: _T1 = (0x1083, .nonJoining)
-private let __jt_pair_ah: _T1 = (0x1084, .nonJoining)
-private let __jt_pair_ai: _T1 = (0x1085, .transparent)
-private let __jt_pair_aj: _T1 = (0x1086, .transparent)
-private let __jt_pair_ak: _T1 = (0x108d, .transparent)
-private let __jt_pair_al: _T1 = (0x109d, .transparent)
-private let __jt_pair_am: _T1 = (0x135d, .transparent)
-private let __jt_pair_an: _T1 = (0x135e, .transparent)
-private let __jt_pair_ao: _T1 = (0x135f, .transparent)
-private let __jt_pair_ap: _T1 = (0x1712, .transparent)
-private let __jt_pair_aq: _T1 = (0x1713, .transparent)
-private let __jt_pair_ar: _T1 = (0x1714, .transparent)
-private let __jt_pair_as: _T1 = (0x1732, .transparent)
-private let __jt_pair_at: _T1 = (0x1733, .transparent)
-private let __jt_pair_au: _T1 = (0x1752, .transparent)
-private let __jt_pair_av: _T1 = (0x1753, .transparent)
-private let __jt_pair_aw: _T1 = (0x1772, .transparent)
-private let __jt_pair_ax: _T1 = (0x1773, .transparent)
-private let __jt_pair_ay: _T1 = (0x17b4, .transparent)
-private let __jt_pair_az: _T1 = (0x17b5, .transparent)
-private let __jt_pair_b0: _T1 = (0x17b6, .nonJoining)
-private let __jt_pair_b1: _T1 = (0x17c6, .transparent)
-private let __jt_pair_b2: _T1 = (0x17c7, .nonJoining)
-private let __jt_pair_b3: _T1 = (0x17c8, .nonJoining)
-private let __jt_pair_b4: _T1 = (0x17dd, .transparent)
-private let __jt_pair_b5: _T1 = (0x1807, .dualJoining)
-private let __jt_pair_b6: _T1 = (0x1808, .nonJoining)
-private let __jt_pair_b7: _T1 = (0x1809, .nonJoining)
-private let __jt_pair_b8: _T1 = (0x180a, .joinCausing)
-private let __jt_pair_b9: _T1 = (0x180b, .transparent)
-private let __jt_pair_ba: _T1 = (0x180c, .transparent)
-private let __jt_pair_bb: _T1 = (0x180d, .transparent)
-private let __jt_pair_bc: _T1 = (0x180e, .nonJoining)
-private let __jt_pair_bd: _T1 = (0x180f, .transparent)
-private let __jt_pair_be: _T1 = (0x1885, .transparent)
-private let __jt_pair_bf: _T1 = (0x1886, .transparent)
-private let __jt_pair_bg: _T1 = (0x18a9, .transparent)
-private let __jt_pair_bh: _T1 = (0x18aa, .dualJoining)
-private let __jt_pair_bi: _T1 = (0x1920, .transparent)
-private let __jt_pair_bj: _T1 = (0x1921, .transparent)
-private let __jt_pair_bk: _T1 = (0x1922, .transparent)
-private let __jt_pair_bl: _T1 = (0x1923, .nonJoining)
-private let __jt_pair_bm: _T1 = (0x1924, .nonJoining)
-private let __jt_pair_bn: _T1 = (0x1925, .nonJoining)
-private let __jt_pair_bo: _T1 = (0x1926, .nonJoining)
-private let __jt_pair_bp: _T1 = (0x1927, .transparent)
-private let __jt_pair_bq: _T1 = (0x1928, .transparent)
-private let __jt_pair_br: _T1 = (0x1932, .transparent)
-private let __jt_pair_bs: _T1 = (0x1939, .transparent)
-private let __jt_pair_bt: _T1 = (0x193a, .transparent)
-private let __jt_pair_bu: _T1 = (0x193b, .transparent)
-private let __jt_pair_bv: _T1 = (0x1a17, .transparent)
-private let __jt_pair_bw: _T1 = (0x1a18, .transparent)
-private let __jt_pair_bx: _T1 = (0x1a19, .nonJoining)
-private let __jt_pair_by: _T1 = (0x1a1a, .nonJoining)
-private let __jt_pair_bz: _T1 = (0x1a1b, .transparent)
-private let __jt_pair_c0: _T1 = (0x1a56, .transparent)
-private let __jt_pair_c1: _T1 = (0x1a57, .nonJoining)
-private let __jt_pair_c2: _T1 = (0x1a5f, .nonJoining)
-private let __jt_pair_c3: _T1 = (0x1a60, .transparent)
-private let __jt_pair_c4: _T1 = (0x1a61, .nonJoining)
-private let __jt_pair_c5: _T1 = (0x1a62, .transparent)
-private let __jt_pair_c6: _T1 = (0x1a63, .nonJoining)
-private let __jt_pair_c7: _T1 = (0x1a64, .nonJoining)
-private let __jt_pair_c8: _T1 = (0x1a7d, .nonJoining)
-private let __jt_pair_c9: _T1 = (0x1a7e, .nonJoining)
-private let __jt_pair_ca: _T1 = (0x1a7f, .transparent)
-private let __jt_pair_cb: _T1 = (0x1ade, .nonJoining)
-private let __jt_pair_cc: _T1 = (0x1adf, .nonJoining)
-private let __jt_pair_cd: _T1 = (0x1b00, .transparent)
-private let __jt_pair_ce: _T1 = (0x1b01, .transparent)
-private let __jt_pair_cf: _T1 = (0x1b02, .transparent)
-private let __jt_pair_cg: _T1 = (0x1b03, .transparent)
-private let __jt_pair_ch: _T1 = (0x1b34, .transparent)
-private let __jt_pair_ci: _T1 = (0x1b35, .nonJoining)
-private let __jt_pair_cj: _T1 = (0x1b3b, .nonJoining)
-private let __jt_pair_ck: _T1 = (0x1b3c, .transparent)
-private let __jt_pair_cl: _T1 = (0x1b42, .transparent)
-private let __jt_pair_cm: _T1 = (0x1b80, .transparent)
-private let __jt_pair_cn: _T1 = (0x1b81, .transparent)
-private let __jt_pair_co: _T1 = (0x1ba2, .transparent)
-private let __jt_pair_cp: _T1 = (0x1ba3, .transparent)
-private let __jt_pair_cq: _T1 = (0x1ba4, .transparent)
-private let __jt_pair_cr: _T1 = (0x1ba5, .transparent)
-private let __jt_pair_cs: _T1 = (0x1ba6, .nonJoining)
-private let __jt_pair_ct: _T1 = (0x1ba7, .nonJoining)
-private let __jt_pair_cu: _T1 = (0x1ba8, .transparent)
-private let __jt_pair_cv: _T1 = (0x1ba9, .transparent)
-private let __jt_pair_cw: _T1 = (0x1baa, .nonJoining)
-private let __jt_pair_cx: _T1 = (0x1bab, .transparent)
-private let __jt_pair_cy: _T1 = (0x1bac, .transparent)
-private let __jt_pair_cz: _T1 = (0x1bad, .transparent)
-private let __jt_pair_d0: _T1 = (0x1be6, .transparent)
-private let __jt_pair_d1: _T1 = (0x1be7, .nonJoining)
-private let __jt_pair_d2: _T1 = (0x1be8, .transparent)
-private let __jt_pair_d3: _T1 = (0x1be9, .transparent)
-private let __jt_pair_d4: _T1 = (0x1bea, .nonJoining)
-private let __jt_pair_d5: _T1 = (0x1beb, .nonJoining)
-private let __jt_pair_d6: _T1 = (0x1bec, .nonJoining)
-private let __jt_pair_d7: _T1 = (0x1bed, .transparent)
-private let __jt_pair_d8: _T1 = (0x1bee, .nonJoining)
-private let __jt_pair_d9: _T1 = (0x1bef, .transparent)
-private let __jt_pair_da: _T1 = (0x1bf0, .transparent)
-private let __jt_pair_db: _T1 = (0x1bf1, .transparent)
-private let __jt_pair_dc: _T1 = (0x1c34, .nonJoining)
-private let __jt_pair_dd: _T1 = (0x1c35, .nonJoining)
-private let __jt_pair_de: _T1 = (0x1c36, .transparent)
-private let __jt_pair_df: _T1 = (0x1c37, .transparent)
-private let __jt_pair_dg: _T1 = (0x1cd0, .transparent)
-private let __jt_pair_dh: _T1 = (0x1cd1, .transparent)
-private let __jt_pair_di: _T1 = (0x1cd2, .transparent)
-private let __jt_pair_dj: _T1 = (0x1cd3, .nonJoining)
-private let __jt_pair_dk: _T1 = (0x1ce1, .nonJoining)
-private let __jt_pair_dl: _T1 = (0x1ce9, .nonJoining)
-private let __jt_pair_dm: _T1 = (0x1cea, .nonJoining)
-private let __jt_pair_dn: _T1 = (0x1ceb, .nonJoining)
-private let __jt_pair_do: _T1 = (0x1cec, .nonJoining)
-private let __jt_pair_dp: _T1 = (0x1ced, .transparent)
-private let __jt_pair_dq: _T1 = (0x1cf4, .transparent)
-private let __jt_pair_dr: _T1 = (0x1cf5, .nonJoining)
-private let __jt_pair_ds: _T1 = (0x1cf6, .nonJoining)
-private let __jt_pair_dt: _T1 = (0x1cf7, .nonJoining)
-private let __jt_pair_du: _T1 = (0x1cf8, .transparent)
-private let __jt_pair_dv: _T1 = (0x1cf9, .transparent)
-private let __jt_pair_dw: _T1 = (0x200b, .transparent)
-private let __jt_pair_dx: _T1 = (0x200c, .nonJoining)
-private let __jt_pair_dy: _T1 = (0x200d, .joinCausing)
-private let __jt_pair_dz: _T1 = (0x200e, .transparent)
-private let __jt_pair_e0: _T1 = (0x200f, .transparent)
-private let __jt_pair_e1: _T1 = (0x2cef, .transparent)
-private let __jt_pair_e2: _T1 = (0x2cf0, .transparent)
-private let __jt_pair_e3: _T1 = (0x2cf1, .transparent)
-private let __jt_pair_e4: _T1 = (0x2d7f, .transparent)
-private let __jt_pair_e5: _T1 = (0x302a, .transparent)
-private let __jt_pair_e6: _T1 = (0x302b, .transparent)
-private let __jt_pair_e7: _T1 = (0x302c, .transparent)
-private let __jt_pair_e8: _T1 = (0x302d, .transparent)
-private let __jt_pair_e9: _T1 = (0x3099, .transparent)
-private let __jt_pair_ea: _T1 = (0x309a, .transparent)
-private let __jt_pair_eb: _T1 = (0xa66f, .transparent)
-private let __jt_pair_ec: _T1 = (0xa670, .transparent)
-private let __jt_pair_ed: _T1 = (0xa671, .transparent)
-private let __jt_pair_ee: _T1 = (0xa672, .transparent)
-private let __jt_pair_ef: _T1 = (0xa673, .nonJoining)
-private let __jt_pair_eg: _T1 = (0xa69e, .transparent)
-private let __jt_pair_eh: _T1 = (0xa69f, .transparent)
-private let __jt_pair_ei: _T1 = (0xa6f0, .transparent)
-private let __jt_pair_ej: _T1 = (0xa6f1, .transparent)
-private let __jt_pair_ek: _T1 = (0xa802, .transparent)
-private let __jt_pair_el: _T1 = (0xa803, .nonJoining)
-private let __jt_pair_em: _T1 = (0xa804, .nonJoining)
-private let __jt_pair_en: _T1 = (0xa805, .nonJoining)
-private let __jt_pair_eo: _T1 = (0xa806, .transparent)
-private let __jt_pair_ep: _T1 = (0xa807, .nonJoining)
-private let __jt_pair_eq: _T1 = (0xa808, .nonJoining)
-private let __jt_pair_er: _T1 = (0xa809, .nonJoining)
-private let __jt_pair_es: _T1 = (0xa80a, .nonJoining)
-private let __jt_pair_et: _T1 = (0xa80b, .transparent)
-private let __jt_pair_eu: _T1 = (0xa825, .transparent)
-private let __jt_pair_ev: _T1 = (0xa826, .transparent)
-private let __jt_pair_ew: _T1 = (0xa82c, .transparent)
-private let __jt_pair_ex: _T1 = (0xa872, .leftJoining)
-private let __jt_pair_ey: _T1 = (0xa8c4, .transparent)
-private let __jt_pair_ez: _T1 = (0xa8c5, .transparent)
-private let __jt_pair_f0: _T1 = (0xa8ff, .transparent)
-private let __jt_pair_f1: _T1 = (0xa980, .transparent)
-private let __jt_pair_f2: _T1 = (0xa981, .transparent)
-private let __jt_pair_f3: _T1 = (0xa982, .transparent)
-private let __jt_pair_f4: _T1 = (0xa9b3, .transparent)
-private let __jt_pair_f5: _T1 = (0xa9b4, .nonJoining)
-private let __jt_pair_f6: _T1 = (0xa9b5, .nonJoining)
-private let __jt_pair_f7: _T1 = (0xa9b6, .transparent)
-private let __jt_pair_f8: _T1 = (0xa9b7, .transparent)
-private let __jt_pair_f9: _T1 = (0xa9b8, .transparent)
-private let __jt_pair_fa: _T1 = (0xa9b9, .transparent)
-private let __jt_pair_fb: _T1 = (0xa9ba, .nonJoining)
-private let __jt_pair_fc: _T1 = (0xa9bb, .nonJoining)
-private let __jt_pair_fd: _T1 = (0xa9bc, .transparent)
-private let __jt_pair_fe: _T1 = (0xa9bd, .transparent)
-private let __jt_pair_ff: _T1 = (0xa9e5, .transparent)
-private let __jt_pair_fg: _T1 = (0xaa2f, .nonJoining)
-private let __jt_pair_fh: _T1 = (0xaa30, .nonJoining)
-private let __jt_pair_fi: _T1 = (0xaa31, .transparent)
-private let __jt_pair_fj: _T1 = (0xaa32, .transparent)
-private let __jt_pair_fk: _T1 = (0xaa33, .nonJoining)
-private let __jt_pair_fl: _T1 = (0xaa34, .nonJoining)
-private let __jt_pair_fm: _T1 = (0xaa35, .transparent)
-private let __jt_pair_fn: _T1 = (0xaa36, .transparent)
-private let __jt_pair_fo: _T1 = (0xaa43, .transparent)
-private let __jt_pair_fp: _T1 = (0xaa4c, .transparent)
-private let __jt_pair_fq: _T1 = (0xaa7c, .transparent)
-private let __jt_pair_fr: _T1 = (0xaab0, .transparent)
-private let __jt_pair_fs: _T1 = (0xaab1, .nonJoining)
-private let __jt_pair_ft: _T1 = (0xaab2, .transparent)
-private let __jt_pair_fu: _T1 = (0xaab3, .transparent)
-private let __jt_pair_fv: _T1 = (0xaab4, .transparent)
-private let __jt_pair_fw: _T1 = (0xaab5, .nonJoining)
-private let __jt_pair_fx: _T1 = (0xaab6, .nonJoining)
-private let __jt_pair_fy: _T1 = (0xaab7, .transparent)
-private let __jt_pair_fz: _T1 = (0xaab8, .transparent)
-private let __jt_pair_g0: _T1 = (0xaabe, .transparent)
-private let __jt_pair_g1: _T1 = (0xaabf, .transparent)
-private let __jt_pair_g2: _T1 = (0xaac0, .nonJoining)
-private let __jt_pair_g3: _T1 = (0xaac1, .transparent)
-private let __jt_pair_g4: _T1 = (0xaaec, .transparent)
-private let __jt_pair_g5: _T1 = (0xaaed, .transparent)
-private let __jt_pair_g6: _T1 = (0xaaf6, .transparent)
-private let __jt_pair_g7: _T1 = (0xabe5, .transparent)
-private let __jt_pair_g8: _T1 = (0xabe6, .nonJoining)
-private let __jt_pair_g9: _T1 = (0xabe7, .nonJoining)
-private let __jt_pair_ga: _T1 = (0xabe8, .transparent)
-private let __jt_pair_gb: _T1 = (0xabe9, .nonJoining)
-private let __jt_pair_gc: _T1 = (0xabea, .nonJoining)
-private let __jt_pair_gd: _T1 = (0xabeb, .nonJoining)
-private let __jt_pair_ge: _T1 = (0xabec, .nonJoining)
-private let __jt_pair_gf: _T1 = (0xabed, .transparent)
-private let __jt_pair_gg: _T1 = (0xfb1e, .transparent)
-private let __jt_pair_gh: _T1 = (0xfeff, .transparent)
-private let __jt_pair_gi: _T1 = (0xfff9, .transparent)
-private let __jt_pair_gj: _T1 = (0xfffa, .transparent)
-private let __jt_pair_gk: _T1 = (0xfffb, .transparent)
-private let __jt_pair_gl: _T1 = (0x101fd, .transparent)
-private let __jt_pair_gm: _T1 = (0x102e0, .transparent)
-private let __jt_pair_gn: _T1 = (0x10a01, .transparent)
-private let __jt_pair_go: _T1 = (0x10a02, .transparent)
-private let __jt_pair_gp: _T1 = (0x10a03, .transparent)
-private let __jt_pair_gq: _T1 = (0x10a04, .nonJoining)
-private let __jt_pair_gr: _T1 = (0x10a05, .transparent)
-private let __jt_pair_gs: _T1 = (0x10a06, .transparent)
-private let __jt_pair_gt: _T1 = (0x10a0c, .transparent)
-private let __jt_pair_gu: _T1 = (0x10a0d, .transparent)
-private let __jt_pair_gv: _T1 = (0x10a0e, .transparent)
-private let __jt_pair_gw: _T1 = (0x10a0f, .transparent)
-private let __jt_pair_gx: _T1 = (0x10a38, .transparent)
-private let __jt_pair_gy: _T1 = (0x10a39, .transparent)
-private let __jt_pair_gz: _T1 = (0x10a3a, .transparent)
-private let __jt_pair_h0: _T1 = (0x10a3b, .nonJoining)
-private let __jt_pair_h1: _T1 = (0x10a3c, .nonJoining)
-private let __jt_pair_h2: _T1 = (0x10a3d, .nonJoining)
-private let __jt_pair_h3: _T1 = (0x10a3e, .nonJoining)
-private let __jt_pair_h4: _T1 = (0x10a3f, .transparent)
-private let __jt_pair_h5: _T1 = (0x10ac5, .rightJoining)
-private let __jt_pair_h6: _T1 = (0x10ac6, .nonJoining)
-private let __jt_pair_h7: _T1 = (0x10ac7, .rightJoining)
-private let __jt_pair_h8: _T1 = (0x10ac8, .nonJoining)
-private let __jt_pair_h9: _T1 = (0x10ac9, .rightJoining)
-private let __jt_pair_ha: _T1 = (0x10aca, .rightJoining)
-private let __jt_pair_hb: _T1 = (0x10acb, .nonJoining)
-private let __jt_pair_hc: _T1 = (0x10acc, .nonJoining)
-private let __jt_pair_hd: _T1 = (0x10acd, .leftJoining)
-private let __jt_pair_he: _T1 = (0x10ad3, .dualJoining)
-private let __jt_pair_hf: _T1 = (0x10ad4, .dualJoining)
-private let __jt_pair_hg: _T1 = (0x10ad5, .dualJoining)
-private let __jt_pair_hh: _T1 = (0x10ad6, .dualJoining)
-private let __jt_pair_hi: _T1 = (0x10ad7, .leftJoining)
-private let __jt_pair_hj: _T1 = (0x10add, .rightJoining)
-private let __jt_pair_hk: _T1 = (0x10ade, .dualJoining)
-private let __jt_pair_hl: _T1 = (0x10adf, .dualJoining)
-private let __jt_pair_hm: _T1 = (0x10ae0, .dualJoining)
-private let __jt_pair_hn: _T1 = (0x10ae1, .rightJoining)
-private let __jt_pair_ho: _T1 = (0x10ae2, .nonJoining)
-private let __jt_pair_hp: _T1 = (0x10ae3, .nonJoining)
-private let __jt_pair_hq: _T1 = (0x10ae4, .rightJoining)
-private let __jt_pair_hr: _T1 = (0x10ae5, .transparent)
-private let __jt_pair_hs: _T1 = (0x10ae6, .transparent)
-private let __jt_pair_ht: _T1 = (0x10ae7, .nonJoining)
-private let __jt_pair_hu: _T1 = (0x10ae8, .nonJoining)
-private let __jt_pair_hv: _T1 = (0x10ae9, .nonJoining)
-private let __jt_pair_hw: _T1 = (0x10aea, .nonJoining)
-private let __jt_pair_hx: _T1 = (0x10aeb, .dualJoining)
-private let __jt_pair_hy: _T1 = (0x10aec, .dualJoining)
-private let __jt_pair_hz: _T1 = (0x10aed, .dualJoining)
-private let __jt_pair_i0: _T1 = (0x10aee, .dualJoining)
-private let __jt_pair_i1: _T1 = (0x10aef, .rightJoining)
-private let __jt_pair_i2: _T1 = (0x10b80, .dualJoining)
-private let __jt_pair_i3: _T1 = (0x10b81, .rightJoining)
-private let __jt_pair_i4: _T1 = (0x10b82, .dualJoining)
-private let __jt_pair_i5: _T1 = (0x10b83, .rightJoining)
-private let __jt_pair_i6: _T1 = (0x10b84, .rightJoining)
-private let __jt_pair_i7: _T1 = (0x10b85, .rightJoining)
-private let __jt_pair_i8: _T1 = (0x10b86, .dualJoining)
-private let __jt_pair_i9: _T1 = (0x10b87, .dualJoining)
-private let __jt_pair_ia: _T1 = (0x10b88, .dualJoining)
-private let __jt_pair_ib: _T1 = (0x10b89, .rightJoining)
-private let __jt_pair_ic: _T1 = (0x10b8a, .dualJoining)
-private let __jt_pair_id: _T1 = (0x10b8b, .dualJoining)
-private let __jt_pair_ie: _T1 = (0x10b8c, .rightJoining)
-private let __jt_pair_if: _T1 = (0x10b8d, .dualJoining)
-private let __jt_pair_ig: _T1 = (0x10b8e, .rightJoining)
-private let __jt_pair_ih: _T1 = (0x10b8f, .rightJoining)
-private let __jt_pair_ii: _T1 = (0x10b90, .dualJoining)
-private let __jt_pair_ij: _T1 = (0x10b91, .rightJoining)
-private let __jt_pair_ik: _T1 = (0x10ba9, .rightJoining)
-private let __jt_pair_il: _T1 = (0x10baa, .rightJoining)
-private let __jt_pair_im: _T1 = (0x10bab, .rightJoining)
-private let __jt_pair_in: _T1 = (0x10bac, .rightJoining)
-private let __jt_pair_io: _T1 = (0x10bad, .dualJoining)
-private let __jt_pair_ip: _T1 = (0x10bae, .dualJoining)
-private let __jt_pair_iq: _T1 = (0x10d00, .leftJoining)
-private let __jt_pair_ir: _T1 = (0x10d22, .rightJoining)
-private let __jt_pair_is: _T1 = (0x10d23, .dualJoining)
-private let __jt_pair_it: _T1 = (0x10d24, .transparent)
-private let __jt_pair_iu: _T1 = (0x10d25, .transparent)
-private let __jt_pair_iv: _T1 = (0x10d26, .transparent)
-private let __jt_pair_iw: _T1 = (0x10d27, .transparent)
-private let __jt_pair_ix: _T1 = (0x10eab, .transparent)
-private let __jt_pair_iy: _T1 = (0x10eac, .transparent)
-private let __jt_pair_iz: _T1 = (0x10ec2, .rightJoining)
-private let __jt_pair_j0: _T1 = (0x10ec3, .dualJoining)
-private let __jt_pair_j1: _T1 = (0x10ec4, .dualJoining)
-private let __jt_pair_j2: _T1 = (0x10ec5, .nonJoining)
-private let __jt_pair_j3: _T1 = (0x10ec6, .dualJoining)
-private let __jt_pair_j4: _T1 = (0x10ec7, .dualJoining)
-private let __jt_pair_j5: _T1 = (0x10f30, .dualJoining)
-private let __jt_pair_j6: _T1 = (0x10f31, .dualJoining)
-private let __jt_pair_j7: _T1 = (0x10f32, .dualJoining)
-private let __jt_pair_j8: _T1 = (0x10f33, .rightJoining)
-private let __jt_pair_j9: _T1 = (0x10f45, .nonJoining)
-private let __jt_pair_ja: _T1 = (0x10f51, .dualJoining)
-private let __jt_pair_jb: _T1 = (0x10f52, .dualJoining)
-private let __jt_pair_jc: _T1 = (0x10f53, .dualJoining)
-private let __jt_pair_jd: _T1 = (0x10f54, .rightJoining)
-private let __jt_pair_je: _T1 = (0x10f70, .dualJoining)
-private let __jt_pair_jf: _T1 = (0x10f71, .dualJoining)
-private let __jt_pair_jg: _T1 = (0x10f72, .dualJoining)
-private let __jt_pair_jh: _T1 = (0x10f73, .dualJoining)
-private let __jt_pair_ji: _T1 = (0x10f74, .rightJoining)
-private let __jt_pair_jj: _T1 = (0x10f75, .rightJoining)
-private let __jt_pair_jk: _T1 = (0x10f82, .transparent)
-private let __jt_pair_jl: _T1 = (0x10f83, .transparent)
-private let __jt_pair_jm: _T1 = (0x10f84, .transparent)
-private let __jt_pair_jn: _T1 = (0x10f85, .transparent)
-private let __jt_pair_jo: _T1 = (0x10fb0, .dualJoining)
-private let __jt_pair_jp: _T1 = (0x10fb1, .nonJoining)
-private let __jt_pair_jq: _T1 = (0x10fb2, .dualJoining)
-private let __jt_pair_jr: _T1 = (0x10fb3, .dualJoining)
-private let __jt_pair_js: _T1 = (0x10fb4, .rightJoining)
-private let __jt_pair_jt: _T1 = (0x10fb5, .rightJoining)
-private let __jt_pair_ju: _T1 = (0x10fb6, .rightJoining)
-private let __jt_pair_jv: _T1 = (0x10fb7, .nonJoining)
-private let __jt_pair_jw: _T1 = (0x10fb8, .dualJoining)
-private let __jt_pair_jx: _T1 = (0x10fb9, .rightJoining)
-private let __jt_pair_jy: _T1 = (0x10fba, .rightJoining)
-private let __jt_pair_jz: _T1 = (0x10fbb, .dualJoining)
-private let __jt_pair_k0: _T1 = (0x10fbc, .dualJoining)
-private let __jt_pair_k1: _T1 = (0x10fbd, .rightJoining)
-private let __jt_pair_k2: _T1 = (0x10fbe, .dualJoining)
-private let __jt_pair_k3: _T1 = (0x10fbf, .dualJoining)
-private let __jt_pair_k4: _T1 = (0x10fc0, .nonJoining)
-private let __jt_pair_k5: _T1 = (0x10fc1, .dualJoining)
-private let __jt_pair_k6: _T1 = (0x10fc2, .rightJoining)
-private let __jt_pair_k7: _T1 = (0x10fc3, .rightJoining)
-private let __jt_pair_k8: _T1 = (0x10fc4, .dualJoining)
-private let __jt_pair_k9: _T1 = (0x10fc5, .nonJoining)
-private let __jt_pair_ka: _T1 = (0x10fc6, .nonJoining)
-private let __jt_pair_kb: _T1 = (0x10fc7, .nonJoining)
-private let __jt_pair_kc: _T1 = (0x10fc8, .nonJoining)
-private let __jt_pair_kd: _T1 = (0x10fc9, .rightJoining)
-private let __jt_pair_ke: _T1 = (0x10fca, .dualJoining)
-private let __jt_pair_kf: _T1 = (0x10fcb, .leftJoining)
-private let __jt_pair_kg: _T1 = (0x11001, .transparent)
-private let __jt_pair_kh: _T1 = (0x11070, .transparent)
-private let __jt_pair_ki: _T1 = (0x11071, .nonJoining)
-private let __jt_pair_kj: _T1 = (0x11072, .nonJoining)
-private let __jt_pair_kk: _T1 = (0x11073, .transparent)
-private let __jt_pair_kl: _T1 = (0x11074, .transparent)
-private let __jt_pair_km: _T1 = (0x1107f, .transparent)
-private let __jt_pair_kn: _T1 = (0x11080, .transparent)
-private let __jt_pair_ko: _T1 = (0x11081, .transparent)
-private let __jt_pair_kp: _T1 = (0x110b3, .transparent)
-private let __jt_pair_kq: _T1 = (0x110b4, .transparent)
-private let __jt_pair_kr: _T1 = (0x110b5, .transparent)
-private let __jt_pair_ks: _T1 = (0x110b6, .transparent)
-private let __jt_pair_kt: _T1 = (0x110b7, .nonJoining)
-private let __jt_pair_ku: _T1 = (0x110b8, .nonJoining)
-private let __jt_pair_kv: _T1 = (0x110b9, .transparent)
-private let __jt_pair_kw: _T1 = (0x110ba, .transparent)
-private let __jt_pair_kx: _T1 = (0x110c2, .transparent)
-private let __jt_pair_ky: _T1 = (0x11100, .transparent)
-private let __jt_pair_kz: _T1 = (0x11101, .transparent)
-private let __jt_pair_l0: _T1 = (0x11102, .transparent)
-private let __jt_pair_l1: _T1 = (0x1112c, .nonJoining)
-private let __jt_pair_l2: _T1 = (0x11173, .transparent)
-private let __jt_pair_l3: _T1 = (0x11180, .transparent)
-private let __jt_pair_l4: _T1 = (0x11181, .transparent)
-private let __jt_pair_l5: _T1 = (0x111c9, .transparent)
-private let __jt_pair_l6: _T1 = (0x111ca, .transparent)
-private let __jt_pair_l7: _T1 = (0x111cb, .transparent)
-private let __jt_pair_l8: _T1 = (0x111cc, .transparent)
-private let __jt_pair_l9: _T1 = (0x111cd, .nonJoining)
-private let __jt_pair_la: _T1 = (0x111ce, .nonJoining)
-private let __jt_pair_lb: _T1 = (0x111cf, .transparent)
-private let __jt_pair_lc: _T1 = (0x1122f, .transparent)
-private let __jt_pair_ld: _T1 = (0x11230, .transparent)
-private let __jt_pair_le: _T1 = (0x11231, .transparent)
-private let __jt_pair_lf: _T1 = (0x11232, .nonJoining)
-private let __jt_pair_lg: _T1 = (0x11233, .nonJoining)
-private let __jt_pair_lh: _T1 = (0x11234, .transparent)
-private let __jt_pair_li: _T1 = (0x11235, .nonJoining)
-private let __jt_pair_lj: _T1 = (0x11236, .transparent)
-private let __jt_pair_lk: _T1 = (0x11237, .transparent)
-private let __jt_pair_ll: _T1 = (0x1123e, .transparent)
-private let __jt_pair_lm: _T1 = (0x1123f, .nonJoining)
-private let __jt_pair_ln: _T1 = (0x11240, .nonJoining)
-private let __jt_pair_lo: _T1 = (0x11241, .transparent)
-private let __jt_pair_lp: _T1 = (0x112df, .transparent)
-private let __jt_pair_lq: _T1 = (0x112e0, .nonJoining)
-private let __jt_pair_lr: _T1 = (0x112e1, .nonJoining)
-private let __jt_pair_ls: _T1 = (0x112e2, .nonJoining)
-private let __jt_pair_lt: _T1 = (0x11300, .transparent)
-private let __jt_pair_lu: _T1 = (0x11301, .transparent)
-private let __jt_pair_lv: _T1 = (0x1133b, .transparent)
-private let __jt_pair_lw: _T1 = (0x1133c, .transparent)
-private let __jt_pair_lx: _T1 = (0x1133d, .nonJoining)
-private let __jt_pair_ly: _T1 = (0x1133e, .nonJoining)
-private let __jt_pair_lz: _T1 = (0x1133f, .nonJoining)
-private let __jt_pair_m0: _T1 = (0x11340, .transparent)
-private let __jt_pair_m1: _T1 = (0x1136d, .nonJoining)
-private let __jt_pair_m2: _T1 = (0x1136e, .nonJoining)
-private let __jt_pair_m3: _T1 = (0x1136f, .nonJoining)
-private let __jt_pair_m4: _T1 = (0x113ce, .transparent)
-private let __jt_pair_m5: _T1 = (0x113cf, .nonJoining)
-private let __jt_pair_m6: _T1 = (0x113d0, .transparent)
-private let __jt_pair_m7: _T1 = (0x113d1, .nonJoining)
-private let __jt_pair_m8: _T1 = (0x113d2, .transparent)
-private let __jt_pair_m9: _T1 = (0x113e1, .transparent)
-private let __jt_pair_ma: _T1 = (0x113e2, .transparent)
-private let __jt_pair_mb: _T1 = (0x11440, .nonJoining)
-private let __jt_pair_mc: _T1 = (0x11441, .nonJoining)
-private let __jt_pair_md: _T1 = (0x11442, .transparent)
-private let __jt_pair_me: _T1 = (0x11443, .transparent)
-private let __jt_pair_mf: _T1 = (0x11444, .transparent)
-private let __jt_pair_mg: _T1 = (0x11445, .nonJoining)
-private let __jt_pair_mh: _T1 = (0x11446, .transparent)
-private let __jt_pair_mi: _T1 = (0x1145e, .transparent)
-private let __jt_pair_mj: _T1 = (0x114b9, .nonJoining)
-private let __jt_pair_mk: _T1 = (0x114ba, .transparent)
-private let __jt_pair_ml: _T1 = (0x114bb, .nonJoining)
-private let __jt_pair_mm: _T1 = (0x114bc, .nonJoining)
-private let __jt_pair_mn: _T1 = (0x114bd, .nonJoining)
-private let __jt_pair_mo: _T1 = (0x114be, .nonJoining)
-private let __jt_pair_mp: _T1 = (0x114bf, .transparent)
-private let __jt_pair_mq: _T1 = (0x114c0, .transparent)
-private let __jt_pair_mr: _T1 = (0x114c1, .nonJoining)
-private let __jt_pair_ms: _T1 = (0x114c2, .transparent)
-private let __jt_pair_mt: _T1 = (0x114c3, .transparent)
-private let __jt_pair_mu: _T1 = (0x115b2, .transparent)
-private let __jt_pair_mv: _T1 = (0x115b3, .transparent)
-private let __jt_pair_mw: _T1 = (0x115b4, .transparent)
-private let __jt_pair_mx: _T1 = (0x115b5, .transparent)
-private let __jt_pair_my: _T1 = (0x115bc, .transparent)
-private let __jt_pair_mz: _T1 = (0x115bd, .transparent)
-private let __jt_pair_n0: _T1 = (0x115be, .nonJoining)
-private let __jt_pair_n1: _T1 = (0x115bf, .transparent)
-private let __jt_pair_n2: _T1 = (0x115c0, .transparent)
-private let __jt_pair_n3: _T1 = (0x115dc, .transparent)
-private let __jt_pair_n4: _T1 = (0x115dd, .transparent)
-private let __jt_pair_n5: _T1 = (0x1163b, .nonJoining)
-private let __jt_pair_n6: _T1 = (0x1163c, .nonJoining)
-private let __jt_pair_n7: _T1 = (0x1163d, .transparent)
-private let __jt_pair_n8: _T1 = (0x1163e, .nonJoining)
-private let __jt_pair_n9: _T1 = (0x1163f, .transparent)
-private let __jt_pair_na: _T1 = (0x11640, .transparent)
-private let __jt_pair_nb: _T1 = (0x116ab, .transparent)
-private let __jt_pair_nc: _T1 = (0x116ac, .nonJoining)
-private let __jt_pair_nd: _T1 = (0x116ad, .transparent)
-private let __jt_pair_ne: _T1 = (0x116ae, .nonJoining)
-private let __jt_pair_nf: _T1 = (0x116af, .nonJoining)
-private let __jt_pair_ng: _T1 = (0x116b6, .nonJoining)
-private let __jt_pair_nh: _T1 = (0x116b7, .transparent)
-private let __jt_pair_ni: _T1 = (0x1171d, .transparent)
-private let __jt_pair_nj: _T1 = (0x1171e, .nonJoining)
-private let __jt_pair_nk: _T1 = (0x1171f, .transparent)
-private let __jt_pair_nl: _T1 = (0x11720, .nonJoining)
-private let __jt_pair_nm: _T1 = (0x11721, .nonJoining)
-private let __jt_pair_nn: _T1 = (0x11722, .transparent)
-private let __jt_pair_no: _T1 = (0x11723, .transparent)
-private let __jt_pair_np: _T1 = (0x11724, .transparent)
-private let __jt_pair_nq: _T1 = (0x11725, .transparent)
-private let __jt_pair_nr: _T1 = (0x11726, .nonJoining)
-private let __jt_pair_ns: _T1 = (0x11838, .nonJoining)
-private let __jt_pair_nt: _T1 = (0x11839, .transparent)
-private let __jt_pair_nu: _T1 = (0x1183a, .transparent)
-private let __jt_pair_nv: _T1 = (0x1193b, .transparent)
-private let __jt_pair_nw: _T1 = (0x1193c, .transparent)
-private let __jt_pair_nx: _T1 = (0x1193d, .nonJoining)
-private let __jt_pair_ny: _T1 = (0x1193e, .transparent)
-private let __jt_pair_nz: _T1 = (0x1193f, .nonJoining)
-private let __jt_pair_o0: _T1 = (0x11940, .nonJoining)
-private let __jt_pair_o1: _T1 = (0x11941, .nonJoining)
-private let __jt_pair_o2: _T1 = (0x11942, .nonJoining)
-private let __jt_pair_o3: _T1 = (0x11943, .transparent)
-private let __jt_pair_o4: _T1 = (0x119d4, .transparent)
-private let __jt_pair_o5: _T1 = (0x119d5, .transparent)
-private let __jt_pair_o6: _T1 = (0x119d6, .transparent)
-private let __jt_pair_o7: _T1 = (0x119d7, .transparent)
-private let __jt_pair_o8: _T1 = (0x119d8, .nonJoining)
-private let __jt_pair_o9: _T1 = (0x119d9, .nonJoining)
-private let __jt_pair_oa: _T1 = (0x119da, .transparent)
-private let __jt_pair_ob: _T1 = (0x119db, .transparent)
-private let __jt_pair_oc: _T1 = (0x119dc, .nonJoining)
-private let __jt_pair_od: _T1 = (0x119dd, .nonJoining)
-private let __jt_pair_oe: _T1 = (0x119de, .nonJoining)
-private let __jt_pair_of: _T1 = (0x119df, .nonJoining)
-private let __jt_pair_og: _T1 = (0x119e0, .transparent)
-private let __jt_pair_oh: _T1 = (0x11a39, .nonJoining)
-private let __jt_pair_oi: _T1 = (0x11a3a, .nonJoining)
-private let __jt_pair_oj: _T1 = (0x11a3b, .transparent)
-private let __jt_pair_ok: _T1 = (0x11a3c, .transparent)
-private let __jt_pair_ol: _T1 = (0x11a3d, .transparent)
-private let __jt_pair_om: _T1 = (0x11a3e, .transparent)
-private let __jt_pair_on: _T1 = (0x11a47, .transparent)
-private let __jt_pair_oo: _T1 = (0x11a57, .nonJoining)
-private let __jt_pair_op: _T1 = (0x11a58, .nonJoining)
-private let __jt_pair_oq: _T1 = (0x11a59, .transparent)
-private let __jt_pair_or: _T1 = (0x11a5a, .transparent)
-private let __jt_pair_os: _T1 = (0x11a5b, .transparent)
-private let __jt_pair_ot: _T1 = (0x11a97, .nonJoining)
-private let __jt_pair_ou: _T1 = (0x11a98, .transparent)
-private let __jt_pair_ov: _T1 = (0x11a99, .transparent)
-private let __jt_pair_ow: _T1 = (0x11b60, .transparent)
-private let __jt_pair_ox: _T1 = (0x11b61, .nonJoining)
-private let __jt_pair_oy: _T1 = (0x11b62, .transparent)
-private let __jt_pair_oz: _T1 = (0x11b63, .transparent)
-private let __jt_pair_p0: _T1 = (0x11b64, .transparent)
-private let __jt_pair_p1: _T1 = (0x11b65, .nonJoining)
-private let __jt_pair_p2: _T1 = (0x11b66, .transparent)
-private let __jt_pair_p3: _T1 = (0x11c37, .nonJoining)
-private let __jt_pair_p4: _T1 = (0x11c3e, .nonJoining)
-private let __jt_pair_p5: _T1 = (0x11c3f, .transparent)
-private let __jt_pair_p6: _T1 = (0x11ca8, .nonJoining)
-private let __jt_pair_p7: _T1 = (0x11ca9, .nonJoining)
-private let __jt_pair_p8: _T1 = (0x11cb1, .nonJoining)
-private let __jt_pair_p9: _T1 = (0x11cb2, .transparent)
-private let __jt_pair_pa: _T1 = (0x11cb3, .transparent)
-private let __jt_pair_pb: _T1 = (0x11cb4, .nonJoining)
-private let __jt_pair_pc: _T1 = (0x11cb5, .transparent)
-private let __jt_pair_pd: _T1 = (0x11cb6, .transparent)
-private let __jt_pair_pe: _T1 = (0x11d37, .nonJoining)
-private let __jt_pair_pf: _T1 = (0x11d38, .nonJoining)
-private let __jt_pair_pg: _T1 = (0x11d39, .nonJoining)
-private let __jt_pair_ph: _T1 = (0x11d3a, .transparent)
-private let __jt_pair_pi: _T1 = (0x11d3b, .nonJoining)
-private let __jt_pair_pj: _T1 = (0x11d3c, .transparent)
-private let __jt_pair_pk: _T1 = (0x11d3d, .transparent)
-private let __jt_pair_pl: _T1 = (0x11d3e, .nonJoining)
-private let __jt_pair_pm: _T1 = (0x11d46, .nonJoining)
-private let __jt_pair_pn: _T1 = (0x11d47, .transparent)
-private let __jt_pair_po: _T1 = (0x11d90, .transparent)
-private let __jt_pair_pp: _T1 = (0x11d91, .transparent)
-private let __jt_pair_pq: _T1 = (0x11d92, .nonJoining)
-private let __jt_pair_pr: _T1 = (0x11d93, .nonJoining)
-private let __jt_pair_ps: _T1 = (0x11d94, .nonJoining)
-private let __jt_pair_pt: _T1 = (0x11d95, .transparent)
-private let __jt_pair_pu: _T1 = (0x11d96, .nonJoining)
-private let __jt_pair_pv: _T1 = (0x11d97, .transparent)
-private let __jt_pair_pw: _T1 = (0x11ef3, .transparent)
-private let __jt_pair_px: _T1 = (0x11ef4, .transparent)
-private let __jt_pair_py: _T1 = (0x11f00, .transparent)
-private let __jt_pair_pz: _T1 = (0x11f01, .transparent)
-private let __jt_pair_q0: _T1 = (0x11f40, .transparent)
-private let __jt_pair_q1: _T1 = (0x11f41, .nonJoining)
-private let __jt_pair_q2: _T1 = (0x11f42, .transparent)
-private let __jt_pair_q3: _T1 = (0x11f5a, .transparent)
-private let __jt_pair_q4: _T1 = (0x1612a, .nonJoining)
-private let __jt_pair_q5: _T1 = (0x1612b, .nonJoining)
-private let __jt_pair_q6: _T1 = (0x1612c, .nonJoining)
-private let __jt_pair_q7: _T1 = (0x1612d, .transparent)
-private let __jt_pair_q8: _T1 = (0x1612e, .transparent)
-private let __jt_pair_q9: _T1 = (0x1612f, .transparent)
-private let __jt_pair_qa: _T1 = (0x16f4f, .transparent)
-private let __jt_pair_qb: _T1 = (0x16f8f, .transparent)
-private let __jt_pair_qc: _T1 = (0x16f90, .transparent)
-private let __jt_pair_qd: _T1 = (0x16f91, .transparent)
-private let __jt_pair_qe: _T1 = (0x16f92, .transparent)
-private let __jt_pair_qf: _T1 = (0x16fe4, .transparent)
-private let __jt_pair_qg: _T1 = (0x1bc9d, .transparent)
-private let __jt_pair_qh: _T1 = (0x1bc9e, .transparent)
-private let __jt_pair_qi: _T1 = (0x1bc9f, .nonJoining)
-private let __jt_pair_qj: _T1 = (0x1bca0, .transparent)
-private let __jt_pair_qk: _T1 = (0x1bca1, .transparent)
-private let __jt_pair_ql: _T1 = (0x1bca2, .transparent)
-private let __jt_pair_qm: _T1 = (0x1bca3, .transparent)
-private let __jt_pair_qn: _T1 = (0x1cf2e, .nonJoining)
-private let __jt_pair_qo: _T1 = (0x1cf2f, .nonJoining)
-private let __jt_pair_qp: _T1 = (0x1d167, .transparent)
-private let __jt_pair_qq: _T1 = (0x1d168, .transparent)
-private let __jt_pair_qr: _T1 = (0x1d169, .transparent)
-private let __jt_pair_qs: _T1 = (0x1d183, .nonJoining)
-private let __jt_pair_qt: _T1 = (0x1d184, .nonJoining)
-private let __jt_pair_qu: _T1 = (0x1d1aa, .transparent)
-private let __jt_pair_qv: _T1 = (0x1d1ab, .transparent)
-private let __jt_pair_qw: _T1 = (0x1d1ac, .transparent)
-private let __jt_pair_qx: _T1 = (0x1d1ad, .transparent)
-private let __jt_pair_qy: _T1 = (0x1d242, .transparent)
-private let __jt_pair_qz: _T1 = (0x1d243, .transparent)
-private let __jt_pair_r0: _T1 = (0x1d244, .transparent)
-private let __jt_pair_r1: _T1 = (0x1da37, .nonJoining)
-private let __jt_pair_r2: _T1 = (0x1da38, .nonJoining)
-private let __jt_pair_r3: _T1 = (0x1da39, .nonJoining)
-private let __jt_pair_r4: _T1 = (0x1da3a, .nonJoining)
-private let __jt_pair_r5: _T1 = (0x1da75, .transparent)
-private let __jt_pair_r6: _T1 = (0x1da84, .transparent)
-private let __jt_pair_r7: _T1 = (0x1daa0, .nonJoining)
-private let __jt_pair_r8: _T1 = (0x1e007, .nonJoining)
-private let __jt_pair_r9: _T1 = (0x1e019, .nonJoining)
-private let __jt_pair_ra: _T1 = (0x1e01a, .nonJoining)
-private let __jt_pair_rb: _T1 = (0x1e022, .nonJoining)
-private let __jt_pair_rc: _T1 = (0x1e023, .transparent)
-private let __jt_pair_rd: _T1 = (0x1e024, .transparent)
-private let __jt_pair_re: _T1 = (0x1e025, .nonJoining)
-private let __jt_pair_rf: _T1 = (0x1e08f, .transparent)
-private let __jt_pair_rg: _T1 = (0x1e2ae, .transparent)
-private let __jt_pair_rh: _T1 = (0x1e2ec, .transparent)
-private let __jt_pair_ri: _T1 = (0x1e2ed, .transparent)
-private let __jt_pair_rj: _T1 = (0x1e2ee, .transparent)
-private let __jt_pair_rk: _T1 = (0x1e2ef, .transparent)
-private let __jt_pair_rl: _T1 = (0x1e4ec, .transparent)
-private let __jt_pair_rm: _T1 = (0x1e4ed, .transparent)
-private let __jt_pair_rn: _T1 = (0x1e4ee, .transparent)
-private let __jt_pair_ro: _T1 = (0x1e4ef, .transparent)
-private let __jt_pair_rp: _T1 = (0x1e5ee, .transparent)
-private let __jt_pair_rq: _T1 = (0x1e5ef, .transparent)
-private let __jt_pair_rr: _T1 = (0x1e6e3, .transparent)
-private let __jt_pair_rs: _T1 = (0x1e6e4, .nonJoining)
-private let __jt_pair_rt: _T1 = (0x1e6e5, .nonJoining)
-private let __jt_pair_ru: _T1 = (0x1e6e6, .transparent)
-private let __jt_pair_rv: _T1 = (0x1e6ee, .transparent)
-private let __jt_pair_rw: _T1 = (0x1e6ef, .transparent)
-private let __jt_pair_rx: _T1 = (0x1e6f5, .transparent)
-private let __jt_pair_ry: _T1 = (0xe0001, .transparent)
-private let __jt_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWithValues: [
+private let __jt_pair_0: _T2 = (0xad, .transparent)
+private let __jt_pair_1: _T2 = (0x5be, .nonJoining)
+private let __jt_pair_2: _T2 = (0x5bf, .transparent)
+private let __jt_pair_3: _T2 = (0x5c0, .nonJoining)
+private let __jt_pair_4: _T2 = (0x5c1, .transparent)
+private let __jt_pair_5: _T2 = (0x5c2, .transparent)
+private let __jt_pair_6: _T2 = (0x5c3, .nonJoining)
+private let __jt_pair_7: _T2 = (0x5c4, .transparent)
+private let __jt_pair_8: _T2 = (0x5c5, .transparent)
+private let __jt_pair_9: _T2 = (0x5c6, .nonJoining)
+private let __jt_pair_a: _T2 = (0x5c7, .transparent)
+private let __jt_pair_b: _T2 = (0x61b, .nonJoining)
+private let __jt_pair_c: _T2 = (0x61c, .transparent)
+private let __jt_pair_d: _T2 = (0x61d, .nonJoining)
+private let __jt_pair_e: _T2 = (0x61e, .nonJoining)
+private let __jt_pair_f: _T2 = (0x61f, .nonJoining)
+private let __jt_pair_g: _T2 = (0x620, .dualJoining)
+private let __jt_pair_h: _T2 = (0x621, .nonJoining)
+private let __jt_pair_i: _T2 = (0x622, .rightJoining)
+private let __jt_pair_j: _T2 = (0x623, .rightJoining)
+private let __jt_pair_k: _T2 = (0x624, .rightJoining)
+private let __jt_pair_l: _T2 = (0x625, .rightJoining)
+private let __jt_pair_m: _T2 = (0x626, .dualJoining)
+private let __jt_pair_n: _T2 = (0x627, .rightJoining)
+private let __jt_pair_o: _T2 = (0x628, .dualJoining)
+private let __jt_pair_p: _T2 = (0x629, .rightJoining)
+private let __jt_pair_q: _T2 = (0x62f, .rightJoining)
+private let __jt_pair_r: _T2 = (0x630, .rightJoining)
+private let __jt_pair_s: _T2 = (0x631, .rightJoining)
+private let __jt_pair_t: _T2 = (0x632, .rightJoining)
+private let __jt_pair_u: _T2 = (0x640, .joinCausing)
+private let __jt_pair_v: _T2 = (0x648, .rightJoining)
+private let __jt_pair_w: _T2 = (0x649, .dualJoining)
+private let __jt_pair_x: _T2 = (0x64a, .dualJoining)
+private let __jt_pair_y: _T2 = (0x66e, .dualJoining)
+private let __jt_pair_z: _T2 = (0x66f, .dualJoining)
+private let __jt_pair_10: _T2 = (0x670, .transparent)
+private let __jt_pair_11: _T2 = (0x671, .rightJoining)
+private let __jt_pair_12: _T2 = (0x672, .rightJoining)
+private let __jt_pair_13: _T2 = (0x673, .rightJoining)
+private let __jt_pair_14: _T2 = (0x674, .nonJoining)
+private let __jt_pair_15: _T2 = (0x675, .rightJoining)
+private let __jt_pair_16: _T2 = (0x676, .rightJoining)
+private let __jt_pair_17: _T2 = (0x677, .rightJoining)
+private let __jt_pair_18: _T2 = (0x6c0, .rightJoining)
+private let __jt_pair_19: _T2 = (0x6c1, .dualJoining)
+private let __jt_pair_1a: _T2 = (0x6c2, .dualJoining)
+private let __jt_pair_1b: _T2 = (0x6cc, .dualJoining)
+private let __jt_pair_1c: _T2 = (0x6cd, .rightJoining)
+private let __jt_pair_1d: _T2 = (0x6ce, .dualJoining)
+private let __jt_pair_1e: _T2 = (0x6cf, .rightJoining)
+private let __jt_pair_1f: _T2 = (0x6d0, .dualJoining)
+private let __jt_pair_1g: _T2 = (0x6d1, .dualJoining)
+private let __jt_pair_1h: _T2 = (0x6d2, .rightJoining)
+private let __jt_pair_1i: _T2 = (0x6d3, .rightJoining)
+private let __jt_pair_1j: _T2 = (0x6d4, .nonJoining)
+private let __jt_pair_1k: _T2 = (0x6d5, .rightJoining)
+private let __jt_pair_1l: _T2 = (0x6dd, .nonJoining)
+private let __jt_pair_1m: _T2 = (0x6de, .nonJoining)
+private let __jt_pair_1n: _T2 = (0x6e5, .nonJoining)
+private let __jt_pair_1o: _T2 = (0x6e6, .nonJoining)
+private let __jt_pair_1p: _T2 = (0x6e7, .transparent)
+private let __jt_pair_1q: _T2 = (0x6e8, .transparent)
+private let __jt_pair_1r: _T2 = (0x6e9, .nonJoining)
+private let __jt_pair_1s: _T2 = (0x6ea, .transparent)
+private let __jt_pair_1t: _T2 = (0x6eb, .transparent)
+private let __jt_pair_1u: _T2 = (0x6ec, .transparent)
+private let __jt_pair_1v: _T2 = (0x6ed, .transparent)
+private let __jt_pair_1w: _T2 = (0x6ee, .rightJoining)
+private let __jt_pair_1x: _T2 = (0x6ef, .rightJoining)
+private let __jt_pair_1y: _T2 = (0x6fa, .dualJoining)
+private let __jt_pair_1z: _T2 = (0x6fb, .dualJoining)
+private let __jt_pair_20: _T2 = (0x6fc, .dualJoining)
+private let __jt_pair_21: _T2 = (0x6fd, .nonJoining)
+private let __jt_pair_22: _T2 = (0x6fe, .nonJoining)
+private let __jt_pair_23: _T2 = (0x6ff, .dualJoining)
+private let __jt_pair_24: _T2 = (0x70f, .transparent)
+private let __jt_pair_25: _T2 = (0x710, .rightJoining)
+private let __jt_pair_26: _T2 = (0x711, .transparent)
+private let __jt_pair_27: _T2 = (0x712, .dualJoining)
+private let __jt_pair_28: _T2 = (0x713, .dualJoining)
+private let __jt_pair_29: _T2 = (0x714, .dualJoining)
+private let __jt_pair_2a: _T2 = (0x71a, .dualJoining)
+private let __jt_pair_2b: _T2 = (0x71b, .dualJoining)
+private let __jt_pair_2c: _T2 = (0x71c, .dualJoining)
+private let __jt_pair_2d: _T2 = (0x71d, .dualJoining)
+private let __jt_pair_2e: _T2 = (0x71e, .rightJoining)
+private let __jt_pair_2f: _T2 = (0x728, .rightJoining)
+private let __jt_pair_2g: _T2 = (0x729, .dualJoining)
+private let __jt_pair_2h: _T2 = (0x72a, .rightJoining)
+private let __jt_pair_2i: _T2 = (0x72b, .dualJoining)
+private let __jt_pair_2j: _T2 = (0x72c, .rightJoining)
+private let __jt_pair_2k: _T2 = (0x72d, .dualJoining)
+private let __jt_pair_2l: _T2 = (0x72e, .dualJoining)
+private let __jt_pair_2m: _T2 = (0x72f, .rightJoining)
+private let __jt_pair_2n: _T2 = (0x74b, .nonJoining)
+private let __jt_pair_2o: _T2 = (0x74c, .nonJoining)
+private let __jt_pair_2p: _T2 = (0x74d, .rightJoining)
+private let __jt_pair_2q: _T2 = (0x759, .rightJoining)
+private let __jt_pair_2r: _T2 = (0x75a, .rightJoining)
+private let __jt_pair_2s: _T2 = (0x75b, .rightJoining)
+private let __jt_pair_2t: _T2 = (0x76b, .rightJoining)
+private let __jt_pair_2u: _T2 = (0x76c, .rightJoining)
+private let __jt_pair_2v: _T2 = (0x76d, .dualJoining)
+private let __jt_pair_2w: _T2 = (0x76e, .dualJoining)
+private let __jt_pair_2x: _T2 = (0x76f, .dualJoining)
+private let __jt_pair_2y: _T2 = (0x770, .dualJoining)
+private let __jt_pair_2z: _T2 = (0x771, .rightJoining)
+private let __jt_pair_30: _T2 = (0x772, .dualJoining)
+private let __jt_pair_31: _T2 = (0x773, .rightJoining)
+private let __jt_pair_32: _T2 = (0x774, .rightJoining)
+private let __jt_pair_33: _T2 = (0x775, .dualJoining)
+private let __jt_pair_34: _T2 = (0x776, .dualJoining)
+private let __jt_pair_35: _T2 = (0x777, .dualJoining)
+private let __jt_pair_36: _T2 = (0x778, .rightJoining)
+private let __jt_pair_37: _T2 = (0x779, .rightJoining)
+private let __jt_pair_38: _T2 = (0x7fa, .joinCausing)
+private let __jt_pair_39: _T2 = (0x7fb, .nonJoining)
+private let __jt_pair_3a: _T2 = (0x7fc, .nonJoining)
+private let __jt_pair_3b: _T2 = (0x7fd, .transparent)
+private let __jt_pair_3c: _T2 = (0x816, .transparent)
+private let __jt_pair_3d: _T2 = (0x817, .transparent)
+private let __jt_pair_3e: _T2 = (0x818, .transparent)
+private let __jt_pair_3f: _T2 = (0x819, .transparent)
+private let __jt_pair_3g: _T2 = (0x81a, .nonJoining)
+private let __jt_pair_3h: _T2 = (0x824, .nonJoining)
+private let __jt_pair_3i: _T2 = (0x825, .transparent)
+private let __jt_pair_3j: _T2 = (0x826, .transparent)
+private let __jt_pair_3k: _T2 = (0x827, .transparent)
+private let __jt_pair_3l: _T2 = (0x828, .nonJoining)
+private let __jt_pair_3m: _T2 = (0x840, .rightJoining)
+private let __jt_pair_3n: _T2 = (0x846, .rightJoining)
+private let __jt_pair_3o: _T2 = (0x847, .rightJoining)
+private let __jt_pair_3p: _T2 = (0x848, .dualJoining)
+private let __jt_pair_3q: _T2 = (0x849, .rightJoining)
+private let __jt_pair_3r: _T2 = (0x854, .rightJoining)
+private let __jt_pair_3s: _T2 = (0x855, .dualJoining)
+private let __jt_pair_3t: _T2 = (0x856, .rightJoining)
+private let __jt_pair_3u: _T2 = (0x857, .rightJoining)
+private let __jt_pair_3v: _T2 = (0x858, .rightJoining)
+private let __jt_pair_3w: _T2 = (0x859, .transparent)
+private let __jt_pair_3x: _T2 = (0x85a, .transparent)
+private let __jt_pair_3y: _T2 = (0x85b, .transparent)
+private let __jt_pair_3z: _T2 = (0x85c, .nonJoining)
+private let __jt_pair_40: _T2 = (0x85d, .nonJoining)
+private let __jt_pair_41: _T2 = (0x85e, .nonJoining)
+private let __jt_pair_42: _T2 = (0x85f, .nonJoining)
+private let __jt_pair_43: _T2 = (0x860, .dualJoining)
+private let __jt_pair_44: _T2 = (0x861, .nonJoining)
+private let __jt_pair_45: _T2 = (0x862, .dualJoining)
+private let __jt_pair_46: _T2 = (0x863, .dualJoining)
+private let __jt_pair_47: _T2 = (0x864, .dualJoining)
+private let __jt_pair_48: _T2 = (0x865, .dualJoining)
+private let __jt_pair_49: _T2 = (0x866, .nonJoining)
+private let __jt_pair_4a: _T2 = (0x867, .rightJoining)
+private let __jt_pair_4b: _T2 = (0x868, .dualJoining)
+private let __jt_pair_4c: _T2 = (0x869, .rightJoining)
+private let __jt_pair_4d: _T2 = (0x86a, .rightJoining)
+private let __jt_pair_4e: _T2 = (0x883, .joinCausing)
+private let __jt_pair_4f: _T2 = (0x884, .joinCausing)
+private let __jt_pair_4g: _T2 = (0x885, .joinCausing)
+private let __jt_pair_4h: _T2 = (0x886, .dualJoining)
+private let __jt_pair_4i: _T2 = (0x887, .nonJoining)
+private let __jt_pair_4j: _T2 = (0x888, .nonJoining)
+private let __jt_pair_4k: _T2 = (0x88e, .rightJoining)
+private let __jt_pair_4l: _T2 = (0x88f, .dualJoining)
+private let __jt_pair_4m: _T2 = (0x8aa, .rightJoining)
+private let __jt_pair_4n: _T2 = (0x8ab, .rightJoining)
+private let __jt_pair_4o: _T2 = (0x8ac, .rightJoining)
+private let __jt_pair_4p: _T2 = (0x8ad, .nonJoining)
+private let __jt_pair_4q: _T2 = (0x8ae, .rightJoining)
+private let __jt_pair_4r: _T2 = (0x8af, .dualJoining)
+private let __jt_pair_4s: _T2 = (0x8b0, .dualJoining)
+private let __jt_pair_4t: _T2 = (0x8b1, .rightJoining)
+private let __jt_pair_4u: _T2 = (0x8b2, .rightJoining)
+private let __jt_pair_4v: _T2 = (0x8b9, .rightJoining)
+private let __jt_pair_4w: _T2 = (0x8c9, .nonJoining)
+private let __jt_pair_4x: _T2 = (0x8e2, .nonJoining)
+private let __jt_pair_4y: _T2 = (0x93a, .transparent)
+private let __jt_pair_4z: _T2 = (0x93b, .nonJoining)
+private let __jt_pair_50: _T2 = (0x93c, .transparent)
+private let __jt_pair_51: _T2 = (0x93d, .nonJoining)
+private let __jt_pair_52: _T2 = (0x93e, .nonJoining)
+private let __jt_pair_53: _T2 = (0x93f, .nonJoining)
+private let __jt_pair_54: _T2 = (0x940, .nonJoining)
+private let __jt_pair_55: _T2 = (0x949, .nonJoining)
+private let __jt_pair_56: _T2 = (0x94a, .nonJoining)
+private let __jt_pair_57: _T2 = (0x94b, .nonJoining)
+private let __jt_pair_58: _T2 = (0x94c, .nonJoining)
+private let __jt_pair_59: _T2 = (0x94d, .transparent)
+private let __jt_pair_5a: _T2 = (0x94e, .nonJoining)
+private let __jt_pair_5b: _T2 = (0x94f, .nonJoining)
+private let __jt_pair_5c: _T2 = (0x950, .nonJoining)
+private let __jt_pair_5d: _T2 = (0x962, .transparent)
+private let __jt_pair_5e: _T2 = (0x963, .transparent)
+private let __jt_pair_5f: _T2 = (0x981, .transparent)
+private let __jt_pair_5g: _T2 = (0x9bc, .transparent)
+private let __jt_pair_5h: _T2 = (0x9bd, .nonJoining)
+private let __jt_pair_5i: _T2 = (0x9be, .nonJoining)
+private let __jt_pair_5j: _T2 = (0x9bf, .nonJoining)
+private let __jt_pair_5k: _T2 = (0x9c0, .nonJoining)
+private let __jt_pair_5l: _T2 = (0x9c1, .transparent)
+private let __jt_pair_5m: _T2 = (0x9c2, .transparent)
+private let __jt_pair_5n: _T2 = (0x9c3, .transparent)
+private let __jt_pair_5o: _T2 = (0x9c4, .transparent)
+private let __jt_pair_5p: _T2 = (0x9cd, .transparent)
+private let __jt_pair_5q: _T2 = (0x9e2, .transparent)
+private let __jt_pair_5r: _T2 = (0x9e3, .transparent)
+private let __jt_pair_5s: _T2 = (0x9fe, .transparent)
+private let __jt_pair_5t: _T2 = (0x9ff, .nonJoining)
+private let __jt_pair_5u: _T2 = (0xa00, .nonJoining)
+private let __jt_pair_5v: _T2 = (0xa01, .transparent)
+private let __jt_pair_5w: _T2 = (0xa02, .transparent)
+private let __jt_pair_5x: _T2 = (0xa3c, .transparent)
+private let __jt_pair_5y: _T2 = (0xa3d, .nonJoining)
+private let __jt_pair_5z: _T2 = (0xa3e, .nonJoining)
+private let __jt_pair_60: _T2 = (0xa3f, .nonJoining)
+private let __jt_pair_61: _T2 = (0xa40, .nonJoining)
+private let __jt_pair_62: _T2 = (0xa41, .transparent)
+private let __jt_pair_63: _T2 = (0xa42, .transparent)
+private let __jt_pair_64: _T2 = (0xa43, .nonJoining)
+private let __jt_pair_65: _T2 = (0xa44, .nonJoining)
+private let __jt_pair_66: _T2 = (0xa45, .nonJoining)
+private let __jt_pair_67: _T2 = (0xa46, .nonJoining)
+private let __jt_pair_68: _T2 = (0xa47, .transparent)
+private let __jt_pair_69: _T2 = (0xa48, .transparent)
+private let __jt_pair_6a: _T2 = (0xa49, .nonJoining)
+private let __jt_pair_6b: _T2 = (0xa4a, .nonJoining)
+private let __jt_pair_6c: _T2 = (0xa4b, .transparent)
+private let __jt_pair_6d: _T2 = (0xa4c, .transparent)
+private let __jt_pair_6e: _T2 = (0xa4d, .transparent)
+private let __jt_pair_6f: _T2 = (0xa4e, .nonJoining)
+private let __jt_pair_6g: _T2 = (0xa4f, .nonJoining)
+private let __jt_pair_6h: _T2 = (0xa50, .nonJoining)
+private let __jt_pair_6i: _T2 = (0xa51, .transparent)
+private let __jt_pair_6j: _T2 = (0xa70, .transparent)
+private let __jt_pair_6k: _T2 = (0xa71, .transparent)
+private let __jt_pair_6l: _T2 = (0xa72, .nonJoining)
+private let __jt_pair_6m: _T2 = (0xa73, .nonJoining)
+private let __jt_pair_6n: _T2 = (0xa74, .nonJoining)
+private let __jt_pair_6o: _T2 = (0xa75, .transparent)
+private let __jt_pair_6p: _T2 = (0xa81, .transparent)
+private let __jt_pair_6q: _T2 = (0xa82, .transparent)
+private let __jt_pair_6r: _T2 = (0xabc, .transparent)
+private let __jt_pair_6s: _T2 = (0xabd, .nonJoining)
+private let __jt_pair_6t: _T2 = (0xabe, .nonJoining)
+private let __jt_pair_6u: _T2 = (0xabf, .nonJoining)
+private let __jt_pair_6v: _T2 = (0xac0, .nonJoining)
+private let __jt_pair_6w: _T2 = (0xac6, .nonJoining)
+private let __jt_pair_6x: _T2 = (0xac7, .transparent)
+private let __jt_pair_6y: _T2 = (0xac8, .transparent)
+private let __jt_pair_6z: _T2 = (0xac9, .nonJoining)
+private let __jt_pair_70: _T2 = (0xaca, .nonJoining)
+private let __jt_pair_71: _T2 = (0xacb, .nonJoining)
+private let __jt_pair_72: _T2 = (0xacc, .nonJoining)
+private let __jt_pair_73: _T2 = (0xacd, .transparent)
+private let __jt_pair_74: _T2 = (0xae2, .transparent)
+private let __jt_pair_75: _T2 = (0xae3, .transparent)
+private let __jt_pair_76: _T2 = (0xb00, .nonJoining)
+private let __jt_pair_77: _T2 = (0xb01, .transparent)
+private let __jt_pair_78: _T2 = (0xb3c, .transparent)
+private let __jt_pair_79: _T2 = (0xb3d, .nonJoining)
+private let __jt_pair_7a: _T2 = (0xb3e, .nonJoining)
+private let __jt_pair_7b: _T2 = (0xb3f, .transparent)
+private let __jt_pair_7c: _T2 = (0xb40, .nonJoining)
+private let __jt_pair_7d: _T2 = (0xb41, .transparent)
+private let __jt_pair_7e: _T2 = (0xb42, .transparent)
+private let __jt_pair_7f: _T2 = (0xb43, .transparent)
+private let __jt_pair_7g: _T2 = (0xb44, .transparent)
+private let __jt_pair_7h: _T2 = (0xb4d, .transparent)
+private let __jt_pair_7i: _T2 = (0xb55, .transparent)
+private let __jt_pair_7j: _T2 = (0xb56, .transparent)
+private let __jt_pair_7k: _T2 = (0xb62, .transparent)
+private let __jt_pair_7l: _T2 = (0xb63, .transparent)
+private let __jt_pair_7m: _T2 = (0xb82, .transparent)
+private let __jt_pair_7n: _T2 = (0xbc0, .transparent)
+private let __jt_pair_7o: _T2 = (0xbcd, .transparent)
+private let __jt_pair_7p: _T2 = (0xc00, .transparent)
+private let __jt_pair_7q: _T2 = (0xc01, .nonJoining)
+private let __jt_pair_7r: _T2 = (0xc02, .nonJoining)
+private let __jt_pair_7s: _T2 = (0xc03, .nonJoining)
+private let __jt_pair_7t: _T2 = (0xc04, .transparent)
+private let __jt_pair_7u: _T2 = (0xc3c, .transparent)
+private let __jt_pair_7v: _T2 = (0xc3d, .nonJoining)
+private let __jt_pair_7w: _T2 = (0xc3e, .transparent)
+private let __jt_pair_7x: _T2 = (0xc3f, .transparent)
+private let __jt_pair_7y: _T2 = (0xc40, .transparent)
+private let __jt_pair_7z: _T2 = (0xc46, .transparent)
+private let __jt_pair_80: _T2 = (0xc47, .transparent)
+private let __jt_pair_81: _T2 = (0xc48, .transparent)
+private let __jt_pair_82: _T2 = (0xc49, .nonJoining)
+private let __jt_pair_83: _T2 = (0xc4a, .transparent)
+private let __jt_pair_84: _T2 = (0xc4b, .transparent)
+private let __jt_pair_85: _T2 = (0xc4c, .transparent)
+private let __jt_pair_86: _T2 = (0xc4d, .transparent)
+private let __jt_pair_87: _T2 = (0xc55, .transparent)
+private let __jt_pair_88: _T2 = (0xc56, .transparent)
+private let __jt_pair_89: _T2 = (0xc62, .transparent)
+private let __jt_pair_8a: _T2 = (0xc63, .transparent)
+private let __jt_pair_8b: _T2 = (0xc81, .transparent)
+private let __jt_pair_8c: _T2 = (0xcbc, .transparent)
+private let __jt_pair_8d: _T2 = (0xcbd, .nonJoining)
+private let __jt_pair_8e: _T2 = (0xcbe, .nonJoining)
+private let __jt_pair_8f: _T2 = (0xcbf, .transparent)
+private let __jt_pair_8g: _T2 = (0xcc6, .transparent)
+private let __jt_pair_8h: _T2 = (0xccc, .transparent)
+private let __jt_pair_8i: _T2 = (0xccd, .transparent)
+private let __jt_pair_8j: _T2 = (0xce2, .transparent)
+private let __jt_pair_8k: _T2 = (0xce3, .transparent)
+private let __jt_pair_8l: _T2 = (0xd00, .transparent)
+private let __jt_pair_8m: _T2 = (0xd01, .transparent)
+private let __jt_pair_8n: _T2 = (0xd3b, .transparent)
+private let __jt_pair_8o: _T2 = (0xd3c, .transparent)
+private let __jt_pair_8p: _T2 = (0xd3d, .nonJoining)
+private let __jt_pair_8q: _T2 = (0xd3e, .nonJoining)
+private let __jt_pair_8r: _T2 = (0xd3f, .nonJoining)
+private let __jt_pair_8s: _T2 = (0xd40, .nonJoining)
+private let __jt_pair_8t: _T2 = (0xd41, .transparent)
+private let __jt_pair_8u: _T2 = (0xd42, .transparent)
+private let __jt_pair_8v: _T2 = (0xd43, .transparent)
+private let __jt_pair_8w: _T2 = (0xd44, .transparent)
+private let __jt_pair_8x: _T2 = (0xd4d, .transparent)
+private let __jt_pair_8y: _T2 = (0xd62, .transparent)
+private let __jt_pair_8z: _T2 = (0xd63, .transparent)
+private let __jt_pair_90: _T2 = (0xd81, .transparent)
+private let __jt_pair_91: _T2 = (0xdca, .transparent)
+private let __jt_pair_92: _T2 = (0xdd2, .transparent)
+private let __jt_pair_93: _T2 = (0xdd3, .transparent)
+private let __jt_pair_94: _T2 = (0xdd4, .transparent)
+private let __jt_pair_95: _T2 = (0xdd5, .nonJoining)
+private let __jt_pair_96: _T2 = (0xdd6, .transparent)
+private let __jt_pair_97: _T2 = (0xe31, .transparent)
+private let __jt_pair_98: _T2 = (0xe32, .nonJoining)
+private let __jt_pair_99: _T2 = (0xe33, .nonJoining)
+private let __jt_pair_9a: _T2 = (0xeb1, .transparent)
+private let __jt_pair_9b: _T2 = (0xeb2, .nonJoining)
+private let __jt_pair_9c: _T2 = (0xeb3, .nonJoining)
+private let __jt_pair_9d: _T2 = (0xf18, .transparent)
+private let __jt_pair_9e: _T2 = (0xf19, .transparent)
+private let __jt_pair_9f: _T2 = (0xf35, .transparent)
+private let __jt_pair_9g: _T2 = (0xf36, .nonJoining)
+private let __jt_pair_9h: _T2 = (0xf37, .transparent)
+private let __jt_pair_9i: _T2 = (0xf38, .nonJoining)
+private let __jt_pair_9j: _T2 = (0xf39, .transparent)
+private let __jt_pair_9k: _T2 = (0xf7f, .nonJoining)
+private let __jt_pair_9l: _T2 = (0xf85, .nonJoining)
+private let __jt_pair_9m: _T2 = (0xf86, .transparent)
+private let __jt_pair_9n: _T2 = (0xf87, .transparent)
+private let __jt_pair_9o: _T2 = (0xf98, .nonJoining)
+private let __jt_pair_9p: _T2 = (0xfc6, .transparent)
+private let __jt_pair_9q: _T2 = (0x102d, .transparent)
+private let __jt_pair_9r: _T2 = (0x102e, .transparent)
+private let __jt_pair_9s: _T2 = (0x102f, .transparent)
+private let __jt_pair_9t: _T2 = (0x1030, .transparent)
+private let __jt_pair_9u: _T2 = (0x1031, .nonJoining)
+private let __jt_pair_9v: _T2 = (0x1038, .nonJoining)
+private let __jt_pair_9w: _T2 = (0x1039, .transparent)
+private let __jt_pair_9x: _T2 = (0x103a, .transparent)
+private let __jt_pair_9y: _T2 = (0x103b, .nonJoining)
+private let __jt_pair_9z: _T2 = (0x103c, .nonJoining)
+private let __jt_pair_a0: _T2 = (0x103d, .transparent)
+private let __jt_pair_a1: _T2 = (0x103e, .transparent)
+private let __jt_pair_a2: _T2 = (0x1058, .transparent)
+private let __jt_pair_a3: _T2 = (0x1059, .transparent)
+private let __jt_pair_a4: _T2 = (0x105a, .nonJoining)
+private let __jt_pair_a5: _T2 = (0x105b, .nonJoining)
+private let __jt_pair_a6: _T2 = (0x105c, .nonJoining)
+private let __jt_pair_a7: _T2 = (0x105d, .nonJoining)
+private let __jt_pair_a8: _T2 = (0x105e, .transparent)
+private let __jt_pair_a9: _T2 = (0x105f, .transparent)
+private let __jt_pair_aa: _T2 = (0x1060, .transparent)
+private let __jt_pair_ab: _T2 = (0x1071, .transparent)
+private let __jt_pair_ac: _T2 = (0x1072, .transparent)
+private let __jt_pair_ad: _T2 = (0x1073, .transparent)
+private let __jt_pair_ae: _T2 = (0x1074, .transparent)
+private let __jt_pair_af: _T2 = (0x1082, .transparent)
+private let __jt_pair_ag: _T2 = (0x1083, .nonJoining)
+private let __jt_pair_ah: _T2 = (0x1084, .nonJoining)
+private let __jt_pair_ai: _T2 = (0x1085, .transparent)
+private let __jt_pair_aj: _T2 = (0x1086, .transparent)
+private let __jt_pair_ak: _T2 = (0x108d, .transparent)
+private let __jt_pair_al: _T2 = (0x109d, .transparent)
+private let __jt_pair_am: _T2 = (0x135d, .transparent)
+private let __jt_pair_an: _T2 = (0x135e, .transparent)
+private let __jt_pair_ao: _T2 = (0x135f, .transparent)
+private let __jt_pair_ap: _T2 = (0x1712, .transparent)
+private let __jt_pair_aq: _T2 = (0x1713, .transparent)
+private let __jt_pair_ar: _T2 = (0x1714, .transparent)
+private let __jt_pair_as: _T2 = (0x1732, .transparent)
+private let __jt_pair_at: _T2 = (0x1733, .transparent)
+private let __jt_pair_au: _T2 = (0x1752, .transparent)
+private let __jt_pair_av: _T2 = (0x1753, .transparent)
+private let __jt_pair_aw: _T2 = (0x1772, .transparent)
+private let __jt_pair_ax: _T2 = (0x1773, .transparent)
+private let __jt_pair_ay: _T2 = (0x17b4, .transparent)
+private let __jt_pair_az: _T2 = (0x17b5, .transparent)
+private let __jt_pair_b0: _T2 = (0x17b6, .nonJoining)
+private let __jt_pair_b1: _T2 = (0x17c6, .transparent)
+private let __jt_pair_b2: _T2 = (0x17c7, .nonJoining)
+private let __jt_pair_b3: _T2 = (0x17c8, .nonJoining)
+private let __jt_pair_b4: _T2 = (0x17dd, .transparent)
+private let __jt_pair_b5: _T2 = (0x1807, .dualJoining)
+private let __jt_pair_b6: _T2 = (0x1808, .nonJoining)
+private let __jt_pair_b7: _T2 = (0x1809, .nonJoining)
+private let __jt_pair_b8: _T2 = (0x180a, .joinCausing)
+private let __jt_pair_b9: _T2 = (0x180b, .transparent)
+private let __jt_pair_ba: _T2 = (0x180c, .transparent)
+private let __jt_pair_bb: _T2 = (0x180d, .transparent)
+private let __jt_pair_bc: _T2 = (0x180e, .nonJoining)
+private let __jt_pair_bd: _T2 = (0x180f, .transparent)
+private let __jt_pair_be: _T2 = (0x1885, .transparent)
+private let __jt_pair_bf: _T2 = (0x1886, .transparent)
+private let __jt_pair_bg: _T2 = (0x18a9, .transparent)
+private let __jt_pair_bh: _T2 = (0x18aa, .dualJoining)
+private let __jt_pair_bi: _T2 = (0x1920, .transparent)
+private let __jt_pair_bj: _T2 = (0x1921, .transparent)
+private let __jt_pair_bk: _T2 = (0x1922, .transparent)
+private let __jt_pair_bl: _T2 = (0x1923, .nonJoining)
+private let __jt_pair_bm: _T2 = (0x1924, .nonJoining)
+private let __jt_pair_bn: _T2 = (0x1925, .nonJoining)
+private let __jt_pair_bo: _T2 = (0x1926, .nonJoining)
+private let __jt_pair_bp: _T2 = (0x1927, .transparent)
+private let __jt_pair_bq: _T2 = (0x1928, .transparent)
+private let __jt_pair_br: _T2 = (0x1932, .transparent)
+private let __jt_pair_bs: _T2 = (0x1939, .transparent)
+private let __jt_pair_bt: _T2 = (0x193a, .transparent)
+private let __jt_pair_bu: _T2 = (0x193b, .transparent)
+private let __jt_pair_bv: _T2 = (0x1a17, .transparent)
+private let __jt_pair_bw: _T2 = (0x1a18, .transparent)
+private let __jt_pair_bx: _T2 = (0x1a19, .nonJoining)
+private let __jt_pair_by: _T2 = (0x1a1a, .nonJoining)
+private let __jt_pair_bz: _T2 = (0x1a1b, .transparent)
+private let __jt_pair_c0: _T2 = (0x1a56, .transparent)
+private let __jt_pair_c1: _T2 = (0x1a57, .nonJoining)
+private let __jt_pair_c2: _T2 = (0x1a5f, .nonJoining)
+private let __jt_pair_c3: _T2 = (0x1a60, .transparent)
+private let __jt_pair_c4: _T2 = (0x1a61, .nonJoining)
+private let __jt_pair_c5: _T2 = (0x1a62, .transparent)
+private let __jt_pair_c6: _T2 = (0x1a63, .nonJoining)
+private let __jt_pair_c7: _T2 = (0x1a64, .nonJoining)
+private let __jt_pair_c8: _T2 = (0x1a7d, .nonJoining)
+private let __jt_pair_c9: _T2 = (0x1a7e, .nonJoining)
+private let __jt_pair_ca: _T2 = (0x1a7f, .transparent)
+private let __jt_pair_cb: _T2 = (0x1ade, .nonJoining)
+private let __jt_pair_cc: _T2 = (0x1adf, .nonJoining)
+private let __jt_pair_cd: _T2 = (0x1b00, .transparent)
+private let __jt_pair_ce: _T2 = (0x1b01, .transparent)
+private let __jt_pair_cf: _T2 = (0x1b02, .transparent)
+private let __jt_pair_cg: _T2 = (0x1b03, .transparent)
+private let __jt_pair_ch: _T2 = (0x1b34, .transparent)
+private let __jt_pair_ci: _T2 = (0x1b35, .nonJoining)
+private let __jt_pair_cj: _T2 = (0x1b3b, .nonJoining)
+private let __jt_pair_ck: _T2 = (0x1b3c, .transparent)
+private let __jt_pair_cl: _T2 = (0x1b42, .transparent)
+private let __jt_pair_cm: _T2 = (0x1b80, .transparent)
+private let __jt_pair_cn: _T2 = (0x1b81, .transparent)
+private let __jt_pair_co: _T2 = (0x1ba2, .transparent)
+private let __jt_pair_cp: _T2 = (0x1ba3, .transparent)
+private let __jt_pair_cq: _T2 = (0x1ba4, .transparent)
+private let __jt_pair_cr: _T2 = (0x1ba5, .transparent)
+private let __jt_pair_cs: _T2 = (0x1ba6, .nonJoining)
+private let __jt_pair_ct: _T2 = (0x1ba7, .nonJoining)
+private let __jt_pair_cu: _T2 = (0x1ba8, .transparent)
+private let __jt_pair_cv: _T2 = (0x1ba9, .transparent)
+private let __jt_pair_cw: _T2 = (0x1baa, .nonJoining)
+private let __jt_pair_cx: _T2 = (0x1bab, .transparent)
+private let __jt_pair_cy: _T2 = (0x1bac, .transparent)
+private let __jt_pair_cz: _T2 = (0x1bad, .transparent)
+private let __jt_pair_d0: _T2 = (0x1be6, .transparent)
+private let __jt_pair_d1: _T2 = (0x1be7, .nonJoining)
+private let __jt_pair_d2: _T2 = (0x1be8, .transparent)
+private let __jt_pair_d3: _T2 = (0x1be9, .transparent)
+private let __jt_pair_d4: _T2 = (0x1bea, .nonJoining)
+private let __jt_pair_d5: _T2 = (0x1beb, .nonJoining)
+private let __jt_pair_d6: _T2 = (0x1bec, .nonJoining)
+private let __jt_pair_d7: _T2 = (0x1bed, .transparent)
+private let __jt_pair_d8: _T2 = (0x1bee, .nonJoining)
+private let __jt_pair_d9: _T2 = (0x1bef, .transparent)
+private let __jt_pair_da: _T2 = (0x1bf0, .transparent)
+private let __jt_pair_db: _T2 = (0x1bf1, .transparent)
+private let __jt_pair_dc: _T2 = (0x1c34, .nonJoining)
+private let __jt_pair_dd: _T2 = (0x1c35, .nonJoining)
+private let __jt_pair_de: _T2 = (0x1c36, .transparent)
+private let __jt_pair_df: _T2 = (0x1c37, .transparent)
+private let __jt_pair_dg: _T2 = (0x1cd0, .transparent)
+private let __jt_pair_dh: _T2 = (0x1cd1, .transparent)
+private let __jt_pair_di: _T2 = (0x1cd2, .transparent)
+private let __jt_pair_dj: _T2 = (0x1cd3, .nonJoining)
+private let __jt_pair_dk: _T2 = (0x1ce1, .nonJoining)
+private let __jt_pair_dl: _T2 = (0x1ce9, .nonJoining)
+private let __jt_pair_dm: _T2 = (0x1cea, .nonJoining)
+private let __jt_pair_dn: _T2 = (0x1ceb, .nonJoining)
+private let __jt_pair_do: _T2 = (0x1cec, .nonJoining)
+private let __jt_pair_dp: _T2 = (0x1ced, .transparent)
+private let __jt_pair_dq: _T2 = (0x1cf4, .transparent)
+private let __jt_pair_dr: _T2 = (0x1cf5, .nonJoining)
+private let __jt_pair_ds: _T2 = (0x1cf6, .nonJoining)
+private let __jt_pair_dt: _T2 = (0x1cf7, .nonJoining)
+private let __jt_pair_du: _T2 = (0x1cf8, .transparent)
+private let __jt_pair_dv: _T2 = (0x1cf9, .transparent)
+private let __jt_pair_dw: _T2 = (0x200b, .transparent)
+private let __jt_pair_dx: _T2 = (0x200c, .nonJoining)
+private let __jt_pair_dy: _T2 = (0x200d, .joinCausing)
+private let __jt_pair_dz: _T2 = (0x200e, .transparent)
+private let __jt_pair_e0: _T2 = (0x200f, .transparent)
+private let __jt_pair_e1: _T2 = (0x2cef, .transparent)
+private let __jt_pair_e2: _T2 = (0x2cf0, .transparent)
+private let __jt_pair_e3: _T2 = (0x2cf1, .transparent)
+private let __jt_pair_e4: _T2 = (0x2d7f, .transparent)
+private let __jt_pair_e5: _T2 = (0x302a, .transparent)
+private let __jt_pair_e6: _T2 = (0x302b, .transparent)
+private let __jt_pair_e7: _T2 = (0x302c, .transparent)
+private let __jt_pair_e8: _T2 = (0x302d, .transparent)
+private let __jt_pair_e9: _T2 = (0x3099, .transparent)
+private let __jt_pair_ea: _T2 = (0x309a, .transparent)
+private let __jt_pair_eb: _T2 = (0xa66f, .transparent)
+private let __jt_pair_ec: _T2 = (0xa670, .transparent)
+private let __jt_pair_ed: _T2 = (0xa671, .transparent)
+private let __jt_pair_ee: _T2 = (0xa672, .transparent)
+private let __jt_pair_ef: _T2 = (0xa673, .nonJoining)
+private let __jt_pair_eg: _T2 = (0xa69e, .transparent)
+private let __jt_pair_eh: _T2 = (0xa69f, .transparent)
+private let __jt_pair_ei: _T2 = (0xa6f0, .transparent)
+private let __jt_pair_ej: _T2 = (0xa6f1, .transparent)
+private let __jt_pair_ek: _T2 = (0xa802, .transparent)
+private let __jt_pair_el: _T2 = (0xa803, .nonJoining)
+private let __jt_pair_em: _T2 = (0xa804, .nonJoining)
+private let __jt_pair_en: _T2 = (0xa805, .nonJoining)
+private let __jt_pair_eo: _T2 = (0xa806, .transparent)
+private let __jt_pair_ep: _T2 = (0xa807, .nonJoining)
+private let __jt_pair_eq: _T2 = (0xa808, .nonJoining)
+private let __jt_pair_er: _T2 = (0xa809, .nonJoining)
+private let __jt_pair_es: _T2 = (0xa80a, .nonJoining)
+private let __jt_pair_et: _T2 = (0xa80b, .transparent)
+private let __jt_pair_eu: _T2 = (0xa825, .transparent)
+private let __jt_pair_ev: _T2 = (0xa826, .transparent)
+private let __jt_pair_ew: _T2 = (0xa82c, .transparent)
+private let __jt_pair_ex: _T2 = (0xa872, .leftJoining)
+private let __jt_pair_ey: _T2 = (0xa8c4, .transparent)
+private let __jt_pair_ez: _T2 = (0xa8c5, .transparent)
+private let __jt_pair_f0: _T2 = (0xa8ff, .transparent)
+private let __jt_pair_f1: _T2 = (0xa980, .transparent)
+private let __jt_pair_f2: _T2 = (0xa981, .transparent)
+private let __jt_pair_f3: _T2 = (0xa982, .transparent)
+private let __jt_pair_f4: _T2 = (0xa9b3, .transparent)
+private let __jt_pair_f5: _T2 = (0xa9b4, .nonJoining)
+private let __jt_pair_f6: _T2 = (0xa9b5, .nonJoining)
+private let __jt_pair_f7: _T2 = (0xa9b6, .transparent)
+private let __jt_pair_f8: _T2 = (0xa9b7, .transparent)
+private let __jt_pair_f9: _T2 = (0xa9b8, .transparent)
+private let __jt_pair_fa: _T2 = (0xa9b9, .transparent)
+private let __jt_pair_fb: _T2 = (0xa9ba, .nonJoining)
+private let __jt_pair_fc: _T2 = (0xa9bb, .nonJoining)
+private let __jt_pair_fd: _T2 = (0xa9bc, .transparent)
+private let __jt_pair_fe: _T2 = (0xa9bd, .transparent)
+private let __jt_pair_ff: _T2 = (0xa9e5, .transparent)
+private let __jt_pair_fg: _T2 = (0xaa2f, .nonJoining)
+private let __jt_pair_fh: _T2 = (0xaa30, .nonJoining)
+private let __jt_pair_fi: _T2 = (0xaa31, .transparent)
+private let __jt_pair_fj: _T2 = (0xaa32, .transparent)
+private let __jt_pair_fk: _T2 = (0xaa33, .nonJoining)
+private let __jt_pair_fl: _T2 = (0xaa34, .nonJoining)
+private let __jt_pair_fm: _T2 = (0xaa35, .transparent)
+private let __jt_pair_fn: _T2 = (0xaa36, .transparent)
+private let __jt_pair_fo: _T2 = (0xaa43, .transparent)
+private let __jt_pair_fp: _T2 = (0xaa4c, .transparent)
+private let __jt_pair_fq: _T2 = (0xaa7c, .transparent)
+private let __jt_pair_fr: _T2 = (0xaab0, .transparent)
+private let __jt_pair_fs: _T2 = (0xaab1, .nonJoining)
+private let __jt_pair_ft: _T2 = (0xaab2, .transparent)
+private let __jt_pair_fu: _T2 = (0xaab3, .transparent)
+private let __jt_pair_fv: _T2 = (0xaab4, .transparent)
+private let __jt_pair_fw: _T2 = (0xaab5, .nonJoining)
+private let __jt_pair_fx: _T2 = (0xaab6, .nonJoining)
+private let __jt_pair_fy: _T2 = (0xaab7, .transparent)
+private let __jt_pair_fz: _T2 = (0xaab8, .transparent)
+private let __jt_pair_g0: _T2 = (0xaabe, .transparent)
+private let __jt_pair_g1: _T2 = (0xaabf, .transparent)
+private let __jt_pair_g2: _T2 = (0xaac0, .nonJoining)
+private let __jt_pair_g3: _T2 = (0xaac1, .transparent)
+private let __jt_pair_g4: _T2 = (0xaaec, .transparent)
+private let __jt_pair_g5: _T2 = (0xaaed, .transparent)
+private let __jt_pair_g6: _T2 = (0xaaf6, .transparent)
+private let __jt_pair_g7: _T2 = (0xabe5, .transparent)
+private let __jt_pair_g8: _T2 = (0xabe6, .nonJoining)
+private let __jt_pair_g9: _T2 = (0xabe7, .nonJoining)
+private let __jt_pair_ga: _T2 = (0xabe8, .transparent)
+private let __jt_pair_gb: _T2 = (0xabe9, .nonJoining)
+private let __jt_pair_gc: _T2 = (0xabea, .nonJoining)
+private let __jt_pair_gd: _T2 = (0xabeb, .nonJoining)
+private let __jt_pair_ge: _T2 = (0xabec, .nonJoining)
+private let __jt_pair_gf: _T2 = (0xabed, .transparent)
+private let __jt_pair_gg: _T2 = (0xfb1e, .transparent)
+private let __jt_pair_gh: _T2 = (0xfeff, .transparent)
+private let __jt_pair_gi: _T2 = (0xfff9, .transparent)
+private let __jt_pair_gj: _T2 = (0xfffa, .transparent)
+private let __jt_pair_gk: _T2 = (0xfffb, .transparent)
+private let __jt_pair_gl: _T2 = (0x101fd, .transparent)
+private let __jt_pair_gm: _T2 = (0x102e0, .transparent)
+private let __jt_pair_gn: _T2 = (0x10a01, .transparent)
+private let __jt_pair_go: _T2 = (0x10a02, .transparent)
+private let __jt_pair_gp: _T2 = (0x10a03, .transparent)
+private let __jt_pair_gq: _T2 = (0x10a04, .nonJoining)
+private let __jt_pair_gr: _T2 = (0x10a05, .transparent)
+private let __jt_pair_gs: _T2 = (0x10a06, .transparent)
+private let __jt_pair_gt: _T2 = (0x10a0c, .transparent)
+private let __jt_pair_gu: _T2 = (0x10a0d, .transparent)
+private let __jt_pair_gv: _T2 = (0x10a0e, .transparent)
+private let __jt_pair_gw: _T2 = (0x10a0f, .transparent)
+private let __jt_pair_gx: _T2 = (0x10a38, .transparent)
+private let __jt_pair_gy: _T2 = (0x10a39, .transparent)
+private let __jt_pair_gz: _T2 = (0x10a3a, .transparent)
+private let __jt_pair_h0: _T2 = (0x10a3b, .nonJoining)
+private let __jt_pair_h1: _T2 = (0x10a3c, .nonJoining)
+private let __jt_pair_h2: _T2 = (0x10a3d, .nonJoining)
+private let __jt_pair_h3: _T2 = (0x10a3e, .nonJoining)
+private let __jt_pair_h4: _T2 = (0x10a3f, .transparent)
+private let __jt_pair_h5: _T2 = (0x10ac5, .rightJoining)
+private let __jt_pair_h6: _T2 = (0x10ac6, .nonJoining)
+private let __jt_pair_h7: _T2 = (0x10ac7, .rightJoining)
+private let __jt_pair_h8: _T2 = (0x10ac8, .nonJoining)
+private let __jt_pair_h9: _T2 = (0x10ac9, .rightJoining)
+private let __jt_pair_ha: _T2 = (0x10aca, .rightJoining)
+private let __jt_pair_hb: _T2 = (0x10acb, .nonJoining)
+private let __jt_pair_hc: _T2 = (0x10acc, .nonJoining)
+private let __jt_pair_hd: _T2 = (0x10acd, .leftJoining)
+private let __jt_pair_he: _T2 = (0x10ad3, .dualJoining)
+private let __jt_pair_hf: _T2 = (0x10ad4, .dualJoining)
+private let __jt_pair_hg: _T2 = (0x10ad5, .dualJoining)
+private let __jt_pair_hh: _T2 = (0x10ad6, .dualJoining)
+private let __jt_pair_hi: _T2 = (0x10ad7, .leftJoining)
+private let __jt_pair_hj: _T2 = (0x10add, .rightJoining)
+private let __jt_pair_hk: _T2 = (0x10ade, .dualJoining)
+private let __jt_pair_hl: _T2 = (0x10adf, .dualJoining)
+private let __jt_pair_hm: _T2 = (0x10ae0, .dualJoining)
+private let __jt_pair_hn: _T2 = (0x10ae1, .rightJoining)
+private let __jt_pair_ho: _T2 = (0x10ae2, .nonJoining)
+private let __jt_pair_hp: _T2 = (0x10ae3, .nonJoining)
+private let __jt_pair_hq: _T2 = (0x10ae4, .rightJoining)
+private let __jt_pair_hr: _T2 = (0x10ae5, .transparent)
+private let __jt_pair_hs: _T2 = (0x10ae6, .transparent)
+private let __jt_pair_ht: _T2 = (0x10ae7, .nonJoining)
+private let __jt_pair_hu: _T2 = (0x10ae8, .nonJoining)
+private let __jt_pair_hv: _T2 = (0x10ae9, .nonJoining)
+private let __jt_pair_hw: _T2 = (0x10aea, .nonJoining)
+private let __jt_pair_hx: _T2 = (0x10aeb, .dualJoining)
+private let __jt_pair_hy: _T2 = (0x10aec, .dualJoining)
+private let __jt_pair_hz: _T2 = (0x10aed, .dualJoining)
+private let __jt_pair_i0: _T2 = (0x10aee, .dualJoining)
+private let __jt_pair_i1: _T2 = (0x10aef, .rightJoining)
+private let __jt_pair_i2: _T2 = (0x10b80, .dualJoining)
+private let __jt_pair_i3: _T2 = (0x10b81, .rightJoining)
+private let __jt_pair_i4: _T2 = (0x10b82, .dualJoining)
+private let __jt_pair_i5: _T2 = (0x10b83, .rightJoining)
+private let __jt_pair_i6: _T2 = (0x10b84, .rightJoining)
+private let __jt_pair_i7: _T2 = (0x10b85, .rightJoining)
+private let __jt_pair_i8: _T2 = (0x10b86, .dualJoining)
+private let __jt_pair_i9: _T2 = (0x10b87, .dualJoining)
+private let __jt_pair_ia: _T2 = (0x10b88, .dualJoining)
+private let __jt_pair_ib: _T2 = (0x10b89, .rightJoining)
+private let __jt_pair_ic: _T2 = (0x10b8a, .dualJoining)
+private let __jt_pair_id: _T2 = (0x10b8b, .dualJoining)
+private let __jt_pair_ie: _T2 = (0x10b8c, .rightJoining)
+private let __jt_pair_if: _T2 = (0x10b8d, .dualJoining)
+private let __jt_pair_ig: _T2 = (0x10b8e, .rightJoining)
+private let __jt_pair_ih: _T2 = (0x10b8f, .rightJoining)
+private let __jt_pair_ii: _T2 = (0x10b90, .dualJoining)
+private let __jt_pair_ij: _T2 = (0x10b91, .rightJoining)
+private let __jt_pair_ik: _T2 = (0x10ba9, .rightJoining)
+private let __jt_pair_il: _T2 = (0x10baa, .rightJoining)
+private let __jt_pair_im: _T2 = (0x10bab, .rightJoining)
+private let __jt_pair_in: _T2 = (0x10bac, .rightJoining)
+private let __jt_pair_io: _T2 = (0x10bad, .dualJoining)
+private let __jt_pair_ip: _T2 = (0x10bae, .dualJoining)
+private let __jt_pair_iq: _T2 = (0x10d00, .leftJoining)
+private let __jt_pair_ir: _T2 = (0x10d22, .rightJoining)
+private let __jt_pair_is: _T2 = (0x10d23, .dualJoining)
+private let __jt_pair_it: _T2 = (0x10d24, .transparent)
+private let __jt_pair_iu: _T2 = (0x10d25, .transparent)
+private let __jt_pair_iv: _T2 = (0x10d26, .transparent)
+private let __jt_pair_iw: _T2 = (0x10d27, .transparent)
+private let __jt_pair_ix: _T2 = (0x10eab, .transparent)
+private let __jt_pair_iy: _T2 = (0x10eac, .transparent)
+private let __jt_pair_iz: _T2 = (0x10ec2, .rightJoining)
+private let __jt_pair_j0: _T2 = (0x10ec3, .dualJoining)
+private let __jt_pair_j1: _T2 = (0x10ec4, .dualJoining)
+private let __jt_pair_j2: _T2 = (0x10ec5, .nonJoining)
+private let __jt_pair_j3: _T2 = (0x10ec6, .dualJoining)
+private let __jt_pair_j4: _T2 = (0x10ec7, .dualJoining)
+private let __jt_pair_j5: _T2 = (0x10f30, .dualJoining)
+private let __jt_pair_j6: _T2 = (0x10f31, .dualJoining)
+private let __jt_pair_j7: _T2 = (0x10f32, .dualJoining)
+private let __jt_pair_j8: _T2 = (0x10f33, .rightJoining)
+private let __jt_pair_j9: _T2 = (0x10f45, .nonJoining)
+private let __jt_pair_ja: _T2 = (0x10f51, .dualJoining)
+private let __jt_pair_jb: _T2 = (0x10f52, .dualJoining)
+private let __jt_pair_jc: _T2 = (0x10f53, .dualJoining)
+private let __jt_pair_jd: _T2 = (0x10f54, .rightJoining)
+private let __jt_pair_je: _T2 = (0x10f70, .dualJoining)
+private let __jt_pair_jf: _T2 = (0x10f71, .dualJoining)
+private let __jt_pair_jg: _T2 = (0x10f72, .dualJoining)
+private let __jt_pair_jh: _T2 = (0x10f73, .dualJoining)
+private let __jt_pair_ji: _T2 = (0x10f74, .rightJoining)
+private let __jt_pair_jj: _T2 = (0x10f75, .rightJoining)
+private let __jt_pair_jk: _T2 = (0x10f82, .transparent)
+private let __jt_pair_jl: _T2 = (0x10f83, .transparent)
+private let __jt_pair_jm: _T2 = (0x10f84, .transparent)
+private let __jt_pair_jn: _T2 = (0x10f85, .transparent)
+private let __jt_pair_jo: _T2 = (0x10fb0, .dualJoining)
+private let __jt_pair_jp: _T2 = (0x10fb1, .nonJoining)
+private let __jt_pair_jq: _T2 = (0x10fb2, .dualJoining)
+private let __jt_pair_jr: _T2 = (0x10fb3, .dualJoining)
+private let __jt_pair_js: _T2 = (0x10fb4, .rightJoining)
+private let __jt_pair_jt: _T2 = (0x10fb5, .rightJoining)
+private let __jt_pair_ju: _T2 = (0x10fb6, .rightJoining)
+private let __jt_pair_jv: _T2 = (0x10fb7, .nonJoining)
+private let __jt_pair_jw: _T2 = (0x10fb8, .dualJoining)
+private let __jt_pair_jx: _T2 = (0x10fb9, .rightJoining)
+private let __jt_pair_jy: _T2 = (0x10fba, .rightJoining)
+private let __jt_pair_jz: _T2 = (0x10fbb, .dualJoining)
+private let __jt_pair_k0: _T2 = (0x10fbc, .dualJoining)
+private let __jt_pair_k1: _T2 = (0x10fbd, .rightJoining)
+private let __jt_pair_k2: _T2 = (0x10fbe, .dualJoining)
+private let __jt_pair_k3: _T2 = (0x10fbf, .dualJoining)
+private let __jt_pair_k4: _T2 = (0x10fc0, .nonJoining)
+private let __jt_pair_k5: _T2 = (0x10fc1, .dualJoining)
+private let __jt_pair_k6: _T2 = (0x10fc2, .rightJoining)
+private let __jt_pair_k7: _T2 = (0x10fc3, .rightJoining)
+private let __jt_pair_k8: _T2 = (0x10fc4, .dualJoining)
+private let __jt_pair_k9: _T2 = (0x10fc5, .nonJoining)
+private let __jt_pair_ka: _T2 = (0x10fc6, .nonJoining)
+private let __jt_pair_kb: _T2 = (0x10fc7, .nonJoining)
+private let __jt_pair_kc: _T2 = (0x10fc8, .nonJoining)
+private let __jt_pair_kd: _T2 = (0x10fc9, .rightJoining)
+private let __jt_pair_ke: _T2 = (0x10fca, .dualJoining)
+private let __jt_pair_kf: _T2 = (0x10fcb, .leftJoining)
+private let __jt_pair_kg: _T2 = (0x11001, .transparent)
+private let __jt_pair_kh: _T2 = (0x11070, .transparent)
+private let __jt_pair_ki: _T2 = (0x11071, .nonJoining)
+private let __jt_pair_kj: _T2 = (0x11072, .nonJoining)
+private let __jt_pair_kk: _T2 = (0x11073, .transparent)
+private let __jt_pair_kl: _T2 = (0x11074, .transparent)
+private let __jt_pair_km: _T2 = (0x1107f, .transparent)
+private let __jt_pair_kn: _T2 = (0x11080, .transparent)
+private let __jt_pair_ko: _T2 = (0x11081, .transparent)
+private let __jt_pair_kp: _T2 = (0x110b3, .transparent)
+private let __jt_pair_kq: _T2 = (0x110b4, .transparent)
+private let __jt_pair_kr: _T2 = (0x110b5, .transparent)
+private let __jt_pair_ks: _T2 = (0x110b6, .transparent)
+private let __jt_pair_kt: _T2 = (0x110b7, .nonJoining)
+private let __jt_pair_ku: _T2 = (0x110b8, .nonJoining)
+private let __jt_pair_kv: _T2 = (0x110b9, .transparent)
+private let __jt_pair_kw: _T2 = (0x110ba, .transparent)
+private let __jt_pair_kx: _T2 = (0x110c2, .transparent)
+private let __jt_pair_ky: _T2 = (0x11100, .transparent)
+private let __jt_pair_kz: _T2 = (0x11101, .transparent)
+private let __jt_pair_l0: _T2 = (0x11102, .transparent)
+private let __jt_pair_l1: _T2 = (0x1112c, .nonJoining)
+private let __jt_pair_l2: _T2 = (0x11173, .transparent)
+private let __jt_pair_l3: _T2 = (0x11180, .transparent)
+private let __jt_pair_l4: _T2 = (0x11181, .transparent)
+private let __jt_pair_l5: _T2 = (0x111c9, .transparent)
+private let __jt_pair_l6: _T2 = (0x111ca, .transparent)
+private let __jt_pair_l7: _T2 = (0x111cb, .transparent)
+private let __jt_pair_l8: _T2 = (0x111cc, .transparent)
+private let __jt_pair_l9: _T2 = (0x111cd, .nonJoining)
+private let __jt_pair_la: _T2 = (0x111ce, .nonJoining)
+private let __jt_pair_lb: _T2 = (0x111cf, .transparent)
+private let __jt_pair_lc: _T2 = (0x1122f, .transparent)
+private let __jt_pair_ld: _T2 = (0x11230, .transparent)
+private let __jt_pair_le: _T2 = (0x11231, .transparent)
+private let __jt_pair_lf: _T2 = (0x11232, .nonJoining)
+private let __jt_pair_lg: _T2 = (0x11233, .nonJoining)
+private let __jt_pair_lh: _T2 = (0x11234, .transparent)
+private let __jt_pair_li: _T2 = (0x11235, .nonJoining)
+private let __jt_pair_lj: _T2 = (0x11236, .transparent)
+private let __jt_pair_lk: _T2 = (0x11237, .transparent)
+private let __jt_pair_ll: _T2 = (0x1123e, .transparent)
+private let __jt_pair_lm: _T2 = (0x1123f, .nonJoining)
+private let __jt_pair_ln: _T2 = (0x11240, .nonJoining)
+private let __jt_pair_lo: _T2 = (0x11241, .transparent)
+private let __jt_pair_lp: _T2 = (0x112df, .transparent)
+private let __jt_pair_lq: _T2 = (0x112e0, .nonJoining)
+private let __jt_pair_lr: _T2 = (0x112e1, .nonJoining)
+private let __jt_pair_ls: _T2 = (0x112e2, .nonJoining)
+private let __jt_pair_lt: _T2 = (0x11300, .transparent)
+private let __jt_pair_lu: _T2 = (0x11301, .transparent)
+private let __jt_pair_lv: _T2 = (0x1133b, .transparent)
+private let __jt_pair_lw: _T2 = (0x1133c, .transparent)
+private let __jt_pair_lx: _T2 = (0x1133d, .nonJoining)
+private let __jt_pair_ly: _T2 = (0x1133e, .nonJoining)
+private let __jt_pair_lz: _T2 = (0x1133f, .nonJoining)
+private let __jt_pair_m0: _T2 = (0x11340, .transparent)
+private let __jt_pair_m1: _T2 = (0x1136d, .nonJoining)
+private let __jt_pair_m2: _T2 = (0x1136e, .nonJoining)
+private let __jt_pair_m3: _T2 = (0x1136f, .nonJoining)
+private let __jt_pair_m4: _T2 = (0x113ce, .transparent)
+private let __jt_pair_m5: _T2 = (0x113cf, .nonJoining)
+private let __jt_pair_m6: _T2 = (0x113d0, .transparent)
+private let __jt_pair_m7: _T2 = (0x113d1, .nonJoining)
+private let __jt_pair_m8: _T2 = (0x113d2, .transparent)
+private let __jt_pair_m9: _T2 = (0x113e1, .transparent)
+private let __jt_pair_ma: _T2 = (0x113e2, .transparent)
+private let __jt_pair_mb: _T2 = (0x11440, .nonJoining)
+private let __jt_pair_mc: _T2 = (0x11441, .nonJoining)
+private let __jt_pair_md: _T2 = (0x11442, .transparent)
+private let __jt_pair_me: _T2 = (0x11443, .transparent)
+private let __jt_pair_mf: _T2 = (0x11444, .transparent)
+private let __jt_pair_mg: _T2 = (0x11445, .nonJoining)
+private let __jt_pair_mh: _T2 = (0x11446, .transparent)
+private let __jt_pair_mi: _T2 = (0x1145e, .transparent)
+private let __jt_pair_mj: _T2 = (0x114b9, .nonJoining)
+private let __jt_pair_mk: _T2 = (0x114ba, .transparent)
+private let __jt_pair_ml: _T2 = (0x114bb, .nonJoining)
+private let __jt_pair_mm: _T2 = (0x114bc, .nonJoining)
+private let __jt_pair_mn: _T2 = (0x114bd, .nonJoining)
+private let __jt_pair_mo: _T2 = (0x114be, .nonJoining)
+private let __jt_pair_mp: _T2 = (0x114bf, .transparent)
+private let __jt_pair_mq: _T2 = (0x114c0, .transparent)
+private let __jt_pair_mr: _T2 = (0x114c1, .nonJoining)
+private let __jt_pair_ms: _T2 = (0x114c2, .transparent)
+private let __jt_pair_mt: _T2 = (0x114c3, .transparent)
+private let __jt_pair_mu: _T2 = (0x115b2, .transparent)
+private let __jt_pair_mv: _T2 = (0x115b3, .transparent)
+private let __jt_pair_mw: _T2 = (0x115b4, .transparent)
+private let __jt_pair_mx: _T2 = (0x115b5, .transparent)
+private let __jt_pair_my: _T2 = (0x115bc, .transparent)
+private let __jt_pair_mz: _T2 = (0x115bd, .transparent)
+private let __jt_pair_n0: _T2 = (0x115be, .nonJoining)
+private let __jt_pair_n1: _T2 = (0x115bf, .transparent)
+private let __jt_pair_n2: _T2 = (0x115c0, .transparent)
+private let __jt_pair_n3: _T2 = (0x115dc, .transparent)
+private let __jt_pair_n4: _T2 = (0x115dd, .transparent)
+private let __jt_pair_n5: _T2 = (0x1163b, .nonJoining)
+private let __jt_pair_n6: _T2 = (0x1163c, .nonJoining)
+private let __jt_pair_n7: _T2 = (0x1163d, .transparent)
+private let __jt_pair_n8: _T2 = (0x1163e, .nonJoining)
+private let __jt_pair_n9: _T2 = (0x1163f, .transparent)
+private let __jt_pair_na: _T2 = (0x11640, .transparent)
+private let __jt_pair_nb: _T2 = (0x116ab, .transparent)
+private let __jt_pair_nc: _T2 = (0x116ac, .nonJoining)
+private let __jt_pair_nd: _T2 = (0x116ad, .transparent)
+private let __jt_pair_ne: _T2 = (0x116ae, .nonJoining)
+private let __jt_pair_nf: _T2 = (0x116af, .nonJoining)
+private let __jt_pair_ng: _T2 = (0x116b6, .nonJoining)
+private let __jt_pair_nh: _T2 = (0x116b7, .transparent)
+private let __jt_pair_ni: _T2 = (0x1171d, .transparent)
+private let __jt_pair_nj: _T2 = (0x1171e, .nonJoining)
+private let __jt_pair_nk: _T2 = (0x1171f, .transparent)
+private let __jt_pair_nl: _T2 = (0x11720, .nonJoining)
+private let __jt_pair_nm: _T2 = (0x11721, .nonJoining)
+private let __jt_pair_nn: _T2 = (0x11722, .transparent)
+private let __jt_pair_no: _T2 = (0x11723, .transparent)
+private let __jt_pair_np: _T2 = (0x11724, .transparent)
+private let __jt_pair_nq: _T2 = (0x11725, .transparent)
+private let __jt_pair_nr: _T2 = (0x11726, .nonJoining)
+private let __jt_pair_ns: _T2 = (0x11838, .nonJoining)
+private let __jt_pair_nt: _T2 = (0x11839, .transparent)
+private let __jt_pair_nu: _T2 = (0x1183a, .transparent)
+private let __jt_pair_nv: _T2 = (0x1193b, .transparent)
+private let __jt_pair_nw: _T2 = (0x1193c, .transparent)
+private let __jt_pair_nx: _T2 = (0x1193d, .nonJoining)
+private let __jt_pair_ny: _T2 = (0x1193e, .transparent)
+private let __jt_pair_nz: _T2 = (0x1193f, .nonJoining)
+private let __jt_pair_o0: _T2 = (0x11940, .nonJoining)
+private let __jt_pair_o1: _T2 = (0x11941, .nonJoining)
+private let __jt_pair_o2: _T2 = (0x11942, .nonJoining)
+private let __jt_pair_o3: _T2 = (0x11943, .transparent)
+private let __jt_pair_o4: _T2 = (0x119d4, .transparent)
+private let __jt_pair_o5: _T2 = (0x119d5, .transparent)
+private let __jt_pair_o6: _T2 = (0x119d6, .transparent)
+private let __jt_pair_o7: _T2 = (0x119d7, .transparent)
+private let __jt_pair_o8: _T2 = (0x119d8, .nonJoining)
+private let __jt_pair_o9: _T2 = (0x119d9, .nonJoining)
+private let __jt_pair_oa: _T2 = (0x119da, .transparent)
+private let __jt_pair_ob: _T2 = (0x119db, .transparent)
+private let __jt_pair_oc: _T2 = (0x119dc, .nonJoining)
+private let __jt_pair_od: _T2 = (0x119dd, .nonJoining)
+private let __jt_pair_oe: _T2 = (0x119de, .nonJoining)
+private let __jt_pair_of: _T2 = (0x119df, .nonJoining)
+private let __jt_pair_og: _T2 = (0x119e0, .transparent)
+private let __jt_pair_oh: _T2 = (0x11a39, .nonJoining)
+private let __jt_pair_oi: _T2 = (0x11a3a, .nonJoining)
+private let __jt_pair_oj: _T2 = (0x11a3b, .transparent)
+private let __jt_pair_ok: _T2 = (0x11a3c, .transparent)
+private let __jt_pair_ol: _T2 = (0x11a3d, .transparent)
+private let __jt_pair_om: _T2 = (0x11a3e, .transparent)
+private let __jt_pair_on: _T2 = (0x11a47, .transparent)
+private let __jt_pair_oo: _T2 = (0x11a57, .nonJoining)
+private let __jt_pair_op: _T2 = (0x11a58, .nonJoining)
+private let __jt_pair_oq: _T2 = (0x11a59, .transparent)
+private let __jt_pair_or: _T2 = (0x11a5a, .transparent)
+private let __jt_pair_os: _T2 = (0x11a5b, .transparent)
+private let __jt_pair_ot: _T2 = (0x11a97, .nonJoining)
+private let __jt_pair_ou: _T2 = (0x11a98, .transparent)
+private let __jt_pair_ov: _T2 = (0x11a99, .transparent)
+private let __jt_pair_ow: _T2 = (0x11b60, .transparent)
+private let __jt_pair_ox: _T2 = (0x11b61, .nonJoining)
+private let __jt_pair_oy: _T2 = (0x11b62, .transparent)
+private let __jt_pair_oz: _T2 = (0x11b63, .transparent)
+private let __jt_pair_p0: _T2 = (0x11b64, .transparent)
+private let __jt_pair_p1: _T2 = (0x11b65, .nonJoining)
+private let __jt_pair_p2: _T2 = (0x11b66, .transparent)
+private let __jt_pair_p3: _T2 = (0x11c37, .nonJoining)
+private let __jt_pair_p4: _T2 = (0x11c3e, .nonJoining)
+private let __jt_pair_p5: _T2 = (0x11c3f, .transparent)
+private let __jt_pair_p6: _T2 = (0x11ca8, .nonJoining)
+private let __jt_pair_p7: _T2 = (0x11ca9, .nonJoining)
+private let __jt_pair_p8: _T2 = (0x11cb1, .nonJoining)
+private let __jt_pair_p9: _T2 = (0x11cb2, .transparent)
+private let __jt_pair_pa: _T2 = (0x11cb3, .transparent)
+private let __jt_pair_pb: _T2 = (0x11cb4, .nonJoining)
+private let __jt_pair_pc: _T2 = (0x11cb5, .transparent)
+private let __jt_pair_pd: _T2 = (0x11cb6, .transparent)
+private let __jt_pair_pe: _T2 = (0x11d37, .nonJoining)
+private let __jt_pair_pf: _T2 = (0x11d38, .nonJoining)
+private let __jt_pair_pg: _T2 = (0x11d39, .nonJoining)
+private let __jt_pair_ph: _T2 = (0x11d3a, .transparent)
+private let __jt_pair_pi: _T2 = (0x11d3b, .nonJoining)
+private let __jt_pair_pj: _T2 = (0x11d3c, .transparent)
+private let __jt_pair_pk: _T2 = (0x11d3d, .transparent)
+private let __jt_pair_pl: _T2 = (0x11d3e, .nonJoining)
+private let __jt_pair_pm: _T2 = (0x11d46, .nonJoining)
+private let __jt_pair_pn: _T2 = (0x11d47, .transparent)
+private let __jt_pair_po: _T2 = (0x11d90, .transparent)
+private let __jt_pair_pp: _T2 = (0x11d91, .transparent)
+private let __jt_pair_pq: _T2 = (0x11d92, .nonJoining)
+private let __jt_pair_pr: _T2 = (0x11d93, .nonJoining)
+private let __jt_pair_ps: _T2 = (0x11d94, .nonJoining)
+private let __jt_pair_pt: _T2 = (0x11d95, .transparent)
+private let __jt_pair_pu: _T2 = (0x11d96, .nonJoining)
+private let __jt_pair_pv: _T2 = (0x11d97, .transparent)
+private let __jt_pair_pw: _T2 = (0x11ef3, .transparent)
+private let __jt_pair_px: _T2 = (0x11ef4, .transparent)
+private let __jt_pair_py: _T2 = (0x11f00, .transparent)
+private let __jt_pair_pz: _T2 = (0x11f01, .transparent)
+private let __jt_pair_q0: _T2 = (0x11f40, .transparent)
+private let __jt_pair_q1: _T2 = (0x11f41, .nonJoining)
+private let __jt_pair_q2: _T2 = (0x11f42, .transparent)
+private let __jt_pair_q3: _T2 = (0x11f5a, .transparent)
+private let __jt_pair_q4: _T2 = (0x1612a, .nonJoining)
+private let __jt_pair_q5: _T2 = (0x1612b, .nonJoining)
+private let __jt_pair_q6: _T2 = (0x1612c, .nonJoining)
+private let __jt_pair_q7: _T2 = (0x1612d, .transparent)
+private let __jt_pair_q8: _T2 = (0x1612e, .transparent)
+private let __jt_pair_q9: _T2 = (0x1612f, .transparent)
+private let __jt_pair_qa: _T2 = (0x16f4f, .transparent)
+private let __jt_pair_qb: _T2 = (0x16f8f, .transparent)
+private let __jt_pair_qc: _T2 = (0x16f90, .transparent)
+private let __jt_pair_qd: _T2 = (0x16f91, .transparent)
+private let __jt_pair_qe: _T2 = (0x16f92, .transparent)
+private let __jt_pair_qf: _T2 = (0x16fe4, .transparent)
+private let __jt_pair_qg: _T2 = (0x1bc9d, .transparent)
+private let __jt_pair_qh: _T2 = (0x1bc9e, .transparent)
+private let __jt_pair_qi: _T2 = (0x1bc9f, .nonJoining)
+private let __jt_pair_qj: _T2 = (0x1bca0, .transparent)
+private let __jt_pair_qk: _T2 = (0x1bca1, .transparent)
+private let __jt_pair_ql: _T2 = (0x1bca2, .transparent)
+private let __jt_pair_qm: _T2 = (0x1bca3, .transparent)
+private let __jt_pair_qn: _T2 = (0x1cf2e, .nonJoining)
+private let __jt_pair_qo: _T2 = (0x1cf2f, .nonJoining)
+private let __jt_pair_qp: _T2 = (0x1d167, .transparent)
+private let __jt_pair_qq: _T2 = (0x1d168, .transparent)
+private let __jt_pair_qr: _T2 = (0x1d169, .transparent)
+private let __jt_pair_qs: _T2 = (0x1d183, .nonJoining)
+private let __jt_pair_qt: _T2 = (0x1d184, .nonJoining)
+private let __jt_pair_qu: _T2 = (0x1d1aa, .transparent)
+private let __jt_pair_qv: _T2 = (0x1d1ab, .transparent)
+private let __jt_pair_qw: _T2 = (0x1d1ac, .transparent)
+private let __jt_pair_qx: _T2 = (0x1d1ad, .transparent)
+private let __jt_pair_qy: _T2 = (0x1d242, .transparent)
+private let __jt_pair_qz: _T2 = (0x1d243, .transparent)
+private let __jt_pair_r0: _T2 = (0x1d244, .transparent)
+private let __jt_pair_r1: _T2 = (0x1da37, .nonJoining)
+private let __jt_pair_r2: _T2 = (0x1da38, .nonJoining)
+private let __jt_pair_r3: _T2 = (0x1da39, .nonJoining)
+private let __jt_pair_r4: _T2 = (0x1da3a, .nonJoining)
+private let __jt_pair_r5: _T2 = (0x1da75, .transparent)
+private let __jt_pair_r6: _T2 = (0x1da84, .transparent)
+private let __jt_pair_r7: _T2 = (0x1daa0, .nonJoining)
+private let __jt_pair_r8: _T2 = (0x1e007, .nonJoining)
+private let __jt_pair_r9: _T2 = (0x1e019, .nonJoining)
+private let __jt_pair_ra: _T2 = (0x1e01a, .nonJoining)
+private let __jt_pair_rb: _T2 = (0x1e022, .nonJoining)
+private let __jt_pair_rc: _T2 = (0x1e023, .transparent)
+private let __jt_pair_rd: _T2 = (0x1e024, .transparent)
+private let __jt_pair_re: _T2 = (0x1e025, .nonJoining)
+private let __jt_pair_rf: _T2 = (0x1e08f, .transparent)
+private let __jt_pair_rg: _T2 = (0x1e2ae, .transparent)
+private let __jt_pair_rh: _T2 = (0x1e2ec, .transparent)
+private let __jt_pair_ri: _T2 = (0x1e2ed, .transparent)
+private let __jt_pair_rj: _T2 = (0x1e2ee, .transparent)
+private let __jt_pair_rk: _T2 = (0x1e2ef, .transparent)
+private let __jt_pair_rl: _T2 = (0x1e4ec, .transparent)
+private let __jt_pair_rm: _T2 = (0x1e4ed, .transparent)
+private let __jt_pair_rn: _T2 = (0x1e4ee, .transparent)
+private let __jt_pair_ro: _T2 = (0x1e4ef, .transparent)
+private let __jt_pair_rp: _T2 = (0x1e5ee, .transparent)
+private let __jt_pair_rq: _T2 = (0x1e5ef, .transparent)
+private let __jt_pair_rr: _T2 = (0x1e6e3, .transparent)
+private let __jt_pair_rs: _T2 = (0x1e6e4, .nonJoining)
+private let __jt_pair_rt: _T2 = (0x1e6e5, .nonJoining)
+private let __jt_pair_ru: _T2 = (0x1e6e6, .transparent)
+private let __jt_pair_rv: _T2 = (0x1e6ee, .transparent)
+private let __jt_pair_rw: _T2 = (0x1e6ef, .transparent)
+private let __jt_pair_rx: _T2 = (0x1e6f5, .transparent)
+private let __jt_pair_ry: _T2 = (0xe0001, .transparent)
+private let __jt_dictionary = Dictionary<_T0, _T1>(uniqueKeysWithValues: [
   __jt_pair_0,
   __jt_pair_1,
   __jt_pair_2,
@@ -2074,743 +2075,743 @@ private let __jt_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWi
   __jt_pair_rx,
   __jt_pair_ry,
 ])
-private let __jt_rangePair_0: _T2 = (0x0...<0xad, .nonJoining)
-private let __jt_rangePair_1: _T2 = (0xad<...<0x300, .nonJoining)
-private let __jt_rangePair_2: _T2 = (0x300....0x36f, .transparent)
-private let __jt_rangePair_3: _T2 = (0x36f<...<0x483, .nonJoining)
-private let __jt_rangePair_4: _T2 = (0x483....0x489, .transparent)
-private let __jt_rangePair_5: _T2 = (0x489<...<0x591, .nonJoining)
-private let __jt_rangePair_6: _T2 = (0x591....0x5bd, .transparent)
-private let __jt_rangePair_7: _T2 = (0x5c7<...<0x610, .nonJoining)
-private let __jt_rangePair_8: _T2 = (0x610....0x61a, .transparent)
-private let __jt_rangePair_9: _T2 = (0x62a....0x62e, .dualJoining)
-private let __jt_rangePair_a: _T2 = (0x633....0x63f, .dualJoining)
-private let __jt_rangePair_b: _T2 = (0x641....0x647, .dualJoining)
-private let __jt_rangePair_c: _T2 = (0x64b....0x65f, .transparent)
-private let __jt_rangePair_d: _T2 = (0x65f<...<0x66e, .nonJoining)
-private let __jt_rangePair_e: _T2 = (0x678....0x687, .dualJoining)
-private let __jt_rangePair_f: _T2 = (0x688....0x699, .rightJoining)
-private let __jt_rangePair_g: _T2 = (0x69a....0x6bf, .dualJoining)
-private let __jt_rangePair_h: _T2 = (0x6c3....0x6cb, .rightJoining)
-private let __jt_rangePair_i: _T2 = (0x6d6....0x6dc, .transparent)
-private let __jt_rangePair_j: _T2 = (0x6df....0x6e4, .transparent)
-private let __jt_rangePair_k: _T2 = (0x6ef<...<0x6fa, .nonJoining)
-private let __jt_rangePair_l: _T2 = (0x6ff<...<0x70f, .nonJoining)
-private let __jt_rangePair_m: _T2 = (0x715....0x719, .rightJoining)
-private let __jt_rangePair_n: _T2 = (0x71f....0x727, .dualJoining)
-private let __jt_rangePair_o: _T2 = (0x730....0x74a, .transparent)
-private let __jt_rangePair_p: _T2 = (0x74e....0x758, .dualJoining)
-private let __jt_rangePair_q: _T2 = (0x75c....0x76a, .dualJoining)
-private let __jt_rangePair_r: _T2 = (0x77a....0x77f, .dualJoining)
-private let __jt_rangePair_s: _T2 = (0x77f<...<0x7a6, .nonJoining)
-private let __jt_rangePair_t: _T2 = (0x7a6....0x7b0, .transparent)
-private let __jt_rangePair_u: _T2 = (0x7b0<...<0x7ca, .nonJoining)
-private let __jt_rangePair_v: _T2 = (0x7ca....0x7ea, .dualJoining)
-private let __jt_rangePair_w: _T2 = (0x7eb....0x7f3, .transparent)
-private let __jt_rangePair_x: _T2 = (0x7f3<...<0x7fa, .nonJoining)
-private let __jt_rangePair_y: _T2 = (0x7fd<...<0x816, .nonJoining)
-private let __jt_rangePair_z: _T2 = (0x81b....0x823, .transparent)
-private let __jt_rangePair_10: _T2 = (0x829....0x82d, .transparent)
-private let __jt_rangePair_11: _T2 = (0x82d<...<0x840, .nonJoining)
-private let __jt_rangePair_12: _T2 = (0x841....0x845, .dualJoining)
-private let __jt_rangePair_13: _T2 = (0x84a....0x853, .dualJoining)
-private let __jt_rangePair_14: _T2 = (0x86a<...<0x870, .nonJoining)
-private let __jt_rangePair_15: _T2 = (0x870....0x882, .rightJoining)
-private let __jt_rangePair_16: _T2 = (0x889....0x88d, .dualJoining)
-private let __jt_rangePair_17: _T2 = (0x88f<...<0x897, .nonJoining)
-private let __jt_rangePair_18: _T2 = (0x897....0x89f, .transparent)
-private let __jt_rangePair_19: _T2 = (0x8a0....0x8a9, .dualJoining)
-private let __jt_rangePair_1a: _T2 = (0x8b3....0x8b8, .dualJoining)
-private let __jt_rangePair_1b: _T2 = (0x8ba....0x8c8, .dualJoining)
-private let __jt_rangePair_1c: _T2 = (0x8ca....0x8e1, .transparent)
-private let __jt_rangePair_1d: _T2 = (0x8e3....0x902, .transparent)
-private let __jt_rangePair_1e: _T2 = (0x902<...<0x93a, .nonJoining)
-private let __jt_rangePair_1f: _T2 = (0x941....0x948, .transparent)
-private let __jt_rangePair_1g: _T2 = (0x951....0x957, .transparent)
-private let __jt_rangePair_1h: _T2 = (0x957<...<0x962, .nonJoining)
-private let __jt_rangePair_1i: _T2 = (0x963<...<0x981, .nonJoining)
-private let __jt_rangePair_1j: _T2 = (0x981<...<0x9bc, .nonJoining)
-private let __jt_rangePair_1k: _T2 = (0x9c4<...<0x9cd, .nonJoining)
-private let __jt_rangePair_1l: _T2 = (0x9cd<...<0x9e2, .nonJoining)
-private let __jt_rangePair_1m: _T2 = (0x9e3<...<0x9fe, .nonJoining)
-private let __jt_rangePair_1n: _T2 = (0xa02<...<0xa3c, .nonJoining)
-private let __jt_rangePair_1o: _T2 = (0xa51<...<0xa70, .nonJoining)
-private let __jt_rangePair_1p: _T2 = (0xa75<...<0xa81, .nonJoining)
-private let __jt_rangePair_1q: _T2 = (0xa82<...<0xabc, .nonJoining)
-private let __jt_rangePair_1r: _T2 = (0xac1....0xac5, .transparent)
-private let __jt_rangePair_1s: _T2 = (0xacd<...<0xae2, .nonJoining)
-private let __jt_rangePair_1t: _T2 = (0xae3<...<0xafa, .nonJoining)
-private let __jt_rangePair_1u: _T2 = (0xafa....0xaff, .transparent)
-private let __jt_rangePair_1v: _T2 = (0xb01<...<0xb3c, .nonJoining)
-private let __jt_rangePair_1w: _T2 = (0xb44<...<0xb4d, .nonJoining)
-private let __jt_rangePair_1x: _T2 = (0xb4d<...<0xb55, .nonJoining)
-private let __jt_rangePair_1y: _T2 = (0xb56<...<0xb62, .nonJoining)
-private let __jt_rangePair_1z: _T2 = (0xb63<...<0xb82, .nonJoining)
-private let __jt_rangePair_20: _T2 = (0xb82<...<0xbc0, .nonJoining)
-private let __jt_rangePair_21: _T2 = (0xbc0<...<0xbcd, .nonJoining)
-private let __jt_rangePair_22: _T2 = (0xbcd<...<0xc00, .nonJoining)
-private let __jt_rangePair_23: _T2 = (0xc04<...<0xc3c, .nonJoining)
-private let __jt_rangePair_24: _T2 = (0xc40<...<0xc46, .nonJoining)
-private let __jt_rangePair_25: _T2 = (0xc4d<...<0xc55, .nonJoining)
-private let __jt_rangePair_26: _T2 = (0xc56<...<0xc62, .nonJoining)
-private let __jt_rangePair_27: _T2 = (0xc63<...<0xc81, .nonJoining)
-private let __jt_rangePair_28: _T2 = (0xc81<...<0xcbc, .nonJoining)
-private let __jt_rangePair_29: _T2 = (0xcbf<...<0xcc6, .nonJoining)
-private let __jt_rangePair_2a: _T2 = (0xcc6<...<0xccc, .nonJoining)
-private let __jt_rangePair_2b: _T2 = (0xccd<...<0xce2, .nonJoining)
-private let __jt_rangePair_2c: _T2 = (0xce3<...<0xd00, .nonJoining)
-private let __jt_rangePair_2d: _T2 = (0xd01<...<0xd3b, .nonJoining)
-private let __jt_rangePair_2e: _T2 = (0xd44<...<0xd4d, .nonJoining)
-private let __jt_rangePair_2f: _T2 = (0xd4d<...<0xd62, .nonJoining)
-private let __jt_rangePair_2g: _T2 = (0xd63<...<0xd81, .nonJoining)
-private let __jt_rangePair_2h: _T2 = (0xd81<...<0xdca, .nonJoining)
-private let __jt_rangePair_2i: _T2 = (0xdca<...<0xdd2, .nonJoining)
-private let __jt_rangePair_2j: _T2 = (0xdd6<...<0xe31, .nonJoining)
-private let __jt_rangePair_2k: _T2 = (0xe34....0xe3a, .transparent)
-private let __jt_rangePair_2l: _T2 = (0xe3a<...<0xe47, .nonJoining)
-private let __jt_rangePair_2m: _T2 = (0xe47....0xe4e, .transparent)
-private let __jt_rangePair_2n: _T2 = (0xe4e<...<0xeb1, .nonJoining)
-private let __jt_rangePair_2o: _T2 = (0xeb4....0xebc, .transparent)
-private let __jt_rangePair_2p: _T2 = (0xebc<...<0xec8, .nonJoining)
-private let __jt_rangePair_2q: _T2 = (0xec8....0xece, .transparent)
-private let __jt_rangePair_2r: _T2 = (0xece<...<0xf18, .nonJoining)
-private let __jt_rangePair_2s: _T2 = (0xf19<...<0xf35, .nonJoining)
-private let __jt_rangePair_2t: _T2 = (0xf39<...<0xf71, .nonJoining)
-private let __jt_rangePair_2u: _T2 = (0xf71....0xf7e, .transparent)
-private let __jt_rangePair_2v: _T2 = (0xf80....0xf84, .transparent)
-private let __jt_rangePair_2w: _T2 = (0xf87<...<0xf8d, .nonJoining)
-private let __jt_rangePair_2x: _T2 = (0xf8d....0xf97, .transparent)
-private let __jt_rangePair_2y: _T2 = (0xf99....0xfbc, .transparent)
-private let __jt_rangePair_2z: _T2 = (0xfbc<...<0xfc6, .nonJoining)
-private let __jt_rangePair_30: _T2 = (0xfc6<...<0x102d, .nonJoining)
-private let __jt_rangePair_31: _T2 = (0x1032....0x1037, .transparent)
-private let __jt_rangePair_32: _T2 = (0x103e<...<0x1058, .nonJoining)
-private let __jt_rangePair_33: _T2 = (0x1060<...<0x1071, .nonJoining)
-private let __jt_rangePair_34: _T2 = (0x1074<...<0x1082, .nonJoining)
-private let __jt_rangePair_35: _T2 = (0x1086<...<0x108d, .nonJoining)
-private let __jt_rangePair_36: _T2 = (0x108d<...<0x109d, .nonJoining)
-private let __jt_rangePair_37: _T2 = (0x109d<...<0x135d, .nonJoining)
-private let __jt_rangePair_38: _T2 = (0x135f<...<0x1712, .nonJoining)
-private let __jt_rangePair_39: _T2 = (0x1714<...<0x1732, .nonJoining)
-private let __jt_rangePair_3a: _T2 = (0x1733<...<0x1752, .nonJoining)
-private let __jt_rangePair_3b: _T2 = (0x1753<...<0x1772, .nonJoining)
-private let __jt_rangePair_3c: _T2 = (0x1773<...<0x17b4, .nonJoining)
-private let __jt_rangePair_3d: _T2 = (0x17b7....0x17bd, .transparent)
-private let __jt_rangePair_3e: _T2 = (0x17bd<...<0x17c6, .nonJoining)
-private let __jt_rangePair_3f: _T2 = (0x17c9....0x17d3, .transparent)
-private let __jt_rangePair_3g: _T2 = (0x17d3<...<0x17dd, .nonJoining)
-private let __jt_rangePair_3h: _T2 = (0x17dd<...<0x1807, .nonJoining)
-private let __jt_rangePair_3i: _T2 = (0x180f<...<0x1820, .nonJoining)
-private let __jt_rangePair_3j: _T2 = (0x1820....0x1878, .dualJoining)
-private let __jt_rangePair_3k: _T2 = (0x1878<...<0x1885, .nonJoining)
-private let __jt_rangePair_3l: _T2 = (0x1887....0x18a8, .dualJoining)
-private let __jt_rangePair_3m: _T2 = (0x18aa<...<0x1920, .nonJoining)
-private let __jt_rangePair_3n: _T2 = (0x1928<...<0x1932, .nonJoining)
-private let __jt_rangePair_3o: _T2 = (0x1932<...<0x1939, .nonJoining)
-private let __jt_rangePair_3p: _T2 = (0x193b<...<0x1a17, .nonJoining)
-private let __jt_rangePair_3q: _T2 = (0x1a1b<...<0x1a56, .nonJoining)
-private let __jt_rangePair_3r: _T2 = (0x1a58....0x1a5e, .transparent)
-private let __jt_rangePair_3s: _T2 = (0x1a65....0x1a6c, .transparent)
-private let __jt_rangePair_3t: _T2 = (0x1a6c<...<0x1a73, .nonJoining)
-private let __jt_rangePair_3u: _T2 = (0x1a73....0x1a7c, .transparent)
-private let __jt_rangePair_3v: _T2 = (0x1a7f<...<0x1ab0, .nonJoining)
-private let __jt_rangePair_3w: _T2 = (0x1ab0....0x1add, .transparent)
-private let __jt_rangePair_3x: _T2 = (0x1ae0....0x1aeb, .transparent)
-private let __jt_rangePair_3y: _T2 = (0x1aeb<...<0x1b00, .nonJoining)
-private let __jt_rangePair_3z: _T2 = (0x1b03<...<0x1b34, .nonJoining)
-private let __jt_rangePair_40: _T2 = (0x1b36....0x1b3a, .transparent)
-private let __jt_rangePair_41: _T2 = (0x1b3c<...<0x1b42, .nonJoining)
-private let __jt_rangePair_42: _T2 = (0x1b42<...<0x1b6b, .nonJoining)
-private let __jt_rangePair_43: _T2 = (0x1b6b....0x1b73, .transparent)
-private let __jt_rangePair_44: _T2 = (0x1b73<...<0x1b80, .nonJoining)
-private let __jt_rangePair_45: _T2 = (0x1b81<...<0x1ba2, .nonJoining)
-private let __jt_rangePair_46: _T2 = (0x1bad<...<0x1be6, .nonJoining)
-private let __jt_rangePair_47: _T2 = (0x1bf1<...<0x1c2c, .nonJoining)
-private let __jt_rangePair_48: _T2 = (0x1c2c....0x1c33, .transparent)
-private let __jt_rangePair_49: _T2 = (0x1c37<...<0x1cd0, .nonJoining)
-private let __jt_rangePair_4a: _T2 = (0x1cd4....0x1ce0, .transparent)
-private let __jt_rangePair_4b: _T2 = (0x1ce2....0x1ce8, .transparent)
-private let __jt_rangePair_4c: _T2 = (0x1ced<...<0x1cf4, .nonJoining)
-private let __jt_rangePair_4d: _T2 = (0x1cf9<...<0x1dc0, .nonJoining)
-private let __jt_rangePair_4e: _T2 = (0x1dc0....0x1dff, .transparent)
-private let __jt_rangePair_4f: _T2 = (0x1dff<...<0x200b, .nonJoining)
-private let __jt_rangePair_4g: _T2 = (0x200f<...<0x202a, .nonJoining)
-private let __jt_rangePair_4h: _T2 = (0x202a....0x202e, .transparent)
-private let __jt_rangePair_4i: _T2 = (0x202e<...<0x2060, .nonJoining)
-private let __jt_rangePair_4j: _T2 = (0x2060....0x2064, .transparent)
-private let __jt_rangePair_4k: _T2 = (0x2064<...<0x206a, .nonJoining)
-private let __jt_rangePair_4l: _T2 = (0x206a....0x206f, .transparent)
-private let __jt_rangePair_4m: _T2 = (0x206f<...<0x20d0, .nonJoining)
-private let __jt_rangePair_4n: _T2 = (0x20d0....0x20f0, .transparent)
-private let __jt_rangePair_4o: _T2 = (0x20f0<...<0x2cef, .nonJoining)
-private let __jt_rangePair_4p: _T2 = (0x2cf1<...<0x2d7f, .nonJoining)
-private let __jt_rangePair_4q: _T2 = (0x2d7f<...<0x2de0, .nonJoining)
-private let __jt_rangePair_4r: _T2 = (0x2de0....0x2dff, .transparent)
-private let __jt_rangePair_4s: _T2 = (0x2dff<...<0x302a, .nonJoining)
-private let __jt_rangePair_4t: _T2 = (0x302d<...<0x3099, .nonJoining)
-private let __jt_rangePair_4u: _T2 = (0x309a<...<0xa66f, .nonJoining)
-private let __jt_rangePair_4v: _T2 = (0xa674....0xa67d, .transparent)
-private let __jt_rangePair_4w: _T2 = (0xa67d<...<0xa69e, .nonJoining)
-private let __jt_rangePair_4x: _T2 = (0xa69f<...<0xa6f0, .nonJoining)
-private let __jt_rangePair_4y: _T2 = (0xa6f1<...<0xa802, .nonJoining)
-private let __jt_rangePair_4z: _T2 = (0xa80b<...<0xa825, .nonJoining)
-private let __jt_rangePair_50: _T2 = (0xa826<...<0xa82c, .nonJoining)
-private let __jt_rangePair_51: _T2 = (0xa82c<...<0xa840, .nonJoining)
-private let __jt_rangePair_52: _T2 = (0xa840....0xa871, .dualJoining)
-private let __jt_rangePair_53: _T2 = (0xa872<...<0xa8c4, .nonJoining)
-private let __jt_rangePair_54: _T2 = (0xa8c5<...<0xa8e0, .nonJoining)
-private let __jt_rangePair_55: _T2 = (0xa8e0....0xa8f1, .transparent)
-private let __jt_rangePair_56: _T2 = (0xa8f1<...<0xa8ff, .nonJoining)
-private let __jt_rangePair_57: _T2 = (0xa8ff<...<0xa926, .nonJoining)
-private let __jt_rangePair_58: _T2 = (0xa926....0xa92d, .transparent)
-private let __jt_rangePair_59: _T2 = (0xa92d<...<0xa947, .nonJoining)
-private let __jt_rangePair_5a: _T2 = (0xa947....0xa951, .transparent)
-private let __jt_rangePair_5b: _T2 = (0xa951<...<0xa980, .nonJoining)
-private let __jt_rangePair_5c: _T2 = (0xa982<...<0xa9b3, .nonJoining)
-private let __jt_rangePair_5d: _T2 = (0xa9bd<...<0xa9e5, .nonJoining)
-private let __jt_rangePair_5e: _T2 = (0xa9e5<...<0xaa29, .nonJoining)
-private let __jt_rangePair_5f: _T2 = (0xaa29....0xaa2e, .transparent)
-private let __jt_rangePair_5g: _T2 = (0xaa36<...<0xaa43, .nonJoining)
-private let __jt_rangePair_5h: _T2 = (0xaa43<...<0xaa4c, .nonJoining)
-private let __jt_rangePair_5i: _T2 = (0xaa4c<...<0xaa7c, .nonJoining)
-private let __jt_rangePair_5j: _T2 = (0xaa7c<...<0xaab0, .nonJoining)
-private let __jt_rangePair_5k: _T2 = (0xaab8<...<0xaabe, .nonJoining)
-private let __jt_rangePair_5l: _T2 = (0xaac1<...<0xaaec, .nonJoining)
-private let __jt_rangePair_5m: _T2 = (0xaaed<...<0xaaf6, .nonJoining)
-private let __jt_rangePair_5n: _T2 = (0xaaf6<...<0xabe5, .nonJoining)
-private let __jt_rangePair_5o: _T2 = (0xabed<...<0xfb1e, .nonJoining)
-private let __jt_rangePair_5p: _T2 = (0xfb1e<...<0xfe00, .nonJoining)
-private let __jt_rangePair_5q: _T2 = (0xfe00....0xfe0f, .transparent)
-private let __jt_rangePair_5r: _T2 = (0xfe0f<...<0xfe20, .nonJoining)
-private let __jt_rangePair_5s: _T2 = (0xfe20....0xfe2f, .transparent)
-private let __jt_rangePair_5t: _T2 = (0xfe2f<...<0xfeff, .nonJoining)
-private let __jt_rangePair_5u: _T2 = (0xfeff<...<0xfff9, .nonJoining)
-private let __jt_rangePair_5v: _T2 = (0xfffb<...<0x101fd, .nonJoining)
-private let __jt_rangePair_5w: _T2 = (0x101fd<...<0x102e0, .nonJoining)
-private let __jt_rangePair_5x: _T2 = (0x102e0<...<0x10376, .nonJoining)
-private let __jt_rangePair_5y: _T2 = (0x10376....0x1037a, .transparent)
-private let __jt_rangePair_5z: _T2 = (0x1037a<...<0x10a01, .nonJoining)
-private let __jt_rangePair_60: _T2 = (0x10a06<...<0x10a0c, .nonJoining)
-private let __jt_rangePair_61: _T2 = (0x10a0f<...<0x10a38, .nonJoining)
-private let __jt_rangePair_62: _T2 = (0x10a3f<...<0x10ac0, .nonJoining)
-private let __jt_rangePair_63: _T2 = (0x10ac0....0x10ac4, .dualJoining)
-private let __jt_rangePair_64: _T2 = (0x10ace....0x10ad2, .rightJoining)
-private let __jt_rangePair_65: _T2 = (0x10ad8....0x10adc, .dualJoining)
-private let __jt_rangePair_66: _T2 = (0x10aef<...<0x10b80, .nonJoining)
-private let __jt_rangePair_67: _T2 = (0x10b91<...<0x10ba9, .nonJoining)
-private let __jt_rangePair_68: _T2 = (0x10bae<...<0x10d00, .nonJoining)
-private let __jt_rangePair_69: _T2 = (0x10d01....0x10d21, .dualJoining)
-private let __jt_rangePair_6a: _T2 = (0x10d27<...<0x10d69, .nonJoining)
-private let __jt_rangePair_6b: _T2 = (0x10d69....0x10d6d, .transparent)
-private let __jt_rangePair_6c: _T2 = (0x10d6d<...<0x10eab, .nonJoining)
-private let __jt_rangePair_6d: _T2 = (0x10eac<...<0x10ec2, .nonJoining)
-private let __jt_rangePair_6e: _T2 = (0x10ec7<...<0x10efa, .nonJoining)
-private let __jt_rangePair_6f: _T2 = (0x10efa....0x10eff, .transparent)
-private let __jt_rangePair_6g: _T2 = (0x10eff<...<0x10f30, .nonJoining)
-private let __jt_rangePair_6h: _T2 = (0x10f34....0x10f44, .dualJoining)
-private let __jt_rangePair_6i: _T2 = (0x10f46....0x10f50, .transparent)
-private let __jt_rangePair_6j: _T2 = (0x10f54<...<0x10f70, .nonJoining)
-private let __jt_rangePair_6k: _T2 = (0x10f76....0x10f81, .dualJoining)
-private let __jt_rangePair_6l: _T2 = (0x10f85<...<0x10fb0, .nonJoining)
-private let __jt_rangePair_6m: _T2 = (0x10fcb<...<0x11001, .nonJoining)
-private let __jt_rangePair_6n: _T2 = (0x11001<...<0x11038, .nonJoining)
-private let __jt_rangePair_6o: _T2 = (0x11038....0x11046, .transparent)
-private let __jt_rangePair_6p: _T2 = (0x11046<...<0x11070, .nonJoining)
-private let __jt_rangePair_6q: _T2 = (0x11074<...<0x1107f, .nonJoining)
-private let __jt_rangePair_6r: _T2 = (0x11081<...<0x110b3, .nonJoining)
-private let __jt_rangePair_6s: _T2 = (0x110ba<...<0x110c2, .nonJoining)
-private let __jt_rangePair_6t: _T2 = (0x110c2<...<0x11100, .nonJoining)
-private let __jt_rangePair_6u: _T2 = (0x11102<...<0x11127, .nonJoining)
-private let __jt_rangePair_6v: _T2 = (0x11127....0x1112b, .transparent)
-private let __jt_rangePair_6w: _T2 = (0x1112d....0x11134, .transparent)
-private let __jt_rangePair_6x: _T2 = (0x11134<...<0x11173, .nonJoining)
-private let __jt_rangePair_6y: _T2 = (0x11173<...<0x11180, .nonJoining)
-private let __jt_rangePair_6z: _T2 = (0x11181<...<0x111b6, .nonJoining)
-private let __jt_rangePair_70: _T2 = (0x111b6....0x111be, .transparent)
-private let __jt_rangePair_71: _T2 = (0x111be<...<0x111c9, .nonJoining)
-private let __jt_rangePair_72: _T2 = (0x111cf<...<0x1122f, .nonJoining)
-private let __jt_rangePair_73: _T2 = (0x11237<...<0x1123e, .nonJoining)
-private let __jt_rangePair_74: _T2 = (0x11241<...<0x112df, .nonJoining)
-private let __jt_rangePair_75: _T2 = (0x112e3....0x112ea, .transparent)
-private let __jt_rangePair_76: _T2 = (0x112ea<...<0x11300, .nonJoining)
-private let __jt_rangePair_77: _T2 = (0x11301<...<0x1133b, .nonJoining)
-private let __jt_rangePair_78: _T2 = (0x11340<...<0x11366, .nonJoining)
-private let __jt_rangePair_79: _T2 = (0x11366....0x1136c, .transparent)
-private let __jt_rangePair_7a: _T2 = (0x11370....0x11374, .transparent)
-private let __jt_rangePair_7b: _T2 = (0x11374<...<0x113bb, .nonJoining)
-private let __jt_rangePair_7c: _T2 = (0x113bb....0x113c0, .transparent)
-private let __jt_rangePair_7d: _T2 = (0x113c0<...<0x113ce, .nonJoining)
-private let __jt_rangePair_7e: _T2 = (0x113d2<...<0x113e1, .nonJoining)
-private let __jt_rangePair_7f: _T2 = (0x113e2<...<0x11438, .nonJoining)
-private let __jt_rangePair_7g: _T2 = (0x11438....0x1143f, .transparent)
-private let __jt_rangePair_7h: _T2 = (0x11446<...<0x1145e, .nonJoining)
-private let __jt_rangePair_7i: _T2 = (0x1145e<...<0x114b3, .nonJoining)
-private let __jt_rangePair_7j: _T2 = (0x114b3....0x114b8, .transparent)
-private let __jt_rangePair_7k: _T2 = (0x114c3<...<0x115b2, .nonJoining)
-private let __jt_rangePair_7l: _T2 = (0x115b5<...<0x115bc, .nonJoining)
-private let __jt_rangePair_7m: _T2 = (0x115c0<...<0x115dc, .nonJoining)
-private let __jt_rangePair_7n: _T2 = (0x115dd<...<0x11633, .nonJoining)
-private let __jt_rangePair_7o: _T2 = (0x11633....0x1163a, .transparent)
-private let __jt_rangePair_7p: _T2 = (0x11640<...<0x116ab, .nonJoining)
-private let __jt_rangePair_7q: _T2 = (0x116b0....0x116b5, .transparent)
-private let __jt_rangePair_7r: _T2 = (0x116b7<...<0x1171d, .nonJoining)
-private let __jt_rangePair_7s: _T2 = (0x11727....0x1172b, .transparent)
-private let __jt_rangePair_7t: _T2 = (0x1172b<...<0x1182f, .nonJoining)
-private let __jt_rangePair_7u: _T2 = (0x1182f....0x11837, .transparent)
-private let __jt_rangePair_7v: _T2 = (0x1183a<...<0x1193b, .nonJoining)
-private let __jt_rangePair_7w: _T2 = (0x11943<...<0x119d4, .nonJoining)
-private let __jt_rangePair_7x: _T2 = (0x119e0<...<0x11a01, .nonJoining)
-private let __jt_rangePair_7y: _T2 = (0x11a01....0x11a0a, .transparent)
-private let __jt_rangePair_7z: _T2 = (0x11a0a<...<0x11a33, .nonJoining)
-private let __jt_rangePair_80: _T2 = (0x11a33....0x11a38, .transparent)
-private let __jt_rangePair_81: _T2 = (0x11a3e<...<0x11a47, .nonJoining)
-private let __jt_rangePair_82: _T2 = (0x11a47<...<0x11a51, .nonJoining)
-private let __jt_rangePair_83: _T2 = (0x11a51....0x11a56, .transparent)
-private let __jt_rangePair_84: _T2 = (0x11a5b<...<0x11a8a, .nonJoining)
-private let __jt_rangePair_85: _T2 = (0x11a8a....0x11a96, .transparent)
-private let __jt_rangePair_86: _T2 = (0x11a99<...<0x11b60, .nonJoining)
-private let __jt_rangePair_87: _T2 = (0x11b66<...<0x11c30, .nonJoining)
-private let __jt_rangePair_88: _T2 = (0x11c30....0x11c36, .transparent)
-private let __jt_rangePair_89: _T2 = (0x11c38....0x11c3d, .transparent)
-private let __jt_rangePair_8a: _T2 = (0x11c3f<...<0x11c92, .nonJoining)
-private let __jt_rangePair_8b: _T2 = (0x11c92....0x11ca7, .transparent)
-private let __jt_rangePair_8c: _T2 = (0x11caa....0x11cb0, .transparent)
-private let __jt_rangePair_8d: _T2 = (0x11cb6<...<0x11d31, .nonJoining)
-private let __jt_rangePair_8e: _T2 = (0x11d31....0x11d36, .transparent)
-private let __jt_rangePair_8f: _T2 = (0x11d3f....0x11d45, .transparent)
-private let __jt_rangePair_8g: _T2 = (0x11d47<...<0x11d90, .nonJoining)
-private let __jt_rangePair_8h: _T2 = (0x11d97<...<0x11ef3, .nonJoining)
-private let __jt_rangePair_8i: _T2 = (0x11ef4<...<0x11f00, .nonJoining)
-private let __jt_rangePair_8j: _T2 = (0x11f01<...<0x11f36, .nonJoining)
-private let __jt_rangePair_8k: _T2 = (0x11f36....0x11f3a, .transparent)
-private let __jt_rangePair_8l: _T2 = (0x11f3a<...<0x11f40, .nonJoining)
-private let __jt_rangePair_8m: _T2 = (0x11f42<...<0x11f5a, .nonJoining)
-private let __jt_rangePair_8n: _T2 = (0x11f5a<...<0x13430, .nonJoining)
-private let __jt_rangePair_8o: _T2 = (0x13430....0x13440, .transparent)
-private let __jt_rangePair_8p: _T2 = (0x13440<...<0x13447, .nonJoining)
-private let __jt_rangePair_8q: _T2 = (0x13447....0x13455, .transparent)
-private let __jt_rangePair_8r: _T2 = (0x13455<...<0x1611e, .nonJoining)
-private let __jt_rangePair_8s: _T2 = (0x1611e....0x16129, .transparent)
-private let __jt_rangePair_8t: _T2 = (0x1612f<...<0x16af0, .nonJoining)
-private let __jt_rangePair_8u: _T2 = (0x16af0....0x16af4, .transparent)
-private let __jt_rangePair_8v: _T2 = (0x16af4<...<0x16b30, .nonJoining)
-private let __jt_rangePair_8w: _T2 = (0x16b30....0x16b36, .transparent)
-private let __jt_rangePair_8x: _T2 = (0x16b36<...<0x16f4f, .nonJoining)
-private let __jt_rangePair_8y: _T2 = (0x16f4f<...<0x16f8f, .nonJoining)
-private let __jt_rangePair_8z: _T2 = (0x16f92<...<0x16fe4, .nonJoining)
-private let __jt_rangePair_90: _T2 = (0x16fe4<...<0x1bc9d, .nonJoining)
-private let __jt_rangePair_91: _T2 = (0x1bca3<...<0x1cf00, .nonJoining)
-private let __jt_rangePair_92: _T2 = (0x1cf00....0x1cf2d, .transparent)
-private let __jt_rangePair_93: _T2 = (0x1cf30....0x1cf46, .transparent)
-private let __jt_rangePair_94: _T2 = (0x1cf46<...<0x1d167, .nonJoining)
-private let __jt_rangePair_95: _T2 = (0x1d169<...<0x1d173, .nonJoining)
-private let __jt_rangePair_96: _T2 = (0x1d173....0x1d182, .transparent)
-private let __jt_rangePair_97: _T2 = (0x1d185....0x1d18b, .transparent)
-private let __jt_rangePair_98: _T2 = (0x1d18b<...<0x1d1aa, .nonJoining)
-private let __jt_rangePair_99: _T2 = (0x1d1ad<...<0x1d242, .nonJoining)
-private let __jt_rangePair_9a: _T2 = (0x1d244<...<0x1da00, .nonJoining)
-private let __jt_rangePair_9b: _T2 = (0x1da00....0x1da36, .transparent)
-private let __jt_rangePair_9c: _T2 = (0x1da3b....0x1da6c, .transparent)
-private let __jt_rangePair_9d: _T2 = (0x1da6c<...<0x1da75, .nonJoining)
-private let __jt_rangePair_9e: _T2 = (0x1da75<...<0x1da84, .nonJoining)
-private let __jt_rangePair_9f: _T2 = (0x1da84<...<0x1da9b, .nonJoining)
-private let __jt_rangePair_9g: _T2 = (0x1da9b....0x1da9f, .transparent)
-private let __jt_rangePair_9h: _T2 = (0x1daa1....0x1daaf, .transparent)
-private let __jt_rangePair_9i: _T2 = (0x1daaf<...<0x1e000, .nonJoining)
-private let __jt_rangePair_9j: _T2 = (0x1e000....0x1e006, .transparent)
-private let __jt_rangePair_9k: _T2 = (0x1e008....0x1e018, .transparent)
-private let __jt_rangePair_9l: _T2 = (0x1e01b....0x1e021, .transparent)
-private let __jt_rangePair_9m: _T2 = (0x1e026....0x1e02a, .transparent)
-private let __jt_rangePair_9n: _T2 = (0x1e02a<...<0x1e08f, .nonJoining)
-private let __jt_rangePair_9o: _T2 = (0x1e08f<...<0x1e130, .nonJoining)
-private let __jt_rangePair_9p: _T2 = (0x1e130....0x1e136, .transparent)
-private let __jt_rangePair_9q: _T2 = (0x1e136<...<0x1e2ae, .nonJoining)
-private let __jt_rangePair_9r: _T2 = (0x1e2ae<...<0x1e2ec, .nonJoining)
-private let __jt_rangePair_9s: _T2 = (0x1e2ef<...<0x1e4ec, .nonJoining)
-private let __jt_rangePair_9t: _T2 = (0x1e4ef<...<0x1e5ee, .nonJoining)
-private let __jt_rangePair_9u: _T2 = (0x1e5ef<...<0x1e6e3, .nonJoining)
-private let __jt_rangePair_9v: _T2 = (0x1e6e6<...<0x1e6ee, .nonJoining)
-private let __jt_rangePair_9w: _T2 = (0x1e6ef<...<0x1e6f5, .nonJoining)
-private let __jt_rangePair_9x: _T2 = (0x1e6f5<...<0x1e8d0, .nonJoining)
-private let __jt_rangePair_9y: _T2 = (0x1e8d0....0x1e8d6, .transparent)
-private let __jt_rangePair_9z: _T2 = (0x1e8d6<...<0x1e900, .nonJoining)
-private let __jt_rangePair_a0: _T2 = (0x1e900....0x1e943, .dualJoining)
-private let __jt_rangePair_a1: _T2 = (0x1e944....0x1e94b, .transparent)
-private let __jt_rangePair_a2: _T2 = (0x1e94b<...<0xe0001, .nonJoining)
-private let __jt_rangePair_a3: _T2 = (0xe0001<...<0xe0020, .nonJoining)
-private let __jt_rangePair_a4: _T2 = (0xe0020....0xe007f, .transparent)
-private let __jt_rangePair_a5: _T2 = (0xe007f<...<0xe0100, .nonJoining)
-private let __jt_rangePair_a6: _T2 = (0xe0100....0xe01ef, .transparent)
-private let __jt_rangePair_a7: _T2 = (0xe01ef<...0x10ffff, .nonJoining)
-private let __jt_rangePairArray: _T3 = [
-  __jt_rangePair_0,
-  __jt_rangePair_1,
-  __jt_rangePair_2,
-  __jt_rangePair_3,
-  __jt_rangePair_4,
-  __jt_rangePair_5,
-  __jt_rangePair_6,
-  __jt_rangePair_7,
-  __jt_rangePair_8,
-  __jt_rangePair_9,
-  __jt_rangePair_a,
-  __jt_rangePair_b,
-  __jt_rangePair_c,
-  __jt_rangePair_d,
-  __jt_rangePair_e,
-  __jt_rangePair_f,
-  __jt_rangePair_g,
-  __jt_rangePair_h,
-  __jt_rangePair_i,
-  __jt_rangePair_j,
-  __jt_rangePair_k,
-  __jt_rangePair_l,
-  __jt_rangePair_m,
-  __jt_rangePair_n,
-  __jt_rangePair_o,
-  __jt_rangePair_p,
-  __jt_rangePair_q,
-  __jt_rangePair_r,
-  __jt_rangePair_s,
-  __jt_rangePair_t,
-  __jt_rangePair_u,
-  __jt_rangePair_v,
-  __jt_rangePair_w,
-  __jt_rangePair_x,
-  __jt_rangePair_y,
-  __jt_rangePair_z,
-  __jt_rangePair_10,
-  __jt_rangePair_11,
-  __jt_rangePair_12,
-  __jt_rangePair_13,
-  __jt_rangePair_14,
-  __jt_rangePair_15,
-  __jt_rangePair_16,
-  __jt_rangePair_17,
-  __jt_rangePair_18,
-  __jt_rangePair_19,
-  __jt_rangePair_1a,
-  __jt_rangePair_1b,
-  __jt_rangePair_1c,
-  __jt_rangePair_1d,
-  __jt_rangePair_1e,
-  __jt_rangePair_1f,
-  __jt_rangePair_1g,
-  __jt_rangePair_1h,
-  __jt_rangePair_1i,
-  __jt_rangePair_1j,
-  __jt_rangePair_1k,
-  __jt_rangePair_1l,
-  __jt_rangePair_1m,
-  __jt_rangePair_1n,
-  __jt_rangePair_1o,
-  __jt_rangePair_1p,
-  __jt_rangePair_1q,
-  __jt_rangePair_1r,
-  __jt_rangePair_1s,
-  __jt_rangePair_1t,
-  __jt_rangePair_1u,
-  __jt_rangePair_1v,
-  __jt_rangePair_1w,
-  __jt_rangePair_1x,
-  __jt_rangePair_1y,
-  __jt_rangePair_1z,
-  __jt_rangePair_20,
-  __jt_rangePair_21,
-  __jt_rangePair_22,
-  __jt_rangePair_23,
-  __jt_rangePair_24,
-  __jt_rangePair_25,
-  __jt_rangePair_26,
-  __jt_rangePair_27,
-  __jt_rangePair_28,
-  __jt_rangePair_29,
-  __jt_rangePair_2a,
-  __jt_rangePair_2b,
-  __jt_rangePair_2c,
-  __jt_rangePair_2d,
-  __jt_rangePair_2e,
-  __jt_rangePair_2f,
-  __jt_rangePair_2g,
-  __jt_rangePair_2h,
-  __jt_rangePair_2i,
-  __jt_rangePair_2j,
-  __jt_rangePair_2k,
-  __jt_rangePair_2l,
-  __jt_rangePair_2m,
-  __jt_rangePair_2n,
-  __jt_rangePair_2o,
-  __jt_rangePair_2p,
-  __jt_rangePair_2q,
-  __jt_rangePair_2r,
-  __jt_rangePair_2s,
-  __jt_rangePair_2t,
-  __jt_rangePair_2u,
-  __jt_rangePair_2v,
-  __jt_rangePair_2w,
-  __jt_rangePair_2x,
-  __jt_rangePair_2y,
-  __jt_rangePair_2z,
-  __jt_rangePair_30,
-  __jt_rangePair_31,
-  __jt_rangePair_32,
-  __jt_rangePair_33,
-  __jt_rangePair_34,
-  __jt_rangePair_35,
-  __jt_rangePair_36,
-  __jt_rangePair_37,
-  __jt_rangePair_38,
-  __jt_rangePair_39,
-  __jt_rangePair_3a,
-  __jt_rangePair_3b,
-  __jt_rangePair_3c,
-  __jt_rangePair_3d,
-  __jt_rangePair_3e,
-  __jt_rangePair_3f,
-  __jt_rangePair_3g,
-  __jt_rangePair_3h,
-  __jt_rangePair_3i,
-  __jt_rangePair_3j,
-  __jt_rangePair_3k,
-  __jt_rangePair_3l,
-  __jt_rangePair_3m,
-  __jt_rangePair_3n,
-  __jt_rangePair_3o,
-  __jt_rangePair_3p,
-  __jt_rangePair_3q,
-  __jt_rangePair_3r,
-  __jt_rangePair_3s,
-  __jt_rangePair_3t,
-  __jt_rangePair_3u,
-  __jt_rangePair_3v,
-  __jt_rangePair_3w,
-  __jt_rangePair_3x,
-  __jt_rangePair_3y,
-  __jt_rangePair_3z,
-  __jt_rangePair_40,
-  __jt_rangePair_41,
-  __jt_rangePair_42,
-  __jt_rangePair_43,
-  __jt_rangePair_44,
-  __jt_rangePair_45,
-  __jt_rangePair_46,
-  __jt_rangePair_47,
-  __jt_rangePair_48,
-  __jt_rangePair_49,
-  __jt_rangePair_4a,
-  __jt_rangePair_4b,
-  __jt_rangePair_4c,
-  __jt_rangePair_4d,
-  __jt_rangePair_4e,
-  __jt_rangePair_4f,
-  __jt_rangePair_4g,
-  __jt_rangePair_4h,
-  __jt_rangePair_4i,
-  __jt_rangePair_4j,
-  __jt_rangePair_4k,
-  __jt_rangePair_4l,
-  __jt_rangePair_4m,
-  __jt_rangePair_4n,
-  __jt_rangePair_4o,
-  __jt_rangePair_4p,
-  __jt_rangePair_4q,
-  __jt_rangePair_4r,
-  __jt_rangePair_4s,
-  __jt_rangePair_4t,
-  __jt_rangePair_4u,
-  __jt_rangePair_4v,
-  __jt_rangePair_4w,
-  __jt_rangePair_4x,
-  __jt_rangePair_4y,
-  __jt_rangePair_4z,
-  __jt_rangePair_50,
-  __jt_rangePair_51,
-  __jt_rangePair_52,
-  __jt_rangePair_53,
-  __jt_rangePair_54,
-  __jt_rangePair_55,
-  __jt_rangePair_56,
-  __jt_rangePair_57,
-  __jt_rangePair_58,
-  __jt_rangePair_59,
-  __jt_rangePair_5a,
-  __jt_rangePair_5b,
-  __jt_rangePair_5c,
-  __jt_rangePair_5d,
-  __jt_rangePair_5e,
-  __jt_rangePair_5f,
-  __jt_rangePair_5g,
-  __jt_rangePair_5h,
-  __jt_rangePair_5i,
-  __jt_rangePair_5j,
-  __jt_rangePair_5k,
-  __jt_rangePair_5l,
-  __jt_rangePair_5m,
-  __jt_rangePair_5n,
-  __jt_rangePair_5o,
-  __jt_rangePair_5p,
-  __jt_rangePair_5q,
-  __jt_rangePair_5r,
-  __jt_rangePair_5s,
-  __jt_rangePair_5t,
-  __jt_rangePair_5u,
-  __jt_rangePair_5v,
-  __jt_rangePair_5w,
-  __jt_rangePair_5x,
-  __jt_rangePair_5y,
-  __jt_rangePair_5z,
-  __jt_rangePair_60,
-  __jt_rangePair_61,
-  __jt_rangePair_62,
-  __jt_rangePair_63,
-  __jt_rangePair_64,
-  __jt_rangePair_65,
-  __jt_rangePair_66,
-  __jt_rangePair_67,
-  __jt_rangePair_68,
-  __jt_rangePair_69,
-  __jt_rangePair_6a,
-  __jt_rangePair_6b,
-  __jt_rangePair_6c,
-  __jt_rangePair_6d,
-  __jt_rangePair_6e,
-  __jt_rangePair_6f,
-  __jt_rangePair_6g,
-  __jt_rangePair_6h,
-  __jt_rangePair_6i,
-  __jt_rangePair_6j,
-  __jt_rangePair_6k,
-  __jt_rangePair_6l,
-  __jt_rangePair_6m,
-  __jt_rangePair_6n,
-  __jt_rangePair_6o,
-  __jt_rangePair_6p,
-  __jt_rangePair_6q,
-  __jt_rangePair_6r,
-  __jt_rangePair_6s,
-  __jt_rangePair_6t,
-  __jt_rangePair_6u,
-  __jt_rangePair_6v,
-  __jt_rangePair_6w,
-  __jt_rangePair_6x,
-  __jt_rangePair_6y,
-  __jt_rangePair_6z,
-  __jt_rangePair_70,
-  __jt_rangePair_71,
-  __jt_rangePair_72,
-  __jt_rangePair_73,
-  __jt_rangePair_74,
-  __jt_rangePair_75,
-  __jt_rangePair_76,
-  __jt_rangePair_77,
-  __jt_rangePair_78,
-  __jt_rangePair_79,
-  __jt_rangePair_7a,
-  __jt_rangePair_7b,
-  __jt_rangePair_7c,
-  __jt_rangePair_7d,
-  __jt_rangePair_7e,
-  __jt_rangePair_7f,
-  __jt_rangePair_7g,
-  __jt_rangePair_7h,
-  __jt_rangePair_7i,
-  __jt_rangePair_7j,
-  __jt_rangePair_7k,
-  __jt_rangePair_7l,
-  __jt_rangePair_7m,
-  __jt_rangePair_7n,
-  __jt_rangePair_7o,
-  __jt_rangePair_7p,
-  __jt_rangePair_7q,
-  __jt_rangePair_7r,
-  __jt_rangePair_7s,
-  __jt_rangePair_7t,
-  __jt_rangePair_7u,
-  __jt_rangePair_7v,
-  __jt_rangePair_7w,
-  __jt_rangePair_7x,
-  __jt_rangePair_7y,
-  __jt_rangePair_7z,
-  __jt_rangePair_80,
-  __jt_rangePair_81,
-  __jt_rangePair_82,
-  __jt_rangePair_83,
-  __jt_rangePair_84,
-  __jt_rangePair_85,
-  __jt_rangePair_86,
-  __jt_rangePair_87,
-  __jt_rangePair_88,
-  __jt_rangePair_89,
-  __jt_rangePair_8a,
-  __jt_rangePair_8b,
-  __jt_rangePair_8c,
-  __jt_rangePair_8d,
-  __jt_rangePair_8e,
-  __jt_rangePair_8f,
-  __jt_rangePair_8g,
-  __jt_rangePair_8h,
-  __jt_rangePair_8i,
-  __jt_rangePair_8j,
-  __jt_rangePair_8k,
-  __jt_rangePair_8l,
-  __jt_rangePair_8m,
-  __jt_rangePair_8n,
-  __jt_rangePair_8o,
-  __jt_rangePair_8p,
-  __jt_rangePair_8q,
-  __jt_rangePair_8r,
-  __jt_rangePair_8s,
-  __jt_rangePair_8t,
-  __jt_rangePair_8u,
-  __jt_rangePair_8v,
-  __jt_rangePair_8w,
-  __jt_rangePair_8x,
-  __jt_rangePair_8y,
-  __jt_rangePair_8z,
-  __jt_rangePair_90,
-  __jt_rangePair_91,
-  __jt_rangePair_92,
-  __jt_rangePair_93,
-  __jt_rangePair_94,
-  __jt_rangePair_95,
-  __jt_rangePair_96,
-  __jt_rangePair_97,
-  __jt_rangePair_98,
-  __jt_rangePair_99,
-  __jt_rangePair_9a,
-  __jt_rangePair_9b,
-  __jt_rangePair_9c,
-  __jt_rangePair_9d,
-  __jt_rangePair_9e,
-  __jt_rangePair_9f,
-  __jt_rangePair_9g,
-  __jt_rangePair_9h,
-  __jt_rangePair_9i,
-  __jt_rangePair_9j,
-  __jt_rangePair_9k,
-  __jt_rangePair_9l,
-  __jt_rangePair_9m,
-  __jt_rangePair_9n,
-  __jt_rangePair_9o,
-  __jt_rangePair_9p,
-  __jt_rangePair_9q,
-  __jt_rangePair_9r,
-  __jt_rangePair_9s,
-  __jt_rangePair_9t,
-  __jt_rangePair_9u,
-  __jt_rangePair_9v,
-  __jt_rangePair_9w,
-  __jt_rangePair_9x,
-  __jt_rangePair_9y,
-  __jt_rangePair_9z,
-  __jt_rangePair_a0,
-  __jt_rangePair_a1,
-  __jt_rangePair_a2,
-  __jt_rangePair_a3,
-  __jt_rangePair_a4,
-  __jt_rangePair_a5,
-  __jt_rangePair_a6,
-  __jt_rangePair_a7,
+private let __jt_rangeValuePair_0: _T3 = (0x0..<0xad, .nonJoining)
+private let __jt_rangeValuePair_1: _T3 = (0xad<..<0x300, .nonJoining)
+private let __jt_rangeValuePair_2: _T3 = (0x300...0x36f, .transparent)
+private let __jt_rangeValuePair_3: _T3 = (0x36f<..<0x483, .nonJoining)
+private let __jt_rangeValuePair_4: _T3 = (0x483...0x489, .transparent)
+private let __jt_rangeValuePair_5: _T3 = (0x489<..<0x591, .nonJoining)
+private let __jt_rangeValuePair_6: _T3 = (0x591...0x5bd, .transparent)
+private let __jt_rangeValuePair_7: _T3 = (0x5c7<..<0x610, .nonJoining)
+private let __jt_rangeValuePair_8: _T3 = (0x610...0x61a, .transparent)
+private let __jt_rangeValuePair_9: _T3 = (0x62a...0x62e, .dualJoining)
+private let __jt_rangeValuePair_a: _T3 = (0x633...0x63f, .dualJoining)
+private let __jt_rangeValuePair_b: _T3 = (0x641...0x647, .dualJoining)
+private let __jt_rangeValuePair_c: _T3 = (0x64b...0x65f, .transparent)
+private let __jt_rangeValuePair_d: _T3 = (0x65f<..<0x66e, .nonJoining)
+private let __jt_rangeValuePair_e: _T3 = (0x678...0x687, .dualJoining)
+private let __jt_rangeValuePair_f: _T3 = (0x688...0x699, .rightJoining)
+private let __jt_rangeValuePair_g: _T3 = (0x69a...0x6bf, .dualJoining)
+private let __jt_rangeValuePair_h: _T3 = (0x6c3...0x6cb, .rightJoining)
+private let __jt_rangeValuePair_i: _T3 = (0x6d6...0x6dc, .transparent)
+private let __jt_rangeValuePair_j: _T3 = (0x6df...0x6e4, .transparent)
+private let __jt_rangeValuePair_k: _T3 = (0x6ef<..<0x6fa, .nonJoining)
+private let __jt_rangeValuePair_l: _T3 = (0x6ff<..<0x70f, .nonJoining)
+private let __jt_rangeValuePair_m: _T3 = (0x715...0x719, .rightJoining)
+private let __jt_rangeValuePair_n: _T3 = (0x71f...0x727, .dualJoining)
+private let __jt_rangeValuePair_o: _T3 = (0x730...0x74a, .transparent)
+private let __jt_rangeValuePair_p: _T3 = (0x74e...0x758, .dualJoining)
+private let __jt_rangeValuePair_q: _T3 = (0x75c...0x76a, .dualJoining)
+private let __jt_rangeValuePair_r: _T3 = (0x77a...0x77f, .dualJoining)
+private let __jt_rangeValuePair_s: _T3 = (0x77f<..<0x7a6, .nonJoining)
+private let __jt_rangeValuePair_t: _T3 = (0x7a6...0x7b0, .transparent)
+private let __jt_rangeValuePair_u: _T3 = (0x7b0<..<0x7ca, .nonJoining)
+private let __jt_rangeValuePair_v: _T3 = (0x7ca...0x7ea, .dualJoining)
+private let __jt_rangeValuePair_w: _T3 = (0x7eb...0x7f3, .transparent)
+private let __jt_rangeValuePair_x: _T3 = (0x7f3<..<0x7fa, .nonJoining)
+private let __jt_rangeValuePair_y: _T3 = (0x7fd<..<0x816, .nonJoining)
+private let __jt_rangeValuePair_z: _T3 = (0x81b...0x823, .transparent)
+private let __jt_rangeValuePair_10: _T3 = (0x829...0x82d, .transparent)
+private let __jt_rangeValuePair_11: _T3 = (0x82d<..<0x840, .nonJoining)
+private let __jt_rangeValuePair_12: _T3 = (0x841...0x845, .dualJoining)
+private let __jt_rangeValuePair_13: _T3 = (0x84a...0x853, .dualJoining)
+private let __jt_rangeValuePair_14: _T3 = (0x86a<..<0x870, .nonJoining)
+private let __jt_rangeValuePair_15: _T3 = (0x870...0x882, .rightJoining)
+private let __jt_rangeValuePair_16: _T3 = (0x889...0x88d, .dualJoining)
+private let __jt_rangeValuePair_17: _T3 = (0x88f<..<0x897, .nonJoining)
+private let __jt_rangeValuePair_18: _T3 = (0x897...0x89f, .transparent)
+private let __jt_rangeValuePair_19: _T3 = (0x8a0...0x8a9, .dualJoining)
+private let __jt_rangeValuePair_1a: _T3 = (0x8b3...0x8b8, .dualJoining)
+private let __jt_rangeValuePair_1b: _T3 = (0x8ba...0x8c8, .dualJoining)
+private let __jt_rangeValuePair_1c: _T3 = (0x8ca...0x8e1, .transparent)
+private let __jt_rangeValuePair_1d: _T3 = (0x8e3...0x902, .transparent)
+private let __jt_rangeValuePair_1e: _T3 = (0x902<..<0x93a, .nonJoining)
+private let __jt_rangeValuePair_1f: _T3 = (0x941...0x948, .transparent)
+private let __jt_rangeValuePair_1g: _T3 = (0x951...0x957, .transparent)
+private let __jt_rangeValuePair_1h: _T3 = (0x957<..<0x962, .nonJoining)
+private let __jt_rangeValuePair_1i: _T3 = (0x963<..<0x981, .nonJoining)
+private let __jt_rangeValuePair_1j: _T3 = (0x981<..<0x9bc, .nonJoining)
+private let __jt_rangeValuePair_1k: _T3 = (0x9c4<..<0x9cd, .nonJoining)
+private let __jt_rangeValuePair_1l: _T3 = (0x9cd<..<0x9e2, .nonJoining)
+private let __jt_rangeValuePair_1m: _T3 = (0x9e3<..<0x9fe, .nonJoining)
+private let __jt_rangeValuePair_1n: _T3 = (0xa02<..<0xa3c, .nonJoining)
+private let __jt_rangeValuePair_1o: _T3 = (0xa51<..<0xa70, .nonJoining)
+private let __jt_rangeValuePair_1p: _T3 = (0xa75<..<0xa81, .nonJoining)
+private let __jt_rangeValuePair_1q: _T3 = (0xa82<..<0xabc, .nonJoining)
+private let __jt_rangeValuePair_1r: _T3 = (0xac1...0xac5, .transparent)
+private let __jt_rangeValuePair_1s: _T3 = (0xacd<..<0xae2, .nonJoining)
+private let __jt_rangeValuePair_1t: _T3 = (0xae3<..<0xafa, .nonJoining)
+private let __jt_rangeValuePair_1u: _T3 = (0xafa...0xaff, .transparent)
+private let __jt_rangeValuePair_1v: _T3 = (0xb01<..<0xb3c, .nonJoining)
+private let __jt_rangeValuePair_1w: _T3 = (0xb44<..<0xb4d, .nonJoining)
+private let __jt_rangeValuePair_1x: _T3 = (0xb4d<..<0xb55, .nonJoining)
+private let __jt_rangeValuePair_1y: _T3 = (0xb56<..<0xb62, .nonJoining)
+private let __jt_rangeValuePair_1z: _T3 = (0xb63<..<0xb82, .nonJoining)
+private let __jt_rangeValuePair_20: _T3 = (0xb82<..<0xbc0, .nonJoining)
+private let __jt_rangeValuePair_21: _T3 = (0xbc0<..<0xbcd, .nonJoining)
+private let __jt_rangeValuePair_22: _T3 = (0xbcd<..<0xc00, .nonJoining)
+private let __jt_rangeValuePair_23: _T3 = (0xc04<..<0xc3c, .nonJoining)
+private let __jt_rangeValuePair_24: _T3 = (0xc40<..<0xc46, .nonJoining)
+private let __jt_rangeValuePair_25: _T3 = (0xc4d<..<0xc55, .nonJoining)
+private let __jt_rangeValuePair_26: _T3 = (0xc56<..<0xc62, .nonJoining)
+private let __jt_rangeValuePair_27: _T3 = (0xc63<..<0xc81, .nonJoining)
+private let __jt_rangeValuePair_28: _T3 = (0xc81<..<0xcbc, .nonJoining)
+private let __jt_rangeValuePair_29: _T3 = (0xcbf<..<0xcc6, .nonJoining)
+private let __jt_rangeValuePair_2a: _T3 = (0xcc6<..<0xccc, .nonJoining)
+private let __jt_rangeValuePair_2b: _T3 = (0xccd<..<0xce2, .nonJoining)
+private let __jt_rangeValuePair_2c: _T3 = (0xce3<..<0xd00, .nonJoining)
+private let __jt_rangeValuePair_2d: _T3 = (0xd01<..<0xd3b, .nonJoining)
+private let __jt_rangeValuePair_2e: _T3 = (0xd44<..<0xd4d, .nonJoining)
+private let __jt_rangeValuePair_2f: _T3 = (0xd4d<..<0xd62, .nonJoining)
+private let __jt_rangeValuePair_2g: _T3 = (0xd63<..<0xd81, .nonJoining)
+private let __jt_rangeValuePair_2h: _T3 = (0xd81<..<0xdca, .nonJoining)
+private let __jt_rangeValuePair_2i: _T3 = (0xdca<..<0xdd2, .nonJoining)
+private let __jt_rangeValuePair_2j: _T3 = (0xdd6<..<0xe31, .nonJoining)
+private let __jt_rangeValuePair_2k: _T3 = (0xe34...0xe3a, .transparent)
+private let __jt_rangeValuePair_2l: _T3 = (0xe3a<..<0xe47, .nonJoining)
+private let __jt_rangeValuePair_2m: _T3 = (0xe47...0xe4e, .transparent)
+private let __jt_rangeValuePair_2n: _T3 = (0xe4e<..<0xeb1, .nonJoining)
+private let __jt_rangeValuePair_2o: _T3 = (0xeb4...0xebc, .transparent)
+private let __jt_rangeValuePair_2p: _T3 = (0xebc<..<0xec8, .nonJoining)
+private let __jt_rangeValuePair_2q: _T3 = (0xec8...0xece, .transparent)
+private let __jt_rangeValuePair_2r: _T3 = (0xece<..<0xf18, .nonJoining)
+private let __jt_rangeValuePair_2s: _T3 = (0xf19<..<0xf35, .nonJoining)
+private let __jt_rangeValuePair_2t: _T3 = (0xf39<..<0xf71, .nonJoining)
+private let __jt_rangeValuePair_2u: _T3 = (0xf71...0xf7e, .transparent)
+private let __jt_rangeValuePair_2v: _T3 = (0xf80...0xf84, .transparent)
+private let __jt_rangeValuePair_2w: _T3 = (0xf87<..<0xf8d, .nonJoining)
+private let __jt_rangeValuePair_2x: _T3 = (0xf8d...0xf97, .transparent)
+private let __jt_rangeValuePair_2y: _T3 = (0xf99...0xfbc, .transparent)
+private let __jt_rangeValuePair_2z: _T3 = (0xfbc<..<0xfc6, .nonJoining)
+private let __jt_rangeValuePair_30: _T3 = (0xfc6<..<0x102d, .nonJoining)
+private let __jt_rangeValuePair_31: _T3 = (0x1032...0x1037, .transparent)
+private let __jt_rangeValuePair_32: _T3 = (0x103e<..<0x1058, .nonJoining)
+private let __jt_rangeValuePair_33: _T3 = (0x1060<..<0x1071, .nonJoining)
+private let __jt_rangeValuePair_34: _T3 = (0x1074<..<0x1082, .nonJoining)
+private let __jt_rangeValuePair_35: _T3 = (0x1086<..<0x108d, .nonJoining)
+private let __jt_rangeValuePair_36: _T3 = (0x108d<..<0x109d, .nonJoining)
+private let __jt_rangeValuePair_37: _T3 = (0x109d<..<0x135d, .nonJoining)
+private let __jt_rangeValuePair_38: _T3 = (0x135f<..<0x1712, .nonJoining)
+private let __jt_rangeValuePair_39: _T3 = (0x1714<..<0x1732, .nonJoining)
+private let __jt_rangeValuePair_3a: _T3 = (0x1733<..<0x1752, .nonJoining)
+private let __jt_rangeValuePair_3b: _T3 = (0x1753<..<0x1772, .nonJoining)
+private let __jt_rangeValuePair_3c: _T3 = (0x1773<..<0x17b4, .nonJoining)
+private let __jt_rangeValuePair_3d: _T3 = (0x17b7...0x17bd, .transparent)
+private let __jt_rangeValuePair_3e: _T3 = (0x17bd<..<0x17c6, .nonJoining)
+private let __jt_rangeValuePair_3f: _T3 = (0x17c9...0x17d3, .transparent)
+private let __jt_rangeValuePair_3g: _T3 = (0x17d3<..<0x17dd, .nonJoining)
+private let __jt_rangeValuePair_3h: _T3 = (0x17dd<..<0x1807, .nonJoining)
+private let __jt_rangeValuePair_3i: _T3 = (0x180f<..<0x1820, .nonJoining)
+private let __jt_rangeValuePair_3j: _T3 = (0x1820...0x1878, .dualJoining)
+private let __jt_rangeValuePair_3k: _T3 = (0x1878<..<0x1885, .nonJoining)
+private let __jt_rangeValuePair_3l: _T3 = (0x1887...0x18a8, .dualJoining)
+private let __jt_rangeValuePair_3m: _T3 = (0x18aa<..<0x1920, .nonJoining)
+private let __jt_rangeValuePair_3n: _T3 = (0x1928<..<0x1932, .nonJoining)
+private let __jt_rangeValuePair_3o: _T3 = (0x1932<..<0x1939, .nonJoining)
+private let __jt_rangeValuePair_3p: _T3 = (0x193b<..<0x1a17, .nonJoining)
+private let __jt_rangeValuePair_3q: _T3 = (0x1a1b<..<0x1a56, .nonJoining)
+private let __jt_rangeValuePair_3r: _T3 = (0x1a58...0x1a5e, .transparent)
+private let __jt_rangeValuePair_3s: _T3 = (0x1a65...0x1a6c, .transparent)
+private let __jt_rangeValuePair_3t: _T3 = (0x1a6c<..<0x1a73, .nonJoining)
+private let __jt_rangeValuePair_3u: _T3 = (0x1a73...0x1a7c, .transparent)
+private let __jt_rangeValuePair_3v: _T3 = (0x1a7f<..<0x1ab0, .nonJoining)
+private let __jt_rangeValuePair_3w: _T3 = (0x1ab0...0x1add, .transparent)
+private let __jt_rangeValuePair_3x: _T3 = (0x1ae0...0x1aeb, .transparent)
+private let __jt_rangeValuePair_3y: _T3 = (0x1aeb<..<0x1b00, .nonJoining)
+private let __jt_rangeValuePair_3z: _T3 = (0x1b03<..<0x1b34, .nonJoining)
+private let __jt_rangeValuePair_40: _T3 = (0x1b36...0x1b3a, .transparent)
+private let __jt_rangeValuePair_41: _T3 = (0x1b3c<..<0x1b42, .nonJoining)
+private let __jt_rangeValuePair_42: _T3 = (0x1b42<..<0x1b6b, .nonJoining)
+private let __jt_rangeValuePair_43: _T3 = (0x1b6b...0x1b73, .transparent)
+private let __jt_rangeValuePair_44: _T3 = (0x1b73<..<0x1b80, .nonJoining)
+private let __jt_rangeValuePair_45: _T3 = (0x1b81<..<0x1ba2, .nonJoining)
+private let __jt_rangeValuePair_46: _T3 = (0x1bad<..<0x1be6, .nonJoining)
+private let __jt_rangeValuePair_47: _T3 = (0x1bf1<..<0x1c2c, .nonJoining)
+private let __jt_rangeValuePair_48: _T3 = (0x1c2c...0x1c33, .transparent)
+private let __jt_rangeValuePair_49: _T3 = (0x1c37<..<0x1cd0, .nonJoining)
+private let __jt_rangeValuePair_4a: _T3 = (0x1cd4...0x1ce0, .transparent)
+private let __jt_rangeValuePair_4b: _T3 = (0x1ce2...0x1ce8, .transparent)
+private let __jt_rangeValuePair_4c: _T3 = (0x1ced<..<0x1cf4, .nonJoining)
+private let __jt_rangeValuePair_4d: _T3 = (0x1cf9<..<0x1dc0, .nonJoining)
+private let __jt_rangeValuePair_4e: _T3 = (0x1dc0...0x1dff, .transparent)
+private let __jt_rangeValuePair_4f: _T3 = (0x1dff<..<0x200b, .nonJoining)
+private let __jt_rangeValuePair_4g: _T3 = (0x200f<..<0x202a, .nonJoining)
+private let __jt_rangeValuePair_4h: _T3 = (0x202a...0x202e, .transparent)
+private let __jt_rangeValuePair_4i: _T3 = (0x202e<..<0x2060, .nonJoining)
+private let __jt_rangeValuePair_4j: _T3 = (0x2060...0x2064, .transparent)
+private let __jt_rangeValuePair_4k: _T3 = (0x2064<..<0x206a, .nonJoining)
+private let __jt_rangeValuePair_4l: _T3 = (0x206a...0x206f, .transparent)
+private let __jt_rangeValuePair_4m: _T3 = (0x206f<..<0x20d0, .nonJoining)
+private let __jt_rangeValuePair_4n: _T3 = (0x20d0...0x20f0, .transparent)
+private let __jt_rangeValuePair_4o: _T3 = (0x20f0<..<0x2cef, .nonJoining)
+private let __jt_rangeValuePair_4p: _T3 = (0x2cf1<..<0x2d7f, .nonJoining)
+private let __jt_rangeValuePair_4q: _T3 = (0x2d7f<..<0x2de0, .nonJoining)
+private let __jt_rangeValuePair_4r: _T3 = (0x2de0...0x2dff, .transparent)
+private let __jt_rangeValuePair_4s: _T3 = (0x2dff<..<0x302a, .nonJoining)
+private let __jt_rangeValuePair_4t: _T3 = (0x302d<..<0x3099, .nonJoining)
+private let __jt_rangeValuePair_4u: _T3 = (0x309a<..<0xa66f, .nonJoining)
+private let __jt_rangeValuePair_4v: _T3 = (0xa674...0xa67d, .transparent)
+private let __jt_rangeValuePair_4w: _T3 = (0xa67d<..<0xa69e, .nonJoining)
+private let __jt_rangeValuePair_4x: _T3 = (0xa69f<..<0xa6f0, .nonJoining)
+private let __jt_rangeValuePair_4y: _T3 = (0xa6f1<..<0xa802, .nonJoining)
+private let __jt_rangeValuePair_4z: _T3 = (0xa80b<..<0xa825, .nonJoining)
+private let __jt_rangeValuePair_50: _T3 = (0xa826<..<0xa82c, .nonJoining)
+private let __jt_rangeValuePair_51: _T3 = (0xa82c<..<0xa840, .nonJoining)
+private let __jt_rangeValuePair_52: _T3 = (0xa840...0xa871, .dualJoining)
+private let __jt_rangeValuePair_53: _T3 = (0xa872<..<0xa8c4, .nonJoining)
+private let __jt_rangeValuePair_54: _T3 = (0xa8c5<..<0xa8e0, .nonJoining)
+private let __jt_rangeValuePair_55: _T3 = (0xa8e0...0xa8f1, .transparent)
+private let __jt_rangeValuePair_56: _T3 = (0xa8f1<..<0xa8ff, .nonJoining)
+private let __jt_rangeValuePair_57: _T3 = (0xa8ff<..<0xa926, .nonJoining)
+private let __jt_rangeValuePair_58: _T3 = (0xa926...0xa92d, .transparent)
+private let __jt_rangeValuePair_59: _T3 = (0xa92d<..<0xa947, .nonJoining)
+private let __jt_rangeValuePair_5a: _T3 = (0xa947...0xa951, .transparent)
+private let __jt_rangeValuePair_5b: _T3 = (0xa951<..<0xa980, .nonJoining)
+private let __jt_rangeValuePair_5c: _T3 = (0xa982<..<0xa9b3, .nonJoining)
+private let __jt_rangeValuePair_5d: _T3 = (0xa9bd<..<0xa9e5, .nonJoining)
+private let __jt_rangeValuePair_5e: _T3 = (0xa9e5<..<0xaa29, .nonJoining)
+private let __jt_rangeValuePair_5f: _T3 = (0xaa29...0xaa2e, .transparent)
+private let __jt_rangeValuePair_5g: _T3 = (0xaa36<..<0xaa43, .nonJoining)
+private let __jt_rangeValuePair_5h: _T3 = (0xaa43<..<0xaa4c, .nonJoining)
+private let __jt_rangeValuePair_5i: _T3 = (0xaa4c<..<0xaa7c, .nonJoining)
+private let __jt_rangeValuePair_5j: _T3 = (0xaa7c<..<0xaab0, .nonJoining)
+private let __jt_rangeValuePair_5k: _T3 = (0xaab8<..<0xaabe, .nonJoining)
+private let __jt_rangeValuePair_5l: _T3 = (0xaac1<..<0xaaec, .nonJoining)
+private let __jt_rangeValuePair_5m: _T3 = (0xaaed<..<0xaaf6, .nonJoining)
+private let __jt_rangeValuePair_5n: _T3 = (0xaaf6<..<0xabe5, .nonJoining)
+private let __jt_rangeValuePair_5o: _T3 = (0xabed<..<0xfb1e, .nonJoining)
+private let __jt_rangeValuePair_5p: _T3 = (0xfb1e<..<0xfe00, .nonJoining)
+private let __jt_rangeValuePair_5q: _T3 = (0xfe00...0xfe0f, .transparent)
+private let __jt_rangeValuePair_5r: _T3 = (0xfe0f<..<0xfe20, .nonJoining)
+private let __jt_rangeValuePair_5s: _T3 = (0xfe20...0xfe2f, .transparent)
+private let __jt_rangeValuePair_5t: _T3 = (0xfe2f<..<0xfeff, .nonJoining)
+private let __jt_rangeValuePair_5u: _T3 = (0xfeff<..<0xfff9, .nonJoining)
+private let __jt_rangeValuePair_5v: _T3 = (0xfffb<..<0x101fd, .nonJoining)
+private let __jt_rangeValuePair_5w: _T3 = (0x101fd<..<0x102e0, .nonJoining)
+private let __jt_rangeValuePair_5x: _T3 = (0x102e0<..<0x10376, .nonJoining)
+private let __jt_rangeValuePair_5y: _T3 = (0x10376...0x1037a, .transparent)
+private let __jt_rangeValuePair_5z: _T3 = (0x1037a<..<0x10a01, .nonJoining)
+private let __jt_rangeValuePair_60: _T3 = (0x10a06<..<0x10a0c, .nonJoining)
+private let __jt_rangeValuePair_61: _T3 = (0x10a0f<..<0x10a38, .nonJoining)
+private let __jt_rangeValuePair_62: _T3 = (0x10a3f<..<0x10ac0, .nonJoining)
+private let __jt_rangeValuePair_63: _T3 = (0x10ac0...0x10ac4, .dualJoining)
+private let __jt_rangeValuePair_64: _T3 = (0x10ace...0x10ad2, .rightJoining)
+private let __jt_rangeValuePair_65: _T3 = (0x10ad8...0x10adc, .dualJoining)
+private let __jt_rangeValuePair_66: _T3 = (0x10aef<..<0x10b80, .nonJoining)
+private let __jt_rangeValuePair_67: _T3 = (0x10b91<..<0x10ba9, .nonJoining)
+private let __jt_rangeValuePair_68: _T3 = (0x10bae<..<0x10d00, .nonJoining)
+private let __jt_rangeValuePair_69: _T3 = (0x10d01...0x10d21, .dualJoining)
+private let __jt_rangeValuePair_6a: _T3 = (0x10d27<..<0x10d69, .nonJoining)
+private let __jt_rangeValuePair_6b: _T3 = (0x10d69...0x10d6d, .transparent)
+private let __jt_rangeValuePair_6c: _T3 = (0x10d6d<..<0x10eab, .nonJoining)
+private let __jt_rangeValuePair_6d: _T3 = (0x10eac<..<0x10ec2, .nonJoining)
+private let __jt_rangeValuePair_6e: _T3 = (0x10ec7<..<0x10efa, .nonJoining)
+private let __jt_rangeValuePair_6f: _T3 = (0x10efa...0x10eff, .transparent)
+private let __jt_rangeValuePair_6g: _T3 = (0x10eff<..<0x10f30, .nonJoining)
+private let __jt_rangeValuePair_6h: _T3 = (0x10f34...0x10f44, .dualJoining)
+private let __jt_rangeValuePair_6i: _T3 = (0x10f46...0x10f50, .transparent)
+private let __jt_rangeValuePair_6j: _T3 = (0x10f54<..<0x10f70, .nonJoining)
+private let __jt_rangeValuePair_6k: _T3 = (0x10f76...0x10f81, .dualJoining)
+private let __jt_rangeValuePair_6l: _T3 = (0x10f85<..<0x10fb0, .nonJoining)
+private let __jt_rangeValuePair_6m: _T3 = (0x10fcb<..<0x11001, .nonJoining)
+private let __jt_rangeValuePair_6n: _T3 = (0x11001<..<0x11038, .nonJoining)
+private let __jt_rangeValuePair_6o: _T3 = (0x11038...0x11046, .transparent)
+private let __jt_rangeValuePair_6p: _T3 = (0x11046<..<0x11070, .nonJoining)
+private let __jt_rangeValuePair_6q: _T3 = (0x11074<..<0x1107f, .nonJoining)
+private let __jt_rangeValuePair_6r: _T3 = (0x11081<..<0x110b3, .nonJoining)
+private let __jt_rangeValuePair_6s: _T3 = (0x110ba<..<0x110c2, .nonJoining)
+private let __jt_rangeValuePair_6t: _T3 = (0x110c2<..<0x11100, .nonJoining)
+private let __jt_rangeValuePair_6u: _T3 = (0x11102<..<0x11127, .nonJoining)
+private let __jt_rangeValuePair_6v: _T3 = (0x11127...0x1112b, .transparent)
+private let __jt_rangeValuePair_6w: _T3 = (0x1112d...0x11134, .transparent)
+private let __jt_rangeValuePair_6x: _T3 = (0x11134<..<0x11173, .nonJoining)
+private let __jt_rangeValuePair_6y: _T3 = (0x11173<..<0x11180, .nonJoining)
+private let __jt_rangeValuePair_6z: _T3 = (0x11181<..<0x111b6, .nonJoining)
+private let __jt_rangeValuePair_70: _T3 = (0x111b6...0x111be, .transparent)
+private let __jt_rangeValuePair_71: _T3 = (0x111be<..<0x111c9, .nonJoining)
+private let __jt_rangeValuePair_72: _T3 = (0x111cf<..<0x1122f, .nonJoining)
+private let __jt_rangeValuePair_73: _T3 = (0x11237<..<0x1123e, .nonJoining)
+private let __jt_rangeValuePair_74: _T3 = (0x11241<..<0x112df, .nonJoining)
+private let __jt_rangeValuePair_75: _T3 = (0x112e3...0x112ea, .transparent)
+private let __jt_rangeValuePair_76: _T3 = (0x112ea<..<0x11300, .nonJoining)
+private let __jt_rangeValuePair_77: _T3 = (0x11301<..<0x1133b, .nonJoining)
+private let __jt_rangeValuePair_78: _T3 = (0x11340<..<0x11366, .nonJoining)
+private let __jt_rangeValuePair_79: _T3 = (0x11366...0x1136c, .transparent)
+private let __jt_rangeValuePair_7a: _T3 = (0x11370...0x11374, .transparent)
+private let __jt_rangeValuePair_7b: _T3 = (0x11374<..<0x113bb, .nonJoining)
+private let __jt_rangeValuePair_7c: _T3 = (0x113bb...0x113c0, .transparent)
+private let __jt_rangeValuePair_7d: _T3 = (0x113c0<..<0x113ce, .nonJoining)
+private let __jt_rangeValuePair_7e: _T3 = (0x113d2<..<0x113e1, .nonJoining)
+private let __jt_rangeValuePair_7f: _T3 = (0x113e2<..<0x11438, .nonJoining)
+private let __jt_rangeValuePair_7g: _T3 = (0x11438...0x1143f, .transparent)
+private let __jt_rangeValuePair_7h: _T3 = (0x11446<..<0x1145e, .nonJoining)
+private let __jt_rangeValuePair_7i: _T3 = (0x1145e<..<0x114b3, .nonJoining)
+private let __jt_rangeValuePair_7j: _T3 = (0x114b3...0x114b8, .transparent)
+private let __jt_rangeValuePair_7k: _T3 = (0x114c3<..<0x115b2, .nonJoining)
+private let __jt_rangeValuePair_7l: _T3 = (0x115b5<..<0x115bc, .nonJoining)
+private let __jt_rangeValuePair_7m: _T3 = (0x115c0<..<0x115dc, .nonJoining)
+private let __jt_rangeValuePair_7n: _T3 = (0x115dd<..<0x11633, .nonJoining)
+private let __jt_rangeValuePair_7o: _T3 = (0x11633...0x1163a, .transparent)
+private let __jt_rangeValuePair_7p: _T3 = (0x11640<..<0x116ab, .nonJoining)
+private let __jt_rangeValuePair_7q: _T3 = (0x116b0...0x116b5, .transparent)
+private let __jt_rangeValuePair_7r: _T3 = (0x116b7<..<0x1171d, .nonJoining)
+private let __jt_rangeValuePair_7s: _T3 = (0x11727...0x1172b, .transparent)
+private let __jt_rangeValuePair_7t: _T3 = (0x1172b<..<0x1182f, .nonJoining)
+private let __jt_rangeValuePair_7u: _T3 = (0x1182f...0x11837, .transparent)
+private let __jt_rangeValuePair_7v: _T3 = (0x1183a<..<0x1193b, .nonJoining)
+private let __jt_rangeValuePair_7w: _T3 = (0x11943<..<0x119d4, .nonJoining)
+private let __jt_rangeValuePair_7x: _T3 = (0x119e0<..<0x11a01, .nonJoining)
+private let __jt_rangeValuePair_7y: _T3 = (0x11a01...0x11a0a, .transparent)
+private let __jt_rangeValuePair_7z: _T3 = (0x11a0a<..<0x11a33, .nonJoining)
+private let __jt_rangeValuePair_80: _T3 = (0x11a33...0x11a38, .transparent)
+private let __jt_rangeValuePair_81: _T3 = (0x11a3e<..<0x11a47, .nonJoining)
+private let __jt_rangeValuePair_82: _T3 = (0x11a47<..<0x11a51, .nonJoining)
+private let __jt_rangeValuePair_83: _T3 = (0x11a51...0x11a56, .transparent)
+private let __jt_rangeValuePair_84: _T3 = (0x11a5b<..<0x11a8a, .nonJoining)
+private let __jt_rangeValuePair_85: _T3 = (0x11a8a...0x11a96, .transparent)
+private let __jt_rangeValuePair_86: _T3 = (0x11a99<..<0x11b60, .nonJoining)
+private let __jt_rangeValuePair_87: _T3 = (0x11b66<..<0x11c30, .nonJoining)
+private let __jt_rangeValuePair_88: _T3 = (0x11c30...0x11c36, .transparent)
+private let __jt_rangeValuePair_89: _T3 = (0x11c38...0x11c3d, .transparent)
+private let __jt_rangeValuePair_8a: _T3 = (0x11c3f<..<0x11c92, .nonJoining)
+private let __jt_rangeValuePair_8b: _T3 = (0x11c92...0x11ca7, .transparent)
+private let __jt_rangeValuePair_8c: _T3 = (0x11caa...0x11cb0, .transparent)
+private let __jt_rangeValuePair_8d: _T3 = (0x11cb6<..<0x11d31, .nonJoining)
+private let __jt_rangeValuePair_8e: _T3 = (0x11d31...0x11d36, .transparent)
+private let __jt_rangeValuePair_8f: _T3 = (0x11d3f...0x11d45, .transparent)
+private let __jt_rangeValuePair_8g: _T3 = (0x11d47<..<0x11d90, .nonJoining)
+private let __jt_rangeValuePair_8h: _T3 = (0x11d97<..<0x11ef3, .nonJoining)
+private let __jt_rangeValuePair_8i: _T3 = (0x11ef4<..<0x11f00, .nonJoining)
+private let __jt_rangeValuePair_8j: _T3 = (0x11f01<..<0x11f36, .nonJoining)
+private let __jt_rangeValuePair_8k: _T3 = (0x11f36...0x11f3a, .transparent)
+private let __jt_rangeValuePair_8l: _T3 = (0x11f3a<..<0x11f40, .nonJoining)
+private let __jt_rangeValuePair_8m: _T3 = (0x11f42<..<0x11f5a, .nonJoining)
+private let __jt_rangeValuePair_8n: _T3 = (0x11f5a<..<0x13430, .nonJoining)
+private let __jt_rangeValuePair_8o: _T3 = (0x13430...0x13440, .transparent)
+private let __jt_rangeValuePair_8p: _T3 = (0x13440<..<0x13447, .nonJoining)
+private let __jt_rangeValuePair_8q: _T3 = (0x13447...0x13455, .transparent)
+private let __jt_rangeValuePair_8r: _T3 = (0x13455<..<0x1611e, .nonJoining)
+private let __jt_rangeValuePair_8s: _T3 = (0x1611e...0x16129, .transparent)
+private let __jt_rangeValuePair_8t: _T3 = (0x1612f<..<0x16af0, .nonJoining)
+private let __jt_rangeValuePair_8u: _T3 = (0x16af0...0x16af4, .transparent)
+private let __jt_rangeValuePair_8v: _T3 = (0x16af4<..<0x16b30, .nonJoining)
+private let __jt_rangeValuePair_8w: _T3 = (0x16b30...0x16b36, .transparent)
+private let __jt_rangeValuePair_8x: _T3 = (0x16b36<..<0x16f4f, .nonJoining)
+private let __jt_rangeValuePair_8y: _T3 = (0x16f4f<..<0x16f8f, .nonJoining)
+private let __jt_rangeValuePair_8z: _T3 = (0x16f92<..<0x16fe4, .nonJoining)
+private let __jt_rangeValuePair_90: _T3 = (0x16fe4<..<0x1bc9d, .nonJoining)
+private let __jt_rangeValuePair_91: _T3 = (0x1bca3<..<0x1cf00, .nonJoining)
+private let __jt_rangeValuePair_92: _T3 = (0x1cf00...0x1cf2d, .transparent)
+private let __jt_rangeValuePair_93: _T3 = (0x1cf30...0x1cf46, .transparent)
+private let __jt_rangeValuePair_94: _T3 = (0x1cf46<..<0x1d167, .nonJoining)
+private let __jt_rangeValuePair_95: _T3 = (0x1d169<..<0x1d173, .nonJoining)
+private let __jt_rangeValuePair_96: _T3 = (0x1d173...0x1d182, .transparent)
+private let __jt_rangeValuePair_97: _T3 = (0x1d185...0x1d18b, .transparent)
+private let __jt_rangeValuePair_98: _T3 = (0x1d18b<..<0x1d1aa, .nonJoining)
+private let __jt_rangeValuePair_99: _T3 = (0x1d1ad<..<0x1d242, .nonJoining)
+private let __jt_rangeValuePair_9a: _T3 = (0x1d244<..<0x1da00, .nonJoining)
+private let __jt_rangeValuePair_9b: _T3 = (0x1da00...0x1da36, .transparent)
+private let __jt_rangeValuePair_9c: _T3 = (0x1da3b...0x1da6c, .transparent)
+private let __jt_rangeValuePair_9d: _T3 = (0x1da6c<..<0x1da75, .nonJoining)
+private let __jt_rangeValuePair_9e: _T3 = (0x1da75<..<0x1da84, .nonJoining)
+private let __jt_rangeValuePair_9f: _T3 = (0x1da84<..<0x1da9b, .nonJoining)
+private let __jt_rangeValuePair_9g: _T3 = (0x1da9b...0x1da9f, .transparent)
+private let __jt_rangeValuePair_9h: _T3 = (0x1daa1...0x1daaf, .transparent)
+private let __jt_rangeValuePair_9i: _T3 = (0x1daaf<..<0x1e000, .nonJoining)
+private let __jt_rangeValuePair_9j: _T3 = (0x1e000...0x1e006, .transparent)
+private let __jt_rangeValuePair_9k: _T3 = (0x1e008...0x1e018, .transparent)
+private let __jt_rangeValuePair_9l: _T3 = (0x1e01b...0x1e021, .transparent)
+private let __jt_rangeValuePair_9m: _T3 = (0x1e026...0x1e02a, .transparent)
+private let __jt_rangeValuePair_9n: _T3 = (0x1e02a<..<0x1e08f, .nonJoining)
+private let __jt_rangeValuePair_9o: _T3 = (0x1e08f<..<0x1e130, .nonJoining)
+private let __jt_rangeValuePair_9p: _T3 = (0x1e130...0x1e136, .transparent)
+private let __jt_rangeValuePair_9q: _T3 = (0x1e136<..<0x1e2ae, .nonJoining)
+private let __jt_rangeValuePair_9r: _T3 = (0x1e2ae<..<0x1e2ec, .nonJoining)
+private let __jt_rangeValuePair_9s: _T3 = (0x1e2ef<..<0x1e4ec, .nonJoining)
+private let __jt_rangeValuePair_9t: _T3 = (0x1e4ef<..<0x1e5ee, .nonJoining)
+private let __jt_rangeValuePair_9u: _T3 = (0x1e5ef<..<0x1e6e3, .nonJoining)
+private let __jt_rangeValuePair_9v: _T3 = (0x1e6e6<..<0x1e6ee, .nonJoining)
+private let __jt_rangeValuePair_9w: _T3 = (0x1e6ef<..<0x1e6f5, .nonJoining)
+private let __jt_rangeValuePair_9x: _T3 = (0x1e6f5<..<0x1e8d0, .nonJoining)
+private let __jt_rangeValuePair_9y: _T3 = (0x1e8d0...0x1e8d6, .transparent)
+private let __jt_rangeValuePair_9z: _T3 = (0x1e8d6<..<0x1e900, .nonJoining)
+private let __jt_rangeValuePair_a0: _T3 = (0x1e900...0x1e943, .dualJoining)
+private let __jt_rangeValuePair_a1: _T3 = (0x1e944...0x1e94b, .transparent)
+private let __jt_rangeValuePair_a2: _T3 = (0x1e94b<..<0xe0001, .nonJoining)
+private let __jt_rangeValuePair_a3: _T3 = (0xe0001<..<0xe0020, .nonJoining)
+private let __jt_rangeValuePair_a4: _T3 = (0xe0020...0xe007f, .transparent)
+private let __jt_rangeValuePair_a5: _T3 = (0xe007f<..<0xe0100, .nonJoining)
+private let __jt_rangeValuePair_a6: _T3 = (0xe0100...0xe01ef, .transparent)
+private let __jt_rangeValuePair_a7: _T3 = (0xe01ef<..0x10ffff, .nonJoining)
+private let __jt_rangeValuePairArray: _T4 = [
+  __jt_rangeValuePair_0,
+  __jt_rangeValuePair_1,
+  __jt_rangeValuePair_2,
+  __jt_rangeValuePair_3,
+  __jt_rangeValuePair_4,
+  __jt_rangeValuePair_5,
+  __jt_rangeValuePair_6,
+  __jt_rangeValuePair_7,
+  __jt_rangeValuePair_8,
+  __jt_rangeValuePair_9,
+  __jt_rangeValuePair_a,
+  __jt_rangeValuePair_b,
+  __jt_rangeValuePair_c,
+  __jt_rangeValuePair_d,
+  __jt_rangeValuePair_e,
+  __jt_rangeValuePair_f,
+  __jt_rangeValuePair_g,
+  __jt_rangeValuePair_h,
+  __jt_rangeValuePair_i,
+  __jt_rangeValuePair_j,
+  __jt_rangeValuePair_k,
+  __jt_rangeValuePair_l,
+  __jt_rangeValuePair_m,
+  __jt_rangeValuePair_n,
+  __jt_rangeValuePair_o,
+  __jt_rangeValuePair_p,
+  __jt_rangeValuePair_q,
+  __jt_rangeValuePair_r,
+  __jt_rangeValuePair_s,
+  __jt_rangeValuePair_t,
+  __jt_rangeValuePair_u,
+  __jt_rangeValuePair_v,
+  __jt_rangeValuePair_w,
+  __jt_rangeValuePair_x,
+  __jt_rangeValuePair_y,
+  __jt_rangeValuePair_z,
+  __jt_rangeValuePair_10,
+  __jt_rangeValuePair_11,
+  __jt_rangeValuePair_12,
+  __jt_rangeValuePair_13,
+  __jt_rangeValuePair_14,
+  __jt_rangeValuePair_15,
+  __jt_rangeValuePair_16,
+  __jt_rangeValuePair_17,
+  __jt_rangeValuePair_18,
+  __jt_rangeValuePair_19,
+  __jt_rangeValuePair_1a,
+  __jt_rangeValuePair_1b,
+  __jt_rangeValuePair_1c,
+  __jt_rangeValuePair_1d,
+  __jt_rangeValuePair_1e,
+  __jt_rangeValuePair_1f,
+  __jt_rangeValuePair_1g,
+  __jt_rangeValuePair_1h,
+  __jt_rangeValuePair_1i,
+  __jt_rangeValuePair_1j,
+  __jt_rangeValuePair_1k,
+  __jt_rangeValuePair_1l,
+  __jt_rangeValuePair_1m,
+  __jt_rangeValuePair_1n,
+  __jt_rangeValuePair_1o,
+  __jt_rangeValuePair_1p,
+  __jt_rangeValuePair_1q,
+  __jt_rangeValuePair_1r,
+  __jt_rangeValuePair_1s,
+  __jt_rangeValuePair_1t,
+  __jt_rangeValuePair_1u,
+  __jt_rangeValuePair_1v,
+  __jt_rangeValuePair_1w,
+  __jt_rangeValuePair_1x,
+  __jt_rangeValuePair_1y,
+  __jt_rangeValuePair_1z,
+  __jt_rangeValuePair_20,
+  __jt_rangeValuePair_21,
+  __jt_rangeValuePair_22,
+  __jt_rangeValuePair_23,
+  __jt_rangeValuePair_24,
+  __jt_rangeValuePair_25,
+  __jt_rangeValuePair_26,
+  __jt_rangeValuePair_27,
+  __jt_rangeValuePair_28,
+  __jt_rangeValuePair_29,
+  __jt_rangeValuePair_2a,
+  __jt_rangeValuePair_2b,
+  __jt_rangeValuePair_2c,
+  __jt_rangeValuePair_2d,
+  __jt_rangeValuePair_2e,
+  __jt_rangeValuePair_2f,
+  __jt_rangeValuePair_2g,
+  __jt_rangeValuePair_2h,
+  __jt_rangeValuePair_2i,
+  __jt_rangeValuePair_2j,
+  __jt_rangeValuePair_2k,
+  __jt_rangeValuePair_2l,
+  __jt_rangeValuePair_2m,
+  __jt_rangeValuePair_2n,
+  __jt_rangeValuePair_2o,
+  __jt_rangeValuePair_2p,
+  __jt_rangeValuePair_2q,
+  __jt_rangeValuePair_2r,
+  __jt_rangeValuePair_2s,
+  __jt_rangeValuePair_2t,
+  __jt_rangeValuePair_2u,
+  __jt_rangeValuePair_2v,
+  __jt_rangeValuePair_2w,
+  __jt_rangeValuePair_2x,
+  __jt_rangeValuePair_2y,
+  __jt_rangeValuePair_2z,
+  __jt_rangeValuePair_30,
+  __jt_rangeValuePair_31,
+  __jt_rangeValuePair_32,
+  __jt_rangeValuePair_33,
+  __jt_rangeValuePair_34,
+  __jt_rangeValuePair_35,
+  __jt_rangeValuePair_36,
+  __jt_rangeValuePair_37,
+  __jt_rangeValuePair_38,
+  __jt_rangeValuePair_39,
+  __jt_rangeValuePair_3a,
+  __jt_rangeValuePair_3b,
+  __jt_rangeValuePair_3c,
+  __jt_rangeValuePair_3d,
+  __jt_rangeValuePair_3e,
+  __jt_rangeValuePair_3f,
+  __jt_rangeValuePair_3g,
+  __jt_rangeValuePair_3h,
+  __jt_rangeValuePair_3i,
+  __jt_rangeValuePair_3j,
+  __jt_rangeValuePair_3k,
+  __jt_rangeValuePair_3l,
+  __jt_rangeValuePair_3m,
+  __jt_rangeValuePair_3n,
+  __jt_rangeValuePair_3o,
+  __jt_rangeValuePair_3p,
+  __jt_rangeValuePair_3q,
+  __jt_rangeValuePair_3r,
+  __jt_rangeValuePair_3s,
+  __jt_rangeValuePair_3t,
+  __jt_rangeValuePair_3u,
+  __jt_rangeValuePair_3v,
+  __jt_rangeValuePair_3w,
+  __jt_rangeValuePair_3x,
+  __jt_rangeValuePair_3y,
+  __jt_rangeValuePair_3z,
+  __jt_rangeValuePair_40,
+  __jt_rangeValuePair_41,
+  __jt_rangeValuePair_42,
+  __jt_rangeValuePair_43,
+  __jt_rangeValuePair_44,
+  __jt_rangeValuePair_45,
+  __jt_rangeValuePair_46,
+  __jt_rangeValuePair_47,
+  __jt_rangeValuePair_48,
+  __jt_rangeValuePair_49,
+  __jt_rangeValuePair_4a,
+  __jt_rangeValuePair_4b,
+  __jt_rangeValuePair_4c,
+  __jt_rangeValuePair_4d,
+  __jt_rangeValuePair_4e,
+  __jt_rangeValuePair_4f,
+  __jt_rangeValuePair_4g,
+  __jt_rangeValuePair_4h,
+  __jt_rangeValuePair_4i,
+  __jt_rangeValuePair_4j,
+  __jt_rangeValuePair_4k,
+  __jt_rangeValuePair_4l,
+  __jt_rangeValuePair_4m,
+  __jt_rangeValuePair_4n,
+  __jt_rangeValuePair_4o,
+  __jt_rangeValuePair_4p,
+  __jt_rangeValuePair_4q,
+  __jt_rangeValuePair_4r,
+  __jt_rangeValuePair_4s,
+  __jt_rangeValuePair_4t,
+  __jt_rangeValuePair_4u,
+  __jt_rangeValuePair_4v,
+  __jt_rangeValuePair_4w,
+  __jt_rangeValuePair_4x,
+  __jt_rangeValuePair_4y,
+  __jt_rangeValuePair_4z,
+  __jt_rangeValuePair_50,
+  __jt_rangeValuePair_51,
+  __jt_rangeValuePair_52,
+  __jt_rangeValuePair_53,
+  __jt_rangeValuePair_54,
+  __jt_rangeValuePair_55,
+  __jt_rangeValuePair_56,
+  __jt_rangeValuePair_57,
+  __jt_rangeValuePair_58,
+  __jt_rangeValuePair_59,
+  __jt_rangeValuePair_5a,
+  __jt_rangeValuePair_5b,
+  __jt_rangeValuePair_5c,
+  __jt_rangeValuePair_5d,
+  __jt_rangeValuePair_5e,
+  __jt_rangeValuePair_5f,
+  __jt_rangeValuePair_5g,
+  __jt_rangeValuePair_5h,
+  __jt_rangeValuePair_5i,
+  __jt_rangeValuePair_5j,
+  __jt_rangeValuePair_5k,
+  __jt_rangeValuePair_5l,
+  __jt_rangeValuePair_5m,
+  __jt_rangeValuePair_5n,
+  __jt_rangeValuePair_5o,
+  __jt_rangeValuePair_5p,
+  __jt_rangeValuePair_5q,
+  __jt_rangeValuePair_5r,
+  __jt_rangeValuePair_5s,
+  __jt_rangeValuePair_5t,
+  __jt_rangeValuePair_5u,
+  __jt_rangeValuePair_5v,
+  __jt_rangeValuePair_5w,
+  __jt_rangeValuePair_5x,
+  __jt_rangeValuePair_5y,
+  __jt_rangeValuePair_5z,
+  __jt_rangeValuePair_60,
+  __jt_rangeValuePair_61,
+  __jt_rangeValuePair_62,
+  __jt_rangeValuePair_63,
+  __jt_rangeValuePair_64,
+  __jt_rangeValuePair_65,
+  __jt_rangeValuePair_66,
+  __jt_rangeValuePair_67,
+  __jt_rangeValuePair_68,
+  __jt_rangeValuePair_69,
+  __jt_rangeValuePair_6a,
+  __jt_rangeValuePair_6b,
+  __jt_rangeValuePair_6c,
+  __jt_rangeValuePair_6d,
+  __jt_rangeValuePair_6e,
+  __jt_rangeValuePair_6f,
+  __jt_rangeValuePair_6g,
+  __jt_rangeValuePair_6h,
+  __jt_rangeValuePair_6i,
+  __jt_rangeValuePair_6j,
+  __jt_rangeValuePair_6k,
+  __jt_rangeValuePair_6l,
+  __jt_rangeValuePair_6m,
+  __jt_rangeValuePair_6n,
+  __jt_rangeValuePair_6o,
+  __jt_rangeValuePair_6p,
+  __jt_rangeValuePair_6q,
+  __jt_rangeValuePair_6r,
+  __jt_rangeValuePair_6s,
+  __jt_rangeValuePair_6t,
+  __jt_rangeValuePair_6u,
+  __jt_rangeValuePair_6v,
+  __jt_rangeValuePair_6w,
+  __jt_rangeValuePair_6x,
+  __jt_rangeValuePair_6y,
+  __jt_rangeValuePair_6z,
+  __jt_rangeValuePair_70,
+  __jt_rangeValuePair_71,
+  __jt_rangeValuePair_72,
+  __jt_rangeValuePair_73,
+  __jt_rangeValuePair_74,
+  __jt_rangeValuePair_75,
+  __jt_rangeValuePair_76,
+  __jt_rangeValuePair_77,
+  __jt_rangeValuePair_78,
+  __jt_rangeValuePair_79,
+  __jt_rangeValuePair_7a,
+  __jt_rangeValuePair_7b,
+  __jt_rangeValuePair_7c,
+  __jt_rangeValuePair_7d,
+  __jt_rangeValuePair_7e,
+  __jt_rangeValuePair_7f,
+  __jt_rangeValuePair_7g,
+  __jt_rangeValuePair_7h,
+  __jt_rangeValuePair_7i,
+  __jt_rangeValuePair_7j,
+  __jt_rangeValuePair_7k,
+  __jt_rangeValuePair_7l,
+  __jt_rangeValuePair_7m,
+  __jt_rangeValuePair_7n,
+  __jt_rangeValuePair_7o,
+  __jt_rangeValuePair_7p,
+  __jt_rangeValuePair_7q,
+  __jt_rangeValuePair_7r,
+  __jt_rangeValuePair_7s,
+  __jt_rangeValuePair_7t,
+  __jt_rangeValuePair_7u,
+  __jt_rangeValuePair_7v,
+  __jt_rangeValuePair_7w,
+  __jt_rangeValuePair_7x,
+  __jt_rangeValuePair_7y,
+  __jt_rangeValuePair_7z,
+  __jt_rangeValuePair_80,
+  __jt_rangeValuePair_81,
+  __jt_rangeValuePair_82,
+  __jt_rangeValuePair_83,
+  __jt_rangeValuePair_84,
+  __jt_rangeValuePair_85,
+  __jt_rangeValuePair_86,
+  __jt_rangeValuePair_87,
+  __jt_rangeValuePair_88,
+  __jt_rangeValuePair_89,
+  __jt_rangeValuePair_8a,
+  __jt_rangeValuePair_8b,
+  __jt_rangeValuePair_8c,
+  __jt_rangeValuePair_8d,
+  __jt_rangeValuePair_8e,
+  __jt_rangeValuePair_8f,
+  __jt_rangeValuePair_8g,
+  __jt_rangeValuePair_8h,
+  __jt_rangeValuePair_8i,
+  __jt_rangeValuePair_8j,
+  __jt_rangeValuePair_8k,
+  __jt_rangeValuePair_8l,
+  __jt_rangeValuePair_8m,
+  __jt_rangeValuePair_8n,
+  __jt_rangeValuePair_8o,
+  __jt_rangeValuePair_8p,
+  __jt_rangeValuePair_8q,
+  __jt_rangeValuePair_8r,
+  __jt_rangeValuePair_8s,
+  __jt_rangeValuePair_8t,
+  __jt_rangeValuePair_8u,
+  __jt_rangeValuePair_8v,
+  __jt_rangeValuePair_8w,
+  __jt_rangeValuePair_8x,
+  __jt_rangeValuePair_8y,
+  __jt_rangeValuePair_8z,
+  __jt_rangeValuePair_90,
+  __jt_rangeValuePair_91,
+  __jt_rangeValuePair_92,
+  __jt_rangeValuePair_93,
+  __jt_rangeValuePair_94,
+  __jt_rangeValuePair_95,
+  __jt_rangeValuePair_96,
+  __jt_rangeValuePair_97,
+  __jt_rangeValuePair_98,
+  __jt_rangeValuePair_99,
+  __jt_rangeValuePair_9a,
+  __jt_rangeValuePair_9b,
+  __jt_rangeValuePair_9c,
+  __jt_rangeValuePair_9d,
+  __jt_rangeValuePair_9e,
+  __jt_rangeValuePair_9f,
+  __jt_rangeValuePair_9g,
+  __jt_rangeValuePair_9h,
+  __jt_rangeValuePair_9i,
+  __jt_rangeValuePair_9j,
+  __jt_rangeValuePair_9k,
+  __jt_rangeValuePair_9l,
+  __jt_rangeValuePair_9m,
+  __jt_rangeValuePair_9n,
+  __jt_rangeValuePair_9o,
+  __jt_rangeValuePair_9p,
+  __jt_rangeValuePair_9q,
+  __jt_rangeValuePair_9r,
+  __jt_rangeValuePair_9s,
+  __jt_rangeValuePair_9t,
+  __jt_rangeValuePair_9u,
+  __jt_rangeValuePair_9v,
+  __jt_rangeValuePair_9w,
+  __jt_rangeValuePair_9x,
+  __jt_rangeValuePair_9y,
+  __jt_rangeValuePair_9z,
+  __jt_rangeValuePair_a0,
+  __jt_rangeValuePair_a1,
+  __jt_rangeValuePair_a2,
+  __jt_rangeValuePair_a3,
+  __jt_rangeValuePair_a4,
+  __jt_rangeValuePair_a5,
+  __jt_rangeValuePair_a6,
+  __jt_rangeValuePair_a7,
 ]
-private let __jt_rangeDictionary = RangeDictionary<Unicode.Scalar.Value, _T0>(carefullySortedRangesAndValues: __jt_rangePairArray)
+private let __jt_rangeDictionary = RangeDictionary<_T0, _T1>(carefullySortedRangesAndValues: __jt_rangeValuePairArray)
 internal let _jt = UnicodeScalarValueDictionary<Unicode.JoiningType>(dictionary: __jt_dictionary, rangeDictionary: __jt_rangeDictionary)

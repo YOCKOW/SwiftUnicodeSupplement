@@ -5,14 +5,14 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/NameAliases.txt
 // Last-Modified: 2025-08-16T00:45:11Z
-// ETag: "414a-63c70d19d13c0-gzip"
+// ETag: W/"414a-63c70d19d13c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2025 Unicode, Inc.
+  Copyright © 1991-2026 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR
@@ -53,51 +53,52 @@
 import Ranges
 
 // Type Aliases
-private typealias _T0 = String
-private typealias _T1 = (Unicode.Scalar.Value, _T0)
-private typealias _T2 = (AnyRange<UInt32>, _T0)
-private typealias _T3 = Array<_T2>
+private typealias _T0 = Unicode.Scalar.Value
+private typealias _T1 = String
+private typealias _T2 = (_T0, _T1)
+private typealias _T3 = (any GeneralizedRange<_T0> & Sendable, _T1)
+private typealias _T4 = Array<_T3>
 
-private let __nameAliases_pair_0: _T1 = (0x1a2, "LATIN CAPITAL LETTER GHA")
-private let __nameAliases_pair_1: _T1 = (0x1a3, "LATIN SMALL LETTER GHA")
-private let __nameAliases_pair_2: _T1 = (0x616, "ARABIC SMALL HIGH LIGATURE ALEF WITH YEH BARREE")
-private let __nameAliases_pair_3: _T1 = (0x709, "SYRIAC SUBLINEAR COLON SKEWED LEFT")
-private let __nameAliases_pair_4: _T1 = (0xcde, "KANNADA LETTER LLLA")
-private let __nameAliases_pair_5: _T1 = (0xe9d, "LAO LETTER FO FON")
-private let __nameAliases_pair_6: _T1 = (0xe9f, "LAO LETTER FO FAY")
-private let __nameAliases_pair_7: _T1 = (0xea3, "LAO LETTER RO")
-private let __nameAliases_pair_8: _T1 = (0xea5, "LAO LETTER LO")
-private let __nameAliases_pair_9: _T1 = (0xfd0, "TIBETAN MARK BKA- SHOG GI MGO RGYAN")
-private let __nameAliases_pair_a: _T1 = (0x11ec, "HANGUL JONGSEONG YESIEUNG-KIYEOK")
-private let __nameAliases_pair_b: _T1 = (0x11ed, "HANGUL JONGSEONG YESIEUNG-SSANGKIYEOK")
-private let __nameAliases_pair_c: _T1 = (0x11ee, "HANGUL JONGSEONG SSANGYESIEUNG")
-private let __nameAliases_pair_d: _T1 = (0x11ef, "HANGUL JONGSEONG YESIEUNG-KHIEUKH")
-private let __nameAliases_pair_e: _T1 = (0x1bbd, "SUNDANESE LETTER ARCHAIC I")
-private let __nameAliases_pair_f: _T1 = (0x2118, "WEIERSTRASS ELLIPTIC FUNCTION")
-private let __nameAliases_pair_g: _T1 = (0x2448, "MICR ON US SYMBOL")
-private let __nameAliases_pair_h: _T1 = (0x2449, "MICR DASH SYMBOL")
-private let __nameAliases_pair_i: _T1 = (0x2b7a, "LEFTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE")
-private let __nameAliases_pair_j: _T1 = (0x2b7c, "RIGHTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE")
-private let __nameAliases_pair_k: _T1 = (0xa015, "YI SYLLABLE ITERATION MARK")
-private let __nameAliases_pair_l: _T1 = (0xaa6e, "MYANMAR LETTER KHAMTI LLA")
-private let __nameAliases_pair_m: _T1 = (0xfe18, "PRESENTATION FORM FOR VERTICAL RIGHT WHITE LENTICULAR BRACKET")
-private let __nameAliases_pair_n: _T1 = (0x122d4, "CUNEIFORM SIGN NU11 TENU")
-private let __nameAliases_pair_o: _T1 = (0x122d5, "CUNEIFORM SIGN NU11 OVER NU11 BUR OVER BUR")
-private let __nameAliases_pair_p: _T1 = (0x12327, "CUNEIFORM SIGN KALAM")
-private let __nameAliases_pair_q: _T1 = (0x1680b, "BAMUM LETTER PHASE-A MAEMGBIEE")
-private let __nameAliases_pair_r: _T1 = (0x16881, "BAMUM LETTER PHASE-B PUNGGAAM")
-private let __nameAliases_pair_s: _T1 = (0x1688e, "BAMUM LETTER PHASE-B NGGOM")
-private let __nameAliases_pair_t: _T1 = (0x168dc, "BAMUM LETTER PHASE-C SHETFON")
-private let __nameAliases_pair_u: _T1 = (0x1697d, "BAMUM LETTER PHASE-E NGGOP")
-private let __nameAliases_pair_v: _T1 = (0x16e56, "MEDEFAIDRIN CAPITAL LETTER H")
-private let __nameAliases_pair_w: _T1 = (0x16e57, "MEDEFAIDRIN CAPITAL LETTER NG")
-private let __nameAliases_pair_x: _T1 = (0x16e76, "MEDEFAIDRIN SMALL LETTER H")
-private let __nameAliases_pair_y: _T1 = (0x16e77, "MEDEFAIDRIN SMALL LETTER NG")
-private let __nameAliases_pair_z: _T1 = (0x1b001, "HENTAIGANA LETTER E-1")
-private let __nameAliases_pair_10: _T1 = (0x1d0c5, "BYZANTINE MUSICAL SYMBOL FTHORA SKLIRON CHROMA VASIS")
-private let __nameAliases_pair_11: _T1 = (0x1e899, "MENDE KIKAKUI SYLLABLE M172 MBO")
-private let __nameAliases_pair_12: _T1 = (0x1e89a, "MENDE KIKAKUI SYLLABLE M174 MBOO")
-private let __nameAliases_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uniqueKeysWithValues: [
+private let __nameAliases_pair_0: _T2 = (0x1a2, "LATIN CAPITAL LETTER GHA")
+private let __nameAliases_pair_1: _T2 = (0x1a3, "LATIN SMALL LETTER GHA")
+private let __nameAliases_pair_2: _T2 = (0x616, "ARABIC SMALL HIGH LIGATURE ALEF WITH YEH BARREE")
+private let __nameAliases_pair_3: _T2 = (0x709, "SYRIAC SUBLINEAR COLON SKEWED LEFT")
+private let __nameAliases_pair_4: _T2 = (0xcde, "KANNADA LETTER LLLA")
+private let __nameAliases_pair_5: _T2 = (0xe9d, "LAO LETTER FO FON")
+private let __nameAliases_pair_6: _T2 = (0xe9f, "LAO LETTER FO FAY")
+private let __nameAliases_pair_7: _T2 = (0xea3, "LAO LETTER RO")
+private let __nameAliases_pair_8: _T2 = (0xea5, "LAO LETTER LO")
+private let __nameAliases_pair_9: _T2 = (0xfd0, "TIBETAN MARK BKA- SHOG GI MGO RGYAN")
+private let __nameAliases_pair_a: _T2 = (0x11ec, "HANGUL JONGSEONG YESIEUNG-KIYEOK")
+private let __nameAliases_pair_b: _T2 = (0x11ed, "HANGUL JONGSEONG YESIEUNG-SSANGKIYEOK")
+private let __nameAliases_pair_c: _T2 = (0x11ee, "HANGUL JONGSEONG SSANGYESIEUNG")
+private let __nameAliases_pair_d: _T2 = (0x11ef, "HANGUL JONGSEONG YESIEUNG-KHIEUKH")
+private let __nameAliases_pair_e: _T2 = (0x1bbd, "SUNDANESE LETTER ARCHAIC I")
+private let __nameAliases_pair_f: _T2 = (0x2118, "WEIERSTRASS ELLIPTIC FUNCTION")
+private let __nameAliases_pair_g: _T2 = (0x2448, "MICR ON US SYMBOL")
+private let __nameAliases_pair_h: _T2 = (0x2449, "MICR DASH SYMBOL")
+private let __nameAliases_pair_i: _T2 = (0x2b7a, "LEFTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE")
+private let __nameAliases_pair_j: _T2 = (0x2b7c, "RIGHTWARDS TRIANGLE-HEADED ARROW WITH DOUBLE VERTICAL STROKE")
+private let __nameAliases_pair_k: _T2 = (0xa015, "YI SYLLABLE ITERATION MARK")
+private let __nameAliases_pair_l: _T2 = (0xaa6e, "MYANMAR LETTER KHAMTI LLA")
+private let __nameAliases_pair_m: _T2 = (0xfe18, "PRESENTATION FORM FOR VERTICAL RIGHT WHITE LENTICULAR BRACKET")
+private let __nameAliases_pair_n: _T2 = (0x122d4, "CUNEIFORM SIGN NU11 TENU")
+private let __nameAliases_pair_o: _T2 = (0x122d5, "CUNEIFORM SIGN NU11 OVER NU11 BUR OVER BUR")
+private let __nameAliases_pair_p: _T2 = (0x12327, "CUNEIFORM SIGN KALAM")
+private let __nameAliases_pair_q: _T2 = (0x1680b, "BAMUM LETTER PHASE-A MAEMGBIEE")
+private let __nameAliases_pair_r: _T2 = (0x16881, "BAMUM LETTER PHASE-B PUNGGAAM")
+private let __nameAliases_pair_s: _T2 = (0x1688e, "BAMUM LETTER PHASE-B NGGOM")
+private let __nameAliases_pair_t: _T2 = (0x168dc, "BAMUM LETTER PHASE-C SHETFON")
+private let __nameAliases_pair_u: _T2 = (0x1697d, "BAMUM LETTER PHASE-E NGGOP")
+private let __nameAliases_pair_v: _T2 = (0x16e56, "MEDEFAIDRIN CAPITAL LETTER H")
+private let __nameAliases_pair_w: _T2 = (0x16e57, "MEDEFAIDRIN CAPITAL LETTER NG")
+private let __nameAliases_pair_x: _T2 = (0x16e76, "MEDEFAIDRIN SMALL LETTER H")
+private let __nameAliases_pair_y: _T2 = (0x16e77, "MEDEFAIDRIN SMALL LETTER NG")
+private let __nameAliases_pair_z: _T2 = (0x1b001, "HENTAIGANA LETTER E-1")
+private let __nameAliases_pair_10: _T2 = (0x1d0c5, "BYZANTINE MUSICAL SYMBOL FTHORA SKLIRON CHROMA VASIS")
+private let __nameAliases_pair_11: _T2 = (0x1e899, "MENDE KIKAKUI SYLLABLE M172 MBO")
+private let __nameAliases_pair_12: _T2 = (0x1e89a, "MENDE KIKAKUI SYLLABLE M174 MBOO")
+private let __nameAliases_dictionary = Dictionary<_T0, _T1>(uniqueKeysWithValues: [
   __nameAliases_pair_0,
   __nameAliases_pair_1,
   __nameAliases_pair_2,
@@ -138,7 +139,7 @@ private let __nameAliases_dictionary = Dictionary<Unicode.Scalar.Value, _T0>(uni
   __nameAliases_pair_11,
   __nameAliases_pair_12,
 ])
-private let __nameAliases_rangePairArray: _T3 = [
+private let __nameAliases_rangeValuePairArray: _T4 = [
 ]
-private let __nameAliases_rangeDictionary = RangeDictionary<Unicode.Scalar.Value, _T0>(carefullySortedRangesAndValues: __nameAliases_rangePairArray)
+private let __nameAliases_rangeDictionary = RangeDictionary<_T0, _T1>(carefullySortedRangesAndValues: __nameAliases_rangeValuePairArray)
 internal let _nameAliases = UnicodeScalarValueDictionary<String>(dictionary: __nameAliases_dictionary, rangeDictionary: __nameAliases_rangeDictionary)
