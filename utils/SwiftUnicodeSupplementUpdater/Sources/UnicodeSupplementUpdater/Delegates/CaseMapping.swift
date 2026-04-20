@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  CaseMapping.swift
-   © 2020 YOCKOW.
+   © 2020,2026 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
@@ -23,19 +23,27 @@ private extension Unicode.Scalar {
   }
 }
 
-public class CaseMapping: UCDCodeUpdaterDelegate {
-  public override var prefix: String {
+public struct CaseMapping: UCDCodeUpdaterDelegate {
+  public let dependencies: CodeDependencies = .init()
+
+  public let setConversionCounter: ConversionCounter<String> = .init()
+
+  public let dictionaryConversionCounter: ConversionCounter<String?> = .init()
+
+  public init() {}
+
+  public var prefix: String {
     return "caseMapping"
   }
   
-  public override var sourceURLs: Array<URL> {
+  public var sourceURLs: Array<URL> {
     return [
       _unicodeDataURL,
       _specialCasingURL,
     ]
   }
   
-  private func _convertSimpleCaseMapping(_ intermediate: IntermediateDataContainer<UnicodeData>) throws -> StringLines {
+  private func _convertSimpleCaseMapping(_ intermediate: IntermediateDataContainer<UnicodeDataTable>) throws -> StringLines {
     enum _MappingName: Int {
       case simpleUppercaseMapping = 11
       case simpleLowercaseMapping = 12
@@ -85,7 +93,7 @@ public class CaseMapping: UCDCodeUpdaterDelegate {
     return result
   }
   
-  private func _convertSpecialCasing(_ intermediate: IntermediateDataContainer<UnicodeData>) throws -> StringLines {
+  private func _convertSpecialCasing(_ intermediate: IntermediateDataContainer<UnicodeDataTable>) throws -> StringLines {
     var result = StringLines()
     
     
@@ -112,7 +120,7 @@ public class CaseMapping: UCDCodeUpdaterDelegate {
     return result
   }
   
-  public override func convert<S>(_ intermediates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public func convert<S>(_ intermediates: S) throws -> StringLines where S : Sequence, S.Element == IntermediateDataContainer<UnicodeDataTable> {
     var result = StringLines()
     
     for interm in intermediates {

@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  DerivedBidiClass.swift
-   © 2020,2024 YOCKOW.
+   © 2020,2024,2026 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
@@ -37,22 +37,32 @@ extension StringProtocol {
   }
 }
 
-public class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClass> {
-  public override var prefix: String {
+public struct DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate {
+  public typealias Property = Unicode.BidiClass
+
+  public let dependencies: CodeDependencies = .init()
+
+  public let setConversionCounter: ConversionCounter<String> = .init()
+
+  public let dictionaryConversionCounter: ConversionCounter<String?> = .init()
+
+  public init() {}
+
+  public var prefix: String {
     return "bidiClass"
   }
   
-  public override var sourceURLs: Array<URL> {
+  public var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/extracted/DerivedBidiClass.txt")!
     ]
   }
   
-  public override func reduce(columns: [String]) throws -> Unicode.BidiClass {
+  public func reduce(columns: [String]) throws -> Unicode.BidiClass {
     return Unicode.BidiClass(abbreviated: columns.first!)!
   }
   
-  public override func describe(value: Unicode.BidiClass) -> String {
+  public func describe(value: Unicode.BidiClass) -> String {
     return ".\(String(describing: value))"
   }
   
@@ -71,7 +81,7 @@ public class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClas
       }
     }
   }
-  public override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public func convert<S>(_ intermediates: S) async throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeDataTable> {
     let intermediates = Array(intermediates)
     
     assert(intermediates.count == 1)
@@ -115,7 +125,7 @@ public class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClas
       switch defaultValue {
       case .ranges(let ranges):
         for range in ranges {
-          defaultValueRanges.insert(Unicode.BidiClass(abbreviated: key)!, forRange: AnyRange(range))
+          defaultValueRanges.insert(Unicode.BidiClass(abbreviated: key)!, forRange: range)
         }
       case .properties(let properties):
         defaultValueProperties[key] = properties
@@ -127,13 +137,13 @@ public class DerivedBidiClass: UCDPropertiesCodeUpdaterDelegate<Unicode.BidiClas
       rangeDictionary.insert(value, forRange: range)
     }
     
-    var result: StringLines = self._convert(rangeDictionary, describer: self.describe(value:))
-    
+    var result: StringLines = await self._convert(rangeDictionary, describer: self.describe(value:))
+
     do { // Default Properties
       result.append("// Default Values defined by core properties")
       
       let keyPathOriginalTypeName = "(KeyPath<Unicode.Scalar.LatestProperties, Bool> & Sendable, Bool, Unicode.BidiClass)"
-      let keyPathTypeName = self.typeAliasName(for: keyPathOriginalTypeName)
+      let keyPathTypeName = await self.typeAliasName(for: keyPathOriginalTypeName)
       func _tripleID(_ nx: Int) -> String {
         return "__\(self.prefix)_default_properties_triple_\(nx._base36)"
       }

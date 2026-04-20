@@ -5,18 +5,18 @@
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/UnicodeData.txt
 // Last-Modified: 2025-08-16T00:45:11Z
-// ETag: "218ac1-63c70d19d13c0-gzip"
+// ETag: W/"218ac1-63c70d19d13c0-gzip"
 //
 // URL: https://www.unicode.org/Public/UCD/latest/ucd/SpecialCasing.txt
 // Last-Modified: 2025-08-16T00:45:11Z
-// ETag: "4299-63c70d19d13c0-gzip"
+// ETag: W/"4299-63c70d19d13c0-gzip"
 
 /*
   UNICODE LICENSE V3
   
   COPYRIGHT AND PERMISSION NOTICE
   
-  Copyright © 1991-2025 Unicode, Inc.
+  Copyright © 1991-2026 Unicode, Inc.
   
   NOTICE TO USER: Carefully read the following legal agreement. BY
   DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING DATA FILES, AND/OR

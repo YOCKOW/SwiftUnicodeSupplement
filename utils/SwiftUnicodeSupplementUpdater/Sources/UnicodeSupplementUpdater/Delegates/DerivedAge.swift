@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  DerivedAge.swift
-   © 2020 YOCKOW.
+   © 2020,2026 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
@@ -28,23 +28,33 @@ private struct _UnicodeVersion: Equatable {
   }
 }
 
-public class DerivedAge: UCDCodeUpdaterDelegate {
-  public override var prefix: String { return "age" }
+public struct DerivedAge: UCDCodeUpdaterDelegate {
+  public var dependencies: CodeDependencies = .init()
+
+  public var setConversionCounter: ConversionCounter<String> = .init()
+
+  public var dictionaryConversionCounter: ConversionCounter<String?> = .init()
+
+  public init() {}
+
+  public var prefix: String { return "age" }
   
-  public override var sourceURLs: Array<URL> {
+  public var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/DerivedAge.txt")!
     ]
   }
   
-  public override func convert<S>(_ intermediates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
+  public func convert<S>(_ intermediates: S) async throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeDataTable> {
     let rangeDic: RangeDictionary<Unicode.Scalar.Value, _UnicodeVersion> =
       intermediates.flatMap({ $0.content.rows.compactMap({ $0.payload }) }).reduce(into: [:]) {
-        $0.insert(.init($1.columns[0]), forRange: .init($1.range))
+        $0.insert(.init($1.columns[0]), forRange: $1.range)
       }
-    return self._convert(rangeDic,
-                         typeName: "Unicode.Version",
-                         describer: { "(\($0.major), \($0.minor))" })
+    return await self._convert(
+      rangeDic,
+      typeName: "Unicode.Version",
+      describer: { "(\($0.major), \($0.minor))" }
+    )
   }
 }
 

@@ -1,6 +1,6 @@
 /* *************************************************************************************************
  PropertyValueAliases.swift
-   © 2020,2023-2024 YOCKOW.
+   © 2020,2023-2024,2026 YOCKOW.
      Licensed under MIT License.
      See "LICENSE.txt" for more information.
  ************************************************************************************************ */
@@ -37,14 +37,26 @@ extension StringLines {
   }
 }
 
-public class PropertyValueAliases: UCDCodeUpdaterDelegate {
-  public override var sourceURLs: Array<URL> {
+public struct PropertyValueAliases: UCDCodeUpdaterDelegate {
+  public let dependencies: CodeDependencies = .init()
+
+  public let setConversionCounter: ConversionCounter<String> = .init()
+
+  public let dictionaryConversionCounter: ConversionCounter<String?> = .init()
+
+  public init() {}
+
+  public var prefix: String {
+    fatalError("\(Self.self) doesn't require a `prefix`.")
+  }
+
+  public var sourceURLs: Array<URL> {
     return [
       URL(string: "https://www.unicode.org/Public/UCD/latest/ucd/PropertyValueAliases.txt")!,
     ]
   }
   
-  public override func prepare(sourceURL: URL) throws -> IntermediateDataContainer<UnicodeData> {
+  public func prepare(sourceURL: URL) throws -> IntermediateDataContainer<UnicodeDataTable> {
     // This is dummy, because PropertyValueAliases.txt is unusual Unicode Data.
     return .init(content: .init(""))
   }
@@ -423,51 +435,59 @@ public class PropertyValueAliases: UCDCodeUpdaterDelegate {
   }
   
   private enum _Error: Error {
+    case noIntermediateData
     case failedToFetchContent
   }
-  public override func convert<S>(_ intermidiates: S) throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeData> {
-    let interm = intermidiates.first(where: { _ in true })
-    guard let string = interm?.sourceURL.content.flatMap({ String(data: $0, encoding: .utf8) }) else {
-      throw _Error.failedToFetchContent
+  public func convert<S>(_ intermidiates: S) async throws -> StringLines where S: Sequence, S.Element == IntermediateDataContainer<UnicodeDataTable> {
+    guard let interm = intermidiates.first(where: { _ in true }) else {
+      throw _Error.noIntermediateData
     }
-    
-    var columnsList: [String: [ArraySlice<String>]] = [:]
-    for line in string.split(whereSeparator: { $0.isNewline }) {
-      let commentRemoved = line.splitOnce(separator: "#").0
-      if commentRemoved.isEmpty { continue }
-      let rawColumns = commentRemoved.split(separator: ";").map { $0.trimmingUnicodeScalars(where: { $0.latestProperties.isWhitespace || $0.latestProperties.isNewline }) }
-      let key = rawColumns.first!
-      let columns = rawColumns.dropFirst()
-      assert(!columns.isEmpty)
-      if columnsList.keys.contains(key) {
-        columnsList[key]!.append(columns)
-      } else {
-        columnsList[key] = [columns]
+    return try await JobManager.default.do("Convert 'PropertyValueAliases'.", jobID: identifier) { context in
+      guard let string = String(
+        data: try await context.content(of: interm.sourceURL),
+        encoding: .utf8
+      ) else {
+        throw _Error.failedToFetchContent
       }
-    }
-    
-    let converters: [String: ([ArraySlice<String>]) throws -> StringLines] = [
-      "bc": _convertBidiClass,
-      "ccc": _convertCanonicalCombiningClass,
-      "ea": _convertEastAsianWidth,
-      "gc": _convertGeneralCategory,
-      "jg": _convertJoiningGroup,
-      "jt": _convertJoiningType,
-      "nt": _convertNumericType,
-      "sc": _convertScript,
-    ]
-    
-    var result = StringLines()
-    for key in columnsList.keys.sorted(by: { $0.lowercased() < $1.lowercased() }) {
-      result.append(_ruledLine)
-      result.append("// Property: \(key)")
-      if let converter = converters[key] {
-        result.append(contentsOf: try converter(columnsList[key]!))
-      } else {
-        result.append("// * No converted code for \(key).")
+
+      var columnsList: [String: [ArraySlice<String>]] = [:]
+      for line in string.split(whereSeparator: { $0.isNewline }) {
+        let commentRemoved = line.splitOnce(separator: "#").0
+        if commentRemoved.isEmpty { continue }
+        let rawColumns = commentRemoved.split(separator: ";").map { $0.trimmingUnicodeScalars(where: { $0.latestProperties.isWhitespace || $0.latestProperties.isNewline }) }
+        let key = rawColumns.first!
+        let columns = rawColumns.dropFirst()
+        assert(!columns.isEmpty)
+        if columnsList.keys.contains(key) {
+          columnsList[key]!.append(columns)
+        } else {
+          columnsList[key] = [columns]
+        }
       }
-      result.append("")
+
+      let converters: [String: ([ArraySlice<String>]) throws -> StringLines] = [
+        "bc": _convertBidiClass,
+        "ccc": _convertCanonicalCombiningClass,
+        "ea": _convertEastAsianWidth,
+        "gc": _convertGeneralCategory,
+        "jg": _convertJoiningGroup,
+        "jt": _convertJoiningType,
+        "nt": _convertNumericType,
+        "sc": _convertScript,
+      ]
+
+      var result = StringLines()
+      for key in columnsList.keys.sorted(by: { $0.lowercased() < $1.lowercased() }) {
+        result.append(_ruledLine)
+        result.append("// Property: \(key)")
+        if let converter = converters[key] {
+          result.append(contentsOf: try converter(columnsList[key]!))
+        } else {
+          result.append("// * No converted code for \(key).")
+        }
+        result.append("")
+      }
+      return result
     }
-    return result
   }
 }
