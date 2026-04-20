@@ -8,12 +8,7 @@ on:
       - '**/*.c'
       - '**/*.h'
       - '.github/workflows/*.yml'
-  pull_request:
-    paths:
-      - '**/*.swift'
-      - '**/*.c'
-      - '**/*.h'
-      - '.github/workflows/*.yml'
+  workflow_dispatch: {}
 jobs:
   test:
     defaults:
